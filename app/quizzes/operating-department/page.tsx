@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { getTimestamp } from '@/lib/timestamp';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import Link from 'next/link';
@@ -9,7 +10,11 @@ import { operatingDepartmentQuizzes } from '@/assets/operating-department';
 export default function OperatingDepartmentQuiz() {
   const router = useRouter();
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [quizStartTime, setQuizStartTime] = useState<number>(0);
+  const quizStartTimeRef = useRef<number>(0);
+
+  React.useEffect(() => {
+    quizStartTimeRef.current = getTimestamp();
+  }, []);
   const [completedQuizzes, setCompletedQuizzes] = useState<string[]>([]);
   const [loadingProgress, setLoadingProgress] = useState(true);
   
@@ -30,13 +35,6 @@ export default function OperatingDepartmentQuiz() {
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null));
   const [score, setScore] = useState(0);
   const [showResults, setShowResults] = useState(false);
-
-  
-
-  // Initialize quiz start time
-  React.useEffect(() => {
-    setQuizStartTime(Date.now());
-  }, []);
 
   // Fetch user progress for this category
   React.useEffect(() => {
@@ -62,19 +60,10 @@ export default function OperatingDepartmentQuiz() {
     fetchUserProgress();
   }, []);
 
-  // Update userAnswers when questions change
-  React.useEffect(() => {
-    setUserAnswers(new Array(questions.length).fill(null));
-    setCurrentQuestion(0);
-    setScore(0);
-    setShowResults(false);
-    setQuizStartTime(Date.now());
-  }, [questions.length]);
-
   // Function to update user progress
   const updateUserProgress = async (finalScore: number, correctAnswers: number) => {
     try {
-      const studyTime = Math.round((Date.now() - quizStartTime) / 1000 / 60); // Convert to minutes
+      const studyTime = Math.round((getTimestamp() - quizStartTimeRef.current) / 1000 / 60); // Convert to minutes
       
       const response = await fetch('/api/progress', {
         method: 'POST',
@@ -125,6 +114,7 @@ export default function OperatingDepartmentQuiz() {
   };
 
   const handleRestart = () => {
+    quizStartTimeRef.current = getTimestamp();
     setCurrentQuestion(0);
     setUserAnswers(new Array(questions.length).fill(null));
     setScore(0);
@@ -141,7 +131,7 @@ export default function OperatingDepartmentQuiz() {
       setUserAnswers(new Array(categoryData.quizzes[nextQuizId as keyof typeof categoryData.quizzes].length).fill(null));
       setScore(0);
       setShowResults(false);
-      setQuizStartTime(Date.now()); // Reset quiz start time for new quiz
+      quizStartTimeRef.current = getTimestamp(); // Reset quiz start time for new quiz
     }
   };
 
@@ -151,7 +141,7 @@ export default function OperatingDepartmentQuiz() {
     setUserAnswers(new Array(categoryData.quizzes[quizId as keyof typeof categoryData.quizzes].length).fill(null));
     setScore(0);
     setShowResults(false);
-    setQuizStartTime(Date.now());
+    quizStartTimeRef.current = getTimestamp();
   };
 
   if (showResults) {

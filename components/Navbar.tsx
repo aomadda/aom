@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import AuthNav, { type AuthUser } from '@/components/AuthNav'
 
 type TopicNavLink = { href: string; label: string; icon: string }
 
@@ -48,7 +49,11 @@ const topicsLinksRaw: TopicNavLink[] = [
 
 const topicsLinks: TopicNavLink[] = topicsLinksRaw
 
-const Navbar = () => {
+type NavbarProps = {
+  user?: AuthUser
+}
+
+const Navbar = ({ user = null }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isActsDropdownOpen, setIsActsDropdownOpen] = useState(false)
@@ -833,6 +838,8 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+
+            <AuthNav user={user} variant="desktop" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -1149,6 +1156,12 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+
+            <AuthNav
+              user={user}
+              variant="mobile"
+              onNavigate={() => setIsMobileMenuOpen(false)}
+            />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { getTimestamp } from '@/lib/timestamp';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import Link from 'next/link';
@@ -16,7 +17,11 @@ interface QuizQuestion {
 export default function RTIAct2005Quiz() {
   const router = useRouter();
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [quizStartTime, setQuizStartTime] = useState<number>(0);
+  const quizStartTimeRef = useRef<number>(0);
+
+  React.useEffect(() => {
+    quizStartTimeRef.current = getTimestamp();
+  }, []);
 
   // Get the category data - filter out empty questions
   const rawQuestions = ((establishmentRulesQuizzes.quizzes as Record<string, QuizQuestion[]>)['rti-act-2005']) || [];
@@ -34,21 +39,9 @@ export default function RTIAct2005Quiz() {
   const [score, setScore] = useState(0);
   const [showResults, setShowResults] = useState(false);
 
-  React.useEffect(() => {
-    setQuizStartTime(Date.now());
-  }, []);
-
-  React.useEffect(() => {
-    setUserAnswers(new Array(questions.length).fill(null));
-    setCurrentQuestion(0);
-    setScore(0);
-    setShowResults(false);
-    setQuizStartTime(Date.now());
-  }, [questions.length]);
-
   const updateUserProgress = async (finalScore: number, correctAnswers: number) => {
     try {
-      const studyTime = Math.round((Date.now() - quizStartTime) / 1000 / 60);
+      const studyTime = Math.round((getTimestamp() - quizStartTimeRef.current) / 1000 / 60);
       await fetch('/api/progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -86,6 +79,7 @@ export default function RTIAct2005Quiz() {
   };
 
   const handleRestart = () => {
+    quizStartTimeRef.current = getTimestamp();
     setCurrentQuestion(0);
     setUserAnswers(new Array(questions.length).fill(null));
     setScore(0);
