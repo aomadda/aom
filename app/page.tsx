@@ -95,6 +95,7 @@ const Home = () => {
     }
   ]
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const stats = [
     { icon: BookOpen, label: 'Acts & Rules', value: '14+', color: 'text-blue-500' },
     { icon: Library, label: 'Manuals', value: '7', color: 'text-purple-500' },
@@ -114,63 +115,63 @@ const Home = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
-          <div className="text-center">
-            {/* Icon */}
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-white/20 rounded-full backdrop-blur-sm animate-bounce">
-                <Train className="w-10 h-10 md:w-12 md:h-12 text-white" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8 lg:py-28">
+          <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+            {/* Content — left on large screens */}
+            <div className="order-2 w-full max-w-2xl text-center lg:order-1 lg:flex-1 lg:text-left">
+              <h1 className="mb-6 text-4xl font-bold tracking-tight animate-fade-in sm:text-5xl md:text-6xl lg:text-7xl">
+                AOM Aspirant
+              </h1>
+
+              <div className="mb-8 text-xl font-light text-blue-100 sm:text-2xl md:text-3xl">
+                AOM Aspirant Study Material Portal
+              </div>
+
+              <p className="mx-auto mb-10 max-w-4xl text-lg leading-relaxed text-blue-100 sm:text-xl md:text-2xl lg:mx-0">
+                Your comprehensive guide to railway acts, manuals, regulations, and study materials.
+                Everything you need for railway examinations in one place.
+              </p>
+
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+                <Link
+                  href="/topics/chief-controller"
+                  className="group flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-lg font-semibold text-purple-700 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                >
+                  <GraduationCap className="h-5 w-5" />
+                  Start Learning
+                  <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  href="/quizzes"
+                  className="group flex items-center gap-2 rounded-xl border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20"
+                >
+                  <Brain className="h-5 w-5" />
+                  Take Quiz
+                  <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </div>
             </div>
 
-            {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight animate-fade-in">
-              AOM Aspirant
-            </h1>
-            
-            {/* Subtitle */}
-            <div className="text-xl sm:text-2xl md:text-3xl font-light mb-8 text-blue-100">
-              AOM Aspirant Study Material Portal
-            </div>
-
-            {/* Description */}
-            <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed mb-10">
-              Your comprehensive guide to railway acts, manuals, regulations, and study materials. 
-              Everything you need for railway examinations in one place.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/topics/chief-controller"
-                className="group px-8 py-4 bg-white text-purple-700 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
-              >
-                <GraduationCap className="w-5 h-5" />
-                Start Learning
-                <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/quizzes"
-                className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-xl font-semibold text-lg hover:bg-white/20 transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
-              >
-                <Brain className="w-5 h-5" />
-                Take Quiz
-                <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
+            {/* Profile — small circle top-center on mobile; full picture right on large screens */}
+            <div className="order-1 flex w-full justify-center lg:order-2 lg:w-auto lg:shrink-0 lg:justify-end">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/profile.jpeg"
+                alt="AOM Aspirant profile"
+                width={520}
+                height={520}
+                className="size-20 rounded-full border-4 border-white/40 object-cover object-top shadow-2xl sm:size-24 lg:size-105 lg:rounded-3xl lg:border lg:border-white/30 lg:bg-[#f5f0e8] lg:object-contain xl:size-120"
+              />
             </div>
           </div>
         </div>
 
         {/* Wave Separator */}
-        <div className="absolute bottom-0 left-0 w-full">
-          <svg className="w-full h-12 md:h-20 text-blue-50" fill="currentColor" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0 C300,100 600,0 900,50 C1050,75 1150,25 1200,50 L1200,120 L0,120 Z"></path>
-          </svg>
-        </div>
+        
       </div>
 
       {/* Statistics Section */}
-      <div className="relative -mt-8 md:-mt-12 lg:-mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      {/* <div className="relative -mt-8 md:-mt-12 lg:-mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon
@@ -192,7 +193,7 @@ const Home = () => {
             )
           })}
         </div>
-      </div>
+      </div> */}
 
       {/* Quick Links Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

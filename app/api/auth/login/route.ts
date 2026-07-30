@@ -7,12 +7,30 @@ import { ensureAdminAccount } from '@/lib/auth/ensureAdmin'
 import { attachSessionCookie, createSessionToken } from '@/lib/auth/session'
 import { formatZodErrors, loginSchema } from '@/lib/validations/auth'
 
+function isMobileNumber(value: string) {
+  return /^[6-9]\d{9}$/.test(value)
+}
+
 export async function POST(request: Request) {
   let body: unknown
   try {
     body = await request.json()
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 })
+  }
+
+  // Support older clients that still send `email`
+  if (
+    body &&
+    typeof body === 'object' &&
+    !('identifier' in body) &&
+    'email' in body &&
+    typeof (body as { email?: unknown }).email === 'string'
+  ) {
+    body = {
+      ...(body as Record<string, unknown>),
+      identifier: (body as { email: string }).email,
+    }
   }
 
   const parsed = loginSchema.safeParse(body)
@@ -26,42 +44,49 @@ export async function POST(request: Request) {
     )
   }
 
-  const { email, password } = parsed.data
+  const { identifier, password } = parsed.data
+  const mobileLogin = isMobileNumber(identifier)
+  const emailLogin = identifier.toLowerCase()
 
   try {
     await connectDB()
 
-    // Admin login (same login form)
-    await ensureAdminAccount()
-    const admin = await Admin.findOne({ email }).select('+password')
-    if (admin?.password) {
-      const isAdminValid = await bcrypt.compare(password, admin.password)
-      if (isAdminValid) {
-        const token = await createSessionToken({
-          userId: admin._id.toString(),
-          email: admin.email,
-          fullName: admin.fullName,
-          role: 'admin',
-        })
-
-        const response = NextResponse.json({
-          ok: true,
-          user: {
-            id: admin._id.toString(),
-            fullName: admin.fullName,
+    // Admin login works with email only
+    if (!mobileLogin) {
+      await ensureAdminAccount()
+      const admin = await Admin.findOne({ email: emailLogin }).select('+password')
+      if (admin?.password) {
+        const isAdminValid = await bcrypt.compare(password, admin.password)
+        if (isAdminValid) {
+          const token = await createSessionToken({
+            userId: admin._id.toString(),
             email: admin.email,
+            fullName: admin.fullName,
             role: 'admin',
-          },
-        })
+          })
 
-        return attachSessionCookie(response, token)
+          const response = NextResponse.json({
+            ok: true,
+            user: {
+              id: admin._id.toString(),
+              fullName: admin.fullName,
+              email: admin.email,
+              role: 'admin',
+            },
+          })
+
+          return attachSessionCookie(response, token)
+        }
       }
     }
 
-    const user = await User.findOne({ email }).select('+password')
+    const user = await User.findOne(
+      mobileLogin ? { mobileNumber: identifier } : { email: emailLogin },
+    ).select('+password')
+
     if (!user || !user.password) {
       return NextResponse.json(
-        { error: 'Invalid email or password' },
+        { error: 'Invalid email/mobile or password' },
         { status: 401 },
       )
     }
@@ -69,7 +94,7 @@ export async function POST(request: Request) {
     const isValid = await bcrypt.compare(password, user.password)
     if (!isValid) {
       return NextResponse.json(
-        { error: 'Invalid email or password' },
+        { error: 'Invalid email/mobile or password' },
         { status: 401 },
       )
     }

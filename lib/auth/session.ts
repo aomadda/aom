@@ -13,9 +13,11 @@ export type SessionPayload = {
 }
 
 function getSecret() {
-  const secret = process.env.AUTH_SECRET
+  const secret = process.env.AUTH_SECRET?.trim().replace(/^["']|["']$/g, '')
   if (!secret || secret.length < 16) {
-    throw new Error('Missing AUTH_SECRET (min 16 characters) in .env.local')
+    throw new Error(
+      'Missing AUTH_SECRET (min 16 characters) in .env.local. Add AUTH_SECRET=your-long-secret and restart npm run dev.',
+    )
   }
   return new TextEncoder().encode(secret)
 }

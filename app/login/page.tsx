@@ -21,7 +21,7 @@ function LoginForm() {
   const nextPath = searchParams.get('next')
   const safeNext =
     nextPath && nextPath.startsWith('/') && !nextPath.startsWith('//') ? nextPath : '/'
-  const [form, setForm] = useState<LoginInput>({ email: '', password: '' })
+  const [form, setForm] = useState<LoginInput>({ identifier: '', password: '' })
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
@@ -88,14 +88,23 @@ function LoginForm() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 px-4 py-10 sm:py-14">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-lg">
+        {/* Profile — small devices only, top center rounded circle */}
+        <div className="mb-6 flex justify-center lg:hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/profile.jpeg"
+            alt="AOM Aspirant profile"
+            width={96}
+            height={96}
+            className="size-20 rounded-full border-4 border-purple-200 object-cover object-top shadow-xl sm:size-24"
+          />
+        </div>
+
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-purple-600 to-blue-600 shadow-lg shadow-purple-500/30">
-            <LogIn className="h-7 w-7 text-white" />
-          </div>
           <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">Welcome Back</h1>
           <p className="mt-2 text-sm text-gray-600 sm:text-base">
-            Login to continue your AOM Adda preparation.
+            Login with registered email or mobile number.
           </p>
         </div>
 
@@ -112,21 +121,21 @@ function LoginForm() {
         >
           <div className="space-y-5">
             <div>
-              <label htmlFor="email" className={labelClassName}>
-                Email <span className="text-red-500">*</span>
+              <label htmlFor="identifier" className={labelClassName}>
+                Email or Mobile Number <span className="text-red-500">*</span>
               </label>
               <input
-                id="email"
-                type="email"
-                autoComplete="email"
+                id="identifier"
+                type="text"
+                autoComplete="username"
                 required
-                value={form.email}
-                onChange={(e) => updateField('email', e.target.value)}
-                className={fieldClass('email')}
-                placeholder="you@example.com"
+                value={form.identifier}
+                onChange={(e) => updateField('identifier', e.target.value.trim())}
+                className={fieldClass('identifier')}
+                placeholder="Email or 10-digit mobile number"
               />
-              {fieldErrors.email ? (
-                <p className="mt-1 text-xs text-red-600">{fieldErrors.email}</p>
+              {fieldErrors.identifier ? (
+                <p className="mt-1 text-xs text-red-600">{fieldErrors.identifier}</p>
               ) : null}
             </div>
 
@@ -157,6 +166,14 @@ function LoginForm() {
               {fieldErrors.password ? (
                 <p className="mt-1 text-xs text-red-600">{fieldErrors.password}</p>
               ) : null}
+              <div className="mt-2 text-right">
+                <Link
+                  href="/forgot-password"
+                  className="text-sm font-semibold text-purple-600 hover:text-purple-700"
+                >
+                  Forgot password?
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -171,7 +188,7 @@ function LoginForm() {
             disabled={loading}
             className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-purple-600 via-indigo-600 to-blue-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-500/25 transition hover:scale-[1.01] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
           >
-            {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : null}
+            {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <LogIn className="h-5 w-5" />}
             {loading ? 'Signing in...' : 'Login'}
           </button>
 

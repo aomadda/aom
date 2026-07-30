@@ -3,12 +3,13 @@ import type { NextRequest } from 'next/server'
 import { jwtVerify } from 'jose'
 import { COOKIE_NAME } from '@/lib/auth/constants'
 
-const PUBLIC_PAGE_PATHS = new Set(['/login', '/register', '/admin/login'])
+const PUBLIC_PAGE_PATHS = new Set(['/login', '/register', '/admin/login', '/forgot-password'])
 const PUBLIC_API_PREFIXES = [
   '/api/auth/login',
   '/api/auth/register',
   '/api/auth/logout',
   '/api/auth/me',
+  '/api/auth/forgot-password',
   '/api/admin/login',
 ]
 
@@ -59,7 +60,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl)
   }
 
-  if (session.valid && (pathname === '/login' || pathname === '/register')) {
+  if (session.valid && (pathname === '/login' || pathname === '/register' || pathname === '/forgot-password')) {
     if (session.role === 'admin') {
       return NextResponse.redirect(new URL('/admin', request.url))
     }

@@ -87,6 +87,28 @@ export const registerSchema = z.object({
 })
 
 export const loginSchema = z.object({
+  identifier: z
+    .string({ error: 'Email or mobile number is required' })
+    .trim()
+    .min(1, 'Email or mobile number is required')
+    .refine(
+      (value) => {
+        const normalized = value.toLowerCase()
+        const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)
+        const isMobile = /^[6-9]\d{9}$/.test(value)
+        return isEmail || isMobile
+      },
+      {
+        message: 'Enter a valid email or 10-digit mobile number',
+      },
+    ),
+  password: z
+    .string({ error: 'Password is required' })
+    .min(1, 'Password is required')
+    .max(72, 'Password is too long'),
+})
+
+export const adminLoginSchema = z.object({
   email: z
     .string({ error: 'Email is required' })
     .trim()
@@ -99,8 +121,41 @@ export const loginSchema = z.object({
     .max(72, 'Password is too long'),
 })
 
+const passwordSchema = z
+  .string({ error: 'Password is required' })
+  .min(1, 'Password is required')
+  .min(8, 'Password must be at least 8 characters')
+  .max(72, 'Password is too long')
+  .regex(/[A-Za-z]/, 'Password must include a letter')
+  .regex(/[0-9]/, 'Password must include a number')
+
+export const forgotPasswordSchema = z
+  .object({
+    email: z
+      .string({ error: 'Email is required' })
+      .trim()
+      .min(1, 'Email is required')
+      .toLowerCase()
+      .email('Enter a valid email address'),
+    mobileNumber: z
+      .string({ error: 'Mobile number is required' })
+      .trim()
+      .min(1, 'Mobile number is required')
+      .regex(/^[6-9]\d{9}$/, 'Enter a valid 10-digit Indian mobile number'),
+    newPassword: passwordSchema,
+    confirmPassword: z
+      .string({ error: 'Confirm password is required' })
+      .min(1, 'Confirm password is required'),
+  })
+  .refine((data) => data.newPassword === data.confirmPassword, {
+    message: 'Passwords do not match',
+    path: ['confirmPassword'],
+  })
+
 export type RegisterInput = z.infer<typeof registerSchema>
 export type LoginInput = z.infer<typeof loginSchema>
+export type AdminLoginInput = z.infer<typeof adminLoginSchema>
+export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>
 
 export function formatZodErrors(error: z.ZodError): Record<string, string> {
   const fieldErrors: Record<string, string> = {}

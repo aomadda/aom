@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs'
 import { Admin } from '@/lib/models/Admin'
 import { ensureAdminAccount } from '@/lib/auth/ensureAdmin'
 import { attachSessionCookie, createSessionToken } from '@/lib/auth/session'
-import { formatZodErrors, loginSchema } from '@/lib/validations/auth'
+import { formatZodErrors, adminLoginSchema } from '@/lib/validations/auth'
 
 export async function POST(request: Request) {
   let body: unknown
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 })
   }
 
-  const parsed = loginSchema.safeParse(body)
+  const parsed = adminLoginSchema.safeParse(body)
   if (!parsed.success) {
     return NextResponse.json(
       {

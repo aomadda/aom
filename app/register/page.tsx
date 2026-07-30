@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { UserPlus, Eye, EyeOff, Loader2 } from 'lucide-react'
+import { Eye, EyeOff, Loader2 } from 'lucide-react'
 import {
   DEPARTMENTS,
   PREPARING_POSTS,
@@ -97,8 +97,15 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 px-4 py-10 sm:py-14">
       <div className="mx-auto max-w-3xl">
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-purple-600 to-blue-600 shadow-lg shadow-purple-500/30">
-            <UserPlus className="h-7 w-7 text-white" />
+          <div className="mb-4 flex justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/profile.jpeg"
+              alt="AOM Aspirant profile"
+              width={96}
+              height={96}
+              className="size-20 rounded-full border-4 border-purple-200 object-cover object-top shadow-xl sm:size-24"
+            />
           </div>
           <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">Create Account</h1>
           <p className="mt-2 text-sm text-gray-600 sm:text-base">

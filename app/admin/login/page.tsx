@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Shield, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { formatZodErrors, loginSchema, type LoginInput } from '@/lib/validations/auth'
+import { formatZodErrors, adminLoginSchema, type AdminLoginInput } from '@/lib/validations/auth'
 
 const inputClassName =
   'w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-800 shadow-sm outline-none transition focus:border-purple-400 focus:ring-2 focus:ring-purple-200'
@@ -16,13 +16,13 @@ const labelClassName = 'mb-1.5 block text-sm font-semibold text-gray-700'
 
 export default function AdminLoginPage() {
   const router = useRouter()
-  const [form, setForm] = useState<LoginInput>({ email: '', password: '' })
+  const [form, setForm] = useState<AdminLoginInput>({ email: '', password: '' })
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
-  const updateField = (field: keyof LoginInput, value: string) => {
+  const updateField = (field: keyof AdminLoginInput, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }))
     setFieldErrors((prev) => {
       if (!prev[field]) return prev
@@ -38,7 +38,7 @@ export default function AdminLoginPage() {
     setError('')
     setFieldErrors({})
 
-    const parsed = loginSchema.safeParse(form)
+    const parsed = adminLoginSchema.safeParse(form)
     if (!parsed.success) {
       setFieldErrors(formatZodErrors(parsed.error))
       setError('All fields are required. Please fill every field.')
@@ -78,7 +78,7 @@ export default function AdminLoginPage() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-100 via-indigo-50 to-purple-50 px-4 py-10 sm:py-14">
-      <div className="mx-auto max-w-md">
+      <div className="mx-auto max-w-4xl">
         <div className="mb-8 text-center">
           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-slate-800 to-indigo-700 shadow-lg">
             <Shield className="h-7 w-7 text-white" />
