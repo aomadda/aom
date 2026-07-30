@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="mt-0 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-4 sm:flex-row sm:gap-6">
           <p className="text-center text-sm leading-relaxed text-indigo-200/70 sm:text-left">
             <Link href="/" className="font-semibold text-indigo-100 transition hover:text-white">
-              AOM Aspirant
+              AOM Adda
             </Link>{' '}
             Copyright © {year}
             {'. For educational purposes only.'}

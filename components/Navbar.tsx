@@ -187,7 +187,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               
             </div>
             <span className="lg:text-2xl text-xl font-bold text-white tracking-tight drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300">
-              AOM Aspirant
+              AOM Adda
             </span>
           </Link>
 

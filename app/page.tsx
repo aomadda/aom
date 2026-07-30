@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { 
@@ -18,8 +16,17 @@ import {
   ChevronRight,
   Sparkles
 } from 'lucide-react'
+import { getSession } from '@/lib/auth/session'
 
-const Home = () => {
+const Home = async () => {
+  let fullName: string | null = null
+  try {
+    const session = await getSession()
+    fullName = session?.fullName ?? null
+  } catch {
+    fullName = null
+  }
+
   const quickLinks = [
     {
       href: '/acts',
@@ -119,8 +126,15 @@ const Home = () => {
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             {/* Content — left on large screens */}
             <div className="order-2 w-full max-w-2xl text-center lg:order-1 lg:flex-1 lg:text-left">
+              {fullName ? (
+                <p className="mb-4 text-lg font-medium text-white/95 sm:text-xl md:text-2xl">
+                  Welcome{' '}
+                  <span className="font-bold text-white">{fullName}</span> . .  .
+                </p>
+              ) : null}
+
               <h1 className="mb-6 text-4xl font-bold tracking-tight animate-fade-in sm:text-5xl md:text-6xl lg:text-7xl">
-                AOM Aspirant
+                AOM Adda
               </h1>
 
               <div className="mb-8 text-xl font-light text-blue-100 sm:text-2xl md:text-3xl">
@@ -128,24 +142,22 @@ const Home = () => {
               </div>
 
               <p className="mx-auto mb-10 max-w-4xl text-lg leading-relaxed text-blue-100 sm:text-xl md:text-2xl lg:mx-0">
-                Your comprehensive guide to railway acts, manuals, regulations, and study materials.
-                Everything you need for railway examinations in one place.
+                Your comprehensive guide to railway acts, manuals, regulations, study materials, topics, quizzes, and more.
+                
               </p>
 
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
                 <Link
                   href="/topics/chief-controller"
-                  className="group flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-lg font-semibold text-purple-700 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="group flex items-center gap-2 rounded-full bg-white px-6 py-3 text-lg font-semibold text-purple-700 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
-                  <GraduationCap className="h-5 w-5" />
                   Start Learning
                   <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="/quizzes"
-                  className="group flex items-center gap-2 rounded-xl border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20"
+                  className="group flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 text-lg font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20"
                 >
-                  <Brain className="h-5 w-5" />
                   Take Quiz
                   <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -170,30 +182,7 @@ const Home = () => {
         
       </div>
 
-      {/* Statistics Section */}
-      {/* <div className="relative -mt-8 md:-mt-12 lg:-mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon
-            return (
-              <div
-                key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20 hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className={`p-3 rounded-full bg-linear-to-br ${stat.color.replace('text-', 'from-').replace('-500', '-100')} to-white mb-3`}>
-                    <Icon className={`w-6 h-6 ${stat.color}`} />
-                  </div>
-                  <div className="text-3xl font-bold bg-linear-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm font-medium text-gray-600">{stat.label}</div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div> */}
+     
 
       {/* Quick Links Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
