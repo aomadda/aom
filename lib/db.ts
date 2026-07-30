@@ -1,7 +1,5 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = process.env.MONGODB_URI
-
 interface MongooseCache {
   conn: typeof mongoose | null
   promise: Promise<typeof mongoose> | null
@@ -14,10 +12,16 @@ declare global {
 const cached: MongooseCache = global.mongooseCache ?? { conn: null, promise: null }
 global.mongooseCache = cached
 
-export async function connectDB() {
-  if (!MONGODB_URI) {
-    throw new Error('Missing MONGODB_URI. Add it to .env.local')
+function getMongoUri() {
+  const uri = process.env.MONGODB_URI?.trim()
+  if (!uri) {
+    throw new Error('Missing MONGODB_URI. Add it to .env.local and restart the server.')
   }
+  return uri.replace(/^["']|["']$/g, '')
+}
+
+export async function connectDB() {
+  const MONGODB_URI = getMongoUri()
 
   if (cached.conn) {
     return cached.conn
@@ -29,6 +33,11 @@ export async function connectDB() {
     })
   }
 
-  cached.conn = await cached.promise
-  return cached.conn
+  try {
+    cached.conn = await cached.promise
+    return cached.conn
+  } catch (error) {
+    cached.promise = null
+    throw error
+  }
 }

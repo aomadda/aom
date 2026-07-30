@@ -23,11 +23,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let user: { fullName: string; email: string } | null = null
+  let user: { fullName: string; email: string; role: 'user' | 'admin' } | null = null
   try {
     const session = await getSession()
     if (session) {
-      user = { fullName: session.fullName, email: session.email }
+      user = {
+        fullName: session.fullName,
+        email: session.email,
+        role: session.role,
+      }
     }
   } catch {
     user = null

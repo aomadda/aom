@@ -8,6 +8,7 @@ import { LogOut, Loader2 } from 'lucide-react'
 export type AuthUser = {
   fullName: string
   email: string
+  role?: 'user' | 'admin'
 } | null
 
 type AuthNavProps = {
@@ -55,7 +56,7 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
 
     return (
       <div className="flex items-center gap-2">
-        <span className="hidden lg:inline max-w-32 truncate text-sm font-medium text-white/90">
+        <span className="hidden lg:inline max-w-36 truncate text-sm font-medium text-white/90">
           Hi, {user.fullName.split(' ')[0]}
         </span>
         <button

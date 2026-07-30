@@ -3,10 +3,13 @@ import { cookies } from 'next/headers'
 import type { NextResponse } from 'next/server'
 import { COOKIE_NAME, SESSION_DAYS } from '@/lib/auth/constants'
 
+export type SessionRole = 'user' | 'admin'
+
 export type SessionPayload = {
   userId: string
   email: string
   fullName: string
+  role: SessionRole
 }
 
 function getSecret() {
@@ -45,10 +48,14 @@ export async function verifySessionToken(token: string): Promise<SessionPayload 
     ) {
       return null
     }
+
+    const role = payload.role === 'admin' ? 'admin' : 'user'
+
     return {
       userId: payload.userId,
       email: payload.email,
       fullName: payload.fullName,
+      role,
     }
   } catch {
     return null

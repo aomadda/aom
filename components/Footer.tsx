@@ -1,16 +1,8 @@
 import Link from 'next/link'
-import { FileText, ScrollText } from 'lucide-react'
 
-type FooterNavItem = {
-  href: string
-  label: string
-  Icon: typeof FileText
-}
 
-const EXPLORE_LINKS: FooterNavItem[] = [
-  { href: '/pdfs', label: 'PDF Documents', Icon: FileText },
-  { href: '/syllabus', label: 'Syllabus', Icon: ScrollText },
-]
+
+
 
 const Footer = () => {
   const year = new Date().getFullYear()
@@ -43,31 +35,10 @@ const Footer = () => {
 
       <div className="relative z-10 h-px w-full bg-linear-to-r from-transparent via-violet-400/45 to-transparent" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-6">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-stretch lg:justify-between lg:gap-14">
-          
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-4">
+        
 
-          <section
-            aria-labelledby="footer-explore-heading"
-            className="w-full lg:w-auto lg:shrink-0"
-          >
-            <ul className="flex flex-wrap items-center gap-3">
-              {EXPLORE_LINKS.map(({ href, label, Icon }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3.5 py-2 text-sm font-semibold text-white transition hover:border-violet-400/30 hover:bg-white/10"
-                  >
-                    <Icon className="h-4 w-4 opacity-95" aria-hidden />
-                    <span>{label}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        </div>
-
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:gap-6">
+        <div className="mt-0 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-4 sm:flex-row sm:gap-6">
           <p className="text-center text-sm leading-relaxed text-indigo-200/70 sm:text-left">
             <Link href="/" className="font-semibold text-indigo-100 transition hover:text-white">
               AOM Aspirant

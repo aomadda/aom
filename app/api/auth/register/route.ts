@@ -51,15 +51,18 @@ export async function POST(request: Request) {
     const user = await User.create({
       ...data,
       password: passwordHash,
+      status: 'pending',
     })
 
     return NextResponse.json(
       {
         ok: true,
+        message: 'Registration submitted. Please wait for admin approval before login.',
         user: {
           id: user._id.toString(),
           fullName: user.fullName,
           email: user.email,
+          status: user.status,
         },
       },
       { status: 201 },

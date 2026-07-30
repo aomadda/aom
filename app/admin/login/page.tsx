@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { LogIn, Eye, EyeOff, Loader2 } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { Shield, Eye, EyeOff, Loader2 } from 'lucide-react'
 import { formatZodErrors, loginSchema, type LoginInput } from '@/lib/validations/auth'
 
 const inputClassName =
@@ -14,13 +14,8 @@ const errorInputClassName =
 
 const labelClassName = 'mb-1.5 block text-sm font-semibold text-gray-700'
 
-function LoginForm() {
+export default function AdminLoginPage() {
   const router = useRouter()
-  const searchParams = useSearchParams()
-  const registered = searchParams.get('registered') === '1'
-  const nextPath = searchParams.get('next')
-  const safeNext =
-    nextPath && nextPath.startsWith('/') && !nextPath.startsWith('//') ? nextPath : '/'
   const [form, setForm] = useState<LoginInput>({ email: '', password: '' })
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
   const [showPassword, setShowPassword] = useState(false)
@@ -52,7 +47,7 @@ function LoginForm() {
 
     setLoading(true)
     try {
-      const response = await fetch('/api/auth/login', {
+      const response = await fetch('/api/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(parsed.data),
@@ -61,20 +56,15 @@ function LoginForm() {
       const data = (await response.json()) as {
         error?: string
         fieldErrors?: Record<string, string>
-        user?: { role?: 'user' | 'admin' }
       }
 
       if (!response.ok) {
         if (data.fieldErrors) setFieldErrors(data.fieldErrors)
-        setError(data.error || 'Login failed. Please try again.')
+        setError(data.error || 'Admin login failed. Please try again.')
         return
       }
 
-      if (data.user?.role === 'admin') {
-        router.push('/admin')
-      } else {
-        router.push(safeNext)
-      }
+      router.push('/admin')
       router.refresh()
     } catch {
       setError('Network error. Please check your connection and try again.')
@@ -87,43 +77,37 @@ function LoginForm() {
     fieldErrors[name] ? errorInputClassName : inputClassName
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 px-4 py-10 sm:py-14">
-      <div className="mx-auto max-w-4xl">
+    <div className="min-h-screen bg-linear-to-br from-slate-100 via-indigo-50 to-purple-50 px-4 py-10 sm:py-14">
+      <div className="mx-auto max-w-md">
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-purple-600 to-blue-600 shadow-lg shadow-purple-500/30">
-            <LogIn className="h-7 w-7 text-white" />
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-slate-800 to-indigo-700 shadow-lg">
+            <Shield className="h-7 w-7 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">Welcome Back</h1>
+          <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">Admin Login</h1>
           <p className="mt-2 text-sm text-gray-600 sm:text-base">
-            Login to continue your AOM Adda preparation.
+            Sign in to view registered aspirant details.
           </p>
         </div>
 
-        {registered ? (
-          <p className="mb-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
-            Registration successful. Please wait for admin approval, then login.
-          </p>
-        ) : null}
-
         <form
           onSubmit={handleSubmit}
-          className="rounded-3xl border border-purple-100 bg-white/90 p-6 shadow-xl shadow-purple-500/10 backdrop-blur-sm sm:p-8"
+          className="rounded-3xl border border-indigo-100 bg-white/95 p-6 shadow-xl shadow-indigo-500/10 backdrop-blur-sm sm:p-8"
           noValidate
         >
           <div className="space-y-5">
             <div>
-              <label htmlFor="email" className={labelClassName}>
+              <label htmlFor="admin-email" className={labelClassName}>
                 Email <span className="text-red-500">*</span>
               </label>
               <input
-                id="email"
+                id="admin-email"
                 type="email"
-                autoComplete="email"
+                autoComplete="username"
                 required
                 value={form.email}
                 onChange={(e) => updateField('email', e.target.value)}
                 className={fieldClass('email')}
-                placeholder="you@example.com"
+                placeholder="admin@example.com"
               />
               {fieldErrors.email ? (
                 <p className="mt-1 text-xs text-red-600">{fieldErrors.email}</p>
@@ -131,19 +115,19 @@ function LoginForm() {
             </div>
 
             <div>
-              <label htmlFor="password" className={labelClassName}>
+              <label htmlFor="admin-password" className={labelClassName}>
                 Password <span className="text-red-500">*</span>
               </label>
               <div className="relative">
                 <input
-                  id="password"
+                  id="admin-password"
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="current-password"
                   required
                   value={form.password}
                   onChange={(e) => updateField('password', e.target.value)}
                   className={`${fieldClass('password')} pr-12`}
-                  placeholder="Enter your password"
+                  placeholder="Enter admin password"
                 />
                 <button
                   type="button"
@@ -169,34 +153,20 @@ function LoginForm() {
           <button
             type="submit"
             disabled={loading}
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-purple-600 via-indigo-600 to-blue-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-500/25 transition hover:scale-[1.01] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-slate-800 via-indigo-700 to-purple-700 px-6 py-3.5 text-base font-semibold text-white shadow-lg transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
           >
             {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : null}
-            {loading ? 'Signing in...' : 'Login'}
+            {loading ? 'Signing in...' : 'Admin Login'}
           </button>
 
           <p className="mt-4 text-center text-sm text-gray-500">
-            New to AOM Adda?{' '}
-            <Link href="/register" className="font-semibold text-purple-600 hover:text-purple-700">
-              Register
+            User login?{' '}
+            <Link href="/login" className="font-semibold text-indigo-600 hover:text-indigo-700">
+              Go to Login
             </Link>
           </p>
         </form>
       </div>
     </div>
-  )
-}
-
-export default function LoginPage() {
-  return (
-    <React.Suspense
-      fallback={
-        <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 text-gray-600">
-          Loading...
-        </div>
-      }
-    >
-      <LoginForm />
-    </React.Suspense>
   )
 }
