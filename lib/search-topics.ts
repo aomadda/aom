@@ -316,6 +316,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes general awareness botany Botany",
   },
   {
+    href: "/topics/operating-material/brake-power-certificate",
+    title: "Brake Power Certificate",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material brake power certificate Brake Power Certificate BPC freight CC rake premium end-to-end TXR",
+  },
+  {
     href: "/topics/operating-material/brake-van",
     title: "Brake Van",
     category: "Study Topics",
@@ -652,6 +660,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material engine pushing Engine Pushing G.R. S.R. 4.12 push back",
   },
   {
+    href: "/topics/operating-material/Exchange-of-all-right-signals",
+    title: "Exchange of All Right Signals",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material exchange of all right signals Exchange of All Right Signals G.R. 4.42 green flag walkie-talkie Vande Bharat",
+  },
+  {
     href: "/topics/information-technology-apps/ess",
     title: "ESS",
     category: "Study Topics",
@@ -785,6 +801,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics",
     keywords: "topics gati shakti terminals Gati Shakti Terminals",
+  },
+  {
+    href: "/topics/operating-material/glp-check",
+    title: "GLP Check",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material glp check GLP Check Guard Loco Pilot BPC revalidation PME TXR proforma",
   },
 
   {
@@ -1209,6 +1233,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material line clear Line Clear G.R. 1.02(36)",
+  },
+  {
+    href: "/topics/operating-material/material-train",
+    title: "Material Train",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material material train Material Train S.R. 4.62 T/462 T/A.462 engineering BPC",
   },
   {
     href: "/general-awareness/awards/literature-awards",
@@ -1896,6 +1928,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material signals Signals fixed hand detonating flare warning",
   },
   {
+    href: "/topics/operating-material/stabling",
+    title: "Stabling",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material stabling Stabling running lines G.R. S.R. 5.19 5.23 securing vehicles formation",
+  },
+  {
     href: "/general-awareness/states-information/sikkim",
     title: "Sikkim",
     category: "General Awareness",
@@ -1968,6 +2007,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material station master Station Master G.R. 1.02(53)",
   },
   {
+    href: "/topics/operating-material/station-working-rules",
+    title: "Station Working Rules",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material station working rules Station Working Rules SWR G.R. 5.06 Appendix XIV chapters appendices",
+  },
+  {
     href: "/manuals/station-working-rules",
     title: "Station Working Rules",
     category: "Manuals",
@@ -2024,6 +2071,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material system of working System of Working G.R. 1.02(56)",
+  },
+  {
+    href: "/topics/operating-material/track-tamping-machine",
+    title: "Track Tamping Machine",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material track tamping machine Track Tamping Machine TTM S.R. 4.65 T/465 T/A465 JSC",
   },
   {
     href: "/general-awareness/sports/table-tennis",
@@ -2187,6 +2242,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material warner signal Warner Signal GR 3.06 semaphore fish-tailed",
+  },
+  {
+    href: "/topics/operating-material/without-tail-lamp",
+    title: "Without Tail Lamp",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material without tail lamp Without Tail Lamp S.R. 4.17 tail board last vehicle indicator incomplete train",
   },
   {
     href: "/general-awareness/sports/weightlifting",

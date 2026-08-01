@@ -29,6 +29,16 @@ const procedures = [
   'In case of any vehicle met with an accident and brought to a station for stabling from accident spot, it shall not be moved until DRM permits.',
 ]
 
+const attachingRules = [
+  'It shall be certified fit to run by TXR/SSE (Loco).',
+  'It shall be attached in rear of the rear brake van of goods/mixed train during daylight hours and clear weather only.',
+  'Only one such vehicle is permitted.',
+  'Speed shall be as specified in the ‗Fit to Run Certificate‘.',
+  'A copy of the original advice should be handed over to the Guard of the train for submission along with the CTR. When stabled, such advice should be taken over by SM and kept in his personal custody.',
+  'At sunset or when view is not clear, it shall be detached at the first station and the certificate shall be handed over to the SM on duty.',
+  'It shall be escorted by the staff of Mechanical department.',
+]
+
 const DefectiveVehiclesPage = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#0a0c10]">
@@ -89,6 +99,26 @@ const DefectiveVehiclesPage = () => {
                     key={text}
                     className="flex gap-3 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
                     style={{ animation: `fade-up 0.55s ease-out ${0.35 + 0.03 * (index + 1)}s both` }}
+                  >
+                    <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
+                      {index + 1}
+                    </span>
+                    <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="border-l-4 border-amber-500/70 pl-3 text-lg font-bold text-amber-100 sm:text-xl">
+                Attaching of Damaged Vehicle/Engine (S.R. 4.24.4)
+              </h2>
+              <ol className="space-y-3">
+                {attachingRules.map((text, index) => (
+                  <li
+                    key={text}
+                    className="flex gap-3 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
+                    style={{ animation: `fade-up 0.55s ease-out ${0.55 + 0.03 * (index + 1)}s both` }}
                   >
                     <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
                       {index + 1}

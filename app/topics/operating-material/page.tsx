@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bomb, BrickWall, Building2, CalendarClock, ChevronsRight, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardList, Combine, Copy, CornerDownRight, Eye, FileCheck, Flame, Forward, GitBranch, GitFork, Hand, HardHat, House, KeyRound, Layers, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, Play, Repeat, Route, Ruler, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, TrainFront, TriangleAlert, Unlink, Unplug, UserRoundCog, Waypoints, Workflow, Wrench } from 'lucide-react'
+import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bomb, BookMarked, BrickWall, Building2, CalendarClock, ChevronsRight, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eye, FileBadge, FileCheck, Flame, Forward, GitBranch, GitFork, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, Play, Repeat, Route, Ruler, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, TrainFront, TriangleAlert, Unlink, Unplug, UserRoundCog, Waypoints, Workflow, Wrench } from 'lucide-react'
 
 const topics = [
   {
@@ -37,6 +37,11 @@ const topics = [
     href: '/topics/operating-material/block-section',
     title: 'Block Section',
     icon: Split,
+  },
+  {
+    href: '/topics/operating-material/brake-power-certificate',
+    title: 'Brake Power Certificate',
+    icon: FileBadge,
   },
   {
     href: '/topics/operating-material/brake-van',
@@ -99,6 +104,11 @@ const topics = [
     icon: MoveRight,
   },
   {
+    href: '/topics/operating-material/Exchange-of-all-right-signals',
+    title: 'Exchange of All Right Signals',
+    icon: Handshake,
+  },
+  {
     href: '/topics/operating-material/facing-trailing-points',
     title: 'Facing and Trailing Points',
     icon: GitFork,
@@ -127,6 +137,11 @@ const topics = [
     href: '/topics/operating-material/gate-signal',
     title: 'Gate Signal',
     icon: BrickWall,
+  },
+  {
+    href: '/topics/operating-material/glp-check',
+    title: 'GLP Check',
+    icon: ClipboardCheck,
   },
   {
     href: '/topics/operating-material/hand-signals',
@@ -162,6 +177,11 @@ const topics = [
     href: '/topics/operating-material/line-clear',
     title: 'Line Clear',
     icon: CircleCheck,
+  },
+  {
+    href: '/topics/operating-material/material-train',
+    title: 'Material Train',
+    icon: Container,
   },
   {
     href: '/topics/operating-material/multiple-aspect-signalling',
@@ -254,6 +274,11 @@ const topics = [
     icon: Signal,
   },
   {
+    href: '/topics/operating-material/stabling',
+    title: 'Stabling',
+    icon: SquareParking,
+  },
+  {
     href: '/topics/operating-material/station',
     title: 'Station',
     icon: Building2,
@@ -263,6 +288,11 @@ const topics = [
     href: '/topics/operating-material/station-master',
     title: 'Station Master',
     icon: UserRoundCog,
+  },
+  {
+    href: '/topics/operating-material/station-working-rules',
+    title: 'Station Working Rules',
+    icon: BookMarked,
   },
   {
     href: '/topics/operating-material/starter-signal',
@@ -283,6 +313,11 @@ const topics = [
     href: '/topics/operating-material/system-of-working',
     title: 'System of Working',
     icon: Workflow,
+  },
+  {
+    href: '/topics/operating-material/track-tamping-machine',
+    title: 'Track Tamping Machine',
+    icon: Hammer,
   },
   {
     href: '/topics/operating-material/train',
@@ -308,6 +343,11 @@ const topics = [
     href: '/topics/operating-material/warner-signal',
     title: 'Warner Signal',
     icon: TriangleAlert,
+  },
+  {
+    href: '/topics/operating-material/without-tail-lamp',
+    title: 'Without Tail Lamp',
+    icon: LightbulbOff,
   },
   {
     href: '/topics/operating-material/working-time-table',
