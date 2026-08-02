@@ -24,8 +24,6 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
   const [menuOpen, setMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
 
-  const initial = (user?.fullName?.trim()?.[0] || 'U').toUpperCase()
-
   useEffect(() => {
     if (!menuOpen) return
 
@@ -73,18 +71,24 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
           aria-haspopup="menu"
           aria-expanded={menuOpen}
           aria-label={`Account menu for ${user.fullName}`}
-          className={`flex h-10 w-10 items-center justify-center rounded-full bg-white text-base font-bold text-purple-700 shadow-lg transition hover:scale-105 hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 ${
-            isMobile ? 'mx-auto' : ''
+          className={`inline-flex h-10 items-center rounded-full border border-white/20 bg-white/15 px-4 text-white shadow-md backdrop-blur-sm transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 ${
+            isMobile ? 'h-12 w-full justify-center rounded-xl px-4 py-3 text-base' : ''
           }`}
         >
-          {initial}
+          <span
+            className={`truncate font-semibold ${
+              isMobile ? 'w-full text-center text-base' : 'max-w-40 text-sm xl:max-w-52'
+            }`}
+          >
+            {user.fullName}
+          </span>
         </button>
 
         {menuOpen ? (
           <div
             role="menu"
-            className={`absolute z-50 mt-2 min-w-44 overflow-hidden rounded-xl border border-purple-100 bg-white shadow-xl ${
-              isMobile ? 'left-1/2 -translate-x-1/2' : 'right-0'
+            className={`absolute z-50 mt-2 overflow-hidden rounded-xl border border-purple-100 bg-white shadow-xl ${
+              isMobile ? 'left-0 right-0 w-full' : 'right-0 min-w-44'
             }`}
           >
             <div className="border-b border-gray-100 px-4 py-3">
@@ -130,10 +134,10 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
   return (
     <Link
       href="/register"
-      className={`relative rounded-xl px-5 py-2.5 text-base font-semibold transition-all duration-300 ${
+      className={`inline-flex h-10 items-center rounded-full px-5 text-sm font-semibold transition-all duration-300 ${
         pathname === '/register'
           ? 'bg-white text-purple-700 shadow-lg'
-          : 'bg-white/15 text-white hover:bg-white/25'
+          : 'border border-white/20 bg-white/15 text-white hover:bg-white/25'
       }`}
     >
       Register

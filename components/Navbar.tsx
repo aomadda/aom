@@ -176,30 +176,30 @@ const Navbar = ({ user = null }: NavbarProps) => {
         WebkitBackdropFilter: 'blur(20px)',
       }}
     >
-      <div className="mx-auto max-w-7xl px-3  lg:px-4">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo/Title */}
-          <Link
-            href="/"
-            className="group flex items-center space-x-3 transition-transform duration-300 hover:scale-105"
-          >
-            <div className="relative">
-              
-            </div>
-            <span className="lg:text-2xl text-xl font-bold text-white tracking-tight drop-shadow-lg group-hover:drop-shadow-xl transition-all duration-300">
-              AOM Adda
-            </span>
-          </Link>
+      <div className="mx-auto w-full max-w-360 px-3 sm:px-4 lg:px-6">
+        <div className="relative h-16 w-full">
+          {/* Left — brand */}
+          <div className="absolute left-0 top-1/2 z-20 flex -translate-y-1/2 items-center">
+            <Link
+              href="/"
+              className="group flex h-10 items-center rounded-xl px-1 transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <span className="whitespace-nowrap text-lg font-bold tracking-tight text-white drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-xl sm:text-xl lg:text-2xl">
+                AOM Adda
+              </span>
+            </Link>
+          </div>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* Center — main nav (desktop) */}
+          <div className="absolute left-1/2 top-1/2 z-10 hidden w-max max-w-[calc(100%-24rem)] -translate-x-1/2 -translate-y-1/2 md:block">
+            <div className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-2 py-1 shadow-lg shadow-black/10 backdrop-blur-md lg:gap-3 lg:px-3 xl:gap-4">
             {navLinks.map((link) => {
               const isActive = pathname === link.href
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group relative px-5 py-2.5 text-base font-semibold text-white rounded-xl transition-all duration-300"
+                  className="group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px]"
                 >
                   <span
                     className={`relative z-10 transition-all duration-300 ${
@@ -244,7 +244,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
             >
               <Link
                 href="/acts"
-                className={`group relative px-5 py-2.5 text-base font-semibold text-white rounded-xl transition-all duration-300 ${
+                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
                   pathname.startsWith('/acts') ? 'font-bold' : ''
                 }`}
               >
@@ -376,7 +376,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
             >
               <Link
                 href="/manuals"
-                className={`group relative px-5 py-2.5 text-base font-semibold text-white rounded-xl transition-all duration-300 ${
+                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
                   pathname.startsWith('/manuals') ? 'font-bold' : ''
                 }`}
               >
@@ -497,7 +497,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
             >
               <Link
                 href="/topics"
-                className={`group relative px-5 py-2.5 text-base font-semibold text-white rounded-xl transition-all duration-300 ${
+                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
                   pathname.startsWith('/topics') ? 'font-bold' : ''
                 }`}
               >
@@ -618,7 +618,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
             >
               <Link
                 href="/quizzes"
-                className={`group relative px-5 py-2.5 text-base font-semibold text-white rounded-xl transition-all duration-300 ${
+                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
                   pathname.startsWith('/quizzes') ? 'font-bold' : ''
                 }`}
               >
@@ -739,7 +739,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
             >
               <Link
                 href="/general-awareness"
-                className={`group relative px-5 py-2.5 text-base font-semibold text-white rounded-xl transition-all duration-300 ${
+                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
                   pathname.startsWith('/general-awareness') ? 'font-bold' : ''
                 }`}
               >
@@ -838,30 +838,46 @@ const Navbar = ({ user = null }: NavbarProps) => {
                 </div>
               )}
             </div>
-
-            <AuthNav user={user} variant="desktop" />
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2.5 text-base text-white rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className={`h-6 w-6 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}
-              
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          {/* Right — username + admin pinned to right edge */}
+          <div className="absolute right-0 top-1/2 z-20 flex -translate-y-1/2 items-center gap-2">
+            <div className="hidden items-center gap-2 md:flex">
+              <AuthNav user={user} variant="desktop" />
+              {user?.role === 'admin' ? (
+                <Link
+                  href="/admin"
+                  className={`inline-flex h-10 shrink-0 items-center rounded-full px-4 text-sm font-bold tracking-wide shadow-md transition-all duration-300 ${
+                    pathname.startsWith('/admin')
+                      ? 'bg-white text-purple-700 ring-2 ring-white/70'
+                      : 'bg-linear-to-r from-amber-300 to-orange-400 text-slate-900 hover:from-amber-200 hover:to-orange-300 hover:shadow-lg'
+                  }`}
+                >
+                  Admin
+                </Link>
+              ) : null}
+            </div>
+
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20 md:hidden"
+              aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12"></path>
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16"></path>
-              )}
-            </svg>
-          </button>
+              <svg
+                className={`h-6 w-6 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMobileMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12"></path>
+                ) : (
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu — cap to viewport so nested accordions can scroll inside the screen */}
@@ -1162,6 +1178,20 @@ const Navbar = ({ user = null }: NavbarProps) => {
               variant="mobile"
               onNavigate={() => setIsMobileMenuOpen(false)}
             />
+
+            {user?.role === 'admin' ? (
+              <Link
+                href="/admin"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`rounded-full px-4 py-3 text-center text-base font-bold transition-all duration-300 ${
+                  pathname.startsWith('/admin')
+                    ? 'bg-white text-purple-700 shadow-lg'
+                    : 'bg-linear-to-r from-amber-300 to-orange-400 text-slate-900'
+                }`}
+              >
+                Admin
+              </Link>
+            ) : null}
           </div>
         </div>
       </div>
