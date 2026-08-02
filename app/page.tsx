@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Link from 'next/link'
 import { 
   BookOpen, 
@@ -17,6 +17,7 @@ import {
   Sparkles
 } from 'lucide-react'
 import { getSession } from '@/lib/auth/session'
+import HomeRuleOfTheDay from '@/components/HomeRuleOfTheDay'
 
 const Home = async () => {
   let fullName: string | null = null
@@ -112,6 +113,10 @@ const Home = async () => {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <Suspense fallback={null}>
+        <HomeRuleOfTheDay />
+      </Suspense>
+
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-linear-to-r from-blue-600 via-indigo-700 to-purple-800 text-white">
         {/* Decorative Background Elements */}

@@ -18,9 +18,6 @@ function LoginForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const registered = searchParams.get('registered') === '1'
-  const nextPath = searchParams.get('next')
-  const safeNext =
-    nextPath && nextPath.startsWith('/') && !nextPath.startsWith('//') ? nextPath : '/'
   const [form, setForm] = useState<LoginInput>({ identifier: '', password: '' })
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
   const [showPassword, setShowPassword] = useState(false)
@@ -72,10 +69,18 @@ function LoginForm() {
 
       if (data.user?.role === 'admin') {
         router.push('/admin')
-      } else {
-        router.push(safeNext)
+        router.refresh()
+        return
       }
-      router.refresh()
+
+      // Full navigation so session cookie is applied, then open Rule of the Day on home.
+      try {
+        sessionStorage.setItem('aom-open-rule-of-the-day', '1')
+      } catch {
+        // ignore storage errors
+      }
+      window.location.assign('/?ruleOfTheDay=1')
+      return
     } catch {
       setError('Network error. Please check your connection and try again.')
     } finally {

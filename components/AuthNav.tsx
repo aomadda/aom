@@ -62,6 +62,7 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
 
   if (user) {
     const isMobile = variant === 'mobile'
+    const displayName = user.fullName.trim().slice(0, 8)
 
     return (
       <div ref={menuRef} className={`relative ${isMobile ? 'w-full' : ''}`}>
@@ -76,11 +77,11 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
           }`}
         >
           <span
-            className={`truncate font-semibold ${
-              isMobile ? 'w-full text-center text-base' : 'max-w-40 text-sm xl:max-w-52'
+            className={`font-semibold ${
+              isMobile ? 'w-full text-center text-base' : 'text-sm'
             }`}
           >
-            {user.fullName}
+            {displayName}
           </span>
         </button>
 
