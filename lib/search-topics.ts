@@ -276,6 +276,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords: "topics operating material block section Block Section G.R. 1.02(10) line clear",
   },
+  {
+    href: "/topics/operating-material/block-ticket",
+    title: "Block Ticket",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material block ticket Block Ticket S.R. 6.02.5 T/J.602 TSL against traffic",
+  },
 
   {
     href: "/manuals/block-working-manual",
@@ -1235,6 +1243,22 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material line clear Line Clear G.R. 1.02(36)",
   },
   {
+    href: "/topics/operating-material/loco-pilot-entered-without-atp",
+    title: "Loco Pilot Entered Without ATP",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material loco pilot entered without atp Loco Pilot Entered Block Section Without ATP G.R. S.R. 6.06 PLCT",
+  },
+  {
+    href: "/topics/operating-material/lurch",
+    title: "Lurch",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material lurch Lurch S.R. 6.07 unsafe track conditions running trains flasher",
+  },
+  {
     href: "/topics/operating-material/material-train",
     title: "Material Train",
     category: "Study Topics",
@@ -1744,6 +1768,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness ramsar sites Ramsar Sites",
   },
   {
+    href: "/topics/operating-material/rail-fracture",
+    title: "Rail Fracture",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material rail fracture Rail Fracture S.R. 6.01 caution order Kavach SOS SMOCIP",
+  },
+  {
     href: "/topics/operating-material/reception-signals",
     title: "Reception Signals",
     category: "Study Topics",
@@ -1756,6 +1788,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material relay room Relay Room APP XIII locking double key EKT",
+  },
+  {
+    href: "/topics/operating-material/relief-engine",
+    title: "Relief Engine",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material relief engine Relief Engine SR 6.02.6 T/A.602 T/C.912 obstructed block section",
   },
   {
     href: "/topics/operating-material/repeating-signal",
@@ -2073,12 +2113,28 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material system of working System of Working G.R. 1.02(56)",
   },
   {
+    href: "/topics/operating-material/temporary-single-line",
+    title: "Temporary Single Line",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material temporary single line Temporary Single Line TSL S.R. 6.02.1 T/D 602 obstructed double line",
+  },
+  {
     href: "/topics/operating-material/track-tamping-machine",
     title: "Track Tamping Machine",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material track tamping machine Track Tamping Machine TTM S.R. 4.65 T/465 T/A465 JSC",
+  },
+  {
+    href: "/topics/operating-material/total-interruption-of-communication",
+    title: "Total Interruption of Communication",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material total interruption of communication TIC S.R. 6.02.4 6.02.3 T/B 602 T/C.602 single double line",
   },
   {
     href: "/general-awareness/sports/table-tennis",
@@ -2152,11 +2208,35 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material train Train G.R. 1.02(58)",
   },
   {
+    href: "/topics/operating-material/train-engine-disabled",
+    title: "Train Engine Disabled",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material train engine disabled Train Engine Disabled S.R. 6.05 relief engine block section",
+  },
+  {
     href: "/topics/operating-material/train-manager",
     title: "Train Manager",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material train manager Train Manager without guard S.R. 4.25.4 ZRTI",
+  },
+  {
+    href: "/topics/operating-material/train-parting",
+    title: "Train Parting",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material train parting Train Parted in Block Section G.R. S.R. 6.08 T/609 whistle",
+  },
+  {
+    href: "/topics/operating-material/trains-unusually-delayed",
+    title: "Trains Unusually Delayed",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material trains unusually delayed Trains Unusually Delayed G.R. 6.04 ART MRT SCOR",
   },
   {
     href: "/topics/transfers",

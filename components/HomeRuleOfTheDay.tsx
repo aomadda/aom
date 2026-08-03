@@ -16,21 +16,38 @@ export default function HomeRuleOfTheDay() {
   const rule = useMemo(() => getTodayRuleOfTheDay(new Date()), [])
   const fromLoginQuery = searchParams.get('ruleOfTheDay') === '1'
 
+  // Open every time user lands on / returns to Home.
   useEffect(() => {
-    let shouldOpen = fromLoginQuery
-
-    try {
-      if (sessionStorage.getItem(RULE_OF_THE_DAY_FLAG) === '1') {
-        shouldOpen = true
-      }
-    } catch {
-      // ignore storage errors
-    }
-
-    if (shouldOpen) {
+    if (pathname === '/') {
       setOpen(true)
+      try {
+        sessionStorage.removeItem(RULE_OF_THE_DAY_FLAG)
+      } catch {
+        // ignore
+      }
     }
-  }, [fromLoginQuery])
+  }, [pathname, fromLoginQuery])
+
+  // Also reopen when user clicks Home / brand link while already on Home.
+  useEffect(() => {
+    const onDocumentClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null
+      const anchor = target?.closest('a') as HTMLAnchorElement | null
+      if (!anchor?.href) return
+
+      try {
+        const url = new URL(anchor.href, window.location.origin)
+        if (url.origin === window.location.origin && url.pathname === '/') {
+          setOpen(true)
+        }
+      } catch {
+        // ignore invalid href
+      }
+    }
+
+    document.addEventListener('click', onDocumentClick)
+    return () => document.removeEventListener('click', onDocumentClick)
+  }, [])
 
   const handleClose = useCallback(() => {
     setOpen(false)

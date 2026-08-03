@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import Link from 'next/link'
 import { X } from 'lucide-react'
 import type { RuleOfTheDayItem } from '@/assets/rule-of-the-day'
 
@@ -17,6 +16,7 @@ export default function RuleOfTheDayDialog({
   rule,
   open,
   onClose,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   showPageLink = false,
 }: RuleOfTheDayDialogProps) {
   const [mounted, setMounted] = useState(false)
@@ -96,7 +96,7 @@ export default function RuleOfTheDayDialog({
               GR {rule.rule}
             </p>
             <p className="text-xs leading-relaxed text-slate-100 sm:text-sm">
-              {rule.title}
+              {rule.title} 
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bomb, BookMarked, BrickWall, Building2, CalendarClock, ChevronsRight, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eye, FileBadge, FileCheck, Flame, Forward, GitBranch, GitFork, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, Play, Repeat, Route, Ruler, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, TrainFront, TriangleAlert, Unlink, Unplug, UserRoundCog, Waypoints, Workflow, Wrench } from 'lucide-react'
+import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bomb, BookMarked, BrickWall, Building2, CalendarClock, ChevronsRight, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eye, FileBadge, FileCheck, FileWarning, Flame, Forward, GitBranch, GitFork, GitMerge, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LifeBuoy, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, PhoneOff, Play, Repeat, Route, Ruler, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, Ticket, TrainFront, TriangleAlert, Unlink, Unplug, UserRoundCog, Waves, Waypoints, Workflow, Wrench } from 'lucide-react'
 
 const topics = [
   {
@@ -37,6 +37,11 @@ const topics = [
     href: '/topics/operating-material/block-section',
     title: 'Block Section',
     icon: Split,
+  },
+  {
+    href: '/topics/operating-material/block-ticket',
+    title: 'Block Ticket',
+    icon: Ticket,
   },
   {
     href: '/topics/operating-material/brake-power-certificate',
@@ -179,6 +184,16 @@ const topics = [
     icon: CircleCheck,
   },
   {
+    href: '/topics/operating-material/loco-pilot-entered-without-atp',
+    title: 'Loco Pilot Entered Without ATP',
+    icon: FileWarning,
+  },
+  {
+    href: '/topics/operating-material/lurch',
+    title: 'Lurch',
+    icon: Waves,
+  },
+  {
     href: '/topics/operating-material/material-train',
     title: 'Material Train',
     icon: Container,
@@ -219,6 +234,11 @@ const topics = [
     icon: Waypoints,
   },
   {
+    href: '/topics/operating-material/rail-fracture',
+    title: 'Rail Fracture',
+    icon: Split,
+  },
+  {
     href: '/topics/operating-material/reception-signals',
     title: 'Reception Signals',
     icon: LogIn,
@@ -227,6 +247,11 @@ const topics = [
     href: '/topics/operating-material/relay-room',
     title: 'Relay Room',
     icon: KeyRound,
+  },
+  {
+    href: '/topics/operating-material/relief-engine',
+    title: 'Relief Engine',
+    icon: LifeBuoy,
   },
   {
     href: '/topics/operating-material/repeating-signal',
@@ -315,9 +340,19 @@ const topics = [
     icon: Workflow,
   },
   {
+    href: '/topics/operating-material/temporary-single-line',
+    title: 'Temporary Single Line',
+    icon: GitMerge,
+  },
+  {
     href: '/topics/operating-material/track-tamping-machine',
     title: 'Track Tamping Machine',
     icon: Hammer,
+  },
+  {
+    href: '/topics/operating-material/total-interruption-of-communication',
+    title: 'Total Interruption of Communication',
+    icon: PhoneOff,
   },
   {
     href: '/topics/operating-material/train',
@@ -325,9 +360,24 @@ const topics = [
     icon: TrainFront,
   },
   {
+    href: '/topics/operating-material/train-engine-disabled',
+    title: 'Train Engine Disabled',
+    icon: Unplug,
+  },
+  {
     href: '/topics/operating-material/train-manager',
     title: 'Train Manager',
     icon: HardHat,
+  },
+  {
+    href: '/topics/operating-material/train-parting',
+    title: 'Train Parting',
+    icon: Unlink,
+  },
+  {
+    href: '/topics/operating-material/trains-unusually-delayed',
+    title: 'Trains Unusually Delayed',
+    icon: CalendarClock,
   },
   {
     href: '/topics/operating-material/vehicle-guidance',
