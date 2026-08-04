@@ -43,6 +43,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "pdfs accident manual amendments Accident Manual Amendments",
   },
   {
+    href: "/quizzes/aom-previous-paper-2022",
+    title: "AOM Previous Paper 2022",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords:
+      "quizzes aom previous paper 2022 AOM Previous Paper 2022 exam practice 175 questions",
+  },
+  {
     href: "/quizzes/aom-previous-papers",
     title: "AOM Previous Papers",
     category: "Quizzes",
