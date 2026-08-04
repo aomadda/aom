@@ -4,8 +4,13 @@ import React from 'react'
 import Link from 'next/link'
 import { Workflow } from 'lucide-react'
 
-const points = [
-  'Means the system adopted for the time being for the working of trains on any portion of a railway. (G.R. 1.02(56))',
+const systems = [
+  { label: 'a', text: 'The Absolute Block System' },
+  { label: 'b', text: 'The Automatic Block System' },
+  { label: 'c', text: 'The Following Trains System' },
+  { label: 'd', text: 'The Pilot Guard System' },
+  { label: 'e', text: 'The Train-Staff and Ticket System' },
+  { label: 'f', text: 'The One Train Only System' },
 ]
 
 const SystemOfWorkingPage = () => {
@@ -25,27 +30,64 @@ const SystemOfWorkingPage = () => {
               <Workflow className="h-7 w-7 text-amber-200" strokeWidth={1.75} />
             </div>
 
-            <h1 className="text-center text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 sm:text-4xl md:text-[2.5rem]">
-              System of Working
+            <h1 className="text-center text-xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 sm:text-2xl md:text-3xl leading-snug">
+              What is System of Working?
             </h1>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-[15px] leading-[1.75] text-slate-300 sm:text-base">
+              How many systems are there in Indian Railway and South Central Railway? (G.R. /
+              S.R. 7.01)
+            </p>
             <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-linear-to-r from-amber-400 to-orange-500" />
           </header>
 
           <div className="space-y-4 px-5 py-8 sm:px-10 sm:py-10">
-            {points.map((text, index) => (
-              <div
-                key={index}
-                className="group flex gap-3.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 shadow-sm ring-1 ring-white/4 transition-all duration-300 hover:border-amber-500/30 hover:bg-slate-900/60 hover:shadow-md hover:shadow-amber-950/20 sm:gap-5 sm:p-5"
-                style={{ animation: `fade-up 0.55s ease-out ${0.08 * (index + 1)}s both` }}
-              >
-                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-amber-400/25 via-amber-500/20 to-orange-600/25 text-amber-100 shadow-inner shadow-black/20 ring-1 ring-amber-400/35 transition-transform duration-300 group-hover:scale-105 sm:h-10 sm:w-10">
-                  <Workflow className="h-5 w-5" strokeWidth={2} />
+            <div
+              className="flex gap-3 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
+              style={{ animation: 'fade-up 0.55s ease-out 0.04s both' }}
+            >
+              <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
+                1
+              </span>
+              <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
+                System of working means the system adopted for the time being for working of trains
+                on any portion of railway. (G.R. / S.R. 7.01)
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
+              style={{ animation: 'fade-up 0.55s ease-out 0.08s both' }}
+            >
+              <div className="flex gap-3">
+                <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
+                  2
                 </span>
-                <p className="min-w-0 flex-1 pt-1 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
-                  {text}
+                <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
+                  On Indian Railway, all trains working between stations shall be worked on one of
+                  the following systems, namely:
                 </p>
               </div>
-            ))}
+
+              <ul className="mt-5 grid gap-3 sm:ml-12 sm:grid-cols-2">
+                {systems.map((item, index) => (
+                  <li
+                    key={item.label}
+                    className="group relative overflow-hidden rounded-xl border border-amber-500/20 bg-linear-to-br from-slate-950/70 via-slate-900/50 to-amber-950/20 p-3.5 ring-1 ring-white/4 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-400/40 hover:bg-slate-900/70 hover:shadow-lg hover:shadow-amber-950/30 sm:p-4"
+                    style={{ animation: `fade-up 0.5s ease-out ${0.1 + index * 0.05}s both` }}
+                  >
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-amber-400/35 to-transparent opacity-70 transition-opacity group-hover:opacity-100" />
+                    <div className="flex items-start gap-3">
+                      <span className="inline-flex h-9 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/30 to-orange-600/30 px-1.5 text-sm font-bold text-amber-100 shadow-inner shadow-black/20 ring-1 ring-amber-400/40 transition-transform duration-300 group-hover:scale-105">
+                        {item.label}
+                      </span>
+                      <p className="min-w-0 flex-1 pt-1.5 text-[15px] font-medium leading-[1.65] text-slate-200 sm:text-base">
+                        {item.text}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </article>
 

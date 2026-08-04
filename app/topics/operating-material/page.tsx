@@ -1,8 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bomb, BookMarked, BrickWall, Building2, CalendarClock, ChevronsRight, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eye, FileBadge, FileCheck, FileWarning, Flame, Forward, GitBranch, GitFork, GitMerge, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LifeBuoy, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, PhoneOff, Play, Repeat, Route, Ruler, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, Ticket, TrainFront, TriangleAlert, Unlink, Unplug, UserRoundCog, Waves, Waypoints, Workflow, Wrench } from 'lucide-react'
+import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bike, Bomb, BookMarked, BrickWall, Building2, CalendarClock, CarFront, ChevronsRight, CircuitBoard, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eclipse, Eye, FileBadge, FileCheck, FileWarning, Flame, Forward, GitBranch, GitFork, GitMerge, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LifeBuoy, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, PhoneOff, Play, Repeat, Route, Ruler, ShieldAlert, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, Ticket, TrainFront, TriangleAlert, Truck, Unlink, Unplug, UserRoundCog, Waves, Waypoints, Weight, Workflow, Wrench } from 'lucide-react'
 
 const topics = [
+  {
+    href: '/topics/operating-material/absolute-block-system',
+    title: 'Absolute Block System',
+    icon: Layers,
+  },
   {
     href: '/topics/operating-material/adequate-distance',
     title: 'Adequate Distance',
@@ -24,6 +29,11 @@ const topics = [
     icon: FileCheck,
   },
   {
+    href: '/topics/operating-material/automatic-block-system',
+    title: 'Automatic Block System',
+    icon: CircuitBoard,
+  },
+  {
     href: '/topics/operating-material/block-forward',
     title: 'Block Forward',
     icon: Forward,
@@ -42,6 +52,11 @@ const topics = [
     href: '/topics/operating-material/block-ticket',
     title: 'Block Ticket',
     icon: Ticket,
+  },
+  {
+    href: '/topics/operating-material/block-working',
+    title: 'Block Working',
+    icon: BrickWall,
   },
   {
     href: '/topics/operating-material/brake-power-certificate',
@@ -109,6 +124,11 @@ const topics = [
     icon: MoveRight,
   },
   {
+    href: '/topics/operating-material/engine-unable-to-haul-the-load',
+    title: 'Engine Unable to Haul the Load',
+    icon: Weight,
+  },
+  {
     href: '/topics/operating-material/Exchange-of-all-right-signals',
     title: 'Exchange of All Right Signals',
     icon: Handshake,
@@ -117,6 +137,11 @@ const topics = [
     href: '/topics/operating-material/facing-trailing-points',
     title: 'Facing and Trailing Points',
     icon: GitFork,
+  },
+  {
+    href: '/topics/operating-material/Fire-on-train',
+    title: 'Fire on Train',
+    icon: Flame,
   },
   {
     href: '/topics/operating-material/fixed-signal',
@@ -164,6 +189,11 @@ const topics = [
     icon: Spline,
   },
   {
+    href: '/topics/operating-material/integrated-block',
+    title: 'Integrated Block',
+    icon: Combine,
+  },
+  {
     href: '/topics/operating-material/interlocking',
     title: 'Interlocking',
     icon: Combine,
@@ -179,6 +209,11 @@ const topics = [
     icon: ShieldCheck,
   },
   {
+    href: '/topics/operating-material/line-block',
+    title: 'Line Block',
+    icon: Hammer,
+  },
+  {
     href: '/topics/operating-material/line-clear',
     title: 'Line Clear',
     icon: CircleCheck,
@@ -189,6 +224,11 @@ const topics = [
     icon: FileWarning,
   },
   {
+    href: '/topics/operating-material/lorry',
+    title: 'Lorry',
+    icon: Truck,
+  },
+  {
     href: '/topics/operating-material/lurch',
     title: 'Lurch',
     icon: Waves,
@@ -197,6 +237,11 @@ const topics = [
     href: '/topics/operating-material/material-train',
     title: 'Material Train',
     icon: Container,
+  },
+  {
+    href: '/topics/operating-material/motor-trolley',
+    title: 'Motor Trolley',
+    icon: Bike,
   },
   {
     href: '/topics/operating-material/multiple-aspect-signalling',
@@ -234,9 +279,24 @@ const topics = [
     icon: Waypoints,
   },
   {
+    href: '/topics/operating-material/protection-of-train',
+    title: 'Protection of Train',
+    icon: ShieldAlert,
+  },
+  {
+    href: '/topics/operating-material/rail-dolly',
+    title: 'Rail Dolly',
+    icon: CircleDot,
+  },
+  {
     href: '/topics/operating-material/rail-fracture',
     title: 'Rail Fracture',
     icon: Split,
+  },
+  {
+    href: '/topics/operating-material/rail-road-vehicle',
+    title: 'Rail Road Vehicle',
+    icon: CarFront,
   },
   {
     href: '/topics/operating-material/reception-signals',
@@ -277,6 +337,11 @@ const topics = [
     href: '/topics/operating-material/shunt-signal',
     title: 'Shunt Signal',
     icon: MoveHorizontal,
+  },
+  {
+    href: '/topics/operating-material/shadow-block',
+    title: 'Shadow Block',
+    icon: Eclipse,
   },
   {
     href: '/topics/operating-material/shunting',

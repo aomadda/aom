@@ -65,6 +65,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts Acts & Rules",
   },
   {
+    href: "/topics/operating-material/absolute-block-system",
+    title: "Absolute Block System",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material absolute block system Absolute Block System essentials G.R. 8.01 line clear class B station TALQ MAS",
+  },
+  {
     href: "/topics/operating-material/adequate-distance",
     title: "Adequate Distance",
     category: "Study Topics",
@@ -192,6 +200,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material authority to proceed Authority to Proceed ATP G.R. 1.02(6)",
   },
   {
+    href: "/topics/operating-material/automatic-block-system",
+    title: "Automatic Block System",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material automatic block system Automatic Block System semi-automatic T/B.912 T/E.912 TSL LSS defective absolute comparison",
+  },
+  {
     href: "/general-awareness/awards",
     title: "Awards",
     category: "General Awareness",
@@ -284,7 +300,14 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material block ticket Block Ticket S.R. 6.02.5 T/J.602 TSL against traffic",
   },
-
+  {
+    href: "/topics/operating-material/block-working",
+    title: "Block Working",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material block working Block Working line block power block integrated block shadow block TTM OHE",
+  },
   {
     href: "/manuals/block-working-manual",
     title: "Block Working Manual",
@@ -668,6 +691,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material engine pushing Engine Pushing G.R. S.R. 4.12 push back",
   },
   {
+    href: "/topics/operating-material/engine-unable-to-haul-the-load",
+    title: "Engine Unable to Haul the Load",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material engine unable to haul the load Engine Unable to Haul the Load relief engine push back divided train working T/609 G.R. S.R. 6.09",
+  },
+  {
     href: "/topics/operating-material/Exchange-of-all-right-signals",
     title: "Exchange of All Right Signals",
     category: "Study Topics",
@@ -723,6 +754,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material facing trailing points Facing and Trailing Points G.R. 1.02(20)",
+  },
+  {
+    href: "/topics/operating-material/Fire-on-train",
+    title: "Fire on Train",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material fire on train Fire on Passenger Coach in Mid-Section G.R. S.R. 6.10 CBC extinguisher",
   },
   {
     href: "/general-awareness/important-days/february",
@@ -1002,6 +1041,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps icms ICMS",
   },
   {
+    href: "/topics/operating-material/integrated-block",
+    title: "Integrated Block",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material integrated block Integrated Block caution order 150 mts 15/8 kmph units",
+  },
+  {
     href: "/general-awareness/important-days",
     title: "Important Days",
     category: "General Awareness",
@@ -1236,6 +1283,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules lhb LHB",
   },
   {
+    href: "/topics/operating-material/line-block",
+    title: "Line Block",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material line block Line Block circular notice field telephone VHF PWI SCOR Category-I Category-II Category-III",
+  },
+  {
     href: "/topics/operating-material/line-clear",
     title: "Line Clear",
     category: "Study Topics",
@@ -1249,6 +1304,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material loco pilot entered without atp Loco Pilot Entered Block Section Without ATP G.R. S.R. 6.06 PLCT",
+  },
+  {
+    href: "/topics/operating-material/lorry",
+    title: "Lorry",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material lorry Lorry G.R. S.R. 15.27 T.1518 trolley notice block protection banner flag",
   },
   {
     href: "/topics/operating-material/lurch",
@@ -1265,6 +1328,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material material train Material Train S.R. 4.62 T/462 T/A.462 engineering BPC",
+  },
+  {
+    href: "/topics/operating-material/motor-trolley",
+    title: "Motor Trolley",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material motor trolley Motor Trolley G.R. S.R. 15.18 15.25 T/A.1525 T/1525 lorry push trolley",
   },
   {
     href: "/general-awareness/awards/literature-awards",
@@ -1656,6 +1727,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps prs application PRS Application",
   },
   {
+    href: "/topics/operating-material/protection-of-train",
+    title: "Protection of Train",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material protection of train Protection of Train GR 6.03 detonator single line double line TSL automatic block",
+  },
+  {
     href: "/topics/public-complaints",
     title: "Public Complaints",
     category: "Study Topics",
@@ -1768,12 +1847,28 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness ramsar sites Ramsar Sites",
   },
   {
+    href: "/topics/operating-material/rail-dolly",
+    title: "Rail Dolly",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material rail dolly Rail Dolly S.R. 15.27.8 keyman PWI sleeper block protection",
+  },
+  {
     href: "/topics/operating-material/rail-fracture",
     title: "Rail Fracture",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material rail fracture Rail Fracture S.R. 6.01 caution order Kavach SOS SMOCIP",
+  },
+  {
+    href: "/topics/operating-material/rail-road-vehicle",
+    title: "Rail Road Vehicle",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material rail road vehicle Rail Road Vehicle RRV Rail-cum-Road Vehicle S.R. 15.27.9 ON OFF tracking",
   },
   {
     href: "/topics/operating-material/reception-signals",
@@ -1938,6 +2033,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material shunt signal Shunt Signal G.R. 3.14 SPI position light T/369",
+  },
+  {
+    href: "/topics/operating-material/shadow-block",
+    title: "Shadow Block",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material shadow block Shadow Block caution order 150 mts both ends authorities",
   },
   {
     href: "/topics/operating-material/shunting",

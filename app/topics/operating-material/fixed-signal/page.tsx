@@ -110,6 +110,48 @@ const FixedSignalPage = () => {
           </div>
         </article>
 
+        <article
+          className="mt-8 overflow-hidden rounded-3xl border border-slate-500/30 bg-slate-900/50 shadow-[0_24px_80px_-12px_rgba(0,0,0,0.55)] ring-1 ring-white/6 backdrop-blur-xl"
+          style={{ animation: 'fade-up 0.55s ease-out 0.35s both' }}
+        >
+          <header className="relative border-b border-amber-500/15 bg-linear-to-br from-slate-900/90 via-slate-900/70 to-amber-950/30 px-5 py-6 sm:px-8 sm:py-7">
+            <div className="absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" />
+            <h2 className="text-center text-xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 sm:text-2xl md:text-3xl leading-snug">
+              Minimum Equipment of Fixed Signals on Single Line
+            </h2>
+          </header>
+
+          <div className="space-y-4 px-5 py-7 sm:px-8 sm:py-9">
+            <p className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 text-[15px] leading-[1.75] text-slate-300 ring-1 ring-white/4 sm:p-5 sm:text-base">
+              The minimum equipment of fixed signals to be provided on a single line for each
+              direction at a station shall be:
+            </p>
+
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {[
+                { label: 'i)', text: 'A home signal' },
+                { label: 'ii)', text: 'A starter signal' },
+              ].map((item, index) => (
+                <li
+                  key={item.label}
+                  className="group relative overflow-hidden rounded-xl border border-amber-500/20 bg-linear-to-br from-slate-950/70 via-slate-900/50 to-amber-950/20 p-4 ring-1 ring-white/4 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-400/40 hover:shadow-lg hover:shadow-amber-950/30"
+                  style={{ animation: `fade-up 0.5s ease-out ${0.4 + index * 0.06}s both` }}
+                >
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-amber-400/35 to-transparent" />
+                  <div className="flex items-start gap-3">
+                    <span className="inline-flex h-9 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/30 to-orange-600/30 px-1.5 text-sm font-bold text-amber-100 ring-1 ring-amber-400/40 transition-transform duration-300 group-hover:scale-105">
+                      {item.label}
+                    </span>
+                    <p className="pt-1.5 text-[15px] font-medium leading-[1.65] text-slate-200 sm:text-base">
+                      {item.text}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+
         <div className="mt-10 flex justify-center">
           <Link
             href="/topics/operating-material"
