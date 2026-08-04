@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bike, Bomb, BookMarked, BrickWall, Building2, CalendarClock, CarFront, ChevronsRight, CircuitBoard, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eclipse, Eye, FileBadge, FileCheck, FileWarning, Flame, Forward, GitBranch, GitFork, GitMerge, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LifeBuoy, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, PhoneOff, Play, Repeat, Route, Ruler, ShieldAlert, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, Ticket, TrainFront, TriangleAlert, Truck, Unlink, Unplug, UserRoundCog, Waves, Waypoints, Weight, Workflow, Wrench } from 'lucide-react'
+import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bike, Bomb, BookMarked, BrickWall, Building2, CalendarClock, CarFront, ChevronsRight, CircuitBoard, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eclipse, Eye, FileBadge, FileCheck, FileWarning, Flame, Forward, GitBranch, GitFork, GitMerge, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LifeBuoy, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, PhoneOff, Play, Repeat, Route, Ruler, ShieldAlert, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, Ticket, TrainFront, TriangleAlert, Truck, Unlink, Unplug, UserRoundCog, Waves, Waypoints, Weight, Workflow, Wrench, Zap, ZapOff } from 'lucide-react'
 
 const topics = [
   {
@@ -77,6 +77,11 @@ const topics = [
     href: '/topics/operating-material/catch-slip-siding',
     title: 'Catch / Slip Siding',
     icon: CornerDownRight,
+  },
+  {
+    href: '/topics/operating-material/caution-order',
+    title: 'Caution Order',
+    icon: TriangleAlert,
   },
   {
     href: '/topics/operating-material/coacting-signal',
@@ -204,9 +209,19 @@ const topics = [
     icon: Unlink,
   },
   {
+    href: '/topics/operating-material/isolator',
+    title: 'Isolator',
+    icon: ZapOff,
+  },
+  {
     href: '/topics/operating-material/kavach',
     title: 'Kavach',
     icon: ShieldCheck,
+  },
+  {
+    href: '/topics/operating-material/level-crossing-gates',
+    title: 'Level Crossing Gates',
+    icon: BrickWall,
   },
   {
     href: '/topics/operating-material/line-block',
@@ -234,6 +249,11 @@ const topics = [
     icon: Waves,
   },
   {
+    href: '/topics/operating-material/marshalling',
+    title: 'Marshalling',
+    icon: Combine,
+  },
+  {
     href: '/topics/operating-material/material-train',
     title: 'Material Train',
     icon: Container,
@@ -247,6 +267,11 @@ const topics = [
     href: '/topics/operating-material/multiple-aspect-signalling',
     title: 'Multiple Aspect Signalling',
     icon: SignalHigh,
+  },
+  {
+    href: '/topics/operating-material/non-interlocked-working',
+    title: 'Non-Interlocked Working',
+    icon: Unlink,
   },
   {
     href: '/topics/operating-material/obstruction',
@@ -264,6 +289,16 @@ const topics = [
     icon: CircleDot,
   },
   {
+    href: '/topics/operating-material/panel-interlocking',
+    title: 'Panel Interlocking',
+    icon: PanelTop,
+  },
+  {
+    href: '/topics/operating-material/patrolling-of-lines',
+    title: 'Patrolling of Lines',
+    icon: Route,
+  },
+  {
     href: '/topics/operating-material/permissive-signals',
     title: 'Permissive Signals',
     icon: SignalMedium,
@@ -277,6 +312,11 @@ const topics = [
     href: '/topics/operating-material/points',
     title: 'Points Affecting the Movement',
     icon: Waypoints,
+  },
+  {
+    href: '/topics/operating-material/power-block',
+    title: 'Power Block',
+    icon: Zap,
   },
   {
     href: '/topics/operating-material/protection-of-train',
@@ -375,6 +415,11 @@ const topics = [
   },
 
   {
+    href: '/topics/operating-material/station-detonator-register',
+    title: 'Station Detonator Register',
+    icon: Bomb,
+  },
+  {
     href: '/topics/operating-material/station-master',
     title: 'Station Master',
     icon: UserRoundCog,
@@ -463,6 +508,11 @@ const topics = [
     href: '/topics/operating-material/without-tail-lamp',
     title: 'Without Tail Lamp',
     icon: LightbulbOff,
+  },
+  {
+    href: '/topics/operating-material/working-of-siding',
+    title: 'Working of Siding',
+    icon: GitBranch,
   },
   {
     href: '/topics/operating-material/working-time-table',

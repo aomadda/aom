@@ -51,12 +51,12 @@ export const searchTopics: SearchTopic[] = [
       "quizzes aom previous paper 2022 AOM Previous Paper 2022 exam practice 175 questions",
   },
   {
-    href: "/quizzes/aom-previous-papers",
-    title: "AOM Previous Papers",
+    href: "/quizzes/aom-previous-papers-2026",
+    title: "AOM Previous Papers 2026",
     category: "Quizzes",
     parent: "Quizzes",
     keywords:
-      "quizzes aom previous papers AOM Previous Papers Professional Subject GK Rajabhasha Establishment Financial Rules",
+      "quizzes aom previous papers 2026 AOM Previous Papers Professional Subject GK Rajabhasha Establishment Financial Rules",
   },
   {
     href: "/quizzes/financial-rules/accounts",
@@ -445,6 +445,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material catch slip siding Catch Slip Siding G.R. S.R. 3.50",
+  },
+  {
+    href: "/topics/operating-material/caution-order",
+    title: "Caution Order",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material caution order Caution Order T.409 T/A.409 notice station speed restriction preservation",
   },
   {
     href: "/general-awareness/awards/cinema-awards",
@@ -1170,6 +1178,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material isolation Isolation G.R. 1.02(32)",
   },
   {
+    href: "/topics/operating-material/isolator",
+    title: "Isolator",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material isolator Isolator Switches Section Siding S.R. 17.03.5.3 OHE TPC competency",
+  },
+  {
     href: "/topics/irec",
     title: "IREC",
     category: "Study Topics",
@@ -1291,6 +1307,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules lhb LHB",
   },
   {
+    href: "/topics/operating-material/level-crossing-gates",
+    title: "Level Crossing Gates",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material level crossing gates Level Crossing Gates APPENDIX-II TVU gateman interlocked non-interlocked APNG",
+  },
+  {
     href: "/topics/operating-material/line-block",
     title: "Line Block",
     category: "Study Topics",
@@ -1298,6 +1322,7 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material line block Line Block circular notice field telephone VHF PWI SCOR Category-I Category-II Category-III",
   },
+
   {
     href: "/topics/operating-material/line-clear",
     title: "Line Clear",
@@ -1330,6 +1355,14 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material lurch Lurch S.R. 6.07 unsafe track conditions running trains flasher",
   },
   {
+    href: "/topics/operating-material/marshalling",
+    title: "Marshalling",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material marshalling Marshalling APPENDIX VIII explosives petroleum dead engines SLR saloons",
+  },
+  {
     href: "/topics/operating-material/material-train",
     title: "Material Train",
     category: "Study Topics",
@@ -1337,6 +1370,7 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material material train Material Train S.R. 4.62 T/462 T/A.462 engineering BPC",
   },
+
   {
     href: "/topics/operating-material/motor-trolley",
     title: "Motor Trolley",
@@ -1509,6 +1543,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics national rail plan National Rail Plan",
   },
   {
+    href: "/topics/operating-material/non-interlocked-working",
+    title: "Non-Interlocked Working",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material non-interlocked working Non-Interlocked Working NI Working RRI panel cable meggering Sr.DOM",
+  },
+  {
     href: "/general-awareness/world-information/north-american-countries",
     title: "North American Countries",
     category: "General Awareness",
@@ -1630,11 +1672,27 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material outer signal Outer Signal FSS TAS class B T/369",
   },
   {
+    href: "/topics/operating-material/panel-interlocking",
+    title: "Panel Interlocking",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material panel interlocking Panel Interlocking APPENDIX XXI Siemens Podanur VDU SSI RRI calling-on",
+  },
+  {
     href: "/quizzes/establishment-rules/pass-rules",
     title: "Pass Rules",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
     keywords: "quizzes establishment rules pass rules Pass Rules",
+  },
+  {
+    href: "/topics/operating-material/patrolling-of-lines",
+    title: "Patrolling of Lines",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material patrolling of lines Patrolling of Lines Appendix IV G.R. 15.05 monsoon patrol beat book",
   },
   {
     href: "/pdfs",
@@ -1705,6 +1763,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material points affecting the movement Points Affecting the Movement G.R. 3.38 VDU line block power block",
+  },
+  {
+    href: "/topics/operating-material/power-block",
+    title: "Power Block",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material power block Power Block S.R. 17.04 OHE TPC SCOR Permit to Work collars E/Tr.D",
   },
   {
     href: "/quizzes/general-awareness/polity",
@@ -2151,6 +2217,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material station Station G.R. 1.02(51)",
   },
   {
+    href: "/topics/operating-material/station-detonator-register",
+    title: "Station Detonator Register",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material station detonator register Station Detonator Register APPENDIX VII fog signalman",
+  },
+  {
     href: "/topics/operating-material/station-master",
     title: "Station Master",
     category: "Study Topics",
@@ -2165,6 +2239,7 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material station working rules Station Working Rules SWR G.R. 5.06 Appendix XIV chapters appendices",
   },
+
   {
     href: "/manuals/station-working-rules",
     title: "Station Working Rules",
@@ -2471,12 +2546,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness wildlife sanctuaries Wildlife Sanctuaries",
   },
   {
+    href: "/topics/operating-material/working-of-siding",
+    title: "Working of Siding",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material working of siding Working of Siding APPENDIX XXVII Pilot Movement Register One Pilot Multiple Pilot push back",
+  },
+  {
     href: "/topics/operating-material/working-time-table",
     title: "Working Time Table",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material working time table Working Time Table WTT G.R. 4.07 PCOM",
   },
+
   {
     href: "/manuals/working-time-table",
     title: "Working Time Table",

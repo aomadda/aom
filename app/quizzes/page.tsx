@@ -25,8 +25,8 @@ const Quizzes = () => {
       description: 'Practice the AOM Previous Paper 2022 with 175 questions covering operating, establishment and related topics'
     },
     {
-      href: '/quizzes/aom-previous-papers',
-      title: 'AOM Previous Papers',
+      href: '/quizzes/aom-previous-papers-2026',
+      title: 'AOM Previous Papers 2026',
       icon: '📑',
       color: 'from-emerald-500 to-teal-600',
       hoverColor: 'from-emerald-600 to-teal-700',
@@ -132,7 +132,7 @@ const Quizzes = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-purple-50 via-blue-50 via-indigo-50 to-pink-50 py-8 pb-[max(2rem,env(safe-area-inset-bottom,0px))] sm:py-12">
+    <div className="min-h-screen bg-linear-to-br from-purple-50 via-blue-50 to-pink-50 py-8 pb-[max(2rem,env(safe-area-inset-bottom,0px))] sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12">
@@ -143,7 +143,7 @@ const Quizzes = () => {
               </div>
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-6 bg-linear-to-r from-purple-600 via-blue-600 via-indigo-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-6 bg-linear-to-r from-purple-600 via-blue-600 to-pink-600 bg-clip-text text-transparent">
             Quizzes
           </h1>
           
