@@ -294,6 +294,50 @@ const vduTestingChecks = [
   'Try to cancel the route, neither route cancellation shall be initiated nor should the route get cancelled.',
 ]
 
+const panelComparisonRows = [
+  [
+    'The points and signals are operated by turning the knob switches to the required position',
+    'Push buttons of different colour codes are provided near the points, signal etc., for their operations',
+  ],
+  [
+    'Points are required to be operated individually for taking off signals',
+    'Individual points need not be operated for taking off signals',
+  ],
+  [
+    'Only one knob to be operated at a time',
+    'Two related buttons have to be pressed and released simultaneously for operating a given function',
+  ],
+  ['Route knobs are not available', 'Route knobs are available'],
+  [
+    'Colour of knobs: Point-black',
+    'Colour of buttons: Route button-grey, Point button–blue',
+  ],
+  [
+    'Emergency point, signal, route & sub route release buttons are not available',
+    'Emergency point, signal, route & sub route release buttons are available',
+  ],
+  [
+    'Knobs are turned to Normal and Reverse positions',
+    "NCR‘ indication along with audible warning appears after a button is kept pressed for a prolonged period of 10 seconds or more. Normally, buttons are not required to be pressed for more than 3 seconds.",
+  ],
+  [
+    'There are three indications and two positions for the Point knobs. Miniature yellow light is shown whenever point is free near the knobs and when not available indicates point is locked',
+    "Normal and reverse indications of points are displayed by strip indications at the concerned points, normal on the straight and reverse on the turnout. ‗Points locked‘ indication appears as white dot near the point when it is locked by the route",
+  ],
+  [
+    'When signal is cleared for a route - all track only up to the next signal is only shown',
+    'When signal is cleared for a route - all track including overlap indications appear on the panel',
+  ],
+  [
+    'Knobs are not self-restoring type once operated',
+    'Knobs are self-restoring type once operated',
+  ],
+  [
+    'As the train clears entire section of the route, the indication of the route disappears only after the concerned signal is put back to normal',
+    'As the train clears each section of the route, the indication of the route disappears, signifying release of the section',
+  ],
+]
+
 const vduTestingRest = [
   'Change over the VDU to standby VDU and ensure that occupation or clearances of the lines/track circuits/axle counters are updated automatically in accordance with status in the previous VDU.',
   'Take off signal to a route and attempt to take off another signal whose route infringes the path of the signal taken off or the signals which are locked. It should not obey.',
@@ -626,6 +670,56 @@ const PanelInterlockingPage = () => {
                 />
               </div>
             </SectionCard>
+          </div>
+        </article>
+
+        <article
+          className="mt-8 overflow-hidden rounded-3xl border border-slate-500/30 bg-slate-900/50 shadow-[0_24px_80px_-12px_rgba(0,0,0,0.55)] ring-1 ring-white/6 backdrop-blur-xl"
+          style={{ animation: 'fade-up 0.55s ease-out 0.25s both' }}
+        >
+          <header className="relative border-b border-amber-500/15 bg-linear-to-br from-slate-900/90 via-slate-900/70 to-amber-950/30 px-5 py-6 sm:px-8 sm:py-7">
+            <div className="absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" />
+            <h2 className="text-center text-xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 sm:text-2xl md:text-3xl leading-snug">
+              Difference between Siemens Panel and Podanur Panel
+            </h2>
+          </header>
+
+          <div className="overflow-x-auto px-5 py-7 sm:px-8 sm:py-9">
+            <div className="overflow-x-auto rounded-2xl border border-slate-600/40 ring-1 ring-white/4">
+              <table className="w-full min-w-180 border-collapse text-left">
+                <thead>
+                  <tr className="border-b border-amber-500/20 bg-slate-950/50">
+                    <th className="px-3 py-3.5 text-xs font-bold uppercase tracking-wide text-amber-200 sm:px-4 sm:text-sm">
+                      S.No
+                    </th>
+                    <th className="px-3 py-3.5 text-xs font-bold uppercase tracking-wide text-amber-200 sm:px-4 sm:text-sm">
+                      Podanur Panel
+                    </th>
+                    <th className="px-3 py-3.5 text-xs font-bold uppercase tracking-wide text-amber-200 sm:px-4 sm:text-sm">
+                      Siemens Panel
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-700/50">
+                  {panelComparisonRows.map(([podanur, siemens], index) => (
+                    <tr
+                      key={podanur}
+                      className="bg-slate-900/30 transition-colors hover:bg-slate-900/55"
+                    >
+                      <td className="border-r border-slate-700/40 px-3 py-3.5 text-[13px] font-semibold leading-relaxed text-amber-100/95 sm:px-4 sm:text-[15px]">
+                        {index + 1}
+                      </td>
+                      <td className="border-r border-slate-700/40 px-3 py-3.5 text-[13px] leading-relaxed text-slate-300 sm:px-4 sm:text-[15px]">
+                        {podanur}
+                      </td>
+                      <td className="px-3 py-3.5 text-[13px] leading-relaxed text-slate-300 sm:px-4 sm:text-[15px]">
+                        {siemens}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </article>
 

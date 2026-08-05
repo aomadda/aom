@@ -287,12 +287,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material block forward Block Forward G.R. 1.02(9) shunting double line",
   },
   {
+    href: "/topics/operating-material/block-instruments",
+    title: "Block Instruments",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material block instruments Block Instruments token tokenless SGE DAIDO UFSBI SSBPAC PLCT",
+  },
+  {
     href: "/topics/operating-material/block-overlap",
     title: "Block Overlap",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material block overlap Block Overlap FSS MAS BSLB SLB adequate distance",
   },
+
   {
     href: "/topics/operating-material/block-section",
     title: "Block Section",
@@ -1751,12 +1760,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps pms PMS",
   },
   {
+    href: "/topics/operating-material/plct-working",
+    title: "PLCT Working",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material plct working PLCT Working BWM Annexure Paper Line Clear Ticket T/A 1425 T/B 1425 TSR",
+  },
+  {
     href: "/topics/operating-material/point-trap-indicator",
     title: "Point Trap Indicator",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material point trap indicator Point Trap Indicator S.R. 3.50.2 3.51.3.1",
   },
+
   {
     href: "/topics/operating-material/points",
     title: "Points Affecting the Movement",
@@ -1794,12 +1812,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics financial rules primary units Primary Units",
   },
   {
+    href: "/topics/operating-material/private-numbers",
+    title: "Private Numbers",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material private numbers Private Numbers BWM PN book TSR TI line clear",
+  },
+  {
     href: "/topics/information-technology-apps/prs-application",
     title: "PRS Application",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
     keywords: "topics information technology apps prs application PRS Application",
   },
+
   {
     href: "/topics/operating-material/protection-of-train",
     title: "Protection of Train",
@@ -2225,12 +2252,21 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material station detonator register Station Detonator Register APPENDIX VII fog signalman",
   },
   {
+    href: "/topics/operating-material/station-diary",
+    title: "Station Diary",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material station diary Station Diary shift SM ASM caution order patrolman signing ON OFF",
+  },
+  {
     href: "/topics/operating-material/station-master",
     title: "Station Master",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material station master Station Master G.R. 1.02(53)",
   },
+
   {
     href: "/topics/operating-material/station-working-rules",
     title: "Station Working Rules",
@@ -2417,6 +2453,14 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material train parting Train Parted in Block Section G.R. S.R. 6.08 T/609 whistle",
   },
   {
+    href: "/topics/operating-material/train-signal-register",
+    title: "Train Signal Register",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material train signal register Train Signal Register BWM TSR T/14 T/1407 block instrument",
+  },
+  {
     href: "/topics/operating-material/trains-unusually-delayed",
     title: "Trains Unusually Delayed",
     category: "Study Topics",
@@ -2424,6 +2468,7 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material trains unusually delayed Trains Unusually Delayed G.R. 6.04 ART MRT SCOR",
   },
+
   {
     href: "/topics/transfers",
     title: "Transfers",
