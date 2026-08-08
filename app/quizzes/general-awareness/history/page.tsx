@@ -588,7 +588,7 @@ export default function HistoryQuizPage() {
                 : 'Choose a chapter to begin.'}
             </p>
           </div>
-          {chapterCards}
+          {quizCards}
         </div>
       </div>
     )

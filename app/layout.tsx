@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "AOM Adda",
-  description: "AOM Adda is a platform for AOM aspirants to prepare for the AOM examination in Indian Railways.",
+  description: "AOM Adda is the best platform for aspirants those who are preparing for the AOM examination. It contains the best quizzes and study materials for the AOM examination.",
   icons: {
     icon: [{ url: "/favicon.png?v=2", type: "image/png" }],
     shortcut: [{ url: "/favicon.png?v=2", type: "image/png" }],

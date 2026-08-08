@@ -1,6 +1,5 @@
 'use client'
 
-import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
 import {
   bindQuizSessionFlush,
   clearLocalQuizSession,
@@ -365,7 +364,7 @@ export default function AomPreviousPaper2022Quiz() {
 
   if (!quizActive && !completed && !showResults) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-4 px-3 py-6 sm:px-4 sm:py-8">
+      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-4 py-6 sm:px-4 sm:py-8">
         <div className="mx-auto max-w-3xl">
           <div className="rounded-xl bg-white p-6 text-center shadow-lg sm:p-8">
             <h1 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">{QUIZ_TITLE}</h1>

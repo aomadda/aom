@@ -286,7 +286,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               
               {/* Dropdown Menu */}
               {isActsDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-[400px] bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <div className="absolute top-full right-0 mt-2 w-100 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
                   {/* Header */}
                   <div className="bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
                     <div className="flex items-center justify-between">
@@ -299,7 +299,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                   </div>
                   
                   {/* Content - Single Column with Scroll */}
-                  <div className="p-4 flex flex-col gap-2.5 max-h-[400px] overflow-y-auto">
+                  <div className="p-4 flex flex-col gap-2.5 max-h-100 overflow-y-auto">
                     {actsLinks.map((act) => {
                       const isActive = pathname === act.href
                       const year = act.href.match(/\d{4}/)?.[0] || ''
@@ -418,7 +418,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               
               {/* Dropdown Menu */}
               {isManualsDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-[500px] bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <div className="absolute top-full right-0 mt-2 w-125 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
                   {/* Header */}
                   <div className="bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
                     <div className="flex items-center justify-between">
@@ -539,7 +539,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               
               {/* Dropdown Menu */}
               {isTopicsDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-[500px] max-h-[min(70vh,560px)] flex flex-col bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <div className="absolute top-full right-0 mt-2 w-125 max-h-[min(70vh,560px)] flex flex-col bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
                   {/* Header */}
                   <div className="shrink-0 bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
                     <div className="flex items-center justify-between gap-3">
@@ -660,7 +660,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               
               {/* Dropdown Menu */}
               {isQuizzesDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-[500px] max-h-[min(70vh,560px)] flex flex-col bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <div className="absolute top-full right-0 mt-2 w-125 max-h-[min(70vh,560px)] flex flex-col bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
                   {/* Header */}
                   <div className="shrink-0 bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
                     <div className="flex items-center justify-between">
@@ -778,7 +778,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               
               {/* Dropdown Menu */}
               {isGeneralAwarenessDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-[500px] bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <div className="absolute top-full right-0 mt-2 w-125 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
                   <div className="bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
@@ -789,7 +789,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                     </div>
                   </div>
                   
-                  <div className="p-4 flex flex-col gap-2 max-h-[400px] overflow-y-auto">
+                  <div className="p-4 flex flex-col gap-2 max-h-100 overflow-y-auto">
                     {generalAwarenessLinks.map((item) => {
                       const isActive = pathname === item.href
                       return (
@@ -930,7 +930,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               {/* Mobile Acts Dropdown */}
               <div
                 className={`overflow-y-auto transition-all duration-300 ease-in-out ${
-                  isActsDropdownOpen ? 'max-h-[600px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                  isActsDropdownOpen ? 'max-h-150 opacity-100 mt-2' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="flex flex-col space-y-1 pl-4">
@@ -982,7 +982,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               {/* Mobile Manuals Dropdown */}
               <div
                 className={`overflow-y-auto transition-all duration-300 ease-in-out ${
-                  isManualsDropdownOpen ? 'max-h-[400px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                  isManualsDropdownOpen ? 'max-h-100 opacity-100 mt-2' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="flex flex-col space-y-1 pl-4">
@@ -1145,7 +1145,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               {/* Mobile General Awareness Dropdown */}
               <div
                 className={`overflow-y-auto transition-all duration-300 ease-in-out ${
-                  isGeneralAwarenessDropdownOpen ? 'max-h-[500px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                  isGeneralAwarenessDropdownOpen ? 'max-h-125 opacity-100 mt-2' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="flex flex-col space-y-1 pl-4">

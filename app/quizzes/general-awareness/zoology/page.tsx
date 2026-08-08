@@ -588,7 +588,7 @@ export default function ZoologyQuizPage() {
                 : 'Choose a chapter to begin.'}
             </p>
           </div>
-          {chapterCards}
+          {quizCards}
         </div>
       </div>
     )

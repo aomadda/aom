@@ -588,17 +588,17 @@ export default function AomPreviousPapers2026Quiz() {
 
   if (!quizActive && !showResults) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-4 px-3 py-8 sm:px-4 sm:py-12">
+      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-4 py-8 sm:px-4 sm:py-12">
         <div className="mx-auto max-w-6xl">
           <div className="mb-2 text-center">
             <h1 className="text-2xl font-bold text-gray-800 sm:text-3xl">{CATEGORY_TITLE}</h1>
             <p className="mt-2 text-sm text-gray-600 sm:text-base">
               {activeSessionQuizId
                 ? 'You have an unfinished quiz. Resume where you left off.'
-                : 'Choose a chapter to begin.'}
+                : 'Choose a paper to begin.'}
             </p>
           </div>
-          {chapterCards}
+          {sectionCards}
         </div>
       </div>
     )
