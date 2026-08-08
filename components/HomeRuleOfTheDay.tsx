@@ -11,20 +11,27 @@ export default function HomeRuleOfTheDay() {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(() => pathname === '/')
+  const [prevPathname, setPrevPathname] = useState(pathname)
 
   const rule = useMemo(() => getTodayRuleOfTheDay(new Date()), [])
   const fromLoginQuery = searchParams.get('ruleOfTheDay') === '1'
 
-  // Open every time user lands on / returns to Home.
-  useEffect(() => {
+  // Open every time user lands on / returns to Home (adjust state during render).
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname)
     if (pathname === '/') {
       setOpen(true)
-      try {
-        sessionStorage.removeItem(RULE_OF_THE_DAY_FLAG)
-      } catch {
-        // ignore
-      }
+    }
+  }
+
+  // Clear one-shot login flag when Home is active.
+  useEffect(() => {
+    if (pathname !== '/') return
+    try {
+      sessionStorage.removeItem(RULE_OF_THE_DAY_FLAG)
+    } catch {
+      // ignore
     }
   }, [pathname, fromLoginQuery])
 

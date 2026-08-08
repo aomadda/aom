@@ -5,7 +5,7 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link'
-import { aomPreviousPaper2022 } from '@/assets/aom-previous-papers/aom-previous-paper-2022/aom-previous-paper-2022'
+import { aomPreviousPaper2022 } from '@/assets/quizzes/aom-previous-papers/aom-previous-paper-2022/aom-previous-paper-2022'
 
 type QuizQuestion = {
   question: string

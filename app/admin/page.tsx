@@ -51,7 +51,38 @@ export default function AdminDashboardPage() {
   }
 
   useEffect(() => {
-    void loadUsers()
+    let cancelled = false
+
+    ;(async () => {
+      try {
+        const response = await fetch('/api/admin/users')
+        const data = (await response.json()) as {
+          users?: RegisteredUser[]
+          error?: string
+        }
+
+        if (cancelled) return
+
+        if (!response.ok) {
+          setError(data.error || 'Unable to load registrations')
+          setUsers([])
+          return
+        }
+
+        setUsers(data.users || [])
+        setError('')
+      } catch {
+        if (cancelled) return
+        setError('Network error while loading registrations')
+        setUsers([])
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   const updateStatus = async (userId: string, status: 'accepted' | 'rejected') => {

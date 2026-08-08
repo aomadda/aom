@@ -5,7 +5,7 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link'
-import { accidentManualQuizzes } from '@/assets/accident-manual'
+import { accidentManualQuizzes } from '@/assets/quizzes/accident-manual'
 
 const CATEGORY_ID = 'accident-manual'
 const CATEGORY_TITLE = 'Accident Manual'

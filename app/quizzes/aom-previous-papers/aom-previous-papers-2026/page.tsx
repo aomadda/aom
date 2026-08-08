@@ -5,7 +5,7 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link'
-import { aomPreviousPapersQuizzes } from '@/assets/aom-previous-papers/aom-previous-papers-2026/aom-previous-papers-2026'
+import { aomPreviousPapersQuizzes } from '@/assets/quizzes/aom-previous-papers/aom-previous-papers-2026/aom-previous-papers-2026'
 
 const CATEGORY_ID = 'aom-previous-papers-2026'
 const CATEGORY_TITLE = 'AOM Previous Papers 2026'
@@ -250,7 +250,7 @@ export default function AomPreviousPapers2026Quiz() {
         }
       } else {
         const firstIncomplete =
-          Object.keys(CATEGORY_QUIZZES).find((id) => !completed.includes(id)) || 'chapter-1'
+          Object.keys(CATEGORY_QUIZZES).find((id) => !completed.includes(id)) || DEFAULT_QUIZ_ID
         const count =
           CATEGORY_QUIZZES[firstIncomplete as keyof typeof CATEGORY_QUIZZES]?.length || 1
         if (!completed.includes(firstIncomplete)) {
@@ -268,7 +268,7 @@ export default function AomPreviousPapers2026Quiz() {
     async (finalScore: number, correctAnswers: number, quizId: string, total: number) => {
       try {
         const studyTime = Math.round((getTimestamp() - quizStartTimeRef.current) / 1000 / 60)
-        const quizTitle = `${CATEGORY_TITLE} — ${formatChapterTitle(quizId)}`
+        const quizTitle = `${CATEGORY_TITLE} — ${formatQuizTitle(quizId)}`
 
         const response = await fetch('/api/progress', {
           method: 'POST',
@@ -440,27 +440,26 @@ export default function AomPreviousPapers2026Quiz() {
     resetQuizState(quizId, nextLength)
   }
 
-  const chapterCards = (
+  const sectionCards = (
     <div className="mt-8 rounded-xl bg-white px-2 py-8 shadow-2xl lg:px-8">
-      <h3 className="mb-6 text-center text-2xl font-bold text-gray-800">All Chapters</h3>
+      <h3 className="mb-6 text-center text-2xl font-bold text-gray-800">All Papers</h3>
       <p className="mb-8 text-center text-gray-600">
         {showResults
-          ? 'Continue your learning journey with all available chapters'
-          : 'Switch between chapters or continue your progress'}
+          ? 'Continue your learning journey with all available papers'
+          : 'Switch between papers or continue your progress'}
       </p>
 
       {loadingProgress ? (
         <div className="flex items-center justify-center py-8">
-          <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-blue-600" />
+          <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-emerald-600" />
           <span className="ml-3 text-gray-600">Loading progress...</span>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {Object.keys(CATEGORY_QUIZZES).map((quizId) => {
+          {Object.keys(CATEGORY_QUIZZES).map((quizId, idx) => {
             const isCompleted = completedQuizzes.includes(quizId)
             const isCurrentQuiz = quizId === currentQuizId && !showResults
             const isInProgress = activeSessionQuizId === quizId && !isCompleted
-            const chapterNumber = quizId.replace('chapter-', '')
             const questionCount =
               CATEGORY_QUIZZES[quizId as keyof typeof CATEGORY_QUIZZES].length
 
@@ -469,7 +468,7 @@ export default function AomPreviousPapers2026Quiz() {
                 key={quizId}
                 className={`transform rounded-lg border-2 bg-linear-to-br from-gray-50 to-gray-100 px-2 py-6 transition-all duration-300 hover:scale-105 lg:px-6 ${
                   isCurrentQuiz || isInProgress
-                    ? 'border-blue-400 shadow-lg'
+                    ? 'border-emerald-400 shadow-lg'
                     : 'border-gray-400 hover:shadow-lg'
                 }`}
               >
@@ -477,7 +476,7 @@ export default function AomPreviousPapers2026Quiz() {
                   <div
                     className={`flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br ${CATEGORY_COLOR} lg:h-12 lg:w-12`}
                   >
-                    <span className="text-sm font-bold text-white lg:text-lg">{chapterNumber}</span>
+                    <span className="text-sm font-bold text-white lg:text-lg">{idx + 1}</span>
                   </div>
                   {isCompleted ? (
                     <div className="flex items-center rounded-full bg-green-500 px-2 py-1 text-xs font-medium text-white">
@@ -489,7 +488,7 @@ export default function AomPreviousPapers2026Quiz() {
                     </div>
                   ) : null}
                 </div>
-                <h4 className="mb-2 text-lg font-bold text-gray-700">Chapter {chapterNumber}</h4>
+                <h4 className="mb-2 text-lg font-bold text-gray-700">{formatQuizTitle(quizId)}</h4>
                 <p className="mb-1 text-sm text-gray-600">{questionCount} Questions</p>
                 <p className="mb-4 text-xs text-gray-500">{questionCount} min timer</p>
                 {isCompleted ? (
@@ -511,10 +510,10 @@ export default function AomPreviousPapers2026Quiz() {
                   >
                     <span>
                       {isCurrentQuiz
-                        ? 'Current Chapter'
+                        ? 'Current Paper'
                         : isInProgress
                           ? 'Resume Quiz'
-                          : 'Start Chapter'}
+                          : 'Start Paper'}
                     </span>
                   </button>
                 )}
@@ -526,10 +525,10 @@ export default function AomPreviousPapers2026Quiz() {
 
       <div className="mt-8 text-center">
         <Link
-          href="/quizzes"
+          href="/quizzes/aom-previous-papers"
           className="inline-flex items-center rounded-lg bg-linear-to-r from-gray-600 to-gray-700 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-gray-700 hover:to-gray-800 hover:shadow-xl"
         >
-          Back to All Quizzes
+          Back to AOM Previous Papers
         </Link>
       </div>
     </div>
@@ -537,9 +536,9 @@ export default function AomPreviousPapers2026Quiz() {
 
   if (!sessionReady || loadingProgress) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-blue-50 to-purple-50 px-4">
+      <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-emerald-50 to-teal-50 px-4">
         <div className="rounded-2xl bg-white px-8 py-10 text-center shadow-xl">
-          <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-b-2 border-blue-600" />
+          <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-b-2 border-emerald-600" />
           <p className="text-sm text-gray-600">Restoring your quiz session...</p>
         </div>
       </div>
@@ -548,15 +547,15 @@ export default function AomPreviousPapers2026Quiz() {
 
   if (questions.length === 0) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-blue-50 to-purple-50 px-4">
+      <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-emerald-50 to-teal-50 px-4">
         <div className="rounded-2xl bg-white p-8 text-center shadow-xl">
           <h1 className="mb-2 text-xl font-bold text-gray-800">{CATEGORY_TITLE}</h1>
           <p className="mb-6 text-gray-600">No questions found.</p>
           <Link
-            href="/quizzes"
-            className="inline-flex rounded-full bg-linear-to-r from-blue-600 to-purple-600 px-6 py-2.5 font-medium text-white"
+            href="/quizzes/aom-previous-papers"
+            className="inline-flex rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-6 py-2.5 font-medium text-white"
           >
-            Back to Quizzes
+            Back to AOM Previous Papers
           </Link>
         </div>
       </div>
@@ -577,7 +576,7 @@ export default function AomPreviousPapers2026Quiz() {
       .find((quizId) => !completedQuizzes.includes(quizId))
 
     return (
-      <div className="min-h-screen bg-linear-to-br from-blue-50 to-purple-50 px-3 py-8 sm:px-4 sm:py-12">
+      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-3 py-8 sm:px-4 sm:py-12">
         <div className="mx-auto max-w-6xl">
           <div className="mb-6 text-center sm:mb-8">
             <h1 className="mb-2 text-2xl font-bold text-gray-800 sm:text-3xl lg:text-4xl">
@@ -590,10 +589,10 @@ export default function AomPreviousPapers2026Quiz() {
 
           <div className="mb-6 rounded-2xl bg-white p-6 shadow-2xl sm:mb-8 sm:rounded-3xl sm:p-8">
             <div className="mb-6 text-center sm:mb-8">
-              <div className="mb-4 inline-flex h-24 w-24 items-center justify-center rounded-full bg-linear-to-br from-blue-500 to-purple-600 sm:mb-6 sm:h-32 sm:w-32">
+              <div className="mb-4 inline-flex h-24 w-24 items-center justify-center rounded-full bg-linear-to-br from-emerald-500 to-teal-600 sm:mb-6 sm:h-32 sm:w-32">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white sm:text-3xl">{percentage}%</div>
-                  <div className="text-xs text-blue-100 sm:text-sm">Score</div>
+                  <div className="text-xs text-emerald-100 sm:text-sm">Score</div>
                 </div>
               </div>
               <h2 className="mb-2 text-lg font-bold text-gray-800 sm:text-xl lg:text-2xl">
@@ -609,7 +608,7 @@ export default function AomPreviousPapers2026Quiz() {
                 You got {correctAnswers} out of {questions.length} questions correct
               </p>
               <p className="mt-2 text-xs text-gray-500 sm:text-sm">
-                {CATEGORY_TITLE} - {formatChapterTitle(currentQuizId)}
+                {CATEGORY_TITLE} - {formatQuizTitle(currentQuizId)}
               </p>
             </div>
 
@@ -643,10 +642,10 @@ export default function AomPreviousPapers2026Quiz() {
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <button
                 type="button"
-                onClick={() => router.push('/quizzes')}
-                className="flex-1 rounded-full bg-linear-to-r from-blue-600 to-blue-700 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-blue-800 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
+                onClick={() => router.push('/quizzes/aom-previous-papers')}
+                className="flex-1 rounded-full bg-linear-to-r from-emerald-600 to-teal-700 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-emerald-700 hover:to-teal-800 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
               >
-                Back to Quizzes
+                Back to Papers
               </button>
               <button
                 type="button"
@@ -661,7 +660,7 @@ export default function AomPreviousPapers2026Quiz() {
                   onClick={handleNextQuiz}
                   className="flex-1 rounded-full bg-linear-to-r from-green-600 to-green-700 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-green-700 hover:to-green-800 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
                 >
-                  Next Chapter
+                  Next Paper
                 </button>
               ) : null}
             </div>
@@ -725,7 +724,7 @@ export default function AomPreviousPapers2026Quiz() {
             </div>
           </div>
 
-          {chapterCards}
+          {sectionCards}
         </div>
       </div>
     )
@@ -738,12 +737,12 @@ export default function AomPreviousPapers2026Quiz() {
 
   if (isCurrentCompleted && !showResults) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-blue-50 to-purple-50 px-3 py-6 sm:px-4 sm:py-8">
+      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-3 py-6 sm:px-4 sm:py-8">
         <div className="mx-auto max-w-3xl">
           <div className="rounded-xl bg-white p-6 text-center shadow-lg sm:p-8">
             <h1 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">{CATEGORY_TITLE}</h1>
             <p className="mb-1 text-sm font-medium text-emerald-700">
-              {formatChapterTitle(currentQuizId)} is completed
+              {formatQuizTitle(currentQuizId)} is completed
             </p>
             <p className="mb-6 text-sm text-gray-600">
               This quiz is locked. You can view your summary and explanations below.
@@ -756,14 +755,14 @@ export default function AomPreviousPapers2026Quiz() {
               View Results
             </button>
           </div>
-          {chapterCards}
+          {sectionCards}
         </div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-purple-50 px-3 py-6 sm:px-4 sm:py-8">
+    <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-3 py-6 sm:px-4 sm:py-8">
       <div className="mx-auto max-w-3xl">
         <div className="rounded-xl bg-white p-4 shadow-lg sm:rounded-2xl sm:p-6 lg:p-8">
           <div className="mb-6 text-center sm:mb-8">
@@ -771,8 +770,8 @@ export default function AomPreviousPapers2026Quiz() {
               {CATEGORY_TITLE}
             </h1>
             <div className="mb-3 flex flex-wrap items-center justify-center gap-2 text-gray-600 sm:mb-4">
-              <span className="rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800 sm:px-3 sm:text-sm">
-                {formatChapterTitle(currentQuizId)}
+              <span className="rounded-full bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-800 sm:px-3 sm:text-sm">
+                {formatQuizTitle(currentQuizId)}
               </span>
               <span className="rounded-full bg-slate-100 px-2 py-1 text-xs font-medium text-slate-700 sm:px-3 sm:text-sm">
                 {questions.length} Questions · {questions.length} min
@@ -792,7 +791,7 @@ export default function AomPreviousPapers2026Quiz() {
 
             <div className="h-1.5 w-full rounded-full bg-gray-200 sm:h-2">
               <div
-                className="h-1.5 rounded-full bg-linear-to-r from-blue-500 to-purple-600 transition-all duration-300 ease-out sm:h-2"
+                className="h-1.5 rounded-full bg-linear-to-r from-emerald-500 to-teal-600 transition-all duration-300 ease-out sm:h-2"
                 style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
               />
             </div>
@@ -816,7 +815,7 @@ export default function AomPreviousPapers2026Quiz() {
                   optionClasses += ' border-green-500 bg-green-50 text-green-700 shadow-md'
                 } else if (!answered) {
                   optionClasses +=
-                    ' border-gray-300 hover:border-blue-300 hover:bg-blue-50 hover:shadow-sm cursor-pointer'
+                    ' border-gray-300 hover:border-emerald-300 hover:bg-emerald-50 hover:shadow-sm cursor-pointer'
                 } else {
                   optionClasses += ' border-gray-200 bg-gray-50 text-gray-500 cursor-not-allowed'
                 }
@@ -838,7 +837,7 @@ export default function AomPreviousPapers2026Quiz() {
                             ? 'border-red-500 bg-red-500'
                             : answered && isCorrectAnswer
                               ? 'border-green-500 bg-green-500'
-                              : 'border-gray-300 group-hover:border-blue-400'
+                              : 'border-gray-300 group-hover:border-emerald-400'
                         }`}
                       >
                         {showCheck ? (
@@ -854,7 +853,7 @@ export default function AomPreviousPapers2026Quiz() {
                             />
                           </svg>
                         ) : (
-                          <span className="text-xs font-medium text-gray-400 group-hover:text-blue-400">
+                          <span className="text-xs font-medium text-gray-400 group-hover:text-emerald-400">
                             {String.fromCharCode(65 + index)}
                           </span>
                         )}
@@ -884,7 +883,7 @@ export default function AomPreviousPapers2026Quiz() {
             <button
               type="button"
               onClick={handleNext}
-              className="rounded-md bg-linear-to-r from-blue-600 to-purple-600 px-6 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-purple-700 hover:shadow-xl sm:rounded-lg sm:px-8 sm:py-3 sm:text-base"
+              className="rounded-md bg-linear-to-r from-emerald-600 to-teal-600 px-6 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-xl sm:rounded-lg sm:px-8 sm:py-3 sm:text-base"
             >
               {currentQuestion === questions.length - 1
                 ? 'Finish Quiz'
@@ -895,7 +894,7 @@ export default function AomPreviousPapers2026Quiz() {
           </div>
         </div>
 
-        {chapterCards}
+        {sectionCards}
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link'
-import { generalSubsidiaryRulesQuizzes } from '@/assets/general-subsidiary-rules'
+import { generalSubsidiaryRulesQuizzes } from '@/assets/quizzes/general-subsidiary-rules'
 
 const CATEGORY_ID = 'general-subsidiary-rules'
 const CATEGORY_TITLE = 'General & Subsidiary Rules'

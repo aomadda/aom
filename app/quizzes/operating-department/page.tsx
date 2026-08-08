@@ -1,465 +1,849 @@
-'use client';
+'use client'
 
-import { getTimestamp } from '@/lib/timestamp';
-import { useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
-import React from 'react';
-import Link from 'next/link';
-import { operatingDepartmentQuizzes } from '@/assets/operating-department';
+import { getTimestamp } from '@/lib/timestamp'
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
+import { useRouter } from 'next/navigation'
+import React from 'react'
+import Link from 'next/link'
+import { operatingDepartmentQuizzes } from '@/assets/quizzes/operating-department'
+
+const CATEGORY_ID = 'operating-department'
+const CATEGORY_TITLE = 'Operating Department'
+const CATEGORY_COLOR = 'from-green-500 to-emerald-600'
+const CATEGORY_QUIZZES = operatingDepartmentQuizzes.quizzes
+const RESULTS_STORAGE_KEY = 'operating_department_quiz_results'
+const SESSION_STORAGE_KEY = 'operating_department_quiz_session'
+
+type StoredResults = Record<string, { answers: (number | null)[] }>
+
+type QuizSession = {
+  quizId: string
+  currentQuestion: number
+  userAnswers: (number | null)[]
+  endsAt: number
+  startedAt: number
+}
+
+function getQuizDurationSeconds(questionCount: number) {
+  return Math.max(1, questionCount) * 60
+}
+
+function formatTimer(totalSeconds: number) {
+  const safe = Math.max(0, totalSeconds)
+  const minutes = Math.floor(safe / 60)
+  const seconds = safe % 60
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
+}
+
+function formatChapterTitle(quizId: string) {
+  return quizId
+    .replace('chapter-', 'Chapter ')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (l) => l.toUpperCase())
+}
+
+function loadStoredResults(): StoredResults {
+  if (typeof window === 'undefined') return {}
+  try {
+    const raw = window.localStorage.getItem(RESULTS_STORAGE_KEY)
+    if (!raw) return {}
+    const parsed = JSON.parse(raw) as StoredResults
+    return parsed && typeof parsed === 'object' ? parsed : {}
+  } catch {
+    return {}
+  }
+}
+
+function saveStoredResult(quizId: string, answers: (number | null)[]) {
+  if (typeof window === 'undefined') return
+  try {
+    const existing = loadStoredResults()
+    existing[quizId] = { answers }
+    window.localStorage.setItem(RESULTS_STORAGE_KEY, JSON.stringify(existing))
+  } catch (error) {
+    console.error('Failed to save quiz results:', error)
+  }
+}
+
+function loadQuizSession(): QuizSession | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const raw = window.localStorage.getItem(SESSION_STORAGE_KEY)
+    if (!raw) return null
+    const parsed = JSON.parse(raw) as QuizSession
+    if (
+      !parsed ||
+      typeof parsed.quizId !== 'string' ||
+      typeof parsed.currentQuestion !== 'number' ||
+      typeof parsed.endsAt !== 'number' ||
+      typeof parsed.startedAt !== 'number' ||
+      !Array.isArray(parsed.userAnswers)
+    ) {
+      return null
+    }
+    return parsed
+  } catch {
+    return null
+  }
+}
+
+function saveQuizSession(session: QuizSession) {
+  if (typeof window === 'undefined') return
+  try {
+    window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(session))
+  } catch (error) {
+    console.error('Failed to save quiz session:', error)
+  }
+}
+
+function clearQuizSession() {
+  if (typeof window === 'undefined') return
+  try {
+    window.localStorage.removeItem(SESSION_STORAGE_KEY)
+  } catch {
+    // ignore
+  }
+}
 
 export default function OperatingDepartmentQuiz() {
-  const router = useRouter();
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const quizStartTimeRef = useRef<number>(0);
+  const quizStartTimeRef = useRef<number>(getTimestamp())
+  const endsAtRef = useRef<number>(0)
+  const finishedRef = useRef(false)
+  const userAnswersRef = useRef<(number | null)[]>([])
+  const sessionRestoredRef = useRef(false)
+  const router = useRouter()
 
-  React.useEffect(() => {
-    quizStartTimeRef.current = getTimestamp();
-  }, []);
-  const [completedQuizzes, setCompletedQuizzes] = useState<string[]>([]);
-  const [loadingProgress, setLoadingProgress] = useState(true);
-  
-  // Get the category data
-  const categoryData = {
-    title: 'Operating Department',
-    description: 'Test your knowledge of Operating Department for Indian Railways',
-    color: 'from-green-500 to-emerald-600',
-    quizzes: operatingDepartmentQuizzes.quizzes
-  };
-  
-  const [currentQuizId, setCurrentQuizId] = useState('chapter-1'); // Start with first quiz
-  
-  // Get the current quiz questions
-  const currentQuiz = categoryData.quizzes[currentQuizId as keyof typeof categoryData.quizzes];
-  const questions = currentQuiz || [];
-  
-  const [userAnswers, setUserAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null));
-  const [score, setScore] = useState(0);
-  const [showResults, setShowResults] = useState(false);
+  const [currentQuizId, setCurrentQuizId] = useState('chapter-1')
+  const questions = useMemo(() => {
+    const currentQuiz = CATEGORY_QUIZZES[currentQuizId as keyof typeof CATEGORY_QUIZZES]
+    return currentQuiz || []
+  }, [currentQuizId])
 
-  // Fetch user progress for this category
-  React.useEffect(() => {
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [completedQuizzes, setCompletedQuizzes] = useState<string[]>([])
+  const [loadingProgress, setLoadingProgress] = useState(true)
+  const [sessionReady, setSessionReady] = useState(false)
+  const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
+    () => new Array(questions.length).fill(null),
+  )
+  const [showResults, setShowResults] = useState(false)
+  const [timeLeft, setTimeLeft] = useState(() => getQuizDurationSeconds(questions.length || 1))
+  const [storedResults, setStoredResults] = useState<StoredResults>(() => loadStoredResults())
+  const [activeSessionQuizId, setActiveSessionQuizId] = useState<string | null>(null)
+
+  useEffect(() => {
+    userAnswersRef.current = userAnswers
+  }, [userAnswers])
+
+  useEffect(() => {
     const fetchUserProgress = async () => {
       try {
-        setLoadingProgress(true);
-        const response = await fetch('/api/progress');
+        setLoadingProgress(true)
+        const response = await fetch('/api/progress')
         if (response.ok) {
-          const data = await response.json();
-          // Filter completed quizzes for this category
-          const categoryCompletedQuizzes = data.recentActivity
-            ?.filter((quiz: { categoryId: string; quizId: string }) => quiz.categoryId === 'operating-department')
-            ?.map((quiz: { quizId: string }) => quiz.quizId) || [];
-          setCompletedQuizzes(categoryCompletedQuizzes);
+          const data = await response.json()
+          const categoryCompletedQuizzes =
+            data.recentActivity
+              ?.filter(
+                (quiz: { categoryId: string; quizId: string }) =>
+                  quiz.categoryId === CATEGORY_ID,
+              )
+              ?.map((quiz: { quizId: string }) => quiz.quizId) || []
+          setCompletedQuizzes(categoryCompletedQuizzes)
         }
       } catch (error) {
-        console.error('Error fetching progress:', error);
+        console.error('Error fetching progress:', error)
       } finally {
-        setLoadingProgress(false);
+        setLoadingProgress(false)
       }
-    };
-
-    fetchUserProgress();
-  }, []);
-
-  // Function to update user progress
-  const updateUserProgress = async (finalScore: number, correctAnswers: number) => {
-    try {
-      const studyTime = Math.round((getTimestamp() - quizStartTimeRef.current) / 1000 / 60); // Convert to minutes
-      
-      const response = await fetch('/api/progress', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          categoryId: 'operating-department',
-          quizId: currentQuizId,
-          score: finalScore,
-          totalQuestions: questions.length,
-          correctAnswers: correctAnswers,
-          studyTime: studyTime
-        }),
-      });
-
-      if (!response.ok) {
-        console.error('Failed to update progress');
-      } else {
-        // Update completed quizzes list after successful completion
-        setCompletedQuizzes(prev => [...new Set([...prev, currentQuizId])]);
-      }
-    } catch (error) {
-      console.error('Error updating progress:', error);
     }
-  };
+
+    fetchUserProgress()
+  }, [])
+
+  const applySession = useCallback((session: QuizSession) => {
+    const quizQuestions = CATEGORY_QUIZZES[session.quizId as keyof typeof CATEGORY_QUIZZES] || []
+    if (quizQuestions.length === 0 || session.userAnswers.length !== quizQuestions.length) {
+      clearQuizSession()
+      return false
+    }
+
+    const safeQuestion = Math.min(
+      Math.max(0, session.currentQuestion),
+      Math.max(0, quizQuestions.length - 1),
+    )
+    const remaining = Math.max(0, Math.floor((session.endsAt - Date.now()) / 1000))
+
+    finishedRef.current = false
+    quizStartTimeRef.current = session.startedAt
+    endsAtRef.current = session.endsAt
+    setCurrentQuizId(session.quizId)
+    setCurrentQuestion(safeQuestion)
+    setUserAnswers(session.userAnswers)
+    setTimeLeft(remaining)
+    setShowResults(false)
+    setActiveSessionQuizId(session.quizId)
+    return true
+  }, [])
+
+  const startFreshQuiz = useCallback((quizId: string, questionCount: number) => {
+    const startedAt = getTimestamp()
+    const endsAt = Date.now() + getQuizDurationSeconds(questionCount) * 1000
+    finishedRef.current = false
+    quizStartTimeRef.current = startedAt
+    endsAtRef.current = endsAt
+    setCurrentQuizId(quizId)
+    setCurrentQuestion(0)
+    setUserAnswers(new Array(questionCount).fill(null))
+    setShowResults(false)
+    setTimeLeft(getQuizDurationSeconds(questionCount))
+    setActiveSessionQuizId(quizId)
+    saveQuizSession({
+      quizId,
+      currentQuestion: 0,
+      userAnswers: new Array(questionCount).fill(null),
+      endsAt,
+      startedAt,
+    })
+  }, [])
+
+  useEffect(() => {
+    if (loadingProgress || sessionRestoredRef.current) return
+    sessionRestoredRef.current = true
+
+    const session = loadQuizSession()
+    const completed = completedQuizzes
+
+    queueMicrotask(() => {
+      if (session) {
+        if (completed.includes(session.quizId)) {
+          clearQuizSession()
+          setActiveSessionQuizId(null)
+        } else if (Date.now() >= session.endsAt) {
+          const quizQuestions =
+            CATEGORY_QUIZZES[session.quizId as keyof typeof CATEGORY_QUIZZES] || []
+          if (quizQuestions.length > 0 && session.userAnswers.length === quizQuestions.length) {
+            finishedRef.current = false
+            quizStartTimeRef.current = session.startedAt
+            endsAtRef.current = session.endsAt
+            setCurrentQuizId(session.quizId)
+            setUserAnswers(session.userAnswers)
+            setCurrentQuestion(
+              Math.min(session.currentQuestion, Math.max(0, quizQuestions.length - 1)),
+            )
+            setTimeLeft(0)
+            setShowResults(false)
+            setActiveSessionQuizId(session.quizId)
+          } else {
+            clearQuizSession()
+          }
+        } else {
+          applySession(session)
+        }
+      } else {
+        const firstIncomplete =
+          Object.keys(CATEGORY_QUIZZES).find((id) => !completed.includes(id)) || 'chapter-1'
+        const count =
+          CATEGORY_QUIZZES[firstIncomplete as keyof typeof CATEGORY_QUIZZES]?.length || 1
+        if (!completed.includes(firstIncomplete)) {
+          startFreshQuiz(firstIncomplete, count)
+        } else {
+          setCurrentQuizId(firstIncomplete)
+        }
+      }
+
+      setSessionReady(true)
+    })
+  }, [loadingProgress, completedQuizzes, applySession, startFreshQuiz])
+
+  const updateUserProgress = useCallback(
+    async (finalScore: number, correctAnswers: number, quizId: string, total: number) => {
+      try {
+        const studyTime = Math.round((getTimestamp() - quizStartTimeRef.current) / 1000 / 60)
+        const quizTitle = `${CATEGORY_TITLE} — ${formatChapterTitle(quizId)}`
+
+        const response = await fetch('/api/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            categoryId: CATEGORY_ID,
+            quizId,
+            quizTitle,
+            score: finalScore,
+            totalQuestions: total,
+            correctAnswers,
+            studyTime,
+          }),
+        })
+
+        if (!response.ok) {
+          console.error('Failed to update progress')
+        } else {
+          setCompletedQuizzes((prev) => [...new Set([...prev, quizId])])
+        }
+      } catch (error) {
+        console.error('Error updating progress:', error)
+      }
+    },
+    [],
+  )
+
+  const finishQuiz = useCallback(
+    (answers: (number | null)[]) => {
+      if (finishedRef.current || questions.length === 0) return
+      finishedRef.current = true
+      clearQuizSession()
+      setActiveSessionQuizId(null)
+      saveStoredResult(currentQuizId, answers)
+      setStoredResults(loadStoredResults())
+      setCompletedQuizzes((prev) => [...new Set([...prev, currentQuizId])])
+      setShowResults(true)
+      const correctAnswers = answers.filter(
+        (answer, index) => answer === questions[index].correct,
+      ).length
+      const finalScore = Math.round((correctAnswers / questions.length) * 100)
+      updateUserProgress(finalScore, correctAnswers, currentQuizId, questions.length)
+    },
+    [questions, currentQuizId, updateUserProgress],
+  )
+
+  const isCurrentCompleted = completedQuizzes.includes(currentQuizId)
+
+  useEffect(() => {
+    if (!sessionReady || showResults || questions.length === 0 || isCurrentCompleted) return
+    if (!endsAtRef.current) {
+      endsAtRef.current = Date.now() + getQuizDurationSeconds(questions.length) * 1000
+    }
+
+    const tick = () => {
+      const remaining = Math.max(0, Math.floor((endsAtRef.current - Date.now()) / 1000))
+      setTimeLeft(remaining)
+    }
+
+    tick()
+    const interval = window.setInterval(tick, 1000)
+    return () => window.clearInterval(interval)
+  }, [sessionReady, showResults, questions.length, currentQuizId, isCurrentCompleted])
+
+  useEffect(() => {
+    if (
+      sessionReady &&
+      timeLeft === 0 &&
+      !showResults &&
+      !isCurrentCompleted &&
+      questions.length > 0 &&
+      endsAtRef.current > 0
+    ) {
+      finishQuiz(userAnswersRef.current)
+    }
+  }, [sessionReady, timeLeft, showResults, isCurrentCompleted, questions.length, finishQuiz])
+
+  useEffect(() => {
+    if (!sessionReady || showResults || isCurrentCompleted || questions.length === 0) return
+    if (userAnswers.length !== questions.length) return
+
+    saveQuizSession({
+      quizId: currentQuizId,
+      currentQuestion,
+      userAnswers,
+      endsAt: endsAtRef.current,
+      startedAt: quizStartTimeRef.current,
+    })
+  }, [
+    sessionReady,
+    showResults,
+    isCurrentCompleted,
+    questions.length,
+    currentQuizId,
+    currentQuestion,
+    userAnswers,
+  ])
+
+  useEffect(() => {
+    if (!sessionReady || showResults || isCurrentCompleted) return
+    if (activeSessionQuizId === currentQuizId) return
+    queueMicrotask(() => setActiveSessionQuizId(currentQuizId))
+  }, [sessionReady, showResults, isCurrentCompleted, currentQuizId, activeSessionQuizId])
+
+  const resetQuizState = (quizId: string, nextLength: number) => {
+    startFreshQuiz(quizId, nextLength)
+  }
 
   const handleAnswerSelect = (answerIndex: number) => {
-    const newUserAnswers = [...userAnswers];
-    newUserAnswers[currentQuestion] = answerIndex;
-    setUserAnswers(newUserAnswers);
-  };
+    if (userAnswers[currentQuestion] !== null) return
+    const next = [...userAnswers]
+    next[currentQuestion] = answerIndex
+    setUserAnswers(next)
+  }
 
   const handleNext = () => {
-    if (userAnswers[currentQuestion] === questions[currentQuestion].correct) {
-      setScore(score + 1);
-    }
-
     if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
-    } else {
-      setShowResults(true);
-      // Update progress when quiz is completed
-      const correctAnswers = userAnswers.filter((answer, index) => answer === questions[index].correct).length;
-      const finalScore = Math.round((correctAnswers / questions.length) * 100);
-      updateUserProgress(finalScore, correctAnswers);
+      setCurrentQuestion(currentQuestion + 1)
+      return
     }
-  };
+    finishQuiz(userAnswers)
+  }
 
-  const handleRestart = () => {
-    quizStartTimeRef.current = getTimestamp();
-    setCurrentQuestion(0);
-    setUserAnswers(new Array(questions.length).fill(null));
-    setScore(0);
-    setShowResults(false);
-  };
+  const handleViewResults = (quizId: string) => {
+    const saved = storedResults[quizId]?.answers
+    const quizQuestions = CATEGORY_QUIZZES[quizId as keyof typeof CATEGORY_QUIZZES] || []
+    const answers =
+      saved && saved.length === quizQuestions.length
+        ? saved
+        : new Array(quizQuestions.length).fill(null)
+
+    finishedRef.current = true
+    const session = loadQuizSession()
+    if (session?.quizId === quizId) {
+      clearQuizSession()
+      setActiveSessionQuizId(null)
+    }
+    setCurrentQuizId(quizId)
+    setUserAnswers(answers)
+    setShowResults(true)
+  }
 
   const handleNextQuiz = () => {
-    const quizIds = Object.keys(categoryData.quizzes);
-    const currentIndex = quizIds.indexOf(currentQuizId);
-    if (currentIndex < quizIds.length - 1) {
-      const nextQuizId = quizIds[currentIndex + 1];
-      setCurrentQuizId(nextQuizId);
-      setCurrentQuestion(0);
-      setUserAnswers(new Array(categoryData.quizzes[nextQuizId as keyof typeof categoryData.quizzes].length).fill(null));
-      setScore(0);
-      setShowResults(false);
-      quizStartTimeRef.current = getTimestamp(); // Reset quiz start time for new quiz
-    }
-  };
+    const quizIds = Object.keys(CATEGORY_QUIZZES)
+    const currentIndex = quizIds.indexOf(currentQuizId)
+    const nextQuizId = quizIds
+      .slice(currentIndex + 1)
+      .find((quizId) => !completedQuizzes.includes(quizId))
+
+    if (!nextQuizId) return
+
+    const nextLength = CATEGORY_QUIZZES[nextQuizId as keyof typeof CATEGORY_QUIZZES].length
+    resetQuizState(nextQuizId, nextLength)
+  }
 
   const handleQuizSelect = (quizId: string) => {
-    setCurrentQuizId(quizId);
-    setCurrentQuestion(0);
-    setUserAnswers(new Array(categoryData.quizzes[quizId as keyof typeof categoryData.quizzes].length).fill(null));
-    setScore(0);
-    setShowResults(false);
-    quizStartTimeRef.current = getTimestamp();
-  };
+    if (completedQuizzes.includes(quizId)) {
+      handleViewResults(quizId)
+      return
+    }
+
+    const session = loadQuizSession()
+    if (session?.quizId === quizId) {
+      applySession(session)
+      return
+    }
+
+    const nextLength = CATEGORY_QUIZZES[quizId as keyof typeof CATEGORY_QUIZZES].length
+    resetQuizState(quizId, nextLength)
+  }
+
+  const chapterCards = (
+    <div className="mt-8 rounded-xl bg-white px-2 py-8 shadow-2xl lg:px-8">
+      <h3 className="mb-6 text-center text-2xl font-bold text-gray-800">All Chapters</h3>
+      <p className="mb-8 text-center text-gray-600">
+        {showResults
+          ? 'Continue your learning journey with all available chapters'
+          : 'Switch between chapters or continue your progress'}
+      </p>
+
+      {loadingProgress ? (
+        <div className="flex items-center justify-center py-8">
+          <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-green-600" />
+          <span className="ml-3 text-gray-600">Loading progress...</span>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {Object.keys(CATEGORY_QUIZZES).map((quizId) => {
+            const isCompleted = completedQuizzes.includes(quizId)
+            const isCurrentQuiz = quizId === currentQuizId && !showResults
+            const isInProgress = activeSessionQuizId === quizId && !isCompleted
+            const chapterNumber = quizId.replace('chapter-', '')
+            const questionCount =
+              CATEGORY_QUIZZES[quizId as keyof typeof CATEGORY_QUIZZES].length
+
+            return (
+              <div
+                key={quizId}
+                className={`transform rounded-lg border-2 bg-linear-to-br from-gray-50 to-gray-100 px-2 py-6 transition-all duration-300 hover:scale-105 lg:px-6 ${
+                  isCurrentQuiz || isInProgress
+                    ? 'border-green-400 shadow-lg'
+                    : 'border-gray-400 hover:shadow-lg'
+                }`}
+              >
+                <div className="mb-4 flex items-center justify-between">
+                  <div
+                    className={`flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br ${CATEGORY_COLOR} lg:h-12 lg:w-12`}
+                  >
+                    <span className="text-sm font-bold text-white lg:text-lg">{chapterNumber}</span>
+                  </div>
+                  {isCompleted ? (
+                    <div className="flex items-center rounded-full bg-green-500 px-2 py-1 text-xs font-medium text-white">
+                      Completed
+                    </div>
+                  ) : isInProgress ? (
+                    <div className="flex items-center rounded-full bg-amber-500 px-2 py-1 text-xs font-medium text-white">
+                      In progress
+                    </div>
+                  ) : null}
+                </div>
+                <h4 className="mb-2 text-lg font-bold text-gray-700">Chapter {chapterNumber}</h4>
+                <p className="mb-1 text-sm text-gray-600">{questionCount} Questions</p>
+                <p className="mb-4 text-xs text-gray-500">{questionCount} min timer</p>
+                {isCompleted ? (
+                  <button
+                    type="button"
+                    onClick={() => handleViewResults(quizId)}
+                    className="flex w-full items-center justify-center rounded-full bg-linear-to-r from-green-600 to-emerald-600 px-4 py-2 font-medium text-white shadow-lg transition-all duration-200 hover:from-green-700 hover:to-emerald-700 hover:shadow-xl sm:px-6"
+                  >
+                    View Results
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => handleQuizSelect(quizId)}
+                    disabled={isCurrentQuiz}
+                    className={`flex w-full items-center justify-center space-x-2 rounded-full bg-linear-to-r ${CATEGORY_COLOR} px-4 py-2 font-medium text-white shadow-lg transition-all duration-200 hover:shadow-xl sm:px-6 ${
+                      isCurrentQuiz ? 'cursor-not-allowed opacity-75' : ''
+                    }`}
+                  >
+                    <span>
+                      {isCurrentQuiz
+                        ? 'Current Chapter'
+                        : isInProgress
+                          ? 'Resume Quiz'
+                          : 'Start Chapter'}
+                    </span>
+                  </button>
+                )}
+              </div>
+            )
+          })}
+        </div>
+      )}
+
+      <div className="mt-8 text-center">
+        <Link
+          href="/quizzes"
+          className="inline-flex items-center rounded-lg bg-linear-to-r from-gray-600 to-gray-700 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-gray-700 hover:to-gray-800 hover:shadow-xl"
+        >
+          Back to All Quizzes
+        </Link>
+      </div>
+    </div>
+  )
+
+  if (!sessionReady || loadingProgress) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-green-50 to-emerald-50 px-4">
+        <div className="rounded-2xl bg-white px-8 py-10 text-center shadow-xl">
+          <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-b-2 border-green-600" />
+          <p className="text-sm text-gray-600">Restoring your quiz session...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (questions.length === 0) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-green-50 to-emerald-50 px-4">
+        <div className="rounded-2xl bg-white p-8 text-center shadow-xl">
+          <h1 className="mb-2 text-xl font-bold text-gray-800">{CATEGORY_TITLE}</h1>
+          <p className="mb-6 text-gray-600">No questions found.</p>
+          <Link
+            href="/quizzes"
+            className="inline-flex rounded-full bg-linear-to-r from-green-500 to-emerald-600 px-6 py-2.5 font-medium text-white"
+          >
+            Back to Quizzes
+          </Link>
+        </div>
+      </div>
+    )
+  }
 
   if (showResults) {
-    const correctAnswers = userAnswers.filter((answer, index) => answer === questions[index].correct).length;
-    const wrongAnswers = questions.length - correctAnswers;
-    const percentage = Math.round((correctAnswers / questions.length) * 100);
-    
-    const quizIds = Object.keys(categoryData.quizzes);
-    const currentIndex = quizIds.indexOf(currentQuizId);
-    const hasMoreQuizzes = currentIndex < quizIds.length - 1;
-    
+    const correctAnswers = userAnswers.filter(
+      (answer, index) => answer === questions[index].correct,
+    ).length
+    const skippedAnswers = userAnswers.filter((answer) => answer === null).length
+    const wrongAnswers = questions.length - correctAnswers - skippedAnswers
+    const percentage = Math.round((correctAnswers / questions.length) * 100)
+    const quizIds = Object.keys(CATEGORY_QUIZZES)
+    const currentIndex = quizIds.indexOf(currentQuizId)
+    const nextIncompleteQuizId = quizIds
+      .slice(currentIndex + 1)
+      .find((quizId) => !completedQuizzes.includes(quizId))
+
     return (
-      <div className="min-h-screen bg-linear-to-br from-green-50 to-emerald-50 py-8 sm:py-12 px-3 sm:px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-6 sm:mb-8">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">🎉 Quiz Completed!</h1>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600">Great job! Here&apos;s how you performed</p>
+      <div className="min-h-screen bg-linear-to-br from-green-50 to-emerald-50 px-3 py-8 sm:px-4 sm:py-12">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-6 text-center sm:mb-8">
+            <h1 className="mb-2 text-2xl font-bold text-gray-800 sm:text-3xl lg:text-4xl">
+              Quiz Completed!
+            </h1>
+            <p className="text-sm text-gray-600 sm:text-base lg:text-lg">
+              Great job! Here&apos;s how you performed
+            </p>
           </div>
 
-          {/* Main Results Card */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 mb-6 sm:mb-8">
-            {/* Score Display */}
-            <div className="text-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 bg-linear-to-br from-green-500 to-emerald-600 rounded-full mb-4 sm:mb-6">   
+          <div className="mb-6 rounded-2xl bg-white p-6 shadow-2xl sm:mb-8 sm:rounded-3xl sm:p-8">
+            <div className="mb-6 text-center sm:mb-8">
+              <div className="mb-4 inline-flex h-24 w-24 items-center justify-center rounded-full bg-linear-to-br from-green-500 to-emerald-600 sm:mb-6 sm:h-32 sm:w-32">
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-white">{percentage}%</div>
-                  <div className="text-xs sm:text-sm text-green-100">Score</div>
+                  <div className="text-2xl font-bold text-white sm:text-3xl">{percentage}%</div>
+                  <div className="text-xs text-green-100 sm:text-sm">Score</div>
                 </div>
               </div>
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-2">
-                {percentage >= 80 ? 'Excellent!' : percentage >= 60 ? 'Good Job!' : percentage >= 40 ? 'Not Bad!' : 'Keep Practicing!'}
+              <h2 className="mb-2 text-lg font-bold text-gray-800 sm:text-xl lg:text-2xl">
+                {percentage >= 80
+                  ? 'Excellent!'
+                  : percentage >= 60
+                    ? 'Good Job!'
+                    : percentage >= 40
+                      ? 'Not Bad!'
+                      : 'Keep Practicing!'}
               </h2>
-              <p className="text-sm sm:text-base text-gray-600">You got {correctAnswers} out of {questions.length} questions correct</p>
-              <p className="text-gray-500 text-xs sm:text-sm mt-2">{categoryData.title} - {currentQuizId.replace('chapter-', 'Chapter ').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</p>
+              <p className="text-sm text-gray-600 sm:text-base">
+                You got {correctAnswers} out of {questions.length} questions correct
+              </p>
+              <p className="mt-2 text-xs text-gray-500 sm:text-sm">
+                {CATEGORY_TITLE} - {formatChapterTitle(currentQuizId)}
+              </p>
             </div>
 
-            {/* Statistics Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
-              {/* Correct Answers */}
-              <div className="bg-green-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-green-200">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+            <div className="mb-6 grid grid-cols-2 gap-4 sm:mb-8 sm:grid-cols-4 sm:gap-6">
+              <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-center sm:rounded-2xl sm:p-6">
+                <div className="mb-1 text-2xl font-bold text-green-600 sm:text-3xl">
+                  {correctAnswers}
                 </div>
-                <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-1 sm:mb-2">{correctAnswers}</div>
-                <div className="text-green-700 font-medium text-xs sm:text-sm lg:text-base">Correct Answers</div>
+                <div className="text-xs font-medium text-green-700 sm:text-sm">Correct</div>
               </div>
-
-              {/* Wrong Answers */}
-              <div className="bg-red-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-red-200">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
+              <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-center sm:rounded-2xl sm:p-6">
+                <div className="mb-1 text-2xl font-bold text-red-600 sm:text-3xl">
+                  {wrongAnswers}
                 </div>
-                <div className="text-2xl sm:text-3xl font-bold text-red-600 mb-1 sm:mb-2">{wrongAnswers}</div>
-                <div className="text-red-700 font-medium text-xs sm:text-sm lg:text-base">Wrong Answers</div>
+                <div className="text-xs font-medium text-red-700 sm:text-sm">Wrong</div>
               </div>
-
-              {/* Total Questions */}
-              <div className="bg-blue-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-blue-200">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-center sm:rounded-2xl sm:p-6">
+                <div className="mb-1 text-2xl font-bold text-amber-600 sm:text-3xl">
+                  {skippedAnswers}
                 </div>
-                <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2">{questions.length}</div>
-                <div className="text-blue-700 font-medium text-xs sm:text-sm lg:text-base">Total Questions</div>
+                <div className="text-xs font-medium text-amber-700 sm:text-sm">Skipped</div>
+              </div>
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-center sm:rounded-2xl sm:p-6">
+                <div className="mb-1 text-2xl font-bold text-blue-600 sm:text-3xl">
+                  {questions.length}
+                </div>
+                <div className="text-xs font-medium text-blue-700 sm:text-sm">Total</div>
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <button
+                type="button"
                 onClick={() => router.push('/quizzes')}
-                className="flex-1 bg-linear-to-r from-green-600 to-green-700 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full sm:rounded-full hover:from-green-700 hover:to-green-800 transition-all duration-200 font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
+                className="flex-1 rounded-full bg-linear-to-r from-green-500 to-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-green-600 hover:to-emerald-700 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
               >
-                <div className="flex items-center justify-center">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                  </svg>
-                  Back to Quizzes
-                </div>
+                Back to Quizzes
               </button>
-              {hasMoreQuizzes ? (
+              <button
+                type="button"
+                onClick={() => router.push('/dashboard')}
+                className="flex-1 rounded-full bg-linear-to-r from-slate-700 to-slate-800 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-slate-800 hover:to-slate-900 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
+              >
+                View Dashboard
+              </button>
+              {nextIncompleteQuizId ? (
                 <button
+                  type="button"
                   onClick={handleNextQuiz}
-                  className="flex-1 bg-linear-to-r from-emerald-600 to-emerald-700 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full sm:rounded-full hover:from-emerald-700 hover:to-emerald-800 transition-all duration-200 font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
+                  className="flex-1 rounded-full bg-linear-to-r from-green-600 to-green-700 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-green-700 hover:to-green-800 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
                 >
-                  <div className="flex items-center justify-center">
-                    Next Chapter
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </div>
+                  Next Chapter
                 </button>
-              ) : (
-                <button
-                  onClick={handleRestart}
-                  className="flex-1 bg-linear-to-r from-emerald-600 to-emerald-700 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl hover:from-emerald-700 hover:to-emerald-800 transition-all duration-200 font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
-                >
-                  <div className="flex items-center justify-center">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                    Retake Quiz
-                  </div>
-                </button>
-              )}
+              ) : null}
             </div>
           </div>
 
-          {/* Question Review Section */}
-          <div className="bg-white rounded-xl shadow-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Question Review</h3>
+          <div className="rounded-xl bg-white p-6 shadow-2xl sm:p-8">
+            <h3 className="mb-6 text-center text-2xl font-bold text-gray-800">
+              Quiz Summary & Explanation
+            </h3>
             <div className="space-y-4">
               {questions.map((question, index) => {
-                const userAnswer = userAnswers[index];
-                const isCorrect = userAnswer === question.correct;
-                
+                const userAnswer = userAnswers[index]
+                const isSkipped = userAnswer === null
+                const isCorrect = userAnswer === question.correct
+
                 return (
-                  <div key={index} className={`p-4 rounded-xl border-2 ${
-                    isCorrect ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'
-                  }`}>
-                    <div className="flex items-start justify-between mb-2">
+                  <div
+                    key={`${index}-${question.question.slice(0, 24)}`}
+                    className={`rounded-xl border-2 p-4 ${
+                      isSkipped
+                        ? 'border-amber-200 bg-amber-50'
+                        : isCorrect
+                          ? 'border-green-200 bg-green-50'
+                          : 'border-red-200 bg-red-50'
+                    }`}
+                  >
+                    <div className="mb-2 flex items-start justify-between gap-3">
                       <h4 className="font-semibold text-gray-800">Question {index + 1}</h4>
-                      <div className={`flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                        isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
-                      }`}>
-                        {isCorrect ? (
-                          <>
-                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            Correct
-                          </>
-                        ) : (
-                          <>
-                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            Incorrect
-                          </>
-                        )}
+                      <div
+                        className={`rounded-full px-3 py-1 text-sm font-medium text-white ${
+                          isSkipped
+                            ? 'bg-amber-500'
+                            : isCorrect
+                              ? 'bg-green-500'
+                              : 'bg-red-500'
+                        }`}
+                      >
+                        {isSkipped ? 'Skipped' : isCorrect ? 'Correct' : 'Incorrect'}
                       </div>
                     </div>
-                    <p className="text-gray-700 mb-2">{question.question}</p>
-                    <div className="text-sm text-gray-600">
-                      <span className="font-medium">Your answer:</span> {userAnswer !== null ? question.options[userAnswer] : 'Not answered'}
+                    <p className="mb-3 text-gray-700">{question.question}</p>
+                    <div className="space-y-2 rounded-lg bg-white/70 p-3 text-sm">
+                      <div className="text-gray-700">
+                        <span className="font-semibold">Your answer:</span>{' '}
+                        {userAnswer !== null ? question.options[userAnswer] : 'Not answered'}
+                      </div>
+                      <div className="text-green-700">
+                        <span className="font-semibold">Correct answer:</span>{' '}
+                        {question.options[question.correct]}
+                      </div>
+                      {question.explanation ? (
+                        <div className="border-t border-blue-100 pt-2 text-blue-700">
+                          <span className="font-semibold">Explanation:</span>{' '}
+                          {question.explanation}
+                        </div>
+                      ) : null}
                     </div>
-                    {!isCorrect && (
-                      <div className="text-sm text-green-700 mt-1">
-                        <span className="font-medium">Correct answer:</span> {question.options[question.correct]}
-                      </div>
-                    )}
-                    {question.explanation && (
-                      <div className="text-sm text-blue-700 mt-2 p-2 bg-blue-50 rounded">
-                        <span className="font-medium">Explanation:</span> {question.explanation}
-                      </div>
-                    )}
                   </div>
-                );
+                )
               })}
             </div>
           </div>
 
-          {/* All Chapters Section */}
-          <div className="bg-white rounded-xl shadow-2xl py-8 lg:px-8 px-2 mt-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All Chapters</h3>
-            <p className="text-gray-600 text-center mb-8">Continue your learning journey with all available chapters</p>
-            
-            {loadingProgress ? (
-              <div className="flex justify-center items-center py-8">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
-                <span className="ml-3 text-gray-600">Loading progress...</span>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {Object.keys(categoryData.quizzes).map((quizId) => {
-                  const isCompleted = completedQuizzes.includes(quizId);
-                  const isCurrentQuiz = quizId === currentQuizId;
-                  const chapterNumber = quizId.replace('chapter-', '');
-                  
-                  return (
-                    <div key={quizId} className={`bg-linear-to-br from-gray-50 to-gray-100 rounded-lg py-6 lg:px-6 px-2 border-2 transition-all duration-300 transform hover:scale-105 ${
-                        isCurrentQuiz ? 'border-green-400 shadow-lg' : 'border-gray-400 hover:shadow-lg'
-                      }`}>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className={`lg:w-12 lg:h-12 w-8 h-8 bg-linear-to-br ${categoryData.color} rounded-full flex items-center justify-center`}>
-                          <span className="text-white lg:text-lg text-sm font-bold">{chapterNumber}</span>
-                        </div>
-                        {isCompleted && (
-                          <div className="flex items-center bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                            <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            Completed
-                          </div>
-                        )}
-                      </div>
-                      <h4 className="text-lg font-bold text-gray-700 mb-2">Chapter {chapterNumber}</h4>
-                      <p className="text-gray-600 text-sm mb-4">{categoryData.quizzes[quizId as keyof typeof categoryData.quizzes].length} Questions</p>
-                      <button 
-                        onClick={() => handleQuizSelect(quizId)}
-                        className={`w-full bg-linear-to-r ${categoryData.color} text-white py-2 sm:py-2 px-4 sm:px-6 rounded-full font-medium transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl ${
-                          isCurrentQuiz ? 'opacity-75 cursor-not-allowed' : ''
-                        }`}
-                        disabled={isCurrentQuiz}
-                      >
-                        <span>{isCurrentQuiz ? 'Current Chapter' : 'Start Chapter'}</span>
-                        {!isCurrentQuiz && (
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        )}
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-            
-            <div className="text-center mt-8">
-              <Link 
-                href="/quizzes"
-                className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
-                
-                Back to All Quizzes
-              </Link>
-            </div>
-          </div>
+          {chapterCards}
         </div>
       </div>
-    );
+    )
   }
 
-  const currentQ = questions[currentQuestion];
-  const selectedAnswer = userAnswers[currentQuestion];
-  const isCorrect = selectedAnswer === currentQ.correct;
-  const showExplanation = selectedAnswer !== null;
+  const currentQ = questions[currentQuestion]
+  const selectedAnswer = userAnswers[currentQuestion]
+  const answered = selectedAnswer !== null
+  const timerUrgent = timeLeft <= 5 * 60
+
+  if (isCurrentCompleted && !showResults) {
+    return (
+      <div className="min-h-screen bg-linear-to-br from-green-50 to-emerald-50 px-3 py-6 sm:px-4 sm:py-8">
+        <div className="mx-auto max-w-3xl">
+          <div className="rounded-xl bg-white p-6 text-center shadow-lg sm:p-8">
+            <h1 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">{CATEGORY_TITLE}</h1>
+            <p className="mb-1 text-sm font-medium text-green-700">
+              {formatChapterTitle(currentQuizId)} is completed
+            </p>
+            <p className="mb-6 text-sm text-gray-600">
+              This quiz is locked. You can view your summary and explanations below.
+            </p>
+            <button
+              type="button"
+              onClick={() => handleViewResults(currentQuizId)}
+              className="rounded-full bg-linear-to-r from-green-600 to-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-green-700 hover:to-emerald-700"
+            >
+              View Results
+            </button>
+          </div>
+          {chapterCards}
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-green-50 to-emerald-50 py-6 sm:py-8 px-3 sm:px-4">
-      <div className="max-w-3xl mx-auto">
-        {/* Simple and Beautiful Quiz Box */}
-        <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
-          {/* Header */}
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="flex items-center justify-center mb-3 sm:mb-4">
-              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800">{categoryData.title}</h1>
-            </div>
-            <div className="flex items-center justify-center text-gray-600 mb-3 sm:mb-4">
-              <span className="bg-green-100 text-green-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-                {currentQuizId.replace('chapter-', 'Chapter ').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+    <div className="min-h-screen bg-linear-to-br from-green-50 to-emerald-50 px-3 py-6 sm:px-4 sm:py-8">
+      <div className="mx-auto max-w-3xl">
+        <div className="rounded-xl bg-white p-4 shadow-lg sm:rounded-2xl sm:p-6 lg:p-8">
+          <div className="mb-6 text-center sm:mb-8">
+            <h1 className="mb-3 text-lg font-bold text-gray-800 sm:mb-4 sm:text-xl lg:text-2xl">
+              {CATEGORY_TITLE}
+            </h1>
+            <div className="mb-3 flex flex-wrap items-center justify-center gap-2 text-gray-600 sm:mb-4">
+              <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800 sm:px-3 sm:text-sm">
+                {formatChapterTitle(currentQuizId)}
               </span>
-              <span className="mx-2">•</span>
-              <span className="text-gray-500 text-xs sm:text-sm lg:text-base">
+              <span className="rounded-full bg-slate-100 px-2 py-1 text-xs font-medium text-slate-700 sm:px-3 sm:text-sm">
+                {questions.length} Questions · {questions.length} min
+              </span>
+              <span
+                className={`rounded-full px-2 py-1 font-mono text-xs font-semibold sm:px-3 sm:text-sm ${
+                  timerUrgent ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-800'
+                }`}
+                aria-live="polite"
+              >
+                Time left: {formatTimer(timeLeft)}
+              </span>
+              <span className="text-xs text-gray-500 sm:text-sm lg:text-base">
                 Question {currentQuestion + 1} of {questions.length}
               </span>
             </div>
-            
-            {/* Progress Bar */}
-            <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2">
-              <div 
-                className="bg-linear-to-r from-green-500 to-emerald-600 h-1.5 sm:h-2 rounded-full transition-all duration-300 ease-out"
+
+            <div className="h-1.5 w-full rounded-full bg-gray-200 sm:h-2">
+              <div
+                className="h-1.5 rounded-full bg-linear-to-r from-green-500 to-emerald-600 transition-all duration-300 ease-out sm:h-2"
                 style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
-              ></div>
+              />
             </div>
           </div>
 
-          {/* Question */}
           <div className="mb-6 sm:mb-8">
-            <h2 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-4 sm:mb-6 leading-relaxed">
+            <h2 className="mb-4 text-base leading-relaxed font-semibold text-gray-800 sm:mb-6 sm:text-lg lg:text-xl">
               {currentQ.question}
             </h2>
-            
-            {/* Options */}
+
             <div className="space-y-2 sm:space-y-3">
-              {currentQ.options.map((option: string, index: number) => {
-                const isSelected = selectedAnswer === index;
-                const isCorrectAnswer = index === currentQ.correct;
-                let optionClasses = 'w-full text-left p-2.5 sm:p-3.5 rounded-md sm:rounded-lg border-2 transition-all duration-200 flex items-center justify-between group';
-                
-                if (isSelected) {
-                  if (isCorrectAnswer) {
-                    optionClasses += ' border-green-500 bg-green-50 text-green-700 shadow-md';
-                  } else {
-                    optionClasses += ' border-red-500 bg-red-50 text-red-700 shadow-md';
-                  }
-                } else if (showExplanation && isCorrectAnswer) {
-                  optionClasses += ' border-green-500 bg-green-50 text-green-700 shadow-md';
+              {currentQ.options.map((option, index) => {
+                const isSelected = selectedAnswer === index
+                const isCorrectAnswer = index === currentQ.correct
+                let optionClasses =
+                  'w-full text-left p-2.5 sm:p-3.5 rounded-md sm:rounded-lg border-2 transition-all duration-200 flex items-center justify-between group'
+
+                if (answered && isSelected && !isCorrectAnswer) {
+                  optionClasses += ' border-red-500 bg-red-50 text-red-700 shadow-md'
+                } else if (answered && isCorrectAnswer) {
+                  optionClasses += ' border-green-500 bg-green-50 text-green-700 shadow-md'
+                } else if (!answered) {
+                  optionClasses +=
+                    ' border-gray-300 hover:border-green-300 hover:bg-green-50 hover:shadow-sm cursor-pointer'
                 } else {
-                  optionClasses += ' border-gray-300 hover:border-green-300 hover:bg-green-50 hover:shadow-sm';
+                  optionClasses += ' border-gray-200 bg-gray-50 text-gray-500 cursor-not-allowed'
                 }
+
+                const showCheck = answered && (isSelected || isCorrectAnswer)
 
                 return (
                   <button
-                    key={index}
+                    key={`${index}-${option}`}
+                    type="button"
                     onClick={() => handleAnswerSelect(index)}
-                    disabled={showExplanation}
-                    className={`${optionClasses} ${showExplanation ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                    disabled={answered}
+                    className={`${optionClasses} ${answered ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                   >
                     <div className="flex items-center">
-                      <div className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 mr-3 sm:mr-4 flex items-center justify-center ${
-                        isSelected 
-                          ? isCorrectAnswer 
-                            ? 'border-green-500 bg-green-500' 
-                            : 'border-red-500 bg-red-500'
-                          : showExplanation && isCorrectAnswer
-                            ? 'border-green-500 bg-green-500'
-                            : 'border-gray-300 group-hover:border-green-400'
-                      }`}>
-                        {isSelected || (showExplanation && isCorrectAnswer) ? (
-                          <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <div
+                        className={`mr-3 flex h-5 w-5 items-center justify-center rounded-full border-2 sm:mr-4 sm:h-6 sm:w-6 ${
+                          answered && isSelected && !isCorrectAnswer
+                            ? 'border-red-500 bg-red-500'
+                            : answered && isCorrectAnswer
+                              ? 'border-green-500 bg-green-500'
+                              : 'border-gray-300 group-hover:border-green-400'
+                        }`}
+                      >
+                        {showCheck ? (
+                          <svg
+                            className="h-2.5 w-2.5 text-white sm:h-3 sm:w-3"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                              clipRule="evenodd"
+                            />
                           </svg>
                         ) : (
                           <span className="text-xs font-medium text-gray-400 group-hover:text-green-400">
@@ -467,160 +851,44 @@ export default function OperatingDepartmentQuiz() {
                           </span>
                         )}
                       </div>
-                      <span className="font-medium text-left text-sm sm:text-base lg:text-lg">{option}</span>
+                      <span className="text-left text-sm font-medium sm:text-base lg:text-lg">
+                        {option}
+                      </span>
                     </div>
-                    
-                    {showExplanation && (
-                      <div className="flex items-center">
-                        {isCorrectAnswer ? (
-                          <div className="w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center">
-                            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                        ) : isSelected ? (
-                          <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-500 rounded-full flex items-center justify-center">
-                            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                          </div>
-                        ) : null}
-                      </div>
-                    )}
                   </button>
-                );
+                )
               })}
             </div>
           </div>
 
-          {/* Explanation */}
-          {showExplanation && (
-            <div className={`mb-4 sm:mb-6 p-3 sm:p-4 rounded-md sm:rounded-lg border ${
-              isCorrect 
-                ? 'bg-green-50 border-green-500 text-green-700' 
-                : 'bg-red-50 border-rose-500 text-rose-700'
-            }`}>
-              <div className="flex items-start">
-                <div className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center mr-2 sm:mr-3 mt-0.5 ${
-                  isCorrect ? 'bg-green-500' : 'bg-rose-600'
-                }`}>
-                  {isCorrect ? (
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  ) : (
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  )}
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1 text-sm sm:text-base">
-                    {isCorrect ? 'Correct!' : 'Incorrect!'}
-                  </h4>
-                  <p className="text-xs sm:text-sm leading-relaxed">{currentQ.explanation}</p>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Navigation Buttons */}
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between gap-3">
             <button
+              type="button"
               onClick={() => {
-                if (currentQuestion > 0) {
-                  setCurrentQuestion(currentQuestion - 1);
-                }
+                if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1)
               }}
               disabled={currentQuestion === 0}
-              className="px-4 sm:px-6 py-2 sm:py-3 bg-gray-100 text-gray-700 rounded-md sm:rounded-lg border border-gray-400 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-medium flex items-center text-sm sm:text-base"
+              className="rounded-md border border-gray-400 bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-all duration-200 hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-50 sm:rounded-lg sm:px-6 sm:py-3 sm:text-base"
             >
-              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
               Previous
             </button>
-            
+
             <button
+              type="button"
               onClick={handleNext}
-              disabled={selectedAnswer === null}
-              className="px-6 sm:px-8 py-2 sm:py-3 bg-linear-to-r from-green-600 to-emerald-600 text-white rounded-md sm:rounded-lg hover:from-green-700 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-medium shadow-lg hover:shadow-xl flex items-center text-sm sm:text-base"
+              className="rounded-md bg-linear-to-r from-green-500 to-emerald-600 px-6 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-green-600 hover:to-emerald-700 hover:shadow-xl sm:rounded-lg sm:px-8 sm:py-3 sm:text-base"
             >
-              {currentQuestion === questions.length - 1 ? 'Finish Quiz' : 'Next Question'}
-              <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              {currentQuestion === questions.length - 1
+                ? 'Finish Quiz'
+                : selectedAnswer === null
+                  ? 'Skip to Next'
+                  : 'Next Question'}
             </button>
           </div>
         </div>
 
-        {/* All Chapters Section - Show during quiz */}
-        <div className="bg-white rounded-xl shadow-2xl py-8 lg:px-8 px-2 mt-8">
-          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All Chapters</h3>
-          <p className="text-gray-600 text-center mb-8">Switch between chapters or continue your progress</p>
-          
-          {loadingProgress ? (
-            <div className="flex justify-center items-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
-              <span className="ml-3 text-gray-600">Loading progress...</span>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {Object.keys(categoryData.quizzes).map((quizId) => {
-                const isCompleted = completedQuizzes.includes(quizId);
-                const isCurrentQuiz = quizId === currentQuizId;
-                const chapterNumber = quizId.replace('chapter-', '');
-                
-                return (
-                  <div key={quizId} className={`bg-linear-to-br from-gray-50 to-gray-100 rounded-lg py-6 lg:px-6 px-3 border-2 transition-all duration-300 transform hover:scale-105 ${
-                      isCurrentQuiz ? 'border-green-400 shadow-lg' : 'border-gray-400 hover:shadow-lg'
-                    }`}>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className={`lg:w-12 lg:h-12 w-8 h-8 bg-linear-to-br ${categoryData.color} rounded-full flex items-center justify-center`}>
-                        <span className="text-white lg:text-lg text-sm font-bold">{chapterNumber}</span>
-                      </div>
-                      {isCompleted && (
-                        <div className="flex items-center bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                          <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          Completed
-                        </div>
-                      )}
-                    </div>
-                    <h4 className="text-lg font-bold text-gray-700 mb-2">Chapter {chapterNumber}</h4>
-                    <p className="text-gray-600 text-sm mb-4">{categoryData.quizzes[quizId as keyof typeof categoryData.quizzes].length} Questions</p>
-                    <button 
-                      onClick={() => handleQuizSelect(quizId)}
-                      className={`w-full bg-linear-to-r ${categoryData.color} text-white py-2 sm:py-2 px-4 sm:px-6 rounded-full font-medium transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl ${
-                        isCurrentQuiz ? 'opacity-75 cursor-not-allowed' : ''
-                      }`}
-                      disabled={isCurrentQuiz}
-                    >
-                      <span>{isCurrentQuiz ? 'Current Chapter' : 'Start Chapter'}</span>
-                      {!isCurrentQuiz && (
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      )}
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-          
-          <div className="text-center mt-8">
-            <Link 
-              href="/quizzes"
-              className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              
-              Back to All Quizzes
-            </Link>
-          </div>
-        </div>
+        {chapterCards}
       </div>
     </div>
-  );
+  )
 }
