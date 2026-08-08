@@ -379,10 +379,10 @@ export default function BotanyQuizPage() {
 
             <div className="text-center mt-8">
               <Link
-                href="/quizzes"
+                href="/quizzes/general-awareness"
                 className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Back to All Quizzes
+                Back to General Awareness
               </Link>
             </div>
           </div>
@@ -618,10 +618,10 @@ export default function BotanyQuizPage() {
 
           <div className="text-center mt-8">
             <Link
-              href="/quizzes"
+              href="/quizzes/general-awareness"
               className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Back to All Quizzes
+              Back to General Awareness
             </Link>
           </div>
         </div>

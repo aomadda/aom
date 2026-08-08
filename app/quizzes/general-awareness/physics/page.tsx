@@ -217,14 +217,14 @@ export default function PhysicsQuizPage() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
-                onClick={() => router.push('/quizzes')}
+                onClick={() => router.push('/quizzes/general-awareness')}
                 className="flex-1 bg-linear-to-r from-slate-600 to-slate-700 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full sm:rounded-full hover:from-slate-700 hover:to-slate-800 transition-all duration-200 font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 <div className="flex items-center justify-center">
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                   </svg>
-                  Back to Quizzes
+                  Back to General Awareness
                 </div>
               </button>
               {hasMoreQuizzes ? (
@@ -318,7 +318,7 @@ export default function PhysicsQuizPage() {
           </div>
 
           <div className="bg-white rounded-xl shadow-2xl py-8 lg:px-8 px-2 mt-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All practice sets</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All Chapters</h3>
             <p className="text-gray-600 text-center mb-8">Try every available practice set</p>
 
             {loadingProgress ? (
@@ -379,10 +379,10 @@ export default function PhysicsQuizPage() {
 
             <div className="text-center mt-8">
               <Link
-                href="/quizzes"
+                href="/quizzes/general-awareness"
                 className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Back to All Quizzes
+                Back to General Awareness
               </Link>
             </div>
           </div>
@@ -559,7 +559,7 @@ export default function PhysicsQuizPage() {
         </div>
 
         <div className="bg-white rounded-xl shadow-2xl py-8 lg:px-8 px-2 mt-8">
-          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All practice sets</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All Chapters</h3>
           <p className="text-gray-600 text-center mb-8">Switch to another quiz or continue your progress</p>
 
           {loadingProgress ? (
@@ -618,10 +618,10 @@ export default function PhysicsQuizPage() {
 
           <div className="text-center mt-8">
             <Link
-              href="/quizzes"
+              href="/quizzes/general-awareness"
               className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Back to All Quizzes
+              Back to General Awareness
             </Link>
           </div>
         </div>

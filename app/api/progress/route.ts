@@ -1,5 +1,9 @@
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
+import { getSession } from '@/lib/auth/session';
+import { connectDB } from '@/lib/db';
+import { QuizAttempt } from '@/lib/models/QuizAttempt';
+import { getQuizTitle } from '@/lib/quiz-titles';
 
 const COOKIE_NAME = 'quiz_progress';
 const MAX_ENTRIES = 40;
@@ -69,6 +73,55 @@ export async function POST(request: Request) {
   while (payload.length > 3800 && recentActivity.length > 1) {
     recentActivity = recentActivity.slice(0, -1);
     payload = JSON.stringify(recentActivity);
+  }
+
+  const session = await getSession();
+  if (session && session.role !== 'admin') {
+    try {
+      await connectDB();
+      const completedAt = new Date(entry.completedAt);
+      const totalQuestions =
+        typeof entry.totalQuestions === 'number' ? entry.totalQuestions : 0;
+      const correctAnswers =
+        typeof entry.correctAnswers === 'number' ? entry.correctAnswers : 0;
+      const quizTitle =
+        typeof body.quizTitle === 'string' && body.quizTitle.trim()
+          ? body.quizTitle.trim()
+          : getQuizTitle(quizId, categoryId);
+
+      const existing = await QuizAttempt.findOne({
+        userId: session.userId,
+        categoryId,
+        quizId,
+      });
+
+      if (!existing) {
+        await QuizAttempt.create({
+          userId: session.userId,
+          categoryId,
+          quizId,
+          quizTitle,
+          score,
+          totalQuestions,
+          correctAnswers,
+          studyTime: entry.studyTime,
+          completedAt,
+        });
+      } else if (
+        score > existing.score ||
+        (score === existing.score && completedAt < existing.completedAt)
+      ) {
+        existing.score = score;
+        existing.totalQuestions = totalQuestions;
+        existing.correctAnswers = correctAnswers;
+        existing.studyTime = entry.studyTime;
+        existing.quizTitle = quizTitle;
+        existing.completedAt = completedAt;
+        await existing.save();
+      }
+    } catch (error) {
+      console.error('Failed to persist quiz attempt:', error);
+    }
   }
 
   const response = NextResponse.json({ ok: true });

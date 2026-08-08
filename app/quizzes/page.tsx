@@ -17,20 +17,13 @@ const Quizzes = () => {
       description: 'Test your knowledge of accident investigation procedures, reporting protocols, and safety regulations'
     },
     {
-      href: '/quizzes/aom-previous-paper-2022',
-      title: 'AOM Previous Paper 2022',
+      href: '/quizzes/aom-previous-papers',
+      title: 'AOM Previous Papers',
       icon: '📝',
-      color: 'from-emerald-500 to-green-600',
-      hoverColor: 'from-emerald-600 to-green-700',
-      description: 'Practice the AOM Previous Paper 2022 with 175 questions covering operating, establishment and related topics'
-    },
-    {
-      href: '/quizzes/aom-previous-papers-2026',
-      title: 'AOM Previous Papers 2026',
-      icon: '📑',
       color: 'from-emerald-500 to-teal-600',
       hoverColor: 'from-emerald-600 to-teal-700',
-      description: 'Practice AOM exam papers: Professional Subject, GK & Rajabhasha, and Establishment & Financial Rules'
+      description:
+        'Practice AOM previous examination papers including 2022 and 2026 papers across operating, establishment, GK and related topics',
     },
     {
       href: '/quizzes/block-working-manual',

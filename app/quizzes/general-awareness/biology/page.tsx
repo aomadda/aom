@@ -318,7 +318,7 @@ export default function BiologyQuizPage() {
           </div>
 
           <div className="bg-white rounded-xl shadow-2xl py-8 lg:px-8 px-2 mt-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All practice sets</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All Chapters</h3>
             <p className="text-gray-600 text-center mb-8">Try every available practice set</p>
 
             {loadingProgress ? (
@@ -379,10 +379,10 @@ export default function BiologyQuizPage() {
 
             <div className="text-center mt-8">
               <Link
-                href="/quizzes"
+                href="/quizzes/general-awareness"
                 className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Back to All Quizzes
+                Back to General Awareness
               </Link>
             </div>
           </div>
@@ -559,7 +559,7 @@ export default function BiologyQuizPage() {
         </div>
 
         <div className="bg-white rounded-xl shadow-2xl py-8 lg:px-8 px-2 mt-8">
-          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All practice sets</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">All Chapters</h3>
           <p className="text-gray-600 text-center mb-8">Switch to another quiz or continue your progress</p>
 
           {loadingProgress ? (
@@ -618,10 +618,10 @@ export default function BiologyQuizPage() {
 
           <div className="text-center mt-8">
             <Link
-              href="/quizzes"
+              href="/quizzes/general-awareness"
               className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Back to All Quizzes
+              Back to General Awareness
             </Link>
           </div>
         </div>

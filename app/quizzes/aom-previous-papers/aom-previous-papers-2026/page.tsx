@@ -5,14 +5,21 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link'
-import { generalSubsidiaryRulesQuizzes } from '@/assets/general-subsidiary-rules'
+import { aomPreviousPapersQuizzes } from '@/assets/aom-previous-papers/aom-previous-papers-2026/aom-previous-papers-2026'
 
-const CATEGORY_ID = 'general-subsidiary-rules'
-const CATEGORY_TITLE = 'General & Subsidiary Rules'
-const CATEGORY_COLOR = 'from-blue-500 to-blue-600'
-const CATEGORY_QUIZZES = generalSubsidiaryRulesQuizzes.quizzes
-const RESULTS_STORAGE_KEY = 'gsr_quiz_results'
-const SESSION_STORAGE_KEY = 'gsr_quiz_session'
+const CATEGORY_ID = 'aom-previous-papers-2026'
+const CATEGORY_TITLE = 'AOM Previous Papers 2026'
+const CATEGORY_COLOR = 'from-emerald-500 to-teal-600'
+const CATEGORY_QUIZZES = aomPreviousPapersQuizzes.quizzes
+const RESULTS_STORAGE_KEY = 'aom2026_quiz_results'
+const SESSION_STORAGE_KEY = 'aom2026_quiz_session'
+const DEFAULT_QUIZ_ID = 'professional-subject'
+
+const QUIZ_LABELS: Record<string, string> = {
+  'professional-subject': 'Professional Subject',
+  'gk-rajabhasha': 'GK & Rajabhasha',
+  'establishment-finance-rules': 'Establishment & Financial Rules',
+}
 
 type StoredResults = Record<string, { answers: (number | null)[] }>
 
@@ -35,11 +42,12 @@ function formatTimer(totalSeconds: number) {
   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 }
 
-function formatChapterTitle(quizId: string) {
+function formatQuizTitle(quizId: string) {
+  if (QUIZ_LABELS[quizId]) return QUIZ_LABELS[quizId]
   return quizId
-    .replace('chapter-', 'Chapter ')
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, (l) => l.toUpperCase())
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
 }
 
 function loadStoredResults(): StoredResults {
@@ -105,7 +113,7 @@ function clearQuizSession() {
   }
 }
 
-export default function GeneralSubsidiaryRulesQuiz() {
+export default function AomPreviousPapers2026Quiz() {
   const quizStartTimeRef = useRef<number>(getTimestamp())
   const endsAtRef = useRef<number>(0)
   const finishedRef = useRef(false)
@@ -113,7 +121,7 @@ export default function GeneralSubsidiaryRulesQuiz() {
   const sessionRestoredRef = useRef(false)
   const router = useRouter()
 
-  const [currentQuizId, setCurrentQuizId] = useState('chapter-1')
+  const [currentQuizId, setCurrentQuizId] = useState(DEFAULT_QUIZ_ID)
   const questions = useMemo(() => {
     const currentQuiz = CATEGORY_QUIZZES[currentQuizId as keyof typeof CATEGORY_QUIZZES]
     return currentQuiz || []

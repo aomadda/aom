@@ -43,21 +43,30 @@ export const searchTopics: SearchTopic[] = [
     keywords: "pdfs accident manual amendments Accident Manual Amendments",
   },
   {
-    href: "/quizzes/aom-previous-paper-2022",
-    title: "AOM Previous Paper 2022",
+    href: "/quizzes/aom-previous-papers",
+    title: "AOM Previous Papers",
     category: "Quizzes",
     parent: "Quizzes",
+    keywords:
+      "quizzes aom previous papers AOM Previous Papers 2022 2026 exam practice",
+  },
+  {
+    href: "/quizzes/aom-previous-papers/aom-previous-paper-2022",
+    title: "AOM Previous Paper 2022",
+    category: "Quizzes",
+    parent: "Quizzes › AOM Previous Papers",
     keywords:
       "quizzes aom previous paper 2022 AOM Previous Paper 2022 exam practice 175 questions",
   },
   {
-    href: "/quizzes/aom-previous-papers-2026",
+    href: "/quizzes/aom-previous-papers/aom-previous-papers-2026",
     title: "AOM Previous Papers 2026",
     category: "Quizzes",
-    parent: "Quizzes",
+    parent: "Quizzes › AOM Previous Papers",
     keywords:
       "quizzes aom previous papers 2026 AOM Previous Papers Professional Subject GK Rajabhasha Establishment Financial Rules",
   },
+
   {
     href: "/quizzes/financial-rules/accounts",
     title: "Accounts",

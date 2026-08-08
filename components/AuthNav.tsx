@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { LogOut, Loader2 } from 'lucide-react'
+import { LayoutDashboard, LogOut, Loader2 } from 'lucide-react'
 
 export type AuthUser = {
   fullName: string
@@ -96,6 +96,18 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
               <p className="truncate text-sm font-semibold text-gray-800">{user.fullName}</p>
               <p className="truncate text-xs text-gray-500">{user.email}</p>
             </div>
+            <Link
+              href="/dashboard"
+              role="menuitem"
+              onClick={() => {
+                setMenuOpen(false)
+                onNavigate?.()
+              }}
+              className="flex w-full items-center gap-2 border-b border-gray-100 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-emerald-50 hover:text-emerald-800"
+            >
+              <LayoutDashboard className="h-4 w-4" />
+              Dashboard
+            </Link>
             <button
               type="button"
               role="menuitem"

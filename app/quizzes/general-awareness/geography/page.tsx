@@ -217,7 +217,7 @@ export default function GeographyQuizPage() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
-                onClick={() => router.push('/quizzes')}
+                onClick={() => router.push('/quizzes/general-awareness')}
                 className="flex-1 bg-linear-to-r from-slate-600 to-slate-700 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full sm:rounded-full hover:from-slate-700 hover:to-slate-800 transition-all duration-200 font-medium shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 <div className="flex items-center justify-center">
@@ -379,10 +379,10 @@ export default function GeographyQuizPage() {
 
             <div className="text-center mt-8">
               <Link
-                href="/quizzes"
+                href="/quizzes/general-awareness"
                 className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Back to All Quizzes
+                Back to General Awareness
               </Link>
             </div>
           </div>
@@ -618,10 +618,10 @@ export default function GeographyQuizPage() {
 
           <div className="text-center mt-8">
             <Link
-              href="/quizzes"
+              href="/quizzes/general-awareness"
               className="inline-flex items-center px-8 py-3 bg-linear-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Back to All Quizzes
+              Back to General Awareness
             </Link>
           </div>
         </div>
