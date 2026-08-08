@@ -4,8 +4,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { LayoutDashboard, LogOut, Loader2 } from 'lucide-react'
+import { setCurrentQuizUserId } from '@/lib/quiz-browser-storage'
 
 export type AuthUser = {
+  id?: string
   fullName: string
   email: string
   role?: 'user' | 'admin'
@@ -47,10 +49,15 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
     }
   }, [menuOpen])
 
+  useEffect(() => {
+    setCurrentQuizUserId(user?.id || null)
+  }, [user?.id])
+
   const handleLogout = async () => {
     setLoggingOut(true)
     try {
       await fetch('/api/auth/logout', { method: 'POST' })
+      setCurrentQuizUserId(null)
       setMenuOpen(false)
       onNavigate?.()
       router.push('/login')

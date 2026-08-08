@@ -106,6 +106,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
 
   const quizzesLinks = [
     { href: '/quizzes/accident-manual', label: 'Accident Manual', icon: '⚠️' },
+    { href: '/quizzes/aom-previous-papers', label: 'AOM Previous Papers', icon: '📝' },
     { href: '/quizzes/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
     { href: '/quizzes/commercial-department', label: 'Commercial Department', icon: '💼' },
     { href: '/quizzes/establishment-rules', label: 'Establishment Rules', icon: '📜' },

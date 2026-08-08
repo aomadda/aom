@@ -75,6 +75,12 @@ export async function POST(request: Request) {
             },
           })
 
+          response.cookies.set('quiz_progress', '', {
+            path: '/',
+            maxAge: 0,
+            sameSite: 'lax',
+            httpOnly: true,
+          })
           return attachSessionCookie(response, token)
         }
       }
@@ -113,6 +119,9 @@ export async function POST(request: Request) {
       )
     }
 
+    user.lastLoginAt = new Date()
+    await user.save()
+
     const token = await createSessionToken({
       userId: user._id.toString(),
       email: user.email,
@@ -125,12 +134,25 @@ export async function POST(request: Request) {
       user: {
         id: user._id.toString(),
         fullName: user.fullName,
-        email: user.email,
+        designation: user.designation,
+        department: user.department,
         preparingPost: user.preparingPost,
+        division: user.division,
+        zone: user.zone,
+        mobileNumber: user.mobileNumber,
+        email: user.email,
+        status: user.status,
         role: 'user',
       },
     })
 
+    // Prevent previous browser account's shared progress cookie from leaking.
+    response.cookies.set('quiz_progress', '', {
+      path: '/',
+      maxAge: 0,
+      sameSite: 'lax',
+      httpOnly: true,
+    })
     return attachSessionCookie(response, token)
   } catch (error) {
     console.error('Login error:', error)

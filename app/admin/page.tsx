@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { Check, Loader2, RefreshCw, Users, X } from 'lucide-react'
+import { Check, Loader2, RefreshCw, Trash2, Users, X } from 'lucide-react'
 
 type UserStatus = 'pending' | 'accepted' | 'rejected'
 
@@ -111,6 +111,35 @@ export default function AdminDashboardPage() {
     }
   }
 
+  const deleteUser = async (userId: string, fullName: string) => {
+    const confirmed = window.confirm(
+      `Delete "${fullName}" permanently from MongoDB? This cannot be undone.`,
+    )
+    if (!confirmed) return
+
+    setUpdatingId(userId)
+    setError('')
+    try {
+      const response = await fetch('/api/admin/users', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId }),
+      })
+
+      const data = (await response.json()) as { error?: string }
+      if (!response.ok) {
+        setError(data.error || 'Unable to delete user')
+        return
+      }
+
+      setUsers((prev) => prev.filter((user) => user.id !== userId))
+    } catch {
+      setError('Network error while deleting user')
+    } finally {
+      setUpdatingId(null)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-100 via-indigo-50 to-purple-50 px-4 py-8 sm:py-12">
       <div className="mx-auto max-w-5xl">
@@ -122,7 +151,7 @@ export default function AdminDashboardPage() {
             </div>
             <h1 className="text-2xl font-bold text-gray-800 sm:text-3xl">Register Details</h1>
             <p className="mt-1 text-sm text-gray-600">
-              Use Accept / Reject for each registration. ({users.length})
+              Use Accept / Reject / Delete for each registration. ({users.length})
             </p>
           </div>
 
@@ -275,6 +304,36 @@ export default function AdminDashboardPage() {
                     >
                       {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <X className="h-4 w-4" />}
                       REJECT
+                    </button>
+
+                    <button
+                      type="button"
+                      disabled={busy}
+                      onClick={() => void deleteUser(user.id, user.fullName)}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '8px',
+                        minWidth: '140px',
+                        padding: '14px 22px',
+                        borderRadius: '12px',
+                        border: '2px solid #7f1d1d',
+                        backgroundColor: '#991b1b',
+                        color: '#ffffff',
+                        fontWeight: 800,
+                        fontSize: '15px',
+                        cursor: busy ? 'not-allowed' : 'pointer',
+                        opacity: busy ? 0.45 : 1,
+                        boxShadow: '0 8px 16px rgba(153, 27, 27, 0.4)',
+                      }}
+                    >
+                      {busy ? (
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                      ) : (
+                        <Trash2 className="h-4 w-4" />
+                      )}
+                      DELETE
                     </button>
                   </div>
                 </div>

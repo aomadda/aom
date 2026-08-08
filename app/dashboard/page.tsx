@@ -2,7 +2,14 @@
 
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Award, BookOpen, Loader2, Trophy } from 'lucide-react'
+import { Award, BookOpen, Loader2, Trophy, Users } from 'lucide-react'
+
+type LeaderboardEntry = {
+  fullName: string
+  score: number
+  rank: number
+  isYou: boolean
+}
 
 type CompletedQuiz = {
   categoryId: string
@@ -15,6 +22,7 @@ type CompletedQuiz = {
   completedAt: string
   rank: number
   totalParticipants: number
+  leaderboard: LeaderboardEntry[]
 }
 
 type DashboardData = {
@@ -44,27 +52,32 @@ export default function DashboardPage() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    const load = async () => {
-      setLoading(true)
-      setError('')
+    let cancelled = false
+
+    ;(async () => {
       try {
         const response = await fetch('/api/dashboard')
         const json = (await response.json()) as DashboardData & { error?: string }
+        if (cancelled) return
         if (!response.ok) {
           setError(json.error || 'Unable to load dashboard')
           setData(null)
           return
         }
         setData(json)
+        setError('')
       } catch {
+        if (cancelled) return
         setError('Unable to load dashboard')
         setData(null)
       } finally {
-        setLoading(false)
+        if (!cancelled) setLoading(false)
       }
-    }
+    })()
 
-    load()
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   return (
@@ -76,7 +89,7 @@ export default function DashboardPage() {
             {data?.fullName ? `${data.fullName}'s Progress` : 'Your Progress'}
           </h1>
           <p className="mt-2 text-slate-600">
-            Completed quizzes and your rank compared with other users.
+            Your completed quizzes only — ranks are compared with other logged-in users.
           </p>
         </div>
 
@@ -101,7 +114,7 @@ export default function DashboardPage() {
                 <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
                   <BookOpen className="h-5 w-5" />
                 </div>
-                <p className="text-sm text-slate-500">Quizzes completed</p>
+                <p className="text-sm text-slate-500">Quizzes completed by you</p>
                 <p className="mt-1 text-3xl font-bold text-slate-900">{data?.totalCompleted ?? 0}</p>
               </div>
               <div className="rounded-2xl border border-amber-100 bg-white p-6 shadow-md">
@@ -146,16 +159,16 @@ export default function DashboardPage() {
                         </div>
                         <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-3 py-1.5 text-sm font-semibold text-amber-800">
                           <Award className="h-4 w-4" />
-                          Rank #{quiz.rank}
+                          Your rank #{quiz.rank}
                           <span className="font-normal text-amber-700/80">
-                            / {quiz.totalParticipants}
+                            / {quiz.totalParticipants} users
                           </span>
                         </div>
                       </div>
 
                       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
                         <div className="rounded-lg bg-white px-3 py-2">
-                          <p className="text-xs text-slate-500">Score</p>
+                          <p className="text-xs text-slate-500">Your score</p>
                           <p className="text-base font-bold text-emerald-700">{quiz.score}%</p>
                         </div>
                         <div className="rounded-lg bg-white px-3 py-2">
@@ -177,6 +190,32 @@ export default function DashboardPage() {
                           </p>
                         </div>
                       </div>
+
+                      {quiz.leaderboard?.length ? (
+                        <div className="mt-4 rounded-lg border border-emerald-100 bg-white p-3">
+                          <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-800">
+                            <Users className="h-4 w-4 text-emerald-600" />
+                            Rank comparison
+                          </div>
+                          <div className="space-y-1.5">
+                            {quiz.leaderboard.map((row) => (
+                              <div
+                                key={`${row.rank}-${row.fullName}-${row.score}`}
+                                className={`flex items-center justify-between rounded-md px-2.5 py-1.5 text-sm ${
+                                  row.isYou
+                                    ? 'bg-emerald-50 font-semibold text-emerald-800'
+                                    : 'text-slate-700'
+                                }`}
+                              >
+                                <span>
+                                  #{row.rank} {row.fullName}
+                                </span>
+                                <span>{row.score}%</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : null}
                     </div>
                   ))}
                 </div>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { LogIn, Eye, EyeOff, Loader2 } from 'lucide-react'
 import { formatZodErrors, loginSchema, type LoginInput } from '@/lib/validations/auth'
+import { setCurrentQuizUserId } from '@/lib/quiz-browser-storage'
 
 const inputClassName =
   'w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-800 shadow-sm outline-none transition focus:border-purple-400 focus:ring-2 focus:ring-purple-200'
@@ -58,7 +59,7 @@ function LoginForm() {
       const data = (await response.json()) as {
         error?: string
         fieldErrors?: Record<string, string>
-        user?: { role?: 'user' | 'admin' }
+        user?: { id?: string; role?: 'user' | 'admin' }
       }
 
       if (!response.ok) {
@@ -66,6 +67,8 @@ function LoginForm() {
         setError(data.error || 'Login failed. Please try again.')
         return
       }
+
+      setCurrentQuizUserId(data.user?.id || null)
 
       if (data.user?.role === 'admin') {
         router.push('/admin')

@@ -1,5 +1,15 @@
 'use client'
 
+import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
+import {
+  bindQuizSessionFlush,
+  clearLocalQuizSession,
+  clearServerQuizSession,
+  fetchServerQuizSessions,
+  persistQuizSession,
+  readLocalQuizSession,
+} from '@/lib/quiz-session-client'
+
 import { getTimestamp } from '@/lib/timestamp'
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
@@ -42,7 +52,7 @@ function formatQuizLabel(quizId: string) {
 function loadStoredResults(): StoredResults {
   if (typeof window === 'undefined') return {}
   try {
-    const raw = window.localStorage.getItem(RESULTS_STORAGE_KEY)
+    const raw = window.localStorage.getItem(scopedQuizStorageKey(RESULTS_STORAGE_KEY))
     if (!raw) return {}
     const parsed = JSON.parse(raw) as StoredResults
     return parsed && typeof parsed === 'object' ? parsed : {}
@@ -56,50 +66,30 @@ function saveStoredResult(quizId: string, answers: (number | null)[]) {
   try {
     const existing = loadStoredResults()
     existing[quizId] = { answers }
-    window.localStorage.setItem(RESULTS_STORAGE_KEY, JSON.stringify(existing))
+    window.localStorage.setItem(scopedQuizStorageKey(RESULTS_STORAGE_KEY), JSON.stringify(existing))
   } catch (error) {
     console.error('Failed to save quiz results:', error)
   }
 }
 
 function loadQuizSession(): QuizSession | null {
-  if (typeof window === 'undefined') return null
-  try {
-    const raw = window.localStorage.getItem(SESSION_STORAGE_KEY)
-    if (!raw) return null
-    const parsed = JSON.parse(raw) as QuizSession
-    if (
-      !parsed ||
-      typeof parsed.quizId !== 'string' ||
-      typeof parsed.currentQuestion !== 'number' ||
-      typeof parsed.endsAt !== 'number' ||
-      typeof parsed.startedAt !== 'number' ||
-      !Array.isArray(parsed.userAnswers)
-    ) {
-      return null
-    }
-    return parsed
-  } catch {
-    return null
-  }
+  const parsed = readLocalQuizSession(SESSION_STORAGE_KEY)
+  if (!parsed || typeof parsed.quizId !== 'string') return null
+  return parsed as QuizSession
 }
 
 function saveQuizSession(session: QuizSession) {
-  if (typeof window === 'undefined') return
-  try {
-    window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(session))
-  } catch (error) {
-    console.error('Failed to save quiz session:', error)
-  }
+  void persistQuizSession({
+    storageKey: SESSION_STORAGE_KEY,
+    categoryId: CATEGORY_ID,
+    quizId: session.quizId,
+    session,
+  })
 }
 
-function clearQuizSession() {
-  if (typeof window === 'undefined') return
-  try {
-    window.localStorage.removeItem(SESSION_STORAGE_KEY)
-  } catch {
-    // ignore
-  }
+function clearQuizSession(quizId?: string) {
+  clearLocalQuizSession(SESSION_STORAGE_KEY)
+  void clearServerQuizSession(CATEGORY_ID, quizId)
 }
 
 export default function BotanyQuizPage() {
@@ -127,6 +117,7 @@ export default function BotanyQuizPage() {
   const [timeLeft, setTimeLeft] = useState(() => getQuizDurationSeconds(questions.length || 1))
   const [storedResults, setStoredResults] = useState<StoredResults>(() => loadStoredResults())
   const [activeSessionQuizId, setActiveSessionQuizId] = useState<string | null>(null)
+  const [quizActive, setQuizActive] = useState(false)
 
   useEffect(() => {
     userAnswersRef.current = userAnswers
@@ -180,6 +171,7 @@ export default function BotanyQuizPage() {
     setTimeLeft(remaining)
     setShowResults(false)
     setActiveSessionQuizId(session.quizId)
+    setQuizActive(true)
     return true
   }, [])
 
@@ -195,6 +187,7 @@ export default function BotanyQuizPage() {
     setShowResults(false)
     setTimeLeft(getQuizDurationSeconds(questionCount))
     setActiveSessionQuizId(quizId)
+    setQuizActive(true)
     saveQuizSession({
       quizId,
       currentQuestion: 0,
@@ -208,50 +201,54 @@ export default function BotanyQuizPage() {
     if (loadingProgress || sessionRestoredRef.current) return
     sessionRestoredRef.current = true
 
-    const session = loadQuizSession()
     const completed = completedQuizzes
 
-    queueMicrotask(() => {
-      if (session) {
-        if (completed.includes(session.quizId)) {
-          clearQuizSession()
-          setActiveSessionQuizId(null)
-        } else if (Date.now() >= session.endsAt) {
-          const quizQuestions =
-            CATEGORY_QUIZZES[session.quizId as keyof typeof CATEGORY_QUIZZES] || []
-          if (quizQuestions.length > 0 && session.userAnswers.length === quizQuestions.length) {
-            finishedRef.current = false
-            quizStartTimeRef.current = session.startedAt
-            endsAtRef.current = session.endsAt
-            setCurrentQuizId(session.quizId)
-            setUserAnswers(session.userAnswers)
-            setCurrentQuestion(
-              Math.min(session.currentQuestion, Math.max(0, quizQuestions.length - 1)),
-            )
-            setTimeLeft(0)
-            setShowResults(false)
-            setActiveSessionQuizId(session.quizId)
-          } else {
-            clearQuizSession()
-          }
+    ;(async () => {
+      const localSession = loadQuizSession()
+      const { session: serverSession, sessions } = await fetchServerQuizSessions(CATEGORY_ID)
+      const candidate =
+        (localSession && !completed.includes(localSession.quizId) ? localSession : null) ||
+        (serverSession &&
+        typeof serverSession.quizId === 'string' &&
+        !completed.includes(serverSession.quizId)
+          ? (serverSession as QuizSession)
+          : null) ||
+        (sessions.find(
+          (row) => typeof row.quizId === 'string' && !completed.includes(row.quizId as string),
+        ) as QuizSession | undefined) ||
+        null
+
+      if (candidate?.quizId) {
+        const quizQuestions =
+          CATEGORY_QUIZZES[candidate.quizId as keyof typeof CATEGORY_QUIZZES] || []
+        if (quizQuestions.length > 0 && candidate.userAnswers.length === quizQuestions.length) {
+          setCurrentQuizId(candidate.quizId)
+          setCurrentQuestion(
+            Math.min(candidate.currentQuestion, Math.max(0, quizQuestions.length - 1)),
+          )
+          setUserAnswers(candidate.userAnswers)
+          quizStartTimeRef.current = candidate.startedAt
+          endsAtRef.current = candidate.endsAt
+          setTimeLeft(Math.max(0, Math.floor((candidate.endsAt - Date.now()) / 1000)))
+          setActiveSessionQuizId(candidate.quizId)
+          setQuizActive(false)
+          saveQuizSession(candidate)
         } else {
-          applySession(session)
+          clearQuizSession(candidate.quizId)
+          setActiveSessionQuizId(null)
+          setQuizActive(false)
         }
       } else {
         const firstIncomplete =
-          Object.keys(CATEGORY_QUIZZES).find((id) => !completed.includes(id)) || 'quiz-1'
-        const count =
-          CATEGORY_QUIZZES[firstIncomplete as keyof typeof CATEGORY_QUIZZES]?.length || 1
-        if (!completed.includes(firstIncomplete)) {
-          startFreshQuiz(firstIncomplete, count)
-        } else {
-          setCurrentQuizId(firstIncomplete)
-        }
+          Object.keys(CATEGORY_QUIZZES).find((id) => !completed.includes(id)) || 'chapter-1'
+        setCurrentQuizId(firstIncomplete)
+        setActiveSessionQuizId(null)
+        setQuizActive(false)
       }
 
       setSessionReady(true)
-    })
-  }, [loadingProgress, completedQuizzes, applySession, startFreshQuiz])
+    })()
+  }, [loadingProgress, completedQuizzes])
 
   const updateUserProgress = useCallback(
     async (finalScore: number, correctAnswers: number, quizId: string, total: number) => {
@@ -289,12 +286,13 @@ export default function BotanyQuizPage() {
     (answers: (number | null)[]) => {
       if (finishedRef.current || questions.length === 0) return
       finishedRef.current = true
-      clearQuizSession()
-      setActiveSessionQuizId(null)
       saveStoredResult(currentQuizId, answers)
       setStoredResults(loadStoredResults())
       setCompletedQuizzes((prev) => [...new Set([...prev, currentQuizId])])
       setShowResults(true)
+      setQuizActive(false)
+      setActiveSessionQuizId(null)
+      clearQuizSession(currentQuizId)
       const correctAnswers = answers.filter(
         (answer, index) => answer === questions[index].correct,
       ).length
@@ -307,7 +305,7 @@ export default function BotanyQuizPage() {
   const isCurrentCompleted = completedQuizzes.includes(currentQuizId)
 
   useEffect(() => {
-    if (!sessionReady || showResults || questions.length === 0 || isCurrentCompleted) return
+    if (!sessionReady || !quizActive || showResults || questions.length === 0 || isCurrentCompleted) return
     if (!endsAtRef.current) {
       endsAtRef.current = Date.now() + getQuizDurationSeconds(questions.length) * 1000
     }
@@ -320,11 +318,12 @@ export default function BotanyQuizPage() {
     tick()
     const interval = window.setInterval(tick, 1000)
     return () => window.clearInterval(interval)
-  }, [sessionReady, showResults, questions.length, currentQuizId, isCurrentCompleted])
+  }, [sessionReady, quizActive, showResults, questions.length, currentQuizId, isCurrentCompleted])
 
   useEffect(() => {
     if (
       sessionReady &&
+      quizActive &&
       timeLeft === 0 &&
       !showResults &&
       !isCurrentCompleted &&
@@ -333,10 +332,10 @@ export default function BotanyQuizPage() {
     ) {
       finishQuiz(userAnswersRef.current)
     }
-  }, [sessionReady, timeLeft, showResults, isCurrentCompleted, questions.length, finishQuiz])
+  }, [sessionReady, quizActive, timeLeft, showResults, isCurrentCompleted, questions.length, finishQuiz])
 
   useEffect(() => {
-    if (!sessionReady || showResults || isCurrentCompleted || questions.length === 0) return
+    if (!sessionReady || !quizActive || showResults || isCurrentCompleted || questions.length === 0) return
     if (userAnswers.length !== questions.length) return
 
     saveQuizSession({
@@ -348,6 +347,7 @@ export default function BotanyQuizPage() {
     })
   }, [
     sessionReady,
+    quizActive,
     showResults,
     isCurrentCompleted,
     questions.length,
@@ -357,10 +357,33 @@ export default function BotanyQuizPage() {
   ])
 
   useEffect(() => {
-    if (!sessionReady || showResults || isCurrentCompleted) return
+    if (!sessionReady || !quizActive || showResults || isCurrentCompleted) return
+    return bindQuizSessionFlush(() => {
+      if (userAnswersRef.current.length !== questions.length) return
+      saveQuizSession({
+        quizId: currentQuizId,
+        currentQuestion,
+        userAnswers: userAnswersRef.current,
+        endsAt: endsAtRef.current,
+        startedAt: quizStartTimeRef.current,
+      })
+    })
+  }, [
+    sessionReady,
+    quizActive,
+    showResults,
+    isCurrentCompleted,
+    questions.length,
+    currentQuizId,
+    currentQuestion,
+  ])
+
+
+  useEffect(() => {
+    if (!sessionReady || !quizActive || showResults || isCurrentCompleted) return
     if (activeSessionQuizId === currentQuizId) return
     queueMicrotask(() => setActiveSessionQuizId(currentQuizId))
-  }, [sessionReady, showResults, isCurrentCompleted, currentQuizId, activeSessionQuizId])
+  }, [sessionReady, quizActive, showResults, isCurrentCompleted, currentQuizId, activeSessionQuizId])
 
   const resetQuizState = (quizId: string, nextLength: number) => {
     startFreshQuiz(quizId, nextLength)
@@ -392,12 +415,13 @@ export default function BotanyQuizPage() {
     finishedRef.current = true
     const session = loadQuizSession()
     if (session?.quizId === quizId) {
-      clearQuizSession()
+      clearQuizSession(quizId)
       setActiveSessionQuizId(null)
     }
     setCurrentQuizId(quizId)
     setUserAnswers(answers)
     setShowResults(true)
+    setQuizActive(false)
   }
 
   const handleNextQuiz = () => {
@@ -447,7 +471,7 @@ export default function BotanyQuizPage() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {Object.keys(CATEGORY_QUIZZES).map((quizId) => {
             const isCompleted = completedQuizzes.includes(quizId)
-            const isCurrentQuiz = quizId === currentQuizId && !showResults
+            const isCurrentQuiz = quizActive && quizId === currentQuizId && !showResults
             const isInProgress = activeSessionQuizId === quizId && !isCompleted
             const quizNumber = quizId.replace(/^quiz-/i, '')
             const questionCount =
@@ -547,6 +571,24 @@ export default function BotanyQuizPage() {
           >
             Back to General Awareness
           </Link>
+        </div>
+      </div>
+    )
+  }
+
+  if (!quizActive && !showResults) {
+    return (
+      <div className="min-h-screen bg-linear-to-br from-lime-50 to-emerald-50 px-4 px-3 py-8 sm:px-4 sm:py-12">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-2 text-center">
+            <h1 className="text-2xl font-bold text-gray-800 sm:text-3xl">{CATEGORY_TITLE}</h1>
+            <p className="mt-2 text-sm text-gray-600 sm:text-base">
+              {activeSessionQuizId
+                ? 'You have an unfinished quiz. Resume where you left off.'
+                : 'Choose a chapter to begin.'}
+            </p>
+          </div>
+          {chapterCards}
         </div>
       </div>
     )

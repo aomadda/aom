@@ -34,6 +34,7 @@ const userSchema = new Schema(
       default: 'pending',
       required: true,
     },
+    lastLoginAt: { type: Date, required: false },
   },
   {
     timestamps: true,

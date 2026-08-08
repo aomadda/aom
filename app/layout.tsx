@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GlobalSearch from "@/components/GlobalSearch";
+import QuizUserSync from "@/components/QuizUserSync";
 import { getSession } from "@/lib/auth/session";
 
 const poppins = Poppins({
@@ -28,11 +29,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  let user: { fullName: string; email: string; role: 'user' | 'admin' } | null = null
+  let user: {
+    id: string
+    fullName: string
+    email: string
+    role: 'user' | 'admin'
+  } | null = null
   try {
     const session = await getSession()
     if (session) {
       user = {
+        id: session.userId,
         fullName: session.fullName,
         email: session.email,
         role: session.role,
@@ -48,6 +55,7 @@ export default async function RootLayout({
         className={`${poppins.variable} flex min-h-screen flex-col bg-white antialiased`}
         suppressHydrationWarning={true}
       >
+        <QuizUserSync userId={user?.id ?? null} />
         <Navbar user={user} />
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />

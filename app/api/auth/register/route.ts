@@ -48,8 +48,16 @@ export async function POST(request: Request) {
 
     const passwordHash = await bcrypt.hash(data.password, 12)
 
+    // Persist every registration field into MongoDB `users` collection.
     const user = await User.create({
-      ...data,
+      fullName: data.fullName,
+      designation: data.designation,
+      department: data.department,
+      preparingPost: data.preparingPost,
+      division: data.division,
+      zone: data.zone,
+      mobileNumber: data.mobileNumber,
+      email: data.email,
       password: passwordHash,
       status: 'pending',
     })
@@ -61,6 +69,12 @@ export async function POST(request: Request) {
         user: {
           id: user._id.toString(),
           fullName: user.fullName,
+          designation: user.designation,
+          department: user.department,
+          preparingPost: user.preparingPost,
+          division: user.division,
+          zone: user.zone,
+          mobileNumber: user.mobileNumber,
           email: user.email,
           status: user.status,
         },

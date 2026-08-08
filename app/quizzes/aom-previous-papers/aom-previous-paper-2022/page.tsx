@@ -1,5 +1,15 @@
 'use client'
 
+import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
+import {
+  bindQuizSessionFlush,
+  clearLocalQuizSession,
+  clearServerQuizSession,
+  fetchServerQuizSessions,
+  persistQuizSession,
+  readLocalQuizSession,
+} from '@/lib/quiz-session-client'
+
 import { getTimestamp } from '@/lib/timestamp'
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
@@ -38,42 +48,23 @@ function formatTimer(totalSeconds: number) {
 }
 
 function loadQuizSession(): QuizSession | null {
-  if (typeof window === 'undefined') return null
-  try {
-    const raw = window.localStorage.getItem(SESSION_STORAGE_KEY)
-    if (!raw) return null
-    const parsed = JSON.parse(raw) as QuizSession
-    if (
-      !parsed ||
-      typeof parsed.currentQuestion !== 'number' ||
-      typeof parsed.endsAt !== 'number' ||
-      typeof parsed.startedAt !== 'number' ||
-      !Array.isArray(parsed.userAnswers)
-    ) {
-      return null
-    }
-    return parsed
-  } catch {
-    return null
-  }
+  const parsed = readLocalQuizSession(SESSION_STORAGE_KEY)
+  if (!parsed) return null
+  return parsed as QuizSession
 }
 
 function saveQuizSession(session: QuizSession) {
-  if (typeof window === 'undefined') return
-  try {
-    window.localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(session))
-  } catch (error) {
-    console.error('Failed to save quiz session:', error)
-  }
+  void persistQuizSession({
+    storageKey: SESSION_STORAGE_KEY,
+    categoryId: CATEGORY_ID,
+    quizId: QUIZ_ID,
+    session,
+  })
 }
 
 function clearQuizSession() {
-  if (typeof window === 'undefined') return
-  try {
-    window.localStorage.removeItem(SESSION_STORAGE_KEY)
-  } catch {
-    // ignore
-  }
+  clearLocalQuizSession(SESSION_STORAGE_KEY)
+  void clearServerQuizSession(CATEGORY_ID, QUIZ_ID)
 }
 
 export default function AomPreviousPaper2022Quiz() {
@@ -97,6 +88,8 @@ export default function AomPreviousPaper2022Quiz() {
   const [completed, setCompleted] = useState(false)
   const [loadingProgress, setLoadingProgress] = useState(true)
   const [sessionReady, setSessionReady] = useState(false)
+  const [quizActive, setQuizActive] = useState(false)
+  const [hasResumeSession, setHasResumeSession] = useState(false)
   const [timeLeft, setTimeLeft] = useState(() => getQuizDurationSeconds(questions.length || 1))
 
   useEffect(() => {
@@ -113,6 +106,8 @@ export default function AomPreviousPaper2022Quiz() {
     setUserAnswers(new Array(questions.length).fill(null))
     setShowResults(false)
     setTimeLeft(getQuizDurationSeconds(questions.length))
+    setQuizActive(true)
+    setHasResumeSession(false)
     saveQuizSession({
       currentQuestion: 0,
       userAnswers: new Array(questions.length).fill(null),
@@ -158,6 +153,8 @@ export default function AomPreviousPaper2022Quiz() {
       finishedRef.current = true
       clearQuizSession()
       setShowResults(true)
+      setQuizActive(false)
+      setHasResumeSession(false)
       const correctAnswers = answers.filter(
         (answer, index) => answer === questions[index].correct,
       ).length
@@ -195,11 +192,28 @@ export default function AomPreviousPaper2022Quiz() {
     if (loadingProgress || sessionRestoredRef.current || questions.length === 0) return
     sessionRestoredRef.current = true
 
-    const session = loadQuizSession()
     const totalQuestions = questions.length
+    const alreadyCompleted = completed
 
-    queueMicrotask(() => {
-      if (session && session.userAnswers.length === totalQuestions) {
+    ;(async () => {
+      const localSession = loadQuizSession()
+      const { session: serverSession } = await fetchServerQuizSessions(CATEGORY_ID, QUIZ_ID)
+      const session =
+        (localSession && localSession.userAnswers.length === totalQuestions
+          ? localSession
+          : null) ||
+        (serverSession && serverSession.userAnswers.length === totalQuestions
+          ? (serverSession as QuizSession)
+          : null)
+
+      if (alreadyCompleted) {
+        if (session) clearQuizSession()
+        finishedRef.current = true
+        setShowResults(false)
+        setCompleted(true)
+        setQuizActive(false)
+        setHasResumeSession(false)
+      } else if (session && session.userAnswers.length === totalQuestions) {
         const safeQuestion = Math.min(
           Math.max(0, session.currentQuestion),
           Math.max(0, totalQuestions - 1),
@@ -212,17 +226,21 @@ export default function AomPreviousPaper2022Quiz() {
         setUserAnswers(session.userAnswers)
         setTimeLeft(remaining)
         setShowResults(false)
+        setQuizActive(false)
+        setHasResumeSession(true)
+        saveQuizSession(session)
       } else {
         if (session) clearQuizSession()
-        startFreshQuiz()
+        setQuizActive(false)
+        setHasResumeSession(false)
       }
 
       setSessionReady(true)
-    })
-  }, [loadingProgress, questions.length, startFreshQuiz])
+    })()
+  }, [loadingProgress, completed, questions.length])
 
   useEffect(() => {
-    if (!sessionReady || showResults || questions.length === 0) return
+    if (!sessionReady || !quizActive || showResults || questions.length === 0) return
     if (!endsAtRef.current) {
       endsAtRef.current = Date.now() + getQuizDurationSeconds(questions.length) * 1000
     }
@@ -235,11 +253,12 @@ export default function AomPreviousPaper2022Quiz() {
     tick()
     const interval = window.setInterval(tick, 1000)
     return () => window.clearInterval(interval)
-  }, [sessionReady, showResults, questions.length])
+  }, [sessionReady, quizActive, showResults, questions.length])
 
   useEffect(() => {
     if (
       sessionReady &&
+      quizActive &&
       timeLeft === 0 &&
       !showResults &&
       questions.length > 0 &&
@@ -247,10 +266,10 @@ export default function AomPreviousPaper2022Quiz() {
     ) {
       finishQuiz(userAnswersRef.current)
     }
-  }, [sessionReady, timeLeft, showResults, questions.length, finishQuiz])
+  }, [sessionReady, quizActive, timeLeft, showResults, questions.length, finishQuiz])
 
   useEffect(() => {
-    if (!sessionReady || showResults || questions.length === 0) return
+    if (!sessionReady || !quizActive || showResults || questions.length === 0) return
     if (userAnswers.length !== questions.length) return
 
     saveQuizSession({
@@ -259,7 +278,21 @@ export default function AomPreviousPaper2022Quiz() {
       endsAt: endsAtRef.current,
       startedAt: quizStartTimeRef.current,
     })
-  }, [sessionReady, showResults, questions.length, currentQuestion, userAnswers])
+  }, [sessionReady, quizActive, showResults, questions.length, currentQuestion, userAnswers])
+
+  useEffect(() => {
+    if (!sessionReady || !quizActive || showResults || completed) return
+    return bindQuizSessionFlush(() => {
+      if (userAnswersRef.current.length !== questions.length) return
+      saveQuizSession({
+        currentQuestion,
+        userAnswers: userAnswersRef.current,
+        endsAt: endsAtRef.current,
+        startedAt: quizStartTimeRef.current,
+      })
+    })
+  }, [sessionReady, quizActive, showResults, completed, questions.length, currentQuestion])
+
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (userAnswers[currentQuestion] !== null) return
@@ -274,6 +307,28 @@ export default function AomPreviousPaper2022Quiz() {
       return
     }
     finishQuiz(userAnswers)
+  }
+
+  const handleResumeQuiz = () => {
+    const session = loadQuizSession()
+    if (!session || session.userAnswers.length !== questions.length) {
+      startFreshQuiz()
+      return
+    }
+    const safeQuestion = Math.min(
+      Math.max(0, session.currentQuestion),
+      Math.max(0, questions.length - 1),
+    )
+    const remaining = Math.max(0, Math.floor((session.endsAt - Date.now()) / 1000))
+    finishedRef.current = false
+    quizStartTimeRef.current = session.startedAt
+    endsAtRef.current = session.endsAt
+    setCurrentQuestion(safeQuestion)
+    setUserAnswers(session.userAnswers)
+    setTimeLeft(remaining)
+    setShowResults(false)
+    setQuizActive(true)
+    setHasResumeSession(false)
   }
 
   const handleRestart = () => {
@@ -303,6 +358,30 @@ export default function AomPreviousPaper2022Quiz() {
           >
             Back to Quizzes
           </Link>
+        </div>
+      </div>
+    )
+  }
+
+  if (!quizActive && !completed && !showResults) {
+    return (
+      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-4 px-3 py-6 sm:px-4 sm:py-8">
+        <div className="mx-auto max-w-3xl">
+          <div className="rounded-xl bg-white p-6 text-center shadow-lg sm:p-8">
+            <h1 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">{QUIZ_TITLE}</h1>
+            <p className="mb-6 text-sm text-gray-600">
+              {hasResumeSession
+                ? 'Your previous attempt was interrupted. Resume to continue from where you left off.'
+                : `${questions.length} Questions · ${questions.length} min timer`}
+            </p>
+            <button
+              type="button"
+              onClick={hasResumeSession ? handleResumeQuiz : startFreshQuiz}
+              className="rounded-full bg-linear-to-r from-emerald-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700"
+            >
+              {hasResumeSession ? 'Resume Quiz' : 'Start Quiz'}
+            </button>
+          </div>
         </div>
       </div>
     )
