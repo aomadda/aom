@@ -3,15 +3,15 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { LogIn, Eye, EyeOff, Loader2 } from 'lucide-react'
+import { Eye, EyeOff, Loader2 } from 'lucide-react'
 import { formatZodErrors, loginSchema, type LoginInput } from '@/lib/validations/auth'
 import { setCurrentQuizUserId } from '@/lib/quiz-browser-storage'
 
 const inputClassName =
-  'w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-800 shadow-sm outline-none transition focus:border-purple-400 focus:ring-2 focus:ring-purple-200'
+  'w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm text-gray-800 shadow-sm outline-none transition focus:border-purple-400 focus:ring-2 focus:ring-purple-200'
 
 const errorInputClassName =
-  'w-full rounded-xl border border-red-300 bg-red-50/40 px-4 py-3 text-sm text-gray-800 shadow-sm outline-none transition focus:border-red-400 focus:ring-2 focus:ring-red-200'
+  'w-full rounded-lg border border-red-300 bg-red-50/40 px-4 py-3 text-sm text-gray-800 shadow-sm outline-none transition focus:border-red-400 focus:ring-2 focus:ring-red-200'
 
 const labelClassName = 'mb-1.5 block text-sm font-semibold text-gray-700'
 
@@ -117,7 +117,7 @@ function LoginForm() {
         </div>
 
         {registered ? (
-          <p className="mb-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+          <p className="mb-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
             Registration successful. Please wait for admin approval, then login.
           </p>
         ) : null}
@@ -194,9 +194,9 @@ function LoginForm() {
           <button
             type="submit"
             disabled={loading}
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-purple-600 via-indigo-600 to-blue-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-500/25 transition hover:scale-[1.01] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-linear-to-r from-purple-600 via-indigo-600 to-blue-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-purple-500/25 transition hover:scale-[1.01] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
           >
-            {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : <LogIn className="h-5 w-5" />}
+            {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : null}
             {loading ? 'Signing in...' : 'Login'}
           </button>
 

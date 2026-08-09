@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { LayoutDashboard, LogOut, Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
 import { setCurrentQuizUserId } from '@/lib/quiz-browser-storage'
 
 export type AuthUser = {
@@ -110,9 +110,8 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
                 setMenuOpen(false)
                 onNavigate?.()
               }}
-              className="flex w-full items-center gap-2 border-b border-gray-100 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-emerald-50 hover:text-emerald-800"
+              className="flex w-full items-center border-b border-gray-100 px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-emerald-50 hover:text-emerald-800"
             >
-              <LayoutDashboard className="h-4 w-4" />
               Dashboard
             </Link>
             <button
@@ -122,11 +121,7 @@ export default function AuthNav({ user, variant = 'desktop', onNavigate }: AuthN
               disabled={loggingOut}
               className="flex w-full items-center gap-2 px-4 py-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 disabled:opacity-70"
             >
-              {loggingOut ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                <LogOut className="h-4 w-4" />
-              )}
+              {loggingOut ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
               Logout
             </button>
           </div>
