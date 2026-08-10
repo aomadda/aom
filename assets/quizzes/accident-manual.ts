@@ -2570,7 +2570,7 @@ export const accidentManualQuizzes = {
         explanation: "AGM",
       },
       {
-        question: "If the post of AGM is not available, ____________ may be nominated as the Accepting Authority for foreign railway accident inquiry reports.",
+        question: "For accident inquiry Reports with staff of foreign railway if the post of AGM is not available, ____________ may be nominated as the Accepting Authority for foreign railway accident inquiry reports.",
         options: [
           "GM",
           "SDGM",
@@ -2581,5 +2581,172 @@ export const accidentManualQuizzes = {
         explanation: "SDGM",
       },
     ],
+    'AM Appendix V': [
+      {
+        "question": "Minimum penalty to be given to the Guard who failed to detect hot axle or other defective wagon resulting in derailment, which is within range of visibility, in the case of Passenger carrying train",
+        "options": [
+          "Removal from service",
+          "Reduction to next lower grade",
+          "Reduction to Lower stage in same Grade",
+          "Withholding of increment for 3 years with cumulative effect and with loss of seniority"
+        ],
+        "correct": 1,
+        "explanation": "Reduction to next lower grade"
+      },
+      {
+        "question": "Minimum penalty to be given to the Guard who failed to detect hot axle or other defective wagon resulting in derailment, which is within range of visibility, in the case of Goods train",
+        "options": [
+          "Removal",
+          "Reduction to next lower grade",
+          "Reduction to Lower stage in same Grade",
+          "Withholding of increment for 3 years with cumulative effect and with loss of seniority"
+        ],
+        "correct": 3,
+        "explanation": "Withholding of increment for 3 years with cumulative effect and with loss of seniority"
+      },
+      {
+        "question": "Minimum penalty to be given to the Station Staff/Cabin staff for failure to detect hot axle or other defective wagon resulting in derailment or failure to stop the train on information regarding hot axle being given by the previous station for controlling the case of Passenger Train",
+        "options": [
+          "Dismissal",
+          "Removal",
+          "Reduction to next lower grade",
+          "Withholding of increment for 3 years with cumulative effect and with loss of seniority"
+        ],
+        "correct": 1,
+        "explanation": "Removal"
+      },
+      {
+        "question": "Minimum penalty to be given to the Station Staff for failure to detect hot axle or other defective wagon resulting in derailment or failure to stop the train on information regarding hot axle being given by the previous station for controlling the case of Goods Train",
+        "options": [
+          "Dismissal",
+          "Removal",
+          "Compulsory Retirement",
+          "Reduction to the next lower grade for 3 years with cumulative effect"
+        ],
+        "correct": 3,
+        "explanation": "Reduction to the next lower grade for 3 years with cumulative effect"
+      },
+      {
+        "question": "Minimum punishment to be given to a Gateman for failure of closure of gate due to which there is loss of life",
+        "options": [
+          "Dismissal",
+          "Removal",
+          "Compulsory Retirement",
+          "Reduction to the next lower grade for 3 years with cumulative effect"
+        ],
+        "correct": 0,
+        "explanation": "Dismissal"
+      },
+      {
+        "question": "Minimum punishment to be given to a Gateman for failure of closure of gate due to which there is no loss of life",
+        "options": [
+          "Dismissal",
+          "Removal",
+          "Compulsory Retirement",
+          "Reduction to the next lower grade"
+        ],
+        "correct": 1,
+        "explanation": "Removal"
+      },
+      {
+        "question": "Minimum punishment to be given to SM / ASM for failure to ensure closure of level crossing gates before allowing any movement where rules provide",
+        "options": [
+          "Removal",
+          "Compulsory Retirement",
+          "Reduction to a lower grade or post with loss of seniority",
+          "Withholding of increment for 3 years with cumulative effect and with loss of seniority"
+        ],
+        "correct": 2,
+        "explanation": "Reduction to a lower grade or post with loss of seniority"
+      },
+      {
+        "question": "Minimum punishment to be given to Traffic staff for wrong setting / manipulation of points which resulted in an accident other than collisions or averted collisions",
+        "options": [
+          "Removal",
+          "Compulsory Retirement",
+          "Reduction to a lower grade or post with loss of seniority",
+          "Withholding of increment for 3 years with cumulative effect and with loss of seniority"
+        ],
+        "correct": 2,
+        "explanation": "Reduction to a lower grade or post with loss of seniority"
+      },
+      {
+        "question": "Minimum punishment to be given to Traffic staff for incorrect/wrong marshalling which resulted in an accident other than collisions or averted collisions",
+        "options": [
+          "Reduction to a lower grade or post with loss of seniority",
+          "Compulsory Retirement",
+          "Reduction to a lower stage in the time scale",
+          "Withholding of increment up to 3 years with cumulative effect"
+        ],
+        "correct": 3,
+        "explanation": "Withholding of increment up to 3 years with cumulative effect"
+      },
+      {
+        "question": "Minimum punishment to be given to Traffic staff for improper securing of loads which resulted in an accident other than collisions or averted collisions",
+        "options": [
+          "Reduction to a lower grade or post with loss of seniority",
+          "Compulsory Retirement",
+          "Reduction to a lower stage in the time scale",
+          "Withholding of increment up to 3 years without cumulative effect"
+        ],
+        "correct": 3,
+        "explanation": "Withholding of increment up to 3 years without cumulative effect"
+      },
+      {
+        "question": "Minimum punishment to be given for receiving trains on wrong line blocked for engineering work etc.",
+        "options": [
+          "Reduction to a lower stage in the time scale",
+          "Reduction to a lower grade or post with loss of seniority",
+          "Withholding of increment up to 3 years with cumulative effect",
+          "Withholding of increment up to 3 years without cumulative effect"
+        ],
+        "correct": 0,
+        "explanation": "Reduction to a lower stage in the time scale"
+      },
+      {
+        "question": "Minimum punishment to be given to Loco Pilots if during reception he has passed the reception signal including Starter Signal when train is being received, the distance travelled beyond signal but upto BOL or SOL",
+        "options": [
+          "Dismissal",
+          "Removal",
+          "Compulsory retirement",
+          "Reduction to a lower post / grade for a period of 02 years with postponement of future increments of pay"
+        ],
+        "correct": 3,
+        "explanation": "Reduction to a lower post / grade for a period of 02 years with postponement of future increments of pay"
+      },
+      {
+        "question": "Minimum punishment to be given to Loco Pilots if during reception he has passed the reception signal including Starter Signal when train is being received, the distance travelled beyond signal but upto BOL or SOL, and if there are contributory factors",
+        "options": [
+          "Dismissal",
+          "Removal",
+          "Compulsory retirement",
+          "Reduction to a lower grade / post for a period of 02 years"
+        ],
+        "correct": 3,
+        "explanation": "Reduction to a lower grade / post for a period of 02 years"
+      },
+      {
+        "question": "Minimum punishment to be given to Loco Pilots if during reception he has passed the reception signal including Starter Signal when train is being received, and the distance travelled beyond signal is beyond BOL or SOL",
+        "options": [
+          "Dismissal",
+          "Removal from service",
+          "Compulsory retirement",
+          "Either Removal or Compulsory retirement"
+        ],
+        "correct": 3,
+        "explanation": "Either Removal or Compulsory retirement"
+      },
+      {
+        "question": "Minimum punishment to be given to Loco Pilots if during reception he has passed the reception signal including Starter Signal when train is being received, the distance travelled beyond signal is beyond BOL or SOL, and if there are contributory factors",
+        "options": [
+          "Dismissal",
+          "Removal",
+          "Compulsory retirement",
+          "Reduction to a lower grade for a period of 02 years"
+        ],
+        "correct": 3,
+        "explanation": "Reduction to a lower grade for a period of 02 years"
+      }
+    ]
   },
 };

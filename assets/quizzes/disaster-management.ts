@@ -24,8 +24,8 @@ export const disasterManagementQuizzes = {
         question:
           'Railway Board has authorized _____________ (when GM/AGM is not available) for declaring an untoward incident as Railway Disaster.',
         options: ['DRM', 'SDGM', 'PCSO', 'Railway Board'],
-        correct: 1,
-        explanation: 'SDGM',
+        correct: 2,
+        explanation: 'PCSO',
       },
       {
         question:
@@ -293,6 +293,13 @@ export const disasterManagementQuizzes = {
         options: ['30 kmph', '30–50 kmph', '50–64 kmph', '65–90 kmph'],
         correct: 1,
         explanation: '30–50 kmph',
+      },
+      {
+        question:
+          'Terminology used in Meteorological Department bulletins regarding cyclones: Associated wind speed for Deep Depression is __________.',
+        options: ['30 kmph', '30–50 kmph', '50–64 kmph', '65–90 kmph'],
+        correct: 2,
+        explanation: '50–64 kmph',
       },
       {
         question:

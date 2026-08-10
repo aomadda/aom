@@ -42,8 +42,8 @@ export const operatingManualQuizzes = {
           "Working of Stations",
           "Working of Trains",
         ],
-        correct: 0,
-        explanation: "Operating Manual issued by Railway Board, Chapter II deals with Working of Yards.",
+        correct: 3,
+        explanation: "Operating Manual issued by Railway Board, Chapter II deals with Working of Trains.",
       },
       {
         question: "Operating Manual issued by Railway Board, Chapter IV deals with __________.",
@@ -53,8 +53,8 @@ export const operatingManualQuizzes = {
           "Coaching Operations",
           "Freight Operations",
         ],
-        correct: 1,
-        explanation: "Operating Manual issued by Railway Board, Chapter IV deals with Mechanical Operations.",
+        correct: 3,
+        explanation: "Operating Manual issued by Railway Board, Chapter IV deals with Freight Operations.",
       },
       {
         question: "Operating Manual issued by Railway Board, Chapter VI deals with __________.",
@@ -119,8 +119,8 @@ export const operatingManualQuizzes = {
           "Operating Statistics",
           "Non-interlocked Working of Stations",
         ],
-        correct: 0,
-        explanation: "Operating Manual issued by Railway Board, Chapter XV deals with Interlocking.",
+        correct: 3,
+        explanation: "Operating Manual issued by Railway Board, Chapter XV deals with Non-interlocked Working of Stations.",
       },
       {
         question: "Operating Manual issued by Railway Board, Chapter XVI deals with __________.",
@@ -152,8 +152,8 @@ export const operatingManualQuizzes = {
           "FOIS",
           "ACD",
         ],
-        correct: 3,
-        explanation: "Operating Manual issued by Railway Board, Chapter XX deals with ACD.",
+        correct: 1,
+        explanation: "Operating Manual issued by Railway Board, Chapter XX deals with Derailment Investigations.",
       },
       {
         question: "Duties and responsibilities of various staff of Operating Department are mentioned in the __________ issued by the Railway Board.",
@@ -262,8 +262,8 @@ export const operatingManualQuizzes = {
           "TI/Staff",
           "TI/SWR",
         ],
-        correct: 1,
-        explanation: "__________ shall fix the duty hours for the staff at stations in accordance with the Hours of Employment Regulations in consultation with concerned officials.",
+        correct: 0,
+        explanation: "Sr.DPO/DPO shall fix the duty hours for the staff at stations in accordance with the Hours of Employment Regulations in consultation with concerned officials.",
       },
       {
         question: "Station Master must not allow any employee to take independent charge of a post connected with train working without satisfying himself after __________ about the knowledge of the concerned staff.",
@@ -295,8 +295,8 @@ export const operatingManualQuizzes = {
           "DRM (Safety)",
           "TI of the section",
         ],
-        correct: 1,
-        explanation: "Before an employee takes independent charge of a post connected with train working for the first time, the pickup period is generally laid down by the DOM/AOM.",
+        correct:2,
+        explanation: "Before an employee takes independent charge of a post connected with train working for the first time, the pickup period is generally laid down by the DRM (Safety).",
       },
       {
         question: "Station Master may permit learning duties at Junction stations with marshalling yard and lobby on first posting or when there is a change of system/means of working of trains for __________.",
@@ -306,8 +306,8 @@ export const operatingManualQuizzes = {
           "8 days",
           "10 days",
         ],
-        correct: 1,
-        explanation: "Station Master may permit learning duties at Junction stations with marshalling yard and lobby on first posting or when there is a change of system/means of working of trains for 5 days.",
+        correct: 3,
+        explanation: "Station Master may permit learning duties at Junction stations with marshalling yard and lobby on first posting or when there is a change of system/means of working of trains for 10 days.",
       },
       {
         question: "Station Master may permit learning duties at Terminal stations with marshalling yard and lobby on first posting or when there is a change of system/means of working of trains for __________.",
@@ -394,8 +394,8 @@ export const operatingManualQuizzes = {
           "Sr.DCM",
           "Sr.DOM",
         ],
-        correct: 2,
-        explanation: "Sr.DCM",
+        correct: 0,
+        explanation: "Station Masters, Guards and Loco Pilots shall not permit display of advertisement matters on engines, passenger coaches or rolling stock without prior permission of the DRM concerned.",
       },
       {
         question: "All official correspondence must be attended to by the Station Master and all letters should be __________. Inward letters shall be registered with __________.",
@@ -416,15 +416,15 @@ export const operatingManualQuizzes = {
           "Sr.DCM",
           "Sr.DOM",
         ],
-        correct: 3,
-        explanation: "Sr.DOM",
+        correct: 0,
+        explanation: "If there is any difficulty in replying to the required information from the public, the Station Master shall acknowledge the receipt immediately and refer the matter to the DRM concerned.",
       },
       {
-        question: "Model draft letters supplied by Sr.DOM shall ensure that the language used is __________.",
+        question: "If there is any difficulty by the Station Master in replying to the required information from the public, Sr. DOM shall provide model draft letters, which are frequently received at stations, using a modal draft will ensure that the language used is __________.",
         options: [
-          "Respectful and Courteous",
-          "Polite, Respectful and Courteous",
           "Polite and Courteous",
+          "Polite, Respectful and Courteous",
+          "Respectful and Courteous",
           "Polite and Respectful",
         ],
         correct: 1,
@@ -453,7 +453,7 @@ export const operatingManualQuizzes = {
         explanation: "Authorised by Railway Administration",
       },
       {
-        question: "Employees shall not erect or alter religious structures on railway land without the sanction of the __________.",
+        question: "Employees are forbidden to occupy any place in station area for praying holding religious functions speeches, discourses etc., to erect religious structures, either permanent or temporary, or to add or alter any existing religious structures on railway land, without the sanction of the ________________",
         options: [
           "ADRM",
           "DRM",
@@ -464,15 +464,15 @@ export const operatingManualQuizzes = {
         explanation: "General Manager",
       },
       {
-        question: "The normal preservation period for Train Passing Registers/Books is __________.",
+        question: "Normal period for which Station Operating Registers- Train passing registers/Books are required to be preserved is __________.",
         options: [
           "One year",
           "Three years",
           "Five years",
           "Permanent record",
         ],
-        correct: 1,
-        explanation: "Three years",
+        correct: 0,
+        explanation: "One year",
       },
       {
         question: "The normal preservation period for the Muster Roll is __________.",
@@ -482,8 +482,8 @@ export const operatingManualQuizzes = {
           "Five years",
           "Permanent record",
         ],
-        correct: 1,
-        explanation: "Three years",
+        correct: 3,
+        explanation: "Permanent record",
       },
       {
         question: "The normal preservation period for the Caution Order Register and Caution Order Books is __________.",
@@ -493,8 +493,8 @@ export const operatingManualQuizzes = {
           "Five years",
           "Permanent record",
         ],
-        correct: 1,
-        explanation: "Three years",
+        correct: 0,
+        explanation: "One year",
       },
       {
         question: "The normal preservation period for the Wagon Demand/Priority Register is __________.",
@@ -519,6 +519,17 @@ export const operatingManualQuizzes = {
         explanation: "Three years",
       },
       {
+        question: "Normal period for which Station Operating Registers - Indent and Loading Register are required to be preserved __________.",
+        options: [
+          "One year",
+          "Three years",
+          "Five years",
+          "Permanent record",
+        ],
+        correct: 1,
+        explanation: "Three years",
+      },
+      {
         question: "The normal preservation period for the Station Inspection Register is __________.",
         options: [
           "One year",
@@ -526,8 +537,8 @@ export const operatingManualQuizzes = {
           "Five years",
           "Permanent record",
         ],
-        correct: 2,
-        explanation: "Five years",
+        correct: 3,
+        explanation: "Permanent record",
       },
       {
         question: "The normal preservation period for the Transportation Bio-data Register and Register of Home Addresses of Staff is __________.",
@@ -706,8 +717,8 @@ export const operatingManualQuizzes = {
           "Inspection Carriage",
           "Brake van",
         ],
-        correct: 0,
-        explanation: "VPU",
+        correct: 2,
+        explanation: "Inspection Carriage",
       },
       {
         question: "VPs, LRs, WLRRMs, Inspection Carriages and other coaching vehicles, which do not carry passengers, may be marshalled as ____________.",
@@ -732,7 +743,7 @@ export const operatingManualQuizzes = {
         explanation: "properly locked and windows secured",
       },
       {
-        question: "If it is not possible to lock POH/sick coaches attached to passenger trains, such coaches should be _________ required number of anti-telescopic/steel-bodied coaches.",
+        question: "In the case of POH/sick coaches, which are returned to shops and are attached to passenger trains, if for any reason, it is not possible to lock up these coaches, such coaches should be _________required number of anti-telescopic/steel bodied coaches",
         options: [
           "marshalled inside",
           "marshalled outside",
@@ -838,8 +849,8 @@ export const operatingManualQuizzes = {
           "Either 'A' or 'B'",
           "Both 'A' & 'B'",
         ],
-        correct: 3,
-        explanation: "Both 'A' & 'B'",
+        correct: 2,
+        explanation: "Either 'A' or 'B'",
       },
       {
         question: "Maximum _________ inspection carriages occupied by officers can be attached. If it exceeds this, rules regarding running of goods trains without Brake Van will apply.",
@@ -849,8 +860,8 @@ export const operatingManualQuizzes = {
           "three",
           "four",
         ],
-        correct: 1,
-        explanation: "two",
+        correct: 2,
+        explanation: "three",
       },
     ],
     'chapter-4': [
@@ -994,8 +1005,8 @@ export const operatingManualQuizzes = {
           "Train punctuality",
           "Engine utilisation",
         ],
-        correct: 0,
-        explanation: "Wagon utilization",
+        correct: 3,
+        explanation: "Engine utilisation",
       },
       {
         question: "______________ for goods operations are generally booked on the principle of First In First Out (FIFO).",
@@ -1129,61 +1140,7 @@ export const operatingManualQuizzes = {
         correct: 2,
         explanation: "FOIS",
       },
-      {
-        question: "The major source of revenue for the Indian Railway is _____________.",
-        options: [
-          "Passenger business",
-          "Freight business",
-          "Parcel business",
-          "Sundry business",
-        ],
-        correct: 1,
-        explanation: "Freight business",
-      },
-      {
-        question: "Main activity centres of Freight operation include terminals, yards, control office and stations.",
-        options: [
-          "Terminal yards",
-          "Control office",
-          "Stations",
-          "All the above",
-        ],
-        correct: 3,
-        explanation: "All the above",
-      },
-      {
-        question: "Broad Classification of Goods Trains includes End to End, Work Trains, Shunting Trains, Pilots and Departmental trains.",
-        options: [
-          "End to end trains",
-          "Work, shunting & pilot trains",
-          "Departmental trains",
-          "All the above",
-        ],
-        correct: 3,
-        explanation: "All the above",
-      },
-      {
-        question: "End to End Trains generally run from the _____________.",
-        options: [
-          "Originating terminal to the final destination",
-          "Any two stations",
-          "Crew point to destination",
-          "None of the above",
-        ],
-        correct: 0,
-        explanation: "Originating terminal to the final destination",
-      },
-      {
-        question: "Work Trains, Shunting Trains and Pilots are train movements for short distances for ____________.",
-        options: [
-          "Supply/removal of rakes to and from sidings",
-          "Important terminals served by a yard",
-          "Clearance of damaged wagons made fit",
-          "Any one of the above",
-        ],
-        correct: 3,
-        explanation: "Any one of the above",
-      },
+      
       {
         question: "Material Trains, Track Maintenance Trains, Ballast Trains, Relief Trains, Wiring Specials and Crane Specials are known as ____________.",
         options: [
@@ -1427,7 +1384,7 @@ export const operatingManualQuizzes = {
         explanation: "COM/CFTM/Dy.COM(Goods), STM(Goods)",
       },
       {
-        question: "Headquarters plays an important part in ____________ freight operations.",
+        question: "Head Quarters plays an important part in ________freight operations. After detailed conference with the Operating Officers of the division, and in terms of Railway Boards current-operating directives Head Quarters issues directions and instructions.",
         options: [
           "Planning",
           "Co-ordinating",
@@ -1438,7 +1395,7 @@ export const operatingManualQuizzes = {
         explanation: "Both A & B",
       },
       {
-        question: "Headquarters issues ____________ for running freight operations.",
+        question: "After detailed conference with the Operating Officers of the division, and in terms of Railway Boards current-operating directives for running freight operations, Head Quarters issues _______________",
         options: [
           "Directions",
           "Instructions",
@@ -1449,7 +1406,7 @@ export const operatingManualQuizzes = {
         explanation: "Both A & B",
       },
       {
-        question: "Railway Board watches ____________ to ensure each Railway fulfils its obligations.",
+        question: "Railway Board‘s Control on Freight Operations: also watches____________ and goods trains running on important sections to ensure that each Railway fulfils its obligation and optimises the use of various assets.",
         options: [
           "Loading",
           "Interchange",
@@ -1460,7 +1417,7 @@ export const operatingManualQuizzes = {
         explanation: "All the above",
       },
       {
-        question: "The ____________ plays an important role in canvassing for traffic and improving customer relations.",
+        question: "The _______________plays an important role in canvassing for Traffic, improving marketing, customer relations in general, booking of traffic.",
         options: [
           "Operating Department",
           "Commercial Department",
@@ -1471,7 +1428,7 @@ export const operatingManualQuizzes = {
         explanation: "Commercial Department",
       },
       {
-        question: "The ____________ plays an important role in expediting loading/unloading of wagons.",
+        question: "The _______________plays an important role in expediting loading/unloading of wagons, quick disposal of unconnected wagons and transhipment of Wagon detached out of course for Hot Axles etc.",
         options: [
           "Commercial Department",
           "Operating Department",
@@ -1482,7 +1439,7 @@ export const operatingManualQuizzes = {
         explanation: "Operating Department",
       },
       {
-        question: "Wagon holding depends on ____________.",
+        question: "Wagon holding for a railway depends on amount of _______________from other Railways and making an allowance for percentage of stock out of commission for repairs, etc.,",
         options: [
           "Originating loading",
           "Receipts of loaded wagons",
@@ -1493,7 +1450,7 @@ export const operatingManualQuizzes = {
         explanation: "Both A & B",
       },
       {
-        question: "____________ is an indication of a Railway's overall operating performance.",
+        question: "__________is an indication of a Railway‘s overall operating performance and its efforts to meet inter railway obligations, hence interchange balance should not be very high, even when maximum trains are interchanged.",
         options: [
           "Interchange commitment",
           "Wagon balance",
@@ -1504,7 +1461,7 @@ export const operatingManualQuizzes = {
         explanation: "Maintenance of interchange target",
       },
       {
-        question: "Depending upon the load, ____________ is provided for its haulage.",
+        question: "Depending upon the load, __________________is provided for its haulage in order to get the optimum use of motive power and to increase the capacity utilisation and throughput.",
         options: [
           "Diesel loco",
           "Suitable loco",
@@ -1515,7 +1472,7 @@ export const operatingManualQuizzes = {
         explanation: "Suitable loco",
       },
       {
-        question: "To optimise loading is one of the most important items in ____________.",
+        question: "To optimise the loading is one of the most important items in _____________because it is through loading that Railway earns the maximum revenue.",
         options: [
           "Freight operations",
           "Coaching operations",
@@ -1537,7 +1494,7 @@ export const operatingManualQuizzes = {
         explanation: "Freight operations",
       },
       {
-        question: "Reducing loading/unloading time by ____________ has to be endeavoured.",
+        question: "Unloading is necessary in _____________ so that wagon becomes available for next loading.",
         options: [
           "Technology",
           "Enhancing capacity",
@@ -1548,7 +1505,7 @@ export const operatingManualQuizzes = {
         explanation: "Technology upgradation",
       },
       {
-        question: "It is waste of transport capacity to run a wagon ____________.",
+        question: "Ideally it is waste of transport capacity to run a wagon___________, but much of empty running is inescapable on account of the unbalanced nature and quantity of outward and inward traffic at terminals and necessity of supplying empty wagons.",
         options: [
           "Loaded",
           "Empty or with light load",
@@ -1559,7 +1516,7 @@ export const operatingManualQuizzes = {
         explanation: "Empty or with light load",
       },
       {
-        question: "Operating skill lies in reducing ____________ of similar type of empty stock.",
+        question: "Empty Running of Certain special type of wagons for POL, Steel, Coal, Natural Gas, Ammonia, LPG etc. have to be generally run empty to the loading points. Operating skill lies in avoiding or reducing the extent of _______________of similar type of empty stock.",
         options: [
           "Empty haulage and cross movements",
           "Empty haulage",
@@ -1570,7 +1527,7 @@ export const operatingManualQuizzes = {
         explanation: "Empty haulage and cross movements",
       },
       {
-        question: "A ____________ is a train where the same crew (and engine if possible) works beyond the normal crew changing point.",
+        question: "A ________________is a train when the same crew (and engine if possible) instead of ―Signing off‖ at the intermediate crew changing point works a train to farther junction.",
         options: [
           "Merry go round",
           "Mini rake",
@@ -1580,19 +1537,9 @@ export const operatingManualQuizzes = {
         correct: 2,
         explanation: "Crack train/Link Train",
       },
+     
       {
-        question: "Crew can also be utilised on 'Crack' basis for a ____________.",
-        options: [
-          "Merry go round",
-          "Crack train/Link Train",
-          "Mini rake",
-          "Express goods train",
-        ],
-        correct: 0,
-        explanation: "Merry go round",
-      },
-      {
-        question: "The interval between two successive loadings is called ____________.",
+        question: "The interval between two successive loadings calculated from the time a wagon is placed for loading till the time it again becomes available for reloading is the actual turn round.",
         options: [
           "Wagon utilization",
           "Wagon days",
@@ -1614,7 +1561,7 @@ export const operatingManualQuizzes = {
         explanation: "Days",
       },
       {
-        question: "The statistical formula for Wagon Turn Round is ____________.",
+        question: "Where ‗S‘ stands for effective midnight wagon balance, ‗L‘ is total number of loaded wagons & ‗R‘ is total number of wagons received from other Railway/divisions the statistical formula for calculation of Wagon Turn Round generally used is",
         options: [
           "S / (L + R)",
           "L / (S + R)",
@@ -1625,7 +1572,7 @@ export const operatingManualQuizzes = {
         explanation: "S / (L + R)",
       },
       {
-        question: "In the Wagon Turn Round formula, 'S' stands for ____________.",
+        question: "Where the statistical formula for calculation of Wagon Turn Round generally used is S / (L+R) ‗S‘ stands ______________",
         options: [
           "Total loaded wagons",
           "Effective midnight wagon balance",
@@ -1636,7 +1583,7 @@ export const operatingManualQuizzes = {
         explanation: "Effective midnight wagon balance",
       },
       {
-        question: "In the Wagon Turn Round formula, 'L' stands for ____________.",
+        question: "Where the statistical formula for calculation of Wagon Turn Round generally used is S / (L+R) ‗L‘ stands ______________",
         options: [
           "Total loaded wagons",
           "Effective midnight wagon balance",
@@ -1647,7 +1594,7 @@ export const operatingManualQuizzes = {
         explanation: "Total loaded wagons",
       },
       {
-        question: "In the Wagon Turn Round formula, 'R' stands for ____________.",
+        question: "Where the statistical formula for calculation of Wagon Turn Round generally used is S / (L+R) ‗R‘ stands ____________",
         options: [
           "Total loaded wagons",
           "Effective midnight wagon balance",
@@ -1658,7 +1605,7 @@ export const operatingManualQuizzes = {
         explanation: "Total wagons received from other Railway/divisions",
       },
       {
-        question: "Distance and time for calculating average speed of goods trains are obtained from ____________.",
+        question: "The distance and the time taken for calculation of average speed of goods trains are calculated from the_____________",
         options: [
           "FOIS",
           "Control Charts",
@@ -1669,7 +1616,7 @@ export const operatingManualQuizzes = {
         explanation: "Control Charts",
       },
       {
-        question: "Enroute detention of goods trains has the effect of bringing down the ____________.",
+        question: "Thus all detention to Goods Trains enroute enters into calculation and has the effect of bringing down the__________",
         options: [
           "Average speed",
           "Capacity of controller",
@@ -1680,7 +1627,7 @@ export const operatingManualQuizzes = {
         explanation: "Average speed",
       },
       {
-        question: "One important means to utilise railway carrying capacity is to set ____________.",
+        question: "One of the important means to utilise fully and efficiently the existing carrying capacity of a railway is to set _____________for the various performances after taking into consideration all the local conditions",
         options: [
           "Measurable and specific targets",
           "Measurable targets",
@@ -1693,20 +1640,119 @@ export const operatingManualQuizzes = {
     ],
     'chapter-5': [
       {
-        question: "The ______________ is the major source of revenue for the Indian Railways.",
-        options: [
-          "FOIS",
-          "TMS",
-          "ICMS",
-          "RMS",
+        "question": "Movement of wagon load traffic is regulated by __________, laid down by the Central Government (Railway Board) under Section 71 of the Railways Act, 1989 and is designed to ensure that certain essential commodities and urgent movements are accorded necessary preference over other commodities.",
+        "options": [
+          "Preferential Traffic",
+          "Schedule of Preferential Traffic",
+          "Specific loading instructions",
+          "Guidelines"
         ],
-        correct: 0,
-        explanation: "FOIS",
+        "correct": 1,
+        "explanation": "Schedule of Preferential Traffic"
       },
+      {
+        "question": "Movement of wagon load traffic is regulated by Schedule of Preferential Traffic, laid down by the __________ under Section 71 of the Railways Act, 1989 and is designed to ensure that certain essential commodities and urgent movements are accorded necessary preference over other commodities.",
+        "options": [
+          "Zonal Railways",
+          "Divisional Railways",
+          "Central Government (Railway Board)",
+          "Home Ministry"
+        ],
+        "correct": 2,
+        "explanation": "Central Government (Railway Board)"
+      },
+      {
+        "question": "Movement of wagon load traffic is regulated by Schedule of Preferential Traffic, laid down by the Central Government (Railway Board) under __________ of the Railways Act, 1989 and is designed to ensure that certain essential commodities and urgent movements are accorded necessary preference over other commodities.",
+        "options": [
+          "Section 65",
+          "Section 68",
+          "Section 70",
+          "Section 71"
+        ],
+        "correct": 3,
+        "explanation": "Section 71"
+      },
+      {
+        "question": "In Preferential Traffic Schedule, the traffic is classified into ________.",
+        "options": [
+          "4 categories",
+          "3 categories",
+          "Two categories",
+          "5 groups"
+        ],
+        "correct": 0,
+        "explanation": "4 categories"
+      },
+      {
+        "question": "The categories specified in the Preferential Traffic Schedule are named as ________.",
+        "options": [
+          "P, Q, R & S",
+          "A, B, C & D",
+          "J, K, L & M",
+          "A, B & C"
+        ],
+        "correct": 1,
+        "explanation": "A, B, C & D"
+      },
+      {
+        "question": "Commodities registered in the __________ of Preferential Traffic Schedule cannot have preference over those registered in the higher categories although the former may have been registered much earlier.",
+        "options": [
+          "Higher categories",
+          "Classifications",
+          "Lower categories",
+          "Groups"
+        ],
+        "correct": 2,
+        "explanation": "Lower categories"
+      },
+      {
+        "question": "Priority Schedule is decided by __________ Directorate of Railway Board.",
+        "options": [
+          "Traffic Commercial",
+          "Traffic Freight",
+          "Traffic Policy",
+          "Traffic Transportation"
+        ],
+        "correct": 3,
+        "explanation": "Traffic Transportation"
+      },
+      {
+        "question": "Under __________ of the Indian Railways Act, 1989, Railway Board has been empowered to charge freight over a route which may not be the shortest between the loading point and destination.",
+        "options": [
+          "Section 70",
+          "Section 71",
+          "Section 72",
+          "Section 73"
+        ],
+        "correct": 1,
+        "explanation": "Section 71"
+      },
+      {
+        "question": "The Rationalization Order indicating the route through which the freight is to be charged is issued by __________ branch, Railway Board.",
+        "options": [
+          "Traffic Commercial",
+          "Traffic Freight",
+          "Traffic Policy",
+          "Traffic Transportation"
+        ],
+        "correct": 3,
+        "explanation": "Traffic Transportation"
+      },
+      {
+        "question": "Revised __________ of IRCA Goods Tariff Part I (Volume-I), unless there is specific instruction in writing from the centre or his authorized agent to the contrary, goods will be dispatched by the route optionally feasible and freight charges will be levied by the shortest route.",
+        "options": [
+          "Rule 125",
+          "Rule 126",
+          "Rule 127",
+          "Rule 128"
+        ],
+        "correct": 0,
+        "explanation": "Rule 125"
+      }
     ],
     'chapter-6': [
         {
-            question: "Consignments which, when loaded upon a wagon, would infringe the maximum standard moving dimension at any point on the entire route are called ____________.",
+            question: "Consignments, which when loaded upon a wagon, would infringe the maximum standard moving dimension, at any point, on the entire route, from the booking station to the destination, including via break of gauge is called an _______________",
             options: [
               "Dimensional consignment",
               "Infringing dimension",
@@ -1728,7 +1774,7 @@ export const operatingManualQuizzes = {
             explanation: "All the above",
           },
           {
-            question: "When a dummy truck is used, the maximum weight that may be loaded is distinctly marked on ____________.",
+            question: "When a dummy truck is used, the maximum weight that may be loaded, in any wagon or truck is distinctly marked on ________________and must not be exceeded.",
             options: [
               "Each train",
               "Each vehicle",
@@ -1739,7 +1785,7 @@ export const operatingManualQuizzes = {
             explanation: "Each vehicle",
           },
           {
-            question: "ODCs are divided into ____________ according to the minimum clearance available.",
+            question: "ODCs are divided into ____________according to the minimum clearance available between the consignment and minimum fixed structure profile.",
             options: [
               "3 classes",
               "4 classes",
@@ -1757,8 +1803,8 @@ export const operatingManualQuizzes = {
               "9 inches",
               "12 inches",
             ],
-            correct: 0,
-            explanation: "6 inches",
+            correct: 2,
+            explanation: "9 inches",
           },
           {
             question: "Class 'B' ODC loads have a gross clearance of ____________ and above but less than ____________.",
@@ -1801,8 +1847,8 @@ export const operatingManualQuizzes = {
               "PCOM of concerned Railways",
               "CRS",
             ],
-            correct: 0,
-            explanation: "GM",
+            correct: 3,
+            explanation: "CRS",
           },
           {
             question: "Class 'A' & 'B' ODC may be moved during ____________.",
@@ -1823,8 +1869,8 @@ export const operatingManualQuizzes = {
               "40 kmph",
               "60 kmph",
             ],
-            correct: 1,
-            explanation: "25 kmph",
+            correct: 2,
+            explanation: "40 kmph",
           },
           {
             question: "Maximum speed of Class 'C' ODC on BG is ____________.",
@@ -1834,8 +1880,8 @@ export const operatingManualQuizzes = {
               "40 kmph",
               "60 kmph",
             ],
-            correct: 0,
-            explanation: "15 kmph",
+            correct: 1,
+            explanation: "25 kmph",
           },
           {
             question: "Escorting the train for Class 'B' ODC is required by ____________.",
@@ -1845,8 +1891,8 @@ export const operatingManualQuizzes = {
               "SSE(P.Way) & TI",
               "SSE(P.Way), SSE(C&W) & TI",
             ],
-            correct: 2,
-            explanation: "SSE(P.Way) & TI",
+            correct: 0,
+            explanation: "TXR",
           },
           {
             question: "Escorting the train for Class 'C' ODC is required by ____________.",
@@ -1860,18 +1906,18 @@ export const operatingManualQuizzes = {
             explanation: "SSE(P.Way), SSE(C&W) & TI",
           },
           {
-            question: "Net clearance should allow ____________ for lurch (horizontal) and ____________ for bounce (vertical).",
+            question: "The net clearance between the consignment as loaded in the train and any fixed structure should be calculated after making an allowance of ___________for lurch (horizontal) and ____________bounce (vertical)",
             options: [
               "5.08 cm, 5.10 cm",
               "10.10 cm, 10.16 cm",
               "7.5 cm, 7.62 cm",
               "7.62 cm, 7.50 cm",
             ],
-            correct: 3,
-            explanation: "7.62 cm, 7.50 cm",
+            correct: 2,
+            explanation: "7.5 cm, 7.62 cm",
           },
           {
-            question: "Allowance for lurch (horizontal) while calculating net clearance is ____________.",
+            question: "The net clearance between the consignment as loaded in the train and any fixed structure should be calculated after making an allowance of ___________for lurch (horizontal) and bounce (vertical)",
             options: [
               "2 inches",
               "3 inches",
@@ -1882,7 +1928,7 @@ export const operatingManualQuizzes = {
             explanation: "3 inches",
           },
           {
-            question: "The ____________ between the consignment and any fixed structure should be calculated after allowing for lurch and bounce.",
+            question: "The ____________between the consignment as loaded in the train and any fixed structure should be calculated after making an allowance of 75 mm (3 inches) for lurch (horizontal) and 7.62 cm (3 inches) bounce (vertical) on the straight",
             options: [
               "Net clearance",
               "Gross clearance",
@@ -1893,7 +1939,7 @@ export const operatingManualQuizzes = {
             explanation: "Net clearance",
           },
           {
-            question: "When an ODC is offered for booking, ____________ will verify whether it exceeds the maximum moving dimensions.",
+            question: "When ODC consignment is offered at a station for booking __________will verify if the consignment exceeds the maximum moving dimension from originating station to destination station including via. and break of gauge, if involved.",
             options: [
               "Commercial Clerk",
               "Goods Clerk",
@@ -1904,7 +1950,7 @@ export const operatingManualQuizzes = {
             explanation: "SS/SM",
           },
           {
-            question: "SS/SM should apply to the ____________ for sanction of an ODC.",
+            question: "When ODC consignment is offered at a station for booking SS/SM should apply to the ___________, who will obtain the necessary sanction of the competent authority. An application must show the length, width, height, and weight of the load accompanied by a sketch in duplicate of the consignment.",
             options: [
               "Sr.DCM",
               "Sr.DEN",
@@ -1915,7 +1961,7 @@ export const operatingManualQuizzes = {
             explanation: "Sr.DOM",
           },
           {
-            question: "While examining an ODC after loading, ____________ must ensure the load is well secured and within limits.",
+            question: "On receipt of the sanction for ODC , the consignment should be loaded carefully, lashed and packed properly, so as to avoid any change of shifting enroute. While examining ______must pay attention to whether Load is well secured, within the C.C. of the wagon, Weight on any pair of wheels does not exceed- Axle load restriction, if any & Under gear of the wagon.",
             options: [
               "Goods Clerk",
               "SE(C&W)",
@@ -1926,7 +1972,7 @@ export const operatingManualQuizzes = {
             explanation: "SE(C&W)",
           },
           {
-            question: "After loading the consignment, ____________ will register the measurements and advise the SS/SM.",
+            question: "After loading the consignment, ______will register the measurement and advise the SS/SM concerned of the various overall dimensions, including the packing and lashing etc., as loaded in truck.",
             options: [
               "TXR",
               "SSE(P.Way)",
@@ -1937,7 +1983,7 @@ export const operatingManualQuizzes = {
             explanation: "SSE(C&W)",
           },
           {
-            question: "SE(C&W) must issue ____________ certificate for the ODC wagon.",
+            question: "SE(C&W) must issue ____________certificate for the ODC train to the effect that the loaded wagon concerned is safe to run via the particular route specified.",
             options: [
               "\"Fit to Run\"",
               "Safe to Run",
@@ -1948,7 +1994,7 @@ export const operatingManualQuizzes = {
             explanation: "\"Fit to Run\"",
           },
           {
-            question: "The ____________ will advise the PCOM of other Railways regarding the loaded ODC dimensions.",
+            question: "The _______________will arrange to advise the PCOM of the other Rlys. concerned, with full dimensions of the consignment, as loaded in the truck for issue of necessary final sanction for movement.",
             options: [
               "Commercial Branch",
               "Mechanical Branch",
@@ -1959,18 +2005,18 @@ export const operatingManualQuizzes = {
             explanation: "Operating Branch",
           },
           {
-            question: "No consignment with less than ____________ gross clearance from the overhead contact wire is permitted over electrified sections.",
+            question: "No consignment with less than _______ gross clearance from the over head contact wire will be permitted over electrified section.",
             options: [
               "20 cm",
               "15 cm",
               "10 cm",
               "8 cm",
             ],
-            correct: 0,
-            explanation: "20 cm",
+            correct: 2,
+            explanation: "10 cm",
           },
           {
-            question: "A representative of the Traction Department should accompany ODC loads having width more than ____________ from the centre line of BG track.",
+            question: "Representative of the Traction Department should accompany all ODC loads having width of more than _______ for BG from the centre line of the track.",
             options: [
               "6 feet",
               "6.5 feet",
@@ -1981,7 +2027,7 @@ export const operatingManualQuizzes = {
             explanation: "6.5 feet",
           },
           {
-            question: "A list of restricted structures and bridge clearances should be available with ____________.",
+            question: "A list of structures, where the clearances are restricted on the electric traction area and also the clearance available under over bridges should be with the _____________",
             options: [
               "Section Controllers",
               "Traction Power Controllers",
@@ -1992,7 +2038,7 @@ export const operatingManualQuizzes = {
             explanation: "Both A & B",
           },
           {
-            question: "At the originating point, the number of ODC wagons should be entered in red ink by ____________.",
+            question: "At the originating point the number of wagon/wagons carrying ODC should be entered by the _____________ in red ink to be handed over to the Guard of the train.",
             options: [
               "TNC/SM in VG",
               "CC in Loading Bill",
@@ -2003,7 +2049,7 @@ export const operatingManualQuizzes = {
             explanation: "TNC/SM in VG",
           },
           {
-            question: "Shunting of trains with ODC should be avoided. ____________ of ODC wagons is prohibited.",
+            question: "Shunting of train with an ODC should be avoided. ____________of ODC wagon and against such wagon is prohibited.",
             options: [
               "Rear shunting",
               "Hump shunting",
@@ -2016,7 +2062,7 @@ export const operatingManualQuizzes = {
     ],
     'chapter-7': [
         {
-            question: "The Control Organization of Indian Railways is the nerve centre of ____________.",
+            question: "The Control Organization of Indian Railways is the nerve centre of______________",
             options: [
               "station operations",
               "train operations",
@@ -2027,7 +2073,7 @@ export const operatingManualQuizzes = {
             explanation: "Train operations",
           },
           {
-            question: "The two-way telephone system, also called an ____________, permits all stations to have direct communication with the Section Controller.",
+            question: "The two-way telephone system, also called an ____________which permits all stations to have direct communication with Section Controller, who is responsible for train regulation in his area and can speak to all stations at the same time or to one station selectively.",
             options: [
               "telephone exchange",
               "intercom",
@@ -2038,7 +2084,7 @@ export const operatingManualQuizzes = {
             explanation: "Omnibus circuit",
           },
           {
-            question: "Movement of trains is plotted on a time-distance graph to record their actual progress. These records are called ____________.",
+            question: "Movement of trains is plotted on a time distance graph to record their actual progress, these records, called______________, can be analyzed later.",
             options: [
               "control charts",
               "Master charts",
@@ -2049,7 +2095,7 @@ export const operatingManualQuizzes = {
             explanation: "Control charts",
           },
           {
-            question: "The technical representative in the Control Office responsible for traction power support is the ____________.",
+            question: "All technical disciplines involved in train movement have a representative in the Control office to provide the required support from his department. These would include-Motive Power Controller, Signaling and Tele-Communication Controller, Commercial Controller, Security Controller, C& W Control, Engineering Control & ______________",
             options: [
               "Office Superintendent",
               "TNCs",
@@ -2060,7 +2106,7 @@ export const operatingManualQuizzes = {
             explanation: "Traction Power Controller",
           },
           {
-            question: "The technical representative in the Control Office responsible for motive power support is the ____________.",
+            question: "All technical disciplines involved in train movement have a representative in the Control office to provide the required support from his department. These would include- Traction Power Controller, Signaling and Tele-Communication Controller, Commercial Controller, Security Controller, C& W Control, Engineering Control & ______________",
             options: [
               "Office Superintendent",
               "TNCs",
@@ -2071,7 +2117,7 @@ export const operatingManualQuizzes = {
             explanation: "Motive Power Controller",
           },
           {
-            question: "The technical representative in the Control Office responsible for commercial support is the ____________.",
+            question: "All technical disciplines involved in train movement have a representative in the Control office to provide the required support from his department. These would include- Motive Power Controller, Traction Power Controller, Signaling and Tele-Communication Controller, Security Controller, C& W Control, Engineering Control & ______________",
             options: [
               "Office Superintendent",
               "Commercial Controller",
@@ -2082,7 +2128,7 @@ export const operatingManualQuizzes = {
             explanation: "Commercial Controller",
           },
           {
-            question: "The technical representative in the Control Office responsible for security support is the ____________.",
+            question: "All technical disciplines involved in train movement have a representative in the Control office to provide the required support from his department. These would include- Motive Power Controller, Traction Power Controller, Signaling and Tele-Communication Controller, Commercial Controller, C& W Control, Engineering Control & ______________",
             options: [
               "Security Controller",
               "Office Superintendent",
@@ -2093,7 +2139,7 @@ export const operatingManualQuizzes = {
             explanation: "Security Controller",
           },
           {
-            question: "Traffic Control supervises the movement of goods traffic by collecting information regarding ____________.",
+            question: "Traffic Control is the over-riding control for supervision of the movement of goods traffic on the section, exercised by Collecting information from the various stations on the section in respect of –",
             options: [
               "registration for wagons outstanding",
               "arrangements for supply of wagons",
@@ -2126,7 +2172,7 @@ export const operatingManualQuizzes = {
             explanation: "Security Control",
           },
           {
-            question: "In control charts, the horizontal and vertical lines represent ____________ respectively.",
+            question: "Trains are plotted on control charts which consist of horizontal and vertical lines representing ______________ respectively. Along side the vertical lines stations are spaced to a uniform scale.",
             options: [
               "time and distance",
               "speed and distance",
@@ -2137,7 +2183,7 @@ export const operatingManualQuizzes = {
             explanation: "Distance and time",
           },
           {
-            question: "Each one hour in a control chart is first divided into ____________.",
+            question: "Along side the vertical lines in the control charts stations are spaced to a uniform scale. Each one hour is first divided into ____________________and each unit is further sub-divided into 5 smaller units of 2 minutes each.",
             options: [
               "5 units of 12 minutes each",
               "4 units of 15 minutes each",
@@ -2148,7 +2194,7 @@ export const operatingManualQuizzes = {
             explanation: "6 units of 10 minutes each",
           },
           {
-            question: "Each 10-minute unit in the control chart is further subdivided into ____________.",
+            question: "Along side the vertical lines in the control charts stations are spaced to a uniform scale. Each one hour is first divided into 6 units of 10 minutes each and each unit is further sub-divided into____________________",
             options: [
               "2 smaller units of 5 minutes each",
               "5 smaller units of 2 minutes each",
@@ -2159,7 +2205,7 @@ export const operatingManualQuizzes = {
             explanation: "5 smaller units of 2 minutes each",
           },
           {
-            question: "In control charts, ____________ are plotted from the bottom upwards, while ____________ are plotted from the top downwards.",
+            question: "In the control charts all _________ are plotted from bottom of the chart upwards from left diagonally towards the right; and all _________ are plotted from top of chart downwards and diagonally from left towards the right.",
             options: [
               "Up trains, Down trains",
               "Down trains, Up trains",
@@ -2170,18 +2216,18 @@ export const operatingManualQuizzes = {
             explanation: "Up trains, Down trains",
           },
           {
-            question: "For judicious crossing and precedence, passenger trains should be plotted at least ____________ in advance.",
+            question: "For judicious crossing and precedence, it is necessary to have plotting of passenger trains at least _______in advance depending on traffic density in easily erasable lines.",
             options: [
               "two hours",
               "1½ hours",
               "1 hour",
               "30 minutes",
             ],
-            correct: 0,
-            explanation: "Two hours",
+            correct: 2,
+            explanation: "1 hour",
           },
           {
-            question: "For every section, ____________ indicating trains running in 24 hours are prepared.",
+            question: "For every section, _________indicating trains run in 24 hours are prepared which show the running of each Mail, Express or passenger trains over the sections according to its scheduled running.",
             options: [
               "Control charts",
               "Loco charts",
@@ -2192,7 +2238,7 @@ export const operatingManualQuizzes = {
             explanation: "Master Charts",
           },
           {
-            question: "In ____________, paths for goods trains are worked out and plotted between passenger train paths.",
+            question: "In____________, paths for goods trains are worked out and plotted between the running of trains carrying passengers",
             options: [
               "Control charts",
               "Master Charts",
@@ -2203,7 +2249,7 @@ export const operatingManualQuizzes = {
             explanation: "Master Charts",
           },
           {
-            question: "____________ are helpful in revising timetables, planning extra trains, and guiding Section Controllers.",
+            question: "_____________are helpful in revision of time tables and planning the running of any extra train and guidance of section controllers and should be displayed on the boards to which they refer.",
             options: [
               "Master Charts",
               "Working Time Table",
@@ -2214,7 +2260,7 @@ export const operatingManualQuizzes = {
             explanation: "Master Charts",
           },
           {
-            question: "Important instructions from Control are recorded serially in the ____________.",
+            question: "Important instructions from control will first be recorded in a register maintained in the control office and serially numbered, commencing with number 1 after midnight each day is called____________",
             options: [
               "Control Message Book",
               "Control Order Register",
@@ -2225,7 +2271,7 @@ export const operatingManualQuizzes = {
             explanation: "Control Order Register",
           },
           {
-            question: "No Terminal Station should start a goods or unscheduled train or block the section without the permission of the __________.",
+            question: "No Terminal Station should start a goods or unscheduled train or block the section without the permission of the _______",
             options: [
               "Sr.DOM",
               "Controller",
@@ -2236,7 +2282,7 @@ export const operatingManualQuizzes = {
             explanation: "Controller",
           },
           {
-            question: "The Controller's permission must be obtained before __________ that should run through except to avert an accident or dangerous condition.",
+            question: "The Controller‘s permission must be obtained before ___________that should run through except to avert an accident or dangerous condition.",
             options: [
               "stopping a train",
               "starting the train",
@@ -2313,7 +2359,7 @@ export const operatingManualQuizzes = {
             explanation: "Station Master's permission",
           },
           {
-            question: "The Control telephone is to be used for __________. Field staff should give their identity and __________ communicate.",
+            question: "The Control telephone is to be used for______________. The field staff wanting to talk to control will give their identity and ____________ communicate",
             options: [
               "operational purposes, wait for their turn to",
               "personal talks, wait",
@@ -2324,7 +2370,7 @@ export const operatingManualQuizzes = {
             explanation: "Operational purposes; wait for their turn to communicate",
           },
           {
-            question: "As the Control telephone network is intensively used, __________ must be avoided.",
+            question: "As the network over control telephone is intensively used, the conversation should be brief, meaningful and polite. ______________________must be avoided.",
             options: [
               "Discussions and arguments",
               "Discussions, disputes and arguments",
@@ -2335,7 +2381,7 @@ export const operatingManualQuizzes = {
             explanation: "Discussions, disputes and arguments",
           },
           {
-            question: "As the Control telephone network is intensively used, conversation should be __________.",
+            question: "As the network over control telephone is intensively used, the conversation should be _________________. Discussions, disputes and arguments must be avoided.",
             options: [
               "brief and polite",
               "meaningful and polite",
@@ -2346,18 +2392,18 @@ export const operatingManualQuizzes = {
             explanation: "Brief, meaningful and polite",
           },
           {
-            question: "If an urgent message has to be conveyed on the Control telephone while the line is engaged, the station name should be called indicating __________.",
+            question: "When, however an urgent message has to be conveyed on control telephone, and the line happens to be engaged, the station name must be called indicating___________. The Controller will immediately attend to the Station",
             options: [
               "Urgent",
               "loudly",
               "on auto phone",
               "Emergency",
             ],
-            correct: 0,
-            explanation: "Urgent",
+            correct: 3,
+            explanation: "Emergency",
           },
           {
-            question: "The Station Master of the dispatching station shall not ask __________ for a less important train until it is ready to leave and Controller's permission has been obtained.",
+            question: "SM of the despatching station shall not ask ________________ for a less important train until the train is ready to leave and until the Section Controller‘s permission has been obtained.",
             options: [
               "Line clear enquiry",
               "Line clear reply",
@@ -2368,7 +2414,7 @@ export const operatingManualQuizzes = {
             explanation: "Line clear enquiry",
           },
           {
-            question: "The Station Master of the receiving station shall __________ for a less important train until the Section Controller's permission has been obtained.",
+            question: "SM of the receiving station shall ___________________ for a less important train, until the Section Controller‘s permission has been obtained.",
             options: [
               "grant line clear",
               "not grant line clear",
@@ -2379,7 +2425,7 @@ export const operatingManualQuizzes = {
             explanation: "Not grant line clear",
           },
           {
-            question: "Before performing any shunting, the Station Master must obtain permission from the __________.",
+            question: "The permission of the _____________ must be obtained by the SM before the performance of any shunting, informing the likely duration to enable crossing and precedence of trains being arranged.",
             options: [
               "Chief Controller",
               "Traffic Inspector",
@@ -2390,7 +2436,7 @@ export const operatingManualQuizzes = {
             explanation: "Section Controller",
           },
           {
-            question: "A passenger train nearing the end of its run should __________ in preference to a train having a longer run.",
+            question: "A Passenger train nearing the end of its run should ___________in preference to a train which has a longer run before it, as the latter train is more likely to make up time and reach its destination punctually than the former.",
             options: [
               "not normally be detained",
               "normally be detained",
@@ -2401,7 +2447,7 @@ export const operatingManualQuizzes = {
             explanation: "Not normally be detained",
           },
           {
-            question: "A train __________ due to defective engine, rolling stock or other continuing defect should generally give way to a train running properly.",
+            question: "A train ____________due to defective engine, or defect in rolling stock or any other cause which is likely to continue to operate against it and prevent it from making up time, should generally give way to a train running properly.",
             options: [
               "running to time",
               "running late",
@@ -2414,7 +2460,7 @@ export const operatingManualQuizzes = {
     ],
     'chapter-8': [
         {
-            question: "There is a difference between a disaster and an accident. All disasters need not be the outcome of ____________, neither are all accidents classified as ____________.",
+            question: "There is a difference between a disaster and an accident. All disasters need not be the outcome of_____________, neither are all accidents classified as___________.",
             options: [
               "collisions, disasters",
               "accidents, serious accidents",
@@ -2458,7 +2504,7 @@ export const operatingManualQuizzes = {
             explanation: "Accidents",
           },
           {
-            question: "_____________ may or may not necessarily be the outcome of train accidents but have the potential to cause loss of life and/or injury, leading to widespread and prolonged distress unless tackled effectively.",
+            question: "_____________ may or may not necessarily be the outcome of train accidents but have the potential to cause loss of life and or injury to human beings causing further death/injury and wide spread and prolonged distress to all those involved unless tackled in an effective manner.",
             options: [
               "Accidents",
               "Incidents",
@@ -2469,7 +2515,7 @@ export const operatingManualQuizzes = {
             explanation: "Disasters",
           },
           {
-            question: "When none of the authorised personnel are present at the accident spot, ____________ shall appoint an Officer-in-Charge Site as directed by the DRM from the personnel available.",
+            question: "When none of the authorised personnel are present at the accident spot, ____________ shall appoint an Officer-in-Charge site as directed by DRM from the personnel available.",
             options: [
               "Sr.DOM",
               "Divisional Control Office",
@@ -2511,11 +2557,11 @@ export const operatingManualQuizzes = {
               "Either 'A' or 'B'",
               "Both 'A' & 'B'",
             ],
-            correct: 3,
-            explanation: "Both 'A' & 'B'",
+            correct: 2,
+            explanation: "Either 'A' or 'B'",
           },
           {
-            question: "Yards are nominated as ____________ on the basis of the work done and wagons dealt with.",
+            question: "Yards are nominated as ___________on the basis of the work done and wagons dealt with.",
             options: [
               "Terminal Yards",
               "Sidings",
@@ -2539,7 +2585,7 @@ export const operatingManualQuizzes = {
     ],
     'chapter-10': [
         {
-            question: "The CONCOR will be responsible for ____________ operations at both the origin and destination Rail Terminals.",
+            question: "The CONCOR will be responsible for __________________operations at both the origin and destination Rail Terminals",
             options: [
               "loading and unloading",
               "loading or unloading",
@@ -2550,7 +2596,7 @@ export const operatingManualQuizzes = {
             explanation: "Loading and unloading",
           },
           {
-            question: "All ____________ like those contained in the Commercial Manual, as amended from time to time and applicable to other freight traffic on Indian Railways, shall apply to container traffic.",
+            question: "All _______________like that contained in Commercial Manual, as amended from time to time and as applicable to other freight traffic moving on Indian Railways shall apply to the Container traffic.",
             options: [
               "operating rules",
               "commercial rules",
@@ -2561,7 +2607,7 @@ export const operatingManualQuizzes = {
             explanation: "Commercial rules",
           },
           {
-            question: "The CONCOR shall procure by way of purchase, lease or hire, wagons including ____________ required for operating CONCOR trains.",
+            question: "The CONCOR shall procure by way of purchase, lease or hire, Wagons including ______________required for the purposes of operating the CONCOR‘s Trains.",
             options: [
               "Brake vans",
               "Containers",
@@ -2572,7 +2618,7 @@ export const operatingManualQuizzes = {
             explanation: "Brake Vans and Containers",
           },
           {
-            question: "The CONCOR wagons shall be maintained by the Railway Administration and include ____________.",
+            question: "The CONCOR‘s Wagons shall be maintained by the Railway Administration and include________________.",
             options: [
               "intensive examination",
               "routine overhaul (ROH)",
@@ -2583,7 +2629,7 @@ export const operatingManualQuizzes = {
             explanation: "All the above",
           },
           {
-            question: "CONCOR will provide and maintain the requisite wagon examination facilities ____________ and bear a one-time capital cost for tools and plants approved by RDSO.",
+            question: "CONCOR will provide and maintain the requisite Wagon examination facilities(as specified by railway Administration) ____________and bear a one time capital cost for tools and plants approved by RDSO.",
             options: [
               "outside the Rail Terminal",
               "inside the Rail Terminal",
@@ -2594,7 +2640,18 @@ export const operatingManualQuizzes = {
             explanation: "Inside the Rail Terminal",
           },
           {
-            question: "The Railway Administration shall normally complete the intensive train examination within ____________ from the time the CONCOR wagons (in empty rake formation) are handed over.",
+            question: "Railway Administration shall normally complete the intensive train examination within a period of _________from the time the CONCOR‘s Wagons (in empty Rake formation) are handed over by the CONCOR for such examination",
+            options: [
+              "4 hours",
+              "5 hours",
+              "6 hours",
+              "8 hours",
+            ],
+            correct: 2,
+            explanation: "6 hours",
+          },
+          {
+            question: "At least four ___________ prior to the planned departure of CONCOR‘s Train, the CONCOR shall submit an indent (―Indent for Locomotive‖) for supply of locomotive.",
             options: [
               "4 hours",
               "5 hours",
@@ -2605,18 +2662,7 @@ export const operatingManualQuizzes = {
             explanation: "4 hours",
           },
           {
-            question: "At least ____________ prior to the planned departure of a CONCOR train, CONCOR shall submit an indent for supply of locomotive.",
-            options: [
-              "4 hours",
-              "5 hours",
-              "6 hours",
-              "8 hours",
-            ],
-            correct: 0,
-            explanation: "4 hours",
-          },
-          {
-            question: "The existing incentive schemes for ____________ may be extended to CONCOR trains with suitable modifications in a non-discriminatory manner.",
+            question: "The existing incentive schemes for ________________may be extended to the CONCOR‘s Trains with suitable modifications such that it is applied in a non discriminatory manner among different CONCORs.",
             options: [
               "supply of Brake Vans",
               "supply of wagons",
@@ -2651,18 +2697,18 @@ export const operatingManualQuizzes = {
             explanation: "At junction stations, waiting halls are meant for passengers waiting for connecting trains.",
           },
           {
-            question: "To ensure that bona fide use of waiting rooms is being made, they shall be checked by ticket checking staff every __________.",
+            question: "To ensure that bona fide use of waiting rooms is being made, they shall be checked by a ticket checking staff every ________",
             options: [
               "8 hours",
               "5 hours",
               "4 hours",
               "3 hours",
             ],
-            correct: 2,
-            explanation: "Waiting rooms should be checked every 4 hours.",
+            correct: 0,
+            explanation: "Waiting rooms should be checked every 8 hours.",
           },
           {
-            question: "Station Master or Parcel Clerk shall ensure that parcel, luggage, goods and vendors' trays and barrows are not placed within __________ of the platform edge.",
+            question: "Station Master or Parcel Clerk shall ensure Parcel, luggage, goods and vendors‘ trays and barrows shall not be placed on passenger platforms within 3 meters of the edge of the platform.",
             options: [
               "2 metres",
               "3 metres",
@@ -2673,7 +2719,7 @@ export const operatingManualQuizzes = {
             explanation: "They must be kept at least 3 metres away from the platform edge.",
           },
           {
-            question: "The barrows with __________ to be loaded should be kept 3 metres away opposite the stopping point of the vehicle.",
+            question: "The barrows with _______________which are to be loaded, be kept 3 metres away at a point opposite where the vehicle, into which they are to be loaded is likely to stop.",
             options: [
               "passenger baggage",
               "Guard's box",
@@ -2684,7 +2730,7 @@ export const operatingManualQuizzes = {
             explanation: "Barrows carrying parcels or luggage should be kept 3 metres away.",
           },
           {
-            question: "Packages __________ must be removed as quickly as possible to the usual place of stacking.",
+            question: "Packages ____________must be removed as quickly as possible to the usual place of stacking, if they are not taken away into luggage and parcel offices or the goods shed.",
             options: [
               "loaded by train",
               "unloaded from a train",
@@ -2695,7 +2741,7 @@ export const operatingManualQuizzes = {
             explanation: "Packages unloaded from a train should be removed immediately.",
           },
           {
-            question: "Under no circumstances should __________ be left on the platform in a position where they may roll into the track.",
+            question: "Under no circumstances should ______________be left on the platform in such a position that they may roll into the track.",
             options: [
               "drums and barrels",
               "drums",
@@ -2706,7 +2752,7 @@ export const operatingManualQuizzes = {
             explanation: "Drums and barrels must never be left where they can roll onto the track.",
           },
           {
-            question: "Conductor or TTEs are responsible for ensuring that __________ of all coaches are functioning satisfactorily.",
+            question: "Conductor or TTEs are responsible for ensuring that _____________of all coaches are functioning satisfactorily",
             options: [
               "electrical equipments",
               "electrical fittings",
@@ -2717,18 +2763,18 @@ export const operatingManualQuizzes = {
             explanation: "Both electrical equipment and fittings must function properly.",
           },
           {
-            question: "Where any defect in electrical equipment or fittings is noticed, the Conductor or TTE should inform the __________.",
+            question: "Where any defect or deficiency is noticed in electrical equipments and fittings , they should inform the ______________or advise through control to the next station where electrical staff is provided.",
             options: [
               "electrical staff from the nearby village",
               "electrical staff available by the train",
               "electric staff on duty of AC coaches",
               "Station Master of next station",
             ],
-            correct: 3,
-            explanation: "The Station Master of the next station should be informed.",
+            correct: 2,
+            explanation: "The electrical staff available by the train should be informed.",
           },
           {
-            question: "Conductor and TTEs must ensure that no one is travelling on the __________ when trains are about to start.",
+            question: "Conductor and TTEs must see that passengers are not getting in and out of carriage when trains are about to start and that no one is travelling on the____________.",
             options: [
               "couplings",
               "roofs of carriage",
@@ -2739,7 +2785,7 @@ export const operatingManualQuizzes = {
             explanation: "Passengers must not travel on the roofs of coaches.",
           },
           {
-            question: "Passengers suffering from __________ should be segregated from other passengers with the help of security forces.",
+            question: "For greater safety of the travelling public, passengers suffering from _______________should be segregated from other passengers by TTE with the help of security forces.",
             options: [
               "infections or contagious diseases",
               "infections and contagious diseases",
@@ -2750,7 +2796,7 @@ export const operatingManualQuizzes = {
             explanation: "Passengers with infections or contagious diseases should be separated.",
           },
           {
-            question: "When alarm chain is pulled without justification, the Conductor or TTE must ascertain the __________ who pulled the chain.",
+            question: "When alarm chain has been pulled mischievously or for an unjustifiable cause or the hose pipe has been disconnected by some miscreants, the Conductor or TTE in charge must ascertain the ________who pulled the chain or disconnected the hose pipe.",
             options: [
               "ticket number of passenger",
               "witness of other passengers",
@@ -2761,7 +2807,7 @@ export const operatingManualQuizzes = {
             explanation: "The name of the person responsible should be ascertained.",
           },
           {
-            question: "The Conductor or TTE should hand over the report regarding alarm chain pulling to __________.",
+            question: "Conductor or TTE should make a report regarding the alarm chain pulling or the hose pipe disconnection incident and hand over the same to_____________, if time permits who will take action in lodging the report with the GRP of the station in whose jurisdiction the incident has occurred.",
             options: [
               "SM of station where incident occurred",
               "next stopping station",
@@ -2772,18 +2818,18 @@ export const operatingManualQuizzes = {
             explanation: "The report may be handed over at the station of occurrence or the next stopping station.",
           },
           {
-            question: "Reserved passengers should not be disturbed for ticket rechecking between __________ except in special cases.",
+            question: "Passenger of all classes occupying reserved accommodation shall not be roused for tickets, to be rechecked between ________ except when there are reasons to believe that a certain passenger is travelling without a ticket",
             options: [
               "20:00 hrs & 06:00 hrs",
               "00:00 hrs & 06:00 hrs",
               "23:00 hrs & 05:00 hrs",
               "22:00 hrs & 06:00 hrs",
             ],
-            correct: 1,
-            explanation: "Reserved passengers should not be disturbed between 00:00 hrs and 06:00 hrs.",
+            correct: 3,
+            explanation: "Reserved passengers should not be disturbed between 22:00 hrs and 06:00 hrs.",
           },
           {
-            question: "TTEs are to wake AC and First Class passengers at night __________.",
+            question: "TTE,s of trains are to arouse AC and Ist class Passengers at night at any station ______________by the passengers to do so and will be assisted by the coach attendant.",
             options: [
               "when requested",
               "when instructed",
@@ -2794,7 +2840,7 @@ export const operatingManualQuizzes = {
             explanation: "Passengers are awakened only when they have requested it.",
           },
           {
-            question: "When a passenger requests to be awakened, the Ticket Checking staff shall record the details in the __________.",
+            question: "When a request is made by a passenger for waking up in night, Ticket Checking staff shall enter in the _________the name of the passengers /class/No. of the carriage occupied and name of station at which the passenger is to be called.",
             options: [
               "remainder message",
               "wake up memo",
@@ -2805,7 +2851,7 @@ export const operatingManualQuizzes = {
             explanation: "The request is entered in the 'Wake Up Memo'.",
           },
           {
-            question: "No male passenger except a boy under __________ years of age shall travel in a ladies' compartment.",
+            question: "In no case, whatever, shall a male passenger except a boy under _______________ of age be allowed to travel in a compartment reserved for Ladies in any train.",
             options: [
               "8 years",
               "10 years",
@@ -2816,7 +2862,7 @@ export const operatingManualQuizzes = {
             explanation: "Only boys under 12 years may accompany ladies in such compartments.",
           },
           {
-            question: "A lady travelling alone at night in a First Class ladies compartment may take one woman attendant holding __________.",
+            question: "A lady travelling alone at night in a first class compartment reserved for ladies may take with her in the same compartment, one women attendant holding ______for that portion of the journey which is performed between the hours 8 p.m. and 6 a.m.",
             options: [
               "a second class ticket",
               "no ticket",
@@ -2827,7 +2873,7 @@ export const operatingManualQuizzes = {
             explanation: "The attendant should hold a Second Class ticket for the eligible portion of the journey.",
           },
           {
-            question: "It is the duty of train manning staff or station staff to __________ to any injured person within Railway premises immediately.",
+            question: "It will be the duty of the train manning staff or station staff to ________to any injured person within Railway premises immediately.",
             options: [
               "render help",
               "assist him to hospital",
@@ -2838,7 +2884,7 @@ export const operatingManualQuizzes = {
             explanation: "Immediate first aid should be provided to injured persons.",
           },
           {
-            question: "If a serious crime such as murder or assault occurs in a running train, the Conductor or TTE shall have the compartment __________.",
+            question: "If a crime of serious nature such as a murder or a serious assault be committed in a Railway carriage on a running train, the Conductor or TTE of the train shall have the compartment _______________",
             options: [
               "emptied and locked up",
               "emptied",
@@ -2849,7 +2895,7 @@ export const operatingManualQuizzes = {
             explanation: "The compartment should be emptied and locked to preserve evidence.",
           },
           {
-            question: "__________ shall report to the Train Guard for his appearance, and the time shall be noted in the Constitution Report.",
+            question: "_____________ shall report to the train guard for his appearance and the time of his appearance shall be noted down by the train guard in the Constitution Report.",
             options: [
               "Train Conductor",
               "TTE",
@@ -2873,7 +2919,7 @@ export const operatingManualQuizzes = {
             explanation: "Remedial action during inspections may be educative, corrective or punitive depending on the situation.",
           },
           {
-            question: "If undesirable shortcuts or unsafe practices are resorted to out of ignorance, the remedial action should be ________.",
+            question: "During inspections detect undesirable shortcuts, irregularities or unsafe practices being resorted to by the staff taking remedial action which may be:-_____________, in case these are resorted to out of ignorance.",
             options: [
               "Educative",
               "Corrective",
@@ -2884,7 +2930,7 @@ export const operatingManualQuizzes = {
             explanation: "Ignorance should be addressed through educative action.",
           },
           {
-            question: "If unsafe practices are due to wrong working conditions or system deficiencies, the remedial action should be ________.",
+            question: "During inspections detect undesirable shortcuts, irregularities or unsafe practices being resorted to by the staff taking remedial action which may be:- ________, if there is something wrong in the working conditions, or there are system deficiencies.",
             options: [
               "Educative",
               "Corrective",
@@ -2895,7 +2941,7 @@ export const operatingManualQuizzes = {
             explanation: "System deficiencies require corrective action.",
           },
           {
-            question: "If unsafe practices continue wilfully or negligently even after repeated guidance and counselling, the remedial action should be ________.",
+            question: "During inspections detect undesirable shortcuts, irregularities or unsafe practices being resorted to by the staff taking remedial action which may be:- ________, if resorted to wilfully or negligently and persisting even after repeated guidance and counselling.",
             options: [
               "Educative",
               "Corrective",
@@ -2906,7 +2952,7 @@ export const operatingManualQuizzes = {
             explanation: "Wilful negligence calls for punitive action.",
           },
           {
-            question: "Inspections provide the means to achieve ________ through spot checks and personal contact with staff.",
+            question: "Inspections, thus provide the means to achieve __through spot checks and personal contact with the staff on line.",
             options: [
               "Efficiency or effectiveness",
               "Efficiency",
@@ -2917,7 +2963,7 @@ export const operatingManualQuizzes = {
             explanation: "Inspections help achieve both efficiency and effectiveness.",
           },
           {
-            question: "Various types of inspections include Regular Inspection, Safety Inspection, ________, Night Inspection and others.",
+            question: "Various Types of Inspections include -Regular Inspection, Safety Inspections, __________, Night Inspection, Level Crossing Inspections, Surprise Inspection by Road, Footplate Inspections, Joint Footplate Inspections, Surprise Speed checks, Running Rooms Inspections, Ambush checks, Running Trains Inspections, Loco shed inspections, C & W Depots inspections, Accident Relief / Medical Equipment Scale I (ARME)",
             options: [
               "Casual Inspection",
               "Surprise Inspection",
@@ -2928,7 +2974,7 @@ export const operatingManualQuizzes = {
             explanation: "Surprise Inspection is one of the prescribed inspection types.",
           },
           {
-            question: "Various types of inspections include ________, Safety Inspection, Surprise Inspection, Night Inspection and others.",
+            question: "Various Types of Inspections include -___________, Safety Inspections, Surprise Inspection, Night Inspection, Level Crossing Inspections, Surprise Inspection by Road, Footplate Inspections, Joint Footplate Inspections, Surprise Speed checks, Running Rooms Inspections, Ambush checks, Running Trains Inspections, Loco shed inspections, C & W Depots inspections, Accident Relief / Medical Equipment Scale I (ARME)",
             options: [
               "Regular Inspection",
               "Casual Inspection",
@@ -2939,7 +2985,7 @@ export const operatingManualQuizzes = {
             explanation: "Regular Inspection is one of the standard inspection categories.",
           },
           {
-            question: "Various types of inspections include Regular Inspection, Safety Inspection, Surprise Inspection, ________ and others.",
+            question: "Various Types of Inspections include -Regular Inspection, Safety Inspections, Surprise Inspection, __________, Level Crossing Inspections, Surprise Inspection by Road, Footplate Inspections, Joint Footplate Inspections, Surprise Speed checks, Running Rooms Inspections, Ambush checks, Running Trains Inspections, Loco shed inspections, C & W Depots inspections, Accident Relief / Medical Equipment Scale I (ARME)",
             options: [
               "Casual Inspection",
               "Safety Meeting",
@@ -2950,7 +2996,7 @@ export const operatingManualQuizzes = {
             explanation: "Night Inspection is a prescribed inspection type.",
           },
           {
-            question: "Various types of inspections include Footplate Inspection and ________.",
+            question: "Various Types of Inspections include -Regular Inspection, Safety Inspections, Surprise Inspection , Night Inspection, Level Crossing Inspections, Surprise Inspection by Road, _____________, Joint Footplate Inspections, Surprise Speed checks, Running Rooms Inspections, Ambush checks, Running Trains Inspections, Loco shed inspections, C & W Depots inspections, Accident Relief / Medical Equipment Scale I (ARME)",
             options: [
               "Casual Inspection",
               "Proxy Inspection",
@@ -2961,7 +3007,7 @@ export const operatingManualQuizzes = {
             explanation: "Joint Footplate Inspection is a recognized inspection category.",
           },
           {
-            question: "Inspection in which every station is inspected comprehensively at least once in every six months is called ________.",
+            question: "Inspection in which each station on the division is inspected in details at least once in every six months covering the various aspects of safety, operations and allied matters including staff matters and comprehensive in nature is called__________",
             options: [
               "Regular Inspection",
               "Surprise Inspection",
@@ -2972,7 +3018,7 @@ export const operatingManualQuizzes = {
             explanation: "This is known as Regular Inspection.",
           },
           {
-            question: "Regular inspection of each station on the division should be conducted at least ________.",
+            question: "Regular inspection in which each station on the division is inspected in details at least ___________covering the various aspects of safety, operations and allied matters including staff matters and comprehensive in nature",
             options: [
               "Once every three months",
               "Once every four months",
@@ -2983,7 +3029,7 @@ export const operatingManualQuizzes = {
             explanation: "Regular inspection is prescribed once in every six months.",
           },
           {
-            question: "Inspections meant to prevent unsafe practices by detecting shortcuts are known as ________.",
+            question: "Inspections which are basically meant to be preventive by detecting short cut methods and unsafe practices resorted to by train passing, running and maintenance staff is known as________.",
             options: [
               "Regular Inspection",
               "Surprise Inspection",
@@ -2994,7 +3040,7 @@ export const operatingManualQuizzes = {
             explanation: "These are Safety Inspections.",
           },
           {
-            question: "If a serious irregularity is noticed during Safety Inspection, the inspecting official must immediately inform ________.",
+            question: "In case of any serious irregularity is observed in safety inspection, the inspecting officials must at once inform ____________ concerned personally or telephonically beside making a written report.",
             options: [
               "Sr.DSO/DSO",
               "Sr.DSO/DSO or Sr.DOM/DOM",
@@ -3005,7 +3051,7 @@ export const operatingManualQuizzes = {
             explanation: "The inspecting official must immediately inform Sr.DSO/DSO or Sr.DOM/DOM.",
           },
           {
-            question: "Inspection carried out without prior notice while passing through a station is called ________.",
+            question: "Officers and Inspectors may inspect a station either while passing through it or during the short time at their disposal or when they want to check some aspect at the station without prior notice and has a element of surprise is known as.",
             options: [
               "Regular Inspection",
               "Surprise Inspection",
@@ -3016,18 +3062,18 @@ export const operatingManualQuizzes = {
             explanation: "Such inspections are Surprise Inspections.",
           },
           {
-            question: "Minimum number of Surprise Inspections to be conducted by the sectional TI every month is ________.",
+            question: "Minimum Surprise Inspections that shall be conducted by the sectional TI in a month is ________.",
             options: [
               "3",
               "4",
               "5",
               "6",
             ],
-            correct: 1,
-            explanation: "A sectional TI should conduct at least four surprise inspections every month.",
+            correct: 3,
+            explanation: "A sectional TI should conduct at least six surprise inspections every month.",
           },
           {
-            question: "________ inspection may be carried out between 00:00 hrs and 04:00 hrs when staff are likely to be lethargic.",
+            question: "______________ inspection may be carried out between 00 hrs. to 4 hrs. because during this period, the staff is likely to be lethargic and negligent in duties.",
             options: [
               "Regular",
               "Surprise",
@@ -3038,7 +3084,7 @@ export const operatingManualQuizzes = {
             explanation: "Surprise Night Inspection is conducted during this period.",
           },
           {
-            question: "Inspections carried out by bus or taxi without informing anyone are called ________.",
+            question: "Inspections approached by Bus/Taxi, which have an element of surprise and create a sense of alertness amongst the staff and carried out without informing anybody is known as__________.",
             options: [
               "Surprise Inspection by Road",
               "Surprise Inspection by Train",
@@ -3049,7 +3095,7 @@ export const operatingManualQuizzes = {
             explanation: "These are Surprise Inspections by Road.",
           },
           {
-            question: "Inspections carried out by travelling on the engine of a running train are called ________.",
+            question: "Inspections which are carried out by travelling on the engine of running trains and afford an opportunity to observe and check certain aspect of working on the engine, along the track and at the stations which can not be checked otherwise is _________",
             options: [
               "Joint Footplate Inspection",
               "Footplate Inspection",
@@ -3060,7 +3106,7 @@ export const operatingManualQuizzes = {
             explanation: "These are known as Footplate Inspections.",
           },
           {
-            question: "Footplate inspections conducted jointly with Electrical, Engineering and S&T officials are called ________.",
+            question: "Inspections which are carried out jointly with officials of Electrical (Running), Permanent Way and Signalling, checking the visibility of the signals, their locations, operations, lighting up, speed restrictions and caution boards rail wheel interaction and loco pilots‘ and assistant loco pilots‘ operating behaviour is known as.",
             options: [
               "Joint Footplate Inspection",
               "Footplate Inspection",
@@ -3071,7 +3117,7 @@ export const operatingManualQuizzes = {
             explanation: "These are Joint Footplate Inspections.",
           },
           {
-            question: "To ensure observance of speed restrictions and turnout speeds, ________ should be conducted as per schedule.",
+            question: "In order to ensure the maximum permissible speed are not exceeded, permanent and temporary speed restrictions are correctly observed and limits of speed over turnouts and facing points are observed, __________should be conducted as per schedule.",
             options: [
               "Surprise Checks",
               "Speed Monitoring",
@@ -3082,7 +3128,7 @@ export const operatingManualQuizzes = {
             explanation: "Surprise Speed Checks ensure compliance with speed restrictions.",
           },
           {
-            question: "During inspections, opportunity should be taken to inspect ________ to ensure proper food and rest facilities for running staff.",
+            question: "During regular, safety, surprise and night inspections opportunity should also be taken to inspect _______ to ensure that running staff are able to get proper food and resting facilities.",
             options: [
               "Sign-on Kiosk",
               "Running Rooms",
@@ -3093,7 +3139,7 @@ export const operatingManualQuizzes = {
             explanation: "Running Rooms should be inspected regularly.",
           },
           {
-            question: "To ensure observance of rules when automatic stop signals are passed at ON, inspecting officials should conduct ________.",
+            question: "In order to ensure rigid observation of rules when automatic stop signals are passed in ‗ON‘ position the inspecting officials should carry out ______with the help of signalling officials who will arrange to put an automatic stop signal to ‗ON‘ position.",
             options: [
               "Surprise Checks",
               "Speed Checks",
@@ -3104,7 +3150,7 @@ export const operatingManualQuizzes = {
             explanation: "Ambush Checks are conducted for this purpose.",
           },
           {
-            question: "Inspections carried out while travelling by train and observing the duties of Guards, Loco Pilots and Station Staff are called ________.",
+            question: "Inspections carried out whenever an operating officer or an inspector is travelling by a train on duty, and pay special attention in observing the performance of duties by Guards, Loco pilots, Station staff, Gatemen and others is known as ________.",
             options: [
               "Running Trains Inspection",
               "Train Inspection",
@@ -3115,15 +3161,15 @@ export const operatingManualQuizzes = {
             explanation: "These are known as Running Trains Inspections.",
           },
           {
-            question: "Each Breakdown Train (ART) shall be inspected ________.",
+            question: "Each Break down train- Accident Relief Train (ART) shall be inspected _____________",
             options: [
               "Once in a month",
               "Once in two months",
               "Once in three months",
               "Once in four months",
             ],
-            correct: 0,
-            explanation: "Every Accident Relief Train should be inspected once every month.",
+            correct: 2,
+            explanation: "Every Accident Relief Train should be inspected once in three months.",
           },
           {
             question: "Before ________ the inspection, previous inspection books should be checked for compliance with earlier instructions.",
@@ -3139,7 +3185,7 @@ export const operatingManualQuizzes = {
     ],
     'chapter-13': [
       {
-        question: "In ____________, the functions are operated by levers, and the relationship between the functions is transferred to the levers.",
+        question: "In_______________, the functions are operated by levers, the relationship that should exist between the functions can be transferred to exist between the levers.",
         options: [
           "Panel Interlocking",
           "Route Relay Interlocking",
@@ -3150,18 +3196,7 @@ export const operatingManualQuizzes = {
         explanation: "Mechanical Interlocking uses levers to mechanically establish the required interlocking between functions.",
       },
       {
-        question: "Where interlocking is done between one route and another route in big yards and the SM presses two buttons simultaneously, it is known as ________.",
-        options: [
-          "Panel Interlocking",
-          "Route Relay Interlocking",
-          "Mechanical Interlocking",
-          "Solid State Interlocking",
-        ],
-        correct: 0,
-        explanation: "Panel Interlocking requires simultaneous operation of route buttons for route setting.",
-      },
-      {
-        question: "Computer-based interlocking using thousands of electro-mechanical relays with complex wiring is known as ________.",
+        question: "Where interlocking is done between one route and another route in big yards and SM is required press two buttons simultaneously for operation of an event is known as",
         options: [
           "Panel Interlocking",
           "Route Relay Interlocking",
@@ -3169,10 +3204,21 @@ export const operatingManualQuizzes = {
           "Solid State Interlocking",
         ],
         correct: 1,
-        explanation: "Route Relay Interlocking (RRI) uses numerous electro-mechanical relays with extensive wiring.",
+        explanation: "Route Relay Interlocking requires simultaneous operation of route buttons for route setting.",
       },
       {
-        question: "SSI system occupies less space, consumes less power, is more reliable and is easy to ________.",
+        question: "Computer based interlocking which uses thousands of Electro-mechanical relays requiring complex wiring and Inter-connections. Is known as",
+        options: [
+          "Panel Interlocking",
+          "Route Relay Interlocking",
+          "Mechanical Interlocking",
+          "Solid State Interlocking",
+        ],
+        correct: 3,
+        explanation: "Solid State Interlocking (SSI) uses numerous electro-mechanical relays with extensive wiring.",
+      },
+      {
+        question: "SSI system occupies considerably less space, consumes less power, is more reliable and is easy to______________.",
         options: [
           "Install and maintain",
           "Install",
@@ -3183,7 +3229,7 @@ export const operatingManualQuizzes = {
         explanation: "SSI is compact, reliable and easy to install as well as maintain.",
       },
       {
-        question: "In SSI system, initial commissioning and ________ can be carried out in negligible time.",
+        question: "In SSI system initial commissioning & __________________________can be carried out in negligible time requiring skeleton manpower for traffic management during the blocks.",
         options: [
           "Changes in interlocking",
           "Changes in staff",
@@ -3194,7 +3240,7 @@ export const operatingManualQuizzes = {
         explanation: "SSI allows quick implementation of changes due to yard remodeling.",
       },
       {
-        question: "________ means points are set and locked from one place while signals are operated from another place using keys.",
+        question: "____________means that the points are set and locked from one place and the signals are operated from another place and another lever frame; the interlocking is effected by means of keys carried from one place to the other.",
         options: [
           "Indirect Interlocking",
           "Direct Interlocking",
@@ -3205,7 +3251,7 @@ export const operatingManualQuizzes = {
         explanation: "Indirect Interlocking uses key transfer between separate lever frames.",
       },
       {
-        question: "________ means points, point locks and signal levers are concentrated in one lever frame.",
+        question: "_______________________ means point, the point locks and the signal levers are concentrated in one lever frame and worked there from;",
         options: [
           "Indirect Interlocking",
           "Direct Interlocking",
@@ -3234,8 +3280,8 @@ export const operatingManualQuizzes = {
           "110 kmph",
           "140 kmph",
         ],
-        correct: 0,
-        explanation: "Standard I(R) permits a maximum speed of 30 kmph.",
+        correct: 1,
+        explanation: "Standard I(R) permits a maximum speed of 50 kmph.",
       },
       {
         question: "Maximum speed permitted at a Standard II(R) interlocked station is ________.",
@@ -3245,8 +3291,8 @@ export const operatingManualQuizzes = {
           "110 kmph",
           "140 kmph",
         ],
-        correct: 1,
-        explanation: "Standard II(R) permits a maximum speed of 75 kmph.",
+        correct: 2,
+        explanation: "Standard II(R) permits a maximum speed of 110 kmph.",
       },
       {
         question: "Maximum speed permitted at a Standard III(R) interlocked station is ________.",
@@ -3256,7 +3302,7 @@ export const operatingManualQuizzes = {
           "110 kmph",
           "140 kmph",
         ],
-        correct: 2,
+        correct: 3,
         explanation: "Standard III(R) permits a maximum speed of 110 kmph.",
       },
       {
@@ -3267,11 +3313,11 @@ export const operatingManualQuizzes = {
           "140 kmph",
           "160 kmph",
         ],
-        correct: 2,
-        explanation: "Standard IV(R) permits a maximum speed of 140 kmph.",
+        correct: 3,
+        explanation: "Standard IV(R) permits a maximum speed of 160 kmph.",
       },
       {
-        question: "An extended track of minimum 180 m used to isolate the main line from the loop line is called ________.",
+        question: "An extended portion of track of minimum 180m used to isolate main line from loop line and can be an efficient substitute for signal overlp is known as _______________.",
         options: [
           "Snag Dead End",
           "Sand Hump",
@@ -3282,7 +3328,7 @@ export const operatingManualQuizzes = {
         explanation: "A Snag Dead End acts as an efficient substitute for signal overlap.",
       },
       {
-        question: "An extended rail embedded in sand for 60 m with an increasing gradient is called ________.",
+        question: "An extended portion of rail embedded in sand of 60m in length with increasing gradient of 1 in 60 of which first 30m is laid with normal track embedded in sand and remaining an earthen lump of 4m width is known as ______.",
         options: [
           "Snag Dead End",
           "Sand Hump",
@@ -3293,7 +3339,7 @@ export const operatingManualQuizzes = {
         explanation: "A Sand Hump safely arrests runaway vehicles.",
       },
       {
-        question: "The length of a Sand Hump is ________.",
+        question: "Sand hump is an extended portion of rail embedded in sand of ____ in length with increasing gradient of 1 in 60",
         options: [
           "20 m",
           "40 m",
@@ -3304,7 +3350,7 @@ export const operatingManualQuizzes = {
         explanation: "A standard Sand Hump is 60 metres long.",
       },
       {
-        question: "The gradient of a Sand Hump is ________.",
+        question: "Sand hump is an extended portion of rail embedded in sand of 60 M in length with increasing gradient of ______",
         options: [
           "1 in 100",
           "1 in 90",
@@ -3315,7 +3361,7 @@ export const operatingManualQuizzes = {
         explanation: "A Sand Hump is provided with a gradient of 1 in 60.",
       },
       {
-        question: "A single rail cut point provided to isolate a running line from a non-running line is called ________.",
+        question: "A single rail cut point provided to isolate running line from non running line and when vehicle moves over it if it is open the vehicle derails is known as ___________",
         options: [
           "Snag Dead End",
           "Sand Hump",
@@ -3326,7 +3372,7 @@ export const operatingManualQuizzes = {
         explanation: "Trap Points derail vehicles if they move unintentionally.",
       },
       {
-        question: "A log covered with iron sheets placed across the rail to prevent rolling vehicles is called ________.",
+        question: "A lump of log covered with iron sheets and coloured red, connected with a chain tied up on the earth and placed across the rail and locked to prevent vehicles moving away used normally to isolate running line from non-running line is _________",
         options: [
           "Scotch Block",
           "Sand Hump",
@@ -3337,7 +3383,7 @@ export const operatingManualQuizzes = {
         explanation: "A Scotch Block is used to secure vehicles on non-running lines.",
       },
       {
-        question: "A device designed to derail free-rolling wagons by lifting the wheel flange is called ________.",
+        question: "A device designed to limit the movement of free rolling, uncontrolled wagons/vehicles accomplished by grinding the flange of a wheel up and over the railhead, dropping the wheel clear of the rail on outside of the rails is ___________",
         options: [
           "Scotch Block",
           "Hayes Derail",
@@ -3348,15 +3394,15 @@ export const operatingManualQuizzes = {
         explanation: "Hayes Derail prevents uncontrolled wagon movement.",
       },
       {
-        question: "An extended track about 15 feet long ending with sand to isolate the main line is known as ________.",
+        question: "An extended portion of track about 15feet from points ending with some sand to isolate main line from loop line and an efficient substitute for signal overlap and when vehicle moves it will derail on the sand is known as ____________",
         options: [
           "Scotch Block",
           "Hayes Derail",
           "Derailing Switch",
           "Snag Dead End",
         ],
-        correct: 3,
-        explanation: "A Snag Dead End isolates the running line from loop lines.",
+        correct: 2,
+        explanation: "A Derailing Switch isolates the running line from loop lines.",
       },
       {
         question: "EGGN button is used for ________.",
@@ -3366,8 +3412,8 @@ export const operatingManualQuizzes = {
           "Emergency sub-route release",
           "Emergency signal",
         ],
-        correct: 1,
-        explanation: "EGGN is the Emergency Full Route Release button.",
+        correct: 3,
+        explanation: "EGGN is the Emergency Signal button.",
       },
       {
         question: "EUUYN button is used for ________.",
@@ -3377,8 +3423,8 @@ export const operatingManualQuizzes = {
           "Emergency sub-route release",
           "Emergency signal",
         ],
-        correct: 2,
-        explanation: "EUUYN is the Emergency Sub-route Release button.",
+        correct: 1,
+        explanation: "EUUYN is the Emergency Full Route Release button.",
       },
       {
         question: "WN button is a ________.",
@@ -3443,8 +3489,8 @@ export const operatingManualQuizzes = {
           "GN & UN",
           "GN & EGGN",
         ],
-        correct: 2,
-        explanation: "GN followed by the concerned UN button restores the signal to ON.",
+        correct: 3,
+        explanation: "EGGN followed by the concerned UN button restores the signal to ON.",
       },
       {
         question: "To take OFF a signal in an SSI panel, press ________.",
@@ -3461,7 +3507,7 @@ export const operatingManualQuizzes = {
         'chapter-14': [
           
             {
-              question: "The object of issuing __________ is to inform all staff concerned with working of trains about the special features of the station to ensure safe train operations.",
+              question: "The object of issuing____________is to inform all staff concerned with working of trains about the special features of the station to ensure safe train operations at & between stations including level crossings, depending on local conditions.",
               options: [
                 "Station Working Rules",
                 "Gate Working Rules",
@@ -3483,7 +3529,7 @@ export const operatingManualQuizzes = {
               explanation: "Sr.DOM/DOM and Sr.DSTE/DSTE",
             },
             {
-              question: "__________ will prepare/amend the Rule Diagram on the basis of signalling plan/appendices and send it to Sr.DOM/DOM for framing SWRs.",
+              question: "______will prepare/amend the Rule Diagram on the basis of signalling plan/appendices and send the Rule Diagram and also signalling plan/ appendices in case of interlocked station, to the Sr.DOM/DOM for framing Station Working Rules.",
               options: [
                 "Sr.DSTE/DSTE",
                 "TI/SWR",
@@ -3494,7 +3540,7 @@ export const operatingManualQuizzes = {
               explanation: "Sr.DSTE/DSTE",
             },
             {
-              question: "The Sr.DOM/DOM will arrange for preparation of the Draft Working Rules by the ________.",
+              question: "The Sr.DOM/DOM will arrange for preparation of the Draft Working Rules by the _________in the Standard Format, after which these will be checked and approved by the Sr.DOM/DOM personally. In case of interlocked stations the Draft Working Rules shall be checked and approved by Sr.DSTE/DSTE. Sr.DEE/DEE (TRD) shall also be associated in electrified sections.",
               options: [
                 "TI/Concerned Section",
                 "TI/General",
@@ -3505,7 +3551,7 @@ export const operatingManualQuizzes = {
               explanation: "TI/SWR",
             },
             {
-              question: "If there is a 'D' (_____) and 'DK' (_____) between two Block Stations, the SWRs shall contain reference to such stations.",
+              question: "If there is a ‗D‘ (_____) and ‗DK‘ (______________) between two Block Stations, the SWRs of the Block Stations on either side shall contain a reference to such D/DK class Station in SWR.",
               options: [
                 "Station, Station with siding",
                 "Flag Station, Station with coaching siding",
@@ -3516,7 +3562,7 @@ export const operatingManualQuizzes = {
               explanation: "Flag Station, Station with siding",
             },
             {
-              question: "The SWRs should be reviewed once in every __________.",
+              question: "The SWRs should be reviewed once in every___________. In case the review brings out the necessity of carrying out changes, the SWRs should be re-issued.",
               options: [
                 "Four years",
                 "Five years",
@@ -3527,29 +3573,29 @@ export const operatingManualQuizzes = {
               explanation: "Five years",
             },
             {
-              question: "Whenever any addition/amendment is required in SWRs, the __________ should be replaced.",
+              question: "Whenever any addition/amendment is required to be made in the said rules, the ____________ by concerned officers on which the provisions requiring addition/amendment appears should be replaced.",
               options: [
                 "Entire page/pages duly signed",
                 "Relevant portion pasted and signed",
                 "Relevant portion of the page duly signed",
                 "Page/pages",
               ],
-              correct: 0,
-              explanation: "Entire page/pages duly signed",
+              correct: 1,
+              explanation: "Relevant portion pasted and signed",
             },
             {
-              question: "If SS/SM finds any discrepancy in the SWR, it should immediately be brought to the notice of the __________.",
+              question: "If SS/SM finds any discrepancy in the SWR, he shall immediately bring such discrepancies and difficulties to the notice of the________________.",
               options: [
                 "Sr.DOM/DOM or TI of the section",
                 "Sr.DOM/DOM",
                 "Sr.DOM/DOM and TI of the section",
                 "TI of the section",
               ],
-              correct: 0,
-              explanation: "Sr.DOM/DOM or TI of the section",
+              correct: 2,
+              explanation: "Sr.DOM/DOM and TI of the section",
             },
             {
-              question: "Before taking up duties independently, staff associated with train passing duties must sign a declaration in the __________.",
+              question: "Before taking up duties independently at the station staff associated with train passing duties, must sign a declaration in the ___________in token of having studied the SWRs, Rule Diagram and other instructions pertaining to their duties and understood the same.",
               options: [
                 "SWR",
                 "Acknowledgement Book",
@@ -3560,7 +3606,7 @@ export const operatingManualQuizzes = {
               explanation: "Assurance Register",
             },
             {
-              question: "In case of __________, the Station Manager shall explain SWRs and obtain acknowledgements in the Assurance Register.",
+              question: "In case of_______________, Station Manager in charge shall explain SWRs, Rule Diagram and their duties and obtain their acknowledgements in the Assurance Register as a token of their having understood the instructions and certify.",
               options: [
                 "Literate staff",
                 "Illiterate staff",
@@ -3571,7 +3617,7 @@ export const operatingManualQuizzes = {
               explanation: "Illiterate staff",
             },
             {
-              question: "SWR must be page numbered with station code and signed by DOM and DSTE at __________.",
+              question: "SWR must be page numbered with the station name code written on each page and signed on each page by the DOM and DSTE at ____",
               options: [
                 "Non-interlocked stations",
                 "Top of each page",
@@ -3582,7 +3628,7 @@ export const operatingManualQuizzes = {
               explanation: "Interlocked stations",
             },
             {
-              question: "SWR must be page numbered with station code and signed by DOM and DEN at __________.",
+              question: "SWR must be page numbered with the station name code written on each page and signed by the DOM and DEN at ____",
               options: [
                 "Non-interlocked stations",
                 "Top of each page",
@@ -3593,7 +3639,7 @@ export const operatingManualQuizzes = {
               explanation: "Non-interlocked stations",
             },
             {
-              question: "Temporary Working Order is issued by the __________ whenever pre-planned signalling, OHE or engineering work requires special safety precautions.",
+              question: "Temporary Working order is an embodiment of detailed instructions issued and circulated by the ________whenever any pre-planned work of signalling, electrical (OHE) or engineering department is to be executed, requiring special safety precautions to be observed by staff.",
               options: [
                 "DOM/DSTE",
                 "Sr.DOM/DOM",
@@ -3604,7 +3650,7 @@ export const operatingManualQuizzes = {
               explanation: "Sr.DOM/DOM",
             },
             {
-              question: "Working of level crossing gates is mentioned in __________ of Station Working Rules.",
+              question: "Working of level crossing gates is mentioned in ____________ ofStation working rules",
               options: [
                 "Appendix A",
                 "Appendix B",
@@ -3681,7 +3727,7 @@ export const operatingManualQuizzes = {
               explanation: "Appendix G",
             },
             {
-              question: "Station Working Rule Diagram is mentioned in __________.",
+              question: "Station working rule diagram is mentioned in ________ of Station working rules",
               options: [
                 "Chapter I",
                 "Chapter II",
@@ -3692,7 +3738,7 @@ export const operatingManualQuizzes = {
               explanation: "Chapter I",
             },
             {
-              question: "Description of station is mentioned in __________ of SWRs.",
+              question: "Description of station is mentioned in ________ of Station working rules",
               options: [
                 "Chapter I",
                 "Chapter II",
@@ -3703,7 +3749,7 @@ export const operatingManualQuizzes = {
               explanation: "Chapter II",
             },
             {
-              question: "System of train working is mentioned in __________ of SWRs.",
+              question: "System of train working is mentioned in ________ of Station working rules",
               options: [
                 "Chapter I",
                 "Chapter II",
@@ -3714,7 +3760,7 @@ export const operatingManualQuizzes = {
               explanation: "Chapter VI",
             },
             {
-              question: "Blocking of line is mentioned in __________ of SWRs.",
+              question: "Blocking of line is mentioned in ________ of Station working rules",
               options: [
                 "Chapter I",
                 "Chapter II",
@@ -3725,7 +3771,7 @@ export const operatingManualQuizzes = {
               explanation: "Chapter VII",
             },
             {
-              question: "Shunting is mentioned in __________ of SWRs.",
+              question: "Shunting is mentioned in ________ of Station working rules",
               options: [
                 "Chapter VIII",
                 "Chapter IX",
@@ -3736,7 +3782,7 @@ export const operatingManualQuizzes = {
               explanation: "Chapter VIII",
             },
             {
-              question: "Abnormal conditions are mentioned in __________ of SWRs.",
+              question: "Abnormal conditions is mentioned in ________ of Station working rules",
               options: [
                 "Chapter VIII",
                 "Chapter IX",
@@ -3747,7 +3793,7 @@ export const operatingManualQuizzes = {
               explanation: "Chapter IX",
             },
             {
-              question: "Visibility test object is mentioned in __________ of SWRs.",
+              question: "Visibility test object is mentioned in ________ of Station working rules",
               options: [
                 "Chapter VIII",
                 "Chapter IX",
@@ -3758,7 +3804,7 @@ export const operatingManualQuizzes = {
               explanation: "Chapter X",
             },
             {
-              question: "Fog signal men nominated to be called in case of fog are mentioned in __________ of SWRs.",
+              question: "Fog signal men nominated to be called in case of fog are mentioned in ________ of Station working rules",
               options: [
                 "Chapter VIII",
                 "Chapter IX",
@@ -3795,18 +3841,18 @@ export const operatingManualQuizzes = {
               explanation: "N.I. Working",
             },
             {
-              question: "At the project proposal stage itself, __________ should make it clear whether the project requires NI working and its duration.",
+              question: "At the project proposal stage itself, _________________should make it clear whether the project requires NI or not; and if it does, the duration of such NI.",
               options: [
                 "Operating Department",
                 "S&T Department",
                 "Engineering Department",
                 "Electrical Department",
               ],
-              correct: 2,
-              explanation: "Engineering Department",
+              correct: 1,
+              explanation: "S&T Department",
             },
             {
-              question: "____________ must quantify anticipated losses on account of Non-Interlocked working.",
+              question: "_________________must quantify anticipated losses on account of Non interlocked working due to cancellation, short termination, diversion, rescheduling, detention to trains and imposition of restriction on booking/movement of freight traffic",
               options: [
                 "Sr.DOM",
                 "Sr.DCM",
@@ -3817,7 +3863,7 @@ export const operatingManualQuizzes = {
               explanation: "Sr.DOM & Sr.DCM",
             },
             {
-              question: "For NI working of up to 3 days, plans will be finalized in consultation with __________, Branch Officers and concerned HOD of Construction/RE Organization.",
+              question: "For NI working of up to 3 days, plans will be finalized in consultation with____________, Branch Officers and concerned HOD of Construction/RE Organization.",
               options: [
                 "DRM",
                 "Sr.DSO",
@@ -3828,7 +3874,7 @@ export const operatingManualQuizzes = {
               explanation: "DRM",
             },
             {
-              question: "For NI working of more than 3 days, plans will be finalized in consultation with __________ and HOD of RE/Construction Organization at Zonal level.",
+              question: "For NI working of more than 3 days, plans will be finalized in consultation with ___________and HOD of RE/Construction Organization at Zonal level to assess the duration and arrangements of NI working.",
               options: [
                 "CTPM",
                 "CTPM & CPTM",
@@ -3839,7 +3885,7 @@ export const operatingManualQuizzes = {
               explanation: "CTPM & CPTM",
             },
             {
-              question: "For NI working of more than 7 days, personal approval of the __________ must be obtained.",
+              question: "For NI working of more than 7 days personal approval of the _______________must be obtained.",
               options: [
                 "Railway Board",
                 "AGM",
@@ -3861,7 +3907,7 @@ export const operatingManualQuizzes = {
               explanation: "14 days",
             },
             {
-              question: "All changes in yard layout, insertion/removal of points & crossings etc. should be completed in the __________.",
+              question: "All changes in yard layout, insertion /removal of points & crossings etc. Changing/installation of new point machines must be done in advance in the _________ that can be carried out without non – interlocking.",
               options: [
                 "Pre-NI work",
                 "Post NI work",
@@ -3872,7 +3918,7 @@ export const operatingManualQuizzes = {
               explanation: "Pre-NI work",
             },
             {
-              question: "Preparatory work in connection with OHE must also include shifting of __________, if required.",
+              question: "Preparatory work in connection with OHE work must also be done in advance, including shifting of__________, if required.",
               options: [
                 "Sub-section",
                 "Neutral section",
@@ -3883,26 +3929,26 @@ export const operatingManualQuizzes = {
               explanation: "Neutral section",
             },
             {
-              question: "Construction officials should send a circular notice to Sr.DOM/Sr.DSO at least __________ in advance.",
+              question: "Construction officials responsible for carrying out the NI work should send a ‗circular notice‘ to the Sr. DOM/Sr. DSO at least ___________in advance.",
               options: [
                 "15 days",
                 "One month",
                 "Two months",
                 "Three months",
               ],
-              correct: 1,
-              explanation: "One month",
+              correct: 2,
+              explanation: "Two months",
             },
             {
-              question: "During NI working, one goomty should be made for a maximum of __________ operated from the ground.",
+              question: "During NI working, for a group of maximum of ________operated from the ground, one goomty should be made.",
               options: [
                 "One set of points",
                 "Two sets of points",
                 "Three sets of points",
                 "Four sets of points",
               ],
-              correct: 1,
-              explanation: "Two sets of points",
+              correct: 2,
+              explanation: "Three sets of points",
             },
             {
               question: "During NI working, both ends of the same points/crossings should be with __________.",
@@ -3927,7 +3973,7 @@ export const operatingManualQuizzes = {
               explanation: "One ASM and Two Pointsmen",
             },
             {
-              question: "A group of four or more goomties should be under the charge of a __________ in each shift.",
+              question: "A group of four goomties or more at each end of the station should be put in one zone. Each zone should be under the charge of a ____________in each shift.",
               options: [
                 "SM",
                 "AOM",
@@ -3938,7 +3984,7 @@ export const operatingManualQuizzes = {
               explanation: "Traffic Inspector (TI)",
             },
             {
-              question: "__________ is basically meant to replace some portion of Station Working Rules during NI working.",
+              question: "________is basically meant to replace some portion of Station Working Rules of the station during the period of NI working.",
               options: [
                 "Temporary Working Instructions",
                 "Temporary Instructions",
@@ -3949,7 +3995,7 @@ export const operatingManualQuizzes = {
               explanation: "Temporary Working Instructions",
             },
             {
-              question: "Detailed working instructions must be issued at least __________ before NI working.",
+              question: "Detailed working instructions clearly specifying the zone of responsibility of each and every staff and supervisor along with temporary working instructions must be issued at least ___________in advance of NI working",
               options: [
                 "05 days",
                 "10 days",
@@ -3960,18 +4006,18 @@ export const operatingManualQuizzes = {
               explanation: "10 days",
             },
             {
-              question: "Normal/Reverse position of points should be painted on the __________ during NI working.",
+              question: "Normal/reverse position of points should be painted on _________to indicate position of the set line during NI working.",
               options: [
                 "Stock rail",
                 "Crossing nose",
                 "Point machine",
                 "Tongue rail",
               ],
-              correct: 0,
-              explanation: "Stock rail",
+              correct: 3,
+              explanation: "Tongue rail",
             },
             {
-              question: "Before actual NI working starts, a __________ demonstration/training should be given to all staff.",
+              question: "Before starting actual non-interlocked working, a __________demonstration/training should be given to all staff for at least 1 to 3 days in advance (depending on the size of the station) to familiarize them with the type of work.",
               options: [
                 "Mock drill",
                 "Ambush drill",
@@ -3982,7 +4028,7 @@ export const operatingManualQuizzes = {
               explanation: "Mock drill",
             },
             {
-              question: "No staff should be deployed during NI working unless proper entries are made in the __________.",
+              question: "No staff should be deployed during NI working unless proper entries are made in the ____________and relevant signatures obtained.",
               options: [
                 "Attendance Register",
                 "Assurance Register",
@@ -3993,7 +4039,7 @@ export const operatingManualQuizzes = {
               explanation: "Assurance Register",
             },
             {
-              question: "Arrangements for __________ should be made and __________ must be provided on each goomty for announcements.",
+              question: "Arrangements for ____________should also be made so that the same can be used for warning the public etc. __________ must be provided on each goomty for making announcements regarding train movement.",
               options: [
                 "Public Address System, Phones",
                 "Public Address System, Loud Speakers",
@@ -4004,7 +4050,7 @@ export const operatingManualQuizzes = {
               explanation: "Public Address System and Loud Speakers",
             },
             {
-              question: "Before permitting introduction of NI working, __________ will satisfy himself regarding staff, safety equipment, lighting and communication arrangements.",
+              question: "Before permitting introduction of NI working _______________will satisfy himself regarding arrangement of staff, safety equipment, lighting, telecommunication and ground position.",
               options: [
                 "Sr.DOM",
                 "Sr.DSO",
@@ -4015,7 +4061,7 @@ export const operatingManualQuizzes = {
               explanation: "DRM/ADRM",
             },
             {
-              question: "On the notified day for introduction of NI working, the Signal Inspector shall give a general __________ for gears proposed for NI working.",
+              question: "On the notified day, for introduction of NI working, Signal Inspector concerned shall give a general ________________for gears proposed for NI workinng.",
               options: [
                 "Disconnection Memo",
                 "Reconnection Memo",
@@ -4026,18 +4072,18 @@ export const operatingManualQuizzes = {
               explanation: "Disconnection Memo",
             },
             {
-              question: "During NI working, speed restriction of __________ must be enforced over all points and crossings and a speed restriction board of __________ must be exhibited.",
+              question: "During NI working at stations, Speed restriction of ___________. must be in force over all points and crossings. Speed restriction Board of _______. must be exhibited at the foot of the first stop signal.",
               options: [
                 "15 kmph, 30 kmph",
                 "15 kmph, 15 kmph",
                 "10 kmph, 20 kmph",
                 "30 kmph, 15 kmph",
               ],
-              correct: 0,
-              explanation: "15 kmph over points & crossings with 30 kmph speed restriction board.",
+              correct: 1,
+              explanation: "15 kmph over points & crossings with 15 kmph speed restriction board.",
             },
             {
-              question: "During NI working, the last stop signal should not be disconnected except at the __________.",
+              question: "During NI working at stations, Last stop signal should not be disconnected throughout NI working except at the_________.",
               options: [
                 "Starting of NI",
                 "End of NI",
@@ -4048,7 +4094,7 @@ export const operatingManualQuizzes = {
               explanation: "Fag end of NI",
             },
             {
-              question: "During NI working, an incoming Loco Pilot must not pass the outermost facing points unless a __________ is exhibited.",
+              question: "During NI working at stations, Loco pilot of an incoming train must not under any circumstances pass the outermost facing points even though signals have been taken off ______________is exhibited towards him from the points",
               options: [
                 "Hand Signal",
                 "Proceed with Caution",
@@ -4059,7 +4105,7 @@ export const operatingManualQuizzes = {
               explanation: "Proceed Hand Signal",
             },
             {
-              question: "After NI working is completed, the installation shall jointly be tested by __________.",
+              question: "After NI working at stations is completed, the installation shall jointly be tested by Traffic, S&T and Engg. officials and for their correct functioning.",
               options: [
                 "Traffic & Engineering Officials",
                 "Traffic, S&T & Engineering Officials",
@@ -4070,7 +4116,7 @@ export const operatingManualQuizzes = {
               explanation: "Traffic, S&T & Engineering Officials",
             },
             {
-              question: "After NI working, Engineering and S&T officers shall give a __________ stating that all approved works are completed.",
+              question: "After NI working at stations, Engineering and S&T officers shall give a ______________stating that all works as per the approved plan are completed.",
               options: [
                 "Certificate",
                 "Memo",
@@ -4081,7 +4127,7 @@ export const operatingManualQuizzes = {
               explanation: "Certificate",
             },
             {
-              question: "Within __________ of completion of NI, a brainstorming session should be held to review lessons learnt.",
+              question: "Within _____________ of completion of NI, a brain storming session should be held with all the senior supervisors involved for taking stock of lessons learnt.",
               options: [
                 "03 days",
                 "05 days",
@@ -4096,7 +4142,7 @@ export const operatingManualQuizzes = {
         'chapter-16': [
           
             {
-              question: "The __________________ are based on four factors Quantity, Distance, Duration and Service.",
+              question: "The __________________are based on four factors Quantity, Distance, Duration and service.",
               options: [
                 "Statistics",
                 "Managerial reports",
@@ -4107,7 +4153,7 @@ export const operatingManualQuizzes = {
               explanation: "Railway statistics",
             },
             {
-              question: "In railway statistics _________ is expressed as tonnes, number of passengers carried and earnings derived.",
+              question: "In railway statistics _________ expressed as tonnes and number of passenger carried and earnings derived.",
               options: [
                 "Distance",
                 "Quantity",
@@ -4151,18 +4197,18 @@ export const operatingManualQuizzes = {
               explanation: "Service performed",
             },
             {
-              question: "Relationship between primary units, expressed in composite terms is called ________.",
+              question: "Relationship between primary units, expressed in composite terms is called ‗___________________.",
               options: [
                 "Primary unit",
                 "Fundamental units",
                 "Derived unit",
                 "Composite unit",
               ],
-              correct: 3,
-              explanation: "Composite unit",
+              correct: 1,
+              explanation: "Fundamental unit",
             },
             {
-              question: "The relationship that exists between two sets of primary or fundamental units and the result thus arrived is termed ________.",
+              question: "The relationship that exists between two sets of primary or fundamental units and the results thus arrived is termed ________",
               options: [
                 "Primary unit",
                 "Fundamental units",
@@ -4173,18 +4219,18 @@ export const operatingManualQuizzes = {
               explanation: "Derived unit",
             },
             {
-              question: "Passenger kilometres, Train-kilometres, Wagon-kilometres, Engine hours and Wagon days are examples of ________.",
+              question: "Passenger kilometres, Train-kilometres, Wagon-kilometres, Engine hours, Wagon days etc. are examples of",
               options: [
                 "Primary unit",
                 "Fundamental units",
                 "Derived unit",
                 "Composite unit",
               ],
-              correct: 3,
-              explanation: "Composite unit",
+              correct: 1,
+              explanation: "Fundamental units",
             },
             {
-              question: "Wagon kilometres per wagon day is an example of ________.",
+              question: "Wagon kilometres per wagon day is examples of ‗______________‘.",
               options: [
                 "Primary unit",
                 "Fundamental units",
@@ -4250,7 +4296,7 @@ export const operatingManualQuizzes = {
               explanation: "Operating Ratio",
             },
             {
-              question: "The formula (RT + NLT × 100) / Total number of Passenger trains is used for calculating ________.",
+              question: "The formula (RT + NLTx 100) / Total no. of Passenger trains (RT = Trains arriving Right Time; NLT = Trains not loosing time) is for calculation of",
               options: [
                 "Coaching performance",
                 "Punctuality",
@@ -4261,7 +4307,7 @@ export const operatingManualQuizzes = {
               explanation: "Punctuality",
             },
             {
-              question: "In the formula for punctuality, RT denotes ________.",
+              question: "The formula Punctuality = (RT + NLTx 100) / Total no. of Passenger trains RT denotes",
               options: [
                 "Trains arriving Right Time",
                 "Trains not losing time",
@@ -4272,7 +4318,7 @@ export const operatingManualQuizzes = {
               explanation: "Trains arriving Right Time",
             },
             {
-              question: "In the formula for punctuality, NLT denotes ________.",
+              question: "The formula (RT + NLTx 100) / Total no. of Passenger trains NLT denotes",
               options: [
                 "Trains arriving Right Time",
                 "Trains not losing time",
@@ -4283,7 +4329,7 @@ export const operatingManualQuizzes = {
               explanation: "Trains not losing time",
             },
             {
-              question: "This figure indicates the extent to which coaching vehicles are kept 'on the move'.",
+              question: "This figure indicating the extent to which coaching vehicles are kept ‗on the move‘.",
               options: [
                 "Vehicle services per day",
                 "Vehicle run per day",
@@ -4294,7 +4340,7 @@ export const operatingManualQuizzes = {
               explanation: "Vehicle Kilometres per Vehicle Day",
             },
             {
-              question: "The main factors affecting Vehicle Kilometres per Vehicle Day are ________.",
+              question: "The main factors affecting Vehicle Kilometres per Vehicles Day value are ________.",
               options: [
                 "Average speed of trains",
                 "Average length of train run",
@@ -4305,7 +4351,7 @@ export const operatingManualQuizzes = {
               explanation: "All the above",
             },
             {
-              question: "The figure measuring wagon mobility and indicating the average kilometres moved by a wagon per day is known as ________.",
+              question: "The figure to measure wagon mobility and indicates the average number of kilometres moved by a wagon, on the average, per day, both loaded and empty journeys being included is known as ________.",
               options: [
                 "Wagon Kilometres per Wagon Day",
                 "Wagons dealt per wagon day",
@@ -4316,7 +4362,7 @@ export const operatingManualQuizzes = {
               explanation: "Wagon Kilometres per Wagon Day",
             },
             {
-              question: "The unit of measurement of the revenue earning work done by wagons, reflecting both mobility and loading, is ________.",
+              question: "The unit of measure of the revenue earning work done by the wagons and reflects both mobility and loading ________.",
               options: [
                 "Tonne KM per wagon hours",
                 "Net Tonne Kilometres per Wagon Day",
@@ -4327,7 +4373,7 @@ export const operatingManualQuizzes = {
               explanation: "Net Tonne Kilometres per Wagon Day",
             },
             {
-              question: "The statistics target set for each yard for detention suffered by stock depending on yard layout and trains handled is known as ________.",
+              question: "The statistics target set for each yard for detention suffered by stock in a yard depending, on the layout of the yard and on the number of trains per day that can be despatched in various directions is known as ________.",
               options: [
                 "Average Detention per Wagon",
                 "Detention per wagon",
@@ -4338,7 +4384,7 @@ export const operatingManualQuizzes = {
               explanation: "Average Detention per Wagon",
             },
             {
-              question: "Engine Kilometres per Day per Engine in Use is compiled separately for ________ train services.",
+              question: "Engine Kilometres per Day per Engine in Use is compiled separately for ________________train services",
               options: [
                 "Passenger & Goods",
                 "Passenger, Mixed and Goods",
@@ -4364,7 +4410,7 @@ export const operatingManualQuizzes = {
         'chapter-17': [
           
             {
-              question: "A total transparent system with continuous cargo visibility and an up-to-date business environment providing customers instant access to information regarding their consignments in transit for 'Just in Time Inventory' is ________.",
+              question: "A Total transparent system with continuous Cargo visibility and an up-to date business environment to the Customers with instant access to information regarding their consignments in transit for just in time inventory‘ is ________.",
               options: [
                 "Freight Operations System",
                 "Operation Information System",
@@ -4375,7 +4421,7 @@ export const operatingManualQuizzes = {
               explanation: "Freight Operations Information System (FOIS)",
             },
             {
-              question: "A management online real-time system tool to optimize utilization of costly assets and resources by improving distribution of rakes/wagons and locos, and scheduling and routing traffic is known as ________.",
+              question: "A management On-line Real-Time system tool to optimize utilization of costly assets and resources by improving distribution of Rakes/Wagons & Locos, and also scheduling and Routing Traffic in an optimized cost effective manner is known as ________.",
               options: [
                 "Freight Operations Information System",
                 "Operation Information System",
@@ -4386,7 +4432,18 @@ export const operatingManualQuizzes = {
               explanation: "Freight Operations Information System (FOIS)",
             },
             {
-              question: "The operations and data capturing will remain ________ for train, rake, locomotive and stock management.",
+              question: "The modules available in FOIS are ________.",
+              options: [
+                "Only RMS",
+                "Only TMS",
+                "Only CMS",
+                "Only TMS & RMS",
+              ],
+              correct: 3,
+              explanation: "Only TMS & RMS",
+            },
+            {
+              question: "The operations and data capturing, will remain ____________for train, rake locomotive and stock management taking into account the spatial distribution of activities, which need to be captured.",
               options: [
                 "Station centric",
                 "Control centric",
@@ -4397,7 +4454,7 @@ export const operatingManualQuizzes = {
               explanation: "Control centric",
             },
             {
-              question: "The operations and data capturing will remain ________ for booking, loading, unloading and delivery.",
+              question: "The operations and data capturing, will remain terminal centric for booking, loading, unloading, and delivery taking into account the spatial distribution of activities, which need to be captured.",
               options: [
                 "Station centric",
                 "Control centric",
@@ -4408,7 +4465,7 @@ export const operatingManualQuizzes = {
               explanation: "Terminal centric",
             },
             {
-              question: "Application servers of FOIS are centrally placed at ________.",
+              question: "Application servers of FOIS are centrally placed at _______and these servers are connected to the Zonal Hd. Qrs., Divisional Control Offices, yards, interchange points, and good sheds etc., with a reliable and integrated network.",
               options: [
                 "Railways Information System",
                 "IRCTC",
@@ -4419,7 +4476,7 @@ export const operatingManualQuizzes = {
               explanation: "Centre for Railway Information Systems (CRIS)",
             },
             {
-              question: "The central server of FOIS at ________ provides management reports at Board level.",
+              question: "The central Server of FOIS at ____________provides management Reports at board level and acts as repository of all the global data and also provides global services to maintain referential integrity of the databases including master files.",
               options: [
                 "IRCTC",
                 "CRIS",
@@ -4430,15 +4487,15 @@ export const operatingManualQuizzes = {
               explanation: "CRIS",
             },
             {
-              question: "Train Ordering, Train Departure, Train Arrival, Train Run-through and Train Re-routing are online reporting tasks in ________.",
+              question: "Train Ordering, Train Departure, Train Arrival, Train Run-through and Train rerouting are the tasks for online reporting of train cycle in _________",
               options: [
                 "TMS",
                 "RMS",
                 "CMS",
                 "ICMS",
               ],
-              correct: 0,
-              explanation: "TMS (Train Management System)",
+              correct: 1,
+              explanation: "RMS (Rake Management System)",
             },
             {
               question: "Load Related, Vehicle Guidance Related, Rake Related and Loco Related tasks are online reporting tasks of yard cycle in ________.",
@@ -4452,7 +4509,7 @@ export const operatingManualQuizzes = {
               explanation: "RMS (Rake Management System)",
             },
             {
-              question: "In RMS yard cycle, ________ includes online reporting of inward number taking, load planning, load stabling and load diversion/termination/extension.",
+              question: "In yard cycle of RMS ____________ includes online reporting of Inward Number Taking, Load Planning, Load Stabling, Load Diversion/Termination/Extension",
               options: [
                 "Load Related Tasks",
                 "Vehicle Guidance Tasks",
@@ -4463,7 +4520,7 @@ export const operatingManualQuizzes = {
               explanation: "Load Related Tasks",
             },
             {
-              question: "In RMS yard cycle, ________ includes online reporting of consist of the rakes.",
+              question: "In yard cycle of RMS ____________ includes online reporting of consist of the rakes",
               options: [
                 "Load Related Tasks",
                 "Vehicle Guidance Tasks",
@@ -4474,7 +4531,7 @@ export const operatingManualQuizzes = {
               explanation: "Vehicle Guidance Tasks",
             },
             {
-              question: "In RMS yard cycle, ________ includes online reporting of rake formation, movement order and rake placement/release.",
+              question: "In yard cycle of RMS ____________ includes online reporting of rake formation, movement order, rake placement/release",
               options: [
                 "Load Related Tasks",
                 "Vehicle Guidance Tasks",
@@ -4485,7 +4542,7 @@ export const operatingManualQuizzes = {
               explanation: "Rake Related Tasks",
             },
             {
-              question: "In RMS yard cycle, ________ includes online reporting of attachment/detachment of locos, loco reporting and light engine.",
+              question: "In yard cycle of RMS ____________ includes online reporting of attachment/detachment of locos, loco reporting, light engine",
               options: [
                 "Load Related Tasks",
                 "Vehicle Guidance Tasks",
@@ -4496,7 +4553,7 @@ export const operatingManualQuizzes = {
               explanation: "Loco Related Tasks",
             },
             {
-              question: "In RMS, new demand, modify demand, add/delete demand, fulfilling demand and forfeiture/withdrawal of demand are reported ________.",
+              question: "In RMS the new demand, modify demand, add/delete demand, fulfilling demand, forfeiture/withdrawal of demand is to be reported ________where the party/consignor registers his Demand for supply of Rake/Piecemeal wagon for loading of goods",
               options: [
                 "At station",
                 "At goods shed",
@@ -4507,7 +4564,7 @@ export const operatingManualQuizzes = {
               explanation: "At terminal",
             },
             {
-              question: "Forecast can be reported by selecting trains from the pipeline generated from originating station to destination. The task used is ________ reporting task.",
+              question: "Forecast can be reported by selecting trains from the pipeline generated from Originating Station to destination and the position shown at the interchange point. The task used is ______________reporting task.",
               options: [
                 "Interchange Position",
                 "Interchange Forecast",
@@ -4518,18 +4575,18 @@ export const operatingManualQuizzes = {
               explanation: "Interchange Forecast",
             },
             {
-              question: "In FOIS, ________ includes Rake Related, Load Related, Train Related, Loco Related and Roadside/Piecemeal Wagon Related tasks.",
+              question: "In FOIS ____________ includes Rake Related , Load Related, Train Related, Loco Related, Roadside/Piecemeal Wagons Related Tasks are fields required for online reporting in the system.",
               options: [
                 "Interchange Position",
                 "Interchange Forecast",
                 "Review Forecast",
                 "Forecast Position",
               ],
-              correct: 3,
-              explanation: "Forecast Position",
+              correct: 1,
+              explanation: "Interchange Position",
             },
             {
-              question: "The RMS conference set report giving desktop summarized view of forecast and interchange of current date is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives desktop summarized view of forecast & interchange of current date. It is updated by I/C forecast and arr. /dep reporting task.",
               options: [
                 "Running Interchange",
                 "Current Interchange",
@@ -4540,7 +4597,7 @@ export const operatingManualQuizzes = {
               explanation: "Interchange Forecast Summary",
             },
             {
-              question: "The RMS conference set report giving detailed view of forecast, interchange and running position of forecasted trains is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives detailed view of forecast & interchange and also gives running position of trains forecasted. It is updated by I/C forecast and arr. /dep.reporting task.",
               options: [
                 "Running Interchange",
                 "Current Interchange",
@@ -4551,7 +4608,7 @@ export const operatingManualQuizzes = {
               explanation: "Running Interchange",
             },
             {
-              question: "The RMS conference set report giving summary information of interchange with breakup of empties and loaded stock is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives summary information of interchange with break-up of empties and loaded stock, stock (4w) interchanged. It also provides summary of jumbo and box rakes interchange It is updated by I/C forecast and arr. /dep. reporting task",
               options: [
                 "Running Interchange",
                 "Current Interchange",
@@ -4562,7 +4619,7 @@ export const operatingManualQuizzes = {
               explanation: "Current Interchange",
             },
             {
-              question: "The RMS conference set report giving yesterday's interchange shortfall/excess with reasons is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives shortfall /excess of yesterday interchange along with reason of shortfall in despatch. It is updated by I/C forecast and arr. /dep. report task.",
               options: [
                 "Running Interchange",
                 "Current Interchange",
@@ -4573,7 +4630,7 @@ export const operatingManualQuizzes = {
               explanation: "Train Interchange Shortfall",
             },
             {
-              question: "The RMS conference set report that is an unstructured query for all loads on run in the system is ________.",
+              question: "Reports available in RMS module conference set in ______________ this is an unstructured query for all loads on run in the system. There are different filters available for viewing loads according to users requirements. It is updated by Load planning, Train ordering, arrival / departure reporting tasks.",
               options: [
                 "Traffic Flow",
                 "Loads on Run",
@@ -4584,7 +4641,7 @@ export const operatingManualQuizzes = {
               explanation: "Loads on Run",
             },
             {
-              question: "The RMS conference set report giving likely traffic flow through interchange points up to 3 days in advance is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives information regarding likely traffic flow interchange points upto 3 days in advance. It is updated by Load planning, Train ordering, arrival / departure reporting tasks.",
               options: [
                 "Traffic Flow",
                 "Loads on Run",
@@ -4595,7 +4652,7 @@ export const operatingManualQuizzes = {
               explanation: "Traffic Flow",
             },
             {
-              question: "The RMS conference set report giving division-wise, destination railway-wise view of all outward trains is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives division wise destination railway wise view of all outward trains on a zone. Filters for rake types, commodity are also available. It is updated by Load planning, arrival / departure reporting tasks.",
               options: [
                 "Traffic Flow",
                 "Loads on Run",
@@ -4606,7 +4663,7 @@ export const operatingManualQuizzes = {
               explanation: "Outward Train Railway Wise",
             },
             {
-              question: "The RMS conference set report displaying total rakes at terminals along with terminal insights is ________.",
+              question: "Reports available in RMS module conference set in ______________ displays total rakes at the terminals as well as the insight for those terminals. On selecting a cell relevant details rake wise are displayed. It is updated by arrival/departure reporting, I/w no. taking, Rake placement/rel tasks.",
               options: [
                 "Traffic Flow",
                 "Loads on Run",
@@ -4617,7 +4674,7 @@ export const operatingManualQuizzes = {
               explanation: "Terminal Position",
             },
             {
-              question: "The RMS conference set report giving breakup of rakes under U/R, U/L, O/W, I/W and Empty is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives break up of rakes over a division/zone Under following heads:U/R,U/L,O/W,I/W and Empty. It is updated by arrival / departure reporting, I/W no. taking, Rake placement /rel tasks",
               options: [
                 "Rake Integrity",
                 "Rake Position",
@@ -4628,7 +4685,7 @@ export const operatingManualQuizzes = {
               explanation: "Rake Position",
             },
             {
-              question: "The RMS conference set report giving details of attachment/detachment, sick reporting and examination of individual rakes is ________.",
+              question: "Reports available in RMS module conference set in ______________ gives details of all attachment/detachment/sick reporting on a individual rake on the selected zone. The examination & dissipation if done) is also shown. Further details can be seen after selecting a cell and pressing enter. It is updated by all rake reporting, consist reporting, and TXR examination",
               options: [
                 "Rake Integrity",
                 "Rake Position",
@@ -4639,7 +4696,7 @@ export const operatingManualQuizzes = {
               explanation: "Rake Integrity",
             },
             {
-              question: "The RMS conference set report displaying outstanding rake demands, rakes on hand and pipeline of terminating loads is ________.",
+              question: "Reports available in RMS module conference set in ______________ for a selected group rake type, division wise, outstanding rake demands, rakes on hand and pipeline of terminating loads are displayed. On selection of cell & pressing enter, details relevant to that cell are displayed.It is updated by Demand, rake placement/rel and arrival/departure task.",
               options: [
                 "Rake Integrity",
                 "Rake Position",
@@ -4654,7 +4711,7 @@ export const operatingManualQuizzes = {
         'chapter-18': [
           
             {
-              question: "For post facto analysis of punctuality loss and its causes, ________ module captures train running at originating/terminating and interchange points along with causes of detention.",
+              question: "For Post facto analysis of punctuality loss and its causes ________________module captures train running at Originating/ Terminating and interchange points and the causes of detention. Data input predominantly at Divisional HQ level",
               options: [
                 "COIS",
                 "CMM",
@@ -4665,7 +4722,7 @@ export const operatingManualQuizzes = {
               explanation: "PAM (Punctuality Analysis Module)",
             },
             {
-              question: "________ captures events on coaches/rakes and generates reports for management of coaching stock. Data input is predominantly at Station/Coaching Yard level.",
+              question: "___________________captures events on Coaches/Rakes, generates Reports for Management of Coaching Stock. Data input predominantly at Station/Coaching Yard level.",
               options: [
                 "COIS",
                 "CMM",
@@ -4676,7 +4733,7 @@ export const operatingManualQuizzes = {
               explanation: "COIS (Coaching Operations Information System)",
             },
             {
-              question: "________ captures depot activities related to coaching maintenance operations and serves as a utility tool for managers looking after mechanical and electrical maintenance.",
+              question: "_______________ capture depot activities related to coaching maintenance operations, Utility tool for managers looking after mechanical and electrical maintenance, Data input at CDO level.",
               options: [
                 "Coaching Operations Information System",
                 "Coaching Maintenance Module",
@@ -4687,7 +4744,7 @@ export const operatingManualQuizzes = {
               explanation: "Coaching Maintenance Module (CMM)",
             },
             {
-              question: "________ is comprehensive software for the automation of Control Charting at a Railway Divisional Control Office.",
+              question: "_______is comprehensive software for the automation of Control Charting at a railway divisional control office.",
               options: [
                 "Punctuality Analysis Module",
                 "Integrated Coaching Information System",
@@ -4714,7 +4771,7 @@ export const operatingManualQuizzes = {
        ],
       'chapter-20': [
         {
-          question: "___________ is a fully integrated Electronic Control System designed to minimize collisions and increase safety on Railway system",
+          question: "___________________ is a fully integrated Electronic Control System designed to minimize collisions and increase safety on Railway system.",
           options: [
             "Train collision system",
             "Collision Avoidance system",
