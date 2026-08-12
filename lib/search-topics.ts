@@ -133,11 +133,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules apar APAR",
   },
   {
-    href: "/topics/apar",
+    href: "/topics/establishment-rules/apar",
     title: "APAR",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics apar APAR",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules apar APAR annual performance appraisal report MACP benchmark",
   },
   {
     href: "/general-awareness/important-days/april",
@@ -287,6 +288,22 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness",
     keywords: "general awareness biosphere reserves Biosphere Reserves",
+  },
+  {
+    href: "/topics/operating-material/bell-codes",
+    title: "Bell Codes",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material bell codes Bell Codes 14.05 block signalling train communication strokes beats",
+  },
+  {
+    href: "/topics/operating-material/bell-signals",
+    title: "Bell Signals",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material bell signals Bell Signals loco pilot motorman guard codes acknowledgement",
   },
   {
     href: "/topics/operating-material/block-forward",
@@ -759,7 +776,8 @@ export const searchTopics: SearchTopic[] = [
     title: "Establishment Rules",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics establishment rules Establishment Rules",
+    keywords:
+      "topics establishment rules Establishment Rules APAR HRMS MACP Quarters Service Rules Staff Benefit Fund Transfers",
   },
   {
     href: "/general-awareness/world-information/europe-countries",
@@ -1054,11 +1072,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules hrms HRMS",
   },
   {
-    href: "/topics/hrms",
+    href: "/topics/establishment-rules/hrms",
     title: "HRMS",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics hrms HRMS",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules hrms HRMS human resource management system AIMS CRIS IPAS",
   },
   {
     href: "/topics/operating-material/intermediate-block-signal",
@@ -1130,6 +1149,21 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness",
     keywords: "general awareness indian penal code Indian Penal Code",
+  },
+  {
+    href: "/topics/indian-railways",
+    title: "Indian Railways",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics indian railways Indian Railways organization structure zones",
+  },
+  {
+    href: "/topics/indian-railways/railway-organization",
+    title: "Railway Organization",
+    category: "Study Topics",
+    parent: "Topics › Indian Railways",
+    keywords:
+      "topics indian railways railway organization Railway Organization structure zones divisions hierarchy",
   },
   {
     href: "/acts/indian-railways-act-1989",
@@ -1373,6 +1407,14 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material lurch Lurch S.R. 6.07 unsafe track conditions running trains flasher",
   },
   {
+    href: "/topics/operating-material/marker-boards",
+    title: "Marker Boards",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material marker boards Marker Boards A marker AG C G IB P S identification signals",
+  },
+  {
     href: "/topics/operating-material/marshalling",
     title: "Marshalling",
     category: "Study Topics",
@@ -1413,11 +1455,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics schemes lwis scheme LWIS Scheme",
   },
   {
-    href: "/topics/macp",
+    href: "/topics/establishment-rules/macp",
     title: "MACP",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics macp MACP",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules macp MACP modified assured career progression FUG pay matrix",
   },
   {
     href: "/general-awareness/states-information/madhya-pradesh",
@@ -1661,6 +1704,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material Operating Material authorised officer",
   },
   {
+    href: "/topics/operating-material/operating-authorities",
+    title: "Operating Authorities",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material operating authorities Operating Authorities forms T.369 T.409 T.602 T.912 PLCT caution order",
+  },
+  {
     href: "/quizzes/establishment-rules/ops",
     title: "OPS",
     category: "Quizzes",
@@ -1866,11 +1917,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information punjab Punjab",
   },
   {
-    href: "/topics/quarters",
+    href: "/topics/establishment-rules/quarters",
     title: "Quarters",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics quarters Quarters",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules quarters Quarters accommodation eligibility retention licence fee",
   },
   {
     href: "/quizzes",
@@ -2124,11 +2176,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness important days september September",
   },
   {
-    href: "/topics/service-rules",
+    href: "/topics/establishment-rules/service-rules",
     title: "Service Rules",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics service rules Service Rules",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules service rules Service Rules conduct conditions classification",
   },
   {
     href: "/general-awareness/sports/shooting",
@@ -2232,11 +2285,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports squash Squash",
   },
   {
-    href: "/topics/staff-benefit-fund",
+    href: "/topics/establishment-rules/staff-benefit-fund",
     title: "Staff Benefit Fund",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics staff benefit fund Staff Benefit Fund",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules staff benefit fund Staff Benefit Fund welfare advances membership",
   },
   {
     href: "/general-awareness/states-information",
@@ -2479,11 +2533,12 @@ export const searchTopics: SearchTopic[] = [
   },
 
   {
-    href: "/topics/transfers",
+    href: "/topics/establishment-rules/transfers",
     title: "Transfers",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics transfers Transfers",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules transfers Transfers joining time mutual periodical request permanent temporary",
   },
 
   {
@@ -2562,6 +2617,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material warner signal Warner Signal GR 3.06 semaphore fish-tailed",
+  },
+  {
+    href: "/topics/operating-material/whistle-codes",
+    title: "Whistle Codes",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material whistle codes Whistle Codes engine loco pilot guard SR special rules",
   },
   {
     href: "/topics/operating-material/without-tail-lamp",

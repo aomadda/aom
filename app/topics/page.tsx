@@ -7,6 +7,7 @@ import {
   BookMarked,
   BookOpen,
   Briefcase,
+  Building2,
   ChevronRight,
   ClipboardList,
   Container,
@@ -60,7 +61,7 @@ const topicSections: { heading: string; blurb: string; items: TopicCard[] }[] = 
         title: 'Chief Controller',
         subtitle: 'AOM study material',
         description:
-          'Speed restrictions, timings, distances, G&SR, rules, SWR, whistle and bell codes — full reference for aspirants.',
+          'Speed restrictions, timings, distances, G&SR, rules, SWR, permissions, and standard forms — full reference for aspirants.',
         icon: Briefcase,
         gradient: 'from-blue-600 to-indigo-700',
         ring: 'ring-blue-500/30',
@@ -76,6 +77,17 @@ const topicSections: { heading: string; blurb: string; items: TopicCard[] }[] = 
         gradient: 'from-slate-600 to-violet-700',
         ring: 'ring-slate-500/30',
         iconBg: 'bg-slate-500/20',
+      },
+      {
+        href: '/topics/indian-railways',
+        title: 'Indian Railways',
+        subtitle: 'Organization & structure',
+        description:
+          'Indian Railways overview — organization, zones, and examination-oriented reference material.',
+        icon: Building2,
+        gradient: 'from-amber-700 to-orange-900',
+        ring: 'ring-amber-500/30',
+        iconBg: 'bg-amber-500/20',
       },
       {
         href: '/topics/national-rail-plan',

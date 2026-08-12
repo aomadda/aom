@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import { Gauge, Clock, Ruler, FileText, ChevronDown, ChevronUp, BookOpenCheck, ExternalLink, Volume2, Bell, BellRing, BookOpen, Layers, FolderOpen, Percent, Hash, Shield, Calendar } from 'lucide-react'
+import { Gauge, Clock, Ruler, FileText, ChevronDown, ChevronUp, BookOpenCheck, ExternalLink, BookOpen, Layers, FolderOpen, Percent, Hash, Shield, Calendar } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 const ChiefControllerIndex = () => {
@@ -134,13 +134,6 @@ const ChiefControllerIndex = () => {
       description: 'Essential percentage requirements for brake power and spare coaches in railway operations'
     },
     {
-      id: 'authorities',
-      title: 'Authorities',
-      icon: <FileText className="w-6 h-6" />,
-      color: 'from-purple-500 to-purple-600',
-      description: 'Complete list of authorities, forms, and permissions required for railway operations'
-    },
-    {
       id: 'permissions',
       title: 'Permissions/Sanctions/Authorised',
       icon: <Shield className="w-6 h-6" />,
@@ -162,39 +155,11 @@ const ChiefControllerIndex = () => {
       description: 'Important years and time periods for railway operations and regulations'
     },
     {
-      id: 'marker-boards',
-      title: 'Marker Boards',
-      icon: <Bell className="w-6 h-6" />,
-      color: 'from-green-500 to-green-600',
-      description: 'Important marker boards for railway operations and zones'
-    },
-    {
-      id: 'whistle-codes',
-      title: 'Whistle Codes',
-      icon: <Volume2 className="w-6 h-6" />,
-      color: 'from-orange-500 to-orange-600',
-      description: 'Complete guide to engine whistle codes and their indications for railway operations'
-    },
-    {
       id: 'standard-forms',
       title: 'Standard Forms',
       icon: <FileText className="w-6 h-6" />,
       color: 'from-slate-500 to-slate-600',
       description: 'Standard Forms for use in Disciplinary Proceedings - Complete guide to all SF forms (SF-1 to SF-14)'
-    },
-    {
-      id: 'bell-codes',
-      title: 'Bell Codes',
-      icon: <Bell className="w-6 h-6" />,
-      color: 'from-teal-500 to-teal-600',
-      description: 'Complete guide to bell codes for train signalling and block working equipment'
-    },
-    {
-      id: 'bell-signals',
-      title: 'Bell Signals',
-      icon: <BellRing className="w-6 h-6" />,
-      color: 'from-cyan-500 to-cyan-600',
-      description: 'Complete guide to bell signals between Loco Pilot and Guard for EMU/DMU trains'
     },
   ]
 
@@ -222,7 +187,7 @@ const ChiefControllerIndex = () => {
             <h2 className="lg:text-4xl text-xl font-bold text-purple-300 mb-4">IMPORTANT TOPICS INDEX</h2>
             <div className="w-24 h-1 bg-linear-to-r from-blue-500 to-indigo-600 mx-auto mb-6 rounded-full"></div>
             <p className="lg:text-xl text-base text-gray-200 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive guide covering Speed Restrictions, Timings, Distances, Percentages, Authorities, Permissions, Numbers, Whistle Codes, Bell Codes, Bell Signals, G&SR Chapters, General Rules, G&SR Appendix, and SWR Appendix -
+              Comprehensive guide covering Speed Restrictions, Timings, Distances, Percentages, Permissions, Numbers, Years, Standard Forms, G&SR Chapters, General Rules, G&SR Appendix, and SWR Appendix -
               Essential reference material for AOM aspirants in Indian Railways.
             </p>
             <div className="mt-6 bg-linear-to-r from-blue-500/20 to-indigo-500/20 rounded-lg p-4 backdrop-blur-sm border border-blue-400/30">
@@ -313,7 +278,7 @@ const ChiefControllerIndex = () => {
                 </div>
                 <p className="text-gray-300 max-w-2xl mx-auto">
                   This comprehensive guide covers all essential topics for Chief Controller examination,
-                  providing complete reference material for Speed Restrictions, Timings, Distances, Percentages, Authorities, Permissions, Numbers, Whistle Codes, Bell Codes, Bell Signals, G&SR Chapters, General Rules, G&SR Appendix, and SWR Appendix
+                  providing complete reference material for Speed Restrictions, Timings, Distances, Percentages, Permissions, Numbers, Years, Standard Forms, G&SR Chapters, General Rules, G&SR Appendix, and SWR Appendix
                   required for AOM aspirants in Indian Railways.
                 </p>
               </div>

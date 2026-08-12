@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 import { jwtVerify } from 'jose'
 import { COOKIE_NAME } from '@/lib/auth/constants'
 
-const PUBLIC_PAGE_PATHS = new Set(['/login', '/register', '/admin/login', '/forgot-password'])
+const PUBLIC_PAGE_PATHS = new Set(['/', '/login', '/register', '/admin/login', '/forgot-password'])
 const PUBLIC_API_PREFIXES = [
   '/api/auth/login',
   '/api/auth/register',

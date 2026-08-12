@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import { GraduationCap, Home, Sparkles } from 'lucide-react'
 
 const Quarters = () => {
   const accommodationData = [
@@ -12,99 +14,187 @@ const Quarters = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-900 via-slate-800 to-amber-950/20 py-10 px-2 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <section className="bg-slate-800/80 rounded-2xl shadow-xl border border-slate-700 overflow-hidden mb-8">
-          <div className="bg-linear-to-r from-amber-600 to-amber-700 text-white px-6 py-6">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-center">
-              QUARTERS
-            </h1>
-          </div>
-        </section>
+    <div className="relative min-h-screen overflow-hidden bg-[#120d08] text-slate-100">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_15%_-10%,rgba(251,146,60,0.18),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_40%_at_90%_20%,rgba(245,158,11,0.10),transparent)]" />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+          backgroundSize: '46px 46px',
+        }}
+      />
 
-        {/* Types of Accommodation and Eligibility */}
-        <section className="mb-8">
-          <div className="rounded-xl border border-slate-600/60 bg-slate-800/80 shadow-lg overflow-hidden">
-            <div className="bg-linear-to-r from-amber-700/90 to-amber-800/90 text-white px-6 py-4">
-              <h2 className="text-lg sm:text-xl font-bold tracking-tight">Types of Accommodation and Eligibility</h2>
-            </div>
-            <div className="p-5 sm:p-6 overflow-x-auto">
-              <table className="w-full min-w-[400px]">
-                <thead>
-                  <tr className="bg-slate-700/50">
-                    <th className="px-4 py-3 text-left text-amber-300 font-semibold text-sm">SI.No</th>
-                    <th className="px-4 py-3 text-left text-amber-300 font-semibold text-sm">Category of Staff</th>
-                    <th className="px-4 py-3 text-left text-amber-300 font-semibold text-sm">Entitlement</th>
+      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        {/* Hero */}
+        <header className="mb-12 max-w-3xl animate-[fade-up_0.55s_ease-out]">
+          <p className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-amber-300/90">
+            <Sparkles className="h-3.5 w-3.5" strokeWidth={2} />
+            Establishment
+          </p>
+          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-amber-400/25 bg-amber-500/10 text-amber-200">
+            <Home className="h-7 w-7" strokeWidth={1.75} />
+          </div>
+          <h1 className="font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            QUARTERS
+          </h1>
+          <p className="mt-3 text-lg font-medium text-amber-100/90 sm:text-xl">
+            Types of Accommodation and Eligibility
+          </p>
+        </header>
+
+        {/* Eligibility table / cards */}
+        <section className="mb-14 animate-[fade-up_0.65s_ease-out]">
+          <h2 className="mb-6 font-serif text-2xl font-bold text-white sm:text-3xl">
+            Types of Accommodation and Eligibility
+          </h2>
+
+          {/* Desktop table */}
+          <div className="hidden overflow-hidden rounded-3xl border border-amber-400/20 bg-white/[0.03] md:block">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-amber-400/20 bg-amber-500/10">
+                  <th className="px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.16em] text-amber-200">
+                    SI.No
+                  </th>
+                  <th className="px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.16em] text-amber-200">
+                    Category of Staff
+                  </th>
+                  <th className="px-5 py-4 text-left text-xs font-semibold uppercase tracking-[0.16em] text-amber-200">
+                    Entitlement
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {accommodationData.map((row, index) => (
+                  <tr
+                    key={index}
+                    className="border-b border-white/5 transition hover:bg-amber-500/[0.06] last:border-b-0"
+                  >
+                    <td className="px-5 py-4 font-mono text-sm text-amber-300/90">{row.slNo}</td>
+                    <td className="px-5 py-4 text-sm text-slate-200">{row.category}</td>
+                    <td className="px-5 py-4">
+                      <span className="inline-flex rounded-lg border border-amber-400/25 bg-amber-500/10 px-3 py-1 text-sm font-semibold text-amber-100">
+                        {row.entitlement}
+                      </span>
+                    </td>
                   </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-600/60">
-                  {accommodationData.map((row, index) => (
-                    <tr key={index} className="bg-slate-700/20 hover:bg-slate-700/30 transition-colors">
-                      <td className="px-4 py-3 text-slate-200 text-sm">{row.slNo}</td>
-                      <td className="px-4 py-3 text-slate-200 text-sm">{row.category}</td>
-                      <td className="px-4 py-3 text-slate-200 text-sm">{row.entitlement}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile cards */}
+          <div className="grid gap-3 md:hidden">
+            {accommodationData.map((row, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-white/8 bg-white/[0.03] p-4"
+              >
+                <div className="mb-2 flex items-center justify-between gap-3">
+                  <span className="font-mono text-xs font-bold text-amber-400">{row.slNo}</span>
+                  <span className="rounded-lg border border-amber-400/25 bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-100">
+                    {row.entitlement}
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed text-slate-300">{row.category}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Retention of Railway quarter */}
-        <section>
-          <div className="rounded-xl border border-slate-600/60 bg-slate-800/80 shadow-lg overflow-hidden">
-            <div className="bg-linear-to-r from-amber-700/90 to-amber-800/90 text-white px-6 py-4">
-              <h2 className="text-lg sm:text-xl font-bold tracking-tight">Retention of Railway quarter on transfer, deputation, retirement etc.</h2>
-            </div>
-            <div className="p-5 sm:p-6 space-y-6">
-              <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
-                The instructions contained in Board&apos;s letter of even number dated 01.06.2001 (RBE No. 100/2001) regarding retention of Railway quarter on transfer, deputation, retirement etc. have been reviewed in Ministry of Railways and full Board have decided to partially modify provisions mentioned in para 1(a) and para 5.1 of the above-mentioned instructions as under.
-              </p>
+        {/* Retention */}
+        <section className="animate-[fade-up_0.75s_ease-out]">
+          <h2 className="mb-3 font-serif text-2xl font-bold text-white sm:text-3xl">
+            Retention of Railway quarter on transfer, deputation, retirement etc.
+          </h2>
+          <p className="mb-8 max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+            The instructions contained in Board&apos;s letter of even number dated 01.06.2001 (RBE No. 100/2001) regarding retention of Railway quarter on transfer, deputation, retirement etc. have been reviewed in Ministry of Railways and full Board have decided to partially modify provisions mentioned in para 1(a) and para 5.1 of the above-mentioned instructions as under.
+          </p>
 
-              {/* 1. Permanent Transfer */}
-              <div>
-                <h3 className="text-amber-300 font-semibold text-base mb-3">1. Permanent Transfer</h3>
-                <div className="space-y-4 ml-4">
-                  <p className="text-slate-200 text-sm sm:text-base leading-relaxed flex gap-2">
-                    <span className="text-amber-300 font-semibold shrink-0">(i)</span>
-                    <span>A Railway employee on transfer from one station to another which necessitates change of residence, may be permitted to retain the railway accommodation at the former station of posting for a period of two months on payment of normal licence fee plus six months on payment of double licence fee.</span>
+          {/* Permanent Transfer */}
+          <div className="mb-8 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:p-7">
+            <h3 className="mb-5 font-serif text-xl font-bold text-white">1. Permanent Transfer</h3>
+
+            <div className="space-y-5">
+              <div className="flex gap-4">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-amber-400/30 bg-amber-500/10 font-mono text-xs font-bold text-amber-300">
+                  i
+                </span>
+                <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
+                  A Railway employee on transfer from one station to another which necessitates change of residence, may be permitted to retain the railway accommodation at the former station of posting for a period of two months on payment of normal licence fee plus six months on payment of double licence fee.
+                </p>
+              </div>
+
+              <div className="flex gap-4">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-amber-400/30 bg-amber-500/10 font-mono text-xs font-bold text-amber-300">
+                  ii
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="mb-4 text-sm leading-relaxed text-slate-300 sm:text-base">
+                    Further extension beyond the aforesaid period may be granted on educational ground only as mentioned below:
                   </p>
-                  <div className="flex gap-2">
-                    <span className="text-amber-300 font-semibold shrink-0">(ii)</span>
-                    <div>
-                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed mb-2">
-                        Further extension beyond the aforesaid period may be granted on educational ground only as mentioned below:
+                  <div className="space-y-3">
+                    <div className="rounded-2xl border border-amber-400/15 bg-amber-500/[0.06] p-4">
+                      <div className="mb-2 flex items-center gap-2 text-amber-200">
+                        <GraduationCap className="h-4 w-4" strokeWidth={1.75} />
+                        <span className="text-xs font-semibold uppercase tracking-[0.14em]">
+                          Academic session
+                        </span>
+                      </div>
+                      <p className="text-sm leading-relaxed text-slate-300">
+                        To cover the current academic session (i.e. end of the academic/scholastic session) plus 15 days. The end of academic/scholastic session shall, in this case, mean &quot;last paper of annual examination.&quot;
                       </p>
-                      <ul className="space-y-1.5 ml-4 list-disc">
-                        <li className="text-slate-200 text-sm sm:text-base leading-relaxed">
-                          To cover the current academic session (i.e. end of the academic/scholastic session) plus 15 days. The end of academic/scholastic session shall, in this case, mean &quot;last paper of annual examination.&quot;
-                        </li>
-                        <li className="text-slate-200 text-sm sm:text-base leading-relaxed">
-                          When the ward of the railway employee is studying in Class 9th or Class 11th, retention of railway accommodation may be allowed on educational ground to cover the current academic session and also the next academic session (examination) of the ward, till end of the academic/scholastic session of class 10th or 12th respectively plus 15 days.
-                        </li>
-                      </ul>
+                    </div>
+                    <div className="rounded-2xl border border-amber-400/15 bg-amber-500/[0.06] p-4">
+                      <div className="mb-2 flex items-center gap-2 text-amber-200">
+                        <GraduationCap className="h-4 w-4" strokeWidth={1.75} />
+                        <span className="text-xs font-semibold uppercase tracking-[0.14em]">
+                          Class 9th / 11th
+                        </span>
+                      </div>
+                      <p className="text-sm leading-relaxed text-slate-300">
+                        When the ward of the railway employee is studying in Class 9th or Class 11th, retention of railway accommodation may be allowed on educational ground to cover the current academic session and also the next academic session (examination) of the ward, till end of the academic/scholastic session of class 10th or 12th respectively plus 15 days.
+                      </p>
                     </div>
                   </div>
-                  <p className="text-slate-200 text-sm sm:text-base leading-relaxed flex gap-2">
-                    <span className="text-amber-300 font-semibold shrink-0">(iii)</span>
-                    <span>Beyond the permitted/permissible limits, however no further extension will be allowed on any ground whatsoever. Therefore, no requests or representation on this score shall be entertained. For all occupations beyond the permitted period, immediate action should be taken to cancel the allotment, declare the occupation as unauthorised and initiate eviction proceedings, charging damage rent for the over-stay.</span>
-                  </p>
                 </div>
               </div>
 
-              {/* 2. Retirement */}
-              <div>
-                <h3 className="text-amber-300 font-semibold text-base mb-3">2. Retirement</h3>
-                <p className="text-slate-200 text-sm sm:text-base leading-relaxed ml-4">
-                  Railway employees on retirement, including voluntary retires and those retired compulsorily, may be permitted to retain non-earmarked Railway accommodation for a period of 4 months on payment of normal rent/flat rate of licence fee and the next 4 months on payment of special fee, i.e. double the normal rent or double the flat rate of licence fee. This is also applicable to audit staff doing Railway audit work. The cases of retirement on medical invalidation grounds are also to be treated at par with normal retirement.
+              <div className="flex gap-4">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-amber-400/30 bg-amber-500/10 font-mono text-xs font-bold text-amber-300">
+                  iii
+                </span>
+                <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
+                  Beyond the permitted/permissible limits, however no further extension will be allowed on any ground whatsoever. Therefore, no request or representation on this score shall be entertained. For all occupations beyond the permitted period, immediate action should be taken to cancel the allotment, declare the occupation as unauthorised and initiate eviction proceedings, charging damage rent for the over-stay.
                 </p>
               </div>
             </div>
           </div>
+
+          {/* Retirement */}
+          <div className="rounded-3xl border border-amber-400/25 bg-linear-to-br from-amber-950/70 via-[#120d08] to-orange-950/30 p-5 sm:p-7">
+            <h3 className="mb-4 font-serif text-xl font-bold text-white">2. Retirement</h3>
+            <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
+              Railway employees on retirement, including voluntary retires and those retired compulsorily, may be permitted to retain non-earmarked Railway accommodation for a period of 4 months on payment of normal rent/flat rate of licence fee and the next 4 months on payment of special fee, i.e. double the normal rent or double the flat rate of licence fee. This is also applicable to audit staff doing Railway audit work. The cases of retirement on medical invalidation grounds are also to be treated at par with normal retirement.
+            </p>
+          </div>
         </section>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-up {
+          from {
+            opacity: 0;
+            transform: translateY(14px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   )
 }

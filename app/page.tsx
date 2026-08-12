@@ -127,17 +127,18 @@ const Home = async () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
         </div>
 
+        {fullName ? (
+          <div className="relative z-20 flex justify-end px-4 pt-3 sm:px-6 lg:px-8">
+            <p className="text-sm font-medium text-white/95 sm:text-base md:text-lg">
+              Welcome, <span className="font-bold text-white">{fullName}</span>
+            </p>
+          </div>
+        ) : null}
+
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8 lg:py-28">
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
             {/* Content — left on large screens */}
             <div className="order-2 w-full max-w-2xl text-center lg:order-1 lg:flex-1 lg:text-left">
-              {fullName ? (
-                <p className="mb-4 text-lg font-medium text-white/95 sm:text-xl md:text-2xl">
-                  Welcome{' '}
-                  <span className="font-bold text-white">{fullName}</span> . .  .
-                </p>
-              ) : null}
-
               <h1 className="mb-6 text-4xl font-bold tracking-tight animate-fade-in sm:text-5xl md:text-6xl lg:text-7xl">
                 AOM Adda
               </h1>

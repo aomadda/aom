@@ -4799,7 +4799,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "During site investigation of an accident, nothing should be disturbed except for rescuing life in case of ______.",
+              "Whenever site investigation is done after the accident, condition of track with special reference to gauge cross level, super elevation to be taken note. In case of _____________nothing to be disturbed except to rescue life till clearance from police.",
             options: [
               "Suspected sabotage",
               "Sabotage or suspected sabotage",
@@ -4812,20 +4812,20 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "During site investigation of an accident, a ______ showing the position of derailed vehicles and marks on sleepers should be prepared, indicating the point of ______.",
+              "In case of Site investigation of an accident place is done a _________showing the position of derailed vehicles marks on sleepers should be made - Point of _________to be indicated.",
             options: [
               "Correct sketch, drop",
               "Diagram, mount",
               "Scaled sketch, drop/mount",
               "Rough sketch, drop/mount",
             ],
-            correct: 2,
+            correct: 3,
             explanation:
-              "A scaled sketch indicating the point of drop/mount is essential for accident analysis.",
+              "Rough sketch, drop/mount",
           },
           {
             question:
-              "When one or both wheels of the same wheel-set fall inside the track during a derailment, the most likely cause is ______.",
+              "In derailments when one or both wheels of the same wheel-set fall inside the track the cause of accident is very clear, i.e., ______ or may be a remote possibility of shifting of wheel disc on the axle or breakage of axle or journal.",
             options: [
               "Buckling",
               "Spread gauge",
@@ -4838,7 +4838,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "Most derailments at points and crossings initiate either at the toe of the ______ or near the nose of the crossing.",
+              "Most of the derailments at points and crossings either initiate at the toe of the ________or near the nose of the crossing.",
             options: [
               "Stock rail",
               "Tongue rail",
@@ -4851,7 +4851,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "Most derailments at points and crossings initiate either at the toe of the tongue rail or near the ______.",
+              "Most of the derailments at points and crossings either initiate at the toe of the tongue rail or near the_______.",
             options: [
               "Stock rail",
               "Tongue of crossing",
@@ -4864,7 +4864,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "Spread gauge, gaping in points, worn tongue rails, excessive check rail clearance and shearing of fish plate bolts are defects related to ______.",
+              "Spread gauge, Gaping in points, Tipping of the toe of switch, Worn out & broken tongue Rail, Excessive clearances of check rail opposite to the nose of the crossing, Uneven Cross level, Shearing of fish plate bolts are some Important Defects of ______.",
             options: [
               "S&T",
               "Mechanical",
@@ -4877,7 +4877,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "Loose point connections, worn rails, buckling, abrupt super elevation and sharp curves are important defects of ______.",
+              "Loose or slack points connections, Sharp curves with kinking alignments, Worn out Rails, Abrupt introduction of super elevation, Super elevation not corresponding to speed of the train, Buckling of track, are some Important Defects of ______.",
             options: [
               "S&T",
               "Permanent Way",
@@ -4942,7 +4942,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "The effect of ______ forces is accelerated if rail fasteners cannot properly hold the rails.",
+              "The effect of the _____________ forces is accelerated if the rail fasteners are not able to hold the rails properly to the sleepers or rail seat on the sleepers is damaged or bad joint in the track with out proper expansion gap.",
             options: [
               "Tractive forces",
               "Braking forces",
@@ -4955,7 +4955,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "When one or two rail lengths move sideways from their original position, the condition is known as ______.",
+              "When in a section, about one or two rails length of the track leaves its place and moves side way is known as _______.",
             options: [
               "Buckling",
               "Creep",
@@ -4964,7 +4964,7 @@ export const operatingManualQuizzes = {
             ],
             correct: 0,
             explanation:
-              "Sideways displacement of rails is known as buckling.",
+              "Buckling.",
           },
           {
             question:
@@ -4981,7 +4981,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "Buckling normally occurs mostly during the ______ when the track has absorbed maximum heat.",
+              "Buckling normally happens in the __________mostly, when the track has absorbed max. heat and also near the bridges, level crossings etc. where the track is firmly held in ground.",
             options: [
               "First half of the day",
               "Night time",
@@ -4994,7 +4994,7 @@ export const operatingManualQuizzes = {
           },
           {
             question:
-              "Broken axle, defective spring gear, hot box, poor brake power and defective CBC gear are defects related to ______.",
+              "Defects in wheel and Axle Broken & Hanging fittings, Bolster and Assemblies, spring gear, axle guard and trolley, Brake gear and Hot box/Roller bearing failure, Poor brake power Defects, Defective Draw gear, CBC gear are some of defects of",
             options: [
               "Permanent Way",
               "Loco Traction",
@@ -5010,7 +5010,7 @@ export const operatingManualQuizzes = {
       'chapter-22': [
         {
           question:
-            "Warning boards are provided to remind the Loco Pilot of an approaching electric locomotive/EMU to open the locomotive circuit breaker (DJ) before approaching the ________, coast through it, and then switch 'ON' on the other side.",
+            "Warning boards are provided to remind the Loco pilot of an approaching electric locomotive/EMU to open locomotive circuit breaker (DJ) before approaching the_________, to coast through it and then switch 'on' on the other side.",
           options: [
             "Sub-station",
             "Transformer",
@@ -5023,7 +5023,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "Special care is taken in fixing the location of neutral sections to ensure that the train coasts through the neutral section at a sufficiently ________, preventing it from stopping within the neutral section.",
+            "Special care is taken in fixing the location of neutral sections, to ensure that the train coasts through neutral section at a sufficiently_____, to obviate the possibility of its stopping and getting stuck within the neutral section.",
           options: [
             "Low speed",
             "High speed",
@@ -5053,9 +5053,9 @@ export const operatingManualQuizzes = {
             "1st January and 15th July",
             "15th January and 1st July",
           ],
-          correct: 0,
+          correct: 3,
           explanation:
-            "The review is conducted on 1st January and 1st July every year.",
+            "The review is conducted on 15th January and 1st July every year",
         },
         {
           question:
@@ -5072,7 +5072,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "Separate crews should be demanded for activities that cannot be covered in the power plan, such as ________.",
+            "Running staff review when carried out separate crews to be demanded for the activities which cannot been covered in power plan e.g., ___________",
           options: [
             "Light engine movements",
             "Empty coaching rake movement",
@@ -5085,7 +5085,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "During running staff review, ________ leave reserve and ________ trainee reserve should be demanded for additional requirement.",
+            "Running staff review when carried out _______ leave reserve and ______ trainee reserve should be demanded for additional requirement.",
           options: ["25%, 10%", "30%, 10%", "30%, 20%", "20%, 15%"],
           correct: 1,
           explanation:
@@ -5093,7 +5093,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "During running staff review, shunters should be demanded at the rate of one against ________, and one rest giver for every ________ shunters.",
+            "Running staff review when carried out, Shunters should be demanded @ 1 against__________, rest giver @ 1 for ______ to be demanded and Leave reserve and trainee post to be demanded separately.",
           options: [
             "6-hour point, 8 shunters",
             "12-hour point, 6 shunters",
@@ -5106,7 +5106,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "After accounts vetting during running staff review, sanction of ________ should be obtained before the Sr. DPO issues the revised sanction.",
+            "Running staff review when carried out, after accounts vetting sanction of ___________be taken and Sr. DPO will issue circulars of revised sanction.",
           options: ["DRM", "ADRM", "Sr. DOM", "Sr. DME/Sr. DEE"],
           correct: 0,
           explanation:
@@ -5114,7 +5114,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "Running supervisors review should be made at the rate of one Loco Inspector against ________ Loco Pilots or ________ shunters.",
+            "Running supervisors review should also be made with staff review @ 1 loco Inspector against __ loco pilots or ___ shunters.",
           options: ["20, 20", "25, 30", "30, 50", "25, 50"],
           correct: 3,
           explanation:
@@ -5122,7 +5122,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "For running supervisors, ________ rest giver is allowed and ________ leave reserve is provided.",
+            "Running supervisors review should also be made with staff review @ 1 loco Inspector against 25 loco pilots or 50 shunters. __________ rest giver allowed. Leave reserve _________",
           options: ["5%, 10%", "No, 12.5%", "2.5%, 15%", "3%, 5%"],
           correct: 1,
           explanation:
@@ -5130,20 +5130,20 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "While preparing Loco Pilot links, the maximum duty hours in any one trip should not exceed ________, and the average duty hours in a fortnight should not exceed ________.",
+            "Points to be kept in view while preparing loco pilot's links is Max. duty hours in anyone trip should not exceed________. Avg. duty hours in a fortnight should not exceed____________.",
           options: [
             "8 hours, 102 hours",
             "9 hours, 104 hours",
             "10 hours, 104 hours",
             "12 hours, 106 hours",
           ],
-          correct: 1,
+          correct: 2,
           explanation:
-            "Maximum trip duty is 9 hours and fortnightly average duty is 104 hours.",
+            "Maximum trip duty is 10 hours and fortnightly average duty is 104 hours.",
         },
         {
           question:
-            "The minimum number of rests in a month should be ________ or ________ hours including night in bed from 22:00 to 06:00.",
+            "Points to be kept in view while preparing loco pilot's links is Min. no. of rests in a month should be________. or _______ hours including night in bed from 22 hrs. to 6 hrs. from sign off to sign on.",
           options: [
             "5 of 22 hours, 4 of 30 hours",
             "6 of 20 hours, 2 of 60 hours",
@@ -5156,33 +5156,33 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The minimum outstation rest for duty less than 8 hours is ________. If duty is 8 hours or more, the rest should be ________. For trips up to ________, duty performed plus one hour is sufficient.",
+            "Points to be kept in view while preparing loco pilot's links is Min. out of station rest in case less than 8 hrs. duty should be _____. In case of duty of 8 hrs or more than ___, rest to be given. In case of short trips of less than or equal to ____then duty performed plus 1 hrs. will be sufficient.",
           options: [
             "8 hours, 10 hours, 6 hours",
             "6 hours, 8 hours, 5 hours",
             "7 hours, 10 hours, 4 hours",
             "6 hours, 10 hours, 4 hours",
           ],
-          correct: 3,
+          correct: 1,
           explanation:
-            "The prescribed outstation rests are 6 hours, 10 hours, and duty plus one hour for trips up to 4 hours.",
+            "The prescribed outstation rests are 6 hours, 8 hours, and duty plus one hour for trips up to 5 hours.",
         },
         {
           question:
-            "Minimum home station rest after duty of less than 8 hours should be ________, and after duty of 8 hours or more should be ________.",
+            "Points to be kept in view while preparing loco pilot's links is Min. home station rest, if duty is performed less than 8 hrs should be _____ and if duty is performed 8hrs or more it should be ______",
           options: [
             "8 hours, 10 hours",
             "9 hours, 12 hours",
             "10 hours, 14 hours",
             "12 hours, 16 hours",
           ],
-          correct: 2,
+          correct: 3,
           explanation:
-            "Home station rest should be 10 hours or 14 hours depending on duty duration.",
+            "12 hours, 16 hours",
         },
         {
           question:
-            "If staff are required to work a train without the stipulated rest, ________ allowance is payable.",
+            "If staff is required to work train less then stipulated rest then __________allowance is payable to running staff.",
           options: [
             "Breach of duty",
             "In lieu of mileage",
@@ -5195,33 +5195,33 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The link having the maximum earning kilometreage should normally be worked by the ________ Loco Pilots.",
+            "Points to be kept in view while preparing loco pilot's links is link having the maximum earning kilometerage should be worked by ___________loco pilots and so on.",
           options: [
             "Senior most",
             "Junior most",
             "Senior most aged",
             "Most experienced",
           ],
-          correct: 1,
+          correct: 0,
           explanation:
-            "Higher earning links are normally allotted to junior-most Loco Pilots.",
+            "Higher earning links are normally allotted to senior most aged loco pilots and so on.",
         },
         {
           question:
-            "Loco/Power links are prepared by the ________ and circulated to the divisions to ensure optimum utilization of power.",
+            "Loco/Power links are prepared by ________and circulated to the divisions objective of which is to ensure optimum utilization of powers.",
           options: [
             "CPTM Office",
             "Headquarters Office",
             "PCEE Office",
             "PCOM Office",
           ],
-          correct: 2,
+          correct: 1,
           explanation:
-            "Power links are prepared by the PCEE Office.",
+            "Power links are prepared by the Headquarters Office.",
         },
         {
           question:
-            "Power requirement (Power Plan) should be prepared once in every ________.",
+            "Power requirement (Power Plan) to be prepared once in ____ months. Avg. No. of trains run on each section per day and Avg. hours on road for that period duly signed by Sr.DME(P) and Sr.DOM to be prepared.",
           options: ["4 months", "6 months", "9 months", "12 months"],
           correct: 1,
           explanation:
@@ -5229,7 +5229,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The formula for calculating bare power on line is ________.",
+            "While preparing Power requirement (Power Plan) the formula for calculation of bare power on line is ____ where (PDD = Pre departure detention; HOR=Hours on road; PAD=Post arrival detention)",
           options: [
             "PDD + HOR - PAD",
             "PDD - HOR + PAD",
@@ -5242,15 +5242,15 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "While preparing the Power Plan, ________ further growth and ________ bunching allowance should be added to the bare power on line.",
+            "While preparing Power requirement (Power Plan) _____further growth and ______ Bunching allowance to be demanded on Bare power on line",
           options: ["1.5%, 5%", "2%, 7.5%", "3%, 8%", "3.5%, 10%"],
-          correct: 1,
+          correct: 3,
           explanation:
-            "A provision of 2% for future growth and 7.5% for bunching allowance is made.",
+            "A provision of 3.5% for future growth and 10% for bunching allowance is made.",
         },
         {
           question:
-            "While preparing the Power Plan, ________ is added as major repair allowance for Mail/Express/Passenger locomotive requirements.",
+            "While preparing Power requirement (Power Plan), ____ is added for major repair allowance in case of Mail/Exp./Pass. Loco requirement worked out on the basis of loco link.",
           options: ["5%", "8%", "10%", "15%"],
           correct: 2,
           explanation:
@@ -5319,9 +5319,9 @@ export const operatingManualQuizzes = {
             "Three days",
             "Four days",
           ],
-          correct: 1,
+          correct: 2,
           explanation:
-            "A grace period of two days is permitted for Premium Air Brake rakes after expiry of the 12-day BPC validity.",
+            "A grace period of three days is permitted for Premium Air Brake rakes after expiry of the 12-day BPC validity.",
         },
         {
           question:
@@ -5371,9 +5371,9 @@ export const operatingManualQuizzes = {
             "6000 km",
             "6000 km + 35 days",
           ],
-          correct: 1,
+          correct: 2,
           explanation:
-            "The BPC for BLCA + BLCB container rakes is valid for 5000 km.",
+            "The BPC for BLCA + BLCB container rakes is valid for 6000 km.",
         },
       ],
       'chapter-25': [
@@ -5392,7 +5392,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The 09-3X track machine packs ________ at a time. In a 4-hour traffic block, its output is ________.",
+            "09-3X- track machine corrects track geometry, i.e. alignment, twist, cross level, longitudinal level and pack ballast under sleepers. This machine can pack ____________at a time in 4 hours of block the output is __________ Block period4 hours output 1.6km",
           options: [
             "One sleeper, 1.6 km",
             "Three sleepers, 1.6 km",
@@ -5405,7 +5405,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The CSM track machine packs ________ at a time. In a 4-hour traffic block, its output is ________.",
+            "CSM- track machines corrects track geometry, i.e. alignment, twist, cross level, longitudinal level and pack ballast under sleepers. This machine can pack ____________at a time in 4 hours of block the output is __________",
           options: [
             "One sleeper, 1.2 km",
             "Three sleepers, 1.6 km",
@@ -5418,20 +5418,20 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The output of the Ballast Cleaning Machine (BCM) in a 4-hour traffic block is ________.",
+            "BCM- Ballast screening of plain & turnout track screens track ballast by removing muck, thus improve drainage & elasticity of track for safe & comfortable running. In 4 hours of block this machine output is __________",
           options: [
             "0.1 km",
             "0.2 km",
             "0.3 km",
             "0.4 km",
           ],
-          correct: 3,
+          correct: 1,
           explanation:
-            "A Ballast Cleaning Machine (BCM) normally cleans about 0.4 km of track in a 4-hour block.",
+            "A Ballast Cleaning Machine (BCM) normally cleans about 0.2 km of track in a 4-hour block.",
         },
         {
           question:
-            "The track machine that screens plain and turnout track ballast by removing muck to improve drainage and track elasticity is called ________.",
+            "The track machine which screens plain & turnout track ballast by removing muck, thus improve drainage & elasticity of track for safe & comfortable running is known as __________",
           options: [
             "CSM",
             "DUO",
@@ -5444,7 +5444,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The track machine used for shoulder ballast cleaning is ________.",
+            "The track machine which is used for Shoulder ballast cleaning is known as __________",
           options: [
             "CSM",
             "DUO",
@@ -5457,7 +5457,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The track machine that corrects turnout track geometry is ________.",
+            "The track machine which corrects turnout track geometry is known as __________",
           options: [
             "CSM",
             "UNI",
@@ -5470,7 +5470,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The track machine used to consolidate newly tamped track, increase lateral resistance and relax speed restrictions early is ________.",
+            "The track machine which is used in consolidation of newly tamped track and builds up lateral resistance & consolidation of track faster and helps to relax speed restriction early. It consolidates 1km in a block of 4 hours is",
           options: [
             "DGS",
             "UNI",
@@ -5483,7 +5483,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The track machine that is a fully mechanized system for complete track renewal is ________.",
+            "The track machine which is fully mechanized system of complete track renewal is known as __________",
           options: [
             "DGS",
             "TRT",
@@ -5496,7 +5496,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The track machine that is a semi-mechanized system of track renewal using prefabricated rail panels is ________.",
+            "The track machine which is a semi mechanized system of track renewal wherein pre fabricated rail panels are laid and existing panels removed with minimum labour is known as _____________",
           options: [
             "DGS",
             "TRT",
@@ -5509,7 +5509,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The track machine also known as the turnout replacement machine, used for fully mechanized turnout renewal, is ________.",
+            "The track machine which is also known as turnout replacement machine is a fully mechanised system of complete turnout with minimum manual labour is known as _______________",
           options: [
             "DGS",
             "TRT",
@@ -5522,7 +5522,7 @@ export const operatingManualQuizzes = {
         },
         {
           question:
-            "The track machine used for mechanized track ballast equalization, regulation and profiling is ________.",
+            "The track machine which is a mechanized system of track ballast equalization, regulation and profiling",
           options: [
             "DGS",
             "BRM",

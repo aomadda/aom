@@ -23,7 +23,7 @@ const ChiefController = () => {
             </div>
             <p className="text-lg md:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
               Comprehensive study material for Chief Controller examination covering Speed Restrictions, 
-              Timings, Distances, Percentages, Authorities, Permissions, Numbers, Years, Marker Boards, Whistle Codes, Bell Codes, Bell Signals, G&SR Chapters, General Rules, G&SR Appendix, and SWR Appendix. Essential reference guide for AOM aspirants in Indian Railways.
+              Timings, Distances, Percentages, Permissions, Numbers, Years, Standard Forms, G&SR Chapters, General Rules, G&SR Appendix, and SWR Appendix. Essential reference guide for AOM aspirants in Indian Railways.
             </p>
           </div>
         </div>

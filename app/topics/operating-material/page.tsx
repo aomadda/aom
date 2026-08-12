@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bike, Bomb, BookMarked, BrickWall, Building2, CalendarClock, CarFront, ChevronsRight, CircuitBoard, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eclipse, Eye, FileBadge, FileCheck, FileWarning, Flame, Forward, GitBranch, GitFork, GitMerge, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LifeBuoy, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, PhoneOff, Play, Repeat, Route, Ruler, ShieldAlert, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, Ticket, TrainFront, TriangleAlert, Truck, Unlink, Unplug, UserRoundCog, Waves, Waypoints, Weight, Workflow, Wrench, Zap, ZapOff } from 'lucide-react'
+import { AlertTriangle, ArrowLeftRight, BadgeCheck, BetweenHorizontalEnd, BetweenHorizontalStart, Bike, Bell, Bomb, BookMarked, BrickWall, Building2, CalendarClock, CarFront, ChevronsRight, CircuitBoard, CircleCheck, CircleDashed, CircleDot, CirclePlay, ClipboardCheck, ClipboardList, Combine, Container, Copy, CornerDownRight, Eclipse, Eye, FileBadge, FileCheck, FileWarning, Flame, Forward, GitBranch, GitFork, GitMerge, Hammer, Hand, Handshake, HardHat, House, KeyRound, Layers, LifeBuoy, LightbulbOff, LogIn, LogOut, Milestone, MoreHorizontal, MoveHorizontal, MoveRight, OctagonX, Package, PackageX, PanelTop, PhoneCall, PhoneOff, Play, Repeat, Route, Ruler, ShieldAlert, ShieldCheck, Signal, SignalHigh, SignalLow, SignalMedium, Signpost, Siren, Spline, Split, SquareParking, Ticket, TrainFront, TriangleAlert, Truck, Unlink, Unplug, UserRoundCog, Waves, Waypoints, Weight, Workflow, Wrench, Zap, ZapOff } from 'lucide-react'
 
 const topics = [
   {
@@ -32,6 +32,16 @@ const topics = [
     href: '/topics/operating-material/automatic-block-system',
     title: 'Automatic Block System',
     icon: CircuitBoard,
+  },
+  {
+    href: '/topics/operating-material/bell-codes',
+    title: 'Bell Codes',
+    icon: Bell,
+  },
+  {
+    href: '/topics/operating-material/bell-signals',
+    title: 'Bell Signals',
+    icon: Siren,
   },
   {
     href: '/topics/operating-material/block-forward',
@@ -254,6 +264,11 @@ const topics = [
     icon: Waves,
   },
   {
+    href: '/topics/operating-material/marker-boards',
+    title: 'Marker Boards',
+    icon: Signpost,
+  },
+  {
     href: '/topics/operating-material/marshalling',
     title: 'Marshalling',
     icon: Combine,
@@ -282,6 +297,11 @@ const topics = [
     href: '/topics/operating-material/obstruction',
     title: 'Obstruction',
     icon: AlertTriangle,
+  },
+  {
+    href: '/topics/operating-material/operating-authorities',
+    title: 'Operating Authorities',
+    icon: ClipboardList,
   },
   {
     href: '/topics/operating-material/other-signals',
@@ -528,6 +548,11 @@ const topics = [
     href: '/topics/operating-material/warner-signal',
     title: 'Warner Signal',
     icon: TriangleAlert,
+  },
+  {
+    href: '/topics/operating-material/whistle-codes',
+    title: 'Whistle Codes',
+    icon: PhoneCall,
   },
   {
     href: '/topics/operating-material/without-tail-lamp',

@@ -7,13 +7,8 @@ import Distances from '@/components/chief-controller/Distances'
 import Percentages from '@/components/chief-controller/Percentages'
 import Numbers from '@/components/chief-controller/Numbers'
 import Years from '@/components/chief-controller/Years'
-import Authorities from '@/components/chief-controller/Authorities'
 import Permissions from '@/components/chief-controller/Perminssions'
-import MarkerBoards from '@/components/chief-controller/MarkerBoards'
-import WhistleCodes from '@/components/chief-controller/WhistleCodes'
 import StandardForms from '@/components/chief-controller/StandardForms'
-import BellCodes from '@/components/chief-controller/BellCodes'
-import BellSignals from '@/components/chief-controller/BellSignals'
 import GSRChapters from '@/components/chief-controller/GSRChapters'
 import SWRChapters from '@/components/chief-controller/SWRChapters'
 import GeneralRules from '@/components/chief-controller/GeneralRules'
@@ -55,13 +50,8 @@ const TopicContentPage = () => {
     'percentages': Percentages,
     'numbers': Numbers,
     'years': Years,
-    'authorities': Authorities,
     'permissions': Permissions,
-    'marker-boards': MarkerBoards,
-    'whistle-codes': WhistleCodes,
     'standard-forms': StandardForms,
-    'bell-codes': BellCodes,
-    'bell-signals': BellSignals,
     'gsr-chapters': GSRChapters,
     'swr-chapters': SWRChapters,
     'general-rules': GeneralRules,
@@ -81,13 +71,8 @@ const TopicContentPage = () => {
     'percentages': 'Percentages',
     'numbers': 'Numbers',
     'years': 'Years',
-    'authorities': 'Authorities',
     'permissions': 'Permissions/Sanctions/Authorised',
-    'marker-boards': 'Marker Boards',
-    'whistle-codes': 'Whistle Codes',
     'standard-forms': 'Standard Forms',
-    'bell-codes': 'Bell Codes',
-    'bell-signals': 'Bell Signals',
     'gsr-chapters': 'G&SR Chapters',
     'swr-chapters': 'SWR Chapters',
     'general-rules': 'G&SR All Rules',
@@ -102,7 +87,7 @@ const TopicContentPage = () => {
 
   const TopicComponent = topicComponents[topicId]
 
-  const topics = ['gsr-chapters', 'swr-chapters', 'gsr-appendix', 'swr-appendix', 'general-rules', 'railways-act-1989-all-chapters', 'railway-da-rules-1968-all-chapters', 'railway-leave-rules-1949-all-rules', 'railway-rest-rules-2005-all-rules', 'railway-conduct-rules-1966-all-rules', 'speed-restrictions', 'timings', 'distances', 'percentages', 'authorities', 'permissions', 'numbers', 'years', 'marker-boards', 'whistle-codes', 'standard-forms', 'bell-codes', 'bell-signals']
+  const topics = ['gsr-chapters', 'swr-chapters', 'gsr-appendix', 'swr-appendix', 'general-rules', 'railways-act-1989-all-chapters', 'railway-da-rules-1968-all-chapters', 'railway-leave-rules-1949-all-rules', 'railway-rest-rules-2005-all-rules', 'railway-conduct-rules-1966-all-rules', 'speed-restrictions', 'timings', 'distances', 'percentages', 'permissions', 'numbers', 'years', 'standard-forms']
   const currentIndex = topics.indexOf(topicId)
   const prevTopic = currentIndex > 0 ? topics[currentIndex - 1] : null
   const nextTopic = currentIndex < topics.length - 1 ? topics[currentIndex + 1] : null
