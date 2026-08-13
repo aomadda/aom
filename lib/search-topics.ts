@@ -29,6 +29,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "manuals accident manual Accident Manual",
   },
   {
+    href: "/topics/accident-manual",
+    title: "Accident Manual",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics accident manual Accident Manual classification duties reporting safety",
+  },
+  {
     href: "/quizzes/accident-manual",
     title: "Accident Manual",
     category: "Quizzes",
@@ -313,12 +320,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material block forward Block Forward G.R. 1.02(9) shunting double line",
   },
   {
-    href: "/topics/operating-material/block-instruments",
+    href: "/topics/block-working-manual/block-instruments",
     title: "Block Instruments",
     category: "Study Topics",
-    parent: "Topics › Operating Material",
+    parent: "Topics › Block Working Manual",
     keywords:
-      "topics operating material block instruments Block Instruments token tokenless SGE DAIDO UFSBI SSBPAC PLCT",
+      "topics block working manual block instruments Block Instruments token tokenless SGE DAIDO UFSBI SSBPAC PLCT",
   },
   {
     href: "/topics/operating-material/block-overlap",
@@ -357,6 +364,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Manuals",
     parent: "Manuals",
     keywords: "manuals block working manual Block Working Manual",
+  },
+  {
+    href: "/topics/block-working-manual",
+    title: "Block Working Manual",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords:
+      "topics block working manual Block Working Manual block instruments PLCT private numbers station diary TSR",
   },
 
   {
@@ -518,11 +533,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps coa COA",
   },
   {
-    href: "/topics/coaches-data",
+    href: "/topics/working-time-table/coaches-data",
     title: "Coaches Data",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics coaches data Coaches Data",
+    parent: "Topics › Working Time Table",
+    keywords: "topics working time table coaches data Coaches Data",
   },
   {
     href: "/topics/operating-material/coacting-signal",
@@ -1690,6 +1705,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "manuals opertaing manual Operating Manual",
   },
   {
+    href: "/topics/operating-manual",
+    title: "Operating Manual",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics operating manual Operating Manual station working train operations",
+  },
+  {
     href: "/quizzes/operating-manual",
     title: "Operating Manual",
     category: "Quizzes",
@@ -1820,12 +1842,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps pms PMS",
   },
   {
-    href: "/topics/operating-material/plct-working",
+    href: "/topics/block-working-manual/plct-working",
     title: "PLCT Working",
     category: "Study Topics",
-    parent: "Topics › Operating Material",
+    parent: "Topics › Block Working Manual",
     keywords:
-      "topics operating material plct working PLCT Working BWM Annexure Paper Line Clear Ticket T/A 1425 T/B 1425 TSR",
+      "topics block working manual plct working PLCT Working BWM Annexure Paper Line Clear Ticket T/A 1425 T/B 1425 TSR",
   },
   {
     href: "/topics/operating-material/point-trap-indicator",
@@ -1872,12 +1894,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics financial rules primary units Primary Units",
   },
   {
-    href: "/topics/operating-material/private-numbers",
+    href: "/topics/block-working-manual/private-numbers",
     title: "Private Numbers",
     category: "Study Topics",
-    parent: "Topics › Operating Material",
+    parent: "Topics › Block Working Manual",
     keywords:
-      "topics operating material private numbers Private Numbers BWM PN book TSR TI line clear",
+      "topics block working manual private numbers Private Numbers BWM PN book TSR TI line clear",
   },
   {
     href: "/topics/information-technology-apps/prs-application",
@@ -2315,12 +2337,12 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material station detonator register Station Detonator Register APPENDIX VII fog signalman",
   },
   {
-    href: "/topics/operating-material/station-diary",
+    href: "/topics/block-working-manual/station-diary",
     title: "Station Diary",
     category: "Study Topics",
-    parent: "Topics › Operating Material",
+    parent: "Topics › Block Working Manual",
     keywords:
-      "topics operating material station diary Station Diary shift SM ASM caution order patrolman signing ON OFF",
+      "topics block working manual station diary Station Diary shift SM ASM caution order patrolman signing ON OFF",
   },
   {
     href: "/topics/operating-material/station-master",
@@ -2516,12 +2538,12 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material train parting Train Parted in Block Section G.R. S.R. 6.08 T/609 whistle",
   },
   {
-    href: "/topics/operating-material/train-signal-register",
+    href: "/topics/block-working-manual/train-signal-register",
     title: "Train Signal Register",
     category: "Study Topics",
-    parent: "Topics › Operating Material",
+    parent: "Topics › Block Working Manual",
     keywords:
-      "topics operating material train signal register Train Signal Register BWM TSR T/14 T/1407 block instrument",
+      "topics block working manual train signal register Train Signal Register BWM TSR T/14 T/1407 block instrument",
   },
   {
     href: "/topics/operating-material/trains-unusually-delayed",
@@ -2605,11 +2627,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material visibility test object VTO VTP Fog signal post G.R S.R. 3.61",
   },
   {
-    href: "/topics/wagons-data",
+    href: "/topics/working-time-table/wagons-data",
     title: "Wagons Data",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics wagons data Wagons Data",
+    parent: "Topics › Working Time Table",
+    keywords: "topics working time table wagons data Wagons Data",
   },
   {
     href: "/topics/operating-material/warner-signal",
@@ -2684,6 +2706,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Manuals",
     parent: "Manuals",
     keywords: "manuals working time table Working Time Table",
+  },
+  {
+    href: "/topics/working-time-table",
+    title: "Working Time Table",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics working time table Working Time Table WTT G.R. 4.07 PCOM timings coaches wagons",
   },
   {
     href: "/acts/workmen-compensation-act-1923",

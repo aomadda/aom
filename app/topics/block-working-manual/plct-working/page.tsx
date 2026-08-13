@@ -2,26 +2,20 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { KeyRound } from 'lucide-react'
+import { FileWarning } from 'lucide-react'
 
 const points = [
-  'PN books shall be supplied to station by T.I.',
-  'They shall be signed by T.I.',
-  'They shall be numbered in the order in which they shall be used.',
-  'Only two books shall be available with the staff on duty.',
-  'Only one PN book shall be in use at a time.',
-  'PN shall be given for each train for which SM grants line clear or informs gateman or any other occasion as per rules.',
-  'The SM shall record the PN given and obtained in the TSR/PN exchange register.',
-  'When a number is allotted, a line shall be drawn horizontally.',
-  'The train number, date of issue shall be entered in the column.',
-  'The TI visiting station shall check the PN sheet.',
-  'Same number shall not be issued for consecutive train, the SM shall cancel such number and give next number.',
-  'The SM receiving the numbers shall be responsible to ensure that no two consecutive numbers are received from the same station.',
-  'If PN book is lost, misplaced or out of stock, the SM shall prepare a manuscript book till such time a new one is supplied.',
-  'It shall be preserved and sent to TI in a sealed cover six months after one year.',
+  'When block instrument failed/suspended, line clear shall be obtained by alternative means of communications.',
+  'Both SMs shall exchange messages in the proforma and record in the TSR in red ink.',
+  'Ensure that the entries in the TSR are complete and block section is clear.',
+  'The line clear enquiry message for despatch (T/A 1425 outward), LCM received (T/B 1425 inward) shall be written by both SMs with initials.',
+  'No abbreviation or curtailment of words or train descriptions shall be used.',
+  'The SM stamp should be affixed on PLCT.',
+  'All entries shall be made in red ink in TSR.',
+  'When block working is resumed, make entry in red ink in TSR showing time and date of resumption, advise each other under exchange of PNs.',
 ]
 
-const PrivateNumbersPage = () => {
+const PLCTWorkingPage = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#0a0c10]">
       <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-slate-950 via-[#0d1117] to-slate-950" />
@@ -35,42 +29,38 @@ const PrivateNumbersPage = () => {
             <div className="absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" />
 
             <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-amber-400/25 to-orange-600/30 ring-1 ring-amber-400/40 shadow-lg shadow-amber-950/40 animate-[soft-pulse_3.5s_ease-in-out_infinite]">
-              <KeyRound className="h-7 w-7 text-amber-200" strokeWidth={1.75} />
+              <FileWarning className="h-7 w-7 text-amber-200" strokeWidth={1.75} />
             </div>
 
             <h1 className="text-center text-xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 sm:text-2xl md:text-3xl leading-snug">
-              Private Numbers (BWM Part A-3.22, B-3.18, C-3.13)
+              PLCT Working (BWM Annexure)
             </h1>
             <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-linear-to-r from-amber-400 to-orange-500" />
           </header>
 
-          <ol className="space-y-3 px-5 py-8 sm:px-10 sm:py-10">
+          <ul className="space-y-3 px-5 py-8 sm:px-10 sm:py-10">
             {points.map((text, index) => (
               <li
                 key={text}
-                className="flex gap-3 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
+                className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
                 style={{ animation: `fade-up 0.55s ease-out ${0.04 * (index + 1)}s both` }}
               >
-                <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
-                  {index + 1}
-                </span>
-                <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
-                  {text}
-                </p>
+                <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
               </li>
             ))}
-          </ol>
+          </ul>
         </article>
 
         <div className="mt-10 flex justify-center">
           <Link
-            href="/topics/operating-material"
+            href="/topics/block-working-manual"
             className="group inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-slate-900/70 px-4 py-2 text-sm font-medium text-amber-100 shadow-lg shadow-black/15 ring-1 ring-amber-500/10 transition hover:border-amber-300/45 hover:bg-slate-900/90"
           >
             <span className="transition-transform group-hover:-translate-x-0.5" aria-hidden>
               ←
             </span>
-            <span>Back to Operating Material</span>
+            <span>Back to Block Working Manual</span>
           </Link>
         </div>
       </div>
@@ -102,4 +92,4 @@ const PrivateNumbersPage = () => {
   )
 }
 
-export default PrivateNumbersPage
+export default PLCTWorkingPage

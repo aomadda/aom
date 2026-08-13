@@ -49,11 +49,6 @@ const topics = [
     icon: Forward,
   },
   {
-    href: '/topics/operating-material/block-instruments',
-    title: 'Block Instruments',
-    icon: CircuitBoard,
-  },
-  {
     href: '/topics/operating-material/block-overlap',
     title: 'Block Overlap',
     icon: BetweenHorizontalStart,
@@ -329,11 +324,6 @@ const topics = [
     icon: SignalMedium,
   },
   {
-    href: '/topics/operating-material/plct-working',
-    title: 'PLCT Working',
-    icon: FileWarning,
-  },
-  {
     href: '/topics/operating-material/point-trap-indicator',
     title: 'Point Trap Indicator',
     icon: Signpost,
@@ -347,11 +337,6 @@ const topics = [
     href: '/topics/operating-material/power-block',
     title: 'Power Block',
     icon: Zap,
-  },
-  {
-    href: '/topics/operating-material/private-numbers',
-    title: 'Private Numbers',
-    icon: KeyRound,
   },
   {
     href: '/topics/operating-material/protection-of-train',
@@ -455,11 +440,6 @@ const topics = [
     icon: Bomb,
   },
   {
-    href: '/topics/operating-material/station-diary',
-    title: 'Station Diary',
-    icon: ClipboardList,
-  },
-  {
     href: '/topics/operating-material/station-master',
     title: 'Station Master',
     icon: UserRoundCog,
@@ -523,11 +503,6 @@ const topics = [
     href: '/topics/operating-material/train-parting',
     title: 'Train Parting',
     icon: Unlink,
-  },
-  {
-    href: '/topics/operating-material/train-signal-register',
-    title: 'Train Signal Register',
-    icon: BookMarked,
   },
   {
     href: '/topics/operating-material/trains-unusually-delayed',

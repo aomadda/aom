@@ -102,13 +102,13 @@ const TrainSignalRegisterPage = () => {
 
         <div className="mt-10 flex justify-center">
           <Link
-            href="/topics/operating-material"
+            href="/topics/block-working-manual"
             className="group inline-flex items-center gap-2 rounded-full border border-amber-400/25 bg-slate-900/70 px-4 py-2 text-sm font-medium text-amber-100 shadow-lg shadow-black/15 ring-1 ring-amber-500/10 transition hover:border-amber-300/45 hover:bg-slate-900/90"
           >
             <span className="transition-transform group-hover:-translate-x-0.5" aria-hidden>
               ←
             </span>
-            <span>Back to Operating Material</span>
+            <span>Back to Block Working Manual</span>
           </Link>
         </div>
       </div>
