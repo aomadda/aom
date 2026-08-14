@@ -5533,6 +5533,19 @@ export const operatingManualQuizzes = {
           explanation:
             "BRM (Ballast Regulating Machine) is used for ballast equalization, regulation and profiling after tamping.",
         },
+        {
+          question:
+            "If a wightbridge becomes non-functional, how many days of loading permission can be granted by the Divisional Railway Manager?",
+          options: [
+            "Upto 7 days",
+            "Upto 30 days",
+            "Upto 60 days",
+            "Full powers",
+          ],
+          correct: 3,
+          explanation:
+            "Full powers is the correct answer. If a wightbridge becomes non-functional, the Divisional Railway Manager can grant full powers to the train to proceed.",
+        },
       ],
       
       

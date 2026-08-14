@@ -30,6 +30,7 @@ const QUIZ_TITLES: Record<string, string> = {
   'operating-manual': 'Operating Manual',
   'railway-gk': 'Railway GK',
   rajabhasha: 'Rajabhasha',
+  'general-awareness-art-culture': 'Art & Culture',
   'general-awareness-biology': 'Biology',
   'general-awareness-botany': 'Botany',
   'general-awareness-chemistry': 'Chemistry',

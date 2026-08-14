@@ -333,6 +333,16 @@ export const currentAffairsQuiz = {
         correct: 0,
         explanation: 'Free Rider is the correct answer because it is the term that is used to describe when a person is NOT paying anything for public goods. Free Rider is a term that is used to describe when a person is NOT paying anything for public goods.',
       },
+      {
+        question:
+          'Which of the following is the coverage provided by the "Pradhan Mantri Suraksha Bima Yojana" (PMSBY)" in case of Partial disability?',
+        options: ['1 lakh', '2 lakh', '3 lakh', '4 lakh'],
+        correct: 2,
+        explanation: `Under the Pradhan Mantri Suraksha Bima Yojana (PMSBY), the benefits for accidental death or disability are:
+        - Accidental death: ₹2 lakh
+        - Total and permanent disability (e.g., total and irrecoverable loss of both eyes, or loss of use of both hands/feet, or loss of sight of one eye + loss of use of one hand/foot): ₹2 lakh
+        - Partial disability (total and irrecoverable loss of sight of one eye, or loss of use of one hand or one foot): ₹1 lakh`,
+      },
     ],
   },
 };

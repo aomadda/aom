@@ -162,6 +162,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports archery Archery",
   },
   {
+    href: "/quizzes/general-awareness/art-culture",
+    title: "Art & Culture",
+    category: "Quizzes",
+    parent: "Quizzes › General Awareness",
+    keywords: "quizzes general awareness art culture Art Culture carnatic nada ahata anahata",
+  },
+  {
     href: "/general-awareness/states-information/arunachal-pradesh",
     title: "Arunachal Pradesh",
     category: "General Awareness",

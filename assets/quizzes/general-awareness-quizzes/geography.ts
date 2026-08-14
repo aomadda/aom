@@ -484,6 +484,12 @@ export const geographyQuiz = {
         correct: 3,
         explanation: 'Sadir is the correct answer because it is the art that is dedicated to the temples. Sadir is a art that is dedicated to the temples. Sadir is a art that is dedicated to the temples.',
       },
+      {
+        question: 'The Balimela Power Plant is located in which of the following Indian state?',
+        options: ['Odisha', 'Andhra Pradesh', 'Karnataka', 'Tamil Nadu'],
+        correct: 0,
+        explanation: 'The Balimela Power Plant (also known as Balimela Hydro Electric Project or Balimela Hydroelectric Power Station) is a 510 MW hydroelectric facility located in Chitrakonda/Balimela area of Malkangiri district, Odisha. It is built on the Sileru River (a tributary of the Godavari) and is owned/operated by the Odisha Hydro Power Corporation Ltd.',
+      },
     ],
   },
 };

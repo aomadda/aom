@@ -3872,6 +3872,17 @@ export const generalSubsidiaryRulesQuizzes = {
         correct: 3,
         explanation: "GR 6.10",
       },
+      {
+        question: "The maximum lenght of wheel flat permitted in BCN wagon is ________",
+        options: [
+          "30 milli meters",
+          "40 milli meters",
+          "50 milli meters",
+          "60 milli meters",
+        ],
+        correct: 3,
+        explanation: "60 milli meters is the correct answer.",
+      },
     ],
     'chapter-7': [
       {

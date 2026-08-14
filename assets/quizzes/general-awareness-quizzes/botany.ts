@@ -43,6 +43,13 @@ export const botanyQuiz = {
         correct: 0,
         explanation: 'Anemophily is the correct answer because it is the type of pollination where pollen grains are transferred from one flower to another of the same species through the wind. Anemophily is a type of pollination that is carried out by the wind.',
       },
+      {
+        question:
+          'Which of the following statements about evaporation is correct?',
+        options: ['It requires heat', 'It occurs throughout the liquid', 'It occurs only at the surface of the liquid', 'It occurs only at the boiling point of the liquid'],
+        correct: 2,
+        explanation: 'It occurs only at the surface of the liquid is the correct answer because it is the statement that is correct about evaporation. Evaporation is a process that occurs when a liquid is heated and turns into a gas. It occurs only at the surface of the liquid.',
+      },
     ],
   },
 };

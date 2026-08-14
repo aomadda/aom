@@ -1800,6 +1800,12 @@ export const polityQuiz = {
         correct: 3,
         explanation: '6 years is the correct answer because it is the term of office of the members of the Rajya Sabha. The members of the Rajya Sabha are elected for a term of 3 years.',
       },
+      {
+        question: 'Which article of the Indian Constitution was given practical effect through the 73rd Constitutional Amendment Act, 1992, leading to the establishment of the Panchayati Raj System?',
+        options: ['Article 38', 'Article 39', 'Article 40', 'Article 41'],
+        correct: 2,
+        explanation: 'Article 40 is the correct answer because it is the article of the Indian Constitution that was given practical effect through the 73rd Constitutional Amendment Act, 1992, leading to the establishment of the Panchayati Raj System.',
+      },
     ],
   },
 }

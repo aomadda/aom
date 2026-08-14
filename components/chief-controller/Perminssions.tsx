@@ -46,6 +46,11 @@ const Perminssions = () => {
       category: 'CTPM'
     },
     {
+      description: 'The coordinating officer throughout the construction stage of a Private Freight Terminal at headquarter level is ______',
+      authority: 'CTPM',
+      category: 'CTPM'
+    },
+    {
       description: 'Approved special instructions are issued or approved by',
       authority: 'Commissioner of Railway Safety (CRS)',
       category: 'CRS'
@@ -53,6 +58,11 @@ const Perminssions = () => {
     {
       description: 'The Central Government shall before giving its sanction to the opening of a Railway obtain a report from ______',
       authority: 'Commissioner of Railway Safety (CRS)',
+      category: 'CRS'
+    },
+    {
+      description: 'The sanctioning authority in case of combination of a color light distant signal with intermediate Block Signalling in section with Slip siding and Catch siding along with corresponding changes at stations without yard remodelling is ______',
+      authority: 'CRS',
       category: 'CRS'
     },
     {

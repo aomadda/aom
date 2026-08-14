@@ -190,6 +190,7 @@ export const powerPlantsSectionTitle = 'POWER PLANTS:' as const
 export const powerPlantsRows = [
   { name: 'Hirakud Hydro Power Plant', year: '---', location: '---' },
   { name: 'Thalcheru Thermal Power Plant', year: '---', location: '---' },
+  { name: 'Balimela Hydro Electric Project', year: '---', location: 'Malkangiri District' },
 ] as const
 
 export const riversOrdered = [

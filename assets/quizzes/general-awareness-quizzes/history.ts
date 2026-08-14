@@ -1472,6 +1472,20 @@ export const historyQuiz = {
         correct: 0,
         explanation: 'Champaran Satyagraha is the correct answer because it is the movement/satyagraha that was the result of the abolishment of the Tinkathia system under which the farmers were asked to cultivate indigo in 3/20th of their land.',
       },
+      {
+        question:
+          'The ‘Prayaga Prashasti’ also known as the ‘Allahabad Pillar’ is composed in praise of which of the following rulers?',
+        options: ['Ashoka', 'Chandragupta II', 'Rudradaman', 'Samudragupta'],
+        correct: 3,
+        explanation: 'The Prayaga Prashasti (also called the Allahabad Pillar Inscription or Prayagraj Pillar Inscription) is a Sanskrit eulogy composed by Harisena, the court poet and minister (sandhivigrahika) of the Gupta emperor Samudragupta (c. 335–375 CE). It details his military conquests, personal qualities, and the extent of his empire.',
+      },
+      {
+        question:
+          'Which of the following incidents prompted Mahatma Gandhi to withdraw the Non-Cooperation Movement in 1922?',
+        options: ['Alipore bomb case', 'Chauri-Chuara incident', 'Suspension of the Roolatt Act', 'Withdrawal of of the Khilafat Movement'],
+        correct: 1,
+        explanation: 'On 4–5 February 1922, in the village of Chauri Chaura (Gorakhpur district, then United Provinces, now Uttar Pradesh), a procession of Non-Cooperation Movement volunteers clashed with police. After the police opened fire, the crowd set fire to the police station, killing 22 (or 23) policemen.',
+      },
     ],
   },
 };

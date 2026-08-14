@@ -9,6 +9,14 @@ const GeneralAwarenessQuiz = () => {
 
   const topics = [
     {
+      href: '/quizzes/general-awareness/art-culture',
+      title: 'Art & Culture',
+      icon: '🎭',
+      color: 'from-rose-500 to-fuchsia-600',
+      description:
+        'Indian art, classical music, dance, architecture, literature, and cultural heritage for exam preparation.'
+    },
+    {
       href: '/quizzes/general-awareness/biology',
       title: 'Biology',
       icon: '🧬',
