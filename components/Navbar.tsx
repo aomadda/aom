@@ -858,7 +858,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20 md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center bg-transparent text-white transition-opacity duration-200 hover:opacity-80 md:hidden"
               aria-label="Toggle menu"
             >
               <svg

@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "AOM Adda",
-  description: "AOM Adda is the best platform for aspirants those who are preparing for the AOM examination. It contains the best quizzes and study materials for the AOM examination.",
+  description: "AOM Adda is an online preparation platform, designed for candidates studying for the Assistant Operations Manager (AOM) and related departmental or promotional examinations.",
   icons: {
     icon: [{ url: "/favicon.png?v=2", type: "image/png" }],
     shortcut: [{ url: "/favicon.png?v=2", type: "image/png" }],
