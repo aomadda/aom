@@ -1486,6 +1486,60 @@ export const historyQuiz = {
         correct: 1,
         explanation: 'On 4–5 February 1922, in the village of Chauri Chaura (Gorakhpur district, then United Provinces, now Uttar Pradesh), a procession of Non-Cooperation Movement volunteers clashed with police. After the police opened fire, the crowd set fire to the police station, killing 22 (or 23) policemen.',
       },
+      {
+        question:
+          'Who secretely reorganised the Hindustan Republican Association (HRA) with Bhagat Singh and other rebels in 1928 and changed its name to Hindustan Socialist Republic Association (HSRA)?',
+        options: ['Chandra Shekhar Azad', 'Sukhdev', 'Rajguru', 'Chitta Ranjan Das'],
+        correct: 0,
+        explanation: 'Chandra Shekhar Azad is the correct answer because it is the personality that secretely reorganised the Hindustan Republican Association (HRA) with Bhagat Singh and other rebels in 1928 and changed its name to Hindustan Socialist Republic Association (HSRA).',
+      },
+      {
+        question:
+          'In which of the following years did Aurangzeb annex Golconda to his kingdom?',
+        options: ['1687', '1688', '1689', '1690'],
+        correct: 0,
+        explanation: `Aurangzeb annexed the Golconda Sultanate in 1687 CE.
+
+After an eight‑month siege of Golconda Fort (January–September 1687), Mughal forces captured the fort, imprisoned the last Qutb Shahi ruler Abul Hasan Qutb Shah, and formally incorporated Golconda into the Mughal Empire as the Hyderabad Subah.`,
+      },
+      {
+        question:
+          'In which year did Babar defeat Rana Sanga, Rajput kings, and their supporters at the Battle of Khanwa?',
+        options: ['1527', '1528', '1529', '1530'],
+        correct: 0,
+        explanation: '1527 is the correct answer because it is the year that Babar defeated Rana Sanga, Rajput kings, and their supporters at the Battle of Khanwa.',
+      },
+      {
+        question:
+          'Which of the following Sultans of Delhi adopted the policy of Blood and Iron?',
+        options: ['Alauddin Khilji', 'Shamsuddin Iltutmish', 'Shah Jahan', 'Balban'],
+        correct: 3,
+        explanation: 'Balban (1266-1287) is the correct answer because it is the Sultan of Delhi that adopted the policy of Blood and Iron. The policy emphasized military power, strict discipline, and punitive measures to maintain control over the empire.',
+      },
+      {
+        question:
+          'Which of the following battles was fought in the year 1911 AD?',
+        options: ['Battle of Plassey', 'Battle of Buxar', 'Battle of Panipat', 'Battle of Tarain'],
+        correct: 3,
+        explanation: `Battle of Tarain (1291) was fought in the year 1911 AD.`,
+      },
+      {
+        question:
+          'The first systematisation of the Jain canonical literature took place at which of the following places?',
+        options: ['Lumbini', 'Mathura', 'Pataliputra', 'Vallabhi'],
+        correct: 2,
+        explanation: 'Pataliputra is the correct answer because it is the place where the first systematisation of the Jain canonical literature took place.',
+      },
+      {
+        question:
+          'Who among the following was the minister who helped the King Ashoka acquire the throne?',
+        options: ['Bhadrayudha', 'Radha Gupta', 'Samudra', 'Susima'],
+        correct: 0,
+        explanation: `The minister who helped King Ashoka acquire the throne was Radhagupta.
+
+        According to Buddhist texts like the Ashokavadana, Radhagupta (a senior minister in Bindusara’s court) supported Ashoka during the succession struggle after Bindusara’s death, helping him outmaneuver rivals such as Susima and secure the Mauryan throne.`,
+      },
+
     ],
   },
 };

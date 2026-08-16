@@ -18,6 +18,22 @@ Anahata Nada: Unstruck or unproduced sound (subtle, inner sound not caused by ph
         correct: 0,
         explanation: 'Bhubaneswar is the correct answer because it is the capital of Odisha.',
       },
+      {
+        question: 'The Kayatha Culture of Chalcolithic period  in Ancient India belongs to which of the following states of India?',
+        options: ['Orissa', 'Madhya Pradesh', 'Maharashtra', 'Rajasthan'],
+        correct: 1,
+        explanation: `The Kayatha Culture of the Chalcolithic period belongs to Madhya Pradesh.
+
+It is named after the type-site Kayatha (Kaytha) in Ujjain district, on the banks of the Choti Kali Sindh river (a tributary of the Chambal), and over 40 related sites have been found in the Malwa region of Madhya Pradesh.`,
+      },
+      {
+        question: 'Ullambana is the festival of which of the following religions?',
+        options: ['Buddhism', 'Hinduism', 'Jainism', 'Sikhism'],
+        correct: 0,
+        explanation: `Ullambana is a festival of Buddhism.
+
+It is observed mainly in East and Southeast Asia (known as the Hungry Ghost Festival, Yulanpen, Bon in Japan, Vu Lan in Vietnam, etc.) on the 15th day of the 7th lunar month, focusing on filial piety and offering merit to deceased ancestors.`,
+      },
     ],
   },
 };

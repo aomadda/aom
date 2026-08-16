@@ -162,7 +162,13 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Digestive System is the correct answer because it is the organ system that the buccal cavity belongs to. The buccal cavity is a part of the digestive system.',
       },
-      
+      {
+        question:
+          'Which nitrogenous waste produced in the body is removed by the human kidney?',
+        options: ['Ammonia only', 'Ammonia + Uric acid', 'Ammonia + Urea', 'Urea + Uric acid'],
+        correct: 3,
+        explanation: 'Urea + Uric acid is the correct answer because it is the nitrogenous waste that is removed by the human kidney.',
+      },
     ],
   },
 };

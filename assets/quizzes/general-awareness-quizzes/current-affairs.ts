@@ -337,11 +337,78 @@ export const currentAffairsQuiz = {
         question:
           'Which of the following is the coverage provided by the "Pradhan Mantri Suraksha Bima Yojana" (PMSBY)" in case of Partial disability?',
         options: ['1 lakh', '2 lakh', '3 lakh', '4 lakh'],
-        correct: 2,
+        correct: 0,
         explanation: `Under the Pradhan Mantri Suraksha Bima Yojana (PMSBY), the benefits for accidental death or disability are:
         - Accidental death: ₹2 lakh
         - Total and permanent disability (e.g., total and irrecoverable loss of both eyes, or loss of use of both hands/feet, or loss of sight of one eye + loss of use of one hand/foot): ₹2 lakh
         - Partial disability (total and irrecoverable loss of sight of one eye, or loss of use of one hand or one foot): ₹1 lakh`,
+      },
+      {
+        question:
+          `During the 80th Independence Day celebrations in 2026, Prime Minister Narendra Modi introduced a new framework to accelerate India's journey towards becoming a Viksit Bharat.`,
+        options: ['Amrit Kal Mission', 'Panch Pran', 'Sapta Dhara', 'Viksit Bharat Sankalp'],
+        correct: 2,
+        explanation: `On 15 August 2026, during India’s 80th Independence Day celebrations at the Red Fort, Prime Minister Narendra Modi unveiled a seven-pillar development framework called Sapta Dhara (or Shakti ki Saptdhara / seven streams of strength) to accelerate progress toward Viksit Bharat (developed India) by 2047.
+He linked it to the ancient idea of the Sapta Sindhu and described it as the foundation for the next phase of reforms and growth. The seven streams are:
+
+Manufacturing power — Focus on complete end-to-end value chains, cost, quality, and scale so India becomes a key player in global supply chains (not just a market).
+Agriculture and food processing — Strengthening agro-food production and processing.
+Technology and innovation — Including AI, semiconductors, and related capabilities.
+Gati Shakti — Infrastructure, logistics, mobility, and connectivity.
+Defence power (Raksha Shakti) — Self-reliance in defence manufacturing and capability.
+Green and blue economy — Sustainable growth, renewable/nuclear energy, and marine resources.
+Soft power — India’s cultural, diplomatic, and global influence`
+      },
+      {
+        question:
+          'India won its first-ever Common Wealth Games gold medal in which sport?',
+        options: ['Hockey', 'Athletics', 'Weightlifting', 'Wrestling'],
+        correct: 1,
+        explanation: `Athletics (specifically the men’s 440-yard race, won by Milkha Singh).
+India’s first Commonwealth Games (then called the British Empire and Commonwealth Games) gold medals came at the 1958 edition in Cardiff, Wales. Milkha Singh won gold in the 440-yard race, becoming the first Indian to claim a CWG gold; freestyle wrestler Lila Ram (100 kg) also won gold in the same Games.
+India’s overall first CWG medal of any color was a bronze in wrestling by Rashid Anwar at the 1934 London Games, but the first gold arrived only in 1958 in athletics.`,
+      },
+      {
+        question:
+          'In which year was the first Regional Bank established in India?',
+        options: ['1975', '1980', '1982', '1985'],
+        correct: 0,
+        explanation: `The first Regional Rural Bank (RRB) in India was established in 1975.
+
+Specifically, the first five RRBs were set up on 2 October 1975, with Prathama Bank (sponsored by Syndicate Bank, headquartered in Moradabad, Uttar Pradesh) being the very first.`,
+      },
+      {
+        question:
+          'The report "Strategic Roadmap for Making Ayurveda Global", released by NITI Aayog in July 2026, aims to make Ayurveda a global brand by which year?',
+        options: ['2030', '2035', '2047', '2050'],
+        correct: 2,
+        explanation: `The report "Strategic Roadmap for Making Ayurveda Global", released by NITI Aayog in July 2026, aims to make Ayurveda a global brand by 2047.`,
+      },
+      {
+        question:
+          'The Companies Act, _______ is an act to consolidate and amend the law relating to companies.',
+        options: ['2005', '2013', '2015', '2017'],
+        correct: 1,
+        explanation: `The Companies Act, 2013 is an Act to consolidate and amend the law relating to companies.
+
+Its long title reads: “An Act to consolidate and amend the law relating to companies.” It received Presidential assent on 29 August 2013 and largely replaced the Companies Act, 1956.`,
+      },
+      {
+        question:
+          'Who among the following is India\'s first-ever two-time Olympic medallist in an individual event and the first Indian to win a wrestling world championship?',
+        options: ['Sushil Kumar', 'Vijay Kumar', 'Yogeshwar Dutt', 'Harpreet Singh'],
+        correct: 0,
+        explanation: `The answer is Sushil Kumar.
+
+He is India’s first-ever two-time Olympic medallist in an individual event—winning bronze in 2008 (Beijing) and silver in 2012 (London) in freestyle wrestling—and the first Indian to win a wrestling World Championship, taking gold at the 2010 World Wrestling Championships in Moscow.`,
+      },
+      {
+        question:
+          'Which of the following is India\'s first Integrated Green Field Smart City?',
+        options: ['Atal Nagar, Chhattisgarh', 'Bengaluru, Karnataka', 'Bhopal, Madhya Pradesh', 'Chennai, Tamil Nadu'],
+        correct: 0,
+        explanation: `Atal Nagar (formerly Naya Raipur), Chhattisgarh.
+It is recognized as India’s first integrated greenfield smart city—a planned city built from the ground up (not retrofitted) with integrated smart infrastructure for governance, utilities, transport, security, and more.`,
       },
     ],
   },

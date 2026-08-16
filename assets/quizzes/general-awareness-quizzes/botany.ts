@@ -50,6 +50,13 @@ export const botanyQuiz = {
         correct: 2,
         explanation: 'It occurs only at the surface of the liquid is the correct answer because it is the statement that is correct about evaporation. Evaporation is a process that occurs when a liquid is heated and turns into a gas. It occurs only at the surface of the liquid.',
       },
+      {
+        question:
+          'The male reproductive part of a flower is known as the',
+        options: ['Stamen', 'Petals', 'Sepals', 'Carpels'],
+        correct: 0,
+        explanation: 'Stamen is the correct answer because it is the male reproductive part of a flower. Stamen is a part of the flower that is responsible for the production of pollen grains.',
+      },
     ],
   },
 };

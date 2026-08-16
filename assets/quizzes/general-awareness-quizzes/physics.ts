@@ -155,6 +155,27 @@ export const physicsQuiz = {
         correct: 0,
         explanation: 'Raoult\'s law is the correct answer because it is the principle that states that the partial vapour pressure of each volatile component in a solution is directly proportional to its mole fraction in the solution.',
       },
+      {
+        question:
+          'When a car is moving through a dusty road during night a path of beam from the headlight is clearly visible. This is due to ________',
+        options: ['Scattering of light', 'Reflection of light', 'Refraction of light', 'Diffraction of light'],
+        correct: 0,
+        explanation: 'Scattering of light is the correct answer because it is the phenomenon that is responsible for the path of beam from the headlight to be clearly visible.',
+      },
+      {
+        question:
+          'Which of the following physical quantities has zero dimension in mass and time?',
+        options: ['Force', 'Momentum', 'Volume', 'Work'],
+        correct: 2,
+        explanation: 'Volume is the correct answer because it is the physical quantity that has zero dimension in mass and time. Volume is the product of the length, width and height of the body.',
+      },
+      {
+        question:
+          'A ray of light passes from water to glass. It bends ________',
+        options: ['Away from the normal and speeds up', 'Away from the normal and slows down', 'Towards the normal and speeds up', 'Towards the normal and slows down'],
+        correct: 3,
+        explanation: 'Towards the normal and slows down is the correct answer because it is the phenomenon that is responsible for the bending of the ray of light from water to glass.',
+      },
     ]
   },
 };

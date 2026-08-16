@@ -1806,6 +1806,18 @@ export const polityQuiz = {
         correct: 2,
         explanation: 'Article 40 is the correct answer because it is the article of the Indian Constitution that was given practical effect through the 73rd Constitutional Amendment Act, 1992, leading to the establishment of the Panchayati Raj System.',
       },
+      {
+        question: 'The 9th amendment act 1960 made adjustments to the Indian territory due to an agreement with which country?',
+        options: ['China', 'Pakistan', 'Bangladesh', 'Bhutan'],
+        correct: 1,
+        explanation: 'The 9th amendment act 1960 made adjustments to the Indian territory due to an agreement with Pakistan. This amendment was related to the Indus Water Treaty signed between India and Pakistan, which aimed to resolve disputes concerning the distribution of water resources in the Indus River basin.',
+      },
+      {
+        question: 'Which among the following Constitutional Amendments Act is also known as Anti Defection Law?',
+        options: ['44th', '52nd', '62nd', '72nd'],
+        correct: 0,
+        explanation: '52nd Amendment Act, 1985 is the correct answer because it is the Constitutional Amendment Act that is also known as Anti Defection Law.',
+      },
     ],
   },
 }

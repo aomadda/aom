@@ -490,6 +490,47 @@ export const geographyQuiz = {
         correct: 0,
         explanation: 'The Balimela Power Plant (also known as Balimela Hydro Electric Project or Balimela Hydroelectric Power Station) is a 510 MW hydroelectric facility located in Chitrakonda/Balimela area of Malkangiri district, Odisha. It is built on the Sileru River (a tributary of the Godavari) and is owned/operated by the Odisha Hydro Power Corporation Ltd.',
       },
+      {
+        question: 'The Vindhyan range separates which two major physiographic regions of India?',
+        options: ['The Deccan Plateau and the Northern Plains', 'The Deccan Plateau and the Western Ghats', 'The Deccan Plateau and the Eastern Ghats', 'The Deccan Plateau and the Western Ghats'],
+        correct: 0,
+        explanation: 'The Deccan Plateau and the Northern Plains is the correct answer.',
+      },
+      {
+        question:
+          'In which part of the India does the pre-monsoon "Mango Rain" occur?',
+        options: ['Andhra Pradesh + Odisha', 'Kerala + Karnataka', 'West Bengal + Assam', 'West Bengal + Odisha'],
+        correct: 0,
+        explanation: `Kerala and Karnataka (southern/peninsular India), and to some extent parts of Tamil Nadu.
+These are localized pre-monsoon (March–May) showers that help ripen mangoes, which is why they are called “mango rains” or “mango showers.” They are distinct from the stronger pre-monsoon thunderstorms of eastern India (known as Kalbaisakhi/Nor’westers in West Bengal or Bordoisila in Assam). In Karnataka they are also sometimes called cherry blossom or coffee showers because they aid coffee flowering.`,
+      },
+      {
+        question:
+          'Which of the following water body separates Sicily from Italy?',
+        options: ['Strait of Messina', 'Strait of Gibraltar', 'Strait of Bonifacio', 'Strait of Bosporus'],
+        correct: 0,
+        explanation: `The Strait of Messina separates Sicily from mainland Italy.
+
+It is a narrow channel in the Mediterranean Sea, about 32 km long and just ~3 km wide at its narrowest point, linking the Tyrrhenian Sea to the north with the Ionian Sea to the south.`,
+      },
+      {
+        question:
+          'Who put the continental drift theory in 1912?',
+        options: ['Abraham Ortelius', 'Antonia Pellegrini', 'Alfred Wegener', 'Arthur Holmes'],
+        correct: 2,
+        explanation: `The continental drift theory was put forward in 1912 by the German meteorologist and geophysicist Alfred Wegener.
+
+He first presented his hypothesis on 6 January 1912 to the Geological Association in Frankfurt, proposing that all continents were once joined in a supercontinent (later called Pangaea) and had since drifted apart.`,
+      },
+      {
+        question:
+          'In which of the following types of vegetation would we find species like ebony, mahogany, and rosewood?',
+        options: ['Montane forests', 'Tropical deciduous forests', 'Mangroves forests', 'Tropical evergreen forests'],
+        correct: 3,
+        explanation: `Ebony, mahogany, and rosewood are characteristic species of tropical evergreen forests (also called tropical rainforests).
+
+These trees thrive in warm, humid regions with very heavy rainfall and little or no distinct dry season, such as parts of the Western Ghats, Andaman & Nicobar, and northeastern India.`,
+      },
     ],
   },
 };

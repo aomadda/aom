@@ -2438,7 +2438,7 @@ export const june = {
     {
       headline: "June – 29 : National Statistics Day",
       fields: [
-        { label: "Since", value: "2006" },
+        { label: "Since", value: "2007" },
         {
           label: "Purpose",
           value:
