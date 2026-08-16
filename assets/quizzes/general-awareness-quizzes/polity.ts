@@ -1818,6 +1818,31 @@ export const polityQuiz = {
         correct: 0,
         explanation: '52nd Amendment Act, 1985 is the correct answer because it is the Constitutional Amendment Act that is also known as Anti Defection Law.',
       },
+      {
+        question: 'On which date did the Constituent Assembly of India adopt the Indian National Flag?',
+        options: ['15 August 1947', '22 July 1947', '26 January 1949', '26 January 1950'],
+        correct: 0,
+        explanation: '22 July 1947 is the correct answer because it is the date on which the Constituent Assembly of India adopted the Indian National Flag.',
+      },
+      {
+        question: 'Following the Indian Constitution and respecting the National Anthem and Flag is the ________ fundamental duty included in our Constitution?',
+        options: ['First', 'Second', 'Third', 'Fourth'],
+        correct: 0,
+        explanation: 'First is the correct answer because it is the fundamental duty that is included in our Constitution.',
+      },
+      {
+        question: 'In which of the following Indian National Congress (INC) sessions was the National Anthem sung for the first time?',
+        options: ['Allahabad', 'Surat', 'Calcutta', 'Madras'],
+        correct: 2,
+        explanation: `1911, Kolkata (Calcutta) session.
+India’s National Anthem, “Jana Gana Mana” (composed by Rabindranath Tagore), was first sung on 27 December 1911 at the Calcutta session of the Indian National Congress. It was performed by Tagore’s niece Sarala Devi Chowdhurani along with school students before the gathering, which included then-Congress president Bishan Narayan Dhar.`,
+      },
+      {
+        question: 'On which date did the Government of India adopt the Lion Capital of Sarnath, with bull, wheel, and horse, as the national emblem?',
+        options: ['15 August 1947', '22 July 1947', '26 January 1949', '26 January 1950'],
+        correct: 3,
+        explanation: '26 January 1950 is the correct answer because it is the date on which the Government of India adopted the Lion Capital of Sarnath, with bull, wheel, and horse, as the national emblem.',
+      },
     ],
   },
 }

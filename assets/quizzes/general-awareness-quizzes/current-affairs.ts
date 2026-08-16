@@ -410,6 +410,15 @@ He is India’s first-ever two-time Olympic medallist in an individual event—w
         explanation: `Atal Nagar (formerly Naya Raipur), Chhattisgarh.
 It is recognized as India’s first integrated greenfield smart city—a planned city built from the ground up (not retrofitted) with integrated smart infrastructure for governance, utilities, transport, security, and more.`,
       },
+      {
+        question:
+          'In the year 2010, the Government of India had categorised which animal as the National Heritage Animal of India?',
+        options: ['Dolphin', 'Elephant', 'Lion', 'Cheetah'],
+        correct: 1,
+        explanation: `The answer is Tiger.
+
+In 2010, the Government of India had categorised the Elephant as the National Heritage Animal of India.`,
+      },
     ],
   },
 };

@@ -531,6 +531,13 @@ He first presented his hypothesis on 6 January 1912 to the Geological Associatio
 
 These trees thrive in warm, humid regions with very heavy rainfall and little or no distinct dry season, such as parts of the Western Ghats, Andaman & Nicobar, and northeastern India.`,
       },
+      {
+        question:
+          'Which of the following is formed by each step of the food chain?',
+        options: ['Ozone layer', 'Stratosphere level', 'Tropic level', 'Troposphere level'],
+        correct: 2,
+        explanation: 'Tropic level is the correct answer because it is the level that is formed by each step of the food chain.',
+      },
     ],
   },
 };
