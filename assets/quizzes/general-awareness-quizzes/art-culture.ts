@@ -30,9 +30,7 @@ It is named after the type-site Kayatha (Kaytha) in Ujjain district, on the bank
         question: 'Ullambana is the festival of which of the following religions?',
         options: ['Buddhism', 'Hinduism', 'Jainism', 'Sikhism'],
         correct: 0,
-        explanation: `Ullambana is a festival of Buddhism.
-
-It is observed mainly in East and Southeast Asia (known as the Hungry Ghost Festival, Yulanpen, Bon in Japan, Vu Lan in Vietnam, etc.) on the 15th day of the 7th lunar month, focusing on filial piety and offering merit to deceased ancestors.`,
+        explanation: `Ullambana (Ullambana Festival) is associated with Buddhism, particularly Mahayana Buddhism. It is also known as the Ghost Festival in East Asian Buddhist traditions and is associated with making offerings to ancestors and deceased beings.`,
       },
     ],
   },

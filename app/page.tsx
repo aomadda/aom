@@ -1,45 +1,44 @@
 import React, { Suspense } from 'react'
 import Link from 'next/link'
-import {
-} from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { getSession } from '@/lib/auth/session'
 import HomeRuleOfTheDay from '@/components/HomeRuleOfTheDay'
 
 type NavBox = { href: string; label: string; icon?: string }
 
 const topicsLinks: NavBox[] = [
+  { href: '/topics/accident-manual', label: 'Accident Manual', icon: '⚠️' },
+  { href: '/topics/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
+  { href: '/topics/cat', label: 'CAT', icon: '📝' },
   { href: '/topics/chief-controller', label: 'Chief Controller', icon: '👨‍💼' },
   { href: '/topics/container-rail-terminals', label: 'Container rail terminals', icon: '🏗️' },
-  { href: '/topics/public-complaints', label: 'Public complaints', icon: '📢' },
+  { href: '/topics/engine-on-load', label: 'Engine on load', icon: '🚂' },
   { href: '/topics/establishment-rules', label: 'Establishment rules', icon: '📜' },
   { href: '/topics/financial-rules', label: 'Financial rules', icon: '💰' },
+  { href: '/topics/gati-shakti-terminals', label: 'Gati Shakti terminals', icon: '⚡' },
   { href: '/topics/general-rules', label: 'General rules', icon: '📘' },
-  { href: '/topics/railway-acts', label: 'Railway acts', icon: '⚖️' },
-  { href: '/topics/operating-material', label: 'Operating material', icon: '📂' },
-  { href: '/topics/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
-  { href: '/topics/accident-manual', label: 'Accident Manual', icon: '⚠️' },
-  { href: '/topics/operating-manual', label: 'Operating Manual', icon: '📘' },
-  { href: '/topics/working-time-table', label: 'Working Time Table', icon: '⏰' },
+  { href: '/topics/government-e-market', label: 'Government e-market', icon: '🛒' },
+  { href: '/topics/govt-pension', label: 'Government pension', icon: '🏛️' },
   { href: '/topics/indian-railways', label: 'Indian Railways', icon: '🇮🇳' },
+  { href: '/topics/information-technology-apps', label: 'Information technology apps', icon: '💻' },
   { href: '/topics/irec', label: 'IREC', icon: '📕' },
   { href: '/topics/irem', label: 'IREM', icon: '📗' },
   { href: '/topics/joint-consultative-machinery', label: 'Joint consultative machinery', icon: '💬' },
-  { href: '/topics/cat', label: 'CAT', icon: '📝' },
+  { href: '/topics/leave-travel-concession', label: 'Leave travel concession', icon: '🎫' },
   { href: '/topics/master-circulars', label: 'Master circulars', icon: '📜' },
   { href: '/topics/merry-go-round', label: 'Merry go round', icon: '🎠' },
   { href: '/topics/mission-3000MT', label: 'Mission 3000 MT', icon: '🎯' },
-  { href: '/topics/leave-travel-concession', label: 'Leave travel concession', icon: '🎫' },
-  { href: '/topics/govt-pension', label: 'Government pension', icon: '🏛️' },
-  { href: '/topics/government-e-market', label: 'Government e-market', icon: '🛒' },
   { href: '/topics/national-logistics-policy', label: 'National logistics policy', icon: '📦' },
   { href: '/topics/national-pension-scheme', label: 'National pension scheme', icon: '💰' },
+  { href: '/topics/national-rail-plan', label: 'National rail plan', icon: '🗺️' },
+  { href: '/topics/operating-manual', label: 'Operating Manual', icon: '📘' },
+  { href: '/topics/operating-material', label: 'Operating material', icon: '📂' },
   { href: '/topics/permanent-negotiating-machinery', label: 'Permanent negotiating machinery', icon: '🗣️' },
   { href: '/topics/prem', label: 'PREM', icon: '📑' },
-  { href: '/topics/national-rail-plan', label: 'National rail plan', icon: '🗺️' },
+  { href: '/topics/public-complaints', label: 'Public complaints', icon: '📢' },
+  { href: '/topics/railway-acts', label: 'Railway acts', icon: '⚖️' },
   { href: '/topics/schemes', label: 'Schemes', icon: '📋' },
-  { href: '/topics/engine-on-load', label: 'Engine on load', icon: '🚂' },
-  { href: '/topics/gati-shakti-terminals', label: 'Gati Shakti terminals', icon: '⚡' },
-  { href: '/topics/information-technology-apps', label: 'Information technology apps', icon: '💻' },
+  { href: '/topics/working-time-table', label: 'Working Time Table', icon: '⏰' },
 ]
 
 const actsLinks: NavBox[] = [
@@ -128,31 +127,31 @@ const exploreSections = [
   {
     title: 'Topics',
     href: '/topics',
-    panel: 'from-rose-600 via-pink-500 to-orange-500 shadow-rose-300/50',
+    panel: 'from-rose-600 via-pink-500 to-orange-500',
     items: topicsLinks,
   },
   {
     title: 'Acts & Rules',
     href: '/acts',
-    panel: 'from-blue-700 via-indigo-600 to-sky-500 shadow-indigo-300/50',
+    panel: 'from-blue-700 via-indigo-600 to-sky-500',
     items: actsLinks,
   },
   {
     title: 'Manuals',
     href: '/manuals',
-    panel: 'from-violet-700 via-purple-600 to-fuchsia-500 shadow-purple-300/50',
+    panel: 'from-violet-700 via-purple-600 to-fuchsia-500',
     items: manualsLinks,
   },
   {
     title: 'General Awareness',
     href: '/general-awareness',
-    panel: 'from-teal-700 via-cyan-600 to-emerald-500 shadow-teal-300/50',
+    panel: 'from-teal-700 via-cyan-600 to-emerald-500',
     items: generalAwarenessLinks,
   },
   {
     title: 'Quizzes',
     href: '/quizzes',
-    panel: 'from-emerald-700 via-green-600 to-lime-500 shadow-emerald-300/50',
+    panel: 'from-emerald-700 via-green-600 to-lime-500',
     items: quizzesLinks,
   },
 ]
@@ -203,8 +202,15 @@ const Home = async () => {
                 
               </p>
 
-             
-            </div>
+              <div className="flex justify-center lg:justify-start">
+                <Link
+                  href="/register"
+                  className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-lg font-semibold text-purple-700 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                >
+                  Register Now
+                  <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>            </div>
 
             {/* Profile — small circle top-center on mobile; full picture right on large screens */}
             <div className="order-1 flex w-full justify-center lg:order-2 lg:w-auto lg:shrink-0 lg:justify-end">
@@ -226,69 +232,63 @@ const Home = async () => {
 
      
 
-      {/* Explore sections */}
-      <div className="relative overflow-hidden bg-linear-to-br from-sky-100 via-indigo-50 to-fuchsia-100">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-blue-400/25 blur-3xl" />
-          <div className="absolute right-0 top-40 h-80 w-80 rounded-full bg-fuchsia-400/20 blur-3xl" />
-          <div className="absolute bottom-20 left-1/3 h-96 w-96 rounded-full bg-teal-300/25 blur-3xl" />
-          <div className="absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-amber-300/20 blur-3xl" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.55),transparent_55%)]" />
-        </div>
-        <div className="relative mx-auto max-w-9xl space-y-8 px-4 py-10 sm:px-6 sm:py-12 lg:space-y-10 lg:px-8 lg:py-16">
-          {exploreSections.map((section) => (
-            <section
-              key={section.href}
-              className={`relative overflow-hidden rounded-xl bg-linear-to-br p-4 shadow-xl sm:p-6 lg:p-8 ${section.panel}`}
-            >
-              <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/15 blur-2xl" />
-              <div className="pointer-events-none absolute -bottom-20 -left-10 h-56 w-56 rounded-full bg-black/10 blur-3xl" />
-              <div className="relative">
-                <div className="mb-5 flex items-center justify-between gap-3 sm:mb-6">
-                  <div className="flex items-center gap-3">
-                    <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                      {section.title}
-                    </h2>
-                  </div>
-                  <Link
-                    href={section.href}
-                    className="shrink-0 rounded-full border border-white/35 bg-white/15 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/25"
-                  >
-                    View all →
-                  </Link>
-                </div>
-                <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-                  {section.items.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="group flex min-h-20 items-center gap-3 rounded-lg border border-white/25 bg-white/15 px-3.5 py-3.5 text-left shadow-sm backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:bg-white/25 hover:shadow-lg sm:min-h-24 sm:gap-3.5 sm:px-4 sm:py-4"
-                    >
-                      {item.icon ? (
-                        <span
-                          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-xl sm:h-12 sm:w-12 sm:text-2xl"
-                          aria-hidden
-                        >
-                          {item.icon}
-                        </span>
-                      ) : (
-                        <span
-                          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-base font-bold text-white sm:h-12 sm:w-12 sm:text-lg"
-                          aria-hidden
-                        >
-                          {item.label.charAt(0)}
-                        </span>
-                      )}
-                      <span className="line-clamp-2 text-sm font-semibold leading-snug text-white sm:text-base">
-                        {item.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
+      {/* Explore sections — full-bleed gradients like the hero */}
+      <div>
+        {exploreSections.map((section) => (
+          <section
+            key={section.href}
+            className={`relative overflow-hidden bg-linear-to-br ${section.panel}`}
+          >
+            <div className="absolute inset-0 bg-black/15" aria-hidden />
+            <div className="absolute inset-0 overflow-hidden" aria-hidden>
+              <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+              <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-black/15 blur-3xl" />
+              <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />
+            </div>
+
+            <div className="relative z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+              <div className="mb-5 flex items-center justify-between gap-3 sm:mb-6">
+                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                  {section.title}
+                </h2>
+                <Link
+                  href={section.href}
+                  className="shrink-0 rounded-full border border-white/35 bg-white/15 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/25"
+                >
+                  View all →
+                </Link>
               </div>
-            </section>
-          ))}
-        </div>
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+                {section.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group flex min-h-20 items-center gap-3 rounded-lg border border-white/25 bg-white/15 px-3.5 py-3.5 text-left shadow-sm backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:bg-white/25 hover:shadow-lg sm:min-h-24 sm:gap-3.5 sm:px-4 sm:py-4"
+                  >
+                    {item.icon ? (
+                      <span
+                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-xl sm:h-12 sm:w-12 sm:text-2xl"
+                        aria-hidden
+                      >
+                        {item.icon}
+                      </span>
+                    ) : (
+                      <span
+                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-base font-bold text-white sm:h-12 sm:w-12 sm:text-lg"
+                        aria-hidden
+                      >
+                        {item.label.charAt(0)}
+                      </span>
+                    )}
+                    <span className="line-clamp-2 text-sm font-semibold leading-snug text-white sm:text-base">
+                      {item.label}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
       </div>
 
       
