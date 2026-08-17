@@ -202,15 +202,18 @@ const Home = async () => {
                 
               </p>
 
-              <div className="flex justify-center lg:justify-start">
-                <Link
-                  href="/register"
-                  className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-lg font-semibold text-purple-700 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-                >
-                  Register Now
-                  <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>            </div>
+              {!fullName ? (
+                <div className="flex justify-center lg:justify-start">
+                  <Link
+                    href="/register"
+                    className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-lg font-semibold text-purple-700 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  >
+                    Register Now
+                    <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              ) : null} 
+              </div>
 
             {/* Profile — small circle top-center on mobile; full picture right on large screens */}
             <div className="order-1 flex w-full justify-center lg:order-2 lg:w-auto lg:shrink-0 lg:justify-end">
@@ -255,7 +258,7 @@ const Home = async () => {
                   href={section.href}
                   className="shrink-0 rounded-full border border-white/35 bg-white/15 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/25"
                 >
-                  View all →
+                  View all 
                 </Link>
               </div>
               <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
