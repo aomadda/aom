@@ -1177,7 +1177,7 @@ export const searchTopics: SearchTopic[] = [
     title: "Indian Railways",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics indian railways Indian Railways organization structure zones",
+    keywords: "topics indian railways Indian Railways organization structure zones statistics",
   },
   {
     href: "/topics/indian-railways/railway-organization",
@@ -1186,6 +1186,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Indian Railways",
     keywords:
       "topics indian railways railway organization Railway Organization structure zones divisions hierarchy",
+  },
+  {
+    href: "/topics/indian-railways/railway-statistics",
+    title: "Railway Statistics",
+    category: "Study Topics",
+    parent: "Topics › Indian Railways",
+    keywords:
+      "topics indian railways railway statistics Railway Statistics facts figures network traffic",
   },
   {
     href: "/acts/indian-railways-act-1989",

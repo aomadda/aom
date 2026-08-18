@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Building2, ChevronRight, TrainFront } from 'lucide-react'
+import { BarChart3, Building2, ChevronRight, TrainFront } from 'lucide-react'
 
 const indianRailwaysTopics = [
   {
@@ -14,6 +14,18 @@ const indianRailwaysTopics = [
     iconClassName: 'text-amber-200',
     borderClassName: 'border-amber-500/25 hover:border-amber-400/45',
     ringClassName: 'ring-amber-500/10',
+  },
+  {
+    href: '/topics/indian-railways/railway-statistics',
+    title: 'Railway Statistics',
+    subtitle: 'Facts & figures',
+    description:
+      'Indian Railways statistics — network, traffic, and examination-oriented figures.',
+    icon: BarChart3,
+    accent: 'from-sky-500/20 via-blue-500/10 to-transparent',
+    iconClassName: 'text-sky-200',
+    borderClassName: 'border-sky-500/25 hover:border-sky-400/45',
+    ringClassName: 'ring-sky-500/10',
   },
 ]
 
@@ -41,7 +53,7 @@ const IndianRailways = () => {
             Indian Railways
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            Browse Indian Railways study topics below. More sub-topics can be added to this grid later.
+            Browse Indian Railways study topics — organization and railway statistics.
           </p>
         </div>
 
