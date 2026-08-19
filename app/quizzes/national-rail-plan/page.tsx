@@ -15,14 +15,14 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link'
-import { railwayStatisticsQuizzes } from '@/assets/quizzes/railway-statistics'
+import { nationalRailPlanQuizzes } from '@/assets/quizzes/national-rail-plan'
 
-const CATEGORY_ID = 'railway-statistics'
-const CATEGORY_TITLE = 'Railway Statistics'
-const CATEGORY_COLOR = 'from-amber-500 to-orange-600'
-const CATEGORY_QUIZZES = railwayStatisticsQuizzes.quizzes
-const RESULTS_STORAGE_KEY = 'railway_statistics_quiz_results'
-const SESSION_STORAGE_KEY = 'railway_statistics_quiz_session'
+const CATEGORY_ID = 'national-rail-plan'
+const CATEGORY_TITLE = 'National Rail Plan'
+const CATEGORY_COLOR = 'from-indigo-500 to-blue-600'
+const CATEGORY_QUIZZES = nationalRailPlanQuizzes.quizzes
+const RESULTS_STORAGE_KEY = 'national_rail_plan_quiz_results'
+const SESSION_STORAGE_KEY = 'national_rail_plan_quiz_session'
 
 type StoredResults = Record<string, { answers: (number | null)[] }>
 
@@ -95,7 +95,7 @@ function clearQuizSession(quizId?: string) {
   void clearServerQuizSession(CATEGORY_ID, quizId)
 }
 
-export default function RailwayStatisticsQuiz() {
+export default function NationalRailPlanQuiz() {
   const quizStartTimeRef = useRef<number>(getTimestamp())
   const endsAtRef = useRef<number>(0)
   const finishedRef = useRef(false)

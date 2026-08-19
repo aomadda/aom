@@ -117,10 +117,12 @@ const quizzesLinks: NavBox[] = [
   { href: '/quizzes/general-awareness', label: 'General Awareness', icon: '🌐' },
   { href: '/quizzes/general-subsidiary-rules', label: 'General Subsidiary Rules', icon: '📋' },
   { href: '/quizzes/kavach', label: 'Kavach', icon: '🛡️' },
+  { href: '/quizzes/national-rail-plan', label: 'National Rail Plan', icon: '🗺️' },
   { href: '/quizzes/operating-department', label: 'Operating Department', icon: '🚂' },
   { href: '/quizzes/operating-manual', label: 'Operating Manual', icon: '📘' },
   { href: '/quizzes/rajabhasha', label: 'Rajabhasha', icon: '📝' },
   { href: '/quizzes/railway-gk', label: 'RailwayGK', icon: '🧠' },
+  { href: '/quizzes/railway-statistics', label: 'Railway Statistics', icon: '📊' },
 ]
 
 const exploreSections = [

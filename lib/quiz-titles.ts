@@ -29,6 +29,8 @@ const QUIZ_TITLES: Record<string, string> = {
   'operating-department': 'Operating Department',
   'operating-manual': 'Operating Manual',
   'railway-gk': 'Railway GK',
+  'railway-statistics': 'Railway Statistics',
+  'national-rail-plan': 'National Rail Plan',
   rajabhasha: 'Rajabhasha',
   'general-awareness-art-culture': 'Art & Culture',
   'general-awareness-biology': 'Biology',

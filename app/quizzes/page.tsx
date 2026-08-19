@@ -91,6 +91,14 @@ const Quizzes = () => {
       description: 'Master the Kavach train protection system, safety features, and collision avoidance technology'
     },
     {
+      href: '/quizzes/national-rail-plan',
+      title: 'National Rail Plan',
+      icon: '🗺️',
+      color: 'from-indigo-500 to-blue-600',
+      hoverColor: 'from-indigo-600 to-blue-700',
+      description: 'Test your knowledge of the National Rail Plan, Vision 2024, HDN routes, and capacity planning'
+    },
+    {
       href: '/quizzes/operating-department',
       title: 'Operating Department',
       icon: '🚂',
@@ -113,6 +121,14 @@ const Quizzes = () => {
       color: 'from-pink-500 to-rose-600',
       hoverColor: 'from-pink-600 to-rose-700',
       description: 'Test your general knowledge about Indian Railways, history, facts, and railway infrastructure'
+    },
+    {
+      href: '/quizzes/railway-statistics',
+      title: 'Railway Statistics',
+      icon: '📊',
+      color: 'from-amber-500 to-orange-600',
+      hoverColor: 'from-amber-600 to-orange-700',
+      description: 'Test your knowledge of Indian Railways statistics, operating ratios, traffic, and network figures'
     },
     {
       href: '/quizzes/rajabhasha',

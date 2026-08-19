@@ -1990,6 +1990,20 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes railway gk Railway Gk",
   },
   {
+    href: "/quizzes/railway-statistics",
+    title: "Railway Statistics",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords: "quizzes railway statistics Railway Statistics operating ratio wagon turn round punctuality",
+  },
+  {
+    href: "/quizzes/national-rail-plan",
+    title: "National Rail Plan",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords: "quizzes national rail plan National Rail Plan NRP Vision 2024 HDN HUN capacity",
+  },
+  {
     href: "/acts/railway-servants-da-rules-1968",
     title: "Railway Servants Da Rules 1968",
     category: "Acts & Rules",
