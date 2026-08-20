@@ -25,6 +25,13 @@ or ₹1,40,000, whichever is higher.`,
                 correct: 1,
                 explanation: "1,20,000 is the correct answer.",
               },
+              {
+                question:
+                  "According to the Employees Compensation Act, 1923, a claim for compensation shall be made within ______ days of the date of injury or the date of death of the employee, whichever is later.",
+                options: ["6 months", "1 year", "2 years", "3 years"],
+                correct: 2,
+                explanation: "2 years is the correct answer.",
+              },
         ]
     }
 }

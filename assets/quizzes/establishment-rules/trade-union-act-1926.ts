@@ -15,6 +15,13 @@ export const tradeUnionAct1926Quizzes = {
                 correct: 0,
                 explanation: "20% of valid votes is the correct answer.",
               },
+              {
+                question:
+                  "Under the Trade Union Act, 1926, what is the minimum qualifying age prescribed for membership of a registered trade union?",
+                options: ["15 years", "18 years", "20 years", "21 years"],
+                correct: 0,
+                explanation: "15 years is the correct answer.",
+              },
         ]
     }
 }

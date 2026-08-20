@@ -15,6 +15,13 @@ export const staffBenefitFundQuizzes = {
                 correct: 2,
                 explanation: "Railway Board is the correct answer.",
               },
+              {
+                question:
+                  "The annual grant of Staff Benefit Fund is on the basis of ______",
+                options: ["Per capita sanctioned strength of non-gazetted railway servants", "Per capita sanctioned strength of both gazetted and non-gazetted railway servants on the zonal railway", "As sanctioned by the GM of the zonal railway", "None of the above"],
+                correct: 0,
+                explanation: "Per capita sanctioned strength of non-gazetted railway servants is the correct answer.",
+              },
         ]
     }
 }

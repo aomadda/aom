@@ -501,6 +501,8 @@ const Timings = () => {
 
     { question: 'The periodicity of full scale disaster management exercise to be conducted in a division is once in _______', answer: '1 year', timing: '1 year' },
 
+    { question: 'Own request transfers, if NOC issued shall have a validity of ______ for relase of the staff', answer: '12 months', timing: '12 months' },
+
     { question: 'On passing Hindi Stenography examination, for how many months personal pay equal in amount to one increment is given?', answer: '24 months', timing: '24 months' },
 
     { question: 'Maximum Special Disability Leave (SDL) eligible under Fundamental Rule 83', answer: '24 months', timing: '24 months' },

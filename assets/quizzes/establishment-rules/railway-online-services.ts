@@ -22,6 +22,13 @@ export const railwayOnlineServicesQuizzes = {
                 correct: 0,
                 explanation: "Archived in KMS is the correct answer.",
               },
+              {
+                question:
+                  "Which of the following is not available for managing files in e-Office?",
+                options: ["Close", "Delete", "Digital Signature", "Send"],
+                correct: 1,
+                explanation: "Delete is the correct answer.",
+              },
         ]
     }
 }

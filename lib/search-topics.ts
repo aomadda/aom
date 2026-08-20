@@ -133,7 +133,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information andhra pradesh Andhra Pradesh",
   },
   {
-    href: "/quizzes/establishment-rules/apar",
+    href: "/quizzes/establishment-rules/annual-performance-appraisal-report",
     title: "APAR",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -441,7 +441,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics cat CAT",
   },
   {
-    href: "/quizzes/establishment-rules/cga",
+    href: "/quizzes/establishment-rules/compassionate-grounds-appointment",
     title: "CGA",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -589,7 +589,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports commonwealth games Commonwealth Games",
   },
   {
-    href: "/quizzes/establishment-rules/conduct-rules",
+    href: "/quizzes/establishment-rules/railway-services-conduct-rules-1966",
     title: "Conduct Rules",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -603,11 +603,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics container rail terminals Container Rail Terminals",
   },
   {
-    href: "/quizzes/establishment-rules/cpc",
+    href: "/quizzes/establishment-rules/central-pay-commission",
     title: "CPC",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
     keywords: "quizzes establishment rules cpc CPC",
+  },
+  {
+    href: "/quizzes/establishment-rules/centralised-public-grievance-redress-monitoring-system",
+    title: "Centralised Public Grievance Redress Monitoring System",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules centralised public grievance redress monitoring system CPGRAMS CPGRAM",
   },
   {
     href: "/general-awareness/sports/cricket",
@@ -701,7 +708,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts disaster management act 2005 Disaster Management Act 2005",
   },
   {
-    href: "/quizzes/establishment-rules/discipline-appeal-rules",
+    href: "/quizzes/establishment-rules/railway-servants-discipline-appeal-rules-1968",
     title: "Discipline Appeal Rules",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -748,6 +755,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Acts & Rules",
     parent: "Acts",
     keywords: "acts employees compensation act 2010 Employees Compensation Act 2010",
+  },
+  {
+    href: "/quizzes/establishment-rules/employees-compensation-act-1923",
+    title: "Employees Compensation Act 1923",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules employees compensation act 1923 Employees Compensation Act",
   },
   {
     href: "/topics/engine-on-load",
@@ -1087,7 +1101,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material home signal Home Signal G.R. 3.09 MAS FSS LSS",
   },
   {
-    href: "/quizzes/establishment-rules/hrms",
+    href: "/quizzes/establishment-rules/human-resource-management-system",
     title: "HRMS",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -1208,6 +1222,20 @@ export const searchTopics: SearchTopic[] = [
     category: "Manuals",
     parent: "Manuals",
     keywords: "manuals indian railways operating manual Indian Railways Operating Manual",
+  },
+  {
+    href: "/quizzes/establishment-rules/indian-railway-establishment-code",
+    title: "Indian Railway Establishment Code",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules indian railway establishment code IREC",
+  },
+  {
+    href: "/quizzes/establishment-rules/indian-railway-establishment-manual",
+    title: "Indian Railway Establishment Manual",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules indian railway establishment manual IREM",
   },
   {
     href: "/acts/industrial-disputes-act-1947",
@@ -1368,7 +1396,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information lakshadweep Lakshadweep",
   },
   {
-    href: "/quizzes/establishment-rules/leave-rules",
+    href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949",
     title: "Leave Rules",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -1382,7 +1410,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics leave travel concession Leave Travel Concession",
   },
   {
-    href: "/quizzes/establishment-rules/lhb",
+    href: "/quizzes/establishment-rules/linke-holfmann-busch",
     title: "LHB",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -1483,6 +1511,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Schemes",
     keywords: "topics schemes lwis scheme LWIS Scheme",
+  },
+  {
+    href: "/quizzes/establishment-rules/modified-assured-career-progression",
+    title: "Modified Assured Career Progression",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules modified assured career progression MACP MACPS",
   },
   {
     href: "/topics/establishment-rules/macp",
@@ -1656,7 +1691,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness important days november November",
   },
   {
-    href: "/quizzes/establishment-rules/nps",
+    href: "/quizzes/establishment-rules/national-pension-system",
     title: "NPS",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -1749,7 +1784,7 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material operating authorities Operating Authorities forms T.369 T.409 T.602 T.912 PLCT caution order",
   },
   {
-    href: "/quizzes/establishment-rules/ops",
+    href: "/quizzes/establishment-rules/old-pension-system",
     title: "OPS",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -1786,7 +1821,7 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material panel interlocking Panel Interlocking APPENDIX XXI Siemens Podanur VDU SSI RRI calling-on",
   },
   {
-    href: "/quizzes/establishment-rules/pass-rules",
+    href: "/quizzes/establishment-rules/railway-servants-pass-rules-1986",
     title: "Pass Rules",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -1813,6 +1848,13 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness › Awards",
     keywords: "general awareness awards peace service awards Peace Service Awards",
+  },
+  {
+    href: "/quizzes/establishment-rules/permanent-negotiating-machinery",
+    title: "Permanent Negotiating Machinery",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules permanent negotiating machinery PNM",
   },
   {
     href: "/topics/permanent-negotiating-machinery",
@@ -1983,6 +2025,41 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics financial rules railway budget Railway Budget",
   },
   {
+    href: "/quizzes/establishment-rules/railway-allowances",
+    title: "Railway Allowances",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway allowances HRA NDA CEA",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-online-services",
+    title: "Railway Online Services",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway online services e-Office KMS digital signature",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-quarters",
+    title: "Railway Quarters",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway quarters retention transfer MSOP",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-recruitment-posting-promotion",
+    title: "Railway Recruitment Posting Promotion",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway recruitment posting promotion CCAA selection reservation",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-services-pension-rules-1993",
+    title: "Railway Services Pension Rules 1993",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway services pension rules 1993 family pension disability",
+  },
+  {
     href: "/quizzes/railway-gk",
     title: "Railway Gk",
     category: "Quizzes",
@@ -2113,7 +2190,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material repeating signal Repeating Signal G.R. 3.16 R marker",
   },
   {
-    href: "/quizzes/establishment-rules/rest-rules",
+    href: "/quizzes/establishment-rules/railway-servants-rest-rules-2005",
     title: "Rest Rules",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -2148,7 +2225,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps rsms RSMS",
   },
   {
-    href: "/quizzes/establishment-rules/rti-act-2005",
+    href: "/quizzes/establishment-rules/right-to-information-act-2005",
     title: "RTI Act 2005",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
@@ -2334,6 +2411,13 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness › Sports",
     keywords: "general awareness sports squash Squash",
+  },
+  {
+    href: "/quizzes/establishment-rules/staff-benefit-fund",
+    title: "Staff Benefit Fund",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules staff benefit fund SBF spectacles per-capita grant",
   },
   {
     href: "/topics/establishment-rules/staff-benefit-fund",
@@ -2530,6 +2614,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps tms TMS",
   },
   {
+    href: "/quizzes/establishment-rules/trade-union-act-1926",
+    title: "Trade Union Act 1926",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules trade union act 1926 recognition zonal membership",
+  },
+  {
     href: "/acts/trade-union-act-1926",
     title: "Trade Union Act 1926",
     category: "Acts & Rules",
@@ -2614,7 +2705,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness united nations organization United Nations Organization",
   },
   {
-    href: "/quizzes/establishment-rules/ups",
+    href: "/quizzes/establishment-rules/unified-pension-system",
     title: "UPS",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",

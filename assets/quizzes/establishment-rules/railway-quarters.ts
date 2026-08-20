@@ -15,6 +15,13 @@ export const railwayQuartersQuizzes = {
                 correct: 3,
                 explanation: "12 months is the correct answer.",
               },
+              {
+                question:
+                  "On death of a Railway Employee, Railway quarters allotted to him can be retained for a period of ______",
+                options: ["6 months", "12 months", "18 months", "24 months"],
+                correct: 3,
+                explanation: "24 months is the correct answer.",
+              },
         ]
     }
 }
