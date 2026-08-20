@@ -101,6 +101,11 @@ const Percentages = () => {
       category: '20%'
     },
     {
+      question: 'What percentage of vacancies in Level-1 posts is reserved for CCAA (Course Completed Act Apprentices) candidates?',
+      answer: '20% of the corpus',
+      category: '20%'
+    },
+    {
       question: 'What is the percentage of Subsistence allowance that can be increased if suspension is increased due to administrative reasons?',
       answer: '25%',
       category: '25%'

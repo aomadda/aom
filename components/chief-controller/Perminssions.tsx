@@ -292,6 +292,11 @@ const Perminssions = () => {
       category: 'DRM'
     },
     {
+      description: 'Who is the competent authority to grant advance increment on sports account for excellence in sports?',
+      authority: 'DRM',
+      category: 'DRM'
+    },
+    {
       description: 'The Officer authorized to certify Group ‘C’ staff of the division for working of motor trolleys ______',
       authority: 'Sr.DSO',
       category: 'DSO'
@@ -404,6 +409,11 @@ const Perminssions = () => {
     {
       description: 'Accident Inquiry Reports with staff of foreign railway responsibility should be put to __________directly being the Accepting Authority in such cases.',
       authority: 'AGM',
+      category: 'GM'
+    },
+    {
+      description: 'Who is the competent authority for curtailing the period of training of non-gazetted employees in exigencies of service?',
+      authority: 'GM',
       category: 'GM'
     },
     {
@@ -585,6 +595,11 @@ const Perminssions = () => {
     },
     {
       description: 'Who is the sanctioning authority for 25% excess due to scope?',
+      authority: 'Railway Board',
+      category: 'Railway Board'
+    },
+    {
+      description: 'The per-capita grant for the Staff Benefit Fund is sanctioned by ______',
       authority: 'Railway Board',
       category: 'Railway Board'
     },

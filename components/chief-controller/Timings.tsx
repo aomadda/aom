@@ -433,6 +433,8 @@ const Timings = () => {
 
     { question: 'Appeal against classification of railway servants under HOER can be within ______ days of its publication?', answer: '90 days', timing: '90 days' },
 
+    { question: 'What is the maximum award admissible under Accident Free Service for Loco Pilots/Motorsmen?', answer: '90 days', timing: '90 days' },
+
     { question: 'Periodical meeting of Rajabhasha Co - ordination committee is conducted in every ____ months.', answer: '3 months', timing: '3 months' },
 
 
@@ -472,6 +474,8 @@ const Timings = () => {
     { question: 'If a weighbridge becomes non-functional, how many days of loading permission can be granted by the General Manager?', answer: 'Up to 6 months', timing: '6 months' },
 
     { question: 'Full Tarif Rates (FTR) registration can be done in advance of maxmimum _______ months', answer: '6 months', timing: '6 months' },
+
+    { question: 'Claims for Reimbursement of medical charges should be preferred within ______ months from the date of completion of treatment?', answer: '6 months', timing: '6 months' },
     
     { question: 'Subsequent reviews shall be made before expiry of the extended period of suspension. Extension of suspension shall not be for a period exceeding one hundred and eighty days at a time.', answer: '180 days', timing: '180 days' },
     
@@ -508,6 +512,8 @@ const Timings = () => {
     { question: 'Revenue sharing for Brown field Private Freight Terminal (PFT) starts after ______ years after notification of PFT.', answer: '2 years', timing: '2 years' },
 
     { question: 'Retention of Railway quarters up to ______ years on normal rent in the event of death while in service. (Applicable to Government Pension Scheme)', answer: '2 years', timing: '2 years'},
+
+    { question: 'Special Allowance for Child Care for Women with Disabilities is payable upto which age of the child?', answer: '2 years', timing: '2 years' },
     
     { question: 'Periodical census of traffic at all level crossings shall be carried out for every', answer: '3 years for 7 days', timing: '3 years' },
 

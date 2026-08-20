@@ -34,5 +34,12 @@ export const centralPayCommission = {
     correct: 3,
     explanation: "25 Lakh is the correct answer.",
   },
+  {
+    question:
+      "The amount of Break Down Allowance payable to a Technician Grade-II in Level-4 of VII CPC Pay Commission is",
+    options: ["450/- PM", "500/- PM", "600/- PM", "675/- PM"],
+    correct: 3,
+    explanation: "675/- PM is the correct answer.",
+  },
 ],
 }
