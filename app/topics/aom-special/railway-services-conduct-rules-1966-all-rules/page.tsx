@@ -13,7 +13,7 @@ interface Part {
   rules: Rule[]
 }
 
-const RailwayConductRules1966AllRules = () => {
+const RailwayServicesConductRules1966AllRulesPage = () => {
   const rules: Rule[] = [
     { number: "1", title: "Short title." },
     { number: "2", title: "Definition" },
@@ -195,4 +195,4 @@ const RailwayConductRules1966AllRules = () => {
   )
 }
 
-export default RailwayConductRules1966AllRules
+export default RailwayServicesConductRules1966AllRulesPage

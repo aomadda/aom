@@ -7,7 +7,7 @@ interface Chapter {
   title: string
 }
 
-const SWRChapters = () => {
+const StationWorkingRulesChaptersPage = () => {
   const chapters: Chapter[] = [
     { number: 'Chapter I', title: 'STATION WORKING DIAGRAM' },
     { number: 'Chapter II', title: 'DESCRIPTION OF STATION' },
@@ -106,4 +106,4 @@ const SWRChapters = () => {
   )
 }
 
-export default SWRChapters
+export default StationWorkingRulesChaptersPage

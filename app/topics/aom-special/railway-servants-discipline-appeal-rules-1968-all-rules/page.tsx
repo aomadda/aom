@@ -13,54 +13,81 @@ interface Part {
   rules: Rule[]
 }
 
-const RailwayRestRules2005AllRules = () => {
+const RailwayServantsDisciplineAppealRules1968AllRulesPage = () => {
   const parts: Part[] = [
     {
       number: 'I',
-      title: 'Introduction',
+      title: 'GENERAL',
       rules: [
-        { number: '1', title: 'Short title, commencement and application' },
-        { number: '2', title: 'Definitions' }
+        { number: '1', title: 'Short title and commencement' },
+        { number: '2', title: 'Definitions' },
+        { number: '3', title: 'Application' }
       ]
     },
     {
       number: 'II',
-      title: 'Classification of Employment and Hours of Work',
+      title: 'SUSPENSION',
       rules: [
-        { number: '3', title: 'Prescribed authority to classify the employment of railway servant' },
-        { number: '4', title: 'Appeals against classification' },
-        { number: '5', title: 'Supervisory staff' },
-        { number: '6', title: 'Excluded staff' },
-        { number: '7', title: 'Criteria for determining classification of railway servants' },
-        { number: '8', title: 'Fixation of hours of work' },
-        { number: '9', title: 'Power to make temporary exemption' },
-        { number: '10', title: 'Principle of averaging and payment of overtime allowance' },
-        { number: '11', title: 'Register of extra hours of work' },
-        { number: '12', title: 'Periodical Rest' },
-        { number: '13', title: 'Compensatory periods of rest' }
+        { number: '4', title: 'Authorities competent to place a Railway servant under suspension' },
+        { number: '5', title: 'Suspension' }
       ]
     },
     {
       number: 'III',
-      title: 'Authorities to Ensure Proper Implementation',
+      title: 'PENALTIES AND DISCIPLINARY AUTHORITIES',
       rules: [
-        { number: '14', title: 'Appointment of Supervisors' },
-        { number: '15', title: 'Display of rules and notices' },
-        { number: '16', title: 'Annual Return' }
+        { number: '6', title: 'Penalties' },
+        { number: '7', title: 'Disciplinary Authorities' },
+        { number: '8', title: 'Authority to Institute Proceedings' }
       ]
     },
     {
       number: 'IV',
-      title: 'Residuary Powers',
+      title: 'PROCEDURE FOR IMPOSING PENALTIES',
       rules: [
-        { number: '17', title: 'Power to make modification in special cases' }
+        { number: '9', title: 'Procedure for imposing Major Penalties' },
+        { number: '10', title: 'Action on the inquiry report' },
+        { number: '11', title: 'Procedure for imposing minor penalties' },
+        { number: '12', title: 'Communication of orders' },
+        { number: '13', title: 'Common proceedings' },
+        { number: '14', title: 'Special procedure in certain cases' },
+        { number: '15', title: 'Provisions regarding Railway servants lent to State Governments, etc.' },
+        { number: '16', title: 'Provisions regarding officers borrowed from Central or State Governments, etc.' }
       ]
     },
     {
       number: 'V',
-      title: 'Repeal and Saving',
+      title: 'APPEALS',
       rules: [
-        { number: '18', title: 'The Railway Servants (Hours of Employment) Rules, 1961' }
+        { number: '17', title: 'Orders against which no appeal lies' },
+        { number: '18', title: 'Orders against which appeal lies' },
+        { number: '19', title: 'Appellate Authorities' },
+        { number: '20', title: 'Period of limitation for appeals' },
+        { number: '21', title: 'Form and contents and submission of appeal' },
+        { number: '22', title: 'Consideration of appeal' },
+        { number: '23', title: 'Implementation of orders in appeal' },
+        { number: '24', title: 'Special provisions for non-gazetted staff' }
+      ]
+    },
+    {
+      number: 'VI',
+      title: 'REVISION AND REVIEW',
+      rules: [
+        { number: '25', title: 'Revision' },
+        { number: '25-A', title: 'Review' }
+      ]
+    },
+    {
+      number: 'VII',
+      title: 'MISCELLANEOUS',
+      rules: [
+        { number: '26', title: 'Service of orders, notices etc.' },
+        { number: '26-A', title: 'Service of orders, notices etc. on behalf of the Railway Board or President' },
+        { number: '27', title: 'Power to relax time limit and to condone delay' },
+        { number: '28', title: 'Supply of copy of Commission\'s advice' },
+        { number: '29', title: 'Repeal and saving' },
+        { number: '30', title: 'Removal of doubts' },
+        { number: '31', title: 'Right to submit petitions to the President' }
       ]
     }
   ]
@@ -71,7 +98,9 @@ const RailwayRestRules2005AllRules = () => {
       'bg-gradient-to-r from-indigo-600 to-indigo-700',
       'bg-gradient-to-r from-purple-600 to-purple-700',
       'bg-gradient-to-r from-pink-600 to-pink-700',
-      'bg-gradient-to-r from-red-600 to-red-700'
+      'bg-gradient-to-r from-red-600 to-red-700',
+      'bg-gradient-to-r from-orange-600 to-orange-700',
+      'bg-gradient-to-r from-yellow-600 to-yellow-700'
     ]
     return colors[index % colors.length]
   }
@@ -100,10 +129,10 @@ const RailwayRestRules2005AllRules = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-3xl sm:text-5xl font-bold mb-3 bg-linear-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-            Railway Servants (Hours of Work and Period of Rest) Rules, 2005
+            THE RAILWAY SERVANTS (DISCIPLINE & APPEAL) RULES, 1968
           </h1>
           <p className="text-base text-gray-300 max-w-2xl mx-auto">
-            Complete reference guide to all parts and rules of the Railway Servants (Hours of Work and Period of Rest) Rules, 2005
+            Complete reference guide to all parts and rules of the Railway Servants (Discipline & Appeal) Rules, 1968
           </p>
         </div>
 
@@ -174,7 +203,7 @@ const RailwayRestRules2005AllRules = () => {
           </div>
           <div className="bg-slate-800 rounded-xl p-6 shadow-md border border-slate-700 text-center">
             <div className="text-3xl font-bold text-green-400 mb-2">
-              2005
+              1968
             </div>
             <div className="text-gray-300">Rules Year</div>
           </div>
@@ -184,4 +213,4 @@ const RailwayRestRules2005AllRules = () => {
   )
 }
 
-export default RailwayRestRules2005AllRules
+export default RailwayServantsDisciplineAppealRules1968AllRulesPage

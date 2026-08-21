@@ -13,7 +13,7 @@ interface Chapter {
   sections: Section[]
 }
 
-const RailwaysAct1989AllChapters = () => {
+const IndianRailwayAct1989AllActsPage = () => {
   const chapters: Chapter[] = [
     {
       number: 'I',
@@ -443,4 +443,4 @@ const RailwaysAct1989AllChapters = () => {
   )
 }
 
-export default RailwaysAct1989AllChapters
+export default IndianRailwayAct1989AllActsPage

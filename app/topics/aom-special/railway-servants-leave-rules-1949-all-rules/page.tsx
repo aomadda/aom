@@ -7,7 +7,7 @@ interface Rule {
   title: string
 }
 
-const RailwayLeaveRules1949AllRules = () => {
+const RailwayServantsLeaveRules1949AllRulesPage = () => {
   const rules: Rule[] = [
     { number: '501', title: 'Short title' },
     { number: '502', title: 'Extent of application' },
@@ -175,4 +175,4 @@ const RailwayLeaveRules1949AllRules = () => {
   )
 }
 
-export default RailwayLeaveRules1949AllRules
+export default RailwayServantsLeaveRules1949AllRulesPage

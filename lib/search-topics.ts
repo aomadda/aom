@@ -73,6 +73,14 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "quizzes aom previous papers 2026 AOM Previous Papers Professional Subject GK Rajabhasha Establishment Financial Rules",
   },
+  {
+    href: "/topics/aom-special",
+    title: "AOM Special",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords:
+      "topics aom special AOM Special distances timings percentages G&SR SWR speed restrictions exam notes",
+  },
 
   {
     href: "/quizzes/financial-rules/accounts",
@@ -434,11 +442,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports boxing Boxing",
   },
   {
-    href: "/topics/cat",
+    href: "/topics/establishment-rules/cat",
     title: "Central Administrative Tribunal (CAT)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics cat CAT Central Administrative Tribunal (CAT)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules cat CAT Central Administrative Tribunal (CAT)",
   },
   {
     href: "/quizzes/establishment-rules/compassionate-grounds-appointment",
@@ -481,13 +489,6 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness › States Information",
     keywords: "general awareness states information chhattisgarh Chhattisgarh",
-  },
-  {
-    href: "/topics/chief-controller",
-    title: "Chief Controller",
-    category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics chief controller Chief Controller",
   },
   {
     href: "/topics/operating-material/calling-on-signal",
@@ -596,11 +597,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules conduct rules Railway Services Conduct Rules 1966",
   },
   {
-    href: "/topics/container-rail-terminals",
+    href: "/topics/railway-planning-schemes/container-rail-terminals",
     title: "Container Rail Terminals",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics container rail terminals Container Rail Terminals",
+    parent: "Topics › Railway Planning Schemes",
+    keywords: "topics railway planning schemes container rail terminals Container Rail Terminals CRT",
   },
   {
     href: "/quizzes/establishment-rules/central-pay-commission",
@@ -722,6 +723,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material disconnection reconnection Disconnection and Reconnection SR 3.51.6 APP XIII T.351",
   },
   {
+    href: "/topics/aom-special/distance-wise",
+    title: "Distance Wise",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special distance wise Distance Wise Distances clearance ODC detonators signal overlap gradients AOM exam",
+  },
+  {
     href: "/topics/operating-material/distant-signal",
     title: "Distant Signal",
     category: "Study Topics",
@@ -764,11 +773,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules employees compensation act 1923 Employees Compensation Act",
   },
   {
-    href: "/topics/engine-on-load",
+    href: "/topics/railway-planning-schemes/engine-on-load",
     title: "Engine On Load",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics engine on load Engine On Load",
+    parent: "Topics › Railway Planning Schemes",
+    keywords: "topics railway planning schemes engine on load Engine On Load EOL",
   },
   {
     href: "/topics/operating-material/engine-pushing",
@@ -931,11 +940,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material gate signal Gate Signal G.R. S.R. 3.34 3.73 LC G marker",
   },
   {
-    href: "/topics/gati-shakti-terminals",
+    href: "/topics/railway-planning-schemes/gati-shakti-terminals",
     title: "Gati Shakti Terminals",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics gati shakti terminals Gati Shakti Terminals",
+    parent: "Topics › Railway Planning Schemes",
+    keywords: "topics railway planning schemes gati shakti terminals Gati Shakti Terminals",
   },
   {
     href: "/topics/operating-material/glp-check",
@@ -968,6 +977,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics general rules General Rules GR",
   },
   {
+    href: "/topics/aom-special/general-rules-all",
+    title: "General Rules All",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special general rules all General Rules All G&SR chapters GR AOM exam",
+  },
+  {
     href: "/manuals/general-subsidiary-rules",
     title: "General & Subsidiary Rules (G&SR)",
     category: "Manuals",
@@ -987,6 +1004,22 @@ export const searchTopics: SearchTopic[] = [
     category: "PDFs",
     parent: "PDFs",
     keywords: "pdfs general & subsidiary rules amendments General & Subsidiary Rules Amendments G&SR Amendments",
+  },
+  {
+    href: "/topics/aom-special/general-subsidiary-rules-appendix",
+    title: "G&SR Appendix",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special g&sr appendix G&SR Appendix general subsidiary rules appendices caution orders marshalling shunting AOM exam",
+  },
+  {
+    href: "/topics/aom-special/general-subsidiary-rules-chapters",
+    title: "G&SR Chapters",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special g&sr chapters G&SR Chapters general subsidiary rules signals block working accidents AOM exam",
   },
   {
     href: "/general-awareness/geographical-indication",
@@ -1031,11 +1064,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics government e market Government E Market (GeM)",
   },
   {
-    href: "/topics/govt-pension",
+    href: "/topics/establishment-rules/govt-pension",
     title: "Government Pension (GP)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics govt pension Government Pension (GP)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules govt pension Government Pension (GP) OPS",
   },
   {
     href: "/general-awareness/states-information/gujarat",
@@ -1296,19 +1329,19 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material isolator Isolator Switches Section Siding S.R. 17.03.5.3 OHE TPC competency",
   },
   {
-    href: "/topics/irec",
+    href: "/topics/establishment-rules/irec",
     title: "Indian Railway Establishment Code (IREC)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics irec IREC Indian Railway Establishment Code (IREC)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules irec IREC Indian Railway Establishment Code (IREC)",
   },
 
   {
-    href: "/topics/irem",
+    href: "/topics/establishment-rules/irem",
     title: "Indian Railway Establishment Manual (IREM)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics irem IREM Indian Railway Establishment Manual (IREM)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules irem IREM Indian Railway Establishment Manual (IREM)",
   },
   {
     href: "/general-awareness/states-information/jammu-kashmir",
@@ -1332,11 +1365,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information jharkhand Jharkhand",
   },
   {
-    href: "/topics/joint-consultative-machinery",
+    href: "/topics/establishment-rules/joint-consultative-machinery",
     title: "Joint Consultative Machinery",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics joint consultative machinery Joint Consultative Machinery",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules joint consultative machinery Joint Consultative Machinery JCM",
   },
   {
     href: "/general-awareness/awards/journalism-awards",
@@ -1403,11 +1436,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules leave rules Railway Servants Leave Rules 1949",
   },
   {
-    href: "/topics/leave-travel-concession",
+    href: "/topics/establishment-rules/leave-travel-concession",
     title: "Leave Travel Concession (LTC)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics leave travel concession Leave Travel Concession (LTC)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules leave travel concession Leave Travel Concession (LTC)",
   },
   {
     href: "/quizzes/establishment-rules/linke-holfmann-busch",
@@ -1506,11 +1539,12 @@ export const searchTopics: SearchTopic[] = [
   },
 
   {
-    href: "/topics/schemes/lwis-scheme",
-    title: "Leberalised Wagon Investment Scheme (LWIS)",
+    href: "/topics/railway-planning-schemes/lwis-scheme",
+    title: "Liberalized Wagon Investment Scheme (LWIS)",
     category: "Study Topics",
-    parent: "Topics › Schemes",
-    keywords: "topics schemes lwis scheme LWIS Scheme Leberalised Wagon Investment Scheme (LWIS)",
+    parent: "Topics › Railway Planning Schemes",
+    keywords:
+      "topics railway planning schemes lwis scheme LWIS Scheme Liberalized Wagon Investment Scheme Leberalised",
   },
   {
     href: "/quizzes/establishment-rules/modified-assured-career-progression",
@@ -1598,11 +1632,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information meghalaya Meghalaya",
   },
   {
-    href: "/topics/merry-go-round",
+    href: "/topics/railway-planning-schemes/merry-go-round",
     title: "Merry Go Round (MGR)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics merry go round Merry Go Round (MGR)",
+    parent: "Topics › Railway Planning Schemes",
+    keywords: "topics railway planning schemes merry go round Merry Go Round (MGR)",
   },
   {
     href: "/quizzes/establishment-rules/miscelaneous",
@@ -1612,11 +1646,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules miscelaneous Miscellaneous",
   },
   {
-    href: "/topics/mission-3000MT",
+    href: "/topics/railway-planning-schemes/mission-3000MT",
     title: "Mission 3000 MT",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics mission 3000MT Mission 3000 MT",
+    parent: "Topics › Railway Planning Schemes",
+    keywords: "topics railway planning schemes mission 3000MT Mission 3000 MT",
   },
   {
     href: "/general-awareness/states-information/mizoram",
@@ -1641,11 +1675,11 @@ export const searchTopics: SearchTopic[] = [
   },
 
   {
-    href: "/topics/national-logistics-policy",
+    href: "/topics/railway-planning-schemes/national-logistics-policy",
     title: "National Logistics Policy (NLP)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics national logistics policy National Logistics Policy (NLP)",
+    parent: "Topics › Railway Planning Schemes",
+    keywords: "topics railway planning schemes national logistics policy National Logistics Policy (NLP)",
   },
   {
     href: "/general-awareness/national-parks",
@@ -1655,18 +1689,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness national parks National Parks (NP)",
   },
   {
-    href: "/topics/national-pension-scheme",
+    href: "/topics/establishment-rules/national-pension-scheme",
     title: "National Pension Scheme (NPS)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics national pension scheme National Pension Scheme (NPS)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules national pension scheme National Pension Scheme (NPS)",
   },
   {
-    href: "/topics/national-rail-plan",
+    href: "/topics/railway-planning-schemes/national-rail-plan",
     title: "National Rail Plan (NRP)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics national rail plan National Rail Plan (NRP)",
+    parent: "Topics › Railway Planning Schemes",
+    keywords: "topics railway planning schemes national rail plan National Rail Plan (NRP)",
   },
   {
     href: "/topics/operating-material/non-interlocked-working",
@@ -1675,6 +1709,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material non-interlocked working Non-Interlocked Working NI Working RRI panel cable meggering Sr.DOM",
+  },
+  {
+    href: "/topics/aom-special/numbers-wise",
+    title: "Numbers Wise",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special numbers wise Numbers Wise Numbers wagon limits dead engines AOM exam",
   },
   {
     href: "/general-awareness/world-information/north-american-countries",
@@ -1850,6 +1892,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness awards peace service awards Peace Service Awards",
   },
   {
+    href: "/topics/aom-special/percentage-wise",
+    title: "Percentage Wise",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special percentage wise Percentage Wise Percentages brake power AOM exam",
+  },
+  {
     href: "/quizzes/establishment-rules/permanent-negotiating-machinery",
     title: "Permanent Negotiating Machinery (PNM)",
     category: "Quizzes",
@@ -1857,11 +1907,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules permanent negotiating machinery PNM Permanent Negotiating Machinery (PNM)",
   },
   {
-    href: "/topics/permanent-negotiating-machinery",
+    href: "/topics/establishment-rules/permanent-negotiating-machinery",
     title: "Permanent Negotiating Machinery (PNM)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics permanent negotiating machinery Permanent Negotiating Machinery (PNM)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules permanent negotiating machinery Permanent Negotiating Machinery (PNM)",
+  },
+  {
+    href: "/topics/aom-special/permissions-authorisation",
+    title: "Permissions / Authorisation",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special permissions authorisation Permissions Authorisation sanctions authorised AOM exam",
   },
   {
     href: "/topics/operating-material/permissive-signals",
@@ -1937,11 +1995,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes general awareness polity Polity",
   },
   {
-    href: "/topics/prem",
+    href: "/topics/establishment-rules/prem",
     title: "Participation of Railway Employees in Management (PREM)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics prem PREM Participation of Railway Employees in Management (PREM)",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules prem PREM Participation of Railway Employees in Management (PREM)",
   },
   {
     href: "/topics/financial-rules/primary-units",
@@ -1975,11 +2033,11 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material protection of train Protection of Train GR 6.03 detonator single line double line TSL automatic block",
   },
   {
-    href: "/topics/public-complaints",
+    href: "/topics/establishment-rules/public-complaints",
     title: "Public Complaints",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics public complaints Public Complaints",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules public complaints Public Complaints grievance",
   },
   {
     href: "/general-awareness/states-information/puducherry",
@@ -2088,11 +2146,27 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts railway servants da rules 1968 Railway Servants Discipline & Appeal Rules 1968",
   },
   {
+    href: "/topics/aom-special/railway-servants-discipline-appeal-rules-1968-all-rules",
+    title: "Railway Servants Discipline Appeal Rules 1968 All Rules",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special railway servants discipline appeal rules 1968 all rules D&A DA Rules AOM exam",
+  },
+  {
     href: "/acts/railway-servants-leave-rules-1949",
     title: "Railway Servants Leave Rules 1949",
     category: "Acts & Rules",
     parent: "Acts",
     keywords: "acts railway servants leave rules 1949 Railway Servants Leave Rules 1949",
+  },
+  {
+    href: "/topics/aom-special/railway-servants-leave-rules-1949-all-rules",
+    title: "Railway Servants Leave Rules 1949 All Rules",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special railway servants leave rules 1949 all rules liberalised leave AOM exam",
   },
   {
     href: "/acts/railway-servants-pass-rules-1986",
@@ -2109,11 +2183,35 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts railway servants rest rules 2005 Railway Servants Rest Rules 2005",
   },
   {
+    href: "/topics/aom-special/railway-servants-rest-rules-2005-all-rules",
+    title: "Railway Servants Rest Rules 2005 All Rules",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special railway servants rest rules 2005 all rules hours of work period of rest HOER AOM exam",
+  },
+  {
     href: "/acts/railway-services-conduct-rules-1966",
     title: "Railway Services Conduct Rules 1966",
     category: "Acts & Rules",
     parent: "Acts",
     keywords: "acts railway services conduct rules 1966 Railway Services Conduct Rules 1966",
+  },
+  {
+    href: "/topics/aom-special/railway-services-conduct-rules-1966-all-rules",
+    title: "Railway Services Conduct Rules 1966 All Rules",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special railway services conduct rules 1966 all rules Railway Services Conduct Rules 1966 gifts politics AOM exam",
+  },
+  {
+    href: "/topics/aom-special/indian-railway-act-1989-all-acts",
+    title: "Railways Act 1989 All Chapters",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special railways act 1989 all chapters Indian Railways Act 1989 sections AOM exam",
   },
   {
     href: "/quizzes/rajabhasha",
@@ -2276,6 +2374,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness schemes Schemes",
   },
   {
+    href: "/topics/railway-planning-schemes",
+    title: "Railway Planning Schemes",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords:
+      "topics railway planning schemes Railway Planning Schemes CRT EOL Gati Shakti LWIS MGR Mission 3000 MT NLP NRP",
+  },
+  {
     href: "/topics/schemes",
     title: "Railway Schemes",
     category: "Study Topics",
@@ -2392,6 +2498,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness world information south american countries South American Countries",
   },
   {
+    href: "/topics/aom-special/speed-restrictions",
+    title: "Speed Restrictions",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special speed restrictions Speed Restrictions TSR PSR caution AOM exam",
+  },
+  {
     href: "/general-awareness/sports",
     title: "Sports",
     category: "General Awareness",
@@ -2426,6 +2540,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Establishment Rules",
     keywords:
       "topics establishment rules staff benefit fund Staff Benefit Fund (SBF) welfare advances membership",
+  },
+  {
+    href: "/topics/aom-special/standard-forms",
+    title: "Standard Forms",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special standard forms Standard Forms disciplinary proceedings SF D&A AOM exam",
   },
   {
     href: "/general-awareness/states-information",
@@ -2480,6 +2602,22 @@ export const searchTopics: SearchTopic[] = [
     category: "Manuals",
     parent: "Manuals",
     keywords: "manuals station working rules Station Working Rules (SWR)",
+  },
+  {
+    href: "/topics/aom-special/station-working-rules-appendix",
+    title: "SWR Appendix",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special swr appendix SWR Appendix station working rules appendices AOM exam",
+  },
+  {
+    href: "/topics/aom-special/station-working-rules-chapters",
+    title: "SWR Chapters",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special swr chapters SWR Chapters station working rules AOM exam",
   },
   {
     href: "/topics/operating-material/starter-signal",
@@ -2612,6 +2750,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
     keywords: "topics information technology apps tms TMS Terminal Management System (TMS)",
+  },
+  {
+    href: "/topics/aom-special/timings-wise",
+    title: "Timings Wise",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special timings wise Timings Wise Timings time limits AOM exam",
   },
   {
     href: "/quizzes/establishment-rules/trade-union-act-1926",
@@ -2854,6 +3000,14 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness › Sports",
     keywords: "general awareness sports wrestling Wrestling",
+  },
+  {
+    href: "/topics/aom-special/years-wise",
+    title: "Years Wise",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special years wise Years Wise Years time periods AOM exam",
   },
   {
     href: "/quizzes/general-awareness/zoology",
