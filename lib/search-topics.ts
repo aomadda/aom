@@ -134,18 +134,18 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/annual-performance-appraisal-report",
-    title: "APAR",
+    title: "Annual Performance Appraisal Report",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules apar APAR",
+    keywords: "quizzes establishment rules apar annual performance appraisal report Annual Performance Appraisal Report",
   },
   {
     href: "/topics/establishment-rules/apar",
-    title: "APAR",
+    title: "Annual Performance Appraisal Report",
     category: "Study Topics",
     parent: "Topics › Establishment Rules",
     keywords:
-      "topics establishment rules apar APAR annual performance appraisal report MACP benchmark",
+      "topics establishment rules apar annual performance appraisal report Annual Performance Appraisal Report MACP benchmark",
   },
   {
     href: "/general-awareness/important-days/april",
@@ -435,17 +435,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/cat",
-    title: "CAT",
+    title: "Central Administrative Tribunal (CAT)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics cat CAT",
+    keywords: "topics cat CAT Central Administrative Tribunal (CAT)",
   },
   {
     href: "/quizzes/establishment-rules/compassionate-grounds-appointment",
-    title: "CGA",
+    title: "Compassionate Grounds Appointment (CGA)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules cga CGA",
+    keywords: "quizzes establishment rules cga Compassionate Grounds Appointment (CGA)",
   },
   {
     href: "/general-awareness/states-information/chandigarh",
@@ -527,17 +527,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/cms",
-    title: "CMS",
+    title: "Crew Management System (CMS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps cms CMS",
+    keywords: "topics information technology apps cms CMS Crew Management System (CMS)",
   },
   {
     href: "/topics/information-technology-apps/coa",
-    title: "COA",
+    title: "Controle Office Application (COA)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps coa COA",
+    keywords: "topics information technology apps coa COA Controle Office Application (COA)",
   },
   {
     href: "/topics/working-time-table/coaches-data",
@@ -555,10 +555,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/cois",
-    title: "COIS",
+    title: "Coaching Operations Informations System (COIS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps cois COIS",
+    keywords: "topics information technology apps cois COIS Coaching Operations Informations System (COIS)",
   },
   {
     href: "/quizzes/commercial-department",
@@ -569,10 +569,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/disaster-management",
-    title: "Disaster Management",
+    title: "Disaster Management Act 2005",
     category: "Quizzes",
     parent: "Quizzes",
-    keywords: "quizzes disaster management Disaster Management NDMA DM Act",
+    keywords: "quizzes disaster management Disaster Management Act 2005 NDMA DM Act",
   },
   {
     href: "/general-awareness/committees",
@@ -590,10 +590,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/railway-services-conduct-rules-1966",
-    title: "Conduct Rules",
+    title: "Railway Services Conduct Rules 1966",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules conduct rules Conduct Rules",
+    keywords: "quizzes establishment rules conduct rules Railway Services Conduct Rules 1966",
   },
   {
     href: "/topics/container-rail-terminals",
@@ -604,17 +604,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/central-pay-commission",
-    title: "CPC",
+    title: "Central Pay Commission (CPC)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules cpc CPC",
+    keywords: "quizzes establishment rules cpc CPC Central Pay Commission (CPC)",
   },
   {
     href: "/quizzes/establishment-rules/centralised-public-grievance-redress-monitoring-system",
-    title: "Centralised Public Grievance Redress Monitoring System",
+    title: "Centralised Public Grievance Redress & Monitoring System (CPGRAMS)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules centralised public grievance redress monitoring system CPGRAMS CPGRAM",
+    keywords: "quizzes establishment rules centralised public grievance redress & monitoring system CPGRAMS CPGRAMS Centralised Public Grievance Redress & Monitoring System (CPGRAMS)",
   },
   {
     href: "/general-awareness/sports/cricket",
@@ -709,10 +709,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/railway-servants-discipline-appeal-rules-1968",
-    title: "Discipline Appeal Rules",
+    title: "Railway Servants Discipline Appeal Rules 1968",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules discipline appeal rules Discipline Appeal Rules",
+    keywords: "quizzes establishment rules discipline appeal rules Railway Servants Discipline Appeal Rules 1968",
   },
   {
     href: "/topics/operating-material/disconnection-reconnection",
@@ -751,10 +751,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/acts/employees-compensation-act-2010",
-    title: "Employees Compensation Act 2010",
+    title: "Employees' Compensation Act 1923",
     category: "Acts & Rules",
     parent: "Acts",
-    keywords: "acts employees compensation act 2010 Employees Compensation Act 2010",
+    keywords: "acts employees compensation act 1923 Employees' Compensation Act 1923",
   },
   {
     href: "/quizzes/establishment-rules/employees-compensation-act-1923",
@@ -795,10 +795,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/ess",
-    title: "ESS",
+    title: "Employee Self Service (ESS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps ess ESS",
+    keywords: "topics information technology apps ess ESS Employee Self Service (ESS)",
   },
   {
     href: "/quizzes/establishment-rules",
@@ -824,10 +824,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/ewss",
-    title: "EWSS",
+    title: "E-Working Software Solution (EWSS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps ewss EWSS",
+    keywords: "topics information technology apps ewss EWSS E-Working Software Solution (EWSS)",
   },
   {
     href: "/acts/factories-act-1948",
@@ -903,10 +903,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/fois",
-    title: "FOIS",
+    title: "Freight Operations Information System (FOIS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps fois FOIS",
+    keywords: "topics information technology apps fois FOIS Freight Operations Information System (FOIS)",
   },
 
   {
@@ -962,31 +962,31 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/general-rules",
-    title: "General Rules",
+    title: "General Rules (GR)",
     category: "Study Topics",
     parent: "Topics",
     keywords: "topics general rules General Rules GR",
   },
   {
     href: "/manuals/general-subsidiary-rules",
-    title: "General Subsidiary Rules",
+    title: "General & Subsidiary Rules (G&SR)",
     category: "Manuals",
     parent: "Manuals",
-    keywords: "manuals general subsidiary rules General Subsidiary Rules",
+    keywords: "manuals general & subsidiary rules General & Subsidiary Rules G&SR",
   },
   {
     href: "/quizzes/general-subsidiary-rules",
-    title: "General Subsidiary Rules",
+    title: "General & Subsidiary Rules (G&SR)",
     category: "Quizzes",
     parent: "Quizzes",
-    keywords: "quizzes general subsidiary rules General Subsidiary Rules",
+    keywords: "quizzes general & subsidiary rules General & Subsidiary Rules G&SR",
   },
   {
     href: "/pdfs/general-subsidiary-rules-amendments",
-    title: "General Subsidiary Rules Amendments",
+    title: "General & Subsidiary Rules Amendments (G&SR Amendments)",
     category: "PDFs",
     parent: "PDFs",
-    keywords: "pdfs general subsidiary rules amendments General Subsidiary Rules Amendments",
+    keywords: "pdfs general & subsidiary rules amendments General & Subsidiary Rules Amendments G&SR Amendments",
   },
   {
     href: "/general-awareness/geographical-indication",
@@ -1025,17 +1025,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/government-e-market",
-    title: "Government E Market",
+    title: "Government E Market (GeM)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics government e market Government E Market",
+    keywords: "topics government e market Government E Market (GeM)",
   },
   {
     href: "/topics/govt-pension",
-    title: "Govt Pension",
+    title: "Government Pension (GP)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics govt pension Govt Pension",
+    keywords: "topics govt pension Government Pension (GP)",
   },
   {
     href: "/general-awareness/states-information/gujarat",
@@ -1102,32 +1102,32 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/human-resource-management-system",
-    title: "HRMS",
+    title: "Human Resource Management System (HRMS)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules hrms HRMS",
+    keywords: "quizzes establishment rules hrms HRMS Human Resource Management System (HRMS)",
   },
   {
     href: "/topics/establishment-rules/hrms",
-    title: "HRMS",
+    title: "Human Resource Management System (HRMS)",
     category: "Study Topics",
     parent: "Topics › Establishment Rules",
     keywords:
-      "topics establishment rules hrms HRMS human resource management system AIMS CRIS IPAS",
+      "topics establishment rules hrms HRMS Human Resource Management System (HRMS) human resource management system AIMS CRIS IPAS",
   },
   {
     href: "/topics/operating-material/intermediate-block-signal",
-    title: "IB Signal",
+    title: "Intermediate Block Signal (IBS)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material IB signal Intermediate Block Signal G.R. S.R. 3.75 14.13 14.14 axle counter",
+    keywords: "topics operating material ibs IBS Intermediate Block Signal (IBS) G.R. S.R. 3.75 14.13 14.14 axle counter",
   },
   {
     href: "/topics/information-technology-apps/icms",
-    title: "ICMS",
+    title: "Integrated Coaching Management System (ICMS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps icms ICMS",
+    keywords: "topics information technology apps icms ICMS Integrated Coaching Management System (ICMS)",
   },
   {
     href: "/topics/operating-material/integrated-block",
@@ -1181,17 +1181,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/general-awareness/indian-penal-code",
-    title: "Indian Penal Code",
+    title: "Indian Penal Code (IPC)",
     category: "General Awareness",
     parent: "General Awareness",
-    keywords: "general awareness indian penal code Indian Penal Code",
+    keywords: "general awareness indian penal code Indian Penal Code (IPC)",
   },
   {
     href: "/topics/indian-railways",
-    title: "Indian Railways",
+    title: "Indian Railways (IR)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics indian railways Indian Railways organization structure zones statistics",
+    keywords: "topics indian railways Indian Railways (IR) organization structure zones statistics",
   },
   {
     href: "/topics/indian-railways/railway-organization",
@@ -1225,17 +1225,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/indian-railway-establishment-code",
-    title: "Indian Railway Establishment Code",
+    title: "Indian Railway Establishment Code (IREC)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules indian railway establishment code IREC",
+    keywords: "quizzes establishment rules indian railway establishment code IREC Indian Railway Establishment Code (IREC)",
   },
   {
     href: "/quizzes/establishment-rules/indian-railway-establishment-manual",
-    title: "Indian Railway Establishment Manual",
+    title: "Indian Railway Establishment Manual (IREM)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules indian railway establishment manual IREM",
+    keywords: "quizzes establishment rules indian railway establishment manual IREM Indian Railway Establishment Manual (IREM)",
   },
   {
     href: "/acts/industrial-disputes-act-1947",
@@ -1253,10 +1253,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps",
-    title: "Information Technology Apps",
+    title: "Information Technology Applications (IT Apps)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics information technology apps Information Technology Apps",
+    keywords: "topics information technology apps Information Technology Applications (IT Apps)",
   },
   {
     href: "/topics/operating-material/interlocking",
@@ -1297,18 +1297,18 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/irec",
-    title: "IREC",
+    title: "Indian Railway Establishment Code (IREC)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics irec IREC",
+    keywords: "topics irec IREC Indian Railway Establishment Code (IREC)",
   },
 
   {
     href: "/topics/irem",
-    title: "IREM",
+    title: "Indian Railway Establishment Manual (IREM)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics irem IREM",
+    keywords: "topics irem IREM Indian Railway Establishment Manual (IREM)",
   },
   {
     href: "/general-awareness/states-information/jammu-kashmir",
@@ -1397,24 +1397,24 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949",
-    title: "Leave Rules",
+    title: "Railway Servants Leave Rules 1949",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules leave rules Leave Rules",
+    keywords: "quizzes establishment rules leave rules Railway Servants Leave Rules 1949",
   },
   {
     href: "/topics/leave-travel-concession",
-    title: "Leave Travel Concession",
+    title: "Leave Travel Concession (LTC)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics leave travel concession Leave Travel Concession",
+    keywords: "topics leave travel concession Leave Travel Concession (LTC)",
   },
   {
     href: "/quizzes/establishment-rules/linke-holfmann-busch",
-    title: "LHB",
+    title: "Linke-Hofmann-Busch (LHB)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules lhb LHB",
+    keywords: "quizzes establishment rules lhb LHB Linke-Hofmann-Busch (LHB)",
   },
   {
     href: "/topics/operating-material/level-crossing-gates",
@@ -1507,25 +1507,25 @@ export const searchTopics: SearchTopic[] = [
 
   {
     href: "/topics/schemes/lwis-scheme",
-    title: "LWIS Scheme",
+    title: "Leberalised Wagon Investment Scheme (LWIS)",
     category: "Study Topics",
     parent: "Topics › Schemes",
-    keywords: "topics schemes lwis scheme LWIS Scheme",
+    keywords: "topics schemes lwis scheme LWIS Scheme Leberalised Wagon Investment Scheme (LWIS)",
   },
   {
     href: "/quizzes/establishment-rules/modified-assured-career-progression",
-    title: "Modified Assured Career Progression",
+    title: "Modified Assured Career Progression (MACP)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules modified assured career progression MACP MACPS",
+    keywords: "quizzes establishment rules modified assured career progression MACP MACPS Modified Assured Career Progression (MACP)",
   },
   {
     href: "/topics/establishment-rules/macp",
-    title: "MACP",
+    title: "Modified Assured Career Progression (MACP)",
     category: "Study Topics",
     parent: "Topics › Establishment Rules",
     keywords:
-      "topics establishment rules macp MACP modified assured career progression FUG pay matrix",
+      "topics establishment rules macp MACP Modified Assured Career Progression (MACP) modified assured career progression FUG pay matrix",
   },
   {
     href: "/general-awareness/states-information/madhya-pradesh",
@@ -1599,10 +1599,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/merry-go-round",
-    title: "Merry Go Round",
+    title: "Merry Go Round (MGR)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics merry go round Merry Go Round",
+    keywords: "topics merry go round Merry Go Round (MGR)",
   },
   {
     href: "/quizzes/establishment-rules/miscelaneous",
@@ -1627,10 +1627,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/operating-material/multiple-aspect-signalling",
-    title: "Multiple Aspect Signalling",
+    title: "Multiple Aspect Signalling (MAS)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material multiple aspect signalling Multiple Aspect Signalling MAS G.R. 1.02(41)",
+    keywords: "topics operating material multiple aspect signalling Multiple Aspect Signalling (MAS) G.R. 1.02(41)",
   },
   {
     href: "/general-awareness/states-information/nagaland",
@@ -1642,31 +1642,31 @@ export const searchTopics: SearchTopic[] = [
 
   {
     href: "/topics/national-logistics-policy",
-    title: "National Logistics Policy",
+    title: "National Logistics Policy (NLP)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics national logistics policy National Logistics Policy",
+    keywords: "topics national logistics policy National Logistics Policy (NLP)",
   },
   {
     href: "/general-awareness/national-parks",
-    title: "National Parks",
+    title: "National Parks (NP)",
     category: "General Awareness",
     parent: "General Awareness",
-    keywords: "general awareness national parks National Parks",
+    keywords: "general awareness national parks National Parks (NP)",
   },
   {
     href: "/topics/national-pension-scheme",
-    title: "National Pension Scheme",
+    title: "National Pension Scheme (NPS)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics national pension scheme National Pension Scheme",
+    keywords: "topics national pension scheme National Pension Scheme (NPS)",
   },
   {
     href: "/topics/national-rail-plan",
-    title: "National Rail Plan",
+    title: "National Rail Plan (NRP)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics national rail plan National Rail Plan",
+    keywords: "topics national rail plan National Rail Plan (NRP)",
   },
   {
     href: "/topics/operating-material/non-interlocked-working",
@@ -1692,17 +1692,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/national-pension-system",
-    title: "NPS",
+    title: "National Pension System (NPS)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules nps NPS",
+    keywords: "quizzes establishment rules nps NPS National Pension System (NPS)",
   },
   {
     href: "/topics/information-technology-apps/ntes",
-    title: "NTES",
+    title: "National Train Enquiry System (NTES)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps ntes NTES",
+    keywords: "topics information technology apps ntes NTES National Train Enquiry System (NTES)",
   },
   {
     href: "/topics/operating-material/obstruction",
@@ -1785,10 +1785,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/old-pension-system",
-    title: "OPS",
+    title: "Old Pension System (OPS)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules ops OPS",
+    keywords: "quizzes establishment rules ops OPS Old Pension System (OPS)",
   },
 
   {
@@ -1822,10 +1822,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/railway-servants-pass-rules-1986",
-    title: "Pass Rules",
+    title: "Railway Servants Pass Rules 1986",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules pass rules Pass Rules",
+    keywords: "quizzes establishment rules pass rules Railway Servants Pass Rules 1986",
   },
   {
     href: "/topics/operating-material/patrolling-of-lines",
@@ -1851,17 +1851,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/permanent-negotiating-machinery",
-    title: "Permanent Negotiating Machinery",
+    title: "Permanent Negotiating Machinery (PNM)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules permanent negotiating machinery PNM",
+    keywords: "quizzes establishment rules permanent negotiating machinery PNM Permanent Negotiating Machinery (PNM)",
   },
   {
     href: "/topics/permanent-negotiating-machinery",
-    title: "Permanent Negotiating Machinery",
+    title: "Permanent Negotiating Machinery (PNM)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics permanent negotiating machinery Permanent Negotiating Machinery",
+    keywords: "topics permanent negotiating machinery Permanent Negotiating Machinery (PNM)",
   },
   {
     href: "/topics/operating-material/permissive-signals",
@@ -1893,18 +1893,18 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/pms",
-    title: "PMS",
+    title: "Passenger Management System (PMS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps pms PMS",
+    keywords: "topics information technology apps pms PMS Passenger Management System (PMS)",
   },
   {
     href: "/topics/block-working-manual/plct-working",
-    title: "PLCT Working",
+    title: "Paper Line Clear Ticket (PLCT) Working",
     category: "Study Topics",
     parent: "Topics › Block Working Manual",
     keywords:
-      "topics block working manual plct working PLCT Working BWM Annexure Paper Line Clear Ticket T/A 1425 T/B 1425 TSR",
+      "topics block working manual plct working PLCT Working BWM Annexure Paper Line Clear Ticket (PLCT) T/A 1425 T/B 1425 TSR",
   },
   {
     href: "/topics/operating-material/point-trap-indicator",
@@ -1938,10 +1938,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/prem",
-    title: "PREM",
+    title: "Participation of Railway Employees in Management (PREM)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics prem PREM",
+    keywords: "topics prem PREM Participation of Railway Employees in Management (PREM)",
   },
   {
     href: "/topics/financial-rules/primary-units",
@@ -1952,7 +1952,7 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/block-working-manual/private-numbers",
-    title: "Private Numbers",
+    title: "Private Numbers (PN)",
     category: "Study Topics",
     parent: "Topics › Block Working Manual",
     keywords:
@@ -1960,10 +1960,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/prs-application",
-    title: "PRS Application",
+    title: "Passenger Reservation System (PRS) Application",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps prs application PRS Application",
+    keywords: "topics information technology apps prs application PRS Application Passenger Reservation System (PRS) Application",
   },
 
   {
@@ -1997,7 +1997,7 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/establishment-rules/quarters",
-    title: "Quarters",
+    title: "Railway Quarters",
     category: "Study Topics",
     parent: "Topics › Establishment Rules",
     keywords:
@@ -2012,10 +2012,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/railway-acts",
-    title: "Railway Acts",
+    title: "Indian Railway Acts 1989",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics railway acts Railway Acts Indian Railway Act 1989",
+    keywords: "topics railway acts Railway Acts Indian Railway Acts 1989 Indian Railway Act 1989",
   },
   {
     href: "/topics/financial-rules/railway-budget",
@@ -2075,17 +2075,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/national-rail-plan",
-    title: "National Rail Plan",
+    title: "National Rail Plan (NRP)",
     category: "Quizzes",
     parent: "Quizzes",
-    keywords: "quizzes national rail plan National Rail Plan NRP Vision 2024 HDN HUN capacity",
+    keywords: "quizzes national rail plan National Rail Plan (NRP) Vision 2024 HDN HUN capacity",
   },
   {
     href: "/acts/railway-servants-da-rules-1968",
-    title: "Railway Servants Da Rules 1968",
+    title: "Railway Servants Discipline & Appeal Rules 1968",
     category: "Acts & Rules",
     parent: "Acts",
-    keywords: "acts railway servants da rules 1968 Railway Servants Da Rules 1968",
+    keywords: "acts railway servants da rules 1968 Railway Servants Discipline & Appeal Rules 1968",
   },
   {
     href: "/acts/railway-servants-leave-rules-1949",
@@ -2154,11 +2154,11 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/operating-material/rail-road-vehicle",
-    title: "Rail Road Vehicle",
+    title: "Rail-cum-Road Vehicle (RRV)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
-      "topics operating material rail road vehicle Rail Road Vehicle RRV Rail-cum-Road Vehicle S.R. 15.27.9 ON OFF tracking",
+      "topics operating material rail road vehicle Rail Road Vehicle RRV Rail-cum-Road Vehicle (RRV) S.R. 15.27.9 ON OFF tracking",
   },
   {
     href: "/topics/operating-material/reception-signals",
@@ -2191,52 +2191,52 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/railway-servants-rest-rules-2005",
-    title: "Rest Rules",
+    title: "Railway Servants Rest Rules 2005",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules rest rules Rest Rules",
+    keywords: "quizzes establishment rules rest rules Railway Servants Rest Rules 2005",
   },
   {
     href: "/acts/right-to-information-act-2005",
-    title: "Right To Information Act 2005",
+    title: "Right to Information Act 2005 (RTI Act 2005)",
     category: "Acts & Rules",
     parent: "Acts",
-    keywords: "acts right to information act 2005 Right To Information Act 2005",
+    keywords: "acts right to information act 2005 Right to Information Act 2005 (RTI Act 2005)",
   },
   {
     href: "/topics/information-technology-apps/rms",
-    title: "RMS",
+    title: "Rake Management System (RMS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps rms RMS",
+    keywords: "topics information technology apps rms RMS Rake Management System (RMS)",
   },
   {
     href: "/topics/information-technology-apps/rshc",
-    title: "RSHC",
+    title: "RPF Security Helpline Control (RSHC)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps rshc RSHC",
+    keywords: "topics information technology apps rshc RSHC RPF Security Helpline Control (RSHC)",
   },
   {
     href: "/topics/information-technology-apps/rsms",
-    title: "RSMS",
+    title: "RPF Security Management System (RSMS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps rsms RSMS",
+    keywords: "topics information technology apps rsms RSMS RPF Security Management System (RSMS)",
   },
   {
     href: "/quizzes/establishment-rules/right-to-information-act-2005",
-    title: "RTI Act 2005",
+    title: "Right to Information Act 2005 (RTI Act 2005)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules rti act 2005 RTI Act 2005",
+    keywords: "quizzes establishment rules rti act 2005 RTI Act 2005 Right to Information Act 2005 (RTI Act 2005)",
   },
   {
     href: "/topics/information-technology-apps/rtis",
-    title: "RTIS",
+    title: "Real Time Train Information System (RTIS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps rtis RTIS",
+    keywords: "topics information technology apps rtis RTIS Real Time Train Information System (RTIS)",
   },
   {
     href: "/topics/operating-material/routing-signal",
@@ -2261,10 +2261,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/satsang",
-    title: "SATSANG",
+    title: "Software Aided Train Scheduling And Network Governance (SATSANG)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps satsang SATSANG",
+    keywords: "topics information technology apps satsang SATSANG Software Aided Train Scheduling And Network Governance (SATSANG)",
   },
 
 
@@ -2277,10 +2277,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/schemes",
-    title: "Schemes",
+    title: "Railway Schemes",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics schemes Schemes",
+    keywords: "topics schemes Railway Schemes",
   },
   {
     href: "/general-awareness/awards/science-technology-awards",
@@ -2342,17 +2342,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/operating-material/shunting-limit-board",
-    title: "Shunting Limit Board",
+    title: "Shunting Limit Board (SLB)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material shunting limit board SLB BSLB G.R. 3.32",
+    keywords: "topics operating material shunting limit board SLB BSLB G.R. 3.32 Shunting Limit Board (SLB)",
   },
   {
     href: "/topics/operating-material/signal-overlap",
-    title: "Signal Overlap",
+    title: "Signal Overlap (SOL)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material signal overlap Signal Overlap MAS adequate distance SLB",
+    keywords: "topics operating material signal overlap Signal Overlap (SOL) MAS adequate distance SLB",
   },
   {
     href: "/topics/operating-material/signals",
@@ -2414,18 +2414,18 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/quizzes/establishment-rules/staff-benefit-fund",
-    title: "Staff Benefit Fund",
+    title: "Staff Benefit Fund (SBF)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules staff benefit fund SBF spectacles per-capita grant",
+    keywords: "quizzes establishment rules staff benefit fund SBF Staff Benefit Fund (SBF) spectacles per-capita grant",
   },
   {
     href: "/topics/establishment-rules/staff-benefit-fund",
-    title: "Staff Benefit Fund",
+    title: "Staff Benefit Fund (SBF)",
     category: "Study Topics",
     parent: "Topics › Establishment Rules",
     keywords:
-      "topics establishment rules staff benefit fund Staff Benefit Fund welfare advances membership",
+      "topics establishment rules staff benefit fund Staff Benefit Fund (SBF) welfare advances membership",
   },
   {
     href: "/general-awareness/states-information",
@@ -2467,19 +2467,19 @@ export const searchTopics: SearchTopic[] = [
 
   {
     href: "/topics/operating-material/station-working-rules",
-    title: "Station Working Rules",
+    title: "Station Working Rules (SWR)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
-      "topics operating material station working rules Station Working Rules SWR G.R. 5.06 Appendix XIV chapters appendices",
+      "topics operating material station working rules Station Working Rules (SWR) G.R. 5.06 Appendix XIV chapters appendices",
   },
 
   {
     href: "/manuals/station-working-rules",
-    title: "Station Working Rules",
+    title: "Station Working Rules (SWR)",
     category: "Manuals",
     parent: "Manuals",
-    keywords: "manuals station working rules Station Working Rules",
+    keywords: "manuals station working rules Station Working Rules (SWR)",
   },
   {
     href: "/topics/operating-material/starter-signal",
@@ -2534,27 +2534,27 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/operating-material/temporary-single-line",
-    title: "Temporary Single Line",
+    title: "Temporary Single Line (TSL)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
-      "topics operating material temporary single line Temporary Single Line TSL S.R. 6.02.1 T/D 602 obstructed double line",
+      "topics operating material temporary single line Temporary Single Line (TSL) S.R. 6.02.1 T/D 602 obstructed double line",
   },
   {
     href: "/topics/operating-material/track-tamping-machine",
-    title: "Track Tamping Machine",
+    title: "Track Tamping Machine (TTM)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
-      "topics operating material track tamping machine Track Tamping Machine TTM S.R. 4.65 T/465 T/A465 JSC",
+      "topics operating material track tamping machine Track Tamping Machine (TTM) S.R. 4.65 T/465 T/A465 JSC",
   },
   {
     href: "/topics/operating-material/total-interruption-of-communication",
-    title: "Total Interruption of Communication",
+    title: "Total Interruption of Communication (TIC)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
-      "topics operating material total interruption of communication TIC S.R. 6.02.4 6.02.3 T/B 602 T/C.602 single double line",
+      "topics operating material total interruption of communication Total Interruption of Communication (TIC) S.R. 6.02.4 6.02.3 T/B 602 T/C.602 single double line",
   },
   {
     href: "/general-awareness/sports/table-tennis",
@@ -2573,10 +2573,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/tdms",
-    title: "TDMS",
+    title: "Track Distribution Management System (TDMS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps tdms TDMS",
+    keywords: "topics information technology apps tdms TDMS Track Distribution Management System (TDMS)",
   },
   {
     href: "/general-awareness/states-information/telangana",
@@ -2608,10 +2608,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/information-technology-apps/tms",
-    title: "TMS",
+    title: "Terminal Management System (TMS)",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps tms TMS",
+    keywords: "topics information technology apps tms TMS Terminal Management System (TMS)",
   },
   {
     href: "/quizzes/establishment-rules/trade-union-act-1926",
@@ -2659,11 +2659,11 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/block-working-manual/train-signal-register",
-    title: "Train Signal Register",
+    title: "Train Signal Register (TSR)",
     category: "Study Topics",
     parent: "Topics › Block Working Manual",
     keywords:
-      "topics block working manual train signal register Train Signal Register BWM TSR T/14 T/1407 block instrument",
+      "topics block working manual train signal register Train Signal Register (TSR) BWM T/14 T/1407 block instrument",
   },
   {
     href: "/topics/operating-material/trains-unusually-delayed",
@@ -2699,24 +2699,24 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/general-awareness/united-nations-organization",
-    title: "United Nations Organization",
+    title: "United Nations Organization (UNO)",
     category: "General Awareness",
     parent: "General Awareness",
-    keywords: "general awareness united nations organization United Nations Organization",
+    keywords: "general awareness united nations organization United Nations Organization (UNO)",
   },
   {
     href: "/quizzes/establishment-rules/unified-pension-system",
-    title: "UPS",
+    title: "Unified Pension System (UPS)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules ups UPS",
+    keywords: "quizzes establishment rules ups UPS Unified Pension System (UPS)",
   },
   {
     href: "/topics/information-technology-apps/uts-application",
-    title: "UTS Application",
+    title: "Unreserved Ticketing System (UTS) Application",
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps uts application UTS Application",
+    keywords: "topics information technology apps uts application UTS Application Unreserved Ticketing System (UTS) Application",
   },
   {
     href: "/general-awareness/states-information/uttar-pradesh",
@@ -2734,17 +2734,17 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/operating-material/vehicle-guidance",
-    title: "Vehicle Guidance",
+    title: "Vehicle Guidance (VG)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material vehicle guidance Vehicle Guidance VG S.R. 4.25.3 TNC handbook",
+    keywords: "topics operating material vehicle guidance Vehicle Guidance (VG) S.R. 4.25.3 TNC handbook",
   },
   {
     href: "/topics/operating-material/visibility-test-object",
-    title: "Visibility Test Object",
+    title: "Visibility Test Object (VTO)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material visibility test object VTO VTP Fog signal post G.R S.R. 3.61",
+    keywords: "topics operating material visibility test object Visibility Test Object (VTO) VTP Fog signal post G.R S.R. 3.61",
   },
   {
     href: "/topics/working-time-table/wagons-data",
@@ -2814,25 +2814,25 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/operating-material/working-time-table",
-    title: "Working Time Table",
+    title: "Working Time Table (WTT)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material working time table Working Time Table WTT G.R. 4.07 PCOM",
+    keywords: "topics operating material working time table Working Time Table (WTT) G.R. 4.07 PCOM",
   },
 
   {
     href: "/manuals/working-time-table",
-    title: "Working Time Table",
+    title: "Working Time Table (WTT)",
     category: "Manuals",
     parent: "Manuals",
-    keywords: "manuals working time table Working Time Table",
+    keywords: "manuals working time table Working Time Table (WTT)",
   },
   {
     href: "/topics/working-time-table",
-    title: "Working Time Table",
+    title: "Working Time Table (WTT)",
     category: "Study Topics",
     parent: "Topics",
-    keywords: "topics working time table Working Time Table WTT G.R. 4.07 PCOM timings coaches wagons",
+    keywords: "topics working time table Working Time Table (WTT) G.R. 4.07 PCOM timings coaches wagons",
   },
   {
     href: "/acts/workmen-compensation-act-1923",
