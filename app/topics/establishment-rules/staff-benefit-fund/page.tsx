@@ -1,5 +1,5 @@
 import React from 'react'
-import StaffBenefitFund from '@/components/topics/StaffBenefitFund'
+import StaffBenefitFund from '@/components/topics/establishment-rules/StaffBenefitFund'
 
 const StaffBenefitFundPage = () => {
   return (

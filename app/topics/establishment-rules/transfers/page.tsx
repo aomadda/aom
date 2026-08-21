@@ -1,5 +1,5 @@
 import React from 'react'
-import Transfers from '@/components/topics/Transfers'
+import Transfers from '@/components/topics/establishment-rules/Transfers'
 
 const TransfersPage = () => {
   return (

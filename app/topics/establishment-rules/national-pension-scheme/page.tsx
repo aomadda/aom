@@ -1,5 +1,5 @@
 import React from 'react'
-import NationalPensionScheme from '@/components/topics/NationalPensionScheme'
+import NationalPensionScheme from '@/components/topics/establishment-rules/NationalPensionScheme'
 
 const NationalPensionSchemePage = () => {
   return (

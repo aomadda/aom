@@ -1,5 +1,5 @@
 import React from 'react'
-import GovernmentEMarket from '@/components/topics/GovernmentEMarket'
+import GovernmentEMarket from '@/components/topics/financial-rules/GovernmentEMarket'
 
 const GovernmentEMarketPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import GovernmentPension from '@/components/topics/GovernmentPension'
+import GovernmentPension from '@/components/topics/establishment-rules/GovernmentPension'
 
 const GovernmentPensionPage = () => {
   return (

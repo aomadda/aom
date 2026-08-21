@@ -1,5 +1,5 @@
 import React from 'react'
-import JointConsultativeMachinery from '@/components/topics/JointConsultativeMachinery'
+import JointConsultativeMachinery from '@/components/topics/establishment-rules/JointConsultativeMachinery'
 const JointConsultativeMachineryPage = () => {
   return (
     <JointConsultativeMachinery />

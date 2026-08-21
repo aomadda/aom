@@ -5,61 +5,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowRight, Search, X } from 'lucide-react'
 
-import { searchTopics, type SearchTopic } from '@/lib/search-topics'
-
-function normalize(value: string) {
-  return value
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
-function scoreTopic(topic: SearchTopic, query: string, tokens: string[]) {
-  const title = normalize(topic.title)
-  const parent = normalize(topic.parent)
-  const category = normalize(topic.category)
-  const keywords = normalize(topic.keywords)
-  const haystack = `${title} ${parent} ${category} ${keywords}`
-
-  if (!haystack.includes(query) && !tokens.every((token) => haystack.includes(token))) {
-    return -1
-  }
-
-  let score = 0
-  if (title === query) score += 120
-  if (title.startsWith(query)) score += 80
-  if (title.includes(query)) score += 50
-  if (category.includes(query)) score += 20
-  if (parent.includes(query)) score += 15
-  if (keywords.includes(query)) score += 10
-
-  for (const token of tokens) {
-    if (title.startsWith(token)) score += 25
-    else if (title.includes(token)) score += 15
-    else if (haystack.includes(token)) score += 8
-  }
-
-  score += Math.max(0, 30 - topic.href.split('/').length)
-
-  return score
-}
-
-function filterTopics(rawQuery: string): SearchTopic[] {
-  const query = normalize(rawQuery)
-  if (!query) return []
-
-  const tokens = query.split(' ').filter(Boolean)
-
-  return searchTopics
-    .map((topic) => ({ topic, score: scoreTopic(topic, query, tokens) }))
-    .filter((item) => item.score >= 0)
-    .sort((a, b) => b.score - a.score || a.topic.title.localeCompare(b.topic.title))
-    .slice(0, 40)
-    .map((item) => item.topic)
-}
+import { searchTopics } from '@/lib/search-topics'
+import { filterTopics } from '@/lib/topic-search'
 
 const GlobalSearch = () => {
   const pathname = usePathname()

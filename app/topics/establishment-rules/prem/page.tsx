@@ -1,5 +1,5 @@
 import React from 'react'
-import PREM from '@/components/topics/PREM'
+import PREM from '@/components/topics/establishment-rules/PREM'
 const PREMPage = () => {
   return (
     <PREM />

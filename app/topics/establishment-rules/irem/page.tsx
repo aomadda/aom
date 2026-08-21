@@ -1,5 +1,5 @@
 import React from 'react'
-import IndianRailwaysEstablishmentManual from '@/components/topics/IndianRailwaysEstablishmentManual'
+import IndianRailwaysEstablishmentManual from '@/components/topics/establishment-rules/IndianRailwaysEstablishmentManual'
 
 const IndianRailwaysEstablishmentManualPage = () => {
   return (

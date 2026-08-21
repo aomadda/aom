@@ -1,0 +1,44 @@
+---
+description: AOM Adda project conventions — Next.js 16 App Router, search index, auth
+alwaysApply: true
+---
+
+# AOM Adda
+
+Railway AOM exam-prep site. Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, Mongoose, Zod, jose sessions, lucide-react. Import via `@/` (project root).
+
+## Next.js 16
+
+This is not the Next.js from training data. Before writing framework code, read the matching guide in `node_modules/next/dist/docs/` and heed deprecation notices.
+
+- App Router only (`app/`). Routes live under `/topics`, `/manuals`, `/acts`, `/quizzes`, `/general-awareness`, `/pdfs`, `/api`.
+- Server Components by default. Add `'use client'` only when the file needs client APIs.
+- Use `next/link` for navigation and `NextResponse` in route handlers.
+
+## New public pages
+
+When adding a public page, also add a `SearchTopic` in `lib/search-topics.ts`:
+
+```ts
+{
+  href: "/topics/example",
+  title: "Example",
+  category: "Study Topics",
+  parent: "Topics",
+  keywords: "topics example Example extra search words",
+}
+```
+
+Place it alphabetically by `title` among nearby entries. Do not skip the search index.
+
+## Auth and APIs
+
+- Sessions: `lib/auth/session.ts` (jose JWT cookie). Models: `lib/models/`. DB: `lib/db.ts`.
+- Validate request bodies with Zod in `lib/validations`. Return `{ error, fieldErrors }` on 400.
+- Keep public paths in `middleware.ts` (`PUBLIC_PAGE_PATHS`, `PUBLIC_API_PREFIXES`) when adding unauthenticated routes.
+
+## Style
+
+- Match the file you are editing (quotes, exports, component shape).
+- Do not mass-refactor the large generated trees under `components/` (manuals, acts, chapter/section pages).
+- Do not commit `.env` or secrets.

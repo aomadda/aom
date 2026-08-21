@@ -1,5 +1,5 @@
 import React from 'react'
-import Quarters from '@/components/topics/Quarters'
+import Quarters from '@/components/topics/establishment-rules/Quarters'
 
 const QuartersPage = () => {
   return (
