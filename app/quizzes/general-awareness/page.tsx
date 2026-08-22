@@ -96,7 +96,7 @@ const GeneralAwarenessQuiz = () => {
         {/* Header */}
         <div className="mb-10 text-center sm:mb-12">
           <div className="mb-5 inline-flex">
-            <div className="rounded-full bg-linear-to-r from-cyan-400 via-teal-500 to-indigo-500 p-[3px]">
+            <div className="rounded-full bg-linear-to-r from-cyan-400 via-teal-500 to-indigo-500 p-0.75">
               <div className="rounded-full bg-white px-5 py-3 shadow-inner shadow-white/70">
                 <span className="text-4xl" aria-hidden>
                   🌐
@@ -134,7 +134,7 @@ const GeneralAwarenessQuiz = () => {
             return (
               <Link key={topic.href} href={topic.href} className="group outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cyan-50">
                 <div
-                  className={`relative flex h-full min-h-[220px] flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/15 ${isActive ? 'ring-2 ring-teal-500 ring-offset-2 shadow-teal-500/25' : ''}`}
+                  className={`relative flex h-full min-h-55 flex-col overflow-hidden rounded-2xl border border-white/30 bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-teal-500/15 ${isActive ? 'ring-2 ring-teal-500 ring-offset-2 shadow-teal-500/25' : ''}`}
                 >
                   <div
                     className={`relative overflow-hidden bg-linear-to-br ${topic.color} p-6 sm:p-7`}

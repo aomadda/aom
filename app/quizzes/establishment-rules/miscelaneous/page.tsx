@@ -496,62 +496,88 @@ export default function MiscellaneousQuiz() {
             </div>
           </div>
 
-          <div className="rounded-xl bg-white p-6 shadow-2xl sm:p-8">
-            <h3 className="mb-6 text-center text-2xl font-bold text-gray-800">
-              Quiz Summary & Explanation
-            </h3>
-            <div className="space-y-4">
+          <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-2xl shadow-lime-950/10">
+            <div className="relative overflow-hidden bg-linear-to-r from-slate-950 via-lime-950 to-green-950 px-6 py-8 text-center sm:px-10 sm:py-10">
+              <div className="pointer-events-none absolute -left-16 top-0 h-40 w-40 rounded-full bg-lime-500/20 blur-3xl" />
+              <div className="pointer-events-none absolute -right-10 bottom-0 h-36 w-36 rounded-full bg-green-400/20 blur-3xl" />
+              <h3 className="relative text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                Quiz Summary & Explanation
+              </h3>
+              <div className="relative mx-auto mt-4 h-1 w-16 rounded-full bg-linear-to-r from-lime-400 to-green-300" />
+            </div>
+
+            <ol className="divide-y divide-slate-100">
               {questions.map((question, index) => {
                 const userAnswer = userAnswers[index]
                 const isSkipped = userAnswer === null
                 const isCorrect = userAnswer === question.correct
+                const statusLabel = isSkipped ? 'Skipped' : isCorrect ? 'Correct' : 'Incorrect'
+                const railClass = isSkipped
+                  ? 'from-amber-400 to-orange-400'
+                  : isCorrect
+                    ? 'from-emerald-400 to-teal-400'
+                    : 'from-rose-400 to-red-500'
+                const chipClass = isSkipped
+                  ? 'bg-amber-100 text-amber-800 ring-amber-200/80'
+                  : isCorrect
+                    ? 'bg-emerald-100 text-emerald-800 ring-emerald-200/80'
+                    : 'bg-rose-100 text-rose-800 ring-rose-200/80'
 
                 return (
-                  <div
+                  <li
                     key={`${index}-${question.question.slice(0, 24)}`}
-                    className={`rounded-xl border-2 p-4 ${
-                      isSkipped
-                        ? 'border-amber-200 bg-amber-50'
-                        : isCorrect
-                          ? 'border-green-200 bg-green-50'
-                          : 'border-red-200 bg-red-50'
-                    }`}
+                    className="relative px-4 py-6 sm:px-8 sm:py-7"
                   >
-                    <div className="mb-2 flex items-start justify-between gap-3">
-                      <h4 className="font-semibold text-gray-800">Question {index + 1}</h4>
+                    <div className={`absolute inset-y-0 left-0 w-1 bg-linear-to-b ${railClass}`} />
+
+                    <div className="mb-4 flex items-start justify-between gap-3">
+                      <h4 className="text-base font-semibold text-slate-800 sm:text-lg">
+                        Question {index + 1}
+                      </h4>
                       <div
-                        className={`rounded-full px-3 py-1 text-sm font-medium text-white ${
-                          isSkipped
-                            ? 'bg-amber-500'
-                            : isCorrect
-                              ? 'bg-green-500'
-                              : 'bg-red-500'
-                        }`}
+                        className={`rounded-full px-3 py-1 text-xs font-semibold tracking-wide ring-1 sm:text-sm ${chipClass}`}
                       >
-                        {isSkipped ? 'Skipped' : isCorrect ? 'Correct' : 'Incorrect'}
+                        {statusLabel}
                       </div>
                     </div>
-                    <p className="mb-3 text-gray-700">{question.question}</p>
-                    <div className="space-y-2 rounded-lg bg-white/70 p-3 text-sm">
-                      <div className="text-gray-700">
-                        <span className="font-semibold">Your answer:</span>{' '}
-                        {userAnswer !== null ? question.options[userAnswer] : 'Not answered'}
-                      </div>
-                      <div className="text-green-700">
-                        <span className="font-semibold">Correct answer:</span>{' '}
-                        {question.options[question.correct]}
-                      </div>
-                      {question.explanation ? (
-                        <div className="border-t border-lime-100 pt-2 text-lime-700">
-                          <span className="font-semibold">Explanation:</span>{' '}
-                          {question.explanation}
+
+                    <p className="mb-5 text-sm leading-relaxed text-slate-700 sm:text-base">
+                      {question.question}
+                    </p>
+
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
+                        <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                          Your answer:
                         </div>
-                      ) : null}
+                        <p className="mt-1.5 text-sm font-medium text-slate-800">
+                          {userAnswer !== null ? question.options[userAnswer] : 'Not answered'}
+                        </p>
+                      </div>
+                      <div className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-4">
+                        <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                          Correct answer:
+                        </div>
+                        <p className="mt-1.5 text-sm font-medium text-emerald-900">
+                          {question.options[question.correct]}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+
+                    {question.explanation ? (
+                      <div className="mt-3 rounded-2xl border border-lime-100 bg-linear-to-br from-lime-50 to-green-50 p-4">
+                        <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-lime-700">
+                          Explanation:
+                        </div>
+                        <p className="mt-1.5 text-sm leading-relaxed text-lime-900">
+                          {question.explanation}
+                        </p>
+                      </div>
+                    ) : null}
+                  </li>
                 )
               })}
-            </div>
+            </ol>
           </div>
         </div>
       </div>
@@ -560,7 +586,7 @@ export default function MiscellaneousQuiz() {
 
   if (!quizActive && !completed && !showResults) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-lime-50 to-green-50 px-4 px-3 py-6 sm:px-4 sm:py-8">
+      <div className="min-h-screen bg-linear-to-br from-lime-50 to-green-50 px-4 py-6 sm:px-4 sm:py-8">
         <div className="mx-auto max-w-3xl">
           <div className="rounded-xl bg-white p-6 text-center shadow-lg sm:p-8">
             <h1 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">{QUIZ_TITLE}</h1>
