@@ -44,5 +44,42 @@ export const chemistryQuiz = {
         explanation: 'Hydrogen gas is the correct answer because it is the product that is given when ethanol reacts with sodium. Hydrogen gas is the product that is given when ethanol reacts with sodium. Hydrogen gas is the product that is given when ethanol reacts with sodium.',
       },
     ],
+    'quiz-2': [
+      {
+        question:
+          'Which of the following groups represents metals?',
+        options: ['Group 2', 'Group 3', 'Group 4', 'Group 5'],
+        correct: 0,
+        explanation: 'Group 2 is the correct answer because it is the group that represents metals. Group 2 is the group that represents metals. Group 2 is the group that represents metals.',
+      },
+      {
+        question:
+          'Which is the only non-metal placed at the left side of the Modern Periodic Table?',
+        options: ['Hydrogen', 'Helium', 'Carbon', 'Neon'],
+        correct: 0,
+        explanation: 'Hydrogen is the only non-metal placed at the left side of the Modern Periodic Table.',
+      },
+      {
+        question:
+          'Which gas is evolved when a metal reacts with a dilute acid?',
+        options: ['Hydrogen gas', 'Oxygen gas', 'Carbon dioxide gas', 'Nitrogen gas'],
+        correct: 0,
+        explanation: 'Hydrogen gas is the gas that is evolved when a metal reacts with a dilute acid.',
+      },
+      {
+        question:
+          'pH paper shows light blue colour when dipped into milk of magnesia. This indicates that milk of magnesia is ________.',
+        options: ['A mild base', 'A mild acid', 'A strong base', 'A strong acid'],
+        correct: 0,
+        explanation: 'A mild base is the pH of milk of magnesia. A mild base is the pH of milk of magnesia.',
+      },
+      {
+        question:
+          'What type of gas is released when ethanol reacts with sodium?',
+        options: ['Hydrogen gas', 'Oxygen gas', 'Carbon dioxide gas', 'Nitrogen gas'],
+        correct: 0,
+        explanation: 'Hydrogen gas is the gas that is released when ethanol reacts with sodium.',
+      },
+    ],
   },
 };

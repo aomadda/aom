@@ -170,5 +170,70 @@ export const biologyQuiz = {
         explanation: 'Urea + Uric acid is the correct answer because it is the nitrogenous waste that is removed by the human kidney.',
       },
     ],
+    'quiz-2': [
+      {
+        question:
+          'Within the nucleus of eukaryotic cells, which of the following structures contains the tightly coiled genetic material?',
+        options: ['Ribosomes', 'Chromosomes', 'Mitochondria', 'Endoplasmic reticulum'],
+        correct: 1,
+        explanation: 'Chromosomes are the structures that contain the tightly coiled genetic material in the nucleus of eukaryotic cells.',
+      },
+      {
+        question:
+          'Which disease is caused by the accumulation of lipids in brain cells due to the deficiency or inactivation of lipid digestion enzymes?',
+        options: ['Alzheimer\'s disease', 'Parkinson\'s disease', 'Huntington\'s disease', 'Tay-Sachs\'s disease'],
+        correct: 3,
+        explanation: 'Tay-Sachs\'s disease is the correct answer because it is the disease that is caused by the accumulation of lipids in brain cells due to the deficiency or inactivation of lipid digestion enzymes.',
+      },
+      {
+        question:
+          'Which of the following is classified as micronutrients?',
+        options: ['Vitamins', 'Fats', 'Proteins', 'Carbohydrates'],
+        correct: 0,
+        explanation: 'Vitamins are the nutrients that are required in small amounts by the body.',
+      },
+      {
+        question:
+          'Which of the following organelle of the eukaryotic cells are also called suicidal bags?',
+        options: ['Chromosomes', 'Mitochondria', 'Lysosomes', 'Chloroplasts'],
+        correct: 2,
+        explanation: 'Lysosomes are the organelle of the eukaryotic cells that are also called suicidal bags.',
+      },
+      {
+        question:
+          '__________ contributed to the theories of inheritance of trains in living things.',
+        options: ['Gregor Mendel', 'JBS Haldane', 'Charles Darwin', 'Stanley Miller'],
+        correct: 0,
+        explanation: 'Gregor Mendel is the correct answer because he contributed to the theories of inheritance of trains in living things. Gregor Mendel is the scientist who contributed to the theories of inheritance of trains in living things.',
+      },
+      {
+        question:
+          'Ascorbic acid is a water-soluble vitamin deficiency of which leads to scurvy. Identify the vitamin.',
+        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 2,
+        explanation: 'Vitamin C is the correct answer because it is the vitamin that is a water-soluble vitamin deficiency of which leads to scurvy.',
+      },
+      {
+        question:
+          'Which of the following is the most abundant protein in the biosphere?',
+        options: ['Collagen', 'GLUT-4', 'Mysin', 'Rubisco'],
+        correct: 3,
+        explanation: 'Rubisco is the protein that is most abundant in the biosphere.',
+      },
+      {
+        question:
+          'How is urea removed from the blood by an artificial kidney?',
+        options: ['Filtration', 'Diffusion', 'Osmosis', 'Excretion'],
+        correct: 0,
+        explanation: 'Filtration is the process that is used to remove urea from the blood by an artificial kidney.',
+      },
+      {
+        question:
+          'Which of the following scientists coined the term "Cell" used in biology?',
+        options: ['Alexander Fleming', 'Craig Venter', 'James D. Watson', 'Robert Hooke'],
+        correct: 3,
+        explanation: 'Robert Hooke is the scientist who coined the term "Cell" used in biology.',
+      },
+    ],
   },
 };

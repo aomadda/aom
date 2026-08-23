@@ -176,6 +176,79 @@ export const physicsQuiz = {
         correct: 3,
         explanation: 'Towards the normal and slows down is the correct answer because it is the phenomenon that is responsible for the bending of the ray of light from water to glass.',
       },
+    ],
+    'quiz-2': [
+      {
+        question:
+          'Which of the following has the shortest wavelength?',
+        options: ['Ultraviolet rays', 'Infrared rays', 'Gamma rays', 'X-rays'],
+        correct: 2,
+        explanation: 'Gamma rays is the correct answer because it is the type of electromagnetic radiation that has the shortest wavelength.',
+      },
+      {
+        question:
+          'Which type of wave is primarily formed on a stretched string when plucked or disturbed?',
+        options: ['Longitudinal wave', 'Transverse wave', 'Surface wave', 'Torsional wave'],
+        correct: 1,
+        explanation: 'Transverse wave is the correct answer because it is the type of wave that is primarily formed on a stretched string when plucked or disturbed.',
+      },
+      {
+        question:
+          'Which of the following best describes the shape of a sinusoidal wave signal during  one complete cycle?',
+        options: ['Square wave', 'Triangle wave', 'Rectangular wave', 'S-shaped wave'],
+        correct: 3,
+        explanation: 'S-shaped wave is the correct answer because it is the shape of a sinusoidal wave signal during one complete cycle.',
+      },
+      {
+        question:
+          'Which of the following is a dimensionaless quantity?',
+        options: ['Acceleration', 'Velocity', 'Gravitational force', 'Refractive index'],
+        correct: 3,
+        explanation: 'Refractive index is the correct answer because it is the dimensionaless quantity. Refractive index is the quantity that is responsible for the bending of light when it passes from one medium to another.',
+      },
+      {
+        question:
+          'Who, in 1816, modified Newton\s formula for the speed of sound to take into account adiabatic compression in air?',
+        options: ['Galileo Galilei', 'Hermann von Helmholtz', 'Pierre-Simon Laplace', 'Lord Rayleigh'],
+        correct: 2,
+        explanation: 'Pierre-Simon Laplace is the person who modified Newton\'s formula for the speed of sound to take into account adiabatic compression in air.',
+      },
+      {
+        question:
+          'The Oersted unit is used to measure which of the following?',
+        options: ['Current intensity', 'Electrical potential', 'Electric field strength', 'Magnetic field strength'],
+        correct: 3,
+        explanation: 'Magnetic field strength is the unit that is used to measure the magnetic field strength.',
+      },
+      {
+        question:
+          'Which of the following increases the rate of evaporation of a liquid?',
+        options: ['Low surface area and cold air temperature', 'Dense atmosphere and generally cool weather', 'High temperature and increased wind speed', 'High humidity and absence of wind movement'],
+        correct: 2,
+        explanation: 'High temperature and increased wind speed is the correct answer because it is the factor that increases the rate of evaporation of a liquid.',
+      },
+      {
+        question:
+          'Which law is shown by fixed 1:8 mass ratio in water formation?',
+        options: ['Dalton\'s Atomic Theory', 'Law of Multiple Proportions', 'Law of Conservation of Energy', 'Law of Constant Proportions'],
+        correct: 3,
+        explanation: 'Law of Constant Proportions is the law that is shown by fixed 1:8 mass ratio in water formation.',
+      },
+      {
+        question:
+          'An object is placed in front of concave mirror of focal length 12 cm at a distance of 6 cm. Its image is formed at a distance of ________ and is ________.',
+        options: ['4 cm, real', '4 cm, Virual', '12 cm, real', '12 cm, Virual'],
+        correct: 3,
+        explanation:
+          '12 cm, virtual is the correct answer because it is the distance at which the image is formed and it is virtual. Focal length, f=−12 cm, object distance, u=−6 cm, image distance, v=? 1/f = 1/v + 1/u',
+      },
+      {
+        question:
+          'Which of the following conditions will NOT favour evaporation of a liquid?',
+        options: ['High wind speed', 'High humidity', 'Low humidity', 'High temperature'],
+        correct: 1,
+        explanation: 'High humidity is the condition that will NOT favour evaporation of a liquid.',
+      },
     ]
   },
 };

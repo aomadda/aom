@@ -58,5 +58,21 @@ export const botanyQuiz = {
         explanation: 'Stamen is the correct answer because it is the male reproductive part of a flower. Stamen is a part of the flower that is responsible for the production of pollen grains.',
       },
     ],
+    'quiz-2': [
+      {
+        question:
+          'The ________ acts as a food store in plant seeds.',
+        options: ['Cotyledons', 'Ovule', 'Plumule', 'Radicle'],
+        correct: 0,
+        explanation: 'Cotyledons are the correct answer because it is the food store in plant seeds. Cotyledons are the food store in plant seeds.',
+      },
+      {
+        question:
+          'Which of the following scientists is famous as the father of Genetics?',
+        options: ['Gregor Mendel', 'Charles Darwin', 'JBS Haldane', 'Stanley Miller'],
+        correct: 0,
+        explanation: 'Gregor Mendel is the scientist who is famous as the father of Genetics.',
+      },
+    ],
   },
 };

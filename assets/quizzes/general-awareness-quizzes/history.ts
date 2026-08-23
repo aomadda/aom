@@ -1541,5 +1541,14 @@ After an eight‑month siege of Golconda Fort (January–September 1687), Mughal
       },
 
     ],
+    'quiz - 14': [
+      {
+        question:
+          'Which dynasty ruled Delhi immediately after the Khilji dynasty?',
+        options: ['Mughal', 'Sayyid', 'Tughlaq', 'Lodi'],
+        correct: 2,
+        explanation: 'Tughlaq is the correct answer because it is the dynasty that ruled Delhi immediately after the Khilji dynasty.',
+      },
+    ],
   },
 };
