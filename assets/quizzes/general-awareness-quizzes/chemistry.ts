@@ -129,6 +129,97 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Salt and Water is the correct answer because it is the product that is formed when acid reacts with a non-carbonated base in a neutralization reaction.',
       },
+      {
+        question:
+          'Which of the following acids is NOT present in fruits or vegetables?',
+        options: ['Citric acid', 'Tartaric acid', 'Oxalic acid', 'Methanoic acid'],
+        correct: 3,
+        explanation: 'Methanoic acid is the correct answer because it is not present in fruits or vegetables.',
+      },
+      {
+        question:
+          'Process by which substances like carbon dioxide or oxygen can move across the cell membrane is called ________',
+        options: ['Diffusion', 'Osmosis', 'Filtration', 'Centrifugation'],
+        correct: 0,
+        explanation: 'Diffusion is the correct answer.',
+      },
+      {
+        question:
+          'Identify the naturally occurring aluminum oxide mineral that usually forms hexagonal barrel-shaped prisms?',
+        options: ['Corundum', 'Quartz', 'Fluorite', 'Dolomite'],
+        correct: 0,
+        explanation: 'Corundum is the correct answer because it is the naturally occurring aluminum oxide mineral that usually forms hexagonal barrel-shaped prisms.',
+      },
+      {
+        question:
+          'Name the process in which a metal is attacked by substances around it such as moisture, acids, etc.',
+        options: ['Corrosion', 'Oxidation', 'Reduction', 'Rancidity'],
+        correct: 0,
+        explanation: 'Corrosion is the correct answer.',
+      },
+      {
+        question:
+          'Sometimes, when there is a lack of oxygen in our muscle cells, the pyruvate by anaerobic respiration is converted into ________',
+        options: ['Lactic acid', 'Acetic acid', 'Ethyl alcohol', 'Methyl alcohol'],
+        correct: 0,
+        explanation: 'Lactic acid is the correct answer because it is the product that is formed when the pyruvate by anaerobic respiration is converted into lactate.',
+      },
+      {
+        question:
+          'Which noble gas radioactive in nature?',
+        options: ['Radon', 'Krypton', 'Xenon', 'Argon'],
+        correct: 0,
+        explanation: 'Radon is the correct answer because it is the noble gas that is radioactive in nature.',
+      },
+      {
+        question:
+          'Which one of the following substances undergoes sublimation?',
+        options: ['Iodine', 'Sodium chloride', 'Sodium', 'Potassium'],
+        correct: 0,
+        explanation: 'Iodine is the correct answer because it is the substance that undergoes sublimation.',
+      },
+      {
+        question:
+          'Which one of the following artificial polymers is known as the artificial silk?',
+        options: ['PVC', 'Orlon', 'Rayon', 'Nylon'],
+        correct: 2,
+        explanation: 'Rayon is the correct answer.',
+      },
+      {
+        question:
+          'Name a crystal-like, white compound with strong pungent aroma and taste, which is purified by sublimation?',
+        options: ['Camphor', 'Caustic potash', 'Lye', 'Soda ash'],
+        correct: 0,
+        explanation: 'Camphor is the correct answer.',
+      },
+      {
+        question:
+          'What is the chemical name of the common kitchen ingredient named as baking soda?',
+        options: ['Sodium bicarbonate', 'Sodium carbonate', 'Sodium chloride', 'Sodium hydroxide'],
+        correct: 0,
+        explanation: 'Sodium bicarbonate is the correct answer because it is the chemical name of the common kitchen ingredient named as baking soda.',
+      },
+      {
+        question:
+          'Which of the following is used in controlling depression and hypertension?',
+        options: ['Chlordiazepoxide', 'Equanil', 'Meprobamate', 'Noradrenaline'],
+        correct: 1,
+        explanation: 'Equanil is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following methods is used to separate the colloidal particles from the solution?',
+        options: ['Filtration', 'Centrifugation', 'Decantation', 'Sedimentation'],
+        correct: 1,
+        explanation: 'Centrifugation is the correct answer.',
+      },
+      {
+        question:
+          'Which chemical element produces green colour in firework displays?',
+        options: ['Barium', 'Sodium', 'Potassium', 'Strontium'],
+        correct: 0,
+        explanation: 'Barium is the correct answer.',
+      },
     ],
   },
 };

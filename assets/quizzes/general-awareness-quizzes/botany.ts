@@ -73,6 +73,48 @@ export const botanyQuiz = {
         correct: 0,
         explanation: 'Gregor Mendel is the scientist who is famous as the father of Genetics.',
       },
+      {
+        question:
+          'Sapirogyra is an example of which of the following algae?',
+        options: ['Brown algae', 'Green algae', 'Red algae', 'White algae'],
+        correct: 1,
+        explanation: 'Green algae is the correct answer.',
+      },
+      {
+        question:
+          'What happens if the style of a flower is cut before pollination?',
+        options: ['Fertilization will not take place', 'Pollination will be faster', 'Ovules converted into seeds directly', 'Pollen tube grows faster'],
+        correct: 0,
+        explanation: 'Fertilization will not take place is the correct answer.',
+      },
+      {
+        question:
+          'Which plant harmone is responsible for promoting cell elongation in plants?',
+        options: ['Auxin', 'Cytokinin', 'Gibberellin', 'Abscisic acid'],
+        correct: 0,
+        explanation: 'Auxin is the correct answer because it is the plant hormone that is responsible for promoting cell elongation in plants.',
+      },
+      {
+        question:
+          'The instrument used for measuring the growth of plants is known as',
+        options: ['Hydrometer', 'Osmometer', 'Auxanometer', 'Celiometer'],
+        correct: 2,
+        explanation: 'Auxanometer is the correct answer because it is the instrument used for measuring the growth of plants.',
+      },
+      {
+        question:
+          'Leaves of the nettle plant secrete ________ acid which causes a painful sting on touching it?',
+        options: ['Acetic', 'Oxalic', 'Methanoic', 'Citric'],
+        correct: 2,
+        explanation: 'Methanoic acid is the correct answer.',
+      },
+      {
+        question:
+          'Pollen grains are produced in which part of the flower?',
+        options: ['Anther', 'Petals', 'Sepals', 'Stigma'],
+        correct: 0,
+        explanation: 'Anther is the correct answer.',
+      },
     ],
   },
 };

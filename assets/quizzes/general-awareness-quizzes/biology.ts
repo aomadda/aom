@@ -255,6 +255,62 @@ export const biologyQuiz = {
         correct: 1,
         explanation: 'Turner syndrome is the correct answer because it is the syndrome that is also known as congenital ovarian hypoplasia syndrome which is only found in females.',
       },
+      {
+        question:
+          'Which type of protein causes coagulation in milk during the cheese-making process?',
+        options: ['Casein', 'Gluten', 'Globulin', 'Gelatin'],
+        correct: 0,
+        explanation: 'Casein is the correct answer because it is the protein that causes coagulation in milk during the cheese-making process.',
+      },
+      {
+        question:
+          'Which of the following foods is a rich source of dietary fiber for human beings?',
+        options: ['Cheese', 'Fish', 'Oats', 'Eggs'],
+        correct: 2,
+        explanation: 'Oats is the correct answer.',
+      },
+      {
+        question:
+          'As per World Health Organization, keeping salt intake to less than _________ helps to prevent hypertension, and reduce the risk of heart disease and stroke in the adults.',
+        options: ['5 grams per day', '10 grams per day', '15 grams per day', '20 grams per day'],
+        correct: 0,
+        explanation: '5 grams per day is the correct answer',
+      },
+      {
+        question:
+          'A neuron receives nerve impulse from another neuron through which of the following structure?',
+        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
+        correct: 0,
+        explanation: 'Dendrites are the structures that receive the nerve impulse from another neuron.',
+      },
+      {
+        question:
+          'A baby receives its nutrition in the mother\'s womb through which of the following ________',
+        options: ['Uterus', 'Placenta', 'Fallopian tube', 'Amnion'],
+        correct: 1,
+        explanation: 'Placenta is the structure that receives the nutrition from the mother to the baby in the mother\'s womb.',
+      },
+      {
+        question:
+          'Which disease is caused by the deficiency of protein in our body?',
+        options: ['Marasmus', 'Kwashiorkor', 'Pellagra', 'Beriberi'],
+        correct: 1,
+        explanation: 'Kwashiorkor is the disease that is caused by the deficiency of protein in our body.',
+      },
+      {
+        question:
+          'What branch of biology focuses on the study of inheritance patterns in living organisms?',
+        options: ['Genetics', 'Biotechnology', 'Anthropology', 'Anatomy'],
+        correct: 0,
+        explanation: 'Genetics is the branch of biology that focuses on the study of inheritance patterns in living organisms.',
+      },
+      {
+        question:
+          'Tetanus disease affects which organ of the human body?',
+        options: ['Lungs', 'Nervous system', 'Liver', 'Kidneys'],
+        correct: 1,
+        explanation: 'Nervous system is the correct answer.',
+      },
     ],
   },
 };

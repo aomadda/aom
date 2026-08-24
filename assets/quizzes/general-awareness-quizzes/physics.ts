@@ -393,6 +393,55 @@ Average velocity=
         correct: 3,
         explanation: 'Perpendicular to the plane of the paper and coming out is the correct answer.',
       },
+      {
+        question:
+          'What is the name of the phenomenon that causes white light to split into seven colours as it passes through a glass prism?',
+        options: ['Diffraction', 'Refraction', 'Scattering', 'Dispersion'],
+        correct: 3,
+        explanation: 'Dispersion is the correct answer because it is the phenomenon that causes white light to split into seven colours as it passes through a glass prism.',
+      },
+      {
+        question:
+          'The technology that uses the reflection of ultrasound waves to produce image of the heart is called ________',
+        options: ['Echocardiography', 'Magnetic resonance imaging', 'Sonography', 'Computed tomography'],
+        correct: 0,
+        explanation: 'Echocardiography is the correct answer because it is the technology that uses the reflection of ultrasound waves to produce image of the heart.',
+      },
+      {
+        question:
+          'Reverberation is the persistence of sound after the source has stopped emitting sound due to ________ from multiple surfaces.',
+        options: ['Reflection', 'Refraction', 'Diffraction', 'Scattering'],
+        correct: 0,
+        explanation: 'Reflection is the correct answer.',
+      },
+      {
+        question:
+          'If the kinetic energy of a moving body is 450 joules and its velocity is 15 m/s, what is the mass of the body?',
+        options: ['10 kg', '20 kg', '15 kg', '4 kg'],
+        correct: 3,
+        explanation: '4 kg is the correct answer because it is the mass of the body. The kinetic energy of a body is given by the formula 1/2 mv^2. Here, m = ? kg, v = 15 m/s, kinetic energy = 450 J. So, 1/2 × m × (15)² = 450 J. Therefore, m = 4 kg.',
+      },
+      {
+        question:
+          'Which of the following is a practical application of the Archimedes principle in daily life?',
+        options: ['Operating a pendulum', 'Using a thermometer', 'Using a prism for light dispersion', 'Design of ships and submarines'],
+        correct: 3,
+        explanation: 'Design of ships and submarines is the correct answer because it is the practical application of the Archimedes principle in daily life.',
+      },
+      {
+        question:
+          'What happens to the speed of sound in a medium when the temperature of the medium is increased?',
+        options: ['Increases', 'Decreases', 'Remains the same', 'Becomes zero'],
+        correct: 0,
+        explanation: 'Increases is the correct answer.',
+      },
+      {
+        question:
+          'A pyranometer is a ________ measuring instrument, commonly used for climate research or monitoring  weather performance?',
+        options: ['Atmospheric pressure', 'Cloud ceiling', 'Solar irradiance', 'Weather forecast'],
+        correct: 2,
+        explanation: 'Solar irradiance is the correct answer.',
+      },
     ]
   },
 };
