@@ -249,6 +249,150 @@ export const physicsQuiz = {
         correct: 1,
         explanation: 'High humidity is the condition that will NOT favour evaporation of a liquid.',
       },
+    ],
+    'quiz-3': [
+      {
+        question:
+          'In 1995, physicists Eric Cornell and Carl Wieman created the first Bose-Einstein condensate (BEC) using which isotope?',
+        options: ['Caesium-133', 'Rubidium-87', 'Sodium-23', 'Thorium-232'],
+        correct: 1,
+        explanation: 'Rubidium-87 is the correct answer because it is the isotope that is used to create the first Bose-Einstein condensate (BEC).',
+      },
+      {
+        question:
+          'When light enters from air into a medium, its speed changes. Which of the following properties of light remains constant during this transition?',
+        options: ['Frequency', 'Wavelength', 'Amplitude', 'Phase'],
+        correct: 0,
+        explanation: 'Frequency is the correct answer because it is the property of light that remains constant during the transition from air to a medium.',
+      },
+      {
+        question:
+          'Which of the following instrument is used to detect the presence of electricity in a circuit?',
+        options: ['Ammeter', 'Voltmeter', 'Ohmmeter', 'Galvanometer'],
+        correct: 3,
+        explanation: 'Galvanometer is the correct answer because it is the instrument that is used to detect the presence of electricity in a circuit.',
+      },
+      {
+        question:
+          'If an object moves from point A to point B (50 m east) and returns to point A in 10 seconds, what is the average velocity of the object?',
+        options: ['0 m/s', '5 m/s', '10 m/s', '20 m/s'],
+        correct: 0,
+        explanation: `0 m/s is the correct answer. Average velocity = Total displacement ÷ Total time
+
+The object:
+
+Travels 50 m east from A to B.
+Returns 50 m west from B to A.
+Final position = Initial position.
+
+Therefore, displacement = 0 m.
+
+Average velocity=
+10
+0
+	​
+
+=0 m/s`,
+      },
+      {
+        question:
+          'If we shine a green light on a tree, the tree will appear ________',
+        options: ['Appear darker', 'Appear brighter', 'Appear the same as before', 'Will camouflage in the light'],
+        correct: 0,
+        explanation: 'Appear darker is the correct answer because it is the color of the tree that is reflected by the tree.',
+      },
+      {
+        question:
+          'Which of the following laws support the fact that it is difficult to fix a nail on a freely suspended wooden frame?',
+        options: ['Pascal\'s law', 'Newton\'s second law', 'Newton\'s third law', 'Newton\'s law of inertia'],
+        correct: 2,
+        explanation: 'Newton\'s third law is the correct answer because it is the law that supports the fact that it is difficult to fix a nail on a freely suspended wooden frame.',
+      },
+      {
+        question:
+          'A galvanometer can be converted into a voltmeter by connecting in with which of the following?',
+        options: ['A high resistance wire in series', 'A low resistance wire in series', 'A high resistance wire in parallel', 'A low resistance wire in parallel'],
+        correct: 0,
+        explanation: 'A high resistance wire in series is the correct answer because it is the resistance that is used to convert a galvanometer into a voltmeter.',
+      },
+      {
+        question:
+          'The direction of the magnetic field lines around a current carrying straight wire can be determined by which of the following?',
+        options: ['Right hand thumb rule', 'Fleming\'s left hand rule', 'Ohm\'s law', 'Lenz\'s law'],
+        correct: 0,
+        explanation: 'Right hand thumb rule is the correct answer because it is the rule that is used to determine the direction of the magnetic field lines around a current carrying straight wire.',
+      },
+      {
+        question:
+          'Kepler\'s law of areas, relates to ________',
+        options: ['Constant angular speed', 'Conservation of linear momentum', 'Conservation of angular momentum', 'None of the above'],
+        correct: 2,
+        explanation: 'Conservation of angular momentum is the correct answer.',
+      },
+      {
+        question:
+          'Kepler\'s third laws were extracted from the data compiled by which of the following?',
+        options: ['Tycho Brahe', 'Galileo Galilei', 'Isaac Newton', 'Maxwell'],
+        correct: 0,
+        explanation: 'Tycho Brahe is the correct answer.',
+      },
+      {
+        question:
+          'Who among the following was able to explain the photoelectric effect using Planck\'s quantum theory of electromagnetic radiation as a straight point?',
+        options: ['Albert Einstein', 'Isaac Newton', 'Max Planck', 'Faraday'],
+        correct: 0,
+        explanation: 'Albert Einstein is the correct answer because it is the person who was able to explain the photoelectric effect using Planck\'s quantum theory of electromagnetic radiation as a straight point.',
+      },
+      {
+        question:
+          'A method for measuring atmospheric pressure was first devised by which of the following?',
+        options: ['Torricelli', 'Pascal', 'Archimedes', 'Bernoulli'],
+        correct: 0,
+        explanation: 'Torricelli is the correct answer because it is the person who first devised a method for measuring atmospheric pressure.',
+      },
+      {
+        question:
+          'What is the correct dimensional formula for force?',
+        options: ['MLT^-2', 'MLT^2', 'ML^-1T^-2', 'ML^-2T^-2'],
+        correct: 0,
+        explanation: 'MLT^-2 is the correct answer because it is the dimensional formula for force.',
+      },
+      {
+        question:
+          'The gravitational force between two objects is 36 N. if the distance between the two objects is halved while their masses remain the same, what will be the new gravitational force between the two objects?',
+        options: ['18 N', '72 N', '144 N', '288 N'],
+        correct: 2,
+        explanation:
+          '144 N is the correct answer. Newton\'s law of gravitation: F = G m1 m2 / r². Force is inversely proportional to the square of the distance (F ∝ 1/r²). If the distance is halved, r\' = r/2, then F\' = G m1 m2 / (r/2)² = 4 G m1 m2 / r² = 4F. Therefore F\' = 4 × 36 N = 144 N.',
+      },
+      {
+        question:
+          'The product of force and the time for which the force acts on a body is equal to the change in ________ of the body.',
+        options: ['Momentum', 'Velocity', 'Acceleration', 'Displacement'],
+        correct: 0,
+        explanation: 'Momentum is the correct answer because it is the change in momentum of the body.',
+      },
+      {
+        question:
+          'Find the kinetic energy (in joules) of a body of mass 10 kg moving with a velocity of 4 m/s.',
+        options: ['80 J', '160 J', '320 J', '640 J'],
+        correct: 1,
+        explanation: '160 J is the correct answer because it is the kinetic energy of the body. The kinetic energy of a body is given by the formula 1/2 mv^2. Here, m = 10 kg, v = 4 m/s. So, kinetic energy = 1/2 × 10 kg × (4 m/s)² = 160 J.',
+      },
+      {
+        question:
+          'Radio waves transimitted from the earth are refelcted back to the earth by which layer of the atmosphere?',
+        options: ['Ionosphere', 'Stratosphere', 'Troposphere', 'Mesosphere'],
+        correct: 0,
+        explanation: 'Ionosphere is the correct answer because it is the layer of the atmosphere that is responsible for the reflection of radio waves back to the earth.',
+      },
+      {
+        question:
+          'Consider a conductor in the plane of the paper with current going from bottom to top. What will be the direction of the magnetic field lines to the left of the conductor?',
+        options: ['Opposite to the direction of the current', 'Perpendicular to the plane of the paper and going in', 'In the direction of the current', 'Perpendicular to the plane of the paper and coming out'],
+        correct: 3,
+        explanation: 'Perpendicular to the plane of the paper and coming out is the correct answer.',
+      },
     ]
   },
 };

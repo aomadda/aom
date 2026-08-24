@@ -234,6 +234,27 @@ export const biologyQuiz = {
         correct: 3,
         explanation: 'Robert Hooke is the scientist who coined the term "Cell" used in biology.',
       },
+      {
+        question:
+          'Which of the following is an invisible biological hazard in food?',
+        options: ['Fly', 'Molds', 'Weevils', 'Worms'],
+        correct: 1,
+        explanation: 'Molds are the invisible biological hazard in food.',
+      },
+      {
+        question:
+          'Which of the following is called the hunger harmone? Because it stimulates appetite, increases food intake and increases fat storage?',
+        options: ['Insulin', 'Ghrelin', 'Gastrin', 'Leptin'],
+        correct: 1,
+        explanation: 'Ghrelin is the hormone that is called the hunger harmone.',
+      },
+      {
+        question:
+          'Which of the following is also known as congenital ovarian hypoplasia syndrome which is only found in females?',
+        options: ['Klinefelter syndrome', 'Turner syndrome', 'Down syndrome', 'Kallmann syndrome'],
+        correct: 1,
+        explanation: 'Turner syndrome is the correct answer because it is the syndrome that is also known as congenital ovarian hypoplasia syndrome which is only found in females.',
+      },
     ],
   },
 };

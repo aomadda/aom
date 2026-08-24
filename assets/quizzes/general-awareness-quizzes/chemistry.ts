@@ -80,6 +80,55 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Hydrogen gas is the gas that is released when ethanol reacts with sodium.',
       },
+      {
+        question:
+          'In the water cycle, clouds are formed by which of the following process?',
+        options: ['Evaporation', 'Condensation', 'Precipitation', 'Sublimation'],
+        correct: 1,
+        explanation: 'Condensation is the process that is used to form clouds in the water cycle.',
+      },
+      {
+        question:
+          'The conversion between the solid and the gaseous phases of matter, with no intermediate state, is called ________',
+        options: ['Sublimation', 'Condensation', 'Precipitation', 'Evaporation'],
+        correct: 0,
+        explanation: 'Sublimation is the correct answer because it is the process that is used to convert a solid into a gas without going through the liquid phase.',
+      },
+      {
+        question:
+          'Which of the following is NOT the use of baking soda in the kitchen?',
+        options: ['As a leavening agent', 'As an ingredient in an antacid', 'For food colouring', 'In fire extinguishers'],
+        correct: 3,
+        explanation: 'For food colouring is the correct answer because it is not the use of baking soda in the kitchen.',
+      },
+      {
+        question:
+          'Which of the following isn NOT used as food preservative?',
+        options: ['Sugar', 'Sodium benzoate', 'Sodium hydrogen carbonate', 'Table salt'],
+        correct: 2,
+        explanation: 'Sodium hydrogen carbonate is the correct answer because it is not the used as food preservative.',
+      },
+      {
+        question:
+          'Which of the following is a naturally occurring soft, anhydrous mineral composed of calcium sulfate dihydrate, widely used in the manufacturing of wall boards for covering walls and ceilings?',
+        options: ['Gypsum', 'Calcite', 'Aragonite', 'Dolomite'],
+        correct: 0,
+        explanation: 'Gypsum is the correct answer because it is the mineral that is a naturally occurring soft, anhydrous mineral composed of calcium sulfate dihydrate, widely used in the manufacturing of wall boards for covering walls and ceilings.',
+      },
+      {
+        question:
+          'Which biochemist received the Nobel Prize in 1958 for his work on the structure of proteins, especially insulin?',
+        options: ['Frederick Sanger', 'Linus Pauling', 'James Watson', 'Francis Crick'],
+        correct: 0,
+        explanation: 'Frederick Sanger is the correct answer because he is the biochemist who received the Nobel Prize in 1958 for his work on the structure of proteins, especially insulin.',
+      },
+      {
+        question:
+          'When acid reacts with a non-carbonated base, what are the typical products formed in a neutralization reaction?',
+        options: ['Salt and Water', 'Carbon dioxide and Water', 'Only Salt', 'Only Water'],
+        correct: 0,
+        explanation: 'Salt and Water is the correct answer because it is the product that is formed when acid reacts with a non-carbonated base in a neutralization reaction.',
+      },
     ],
   },
 };
