@@ -576,6 +576,69 @@ Average velocity=
         correct: 1,
         explanation: 'Although Fluorine has the highest electronegativity, Chlorine has the highest electron affinity.',
       },
+      {
+        question:
+          'Using which of the following processes can one separate a solute from its solution?',
+        options: ['Evaporation', 'Distillation', 'Filtration', 'Crystallization'],
+        correct: 0,
+        explanation: 'Evaporation is the correct answer',
+      },
+      {
+        question:
+          'What is the value of the least distance of distinct vision (in cm) for a normal human being?',
+        options: ['25 cm', '30 cm', '15 cm', '20 cm'],
+        correct: 0,
+        explanation: '25 cm is the correct answer',
+      },
+      {
+        question:
+          'What is the angle between the centripetal acceleration and the tangential acceleration of a body moving in a circular path?',
+        options: ['0°', '45°', '90°', '180°'],
+        correct: 2,
+        explanation: '90° is the correct answer',
+      },
+      {
+        question:
+          'The instrument used in measuring the distance covered by vehicle is ________',
+        options: ['Odometer', 'Tachometer', 'Chronometer', 'Chronograph'],
+        correct: 0,
+        explanation: 'Odometer is the correct answer.',
+      },
+      {
+        question:
+          'For which one of the following does the centre of mass lie outside the body?',
+        options: ['Fountain pen', 'Cricket ball', 'Book', 'Ring'],
+        correct: 3,
+        explanation: 'Ring is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following electromagnetic waves has minimum wavelength?',
+        options: ['Alpha', 'Beta', 'Gamma', 'X-rays'],
+        correct: 2,
+        explanation: 'Gamma waves is the correct answer.',
+      },
+      {
+        question:
+          'What is the heat released by a heating filament rated 20 watts when it is kept on for 2 seconds?',
+        options: ['20 joules', '40 joules', '80 joules', '160 joules'],
+        correct: 1,
+        explanation: '20 joules is the correct answer because the heat released by a heating filament is given by the formula H = P × t. Here, P = 20 watts, t = 2 seconds. So, H = 20 watts × 2 seconds = 40 joules.',
+      },
+      {
+        question:
+          'Heat is transmitted from higher temperature to lower temperature by which of the following processes?',
+        options: ['Conduction', 'Convection', 'Radiation', 'All of the above'],
+        correct: 1,
+        explanation: 'Convection is the correct answer',
+      },
+      {
+        question:
+          'An air bubble in water will act like as a ________',
+        options: ['Convex mirror', 'Convex lens', 'Concave mirror', 'Concave lens'],
+        correct: 3,
+        explanation: 'Concave lens is the correct answer',
+      },
     ]
   },
 };

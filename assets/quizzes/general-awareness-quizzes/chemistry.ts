@@ -416,6 +416,216 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: '1.3 seconds is the correct answer',
       },
+      {
+        question:
+          'The solid waste is also called ________',
+        options: ['Sedge', 'Sludge', 'Scrubber', 'Scrapper'],
+        correct: 1,
+        explanation: 'Sludge is the correct answer because it is the solid waste that is also called sludge.',
+      },
+      {
+        question:
+          'Which one of the following polymers is used for making bullet proof windows?',
+        options: ['Polyethylene', 'Polycarbonate', 'Polystyrene', 'Polyamides'],
+        correct: 1,
+        explanation: 'Polycarbonate is the correct answer',
+      },
+      {
+        question:
+          'The hotness or pungency of Chili pepper is due to the presence of ________',
+        options: ['Capsaicin', 'Cucumin', 'Argenol', 'Sorbital'],
+        correct: 0,
+        explanation: 'Capsaicin is the correct answer because it is the compound that is responsible for the hotness or pungency of Chili pepper.',
+      },
+      {
+        question:
+          'Which of the following gases, released from a biogas plant is used as a fuel gas?',
+        options: ['Methane', 'Ethane', 'Butane', 'Propane'],
+        correct: 0,
+        explanation: 'Methane is the correct answer',
+      },
+      {
+        question:
+          'Which of the following acids is known as the king of acids?',
+        options: ['Sulfuric acid', 'Nitric acid', 'Hydrochloric acid', 'Hydrofluoric acid'],
+        correct: 0,
+        explanation: 'Sulfuric acid is the correct answer because it is the acid that is known as the king of acids.',
+      },
+      {
+        question:
+          'Which of the following acids is known as "Oil of Vitriol"?',
+        options: ['Hydrofluoric acid', 'Nitric acid', 'Hydrochloric acid', 'Sulfuric acid'],
+        correct: 3,
+        explanation: 'Sulfuric acid is the correct answer',
+      },
+      {
+        question:
+          'A pungent smell often present near the urinals is due to the presence of ________',
+        options: ['Chlorine', 'Urea', 'Ammonia', 'Hydrogen sulfide'],
+        correct: 2,
+        explanation: 'Ammonia is the correct answer',
+      },
+      {
+        question:
+          'Which one of the following acids is present inn sour milk?',
+        options: ['Glycolic acid', 'Lactic acid', 'Citric acid', 'Oxalic acid'],
+        correct: 1,
+        explanation: 'Lactic acid is the correct answer',
+      },
+      {
+        question:
+          'Name the compound used to prepare fireproof and water proof cloth?',
+        options: ['Calcium hydroxide', 'Potassium hydride', 'Viscose', 'Aluminum sulfate'],
+        correct: 3,
+        explanation: 'Aluminum sulfate is the correct answer',
+      },
+      {
+        question:
+          'Dried fruit like raisins when soaked in water, bulge, and get filled with water. What is the scientific name of this phenomenon?',
+        options: ['Hydration', 'Dilatation', 'Osmosis', 'Diffusion'],
+        correct: 2,
+        explanation: 'Osmosis is the correct answer',
+      },
+      {
+        question:
+          'Magnesium ribbon burns with dazzling white flame and changes into _______ powder?',
+        options: ['Brown', 'White', 'Red', 'Yellow'],
+        correct: 1,
+        explanation: 'White is the correct answer',
+      },
+      {
+        question:
+          'Barium loses ________ electrons to achieve noble gas electron configuration?',
+        options: ['2', '3', '4', '6'],
+        correct: 0,
+        explanation: '2 is the correct answer',
+      },
+      {
+        question:
+          'Which one of the following chemicals had been in use till now for making artificial clouds?',
+        options: ['Sodium Iodide', 'Silver iodide', 'Potassium chloride', 'Ammonium nitrate'],
+        correct: 1,
+        explanation: 'Silver iodide is the correct answer.',
+      },  
+      {
+        question:
+          'Which among the following noble gases has highest molar mass?',
+        options: ['Krypton', 'Neon', 'Argon', 'Xenon'],
+        correct: 3,
+        explanation: 'Xenon is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following gases is released from rice fields in the most prominent quantity?',
+        options: ['Carbon dioxide', 'Methane', 'Nitrogen dioxide', 'Sulphur dioxide'],
+        correct: 1,
+        explanation: 'Methane is the correct answer.',
+      },
+      {
+        question:
+          'What is the ratio of masses of Hydrogen and Oxygen in water?',
+        options: ['1:8', '1:16', '1:32', '1:64'],
+        correct: 0,
+        explanation: '1:8 is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following metals is used for Galvanization?',
+        options: ['Iron', 'Copper', 'Zinc', 'Aluminum'],
+        correct: 2,
+        explanation: 'Zinc is the correct answer because it is the metal that is used for Galvanization.',
+      },
+      {
+        question:
+          'Which of the following is used in making liquors, medicines and as a fuel in air crafts?',
+        options: ['Ethyl alcohol', 'Methyl alcohol', 'Dimethyl ether', 'Propyl alcohol'],
+        correct: 0,
+        explanation: 'Ethyl alcohol is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following is the main elements used in making matchboxes?',
+        options: ['Graphite', 'Sulphur', 'Zinc', 'Phosphorus'],
+        correct: 3,
+        explanation: 'Phosphorus is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is known as the "Brown Coal"?',
+        options: ['Lignite', 'Bituminous coal', 'Coke', 'Anthracite'],
+        correct: 0,
+        explanation: 'Lignite is the correct answer',
+      },
+      {
+        question:
+          'Which of the following chemical compound is called as "Pearl Ash"?',
+        options: ['Calcium carbonate', 'Potassium carbonate', 'Potassium chloride', 'Potassium bromide'],
+        correct: 1,
+        explanation: 'Potassium carbonate is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the Synthetic Rubber?',
+        options: ['Isoprene', 'Leoprene', 'Monoprene', 'Neoprene'],
+        correct: 3,
+        explanation: 'Neoprene is the correct answer',
+      },
+      {
+        question:
+          'Which of the following fuel has maximum calorific value?',
+        options: ['Coal', 'Oxygen', 'Cow dung', 'Hydrogen'],
+        correct: 3,
+        explanation: 'Hydrogen is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is known as the "Carbolic Acid"?',
+        options: ['Benzoic acid', 'Salicylic acid', 'Phenol', 'Acetic acid'],
+        correct: 2,
+        explanation: 'Phenol is the correct answer',
+      },
+      {
+        question:
+          'Which of the following substance has a pH value of 14?',
+        options: ['Sodium hydroxide', 'Sodium chloride', 'Sodium bicarbonate', 'Sodium carbonate'],
+        correct: 0,
+        explanation: 'Sodium hydroxide is the correct answer',
+      },
+      {
+        question:
+          'Which of the following molecules is joined by a double covalent bond?',
+        options: ['Carbon dioxide', 'Hydrogen', 'Oxygen', 'Sulphur dioxide'],
+        correct: 2,
+        explanation: 'Oxygen is the correct answer',
+      },
+      {
+        question:
+          'The gas usually filled in the electric buld with Argon gas is ________',
+        options: ['Nitrogen', 'Argon', 'Helium', 'Hydrogen'],
+        correct: 0,
+        explanation: 'Nitrogen is the correct answer',
+      },
+      {
+        question:
+          'Name the alkylbenzene widely used as a chemical intermediate in the production of phenol?',
+        options: ['Cumene', 'Toluene', 'Xylene', 'Styrene'],
+        correct: 0,
+        explanation: 'Cumene is the correct answer',
+      },
+      {
+        question:
+          'In what form is the energy derived from the food that we eat is stored in our body?',
+        options: ['Glycogen', 'Glucose', 'Fructose', 'Sucrose'],
+        correct: 0,
+        explanation: 'Glycogen is the correct answer',
+      },
+      {
+        question:
+          'Which of the following type of medicine is used for treating indigestion?',
+        options: ['Antacid', 'Antibiotic', 'Antifungal', 'Antipyretic'],
+        correct: 0,
+        explanation: 'Antacid is the correct answer',
+      },
     ],
   },
 };

@@ -430,6 +430,41 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Vitamin A is the correct answer because it is the vitamin that is deficient in Nyctalopia.',
       },
+      {
+        question:
+          'Early blight is a common disease seen in which of the following?',
+        options: ['Ginger', 'Potato', 'Chilli', 'Cucumber'],
+        correct: 1,
+        explanation: 'Potato is the correct answer',
+      },
+      {
+        question:
+          'Bile is stored in which of the following organ?',
+        options: ['Spleen', 'Gallbladder', 'Intestine', 'Appendix'],
+        correct: 1,
+        explanation: 'Gallbladder is the correct answer',
+      },
+      {
+        question:
+          'Which is the largest bone in the human body?',
+        options: ['Femur', 'Humerus', 'Tibia', 'Radius'],
+        correct: 0,
+        explanation: 'Femur is the correct answer',
+      },
+      {
+        question:
+          'Which of the following glands is a source of the enzyme Ptyalin?',
+        options: ['Salivary gland', 'Pancreas', 'Thyroid gland', 'Adrenal gland'],
+        correct: 0,
+        explanation: 'Salivary gland is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the largest part of the human brain?',
+        options: ['Cerebrum', 'Cerebellum', 'Medulla oblongata', 'Hypothalamus'],
+        correct: 0,
+        explanation: 'Cerebrum is the correct answer',
+      },
     ],
   },
 };
