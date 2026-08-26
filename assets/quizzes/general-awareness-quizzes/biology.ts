@@ -311,6 +311,125 @@ export const biologyQuiz = {
         correct: 1,
         explanation: 'Nervous system is the correct answer.',
       },
+      {
+        question:
+          'To get rid of pain in the stomach during indigestion, people usually take ________',
+        options: ['Gastric juice', 'Lemon juice', 'Milk of magnesia', 'None of these'],
+        correct: 2,
+        explanation: 'Milk of magnesia is the correct answer because it is the medicine that is used to get rid of pain in the stomach during indigestion.',
+      },
+      {
+        question:
+          'The enzymes responsible for final conversion of Proteins into amino acids, complex carbohydrates into glucose and fats into fatty acids and glycerol is present in ________',
+        options: ['Bile juice', 'Gastric juice', 'Intestinal juice', 'Pancreatic juice'],
+        correct: 3,
+        explanation: 'Intestinal juice is the correct answer because it is the enzyme that is responsible for the final conversion of Proteins into amino acids, complex carbohydrates into glucose and fats into fatty acids and glycerol.',
+      },
+      {
+        question:
+          'Which of the following is the major female hormone in the human body?',
+        options: ['Testosterone', 'Estrogen', 'Progesterone', 'Androgen'],
+        correct: 1,
+        explanation: 'Estrogen is the correct answer because it is the major female hormone in the human body.',
+      },
+      {
+        question:
+          'When did the Hershey-Chase experiment provide solid evidence that DNA, not protein, is the genetic material?',
+        options: ['1952', '1953', '1954', '1955'],
+        correct: 1,
+        explanation: '1953 is the correct answer because it is the year when the Hershey-Chase experiment provided solid evidence that DNA, not protein, is the genetic material.',
+      },
+      {
+        question:
+          'A neuron receives nerve impulse from another neuron through which of the following structure?',
+        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
+        correct: 0,
+        explanation: 'Dendrites are the structures that receive the nerve impulse from another neuron.',
+      },
+      {
+        question:
+          'To which part of the body does cochlea belong?',
+        options: ['Ear', 'Eye', 'Brain', 'Heart'],
+        correct: 0,
+        explanation: 'Ear is the correct answer because it is the part of the body that does cochlea belong.',
+      },
+      {
+        question:
+          'Which of the following is/are called biological catalysts?',
+        options: ['Enzymes', 'Hormones', 'Vitamins', 'Minerals'],
+        correct: 0,
+        explanation: 'Enzymes are the biological catalysts.',
+      },
+      {
+        question:
+          'Which of the following diseases is caused due to deficiency of Vitamin D?',
+        options: ['Rickets', 'Night blindness', 'Scurvy', 'Pellagra'],
+        correct: 0,
+        explanation: 'Rickets is the correct answer because it is the disease that is caused due to deficiency of Vitamin D.',
+      },
+      {
+        question:
+          'Use of regenerative cells in the process of budding is present in ________',
+        options: ['Amoeba', 'Hydra', 'Tunicate', 'Plants'],
+        correct: 1,
+        explanation: 'Hydra is the correct answer.',
+      },
+      {
+        question:
+          'Which species of the Plasmodium parasite is identified as the most deadly and a major cause of malaria-related deaths worldwide?',
+        options: ['Plasmodium falciparum', 'Plasmodium vivax', 'Plasmodium ovale', 'Plasmodium malariae'],
+        correct: 0,
+        explanation: 'Plasmodium falciparum is the correct answer.',
+      },
+      {
+        question:
+          'A cell divides to form two identical daughter cells, each having the same chromosome number as the parent cell. What type of cell division is this called?',
+        options: ['Mitosis', 'Meiosis', 'Budding', 'Binary fusion'],
+        correct: 0,
+        explanation: 'Mitosis is the correct answer.',
+      },
+      {
+        question:
+          'The sexual act is a very intimate connection of bodies and there are many diseases that can be transmitted sexually. Which of the following is caused by bacteria?',
+        options: ['Warts', 'Gonorrhea', 'Syphilis', 'Both Syphilis and Gonorrhea'],
+        correct: 3,
+        explanation: 'Both Syphilis and Gonorrhea are the correct answer.',
+      },
+      {
+        question:
+          'What are the two versions of a gene controlling a trait called?',
+        options: ['Alleles', 'Chromosomes', 'DNA', 'RNA'],
+        correct: 0,
+        explanation: 'Alleles are the correct answer because they are the two versions of a gene controlling a trait.',
+      },
+      {
+        question:
+          'Which of the following is called a motile germ cell?',
+        options: ['Sperm', 'Ovum', 'Zygote', 'Spore'],
+        correct: 0,
+        explanation: 'Sperm is the correct answer because it is the motile germ cell.',
+      },
+      {
+        question:
+          '________ softens the bone surface a the joints',
+        options: ['Cartilage', 'Areolar', 'Muscle', 'Ligament'],
+        correct: 0,
+        explanation: 'Cartilage is the correct answer because it is the tissue that softens the bone surface a the joints.',
+      },
+      {
+        question:
+          'A glucose meter is generally used as a monitor by a ________ patient?',
+        options: ['Hypoglycemic', 'Hypertensive', 'Asthmatic', 'Hyperthyroid'],
+        correct: 0,
+        explanation: 'Hypoglycemic is the correct answer because it is the patient that is generally used as a monitor by a hypoglycemic patient.',
+      },
+      {
+        question:
+          'Nyctalopia is a condition that occurs due to the deficiency of which of the following vitamins?',
+        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 0,
+        explanation: 'Vitamin A is the correct answer because it is the vitamin that is deficient in Nyctalopia.',
+      },
     ],
   },
 };

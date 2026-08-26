@@ -220,6 +220,202 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Barium is the correct answer.',
       },
+      {
+        question:
+          'How many electrons does carbon typically share when bonding with another carbon or with atoms of other elements?',
+        options: ['1', '2', '3', '4'],
+        correct: 3,
+        explanation: '4 is the correct answer.',
+      },
+      {
+        question:
+          'What is the general formula of saturated hydrocarbons?',
+        options: ['CnH2n+2', 'CnH2n', 'CnH2n-2', 'CnH2n-6'],
+        correct: 0,
+        explanation: 'CnH2n+2 is the correct answer.',
+      },
+      {
+        question:
+          'A change of state directly from the solid state to the gaseous state without passing through the liquid state is called ________',
+        options: ['Sublimation', 'Condensation', 'Precipitation', 'Evaporation'],
+        correct: 0,
+        explanation: 'Sublimation is the direct change of a substance from the solid state to the gaseous state without passing through the liquid state.',
+      },
+      {
+        question:
+          'A change of state directly from gaseous state to solid state without passing through the liquid state is called ________',
+        options: ['Sublimation', 'Deposition', 'Precipitation', 'Evaporation'],
+        correct: 1,
+        explanation: 'Deposition is the direct change of a substance from the gaseous state to the solid state without passing through the liquid state.',
+      },
+      {
+        question:
+          'Which of the following is treated with dry slaked lime to make bleaching powder?',
+        options: ['Carbon dioxide gas', 'Chlorine gas', 'Hydrogen gas', 'Water'],
+        correct: 1,
+        explanation: 'Chlorine gas is the correct answer because it is the substance that is treated with dry slaked lime to make bleaching powder.',
+      },
+      {
+        question:
+          'What is the colour of the flame when magnesium is burnt in air?',
+        options: ['White', 'Red', 'Blue', 'Green'],
+        correct: 0,
+        explanation: 'White is the correct answer because it is the colour of the flame when magnesium is burnt in air.',
+      },
+      {
+        question:
+          'In nuclear reactors, which of the following is used as a moderator?',
+        options: ['Graphite', 'Plutonium', 'Uranium', 'Thorium'],
+        correct: 0,
+        explanation: 'Graphite is the correct answer because it is the substance that is used as a moderator in nuclear reactors.',
+      },
+      {
+        question:
+          'How many naturally occurring elements did the periodic law originally reveal analogies among them?',
+        options: ['89', '91', '93', '94'],
+        correct: 3,
+        explanation: '94 is the correct answer because it is the number of naturally occurring elements that the periodic law originally revealed analogies among them.',
+      },
+      {
+        question:
+          'Which of the following is an example of emulsion?',
+        options: ['Face cream', 'Foam', 'Rubber', 'Sponge'],
+        correct: 0,
+        explanation: 'Face cream is the correct answer because it is the example of emulsion.',
+      },
+      {
+        question:
+          'Which of the following molecules is diatomic in nature?',
+        options: ['Argon', 'Oxygen', 'Helium', 'Phosphorus'],
+        correct: 1,
+        explanation: 'Oxygen is the correct answer because it is the molecule that is diatomic in nature.',
+      },
+      {
+        question:
+          'How many water molecules are present in one molecule of washing soda?',
+        options: ['8', '10', '7', '9'],
+        correct: 1,
+        explanation: '10 is the correct answer because it is the number of water molecules that are present in one molecule of washing soda.',
+      },
+      {
+        question:
+          'Which of the following synthetic drugs acts as an antihistamine?',
+        options: ['Brompheniramine', 'Furacin', 'Iodoform', 'Cetirizine'],
+        correct: 0,
+        explanation: 'Brompheniramine is the correct answer because it is the synthetic drug that acts as an antihistamine.',
+      },
+      {
+        question:
+          'The IUPAC name of the compound with the molecular formula C3H8 is ________',
+        options: ['Propane', 'Propylene', 'Propane', 'Propene'],
+        correct: 0,
+        explanation: 'Propane is the correct answer because it is the IUPAC name of the compound with the molecular formula C3H8. The IUPAC name of a compound is the name that is given to a compound according to the International Union of Pure and Applied Chemistry (IUPAC) rules.',
+      },
+      {
+        question:
+          'Which of the following is the general formula for alkanes?',
+        options: ['CnH2n+2', 'CnH2n', 'CnH2n-2', 'CnH2n-6'],
+        correct: 0,
+        explanation: 'CnH2n+2 is the correct formula for the general formula for alkanes. Alkanes are hydrocarbons that contain only single bonds between carbon atoms.',
+      },
+      {
+        question:
+          'Unwanted impurities in ore called ________',
+        options: ['Alloy', 'Flux', 'Gangue', 'Slag'],
+        correct: 2,
+        explanation: 'Gangue is the correct answer because it is the unwanted impurities in ore called gangue.',
+      },
+      {
+        question:
+          'Which of the following process used in food processing kills harmful microorganisms?',
+        options: ['Sterilization', 'Pasteurization', 'Autoclaving', 'Boiling'],
+        correct: 1,
+        explanation: 'Pasteurization is the correct answer because it is the process that is used in food processing to kill harmful microorganisms.',
+      },
+      {
+        question:
+          'Which of the following acids is found in nettle stings?',
+        options: ['Citric acid', 'Tartaric acid', 'Oxalic acid', 'Methanoic acid'],
+        correct: 3,
+        explanation: 'Methanoic acid is the correct answer because it is the acid that is found in nettle stings.',
+      },
+      {
+        question:
+          'Which of the following is the primary constituent of a pearl?',
+        options: ['Calcium carbonate', 'Calcium phosphate', 'Calcium sulfate', 'Calcium silicate'],
+        correct: 0,
+        explanation: 'Calcium carbonate is the correct answer.',
+      },
+      {
+        question:
+          'Which metal is placed at the top of the reactivity series?',
+        options: ['Copper', 'Iron', 'Potassium', 'Silver'],
+        correct: 2,
+        explanation: 'Potassium is the correct answer',
+      },
+      {
+        question:
+          'Oxalic acid is naturally present in which of the following kitchen ingredients?',
+        options: ['Lemon', 'Milk', 'Spinach', 'Vinegar'],
+        correct: 2,
+        explanation: 'Spinach is the correct answer.',
+      },
+      {
+        question:
+          'The hydrocarbons which have a double bond between two carbon atoms are called ________',
+        options: ['Inorganic compounds', 'Natural compounds', 'Saturated hydrocarbons', 'Unsaturated hydrocarbons'],
+        correct: 3,
+        explanation: 'Unsaturated hydrocarbons are the hydrocarbons which have a double bond between two carbon atoms.',
+      },
+      {
+        question:
+          'Which of the following is NOT a natural indicator for acids or bases?',
+        options: ['Litmus', 'Phenolphthalein', 'Methyl orange', 'Bromothymol blue'],
+        correct: 3,
+        explanation: 'Methyl orange is the correct answer because it is not a natural indicator for acids or bases.',
+      },
+      {
+        question:
+          'What is formed when sodium sulfate reacts with barium chloride in a double displacement reaction?',
+        options: ['Sodium chloride', 'Barium sulfate', 'Sodium chloride and barium sulfate', 'Sodium sulfate and barium chloride'],
+        correct: 2,
+        explanation: 'Barium sulfate is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following artificial sweeteners appearance and taste like sugar?',
+        options: ['Saccharin', 'Aspartame', 'Sucralose', 'Alitame'],
+        correct: 2,
+        explanation: 'Sucralose is the correct answer because it is the artificial sweetener that has an appearance and taste like sugar.',
+      },
+      {
+        question:
+          'In cooking oils, the antioxidant added to prevent rancidity is ________',
+        options: ['Ascorbic acid', 'BHT', 'Tocopherol', 'TBHQ'],
+        correct: 1,
+        explanation: 'BHT is the correct answer',
+      },
+      {
+        question:
+          'The gas used in discharge tubes for optical decoration and advertising is ________',
+        options: ['Ammonia', 'Neon', 'Carbon dioxide', 'Sulphur dioxide'],
+        correct: 1,
+        explanation: 'Neon is the correct answer',
+      },
+      {
+        question:
+          'The radio isotope used in the detection of cancer is ________',
+        options: ['Arsenic-74', 'Cobalt-60', 'Carbon-14', 'Sodium-24'],
+        correct: 0,
+        explanation: 'Arsenic-74 is the correct answer',
+      },
+      {
+        question:
+          'The time required for moonlight to reach the earth is ________',
+        options: ['1.3 seconds', '2.56 seconds', '3.84 seconds', '1.82 seconds'],
+        correct: 0,
+        explanation: '1.3 seconds is the correct answer',
+      },
     ],
   },
 };

@@ -442,6 +442,140 @@ Average velocity=
         correct: 2,
         explanation: 'Solar irradiance is the correct answer.',
       },
+      {
+        question:
+          'In which year did Galileo Galilei describe the regular, swinging motion of a pendulum by the action of gravity and acquired momentum?',
+        options: ['1602', '1603', '1604', '1605'],
+        correct: 0,
+        explanation: '1602 is the correct answer because it is the year in which Galileo Galilei described the regular, swinging motion of a pendulum by the action of gravity and acquired momentum.',
+      },
+      {
+        question:
+          'When white light is passed through a glass prism, it is split into several colours. This is due to ________',
+        options: ['Refraction', 'Reflection', 'Dispersion', 'Scattering'],
+        correct: 2,
+        explanation: 'Dispersion is the correct answer.',
+      },
+      {
+        question:
+          'Where does the center of curvature of a concave mirror lie?',
+        options: ['In front of the mirror', 'Behind the mirror', 'At the center of the mirror', 'At the focal point'],
+        correct: 0,
+        explanation: 'In front of the mirror is the correct answer.',
+      },
+      {
+        question:
+          'The work done by a constant force acting on a body is ________',
+        options: ['Always zero', 'Always positive', 'Always negative', 'Can be positive or negative'],
+        correct: 3,
+        explanation: 'Can be positive or negative is the correct answer because the work done by a constant force acting on a body can be positive or negative depending on the direction of the force and the direction of the displacement.',
+      },
+      {
+        question:
+          'The electrical equivalent of one horse power is equal to ________ in the International System of Units (SI)?',
+        options: ['746 watts', '746 joules', '746 volts', '746 amperes'],
+        correct: 0,
+        explanation: '746 watts is the correct answer because it is the electrical equivalent of one horse power in the International System of Units (SI).',
+      },
+      {
+        question:
+          'An elecric bulb is connected to a 220 V generator. The current generated through the bulb is 0.5 A. What is the power of the bulb?',
+        options: ['110 watts', '220 watts', '440 watts', '880 watts'],
+        correct: 0,
+        explanation: '110 watts is the correct answer because it is the power of the bulb. The power of a bulb is given by the formula P = V × I. Here, V = 220 V, I = 0.5 A. So, P = 220 V × 0.5 A = 110 watts.',
+      },
+      {
+        question:
+          'As the temperature increases, the kinetic energy of particles in a matter ________',
+        options: ['Increases', 'Decreases', 'Remains the same', 'Becomes zero'],
+        correct: 0,
+        explanation: 'Increases is the correct answer because as the temperature increases, the kinetic energy of particles in a matter increases.',
+      },
+      {
+        question:
+          'What happens to the kinetic energy of a moving object if its velocity is tripled?',
+        options: ['Increases by 3 times', 'Increases by 9 times', 'Decreases by 3 times', 'Decreases by 9 times'],
+        correct: 1,
+        explanation: 'Increases by 9 times is the correct answer because the kinetic energy of a moving object is directly proportional to the square of its velocity. If the velocity is tripled, the kinetic energy will be increased by 9 times. Kinetic energy = 1/2 mv^2. If the velocity is tripled, the kinetic energy will be increased by 9 times. Kinetic energy = 1/2 m(3v)^2 = 1/2 m(9v^2) = 9(1/2 mv^2) = 9Kinetic energy.',
+      },
+      {
+        question:
+          'Which of the following principles is responsible for the operation of spray bottles, such as those used for household cleaners or perfumes?',
+        options: ['Bernoulli\'s principle', 'Pascal\'s law', 'Archimedes\' principle', 'Stokes\'s law'],
+        correct: 0,
+        explanation: 'Bernoulli\'s principle is the correct answer because it is the principle that is responsible for the operation of spray bottles, such as those used for household cleaners or perfumes.',
+      },
+      {
+        question:
+          'If a wire is stretched to quadruple its length without changing its area, what will happen to its resistivity?',
+        options: ['It halves', 'It doubles', 'It quadruples', 'It remains the same'],
+        correct: 3,
+        explanation: 'It remains the same is the correct answer.',
+      },
+      {
+        question:
+          'If a resistor of 15 ohms carries a current of 2.5 amperes for 12 seconds, the heat produced is ________',
+        options: ['900 joules', '1125 joules', '1500 joules', '1800 joules'],
+        correct: 1,
+        explanation:
+          '1125 joules is the correct answer because the heat produced is given by the formula H = I²Rt. Here, I = 2.5 A, R = 15 ohms, t = 12 seconds. So, H = (2.5)² × 15 × 12 = 6.25 × 15 × 12 = 1125 J.',
+      },
+      {
+        question:
+          'If a conductor follows Ohm\'s law, then the graph between voltage and current is ________',
+        options: ['A straight line', 'A curve', 'A parabola', 'A hyperbola'],
+        correct: 0,
+        explanation: 'A straight line is the correct answer because it is the graph that is obtained when a conductor follows Ohm\'s law.',
+      },
+      {
+        question:
+          'If a 5 newton force is applied to an object and it displaces it by 3 meters from its initial position, then what is the work done by the force?',
+        options: ['15 joules', '30 joules', '45 joules', '60 joules'],
+        correct: 0,
+        explanation: '45 joules is the correct answer because the work done by the force is given by the formula W = F × d. Here, F = 5 N, d = 3 m. So, W = 5 N × 3 m = 15 joules.',
+      },
+      {
+        question:
+          'Which state of matter has the highest kinetic energy of particles?',
+        options: ['Solid', 'Liquid', 'Gas', 'Plasma'],
+        correct: 2,
+        explanation: 'Gas is the correct answer because it is the state of matter that has the highest kinetic energy of particles.',
+      },
+      {
+        question:
+          'Which of the following correctly describes the sum of kinetic energy and potential energy of an object?',
+        options: ['Total chemical energy', 'Total mechanical energy', 'Total thermal energy', 'Total nuclear energy'],
+        correct: 1,
+        explanation: 'Total mechanical energy is the correct answer.',
+      },
+      {
+        question:
+          'An object is placed 12 cm in front of a convex mirror with a focal length of 8 cm. What is the distance of the image from the mirror?',
+        options: ['4.8 cm', '8 cm', '12 cm', '16.8 cm'],
+        correct: 0,
+        explanation: '4.8 cm is the correct answer because the distance of the image from the mirror is given by the formula 1/f = 1/v + 1/u. Here, f = 8 cm, u = 12 cm. So, 1/8 = 1/v + 1/12. Therefore, v = 4.8  cm.',
+      },
+      {
+        question:
+          'Which of the following works on the basis of conservation of linear momentum?',
+        options: ['Aeroplane', 'Helicopter', 'Jet engine', 'Rocket'],
+        correct: 3,
+        explanation: 'Rocket is the correct answer',
+      },
+      {
+        question:
+          'Which one of the following types of mirrors is used to see the traffic behind the car?',
+        options: ['Convex mirror', 'Concave mirror', 'Plane mirror', 'Spherical mirror'],
+        correct: 0,
+        explanation: 'Convex mirror is the correct answer because it is the mirror that is used to see the traffic behind the car.',
+      },
+      {
+        question:
+          'Which among the following has highest electron affinity?',
+        options: ['Fluorine', 'Chlorine', 'Helium', 'Xenon'],
+        correct: 1,
+        explanation: 'Although Fluorine has the highest electronegativity, Chlorine has the highest electron affinity.',
+      },
     ]
   },
 };

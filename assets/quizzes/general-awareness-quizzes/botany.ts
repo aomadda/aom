@@ -111,9 +111,44 @@ export const botanyQuiz = {
       {
         question:
           'Pollen grains are produced in which part of the flower?',
-        options: ['Anther', 'Petals', 'Sepals', 'Stigma'],
+        options: ['Anthers', 'Petals', 'Sepals', 'Stigma'],
         correct: 0,
-        explanation: 'Anther is the correct answer.',
+        explanation: 'Anthers is the correct answer.',
+      },
+      {
+        question:
+          'The red colour of tomatoes is due to the presence of which of the following?',
+        options: ['Alizarin', 'Beta carotene', 'Limonene', 'Lycopene'],
+        correct: 3,
+        explanation: 'Lycopene is the correct answer.',
+      },
+      {
+        question:
+          'Which floral whorl protects the flower in the bud stage?',
+        options: ['Androecium', 'Gynoecium', 'Calyx', 'Corolla'],
+        correct: 2,
+        explanation: 'Calyx is the correct answer because it is the floral whorl that protects the flower in the bud stage.',
+      },
+      {
+        question:
+          'After fertilization, which of the following develops a tough coat, is gradually converted into a seed and the zygote divides several times to form an embryo within it?',
+        options: ['Ovule', 'Ovary', 'Pistil', 'Gynoecium'],
+        correct: 0,
+        explanation: 'Ovule is the correct answer.',
+      },
+      {
+        question:
+          'Pollen grains are transferred to which part of the pistil during pollination?',
+        options: ['Stigma', 'Style', 'Ovule', 'Pistil'],
+        correct: 0,
+        explanation: 'Stigma is the correct answer because it is the part of the pistil to which the pollen grains are transferred during pollination.',
+      },
+      {
+        question:
+          'Name the plant in which seed exists but fruit does not?',
+        options: ['Almond', 'Cycas', 'Groundnut', 'Sugar cane'],
+        correct: 1,
+        explanation: 'Cycas is the correct answer because it is the plant in which seed exists but fruit does not.',
       },
     ],
   },
