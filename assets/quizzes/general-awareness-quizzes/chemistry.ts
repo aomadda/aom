@@ -626,6 +626,27 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Antacid is the correct answer',
       },
+      {
+        question:
+          'Who conducted X-ray spectroscopic study of a large number elements and showed that the frequency of X-rays emitted by an element is related to the atomic number, Z, rather than the atomic mass?',
+        options: ['Henry Moseley', 'Niels Bohr', 'James Chadwick', 'Ernest Rutherford'],
+        correct: 0,
+        explanation: 'Henry Moseley is the correct answer',
+      },
+      {
+        question:
+          'The "blue baby" pollution disease is due to the excessive presence of which of the following in drinking water?',
+        options: ['Nitrate', 'Sulphate', 'Chloride', 'Fluoride'],
+        correct: 0,
+        explanation: 'Calcium carbonate is the correct answer',
+      },
+      {
+        question:
+          'The hardness of water is expressed in terms of ________',
+        options: ['Parts per million', 'Parts per billion', 'Parts per trillion', 'Parts per quadrillion'],
+        correct: 0,
+        explanation: 'Parts per million is the correct answer',
+      },
     ],
   },
 };

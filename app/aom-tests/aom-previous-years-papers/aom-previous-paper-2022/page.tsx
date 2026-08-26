@@ -1,6 +1,5 @@
 'use client'
 
-import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
 import {
   bindQuizSessionFlush,
   clearLocalQuizSession,
@@ -15,26 +14,21 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link'
-import { aomPreviousPapersQuizzes } from '@/assets/quizzes/aom-previous-papers/aom-previous-papers-2026/aom-previous-papers-2026'
+import { aomPreviousPaper2022 } from '@/assets/quizzes/aom-previous-papers/aom-previous-paper-2022/aom-previous-paper-2022'
 
-const CATEGORY_ID = 'aom-previous-papers-2026'
-const CATEGORY_TITLE = 'AOM Previous Papers 2026'
-const CATEGORY_COLOR = 'from-emerald-500 to-teal-600'
-const CATEGORY_QUIZZES = aomPreviousPapersQuizzes.quizzes
-const RESULTS_STORAGE_KEY = 'aom2026_quiz_results'
-const SESSION_STORAGE_KEY = 'aom2026_quiz_session'
-const DEFAULT_QUIZ_ID = 'professional-subject'
-
-const QUIZ_LABELS: Record<string, string> = {
-  'professional-subject': 'Professional Subject',
-  'gk-rajabhasha': 'GK & Rajabhasha',
-  'establishment-finance-rules': 'Establishment & Financial Rules',
+type QuizQuestion = {
+  question: string
+  options: string[]
+  correct: number
+  explanation?: string
 }
 
-type StoredResults = Record<string, { answers: (number | null)[] }>
+const QUIZ_ID = 'aom-previous-paper-2022'
+const CATEGORY_ID = 'aom-previous-paper-2022'
+const QUIZ_TITLE = 'AOM Previous Paper 2022'
+const SESSION_STORAGE_KEY = 'aom_previous_paper_2022_session'
 
 type QuizSession = {
-  quizId: string
   currentQuestion: number
   userAnswers: (number | null)[]
   endsAt: number
@@ -52,40 +46,9 @@ function formatTimer(totalSeconds: number) {
   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 }
 
-function formatQuizTitle(quizId: string) {
-  if (QUIZ_LABELS[quizId]) return QUIZ_LABELS[quizId]
-  return quizId
-    .split('-')
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(' ')
-}
-
-function loadStoredResults(): StoredResults {
-  if (typeof window === 'undefined') return {}
-  try {
-    const raw = window.localStorage.getItem(scopedQuizStorageKey(RESULTS_STORAGE_KEY))
-    if (!raw) return {}
-    const parsed = JSON.parse(raw) as StoredResults
-    return parsed && typeof parsed === 'object' ? parsed : {}
-  } catch {
-    return {}
-  }
-}
-
-function saveStoredResult(quizId: string, answers: (number | null)[]) {
-  if (typeof window === 'undefined') return
-  try {
-    const existing = loadStoredResults()
-    existing[quizId] = { answers }
-    window.localStorage.setItem(scopedQuizStorageKey(RESULTS_STORAGE_KEY), JSON.stringify(existing))
-  } catch (error) {
-    console.error('Failed to save quiz results:', error)
-  }
-}
-
 function loadQuizSession(): QuizSession | null {
   const parsed = readLocalQuizSession(SESSION_STORAGE_KEY)
-  if (!parsed || typeof parsed.quizId !== 'string') return null
+  if (!parsed) return null
   return parsed as QuizSession
 }
 
@@ -93,17 +56,17 @@ function saveQuizSession(session: QuizSession) {
   void persistQuizSession({
     storageKey: SESSION_STORAGE_KEY,
     categoryId: CATEGORY_ID,
-    quizId: session.quizId,
+    quizId: QUIZ_ID,
     session,
   })
 }
 
-function clearQuizSession(quizId?: string) {
+function clearQuizSession() {
   clearLocalQuizSession(SESSION_STORAGE_KEY)
-  void clearServerQuizSession(CATEGORY_ID, quizId)
+  void clearServerQuizSession(CATEGORY_ID, QUIZ_ID)
 }
 
-export default function AomPreviousPapers2026Quiz() {
+export default function AomPreviousPaper2022Quiz() {
   const quizStartTimeRef = useRef<number>(getTimestamp())
   const endsAtRef = useRef<number>(0)
   const finishedRef = useRef(false)
@@ -111,28 +74,94 @@ export default function AomPreviousPapers2026Quiz() {
   const sessionRestoredRef = useRef(false)
   const router = useRouter()
 
-  const [currentQuizId, setCurrentQuizId] = useState(DEFAULT_QUIZ_ID)
-  const questions = useMemo(() => {
-    const currentQuiz = CATEGORY_QUIZZES[currentQuizId as keyof typeof CATEGORY_QUIZZES]
-    return currentQuiz || []
-  }, [currentQuizId])
+  const questions = useMemo(
+    () => (aomPreviousPaper2022.quizzes[QUIZ_ID] || []) as QuizQuestion[],
+    [],
+  )
 
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [completedQuizzes, setCompletedQuizzes] = useState<string[]>([])
-  const [loadingProgress, setLoadingProgress] = useState(true)
-  const [sessionReady, setSessionReady] = useState(false)
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
     () => new Array(questions.length).fill(null),
   )
   const [showResults, setShowResults] = useState(false)
-  const [timeLeft, setTimeLeft] = useState(() => getQuizDurationSeconds(questions.length || 1))
-  const [storedResults, setStoredResults] = useState<StoredResults>(() => loadStoredResults())
-  const [activeSessionQuizId, setActiveSessionQuizId] = useState<string | null>(null)
+  const [completed, setCompleted] = useState(false)
+  const [loadingProgress, setLoadingProgress] = useState(true)
+  const [sessionReady, setSessionReady] = useState(false)
   const [quizActive, setQuizActive] = useState(false)
+  const [hasResumeSession, setHasResumeSession] = useState(false)
+  const [timeLeft, setTimeLeft] = useState(() => getQuizDurationSeconds(questions.length || 1))
 
   useEffect(() => {
     userAnswersRef.current = userAnswers
   }, [userAnswers])
+
+  const startFreshQuiz = useCallback(() => {
+    const startedAt = getTimestamp()
+    const endsAt = Date.now() + getQuizDurationSeconds(questions.length) * 1000
+    finishedRef.current = false
+    quizStartTimeRef.current = startedAt
+    endsAtRef.current = endsAt
+    setCurrentQuestion(0)
+    setUserAnswers(new Array(questions.length).fill(null))
+    setShowResults(false)
+    setTimeLeft(getQuizDurationSeconds(questions.length))
+    setQuizActive(true)
+    setHasResumeSession(false)
+    saveQuizSession({
+      currentQuestion: 0,
+      userAnswers: new Array(questions.length).fill(null),
+      endsAt,
+      startedAt,
+    })
+  }, [questions.length])
+
+  const updateUserProgress = useCallback(
+    async (finalScore: number, correctAnswers: number) => {
+      try {
+        const studyTime = Math.round((getTimestamp() - quizStartTimeRef.current) / 1000 / 60)
+
+        const response = await fetch('/api/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            categoryId: CATEGORY_ID,
+            quizId: QUIZ_ID,
+            quizTitle: QUIZ_TITLE,
+            score: finalScore,
+            totalQuestions: questions.length,
+            correctAnswers,
+            studyTime,
+          }),
+        })
+
+        if (response.ok) {
+          setCompleted(true)
+        } else {
+          console.error('Failed to update progress')
+        }
+      } catch (error) {
+        console.error('Error updating progress:', error)
+      }
+    },
+    [questions.length],
+  )
+
+  const finishQuiz = useCallback(
+    (answers: (number | null)[]) => {
+      if (finishedRef.current) return
+      finishedRef.current = true
+      clearQuizSession()
+      setShowResults(true)
+      setQuizActive(false)
+      setHasResumeSession(false)
+      const correctAnswers = answers.filter(
+        (answer, index) => answer === questions[index].correct,
+      ).length
+      const finalScore = Math.round((correctAnswers / questions.length) * 100)
+      updateUserProgress(finalScore, correctAnswers)
+    },
+    [questions, updateUserProgress],
+  )
 
   useEffect(() => {
     const fetchUserProgress = async () => {
@@ -141,14 +170,12 @@ export default function AomPreviousPapers2026Quiz() {
         const response = await fetch('/api/progress')
         if (response.ok) {
           const data = await response.json()
-          const categoryCompletedQuizzes =
-            data.recentActivity
-              ?.filter(
-                (quiz: { categoryId: string; quizId: string }) =>
-                  quiz.categoryId === CATEGORY_ID,
-              )
-              ?.map((quiz: { quizId: string }) => quiz.quizId) || []
-          setCompletedQuizzes(categoryCompletedQuizzes)
+          const done =
+            data.recentActivity?.some(
+              (quiz: { categoryId: string; quizId: string }) =>
+                quiz.categoryId === CATEGORY_ID && quiz.quizId === QUIZ_ID,
+            ) || false
+          setCompleted(done)
         }
       } catch (error) {
         console.error('Error fetching progress:', error)
@@ -160,163 +187,59 @@ export default function AomPreviousPapers2026Quiz() {
     fetchUserProgress()
   }, [])
 
-  const applySession = useCallback((session: QuizSession) => {
-    const quizQuestions = CATEGORY_QUIZZES[session.quizId as keyof typeof CATEGORY_QUIZZES] || []
-    if (quizQuestions.length === 0 || session.userAnswers.length !== quizQuestions.length) {
-      clearQuizSession()
-      return false
-    }
-
-    const safeQuestion = Math.min(
-      Math.max(0, session.currentQuestion),
-      Math.max(0, quizQuestions.length - 1),
-    )
-    const remaining = Math.max(0, Math.floor((session.endsAt - Date.now()) / 1000))
-
-    finishedRef.current = false
-    quizStartTimeRef.current = session.startedAt
-    endsAtRef.current = session.endsAt
-    setCurrentQuizId(session.quizId)
-    setCurrentQuestion(safeQuestion)
-    setUserAnswers(session.userAnswers)
-    setTimeLeft(remaining)
-    setShowResults(false)
-    setActiveSessionQuizId(session.quizId)
-    setQuizActive(true)
-    return true
-  }, [])
-
-  const startFreshQuiz = useCallback((quizId: string, questionCount: number) => {
-    const startedAt = getTimestamp()
-    const endsAt = Date.now() + getQuizDurationSeconds(questionCount) * 1000
-    finishedRef.current = false
-    quizStartTimeRef.current = startedAt
-    endsAtRef.current = endsAt
-    setCurrentQuizId(quizId)
-    setCurrentQuestion(0)
-    setUserAnswers(new Array(questionCount).fill(null))
-    setShowResults(false)
-    setTimeLeft(getQuizDurationSeconds(questionCount))
-    setActiveSessionQuizId(quizId)
-    setQuizActive(true)
-    saveQuizSession({
-      quizId,
-      currentQuestion: 0,
-      userAnswers: new Array(questionCount).fill(null),
-      endsAt,
-      startedAt,
-    })
-  }, [])
-
   useEffect(() => {
-    if (loadingProgress || sessionRestoredRef.current) return
+    if (loadingProgress || sessionRestoredRef.current || questions.length === 0) return
     sessionRestoredRef.current = true
 
-    const completed = completedQuizzes
+    const totalQuestions = questions.length
+    const alreadyCompleted = completed
 
     ;(async () => {
       const localSession = loadQuizSession()
-      const { session: serverSession, sessions } = await fetchServerQuizSessions(CATEGORY_ID)
-      const candidate =
-        (localSession && !completed.includes(localSession.quizId) ? localSession : null) ||
-        (serverSession &&
-        typeof serverSession.quizId === 'string' &&
-        !completed.includes(serverSession.quizId)
-          ? (serverSession as QuizSession)
+      const { session: serverSession } = await fetchServerQuizSessions(CATEGORY_ID, QUIZ_ID)
+      const session =
+        (localSession && localSession.userAnswers.length === totalQuestions
+          ? localSession
           : null) ||
-        (sessions.find(
-          (row) => typeof row.quizId === 'string' && !completed.includes(row.quizId as string),
-        ) as QuizSession | undefined) ||
-        null
+        (serverSession && serverSession.userAnswers.length === totalQuestions
+          ? (serverSession as QuizSession)
+          : null)
 
-      if (candidate?.quizId) {
-        const quizQuestions =
-          CATEGORY_QUIZZES[candidate.quizId as keyof typeof CATEGORY_QUIZZES] || []
-        if (quizQuestions.length > 0 && candidate.userAnswers.length === quizQuestions.length) {
-          setCurrentQuizId(candidate.quizId)
-          setCurrentQuestion(
-            Math.min(candidate.currentQuestion, Math.max(0, quizQuestions.length - 1)),
-          )
-          setUserAnswers(candidate.userAnswers)
-          quizStartTimeRef.current = candidate.startedAt
-          endsAtRef.current = candidate.endsAt
-          setTimeLeft(Math.max(0, Math.floor((candidate.endsAt - Date.now()) / 1000)))
-          setActiveSessionQuizId(candidate.quizId)
-          setQuizActive(false)
-          saveQuizSession(candidate)
-        } else {
-          clearQuizSession(candidate.quizId)
-          setActiveSessionQuizId(null)
-          setQuizActive(false)
-        }
-      } else {
-        const firstIncomplete =
-          Object.keys(CATEGORY_QUIZZES).find((id) => !completed.includes(id)) || DEFAULT_QUIZ_ID
-        setCurrentQuizId(firstIncomplete)
-        setActiveSessionQuizId(null)
+      if (alreadyCompleted) {
+        if (session) clearQuizSession()
+        finishedRef.current = true
+        setShowResults(false)
+        setCompleted(true)
         setQuizActive(false)
+        setHasResumeSession(false)
+      } else if (session && session.userAnswers.length === totalQuestions) {
+        const safeQuestion = Math.min(
+          Math.max(0, session.currentQuestion),
+          Math.max(0, totalQuestions - 1),
+        )
+        const remaining = Math.max(0, Math.floor((session.endsAt - Date.now()) / 1000))
+        finishedRef.current = false
+        quizStartTimeRef.current = session.startedAt
+        endsAtRef.current = session.endsAt
+        setCurrentQuestion(safeQuestion)
+        setUserAnswers(session.userAnswers)
+        setTimeLeft(remaining)
+        setShowResults(false)
+        setQuizActive(false)
+        setHasResumeSession(true)
+        saveQuizSession(session)
+      } else {
+        if (session) clearQuizSession()
+        setQuizActive(false)
+        setHasResumeSession(false)
       }
 
       setSessionReady(true)
     })()
-  }, [loadingProgress, completedQuizzes])
-
-  const updateUserProgress = useCallback(
-    async (finalScore: number, correctAnswers: number, quizId: string, total: number) => {
-      try {
-        const studyTime = Math.round((getTimestamp() - quizStartTimeRef.current) / 1000 / 60)
-        const quizTitle = `${CATEGORY_TITLE} — ${formatQuizTitle(quizId)}`
-
-        const response = await fetch('/api/progress', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            categoryId: CATEGORY_ID,
-            quizId,
-            quizTitle,
-            score: finalScore,
-            totalQuestions: total,
-            correctAnswers,
-            studyTime,
-          }),
-        })
-
-        if (!response.ok) {
-          console.error('Failed to update progress')
-        } else {
-          setCompletedQuizzes((prev) => [...new Set([...prev, quizId])])
-        }
-      } catch (error) {
-        console.error('Error updating progress:', error)
-      }
-    },
-    [],
-  )
-
-  const finishQuiz = useCallback(
-    (answers: (number | null)[]) => {
-      if (finishedRef.current || questions.length === 0) return
-      finishedRef.current = true
-      saveStoredResult(currentQuizId, answers)
-      setStoredResults(loadStoredResults())
-      setCompletedQuizzes((prev) => [...new Set([...prev, currentQuizId])])
-      setShowResults(true)
-      setQuizActive(false)
-      setActiveSessionQuizId(null)
-      clearQuizSession(currentQuizId)
-      const correctAnswers = answers.filter(
-        (answer, index) => answer === questions[index].correct,
-      ).length
-      const finalScore = Math.round((correctAnswers / questions.length) * 100)
-      updateUserProgress(finalScore, correctAnswers, currentQuizId, questions.length)
-    },
-    [questions, currentQuizId, updateUserProgress],
-  )
-
-  const isCurrentCompleted = completedQuizzes.includes(currentQuizId)
+  }, [loadingProgress, completed, questions.length])
 
   useEffect(() => {
-    if (!sessionReady || !quizActive || showResults || questions.length === 0 || isCurrentCompleted) return
+    if (!sessionReady || !quizActive || showResults || questions.length === 0) return
     if (!endsAtRef.current) {
       endsAtRef.current = Date.now() + getQuizDurationSeconds(questions.length) * 1000
     }
@@ -329,7 +252,7 @@ export default function AomPreviousPapers2026Quiz() {
     tick()
     const interval = window.setInterval(tick, 1000)
     return () => window.clearInterval(interval)
-  }, [sessionReady, quizActive, showResults, questions.length, currentQuizId, isCurrentCompleted])
+  }, [sessionReady, quizActive, showResults, questions.length])
 
   useEffect(() => {
     if (
@@ -337,68 +260,38 @@ export default function AomPreviousPapers2026Quiz() {
       quizActive &&
       timeLeft === 0 &&
       !showResults &&
-      !isCurrentCompleted &&
       questions.length > 0 &&
       endsAtRef.current > 0
     ) {
       finishQuiz(userAnswersRef.current)
     }
-  }, [sessionReady, quizActive, timeLeft, showResults, isCurrentCompleted, questions.length, finishQuiz])
+  }, [sessionReady, quizActive, timeLeft, showResults, questions.length, finishQuiz])
 
   useEffect(() => {
-    if (!sessionReady || !quizActive || showResults || isCurrentCompleted || questions.length === 0) return
+    if (!sessionReady || !quizActive || showResults || questions.length === 0) return
     if (userAnswers.length !== questions.length) return
 
     saveQuizSession({
-      quizId: currentQuizId,
       currentQuestion,
       userAnswers,
       endsAt: endsAtRef.current,
       startedAt: quizStartTimeRef.current,
     })
-  }, [
-    sessionReady,
-    quizActive,
-    showResults,
-    isCurrentCompleted,
-    questions.length,
-    currentQuizId,
-    currentQuestion,
-    userAnswers,
-  ])
+  }, [sessionReady, quizActive, showResults, questions.length, currentQuestion, userAnswers])
 
   useEffect(() => {
-    if (!sessionReady || !quizActive || showResults || isCurrentCompleted) return
+    if (!sessionReady || !quizActive || showResults || completed) return
     return bindQuizSessionFlush(() => {
       if (userAnswersRef.current.length !== questions.length) return
       saveQuizSession({
-        quizId: currentQuizId,
         currentQuestion,
         userAnswers: userAnswersRef.current,
         endsAt: endsAtRef.current,
         startedAt: quizStartTimeRef.current,
       })
     })
-  }, [
-    sessionReady,
-    quizActive,
-    showResults,
-    isCurrentCompleted,
-    questions.length,
-    currentQuizId,
-    currentQuestion,
-  ])
+  }, [sessionReady, quizActive, showResults, completed, questions.length, currentQuestion])
 
-
-  useEffect(() => {
-    if (!sessionReady || !quizActive || showResults || isCurrentCompleted) return
-    if (activeSessionQuizId === currentQuizId) return
-    queueMicrotask(() => setActiveSessionQuizId(currentQuizId))
-  }, [sessionReady, quizActive, showResults, isCurrentCompleted, currentQuizId, activeSessionQuizId])
-
-  const resetQuizState = (quizId: string, nextLength: number) => {
-    startFreshQuiz(quizId, nextLength)
-  }
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (userAnswers[currentQuestion] !== null) return
@@ -415,148 +308,31 @@ export default function AomPreviousPapers2026Quiz() {
     finishQuiz(userAnswers)
   }
 
-  const handleViewResults = (quizId: string) => {
-    const saved = storedResults[quizId]?.answers
-    const quizQuestions = CATEGORY_QUIZZES[quizId as keyof typeof CATEGORY_QUIZZES] || []
-    const answers =
-      saved && saved.length === quizQuestions.length
-        ? saved
-        : new Array(quizQuestions.length).fill(null)
-
-    finishedRef.current = true
+  const handleResumeQuiz = () => {
     const session = loadQuizSession()
-    if (session?.quizId === quizId) {
-      clearQuizSession(quizId)
-      setActiveSessionQuizId(null)
-    }
-    setCurrentQuizId(quizId)
-    setUserAnswers(answers)
-    setShowResults(true)
-    setQuizActive(false)
-  }
-
-  const handleNextQuiz = () => {
-    const quizIds = Object.keys(CATEGORY_QUIZZES)
-    const currentIndex = quizIds.indexOf(currentQuizId)
-    const nextQuizId = quizIds
-      .slice(currentIndex + 1)
-      .find((quizId) => !completedQuizzes.includes(quizId))
-
-    if (!nextQuizId) return
-
-    const nextLength = CATEGORY_QUIZZES[nextQuizId as keyof typeof CATEGORY_QUIZZES].length
-    resetQuizState(nextQuizId, nextLength)
-  }
-
-  const handleQuizSelect = (quizId: string) => {
-    if (completedQuizzes.includes(quizId)) {
-      handleViewResults(quizId)
+    if (!session || session.userAnswers.length !== questions.length) {
+      startFreshQuiz()
       return
     }
-
-    const session = loadQuizSession()
-    if (session?.quizId === quizId) {
-      applySession(session)
-      return
-    }
-
-    const nextLength = CATEGORY_QUIZZES[quizId as keyof typeof CATEGORY_QUIZZES].length
-    resetQuizState(quizId, nextLength)
+    const safeQuestion = Math.min(
+      Math.max(0, session.currentQuestion),
+      Math.max(0, questions.length - 1),
+    )
+    const remaining = Math.max(0, Math.floor((session.endsAt - Date.now()) / 1000))
+    finishedRef.current = false
+    quizStartTimeRef.current = session.startedAt
+    endsAtRef.current = session.endsAt
+    setCurrentQuestion(safeQuestion)
+    setUserAnswers(session.userAnswers)
+    setTimeLeft(remaining)
+    setShowResults(false)
+    setQuizActive(true)
+    setHasResumeSession(false)
   }
 
-  const sectionCards = (
-    <div className="mt-8 rounded-xl bg-white px-2 py-8 shadow-2xl lg:px-8">
-      <h3 className="mb-6 text-center text-2xl font-bold text-gray-800">All Papers</h3>
-      <p className="mb-8 text-center text-gray-600">
-        {showResults
-          ? 'Continue your learning journey with all available papers'
-          : 'Switch between papers or continue your progress'}
-      </p>
-
-      {loadingProgress ? (
-        <div className="flex items-center justify-center py-8">
-          <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-emerald-600" />
-          <span className="ml-3 text-gray-600">Loading progress...</span>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {Object.keys(CATEGORY_QUIZZES).map((quizId, idx) => {
-            const isCompleted = completedQuizzes.includes(quizId)
-            const isCurrentQuiz = quizActive && quizId === currentQuizId && !showResults
-            const isInProgress = activeSessionQuizId === quizId && !isCompleted
-            const questionCount =
-              CATEGORY_QUIZZES[quizId as keyof typeof CATEGORY_QUIZZES].length
-
-            return (
-              <div
-                key={quizId}
-                className={`transform rounded-lg border-2 bg-linear-to-br from-gray-50 to-gray-100 px-2 py-6 transition-all duration-300 hover:scale-105 lg:px-6 ${
-                  isCurrentQuiz || isInProgress
-                    ? 'border-emerald-400 shadow-lg'
-                    : 'border-gray-400 hover:shadow-lg'
-                }`}
-              >
-                <div className="mb-4 flex items-center justify-between">
-                  <div
-                    className={`flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br ${CATEGORY_COLOR} lg:h-12 lg:w-12`}
-                  >
-                    <span className="text-sm font-bold text-white lg:text-lg">{idx + 1}</span>
-                  </div>
-                  {isCompleted ? (
-                    <div className="flex items-center rounded-full bg-green-500 px-2 py-1 text-xs font-medium text-white">
-                      Completed
-                    </div>
-                  ) : isInProgress ? (
-                    <div className="flex items-center rounded-full bg-amber-500 px-2 py-1 text-xs font-medium text-white">
-                      In progress
-                    </div>
-                  ) : null}
-                </div>
-                <h4 className="mb-2 text-lg font-bold text-gray-700">{formatQuizTitle(quizId)}</h4>
-                <p className="mb-1 text-sm text-gray-600">{questionCount} Questions</p>
-                <p className="mb-4 text-xs text-gray-500">{questionCount} min timer</p>
-                {isCompleted ? (
-                  <button
-                    type="button"
-                    onClick={() => handleViewResults(quizId)}
-                    className="flex w-full items-center justify-center rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 py-2 font-medium text-white shadow-lg transition-all duration-200 hover:from-emerald-700 hover:to-teal-700 hover:shadow-xl sm:px-6"
-                  >
-                    View Results
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => handleQuizSelect(quizId)}
-                    disabled={isCurrentQuiz}
-                    className={`flex w-full items-center justify-center space-x-2 rounded-full bg-linear-to-r ${CATEGORY_COLOR} px-4 py-2 font-medium text-white shadow-lg transition-all duration-200 hover:shadow-xl sm:px-6 ${
-                      isCurrentQuiz ? 'cursor-not-allowed opacity-75' : ''
-                    }`}
-                  >
-                    <span>
-                      {isCurrentQuiz
-                        ? 'Current Paper'
-                        : isInProgress
-                          ? 'Resume Quiz'
-                          : 'Start Paper'}
-                    </span>
-                  </button>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      )}
-
-      <div className="mt-8 text-center">
-        <Link
-          href="/quizzes/aom-previous-papers"
-          className="inline-flex items-center rounded-lg bg-linear-to-r from-gray-600 to-gray-700 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-gray-700 hover:to-gray-800 hover:shadow-xl"
-        >
-          Back to AOM Previous Papers
-        </Link>
-      </div>
-    </div>
-  )
+  const handleRestart = () => {
+    startFreshQuiz()
+  }
 
   if (!sessionReady || loadingProgress) {
     return (
@@ -573,32 +349,38 @@ export default function AomPreviousPapers2026Quiz() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-linear-to-br from-emerald-50 to-teal-50 px-4">
         <div className="rounded-2xl bg-white p-8 text-center shadow-xl">
-          <h1 className="mb-2 text-xl font-bold text-gray-800">{CATEGORY_TITLE}</h1>
+          <h1 className="mb-2 text-xl font-bold text-gray-800">{QUIZ_TITLE}</h1>
           <p className="mb-6 text-gray-600">No questions found.</p>
           <Link
-            href="/quizzes/aom-previous-papers"
-            className="inline-flex rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-6 py-2.5 font-medium text-white"
+            href="/aom-tests/aom-previous-years-papers"
+            className="inline-flex rounded-full bg-linear-to-r from-emerald-600 to-teal-700 px-6 py-2.5 font-medium text-white"
           >
-            Back to AOM Previous Papers
+            Back to Quizzes
           </Link>
         </div>
       </div>
     )
   }
 
-  if (!quizActive && !showResults) {
+  if (!quizActive && !completed && !showResults) {
     return (
-      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-4 py-8 sm:px-4 sm:py-12">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-2 text-center">
-            <h1 className="text-2xl font-bold text-gray-800 sm:text-3xl">{CATEGORY_TITLE}</h1>
-            <p className="mt-2 text-sm text-gray-600 sm:text-base">
-              {activeSessionQuizId
-                ? 'You have an unfinished quiz. Resume where you left off.'
-                : 'Choose a paper to begin.'}
+      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-4 py-6 sm:px-4 sm:py-8">
+        <div className="mx-auto max-w-3xl">
+          <div className="rounded-xl bg-white p-6 text-center shadow-lg sm:p-8">
+            <h1 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">{QUIZ_TITLE}</h1>
+            <p className="mb-6 text-sm text-gray-600">
+              {hasResumeSession
+                ? 'Your previous attempt was interrupted. Resume to continue from where you left off.'
+                : `${questions.length} Questions · ${questions.length} min timer`}
             </p>
+            <button
+              type="button"
+              onClick={hasResumeSession ? handleResumeQuiz : startFreshQuiz}
+              className="rounded-full bg-linear-to-r from-emerald-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700"
+            >
+              {hasResumeSession ? 'Resume Quiz' : 'Start Quiz'}
+            </button>
           </div>
-          {sectionCards}
         </div>
       </div>
     )
@@ -611,11 +393,6 @@ export default function AomPreviousPapers2026Quiz() {
     const skippedAnswers = userAnswers.filter((answer) => answer === null).length
     const wrongAnswers = questions.length - correctAnswers - skippedAnswers
     const percentage = Math.round((correctAnswers / questions.length) * 100)
-    const quizIds = Object.keys(CATEGORY_QUIZZES)
-    const currentIndex = quizIds.indexOf(currentQuizId)
-    const nextIncompleteQuizId = quizIds
-      .slice(currentIndex + 1)
-      .find((quizId) => !completedQuizzes.includes(quizId))
 
     return (
       <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-3 py-8 sm:px-4 sm:py-12">
@@ -649,32 +426,30 @@ export default function AomPreviousPapers2026Quiz() {
               <p className="text-sm text-gray-600 sm:text-base">
                 You got {correctAnswers} out of {questions.length} questions correct
               </p>
-              <p className="mt-2 text-xs text-gray-500 sm:text-sm">
-                {CATEGORY_TITLE} - {formatQuizTitle(currentQuizId)}
-              </p>
+              <p className="mt-2 text-xs text-gray-500 sm:text-sm">{QUIZ_TITLE}</p>
             </div>
 
             <div className="mb-6 grid grid-cols-2 gap-4 sm:mb-8 sm:grid-cols-4 sm:gap-6">
               <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-center sm:rounded-2xl sm:p-6">
-                <div className="mb-1 text-2xl font-bold text-green-600 sm:text-3xl">
+                <div className="mb-1 text-2xl font-bold text-green-600 sm:mb-2 sm:text-3xl">
                   {correctAnswers}
                 </div>
                 <div className="text-xs font-medium text-green-700 sm:text-sm">Correct</div>
               </div>
               <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-center sm:rounded-2xl sm:p-6">
-                <div className="mb-1 text-2xl font-bold text-red-600 sm:text-3xl">
+                <div className="mb-1 text-2xl font-bold text-red-600 sm:mb-2 sm:text-3xl">
                   {wrongAnswers}
                 </div>
                 <div className="text-xs font-medium text-red-700 sm:text-sm">Wrong</div>
               </div>
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-center sm:rounded-2xl sm:p-6">
-                <div className="mb-1 text-2xl font-bold text-amber-600 sm:text-3xl">
+                <div className="mb-1 text-2xl font-bold text-amber-600 sm:mb-2 sm:text-3xl">
                   {skippedAnswers}
                 </div>
                 <div className="text-xs font-medium text-amber-700 sm:text-sm">Skipped</div>
               </div>
               <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-center sm:rounded-2xl sm:p-6">
-                <div className="mb-1 text-2xl font-bold text-blue-600 sm:text-3xl">
+                <div className="mb-1 text-2xl font-bold text-blue-600 sm:mb-2 sm:text-3xl">
                   {questions.length}
                 </div>
                 <div className="text-xs font-medium text-blue-700 sm:text-sm">Total</div>
@@ -683,28 +458,23 @@ export default function AomPreviousPapers2026Quiz() {
 
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <button
-                type="button"
-                onClick={() => router.push('/quizzes/aom-previous-papers')}
+                onClick={() => router.push('/aom-tests/aom-previous-years-papers')}
                 className="flex-1 rounded-full bg-linear-to-r from-emerald-600 to-teal-700 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-emerald-700 hover:to-teal-800 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
               >
-                Back to Papers
+                Back to Quizzes
               </button>
               <button
-                type="button"
                 onClick={() => router.push('/dashboard')}
                 className="flex-1 rounded-full bg-linear-to-r from-slate-700 to-slate-800 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-slate-800 hover:to-slate-900 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
               >
                 View Dashboard
               </button>
-              {nextIncompleteQuizId ? (
-                <button
-                  type="button"
-                  onClick={handleNextQuiz}
-                  className="flex-1 rounded-full bg-linear-to-r from-green-600 to-green-700 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-green-700 hover:to-green-800 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
-                >
-                  Next Paper
-                </button>
-              ) : null}
+              <button
+                onClick={handleRestart}
+                className="flex-1 rounded-full bg-linear-to-r from-green-600 to-green-700 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:from-green-700 hover:to-green-800 hover:shadow-xl sm:px-6 sm:py-3 sm:text-base"
+              >
+                Retake Quiz
+              </button>
             </div>
           </div>
 
@@ -713,7 +483,7 @@ export default function AomPreviousPapers2026Quiz() {
               <div className="pointer-events-none absolute -left-16 top-0 h-40 w-40 rounded-full bg-emerald-500/20 blur-3xl" />
               <div className="pointer-events-none absolute -right-10 bottom-0 h-36 w-36 rounded-full bg-teal-400/20 blur-3xl" />
               <h3 className="relative text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                Quiz Summary & Explanation
+                Question Review
               </h3>
               <div className="relative mx-auto mt-4 h-1 w-16 rounded-full bg-linear-to-r from-emerald-400 to-teal-300" />
             </div>
@@ -791,8 +561,6 @@ export default function AomPreviousPapers2026Quiz() {
               })}
             </ol>
           </div>
-
-          {sectionCards}
         </div>
       </div>
     )
@@ -803,55 +571,33 @@ export default function AomPreviousPapers2026Quiz() {
   const answered = selectedAnswer !== null
   const timerUrgent = timeLeft <= 5 * 60
 
-  if (isCurrentCompleted && !showResults) {
-    return (
-      <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-3 py-6 sm:px-4 sm:py-8">
-        <div className="mx-auto max-w-3xl">
-          <div className="rounded-xl bg-white p-6 text-center shadow-lg sm:p-8">
-            <h1 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">{CATEGORY_TITLE}</h1>
-            <p className="mb-1 text-sm font-medium text-emerald-700">
-              {formatQuizTitle(currentQuizId)} is completed
-            </p>
-            <p className="mb-6 text-sm text-gray-600">
-              This quiz is locked. You can view your summary and explanations below.
-            </p>
-            <button
-              type="button"
-              onClick={() => handleViewResults(currentQuizId)}
-              className="rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-emerald-700 hover:to-teal-700"
-            >
-              View Results
-            </button>
-          </div>
-          {sectionCards}
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="min-h-screen bg-linear-to-br from-emerald-50 to-teal-50 px-3 py-6 sm:px-4 sm:py-8">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-6xl">
         <div className="rounded-xl bg-white p-4 shadow-lg sm:rounded-2xl sm:p-6 lg:p-8">
           <div className="mb-6 text-center sm:mb-8">
             <h1 className="mb-3 text-lg font-bold text-gray-800 sm:mb-4 sm:text-xl lg:text-2xl">
-              {CATEGORY_TITLE}
+              {QUIZ_TITLE}
             </h1>
             <div className="mb-3 flex flex-wrap items-center justify-center gap-2 text-gray-600 sm:mb-4">
               <span className="rounded-full bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-800 sm:px-3 sm:text-sm">
-                {formatQuizTitle(currentQuizId)}
-              </span>
-              <span className="rounded-full bg-slate-100 px-2 py-1 text-xs font-medium text-slate-700 sm:px-3 sm:text-sm">
                 {questions.length} Questions · {questions.length} min
               </span>
               <span
                 className={`rounded-full px-2 py-1 font-mono text-xs font-semibold sm:px-3 sm:text-sm ${
-                  timerUrgent ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-800'
+                  timerUrgent
+                    ? 'bg-red-100 text-red-700'
+                    : 'bg-slate-100 text-slate-800'
                 }`}
                 aria-live="polite"
               >
                 Time left: {formatTimer(timeLeft)}
               </span>
+              {!loadingProgress && completed ? (
+                <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800 sm:px-3 sm:text-sm">
+                  Previously completed
+                </span>
+              ) : null}
               <span className="text-xs text-gray-500 sm:text-sm lg:text-base">
                 Question {currentQuestion + 1} of {questions.length}
               </span>
@@ -936,7 +682,7 @@ export default function AomPreviousPapers2026Quiz() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
             <button
               type="button"
               onClick={() => {
@@ -962,7 +708,14 @@ export default function AomPreviousPapers2026Quiz() {
           </div>
         </div>
 
-        {sectionCards}
+        <div className="mt-8 text-center">
+          <Link
+            href="/aom-tests/aom-previous-years-papers"
+            className="inline-flex items-center rounded-lg bg-linear-to-r from-gray-600 to-gray-700 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-gray-700 hover:to-gray-800 hover:shadow-xl"
+          >
+            Back to AOM Previous Papers
+          </Link>
+        </div>
       </div>
     </div>
   )

@@ -50,28 +50,114 @@ export const searchTopics: SearchTopic[] = [
     keywords: "pdfs accident manual amendments Accident Manual Amendments",
   },
   {
-    href: "/quizzes/aom-previous-papers",
-    title: "AOM Previous Papers",
-    category: "Quizzes",
-    parent: "Quizzes",
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test01",
+    title: "AOM GK & Rajabhasha Test 01",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
     keywords:
-      "quizzes aom previous papers AOM Previous Papers 2022 2026 exam practice",
+      "aom tests gk rajabhasha test 01 AOM GK Rajabhasha Test 01 paper mock Hindi",
   },
   {
-    href: "/quizzes/aom-previous-papers/aom-previous-paper-2022",
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test02",
+    title: "AOM GK & Rajabhasha Test 02",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 02 AOM GK Rajabhasha Test 02 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test03",
+    title: "AOM GK & Rajabhasha Test 03",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 03 AOM GK Rajabhasha Test 03 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test04",
+    title: "AOM GK & Rajabhasha Test 04",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 04 AOM GK Rajabhasha Test 04 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test05",
+    title: "AOM GK & Rajabhasha Test 05",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 05 AOM GK Rajabhasha Test 05 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-practice-tests",
+    title: "AOM Practice Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests",
+    keywords: "aom tests aom practice tests AOM Practice Tests mock exam timed paper",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers",
+    title: "AOM Previous Years Papers",
+    category: "AOM Tests",
+    parent: "AOM Tests",
+    keywords: "aom tests aom previous years papers AOM Previous Years Papers exam papers",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-previous-paper-2022",
     title: "AOM Previous Paper 2022",
-    category: "Quizzes",
-    parent: "Quizzes › AOM Previous Papers",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
     keywords:
-      "quizzes aom previous paper 2022 AOM Previous Paper 2022 exam practice 175 questions",
+      "aom tests aom previous paper 2022 AOM Previous Paper 2022 exam practice previous years",
   },
   {
-    href: "/quizzes/aom-previous-papers/aom-previous-papers-2026",
+    href: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
     title: "AOM Previous Papers 2026",
-    category: "Quizzes",
-    parent: "Quizzes › AOM Previous Papers",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
     keywords:
-      "quizzes aom previous papers 2026 AOM Previous Papers Professional Subject GK Rajabhasha Establishment Financial Rules",
+      "aom tests aom previous papers 2026 AOM Previous Papers Professional Subject GK Rajabhasha Establishment Financial Rules",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test01",
+    title: "AOM Professional Subject Test 01",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 01 AOM Professional Subject Test 01 paper mock operating G&SR signalling",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test02",
+    title: "AOM Professional Subject Test 02",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 02 AOM Professional Subject Test 02 paper mock operating G&SR signalling",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test03",
+    title: "AOM Professional Subject Test 03",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 03 AOM Professional Subject Test 03 paper mock operating G&SR signalling",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test04",
+    title: "AOM Professional Subject Test 04",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 04 AOM Professional Subject Test 04 paper mock operating G&SR signalling",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test05",
+    title: "AOM Professional Subject Test 05",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 05 AOM Professional Subject Test 05 paper mock operating G&SR signalling",
   },
   {
     href: "/topics/aom-special",
@@ -80,6 +166,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics",
     keywords:
       "topics aom special AOM Special distances timings percentages G&SR SWR speed restrictions exam notes",
+  },
+  {
+    href: "/aom-tests",
+    title: "AOM Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests",
+    keywords: "aom tests AOM Tests exam mock test departmental promotional",
   },
 
   {
@@ -876,6 +969,54 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes financial rules finance Finance",
   },
   {
+    href: "/aom-tests/aom-finance-establishment-rules-tests",
+    title: "AOM Finance & Establishment Rules Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests AOM Finance & Establishment Rules Tests accounts tenders budget",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test01",
+    title: "AOM Finance & Establishment Rules Test 01",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 01 AOM Finance & Establishment Rules Test 01 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test02",
+    title: "AOM Finance & Establishment Rules Test 02",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 02 AOM Finance & Establishment Rules Test 02 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test03",
+    title: "AOM Finance & Establishment Rules Test 03",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 03 AOM Finance & Establishment Rules Test 03 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test04",
+    title: "AOM Finance & Establishment Rules Test 04",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 04 AOM Finance & Establishment Rules Test 04 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test05",
+    title: "AOM Finance & Establishment Rules Test 05",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 05 AOM Finance & Establishment Rules Test 05 paper mock",
+  },
+  {
     href: "/quizzes/financial-rules",
     title: "Financial Rules",
     category: "Quizzes",
@@ -945,6 +1086,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Railway Planning Schemes",
     keywords: "topics railway planning schemes gati shakti terminals Gati Shakti Terminals",
+  },
+  {
+    href: "/aom-tests/gk-rajabhasha",
+    title: "AOM GK & Rajabhasha Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests",
+    keywords: "aom tests gk rajabhasha GK Rajabhasha general knowledge official language Hindi",
   },
   {
     href: "/topics/operating-material/glp-check",
@@ -2015,6 +2163,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Block Working Manual",
     keywords:
       "topics block working manual private numbers Private Numbers BWM PN book TSR TI line clear",
+  },
+  {
+    href: "/aom-tests/professional-subject",
+    title: "AOM Professional Subject Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests aom professional subject tests AOM Professional Subject Tests operating G&SR manuals signalling",
   },
   {
     href: "/topics/information-technology-apps/prs-application",

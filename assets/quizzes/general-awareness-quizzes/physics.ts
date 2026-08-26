@@ -639,6 +639,41 @@ Average velocity=
         correct: 3,
         explanation: 'Concave lens is the correct answer',
       },
+      {
+        question:
+          'Which of the following physical quantities is scalar quantity?',
+        options: ['Impulse', 'Acceleration', 'Power', 'Weight'],
+        correct: 2,
+        explanation: 'Power is the correct answer',
+      },
+      {
+        question:
+          'The frictional force exerted by fluids is also called as ________',
+        options: ['Drag force', 'Buoyancy force', 'Thrust force', 'Centripetal force'],
+        correct: 0,
+        explanation: 'Drag force is the correct answer',
+      },
+      {
+        question:
+          'A device which converts electrical energy into mechanical energy is called as ________',
+        options: ['Motor', 'Generator', 'Transformer', 'Dynamo'],
+        correct: 0,
+        explanation: 'Motor is the correct answer',
+      },
+      {
+        question:
+          'What is the phenomenon which established the transeverse nature of light?',
+        options: ['Interference', 'Refraction', 'Diffraction', 'Polarization'],
+        correct: 3,
+        explanation: 'Polarization is the correct answer',
+      },
+      {
+        question:
+          'When a ball is thrown vertically upwards, which of the following quantities remains constant during its motion?',
+        options: ['Velocity', 'Acceleration', 'Time', 'Distance'],
+        correct: 1,
+        explanation: 'Acceleration is the correct answer',
+      },
     ]
   },
 };

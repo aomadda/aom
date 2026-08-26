@@ -465,6 +465,48 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Cerebrum is the correct answer',
       },
+      {
+        question:
+          'Salk vaccine is connected with which one of the following diseases?',
+        options: ['Polio', 'Tetanus', 'Malaria', 'Tuberculosis'],
+        correct: 0,
+        explanation: 'Polio is the correct answer',
+      },
+      {
+        question:
+          'The blood vessels supplying blood to the kidney are called ________',
+        options: ['Carotid artery', 'Hepatic artery', 'Pulmonary artery', 'Renal artery'],
+        correct: 3,
+        explanation: 'Renal artery is the correct answer',
+      },
+      {
+        question:
+          'Which lobe of the human brain is associated with hearing?',
+        options: ['Frontal lobe', 'Parietal lobe', 'Occipital lobe', 'Temporal lobe'],
+        correct: 3,
+        explanation: 'Temporal lobe is the correct answer',
+      },
+      {
+        question:
+          'Prothrombin is responsible for clotting of blood is produced in which of the following?',
+        options: ['Liver', 'Kidney', 'Pancreas', 'Heart'],
+        correct: 0,
+        explanation: 'Liver is the correct answer',
+      },
+      {
+        question:
+          'Myopia is a defect of eyes which also called as ________',
+        options: ['Short sightedness', 'Long sightedness', 'Astigmatism', 'Presbyopia'],
+        correct: 0,
+        explanation: 'Short sightedness is the correct answer',
+      },
+      {
+        question:
+          'Prothrombin is responsible for clotting of blood is released by which of the following?',
+        options: ['Blood platelets', 'Small intestine', 'Large intestine', 'Heart'],
+        correct: 0,
+        explanation: 'Blood platelets is the correct answer',
+      },
     ],
   },
 };

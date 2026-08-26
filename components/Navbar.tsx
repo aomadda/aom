@@ -37,6 +37,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
   const [isManualsDropdownOpen, setIsManualsDropdownOpen] = useState(false)
   const [isTopicsDropdownOpen, setIsTopicsDropdownOpen] = useState(false)
   const [isQuizzesDropdownOpen, setIsQuizzesDropdownOpen] = useState(false)
+  const [isAomTestsDropdownOpen, setIsAomTestsDropdownOpen] = useState(false)
   const [isGeneralAwarenessDropdownOpen, setIsGeneralAwarenessDropdownOpen] = useState(false)
   const pathname = usePathname()
 
@@ -83,7 +84,6 @@ const Navbar = ({ user = null }: NavbarProps) => {
 
   const quizzesLinks = [
     { href: '/quizzes/accident-manual', label: 'Accident Manual', icon: '⚠️' },
-    { href: '/quizzes/aom-previous-papers', label: 'AOM Previous Papers', icon: '📝' },
     { href: '/quizzes/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
     { href: '/quizzes/commercial-department', label: 'Commercial Department', icon: '💼' },
     { href: '/quizzes/establishment-rules', label: 'Establishment Rules', icon: '📜' },
@@ -97,6 +97,14 @@ const Navbar = ({ user = null }: NavbarProps) => {
     { href: '/quizzes/rajabhasha', label: 'Rajabhasha', icon: '📝' },
     { href: '/quizzes/railway-gk', label: 'RailwayGK', icon: '🧠' },
     { href: '/quizzes/railway-statistics', label: 'Railway Statistics', icon: '📊' },
+  ]
+
+  const aomTestsLinks = [
+    { href: '/aom-tests/aom-practice-tests', label: 'AOM Practice Tests', icon: '📝' },
+    { href: '/aom-tests/aom-previous-years-papers', label: 'AOM Previous Years Papers', icon: '📂' },
+    { href: '/aom-tests/finance-establishment-rules', label: 'Finance & Establishment Rules', icon: '💰' },
+    { href: '/aom-tests/gk-rajabhasha', label: 'GK & Rajabhasha', icon: '🌐' },
+    { href: '/aom-tests/professional-subject', label: 'Professional Subject', icon: '🚂' },
   ]
 
   const generalAwarenessLinks = [
@@ -711,6 +719,120 @@ const Navbar = ({ user = null }: NavbarProps) => {
               )}
             </div>
 
+            {/* AOM Tests Dropdown */}
+            <div
+              className="relative group"
+              onMouseEnter={() => setIsAomTestsDropdownOpen(true)}
+              onMouseLeave={() => setIsAomTestsDropdownOpen(false)}
+            >
+              <Link
+                href="/aom-tests"
+                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
+                  pathname.startsWith('/aom-tests') ? 'font-bold' : ''
+                }`}
+              >
+                <span className="relative z-10 flex items-center gap-1 transition-all duration-300">
+                  AOM Tests
+                  <svg
+                    className={`h-4 w-4 transition-transform duration-300 ${isAomTestsDropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+                <span
+                  className={`absolute bottom-1 left-0 right-0 h-0.5 rounded-full bg-white transition-all duration-300 ${
+                    pathname.startsWith('/aom-tests')
+                      ? 'scale-x-100 opacity-100'
+                      : 'scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100'
+                  }`}
+                ></span>
+                <span
+                  className="absolute inset-0 -z-10 rounded-xl opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))',
+                  }}
+                ></span>
+                {pathname.startsWith('/aom-tests') && (
+                  <span
+                    className="absolute inset-0 -z-10 rounded-xl shadow-lg shadow-purple-500/20 backdrop-blur-sm"
+                    style={{
+                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))',
+                    }}
+                  ></span>
+                )}
+              </Link>
+
+              {isAomTestsDropdownOpen && (
+                <div className="absolute top-full right-0 z-50 mt-2 flex max-h-[min(70vh,560px)] w-100 flex-col overflow-hidden rounded-2xl border border-purple-200/30 bg-white/98 shadow-2xl backdrop-blur-xl">
+                  <div className="shrink-0 border-b border-purple-100/50 bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="flex items-center gap-2 text-sm font-bold tracking-wider text-gray-700 uppercase">
+                        <span className="h-1.5 w-1.5 rounded-full bg-linear-to-r from-purple-500 to-blue-500"></span>
+                        AOM Tests
+                      </h3>
+                      <span className="text-xs font-medium text-gray-500">{aomTestsLinks.length} Tests</span>
+                    </div>
+                  </div>
+
+                  <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto overscroll-contain p-4">
+                    {aomTestsLinks.map((test) => {
+                      const isActive = pathname === test.href
+                      return (
+                        <Link
+                          key={test.href}
+                          href={test.href}
+                          className={`group relative rounded-xl px-4 py-3 transition-all duration-200 ${
+                            isActive
+                              ? 'border-2 border-purple-300/60 bg-linear-to-r from-purple-500/20 via-blue-500/20 to-indigo-500/20 font-semibold text-purple-700 shadow-lg shadow-purple-200/50'
+                              : 'border border-gray-200/50 text-gray-700 hover:border-purple-200/70 hover:bg-linear-to-r hover:from-purple-50 hover:via-blue-50 hover:to-indigo-50 hover:text-purple-600 hover:shadow-md'
+                          }`}
+                        >
+                          {isActive && (
+                            <span className="absolute top-0 bottom-0 left-0 w-1.5 rounded-r-full bg-linear-to-b from-purple-500 via-blue-500 to-indigo-500"></span>
+                          )}
+                          <div className="relative z-10 flex items-center gap-3">
+                            <span className="shrink-0 text-xl">{test.icon}</span>
+                            <span className="flex-1 text-sm leading-snug font-medium">{test.label}</span>
+                            <svg
+                              className={`h-4 w-4 shrink-0 text-purple-400 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100 ${
+                                isActive ? 'opacity-100' : ''
+                              }`}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </Link>
+                      )
+                    })}
+                  </div>
+
+                  <div className="shrink-0 border-t border-purple-100/50 bg-linear-to-r from-purple-50/50 via-blue-50/50 to-indigo-50/50 px-6 py-3.5">
+                    <Link
+                      href="/aom-tests"
+                      onClick={() => setIsAomTestsDropdownOpen(false)}
+                      className="group flex items-center justify-center gap-2 text-xs font-semibold text-purple-600 hover:text-purple-700"
+                    >
+                      <span>View All AOM Tests</span>
+                      <svg
+                        className="h-3.5 w-3.5 transform transition-transform duration-200 group-hover:translate-x-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* General Awareness Dropdown */}
             <div 
               className="relative group"
@@ -1093,6 +1215,59 @@ const Navbar = ({ user = null }: NavbarProps) => {
                       >
                         <span>{quiz.icon}</span>
                         <span>{quiz.label}</span>
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button
+                onClick={() => setIsAomTestsDropdownOpen(!isAomTestsDropdownOpen)}
+                className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition-all duration-300 ${
+                  pathname.startsWith('/aom-tests')
+                    ? 'border-2 border-white/40 bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md'
+                    : 'border border-white/20 bg-white/10 text-white/90 backdrop-blur-sm hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <span>AOM Tests</span>
+                <svg
+                  className={`h-5 w-5 transition-transform duration-300 ${isAomTestsDropdownOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <div
+                className={`relative touch-pan-y overflow-y-auto overscroll-contain [-webkit-overflow-scrolling:touch] transition-all duration-300 ease-in-out ${
+                  isAomTestsDropdownOpen
+                    ? 'mt-2 max-h-[min(65dvh,28rem)] opacity-100'
+                    : 'max-h-0 overflow-hidden opacity-0'
+                }`}
+              >
+                <div className="flex min-h-0 flex-col space-y-1 pl-4">
+                  {aomTestsLinks.map((test) => {
+                    const isActive = pathname === test.href
+                    return (
+                      <Link
+                        key={test.href}
+                        href={test.href}
+                        onClick={() => {
+                          setIsMobileMenuOpen(false)
+                          setIsAomTestsDropdownOpen(false)
+                        }}
+                        className={`flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+                          isActive
+                            ? 'border border-white/40 bg-white/30 text-white shadow-md shadow-white/20 backdrop-blur-md'
+                            : 'border border-white/10 bg-white/5 text-white/80 backdrop-blur-sm hover:bg-white/15 hover:text-white'
+                        }`}
+                      >
+                        <span>{test.icon}</span>
+                        <span>{test.label}</span>
                       </Link>
                     )
                   })}

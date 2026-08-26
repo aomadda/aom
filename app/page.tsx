@@ -51,6 +51,14 @@ const manualsLinks: NavBox[] = [
   { href: '/manuals/working-time-table', label: 'Working Time Table', icon: '⏰' },
 ]
 
+const pdfsLinks: NavBox[] = [
+  { href: '/pdfs/circulars', label: 'Circulars', icon: '📄' },
+  { href: '/pdfs/authorities', label: 'Authority forms', icon: '🏅' },
+  { href: '/pdfs/accident-manual-amendments', label: 'Accident Manual amendments', icon: '⚠️' },
+  { href: '/pdfs/block-working-manual-amendments', label: 'Block Working Manual amendments', icon: '🔧' },
+  { href: '/pdfs/general-subsidiary-rules-amendments', label: 'G&SR amendments', icon: '📘' },
+]
+
 const generalAwarenessLinks: NavBox[] = [
   { href: '/general-awareness/abbreviations', label: 'Abbreviations', icon: '📝' },
   { href: '/general-awareness/awards', label: 'Awards', icon: '🏆' },
@@ -91,7 +99,6 @@ const generalAwarenessLinks: NavBox[] = [
 
 const quizzesLinks: NavBox[] = [
   { href: '/quizzes/accident-manual', label: 'Accident Manual', icon: '⚠️' },
-  { href: '/quizzes/aom-previous-papers', label: 'AOM Previous Papers', icon: '📝' },
   { href: '/quizzes/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
   { href: '/quizzes/commercial-department', label: 'Commercial Department', icon: '💼' },
   { href: '/quizzes/establishment-rules', label: 'Establishment Rules', icon: '📜' },
@@ -105,6 +112,14 @@ const quizzesLinks: NavBox[] = [
   { href: '/quizzes/rajabhasha', label: 'Rajabhasha', icon: '📝' },
   { href: '/quizzes/railway-gk', label: 'RailwayGK', icon: '🧠' },
   { href: '/quizzes/railway-statistics', label: 'Railway Statistics', icon: '📊' },
+]
+
+const aomTestsLinks: NavBox[] = [
+  { href: '/aom-tests/aom-practice-tests', label: 'AOM Practice Tests', icon: '📝' },
+  { href: '/aom-tests/aom-previous-years-papers', label: 'AOM Previous Years Papers', icon: '📂' },
+  { href: '/aom-tests/aom-finance-establishment-rules-tests', label: 'AOM Finance & Establishment Rules Tests', icon: '💰' },
+  { href: '/aom-tests/aom-gk-rajabhasha-tests', label: 'AOM GK & Rajabhasha Tests', icon: '🌐' },
+  { href: '/aom-tests/aom-professional-subject-tests', label: 'AOM Professional Subject Tests', icon: '🚂' },
 ]
 
 const exploreSections = [
@@ -127,6 +142,12 @@ const exploreSections = [
     items: manualsLinks,
   },
   {
+    title: 'PDFs',
+    href: '/pdfs',
+    panel: 'from-slate-800 via-indigo-700 to-blue-600',
+    items: pdfsLinks,
+  },
+  {
     title: 'General Awareness',
     href: '/general-awareness',
     panel: 'from-teal-700 via-cyan-600 to-emerald-500',
@@ -137,6 +158,12 @@ const exploreSections = [
     href: '/quizzes',
     panel: 'from-emerald-700 via-green-600 to-lime-500',
     items: quizzesLinks,
+  },
+  {
+    title: 'AOM Tests',
+    href: '/aom-tests',
+    panel: 'from-amber-700 via-orange-600 to-rose-500',
+    items: aomTestsLinks,
   },
 ]
 
