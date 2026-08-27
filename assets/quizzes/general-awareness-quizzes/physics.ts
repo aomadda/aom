@@ -723,6 +723,48 @@ Average velocity=
         correct: 0,
         explanation: 'Mole is the correct answer',
       },
+      {
+        question:
+          'The ozone layer protects us from harmful ________ rays of the sun',
+        options: ['Ultraviolet', 'Infrared', 'Gamma', 'X-rays'],
+        correct: 0,
+        explanation: 'Ultraviolet is the correct answer',
+      },
+      {
+        question:
+          'Which one of the following is the unit of measure of the thickness of the ozone layer of the atmosphere?',
+        options: ['Knot', 'Dobson', 'Maxwell', 'Poise'],
+        correct: 1,
+        explanation: 'Dobson is the correct answer',
+      },
+      {
+        question:
+          'In 1851, who founded the science of hydrodynamics with his law of viscosity describing the velocity of small sphere through a viscous fluid?',
+        options: ['Daniel Bernoulli', 'Evangelista Torricelli', 'George Stokes', 'Heinrich Magnus'],
+        correct: 2,
+        explanation: 'George Stokes is the correct answer',
+      },
+      {
+        question:
+          'Hydrogen bomb is based on the principle of ________',
+        options: ['Controlled Nuclear fission', 'Uncontrolled Nuclear fission', 'Controlled Nuclear fusion', 'Uncontrolled Nuclear fusion'],
+        correct: 3,
+        explanation: 'Uncontrolled Nuclear fusion is the correct answer',
+      },
+      {
+        question:
+          '________ is same on every point on a rotating body.',
+        options: ['Angular momentum', 'Linear momentum', 'Angular velocity', 'Linear velocity'],
+        correct: 2,
+        explanation: 'Angular velocity is the correct answer',
+      },
+      {
+        question:
+          'What is the name of the thermionic electron tube used to oscillate and amplify microwave frequency signals?',
+        options: ['Klystron', 'Magnetron', 'Neutrino', 'Thyratron'],
+        correct: 0,
+        explanation: 'Klystron is the correct answer',
+      },
     ]
   },
 };

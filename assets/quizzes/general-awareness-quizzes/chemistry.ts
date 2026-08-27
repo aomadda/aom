@@ -753,7 +753,153 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Acetone is the correct answer',
       },  
-     
+      {
+        question:
+          'Which of the following is not soluble in water?',
+        options: ['Lead sulphate', 'Potassium sulphate', 'Sodium sulphate', 'Zinc sulphate'],
+        correct: 0,
+        explanation: 'Lead sulphate is the correct answer',
+      },
+      {
+        question:
+          'The common name of Sodium tetraborate dehydrate is ________',
+        options: ['Borax', 'Soda ash', 'Gypsum', 'Galena'],
+        correct: 0,
+        explanation: 'Borax is the correct answer',
+      },
+      {
+        question:
+          'The main component of Liquid Petroleum Gas (LPG) is ________',
+        options: ['Methane + Ethane', 'Ethane + Propane', 'Propane and Butane', 'Butane + Methane'],
+        correct: 2,
+        explanation: 'Propane and Butane is the correct answer',
+      },
+      {
+        question:
+          'When a magnesium ribbon is burnt in oxygen, it gets converted into ________',
+        options: ['Magnesium oxide', 'Magnesium nitride', 'Magnesium chloride', 'Magnesium sulphate'],
+        correct: 0,
+        explanation: 'Magnesium oxide is the correct answer',
+      },
+      {
+        question:
+          'Heating ethanol with excess concentrated sulphuric acid produces ________',
+        options: ['Butane', 'Ethane', 'Ethene', 'Ethyne'],
+        correct: 2,
+        explanation: 'Ethene is the correct answer',
+      },
+      {
+        question:
+          'Which d-block element in the periodic table is represented by the Greek symbol "alpha" and the metallic "rays"?',
+        options: ['Actinium', 'Lanthanum', 'Rhenium', 'Tungsten'],
+        correct: 0,
+        explanation: 'Actinium is the correct answer',
+      },
+      {
+        question:
+          'What are the main components of Bronze alloy?',
+        options: ['Copper and Tin', 'Copper and Zinc', 'Aluminum and Nickel', 'Zinc and Nickel'],
+        correct: 0,
+        explanation: 'Copper and Tin is the correct answer',
+      },
+      {
+        question:
+          'Which of the following are members of 15 naturally occurring metallic chemical elements whose atomic numbers are between 57 and 71?',
+        options: ['Actinides', 'Lanthanides', 'Alkali metals', 'Halogen'],
+        correct: 1,
+        explanation: 'Lanthanides is the correct answer',
+      },
+      {
+        question:
+          'In which group are the non-metal elements placed in a vertical column on the right side of the periodic table?',
+        options: ['Group 15', 'Group 16', 'Group 17', 'Group 18'],
+        correct: 2,
+        explanation: 'Group 17 is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is not a Cation?',
+        options: ['Aluminum ion', 'Copper ion', 'Sulphate ion', 'Zinc ion'],
+        correct: 2,
+        explanation: 'Sulphate ion is the correct answer',
+      }, 
+      {
+        question:
+          'The conversion of hard water into soft water by boiling or adding calcium hydroxide is called ________',
+        options: ['Baker\'s process', 'Clarke\'s process', 'Lake\'s process', 'Temp\'s process'],
+        correct: 1,
+        explanation: 'Clarke\'s process is the correct answer',
+      }, 
+      {
+        question:
+          'Which of the following imparts blue colour to glass?',
+        options: ['Cobalt oxide', 'Cobalt chloride', 'Iron oxide', 'Manganese oxide'],
+        correct: 0,
+        explanation: 'Cobalt oxide is the correct answer',
+      }, 
+      {
+        question:
+          'Which one of the following is coated on the photographic plate?',
+        options: ['Silver bromide', 'Silver chloride', 'Silver iodide', 'Silver sulphide'],
+        correct: 0,
+        explanation: 'Silver bromide is the correct answer',
+      }, 
+      {
+        question:
+          'Which color is formed when blue colour green colour are mixed?',
+        options: ['Brown', 'Orange', 'Cyan', 'Violet'],
+        correct: 2,
+        explanation: 'Cyan is the correct answer',
+      }, 
+      {
+        question:
+          'The nutural dye present in turmeric is ________',
+        options: ['Curcumin', 'Cinnamon', 'Methyl orange', 'Phenolphthalein'],
+        correct: 0,
+        explanation: 'Curcumin is the correct answer',
+      }, 
+      {
+        question:
+          'Pectin, which is responsible for the firmness and softness of fruits, is mainly composed of which acid unit?',
+        options: ['Galacturonic acid', 'Aspartic acid', 'Glutamic acid', 'Lactic acid'],
+        correct: 0,
+        explanation: 'Galacturonic acid is the correct answer',
+      }, 
+      {
+        question:
+          'Minamata disaster in Japan was caused by pollution due to which of the following?',
+        options: ['Mercury', 'Cadmium', 'Lead', 'Zinc'],
+        correct: 0,
+        explanation: 'Mercury is the correct answer',
+      }, 
+      {
+        question:
+          'A class of organic compounds that contain an oxygen between two alkyl groups is called ________',
+        options: ['Alcohol', 'Ether', 'Alkane', 'Ketone'],
+        correct: 1,
+        explanation: 'Ether is the correct answer',
+      }, 
+      {
+        question:
+          'Which element\'s atomic number in the periodic table is named Seaborgium, according to the notation of the International Union of Pure and Applied Chemistry (IUPAC) nomenclature?',
+        options: ['106', '107', '108', '109'],
+        correct: 0,
+        explanation: '106 is the correct answer',
+      }, 
+      {
+        question:
+          'What is the name of a metallic radioactive transuranic element with atomic number 101 in the actinide series, discovered in 1955?',
+        options: ['Mendelevium', 'Molybdenum', 'Technetium', 'Rutherfordium'],
+        correct: 0,
+        explanation: 'Mendelevium is the correct answer',
+      }, 
+      {
+        question:
+          'Identify the chemical formula of methyl chloride from the following chemicals?',
+        options: ['CH3Cl', 'CH2Cl2', 'CHCl3', 'CCl4'],
+        correct: 0,
+        explanation: 'CH3Cl is the correct answer',
+      }, 
     ],
   },
 };

@@ -150,6 +150,22 @@ export const botanyQuiz = {
         correct: 1,
         explanation: 'Cycas is the correct answer because it is the plant in which seed exists but fruit does not.',
       },
+      
+      {
+        question:
+          '________ are the amphibians of the plant kingdom.',
+        options: ['Thallophytes', 'Spermatophytes', 'Bryophytes', 'Pteridophytes'],
+        correct: 2,
+        explanation: 'Bryophytes is the correct answer',
+      },
+      {
+        question:
+          'Identify an example of decomposers that are found in the bottom of the pond.',
+        options: ['Flagellates', 'Jellyfish', 'Phytoplankton', 'Zooplankton'],
+        correct: 0,
+        explanation: 'Flagellates is the correct answer',
+      },  
+       
     ],
   },
 };

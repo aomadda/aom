@@ -29,6 +29,27 @@ export const zoologyQuiz = {
         correct: 2,
         explanation: 'Diploblasts is the correct answer.',
       },
+      {
+        question:
+          'Identify the animal that si NOT a non-chordate?',
+        options: ['Anthropods', 'Arachnids', 'Porifera', 'Reptiles'],
+        correct: 3,
+        explanation: 'Reptiles is the correct answer',
+      },
+      {
+        question:
+          'Which of the following animals have a single opening in their digestive system that serves both as a mouth and an anus?',
+        options: ['Anthropods', 'Arachnids', 'Echinoderms', 'Platyhelminthes'],
+        correct: 3,
+        explanation: 'Platyhelminthes is the correct answer',
+      },
+      {
+        question:
+          'The body of all complex animals consists of only _______ basic types of tissues?',
+        options: ['3', '4', '5', '6'],
+        correct: 1,
+        explanation: '4 is the correct answer',
+      },
     ],
   },
 };

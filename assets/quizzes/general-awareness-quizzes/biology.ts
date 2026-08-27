@@ -528,6 +528,41 @@ export const biologyQuiz = {
         correct: 3,
         explanation: 'Vitamin A and D are the correct answer',
       },
+      {
+        question:
+          'The thymus gland produces which of the following hormones?',
+        options: ['Thyroid hormone', 'Thyroxin', 'Thymosin', 'Thyronine'],
+        correct: 2,
+        explanation: 'Thymosin is the correct answer',
+      },
+      {
+        question:
+          'In what form is the enerby derived from the food we eat is stored in our body?',
+        options: ['Glucose', 'Glycogen', 'Maltose', 'Sucrose'],
+        correct: 1,
+        explanation: 'Glycogen is the correct answer',
+      }, 
+      {
+        question:
+          'Which of the following is secreted by the liver?',
+        options: ['Insulin', 'Glucagon', 'Bile', 'Pancreatic juice'],
+        correct: 2,
+        explanation: 'Bile is the correct answer',
+      }, 
+      {
+        question:
+          'The enzyme that is present in the saliva of the man is ________',
+        options: ['Ptyalin', 'Amylase', 'Trypsin', 'Protease'],
+        correct: 1,
+        explanation: 'Amylase is the correct answer',
+      }, 
+      {
+        question:
+          'Deficiency of which of the following vitamins i the human diet causes a disease called xerophthalmia?',
+        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 0,
+        explanation: 'Vitamin A is the correct answer',
+      },
     ],
   },
 };
