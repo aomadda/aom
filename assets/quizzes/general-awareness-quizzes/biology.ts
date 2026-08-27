@@ -507,6 +507,27 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Blood platelets is the correct answer',
       },
+      {
+        question:
+          'The enzyme that is present in the saliva of the human body is ________',
+        options: ['Ptyalin', 'Amylase', 'Trypsin', 'Protease'],
+        correct: 1,
+        explanation: 'Amylase is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following is essential to regulate the heart beat?',
+        options: ['Iron', 'Potassium', 'Sulphur', 'Calcium'],
+        correct: 1,
+        explanation: 'Potassium is the correct answer',
+      },
+      {
+        question:
+          'Cod liver oil is a rich source of which of the following vitamins?',
+        options: ['Vitamin K', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 3,
+        explanation: 'Vitamin A and D are the correct answer',
+      },
     ],
   },
 };

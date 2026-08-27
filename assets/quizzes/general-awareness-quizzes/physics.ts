@@ -674,6 +674,55 @@ Average velocity=
         correct: 1,
         explanation: 'Acceleration is the correct answer',
       },
+      {
+        question:
+          'Which of the following is used as a non-stick coating for cooking utensils?',
+        options: ['Teflon', 'Silicon', 'Perspex', 'Styrofoam'],
+        correct: 0,
+        explanation: 'Teflon is the correct answer',
+      },
+      {
+        question:
+          'Which of the following methods is used for measuring the age of the earth?',
+        options: ['Biological dating', 'Iron dating', 'Thermoluminescence dating', 'Uranium processing'],
+        correct: 3,
+        explanation: 'Uranium processing is the correct',
+      },
+      {
+        question:
+          'The Sun and the Moon appear elliptical near the horizon because of ________',
+        options: ['Refraction of light', 'Reflection of light', 'Diffraction of light', 'Scattering of light'],
+        correct: 0,
+        explanation: 'Refraction of light is the correct answer',
+      },
+      {
+        question:
+          'With which scientist did William Ramsay show in 1894 that air also contained an element unknown until then, which was later named as Argon?',
+        options: ['Glenn Seaborg', 'Harold Urey', 'Hermann Kolbe', 'Lord Rayleigh'],
+        correct: 3,
+        explanation: 'Lord Rayleigh is the correct answer',
+      },
+      {
+        question:
+          'What is the name of the chemical compound having the molecular formula C3H4O which is mostly used for the production of acrylic acid and acrylate esters?',
+        options: ['Acrolein', 'Muscone', 'Naphthaldehyde', 'Vanillin'],
+        correct: 0,
+        explanation: 'Acrolein is the correct answer',
+      },
+      {
+        question:
+          'Which physical quantity is represented by the ratio of momentum and velocity of the body?',
+        options: ['Mass', 'Inertia', 'Force', 'Acceleration'],
+        correct: 0,
+        explanation: 'Mass is the correct answer',
+      },
+      {
+        question:
+          'What is the fundamental unit of amount of a substance?',
+        options: ['Mole', 'Kelvin', 'Candela', 'Meter'],
+        correct: 0,
+        explanation: 'Mole is the correct answer',
+      },
     ]
   },
 };

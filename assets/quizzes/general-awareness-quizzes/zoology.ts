@@ -22,6 +22,13 @@ export const zoologyQuiz = {
         correct: 2,
         explanation: 'Animals are the correct answer because it is the animals that are commonly dispersed by burrs with hooks or spines. Animals are the animals that are commonly dispersed by burrs with hooks or spines. Animals are the animals that are commonly dispersed by burrs with hooks or spines.',
       },
+      {
+        question:
+          'Animals in which the cells are arranged  in two embryonic layers are called',
+        options: ['Chordates', 'Extoderm', 'Diploblasts', 'Endoderm'],
+        correct: 2,
+        explanation: 'Diploblasts is the correct answer.',
+      },
     ],
   },
 };

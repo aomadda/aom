@@ -647,6 +647,113 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Parts per million is the correct answer',
       },
+      {
+        question:
+          'What is the relative molecular mass of water?',
+        options: ['12 u', '16 u', '14 u', '18 u'],
+        correct: 3,
+        explanation:
+          '2 hydrogen atoms: relative atomic mass ≈ 1 each → 2 × 1 = 2. 1 oxygen atom: relative atomic mass ≈ 16 → 1 × 16 = 16. Relative molecular mass of H₂O = 2 + 16 = 18.',
+      },
+      {
+        question:
+          'Which of the following elements  was first produced artificially?',
+        options: ['Francium', 'Neptunium', 'Plutonium', 'Technetium'],
+        correct: 3, 
+        explanation: 'Neptunium is the correct answer',
+      },
+      {
+        question:
+          'Which one of the following catalysts is used in hydrrogenation of vegetable oils?',
+        options: ['Nickel', 'Platinum', 'Palladium', 'Zinc'],
+        correct: 0,
+        explanation: 'Nickel is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is used to decolourise Brown sugar solution?',
+        options: ['Coal', 'Charcoal', 'Hydrogen peroxide', 'Sodium sulfate'],
+        correct: 1,
+        explanation: 'Charcoal is the correct answer because it is the substance that is used to decolourise Brown sugar solution.',
+      },
+      {
+        question:
+          'Which one of the following is used as antifreezer for the automobile engine?',
+        options: ['Ethylene glycol', 'Methanol', 'Propylene glycol', 'Isopropyl alcohol'],
+        correct: 0,
+        explanation: 'Ethylene glycol is the correct answer',
+      },
+      {
+        question:
+          'Adding which of the following substances gives blue colour to glass?',
+        options: ['Cobalt chloride', 'Cobalt oxide', 'Iron oxide', 'Manganese oxide'],
+        correct: 1,
+        explanation: 'Cobalt oxide is the correct answer',
+      },
+      {
+        question:
+          'Which metal exists as a common component in Brass, Bronze and German silver?',
+        options: ['Copper', 'Zinc', 'Iron', 'Nickel'],
+        correct: 0,
+        explanation: 'Copper is the correct answer',
+      },
+      {
+        question:
+          'German silver is an alloy of which of the following metals does not contain?',
+        options: ['Copper', 'Zinc', 'Silver', 'Nickel'],
+        correct: 2,
+        explanation: 'Silver is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is not a Cation?',
+        options: ['Aluminum ion', 'Copper ion', 'Sulphate ion', 'Zinc ion'],
+        correct: 2,
+        explanation: 'Sulphate ion is the correct answer',
+      },
+      {
+        question:
+          'What is the product of the reaction when anhydrite udergoes hydration?',
+        options: ['Gypsum', 'Kaolin', 'Limonite', 'Magnetite'],
+        correct: 0,
+        explanation: 'Gypsum is the correct answer',
+      },
+      {
+        question:
+          'Which chemical compound is used as a food preservative in some sauces and syrups to maintain their natural colour and protect against bacterial growth?',
+        options: ['Dihydoxy benzene', 'Hydrazine hydrate', 'Monosodium glutamate', 'Potassium metabisulphite'],
+        correct: 3,
+        explanation: 'Potassium metabisulphite is the correct answer',
+      },
+      {
+        question:
+          'Lactitol is derived through the hydration of ________',
+        options: ['Lactose', 'Glucose', 'Fructose', 'Sucrose'],
+        correct: 0,
+        explanation: 'Lactose is the correct answer',
+      },
+      {
+        question:
+          'Brass gets discoloured in air because of the presence of which of the following gases in air?',
+        options: ['Hydrogen sulphide', 'Oxygen', 'Carbon dioxide', 'Nitrogen'],
+        correct: 0,
+        explanation: 'Hydrogen sulphide is the correct answer',
+      },
+      {
+        question:
+          'Acetic acid is another name for which of the following chemical compound?',
+        options: ['Baking soda', 'Baking powder', 'Copper sulphate', 'Vinegar'],
+        correct: 3,
+        explanation: 'Vinegar is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is present in Nail polish remover?',
+        options: ['Acetone', 'Benzene', 'Citric acid', 'Ethylene'],
+        correct: 0,
+        explanation: 'Acetone is the correct answer',
+      },  
+     
     ],
   },
 };
