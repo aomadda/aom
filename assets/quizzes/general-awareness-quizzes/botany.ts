@@ -165,7 +165,13 @@ export const botanyQuiz = {
         correct: 0,
         explanation: 'Flagellates is the correct answer',
       },  
-       
+      {
+        question:
+          'On which of the following plants, did Gregor Mendel performs his classical experiments?',
+        options: ['Pea', 'Maize', 'Wheat', 'Rice'],
+        correct: 0,
+        explanation: 'Pea is the correct answer',
+      },
     ],
   },
 };

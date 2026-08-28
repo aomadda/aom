@@ -765,6 +765,34 @@ Average velocity=
         correct: 0,
         explanation: 'Klystron is the correct answer',
       },
+      {
+        question:
+          'The instrument used to regulate the temperature to a particular degree is ________',
+        options: ['Thermometer', 'Thermostat', 'Manometer', 'Thermocouple'],
+        correct: 1,
+        explanation: 'Thermostat is the correct answer',
+      },
+      {
+        question:
+          'If the orbit of a planet is an ellipse, then what is the point at which the Sun is located called ________',
+        options: ['Centre', 'Circumcenter', 'Focus', 'Solstice'],
+        correct: 2,
+        explanation: 'Focus is the correct answer',
+      },
+      {
+        question:
+          'Which of the following elements is highly effective for making a permanent magnet?',
+        options: ['Zinc', 'Copper', 'Steel', 'Aluminum'],
+        correct: 2,
+        explanation: 'Steel is the correct answer',
+      },
+      {
+        question:
+          'Which of the following laws state that "The magnitude of the induced EMF in a circuit is equal to the time rate of change of magnetic flux through the circuit"?',
+        options: ['Faraday\'s law of induction', 'Ampere\'s law', 'Coulomb\'s law', 'Gauss\'s law'],
+        correct: 0,
+        explanation: 'Faraday\'s law of induction is the correct answer',
+      },
     ]
   },
 };

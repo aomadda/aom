@@ -900,6 +900,62 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'CH3Cl is the correct answer',
       }, 
+      {
+        question:
+          'Which organic compound has a pleasant almond aroma that is commonly used to impart almond flavour to chocolates and baked goods?',
+        options: ['Benzaldehyde', 'Ethyl maltol', 'Isoamyl acetate', 'Manzanate'],
+        correct: 0,
+        explanation: 'Benzaldehyde is the correct answer',
+      },
+      {
+        question:
+          'Which of the following chemicals is used in foam fire extinguishers?',
+        options: ['Aluminum sulphate', 'Copper sulphate', 'Cobalt sulphate', 'Sodium sulphate'],
+        correct: 0,
+        explanation: 'Aluminum sulphate is the correct answer',
+      },
+      {
+        question:
+          'The main constituent of a biogas is ________',
+        options: ['Methane', 'Ethane', 'Propane', 'Butane'],
+        correct: 0,
+        explanation: 'Methane is the correct answer',
+      },
+      {
+        question:
+          'Which acids is released when an Ant bites you?',
+        options: ['Acetic acid', 'Citric acid', 'Formic acid', 'Lactic acid'],
+        correct: 2,
+        explanation: 'Formic acid is the correct answer',
+      },
+      {
+        question:
+          'One of India\'s worst industrial disasters of all time occurred in Bhopal on December 1984, in which of the following factories?',
+        options: ['Union Carbide', 'Dow Chemicals', 'ICI', 'BASF'],
+        correct: 0,
+        explanation: 'Union Carbide is the correct answer',
+      },
+      {
+        question:
+          'What is the chemical name of Saltpeter?',
+        options: ['Potassium nitrate', 'Sodium nitrate', 'Potassium chloride', 'Sodium chloride'],
+        correct: 0,
+        explanation: 'Potassium nitrate is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is not a natural fibre?',
+        options: ['Cotton', 'Silk', 'Jute', 'Nylon'],
+        correct: 3,
+        explanation: 'Nylon is the correct answer',
+      },
+      {
+        question:
+          'By whom was the modern periodic table discovered?',
+        options: ['Dobereiner', 'Newlands', 'Moseley', 'Mendeleev'],
+        correct: 2,
+        explanation: 'Moseley is the correct answer',
+      },
     ],
   },
 };

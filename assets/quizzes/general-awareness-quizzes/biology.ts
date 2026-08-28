@@ -563,6 +563,13 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Vitamin A is the correct answer',
       },
+      {
+        question:
+          '________ is a hormone that regulates the amount of glucose in the blood',
+        options: ['Insulin', 'Glucagon', 'Cortisol', 'Testosterone'],
+        correct: 0,
+        explanation: 'Insulin is the correct answer',
+      },
     ],
   },
 };

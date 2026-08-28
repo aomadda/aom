@@ -50,6 +50,13 @@ export const zoologyQuiz = {
         correct: 1,
         explanation: '4 is the correct answer',
       },
+      {
+        question:
+          'What is the name of the phylum that includes the roundworm?',
+        options: ['Annelida', 'Arthropoda', 'Mollusca', 'Nematoda'],
+        correct: 3,
+        explanation: 'Nematoda is the correct answer',
+      },
     ],
   },
 };
