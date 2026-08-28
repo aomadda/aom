@@ -793,6 +793,34 @@ Average velocity=
         correct: 0,
         explanation: 'Faraday\'s law of induction is the correct answer',
       },
+      {
+        question:
+          'The bluish color of the water in the deep sea is due to ________',
+        options: ['Scattering of light', 'Reflection of light', 'Refraction of light', 'Diffraction of light'],
+        correct: 0,
+        explanation: 'Scattering of light is the correct answer',
+      },
+      {
+        question:
+          'The blue color of the sky is due to ________',
+        options: ['Scattering of light', 'Reflection of light', 'Refraction of light', 'Diffraction of light'],
+        correct: 0,
+        explanation: 'Scattering of light is the correct answer',
+      },
+      {
+        question:
+          'Which of the following relations represents the correct mathematical form of the Ohm\'s law?',
+        options: ['V = I × R', 'I = V × R', 'R = V × I', 'V = I / R'],
+        correct: 0,
+        explanation: 'V = I × R is the correct answer',
+      },
+      {
+        question:
+          'Twinkling of stars is due to ________',
+        options: ['Scattering of light', 'Reflection of light', 'Refraction of light', 'Diffraction of light'],
+        correct: 2,
+        explanation: 'Refraction of light is the correct answer',
+      },
     ]
   },
 };

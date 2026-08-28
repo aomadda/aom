@@ -956,6 +956,69 @@ export const chemistryQuiz = {
         correct: 2,
         explanation: 'Moseley is the correct answer',
       },
+      {
+        question:
+          'Which group in the Modern Periodic Table has only one non-metal element?',
+        options: ['Group 13', 'Group 14', 'Group 15', 'Group 16'],
+        correct: 1,
+        explanation: 'Group 14 is the correct answer',
+      },
+      {
+        question:
+          'Who among the following was first to find that every eight element has properties similar to that of the first element?',
+        options: ['Johann Dobereiner', 'John Newlands', 'Henry Moseley', 'Dmitri Mendeleev'],
+        correct: 1,
+        explanation: 'John Newlands is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the least reactive metal in the reactivity series?',
+        options: ['Ag', 'Au', 'Cu', 'Hg'],
+        correct: 1,
+        explanation: 'Au is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the most reactive metal in the reactivity series?',
+        options: ['Iron', 'Copper', 'Zinc', 'Titanium'],
+        correct: 0,
+        explanation: 'Iron is the correct answer',
+      },
+      {
+        question:
+          'How many hydrogen atoms will be added along with one carbon atom in the next member of the homologous series of alkanes?',
+        options: ['1', '2', '3', '4'],
+        correct: 1,
+        explanation: '2 is the correct answer',
+      },
+      {
+        question:
+          'Which of the following elements is a liquid at room temperature?',
+        options: ['Bromine', 'Iodine', 'Mercury', 'Sulphur'],
+        correct: 2,
+        explanation: 'Mercury is the correct answer',
+      },
+      {
+        question:
+          'Which of the following elements is a saturated hydrocarbon?',
+        options: ['Methane', 'Ethane', 'Propane', 'Butane'],
+        correct: 0,
+        explanation: 'Methane is the correct answer',
+      },
+      {
+        question:
+          'Which of the following elements is an unsaturated hydrocarbon?',
+        options: ['Ethene', 'Ethane', 'Propene', 'Butene'],
+        correct: 0,
+        explanation: 'Ethene is the correct answer',
+      },
+      {
+        question:
+          'Which of the following elements is an aromatic hydrocarbon?',
+        options: ['Benzene', 'Toluene', 'Xylene', 'Stirene'],
+        correct: 0,
+        explanation: 'Benzene is the correct answer',
+      },
     ],
   },
 };

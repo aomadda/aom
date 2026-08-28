@@ -172,6 +172,13 @@ export const botanyQuiz = {
         correct: 0,
         explanation: 'Pea is the correct answer',
       },
+      {
+        question:
+          'Which of the following plant hormones helps in the growth of plant stems?',
+        options: ['Auxin', 'Cytokinin', 'Gibberellin', 'Abscisic acid'],
+        correct: 2,
+        explanation: 'Gibberellin is the correct answer',
+      },
     ],
   },
 };

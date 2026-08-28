@@ -570,6 +570,146 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Insulin is the correct answer',
       },
+      {
+        question:
+          'The outermost layer of the skin is called ________',
+        options: ['Epidermis', 'Dermis', 'Hypodermis', 'Cutin'],
+        correct: 0,
+        explanation: 'Epidermis is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the largest organ of the human body?',
+        options: ['Skin', 'Liver', 'Heart', 'Brain'],
+        correct: 0,
+        explanation: 'Skin is the correct answer',
+      },
+      {
+        question:
+          'Where is ammonia in the human body is converted into urea?',
+        options: ['Liver', 'Kidney', 'Pancreas', 'Heart'],
+        correct: 0,
+        explanation: 'Liver is the correct answer',
+      },
+      {
+        question:
+          'Where is insulin produced in the human body?',
+        options: ['Pancreas', 'Kidney', 'Liver', 'Spleen'],
+        correct: 0,
+        explanation: 'Pancreas is the correct answer',
+      },
+      {
+        question:
+          'On which of the following pinciples does the human eye work?',
+        options: ['Refraction of light', 'Reflection of light', 'Scattering of light', 'Diffraction of light'],
+        correct: 0,
+        explanation: 'Refraction of light is the correct answer',
+      },
+      {
+        question:
+          'Astigmatism is a disease which affects which of the following?',
+        options: ['Vision', 'Hearing', 'Speech', 'Walking'],
+        correct: 0,
+        explanation: 'Vision is the correct answer',
+      },
+      {
+        question:
+          'Which part of the body does rheumatism affect?',
+        options: ['Joints', 'Muscles', 'Nerves', 'Brain'],
+        correct: 0,
+        explanation: 'Joints is the correct answer',
+      },
+      {
+        question:
+          'Which cell organelle is associated with the generation of ATP (Adenosine Triphosphate)?',
+        options: ['Mitochondria', 'Nucleus', 'Cytoplasm', 'Endoplasmic reticulum'],
+        correct: 0,
+        explanation: 'Mitochondria is the correct answer',
+      },
+      {
+        question:
+          'Which part of the neuron is responsible for acquiring information?',
+        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
+        correct: 0,
+        explanation: 'Dendrites is the correct answer',
+      },
+      {
+        question:
+          'What type of nutrition is observed in mushrooms?',
+        options: ['Autotrophic', 'Heterotrophic', 'Saprophytic', 'Symbiotic'],
+        correct: 2,
+        explanation: 'Saprophytic is the correct answer',
+      },
+      {
+        question:
+          'Which human body part can well be called the "Chemical Factory" of the body?',
+        options: ['Liver', 'Heart', 'Lungs', 'Kidney'],
+        correct: 0,
+        explanation: 'Liver is the correct answer',
+      },
+      {
+        question:
+          'Which vitamin gets destroyed on heating?',
+        options: ['Vitamin A', 'Vitamin B1', 'Vitamin D', 'Vitamin E'],
+        correct: 1,
+        explanation: 'Vitamin B1 is the correct answer',
+      },
+      {
+        question:
+          'Which vitamin is known as the "Wound healing vitamin"?',
+        options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'],
+        correct: 2,
+        explanation: 'Vitamin C is the correct answer',
+      },
+      {
+        question:
+          'Which vitamin commonly known as the "Sunshine vitamin" becuase our skin can produce it when exposed to sunlight?',
+        options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'],
+        correct: 3,
+        explanation: 'Vitamin D is the correct answer',
+      },
+      {
+        question:
+          'Which blood group is known as the "Universal donor"?',
+        options: ['A', 'B', 'AB', 'O'],
+        correct: 3,
+        explanation: 'O is the correct answer',
+      },
+      {
+        question:
+          'Which blood group is known as the "Universal recipient"?',
+        options: ['A', 'B', 'AB', 'O'],
+        correct: 2,
+        explanation: 'AB is the correct answer',
+      },
+      {
+        question:
+          'Which blood component is responsible for maintaining blood pressure and regulating fluid balance?',
+        options: ['Plasma', 'Red blood cells', 'White blood cells', 'Platelets'],
+        correct: 0,
+        explanation: 'Plasma is the correct answer',
+      },
+      {
+        question:
+          'Blood protein which initiates clotting of blood is called ________',
+        options: ['Fibrin', 'Thrombin', 'Prothrombin', 'Fibrinogen'],
+        correct: 2,
+        explanation: 'Prothrombin is the correct answer',
+      },
+      {
+        question:
+          'The blood vessel supplying blood to the kidney is the ______',
+        options: ['Renal artery', 'Hepatic artery', 'Pulmonary artery', 'Carotid artery'],
+        correct: 0,
+        explanation: 'Renal artery is the correct answer',
+      },
+      {
+        question:
+          'In which part of the human body is Villi present?',
+        options: ['Skin', 'Liver', 'Heart', 'Intestine'],
+        correct: 3,
+        explanation: 'Intestine is the correct answer',
+      },
     ],
   },
 };
