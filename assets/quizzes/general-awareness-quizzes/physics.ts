@@ -821,6 +821,97 @@ Average velocity=
         correct: 2,
         explanation: 'Refraction of light is the correct answer',
       },
+      {
+        question:
+          'What is the SI unit of power of a lens called ________',
+        options: ['Diopter', 'Dyne', 'Lumen', 'Lux'],
+        correct: 1,
+        explanation: 'Diopter is the correct answer',
+      },
+      {
+        question:
+          'The resistivity of a material is dependent on which of the following factors?',
+        options: ['Length', 'Area', 'Temperature', 'All of the above'],
+        correct: 2,
+        explanation: 'Temperature is the correct answer',
+      },
+      {
+        question:
+          'The frequency of AC supply for household appliances is ________',
+        options: ['50 Hz', '60 Hz', '100 Hz', '120 Hz'],
+        correct: 0,
+        explanation: '50 Hz is the correct answer',
+      },
+      {
+        question:
+          'We hear others speaking to us from adjacent rooms due to __________ of sound waves',
+        options: ['Echo', 'Reflection', 'Refraction', 'Diffraction'],
+        correct: 3,
+        explanation: 'Diffraction is the correct answer',
+      },
+      {
+        question:
+          'What is the human ear\'s normal audible range?',
+        options: ['20 Hz - 20000 Hz', '20 Hz - 2000 Hz', '20 Hz - 200 Hz', '20 Hz - 2000 Hz'],
+        correct: 0,
+        explanation: '20 Hz - 20000 Hz is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the sound of single frequency?',
+        options: ['Harmonic', 'Tone', 'Noise', 'Note'],
+        correct: 1,
+        explanation: 'Tone is the correct answer',
+      },
+      {
+        question:
+          'What is the wavelength range of infra-red rays?',
+        options: ['780 nm - 1 mm', '800 nm - 1 µm', '400 nm - 1 mm', '600 nm - 1 µm'],
+        correct: 0,
+        explanation: '780 nm - 1 mm is the correct answer',
+      },
+      {
+        question:
+          'Which part of the ear turns the sound vibrations into electrical signals?',
+        options: ['Tympanic membrane', 'Cochlea', 'Auditory nerve', 'Pinna'],
+        correct: 1,
+        explanation: 'Cochlea is the correct answer',
+      },
+      {
+        question:
+          'Four wires of the same material are connected like beads of a garland. The equivalent resistance of the garland is ________',
+        options: ['R/4', 'R/2', 'R', '4R'],
+        correct: 3,
+        explanation: '4R is the correct answer',
+      },
+      {
+        question:
+          'The shape of the voltage-current graph for a conductor is ________',
+        options: ['Straight line', 'Parabola', 'Hyperbola', 'Ellipse'],
+        correct: 0,
+        explanation: 'Straight line is the correct answer',
+      },
+      {
+        question:
+          'Who among the following established a unit of horse power that is equal to one horse doing 33,000 foot-pounds of work per minute?',
+        options: ['James Watt', 'James Croll', 'James Black', 'James Prescott Joule'],
+        correct: 0,
+        explanation: 'James Watt is the correct answer',
+      },
+      {
+        question:
+          'Which one of the following is NOT a scalar quantity?',
+        options: ['Distance', 'Speed', 'Force', 'Time'],
+        correct: 2,
+        explanation: 'Force is the correct answer',
+      },
+      {
+        question:
+          'Which of the following phenomenona is NOT involved during the formation of a rainbow?',
+        options: ['Refraction', 'Total internal reflection', 'Dispersion', 'Scattering'],
+        correct: 3,
+        explanation: 'Scattering is the correct answer',
+      },
     ]
   },
 };

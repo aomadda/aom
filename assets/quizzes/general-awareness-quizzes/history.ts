@@ -1549,6 +1549,13 @@ After an eight‑month siege of Golconda Fort (January–September 1687), Mughal
         correct: 2,
         explanation: 'Tughlaq is the correct answer because it is the dynasty that ruled Delhi immediately after the Khilji dynasty.',
       },
+      {
+        question:
+          'During the First Anglo-Maratha war, who served as the Governor-General of Bengal?',
+        options: ['Cornwallis', 'Wellesley', 'Lord Hardinge', 'Warren Hastings'],
+        correct: 3,
+        explanation: 'Warren Hastings is the correct',
+      },
     ],
   },
 };

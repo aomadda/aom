@@ -710,6 +710,195 @@ export const biologyQuiz = {
         correct: 3,
         explanation: 'Intestine is the correct answer',
       },
+      {
+        question:
+          'Which cell organelle is known as the "Suicide bags of a cell"?',
+        options: ['Centrosome', 'Mitochondria', 'Nucleus', 'Lysosome'],
+        correct: 3,
+        explanation: 'Lysosome is the correct answer',
+      },
+      {
+        question:
+          'Which of the following continues to grow and develop organs to becomes a foetus?',
+        options: ['Embryo', 'Egg', 'Zygote', 'Placenta'],
+        correct: 0,
+        explanation: 'Embryo is the correct answer',
+      },
+      {
+        question:
+          'India\'s first Genetic Bank for Wildlife Conservation is located at ________',
+        options: ['Noida', 'Gurgaon', 'Secunderabad', 'Mumbai'],
+        correct: 2,
+        explanation: 'Secunderabad is the correct answer',
+      },
+      {
+        question:
+          'The process of marking genes in a DNA sequence is called ________',
+        options: ['Annotation', 'Gene expression', 'Proteomics', 'Sequencing'],
+        correct: 0,
+        explanation: 'Annotation is the correct answer',
+      },
+      {
+        question:
+          'Which organisms are classified as Aves?',
+        options: ['Birds', 'Mammals', 'Reptiles', 'Amphibians'],
+        correct: 0,
+        explanation: 'Birds is the correct answer',
+      },
+      {
+        question:
+          'The organisms that do not have a defined nucleus or organelles are classified in to ________ kingdom',
+        options: ['Monera', 'Protista', 'Fungi', 'Plantae'],
+        correct: 0,
+        explanation: 'Monera is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is an example of prokaryotic cell?',
+        options: ['Bacteria', 'Eukaryotic cell', 'Viruses', 'Parasites'],
+        correct: 0,
+        explanation: 'Bacteria is the correct answer',
+      },
+      {
+        question:
+          'How many bones are there in the body of a newborn baby?',
+        options: ['206', '210', '256', '270'],
+        correct: 3,
+        explanation: '270 is the correct answer',
+      },
+      {
+        question:
+          'The disease is caused by a protozoan parasite is ________',
+        options: ['Babesiosis', 'Influenza', 'Blastomycosis', 'Syphilis'],
+        correct: 0,
+        explanation: 'Babesiosis is the correct answer',
+      },
+      {
+        question:
+          'In the human heart, the pulmaonary vein is connected to the ________',
+        options: ['Left atrium', 'Right atrium', 'Left ventricle', 'Right ventricle'],
+        correct: 0,
+        explanation: 'Left atrium is the correct answer',
+      },
+      {
+        question:
+          'The way the brain itnerprets the frequency of an emitted sound is called ________',
+        options: ['Audition', 'Amplitude', 'Pitch', 'Decibel'],
+        correct: 2,
+        explanation: 'Pitch is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is a major source of phospohorus?',
+        options: ['Amla', 'Milk', 'Orange', 'Potato'],
+        correct: 1,
+        explanation: 'Milk is the correct answer',
+      },
+      {
+        question:
+          'The enzyme present in gastric juice is ________',
+        options: ['Amylase', 'Ptyalin', 'Trypsin', 'Pepsin'],
+        correct: 3,
+        explanation: 'Pepsin is the correct answer',
+      },
+      {
+        question:
+          'In humans, which part of the alimentary canal is responsible for the excretion of waste products?',
+        options: ['Anus', 'Small intestine', 'Large intestine', 'Rectum'],
+        correct: 0,
+        explanation: 'Anus is the correct answer',
+      },
+      {
+        question:
+          'Tetanus disease affects which organ of the human body?',
+        options: ['Brain', 'Nervous system', 'Liver', 'Kidney'],
+        correct: 1,
+        explanation: 'Nervous system is the correct answer',
+      },
+      {
+        question:
+          'Which of the following vitamins is a fat soluble vitamin?',
+        options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'],
+        correct: 0,
+        explanation: 'Vitamin A is the correct answer',
+      },
+      {
+        question:
+          'Oesophagus belongs to which major system of the human body?',
+        options: ['Nervous system', 'Digestive system', 'Respiratory system', 'Circulatory system'],
+        correct: 1,
+        explanation: 'Digestive system is the correct answer',
+      },
+      {
+        question:
+          'The liver belongs to which major system of the human body?',
+        options: ['Nervous system', 'Digestive system', 'Respiratory system', 'Circulatory system'],
+        correct: 1,
+        explanation: 'Digestive system is the correct answer',
+      },
+      {
+        question:
+          'A normal adult human being produces ________ milli litres per day of urine daily?',
+        options: ['1000 - 1500', '1000 - 2000', '2000 - 2500', '2500 - 3000'],
+        correct: 1,
+        explanation: '1000 - 2000 is the correct answer',
+      },
+      {
+        question:
+          'Where can we find the glomerulus in the human body?',
+        options: ['Liver', 'Kidney', 'Uterus', 'Bone marrow'],
+        correct: 1,
+        explanation: 'Kidney is the correct answer',
+      },
+      {
+        question:
+          'Copper sulphate and caustic soda are used to test the presence of which of the following?',
+        options: ['Proteins', 'Starch', 'Vitamins', 'Fats'],
+        correct: 0,
+        explanation: 'Proteins is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is non-essential amino acid as it can be made by the human body?',
+        options: ['Methionine', 'Valine', 'Proline', 'Threonine'],
+        correct: 2,
+        explanation: 'Proline is the correct answer',
+      },
+      {
+        question:
+          'The scientific name of the following vitamin is Cobalamin?',
+        options: ['Vitamin B12', 'Vitamin B6', 'Vitamin B1', 'Vitamin C'],
+        correct: 0,
+        explanation: 'Vitamin B12 is the correct answer',
+      },
+      {
+        question:
+          'The most common cause of Goiters (irregular growth of thyroid gland) worldwide is lack of ________',
+        options: ['Iodine', 'Calcium', 'Iron', 'Vitamin B12'],
+        correct: 0,
+        explanation: 'Iodine is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is properly known as Vitamin E?',
+        options: ['Tocopherol', 'Calciferol', 'Retinol', 'Cynocobalamin'],
+        correct: 0,
+        explanation: 'Tocopherol is the correct answer',
+      },
+      {
+        question:
+          'Which of the following vitamins helps in blood clotting?',
+        options: ['Vitamin A', 'Vitamin B12', 'Vitamin K', 'Vitamin D'],
+        correct: 2,
+        explanation: 'Vitamin K is the correct answer',
+      },
+      {
+        question:
+          'Growth hormone is secreted by which of the following gland/organ in the human body?',
+        options: ['Pituitary gland', 'Thyroid gland', 'Adrenal gland', 'Pancreas'],
+        correct: 0,
+        explanation: 'Pituitary gland is the correct answer',
+      },
     ],
   },
 };

@@ -57,6 +57,20 @@ export const zoologyQuiz = {
         correct: 3,
         explanation: 'Nematoda is the correct answer',
       },
+      {
+        question:
+          'Which of the following options is associated with the class of cold-blooded animals?',
+        options: ['Chameleons', 'Macropus', 'Pavo', 'Psittacula'],
+        correct: 0,
+        explanation: 'Chameleons is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is NOT a nocturnal animal?',
+        options: ['Rabbit', 'Bat', 'Mouse', 'Fox'],
+        correct: 0,
+        explanation: 'Rabbit is the correct answer',
+      },
     ],
   },
 };

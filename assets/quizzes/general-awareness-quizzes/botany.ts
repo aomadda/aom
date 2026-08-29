@@ -179,6 +179,48 @@ export const botanyQuiz = {
         correct: 2,
         explanation: 'Gibberellin is the correct answer',
       },
+      {
+        question:
+          'The presence of what distinguishes a plant cell from an animal cell?',
+        options: ['Cell wall', 'Cell membrane', 'Cytoplasm', 'Chloroplast'],
+        correct: 3,
+        explanation: 'Chloroplast is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is NOT a component of the male reproductive part of a flower?',
+        options: ['Anther', 'Filament', 'Pollens', 'Style'],
+        correct: 3,
+        explanation: 'Style is the correct answer',
+      },
+      {
+        question:
+          'Which of the following herbs grows from the stem of the plant?',
+        options: ['Dill', 'Cilantro', 'Parsley', 'Mint'],
+        correct: 3,
+        explanation: 'Mint is the correct answer',
+      },
+      {
+        question:
+          'Ferns belongs to which of the following divisions of the plant kingdom?',
+        options: ['Spermatophytes', 'Bryophytes', 'Pteridophytes', 'Thallophytes'],
+        correct: 2,
+        explanation: 'Pteridophytes is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is commonly called green algae?',
+        options: ['Chlorophyceae', 'Bryophytes', 'Rhodophyceae', 'Phaeophyceae'],
+        correct: 0,
+        explanation: 'Chlorophyceae is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is an insectivorous plant?',
+        options: ['Cuscuta', 'Lichen', 'Mushroom', 'Pitcher'],
+        correct: 3,
+        explanation: 'Pitcher is the correct answer',
+      },
     ],
   },
 };

@@ -1019,6 +1019,83 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Benzene is the correct answer',
       },
+      {
+        question:
+          'Which of the following is formed by the action of chlorine on dry slaked lime?',
+        options: ['Calcium chloride', 'Calcium hydroxide', 'Hydrochloric acid', 'Bleaching powder'],
+        correct: 3,
+        explanation: 'Bleaching powder is the correct answer',
+      },
+      {
+        question:
+          'Which of the following metals forms a green colour coating due to corrosion?',
+        options: ['Iron', 'Copper', 'Zinc', 'Aluminum'],
+        correct: 1,
+        explanation: 'Copper is the correct answer',
+      },
+      {
+        question:
+          'Compounds of a carbon containing carbon-carbon double bond are called ________',
+        options: ['Alkanes', 'Saturated carbon compounds', 'Alkynes', 'Unsaturated carbon compounds'],
+        correct: 3,
+        explanation: 'Unsaturated carbon compounds is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is NOT a halogen gas?',
+        options: ['Bromine', 'Chlorine', 'Fluorine', 'Helium'],
+        correct: 3,
+        explanation: 'Helium is the correct answer',
+      },
+      {
+        question:
+          'What is the gas evolved when zinc reacts with sulphuric acid?',
+        options: ['Hydrogen', 'Oxygen', 'Carbon dioxide', 'Sulphur dioxide'],
+        correct: 0,
+        explanation: 'Hydrogen is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is used to make transparent soaps?',
+        options: ['Ethanol', 'Rosin', 'Sodium carbonate', 'Sodium chloride'],
+        correct: 0,
+        explanation: 'Ethanol is the correct answer',
+      },
+      {
+        question:
+          'Identify the precipitate formed when carbon dioxide gas is passed through lime water?',
+        options: ['Calcium carbonate', 'Calcium hydroxide', 'Calcium chloride', 'Calcium sulphate'],
+        correct: 0,
+        explanation: 'Calcium carbonate is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is a saturated carbon compound?',
+        options: ['Alkane', 'Alkene', 'Alkyne', 'Ethylene'],
+        correct: 0,
+        explanation: 'Alkane is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is used i photographic film?',
+        options: ['Sodium bromide', 'Sodium bicarbonate', 'Sodium thiosulphate', 'Sodium sulphate'],
+        correct: 2,
+        explanation: 'Sodium thiosulphate is the correct answer',
+      },
+      {
+        question:
+          'Which of the following enzymes breaks down starch into simple sugars?',
+        options: ['Amylase', 'Ptyalin', 'Trypsin', 'Pepsin'],
+        correct: 0,
+        explanation: 'Amylase is the correct answer',
+      },
+      {
+        question:
+          'Which material is widely used in aircraft bodies due to its strength and light weight?',
+        options: ['Duralumin', 'Brass', 'Titanium', 'Soldier'],
+        correct: 0,
+        explanation: 'Duralumin is the correct answer',
+      },
     ],
   },
 };
