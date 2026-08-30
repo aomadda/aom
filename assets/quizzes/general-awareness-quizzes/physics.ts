@@ -912,6 +912,27 @@ Average velocity=
         correct: 3,
         explanation: 'Scattering is the correct answer',
       },
+      {
+        question:
+          'The angle between the direction of electric current and magnetic field of an electromagntic wave is ________',
+        options: ['90°', '180°', '360°', '270°'],
+        correct: 0,
+        explanation: '90° is the correct answer',
+      },
+      {
+        question:
+          'Which of the following quantities remains unchanged when a charged particle moves in a magnetic field?',
+        options: ['Kinetic energy', 'Potential energy', 'Momentum', 'Angular momentum'],
+        correct: 0,
+        explanation: 'Kinetic energy is the correct answer',
+      },
+      {
+        question:
+          'Which of the following techniques is used to separate colloidal particles from a solution?',
+        options: ['Filtration', 'Centrifugation', 'Electrolysis', 'Sublimation'],
+        correct: 1,
+        explanation: 'Centrifugation is the correct answer',
+      },
     ]
   },
 };

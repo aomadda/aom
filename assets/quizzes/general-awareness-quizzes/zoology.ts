@@ -71,6 +71,13 @@ export const zoologyQuiz = {
         correct: 0,
         explanation: 'Rabbit is the correct answer',
       },
+      {
+        question:
+          'Amphibians have a ________ chambered heart',
+        options: ['One', 'Two', 'Three', 'Four'],
+        correct: 2,
+        explanation: 'Three is the correct answer',
+      },
     ],
   },
 };

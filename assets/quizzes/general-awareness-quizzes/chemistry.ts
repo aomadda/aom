@@ -1096,6 +1096,13 @@ export const chemistryQuiz = {
         correct: 0,
         explanation: 'Duralumin is the correct answer',
       },
+      {
+        question:
+          'Which of the following edible acids is added to baking soda for making baking powder?',
+        options: ['Citric acid', 'Malic acid', 'Lactic acid', 'Tartaric acid'],
+        correct: 3,
+        explanation: 'Tartaric acid is the correct answer',
+      },
     ],
   },
 };

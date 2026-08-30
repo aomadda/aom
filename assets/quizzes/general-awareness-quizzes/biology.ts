@@ -899,6 +899,27 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Pituitary gland is the correct answer',
       },
+      {
+        question:
+          'The liver belongs to which major system of the human body?',
+        options: ['Nervous system', 'Digestive system', 'Respiratory system', 'Circulatory system'],
+        correct: 1,
+        explanation: 'Digestive system is the correct answer',
+      },
+      {
+        question:
+          'In males, if the ___________ is surgically cut, sperm transfer will be prevented',
+        options: ['Fallopian tube', 'Prostate gland', 'Vas deferens', 'Seminal vesicles'],
+        correct: 2,
+        explanation: 'Vas deferens is the correct answer',
+      },
+      {
+        question:
+          'When the level of growth hormone is low, which releases growth hormone releasing factor and stimulates the pituitary gland to release growth hormone?',
+        options: ['Hypothalamus', 'Pancreas', 'Adrenal gland', 'Thyroid gland'],
+        correct: 0,
+        explanation: 'Hypothalamus is the correct answer',
+      },
     ],
   },
 };

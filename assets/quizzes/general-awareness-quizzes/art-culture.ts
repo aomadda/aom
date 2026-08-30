@@ -32,6 +32,24 @@ It is named after the type-site Kayatha (Kaytha) in Ujjain district, on the bank
         correct: 0,
         explanation: `Ullambana (Ullambana Festival) is associated with Buddhism, particularly Mahayana Buddhism. It is also known as the Ghost Festival in East Asian Buddhist traditions and is associated with making offerings to ancestors and deceased beings.`,
       },
+      {
+        question: 'The Karakattam (Karagattam) dance, known for its unique balancing of pitchers is primarily prevalent in which of the following states of India?',
+        options: ['Tamil Nadu', 'Kerala', 'Andhra Pradesh', 'Maharashtra'],
+        correct: 0,
+        explanation: 'Tamil Nadu is the correct answer',
+      },
+      {
+        question: 'Jabro dance is a nomadic dance of _______',
+        options: ['Assam', 'Ladakh', 'Himachal Pradesh', 'Jammu and Kashmir'],
+        correct: 1,
+        explanation: 'Ladakh is the correct answer',
+      },
+      {
+        question: 'In which of the following Indian states does the Jagar dance form its primary roots?',
+        options: ['Maharashtra', 'Madhya Pradesh', 'Uttarakhand', 'Uttar Pradesh'],
+        correct: 2,
+        explanation: 'Uttarakhand is the correct answer',
+      },
     ],
   },
 };

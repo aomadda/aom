@@ -1556,6 +1556,118 @@ After an eight‑month siege of Golconda Fort (January–September 1687), Mughal
         correct: 3,
         explanation: 'Warren Hastings is the correct',
       },
+      {
+        question:
+          'In 1309 CE, Malik Kafur was invaded which of the following kingdoms in South India?',
+        options: ['Hoysala', 'Pandya', 'Kakatiya', 'Yadava'],
+        correct: 2,
+        explanation: 'Kakatiya is the correct answer',
+      },
+      {
+        question:
+          'Who among the following introduced the system of branding of horses (dagh) and maintaining descriptive rolls of soldiers (chehra)?',
+        options: ['Alauddin Khilji', 'Balban', 'Shamsuddin Iltutmish', 'Feroz Shah Tughlaq'],
+        correct: 0,
+        explanation: 'Alauddin Khilji is the correct answer',
+      },
+      {
+        question:
+          'It is said that South Indian Music, as known today, flourished in the capital city of the Yadavas in the middle ages. The name of this city is ________',
+        options: ['Kaveripattinam', 'Badami', 'Deogiri', 'Hampi'],
+        correct: 2,
+        explanation: 'Deogiri is the correct answer',
+      },
+      {
+        question:
+          'Gangaikonda Cholapuram was established as capital city by which of the following kings?',
+        options: ['Rajendra Chola I', 'Rajendra Chola II', 'Rajaraja Chola I', 'Kulothunga Chola I'],
+        correct: 0,
+        explanation: 'Rajendra Chola I is the correct answer',
+      },
+      {
+        question:
+          'The Pallava dynasty had its capital at which of the following places?',
+        options: ['Kanchipuram', 'Kanyakumari', 'Kaveripattinam', 'Kumbakonam'],
+        correct: 0,
+        explanation: 'Kanchipuram is the correct answer',
+      },
+      {
+        question:
+          'Mos of the Ashoka\'s edicts were compiled in which of the following languages?',
+        options: ['Sanskrit', 'Pali', 'Prakrit', 'Hindi'],
+        correct: 2,
+        explanation: 'Prakrit is the correct answer',
+      },
+      {
+        question:
+          'Seleucus sent his ambassador Megasthenes to the court of which Mauryan ruler?',
+        options: ['Ashoka', 'Chandragupta Maurya', 'Brihadratha', 'Bimbisara'],
+        correct: 1,
+        explanation: 'Chandragupta Maurya is the correct answer',
+      },
+      {
+        question:
+          'What was the name given to the special official appointed by Ashoka to spread his policy of Dhamma?',
+        options: ['Dhamma Lekhas', 'Dhamma Janapada', 'Dhamma Mahamatta', 'Dhamma Mukhyas'],
+        correct: 2,
+        explanation: 'Dhamma Mahamatta is the correct answer',
+      },
+      {
+        question:
+          'Kalidasa, the celebrated Sanskrit poet and dramatist, flourished in the court of which Gupta ruler?',
+        options: ['Samudragupta', 'Chandragupta I', 'Chandragupta II', 'Skandagupta'],
+        correct: 1,
+        explanation: 'Chandragupta I is the correct answer',
+      },
+      {
+        question:
+          'The "Iron Pillar" in Delhi famous for its rust-resistance, was built by which of the following rulers?',
+        options: ['Samudragupta', 'Chandragupta I', 'Chandragupta II', 'Harsha'],
+        correct: 2,
+        explanation: 'Chandragupta II is the correct answer',
+      },
+      {
+        question:
+          'In Vaishali, the Second Buddhist Council was conducted by ________',
+        options: ['Anuruddha', 'Kalashoka', 'Munda', 'Sunidha'],
+        correct: 1,
+        explanation: 'Kalashoka is the correct answer',
+      },
+      {
+        question:
+          'Which of the following baskets of the Buddhist Tipitaka contains monastic rules and regulations?',
+        options: ['Abhidhamma Pitaka', 'Jataka Pitaka', 'Sutta Pitaka', 'Vinaya Pitaka'],
+        correct: 3,
+        explanation: 'Vinaya Pitaka is the correct answer',
+      },
+      {
+        question:
+          'Which Buddhist text, from the 1st century BCE, records the dialuges of the Buddha?',
+        options: ['Abhidhamma Pitaka', 'Jataka Pitaka', 'Sutta Pitaka', 'Vinaya Pitaka'],
+        correct: 2,
+        explanation: 'Sutta Pitaka is the correct answer',
+      },
+      {
+        question:
+          'In Harappan Civilization, at Dholavira, _______ was used to build massive fortifications?',
+        options: ['Bricks', 'Stone', 'Wood', 'Bamboo'],
+        correct: 1,
+        explanation: 'Stone is the correct answer',
+      },
+      {
+        question:
+          'The Harappan Civilization flourished mainly during which of the following archaeological eras?',
+        options: ['Bronze Age', 'Iron Age', 'Stone Age', 'Neolithic Age'],
+        correct: 0,
+        explanation: 'Bronze Age is the correct answer',
+      },
+      {
+        question:
+          'Which of the following Harappan sites is famous for its dockyards?',
+        options: ['Mohenjo-Daro', 'Kalibangan', 'Rakhigarhi', 'Lothal'],
+        correct: 3,
+        explanation: 'Lothal is the correct answer',
+      },
     ],
   },
 };

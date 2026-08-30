@@ -221,6 +221,27 @@ export const botanyQuiz = {
         correct: 3,
         explanation: 'Pitcher is the correct answer',
       },
+      {
+        question:
+          'What do you call the pattern of arrangement of leaves on a sterm or branch?',
+        options: ['Phyllotaxy', 'Thallophytes', 'Apotaxis', 'Geotaxis'],
+        correct: 0,
+        explanation: 'Phyllotaxy is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is responsible for the conversion of stored fats into sugars in plant cell?',
+        options: ['Oxysome', 'Glyoxysome', 'Ribosome', 'Glycolysis'],
+        correct: 1,
+        explanation: 'Glyoxysome is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is human-made material and will NOT be broken down by the action of the microorganisms?',
+        options: ['Plastic', 'Paper', 'Glass', 'Metal'],
+        correct: 0,
+        explanation: 'Plastic is the correct answer',
+      },
     ],
   },
 };
