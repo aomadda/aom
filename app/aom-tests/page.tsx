@@ -22,7 +22,7 @@ const tests = [
       'Solve previous years AOM examination papers to understand question style, weightage, and difficulty',
   },
   {
-    href: '/aom-tests/finance-establishment-rules',
+    href: '/aom-tests/aom-finance-establishment-rules-tests',
     title: 'Finance & Establishment Rules',
     icon: '💰',
     color: 'from-emerald-500 to-teal-600',
@@ -30,7 +30,7 @@ const tests = [
       'Practice finance, accounts, tenders, and establishment rules asked in the AOM promotional examination',
   },
   {
-    href: '/aom-tests/gk-rajabhasha',
+    href: '/aom-tests/aom-gk-rajabhasha-tests',
     title: 'GK & Rajabhasha',
     icon: '🌐',
     color: 'from-sky-500 to-indigo-600',
@@ -38,7 +38,7 @@ const tests = [
       'General knowledge, current affairs, and Rajabhasha (official language) questions for the AOM test',
   },
   {
-    href: '/aom-tests/professional-subject',
+    href: '/aom-tests/aom-professional-subject-tests',
     title: 'Professional Subject',
     icon: '🚂',
     color: 'from-violet-500 to-purple-600',

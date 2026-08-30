@@ -1088,7 +1088,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics railway planning schemes gati shakti terminals Gati Shakti Terminals",
   },
   {
-    href: "/aom-tests/gk-rajabhasha",
+    href: "/aom-tests/aom-gk-rajabhasha-tests",
     title: "AOM GK & Rajabhasha Tests",
     category: "AOM Tests",
     parent: "AOM Tests",
@@ -2165,7 +2165,7 @@ export const searchTopics: SearchTopic[] = [
       "topics block working manual private numbers Private Numbers BWM PN book TSR TI line clear",
   },
   {
-    href: "/aom-tests/professional-subject",
+    href: "/aom-tests/aom-professional-subject-tests",
     title: "AOM Professional Subject Tests",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Professional Subject Tests",

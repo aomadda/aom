@@ -102,9 +102,9 @@ const Navbar = ({ user = null }: NavbarProps) => {
   const aomTestsLinks = [
     { href: '/aom-tests/aom-practice-tests', label: 'AOM Practice Tests', icon: '📝' },
     { href: '/aom-tests/aom-previous-years-papers', label: 'AOM Previous Years Papers', icon: '📂' },
-    { href: '/aom-tests/finance-establishment-rules', label: 'Finance & Establishment Rules', icon: '💰' },
-    { href: '/aom-tests/gk-rajabhasha', label: 'GK & Rajabhasha', icon: '🌐' },
-    { href: '/aom-tests/professional-subject', label: 'Professional Subject', icon: '🚂' },
+    { href: '/aom-tests/aom-finance-establishment-rules-tests', label: 'Finance & Establishment Rules', icon: '💰' },
+    { href: '/aom-tests/aom-gk-rajabhasha-tests', label: 'GK & Rajabhasha', icon: '🌐' },
+    { href: '/aom-tests/aom-professional-subject-tests', label: 'Professional Subject', icon: '🚂' },
   ]
 
   const generalAwarenessLinks = [

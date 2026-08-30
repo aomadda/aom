@@ -173,6 +173,41 @@ const nextConfig: NextConfig = {
         destination: "/topics/aom-special",
         permanent: true,
       },
+      {
+        source: "/aom-tests/professional-subject",
+        destination: "/aom-tests/aom-professional-subject-tests",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/professional-subject/:path*",
+        destination: "/aom-tests/aom-professional-subject-tests/:path*",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-professional-subject-test:id",
+        destination: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test:id",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/finance-establishment-rules",
+        destination: "/aom-tests/aom-finance-establishment-rules-tests",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/finance-establishment-rules/:path*",
+        destination: "/aom-tests/aom-finance-establishment-rules-tests/:path*",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/gk-rajabhasha",
+        destination: "/aom-tests/aom-gk-rajabhasha-tests",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/gk-rajabhasha/:path*",
+        destination: "/aom-tests/aom-gk-rajabhasha-tests/:path*",
+        permanent: true,
+      },
     ];
   },
 };

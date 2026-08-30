@@ -6,6 +6,8 @@ export type ClientQuizSession = {
   userAnswers: (number | null)[]
   endsAt: number
   startedAt: number
+  visited?: boolean[]
+  markedForReview?: boolean[]
 }
 
 type PersistArgs = {

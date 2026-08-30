@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const tests = [
   {
-    href: '/aom-tests/professional-subject/aom-professional-subject-test01',
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test01',
     title: 'AOM Professional Subject Test 01',
     icon: '🚂',
     color: 'from-violet-500 to-purple-600',
@@ -14,7 +14,7 @@ const tests = [
       'Practice paper 1 on operating, G&SR, manuals, and signalling for the AOM examination',
   },
   {
-    href: '/aom-tests/professional-subject/aom-professional-subject-test02',
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test02',
     title: 'AOM Professional Subject Test 02',
     icon: '📘',
     color: 'from-purple-500 to-fuchsia-600',
@@ -22,7 +22,7 @@ const tests = [
       'Practice paper 2 on operating, G&SR, manuals, and signalling for the AOM examination',
   },
   {
-    href: '/aom-tests/professional-subject/aom-professional-subject-test03',
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test03',
     title: 'AOM Professional Subject Test 03',
     icon: '🚦',
     color: 'from-indigo-500 to-violet-600',
@@ -30,7 +30,7 @@ const tests = [
       'Practice paper 3 on operating, G&SR, manuals, and signalling for the AOM examination',
   },
   {
-    href: '/aom-tests/professional-subject/aom-professional-subject-test04',
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test04',
     title: 'AOM Professional Subject Test 04',
     icon: '📡',
     color: 'from-fuchsia-500 to-purple-600',
@@ -38,7 +38,7 @@ const tests = [
       'Practice paper 4 on operating, G&SR, manuals, and signalling for the AOM examination',
   },
   {
-    href: '/aom-tests/professional-subject/aom-professional-subject-test05',
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test05',
     title: 'AOM Professional Subject Test 05',
     icon: '🛤️',
     color: 'from-violet-500 to-indigo-600',

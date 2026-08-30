@@ -1,6 +1,7 @@
 const QUIZ_TITLES: Record<string, string> = {
   'aom-previous-paper-2022': 'AOM Previous Paper 2022',
   'professional-subject': 'AOM Previous Papers 2026 — Professional Subject',
+  'aom-professional-subject-test-01': 'AOM Professional Subject Test 01',
   'gk-rajabhasha': 'AOM Previous Papers 2026 — GK & Rajabhasha',
   'establishment-finance-rules': 'AOM Previous Papers 2026 — Establishment & Financial Rules',
   'accident-manual': 'Accident Manual',
