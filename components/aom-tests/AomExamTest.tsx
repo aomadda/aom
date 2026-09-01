@@ -5,12 +5,9 @@ import { useRouter } from 'next/navigation'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   AlertTriangle,
-  BookOpen,
   Check,
-  CheckCircle2,
   Clock,
-  Flag,
-  RotateCcw,
+  Trash2,
 } from 'lucide-react'
 
 import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
@@ -93,7 +90,7 @@ function StatusSwatch({ status }: { status: AomQuestionStatus }) {
     <span
       className={`relative inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[10px] font-bold ${STATUS_STYLES[status]}`}
     >
-      {status === 'answered-review' ? <Check className="h-3.5 w-3.5 text-emerald-300" /> : null}
+      {status === 'answered-review' ? <Check className="h-5 w-5 stroke-[2.5] text-emerald-300" /> : null}
     </span>
   )
 }
@@ -154,7 +151,7 @@ export default function AomExamTest({
   }, [currentQuestion])
 
   const saveSession = useCallback(() => {
-    if (questions.length === 0 || finishedRef.current) return
+    if (questions.length === 0 || finishedRef.current || !endsAtRef.current) return
     void persistQuizSession({
       storageKey: sessionKey,
       categoryId,
@@ -203,40 +200,11 @@ export default function AomExamTest({
   )
 
   useEffect(() => {
-    if (restoredRef.current) return
-    restoredRef.current = true
-
-    ;(async () => {
-      try {
-        const response = await fetch('/api/progress')
-        if (response.ok) {
-          const data = (await response.json()) as {
-            recentActivity?: { categoryId: string; quizId: string }[]
-          }
-          const done = data.recentActivity?.some(
-            (row) => row.categoryId === categoryId && row.quizId === quizId,
-          )
-          if (done) setCompleted(true)
-        }
-      } catch {
-        // keep going even if progress is unavailable
-      }
-
-      const local = readLocalQuizSession(sessionKey) as ExamSession | null
-      const { session: serverSession } = await fetchServerQuizSessions(categoryId, quizId)
-      const candidate = (local?.userAnswers?.length === questions.length ? local : null) ||
-        (serverSession?.userAnswers?.length === questions.length
-          ? (serverSession as ExamSession)
-          : null)
-
-      if (candidate) {
-        const applied = applySession(candidate)
-        if (!applied) clearSession()
-      }
-
-      setPhase('instructions')
-    })()
-  }, [applySession, categoryId, clearSession, questions.length, quizId, sessionKey])
+    if (phase !== 'exam') return
+    return () => {
+      saveSession()
+    }
+  }, [phase, saveSession])
 
   const startExam = useCallback(
     (resume: boolean) => {
@@ -326,6 +294,60 @@ export default function AomExamTest({
     [categoryId, clearSession, questions, quizId, resultsKey, title],
   )
 
+  useEffect(() => {
+    if (restoredRef.current) return
+    restoredRef.current = true
+
+    ;(async () => {
+      let alreadyDone = false
+      try {
+        const response = await fetch('/api/progress')
+        if (response.ok) {
+          const data = (await response.json()) as {
+            recentActivity?: { categoryId: string; quizId: string }[]
+          }
+          alreadyDone = Boolean(
+            data.recentActivity?.some(
+              (row) => row.categoryId === categoryId && row.quizId === quizId,
+            ),
+          )
+          if (alreadyDone) setCompleted(true)
+        }
+      } catch {
+        // keep going even if progress is unavailable
+      }
+
+      const local = readLocalQuizSession(sessionKey) as ExamSession | null
+      const { session: serverSession } = await fetchServerQuizSessions(categoryId, quizId)
+      const candidates = [local, serverSession].filter(
+        (row): row is ExamSession =>
+          Array.isArray(row?.userAnswers) && row.userAnswers.length === questions.length,
+      )
+      const liveSession = candidates.find((row) => row.endsAt > Date.now())
+      const expiredSession = liveSession ? null : candidates[0]
+
+      if (alreadyDone) {
+        if (!liveSession) clearSession()
+        setPhase('instructions')
+        return
+      }
+
+      if (liveSession && applySession(liveSession)) {
+        setPhase('exam')
+        return
+      }
+
+      if (expiredSession) {
+        const answers = answerArray(questions.length, expiredSession.userAnswers)
+        setUserAnswers(answers)
+        finishExam(answers)
+        return
+      }
+
+      setPhase('instructions')
+    })()
+  }, [applySession, categoryId, clearSession, finishExam, questions.length, quizId, sessionKey])
+
   const openStoredResults = useCallback(() => {
     try {
       const raw = window.localStorage.getItem(scopedQuizStorageKey(resultsKey))
@@ -393,21 +415,18 @@ export default function AomExamTest({
     })
   }
 
-  const markForReviewAndNext = () => {
+  const toggleReview = () => {
     setMarkedForReview((prev) => {
       const next = [...prev]
-      next[currentQuestion] = true
+      next[currentQuestion] = !next[currentQuestion]
       return next
     })
-    if (currentQuestion < questions.length - 1) goToQuestion(currentQuestion + 1)
   }
 
   const saveAndNext = () => {
     if (currentQuestion < questions.length - 1) {
       goToQuestion(currentQuestion + 1)
-      return
     }
-    setShowSubmitConfirm(true)
   }
 
   const counts = useMemo(() => {
@@ -507,11 +526,8 @@ export default function AomExamTest({
             </div>
 
             <div className="space-y-3 px-6 pb-6 sm:px-10">
-              <h2 className="flex items-center gap-2 text-lg font-bold text-slate-800">
-                <BookOpen className="h-5 w-5 text-violet-600" />
-                Exam instructions
-              </h2>
-              <ul className="space-y-2 text-sm leading-relaxed text-slate-600">
+              <h2 className="text-lg font-bold text-slate-800">Exam instructions</h2>
+              <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-slate-600">
                 <li>The total time is based on the number of questions in this paper.</li>
                 <li>
                   Each correct answer carries <strong>{AOM_EXAM_POSITIVE_MARK} mark</strong>. Each
@@ -519,9 +535,17 @@ export default function AomExamTest({
                 </li>
                 <li>You may change your answer at any time before submitting the test.</li>
                 <li>Use Mark for Review to come back to a question later.</li>
+                <li>
+                  The Marked for Review status simply acts as a reminder that you have set to look
+                  at the question again. If an answer is selected for a question that is Marked for
+                  Review, the answer will be considered in the final evaluation.
+                </li>
                 <li>The test is submitted automatically when the timer reaches 00:00.</li>
-                <li>Do not refresh or close the tab during the exam. Your attempt will be saved.</li>
-              </ul>
+                <li>
+                  Do not refresh or close the tab during the exam. If you refresh, close the tab, or
+                  go to another page, your attempt is saved and the test will resume when you return.
+                </li>
+              </ol>
             </div>
 
             <div className="mx-6 mb-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:mx-10 sm:p-5">
@@ -752,70 +776,84 @@ export default function AomExamTest({
               {question.options.map((option, index) => {
                 const isSelected = selected === index
                 return (
-                  <button
-                    key={`${index}-${option}`}
-                    type="button"
-                    onClick={() => selectAnswer(index)}
-                    aria-pressed={isSelected}
-                    className={`flex w-full items-center gap-3 rounded-xl border-2 px-3 py-3 text-left transition ${
-                      isSelected
-                        ? 'border-violet-500 bg-violet-50 text-violet-900 shadow-sm'
-                        : 'border-slate-200 hover:border-violet-300 hover:bg-violet-50/60'
-                    }`}
-                  >
-                    <span
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                        isSelected ? 'bg-violet-600 text-white' : 'bg-slate-100 text-slate-600'
+                  <div key={`${index}-${option}`} className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => selectAnswer(index)}
+                      aria-pressed={isSelected}
+                      className={`flex min-w-0 flex-1 items-center gap-3 rounded-xl border-2 px-3 py-3 text-left transition ${
+                        isSelected
+                          ? 'border-violet-500 bg-violet-50 text-violet-900 shadow-sm'
+                          : 'border-slate-200 hover:border-violet-300 hover:bg-violet-50/60'
                       }`}
                     >
-                      {String.fromCharCode(65 + index)}
-                    </span>
-                    <span className="text-sm font-medium sm:text-base">{option}</span>
-                  </button>
+                      <span
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                          isSelected ? 'bg-violet-600 text-white' : 'bg-slate-100 text-slate-600'
+                        }`}
+                      >
+                        {String.fromCharCode(65 + index)}
+                      </span>
+                      <span className="text-sm font-medium sm:text-base">{option}</span>
+                    </button>
+                    {isSelected ? (
+                      <button
+                        type="button"
+                        onClick={clearResponse}
+                        aria-label="Clear selected answer"
+                        className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-red-200 bg-red-50 text-red-600 transition hover:bg-red-100"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </button>
+                    ) : null}
+                  </div>
                 )
               })}
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              <button
-                type="button"
-                onClick={() => currentQuestion > 0 && goToQuestion(currentQuestion - 1)}
-                disabled={currentQuestion === 0}
-                className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 disabled:opacity-40"
-              >
-                Previous
-              </button>
-              <button
-                type="button"
-                onClick={clearResponse}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-amber-300 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-800"
-              >
-                <RotateCcw className="h-4 w-4" />
-                Clear response
-              </button>
-              <button
-                type="button"
-                onClick={markForReviewAndNext}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-violet-100 px-4 py-2 text-sm font-semibold text-violet-800"
-              >
-                <Flag className="h-4 w-4" />
-                Mark for review & next
-              </button>
-              <button
-                type="button"
-                onClick={saveAndNext}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
-              >
-                <CheckCircle2 className="h-4 w-4" />
-                {currentQuestion === questions.length - 1 ? 'Save & submit' : 'Save & next'}
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowSubmitConfirm(true)}
-                className="ml-auto rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white"
-              >
-                Submit test
-              </button>
+            <div className="mt-6 grid grid-cols-3 items-center gap-2">
+              <div className="justify-self-start">
+                <button
+                  type="button"
+                  onClick={() => currentQuestion > 0 && goToQuestion(currentQuestion - 1)}
+                  disabled={currentQuestion === 0}
+                  className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 disabled:opacity-40"
+                >
+                  Previous
+                </button>
+              </div>
+              <div className="justify-self-center">
+                <button
+                  type="button"
+                  onClick={toggleReview}
+                  className={`rounded-lg px-4 py-2 text-sm font-semibold ${
+                    markedForReview[currentQuestion]
+                      ? 'bg-violet-600 text-white'
+                      : 'bg-violet-100 text-violet-800'
+                  }`}
+                >
+                  Review
+                </button>
+              </div>
+              <div className="justify-self-end">
+                {currentQuestion === questions.length - 1 && selected !== null ? (
+                  <button
+                    type="button"
+                    onClick={() => setShowSubmitConfirm(true)}
+                    className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
+                  >
+                    Submit test
+                  </button>
+                ) : currentQuestion < questions.length - 1 ? (
+                  <button
+                    type="button"
+                    onClick={saveAndNext}
+                    className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
+                  >
+                    Save & next
+                  </button>
+                ) : null}
+              </div>
             </div>
           </div>
 
@@ -834,14 +872,16 @@ export default function AomExamTest({
                       key={index}
                       type="button"
                       onClick={() => goToQuestion(index)}
-                      className={`relative flex h-10 items-center justify-center rounded-lg text-sm font-bold ${STATUS_STYLES[status]} ${
+                      className={`relative flex h-11 items-center justify-center rounded-lg text-sm font-bold ${STATUS_STYLES[status]} ${
                         currentQuestion === index ? 'ring-2 ring-offset-2 ring-slate-800' : ''
                       }`}
                       aria-label={`Question ${index + 1}, ${status}`}
                     >
                       {index + 1}
                       {status === 'answered-review' ? (
-                        <Check className="absolute right-0.5 bottom-0.5 h-3 w-3 text-emerald-300" />
+                        <span className="absolute -right-1 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md ring-2 ring-white">
+                          <Check className="h-4 w-4 stroke-3" />
+                        </span>
                       ) : null}
                     </button>
                   )

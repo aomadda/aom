@@ -184,7 +184,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/aom-tests/aom-professional-subject-test:id",
+        source: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-tests",
+        destination: "/aom-tests/aom-professional-subject-tests",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-professional-subject-test:id(\\d+)",
         destination: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test:id",
         permanent: true,
       },
