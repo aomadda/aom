@@ -285,14 +285,6 @@ export const commercialDepartmentQuizzes = {
               "H2SO4 is the chemical formula for sulfuric acid, a strong acid commonly used in industry.",
           },
         ],
-        "chapter-3": [
-          {
-            question: 'Free time for Demurrage/Wharfage calculation depends upon _______',
-            options: ["Height of Wagon", "Type of Wagon", "Load of Wagon", "Width of Wagon"],
-            correct: 1,
-            explanation:
-              'Free time for Demurrage/Wharfage calculation depends upon Type of Wagon',
-          },
-        ],
+        
       },
 }

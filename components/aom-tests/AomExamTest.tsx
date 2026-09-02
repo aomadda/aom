@@ -57,6 +57,7 @@ type AomExamTestProps = {
   quizId: string
   questions: AomExamQuestion[]
   sections?: AomExamPaperSection[]
+  sectionNoun?: string
   backHref: string
   backLabel: string
 }
@@ -118,6 +119,7 @@ export default function AomExamTest({
   quizId,
   questions,
   sections,
+  sectionNoun = 'paper',
   backHref,
   backLabel,
 }: AomExamTestProps) {
@@ -156,6 +158,9 @@ export default function AomExamTest({
     return [{ id: 'paper', title, startIndex: 0, count: questions.length }]
   }, [questions.length, sections, title])
   const hasPaperNav = Boolean(sections && sections.length > 1)
+  const compactSectionNav = hasPaperNav && paperSections.length > 4
+  const sectionNounPlural = `${sectionNoun}s`
+  const sectionsHeading = `${sectionNounPlural.charAt(0).toUpperCase()}${sectionNounPlural.slice(1)} in this test`
   const sectionCursorRef = useRef<Record<string, number>>({})
 
   useEffect(() => {
@@ -540,7 +545,9 @@ export default function AomExamTest({
                 </p>
                 <p className="mt-1 text-2xl font-bold text-violet-900">{questions.length}</p>
                 {hasPaperNav ? (
-                  <p className="text-xs text-violet-700">{paperSections.length} papers in one test</p>
+                  <p className="text-xs text-violet-700">
+                    {paperSections.length} {sectionNounPlural} in one test
+                  </p>
                 ) : null}
               </div>
               <div className="rounded-2xl border border-purple-100 bg-purple-50 p-4">
@@ -569,8 +576,9 @@ export default function AomExamTest({
                 <li>The total time is based on the number of questions in this paper.</li>
                 {hasPaperNav ? (
                   <li>
-                    This test combines {paperSections.length} papers. You can open any paper from the
-                    top bar at any time during the exam. The timer is shared across all papers.
+                    This test combines {paperSections.length} {sectionNounPlural}. You can open any{' '}
+                    {sectionNoun} from the top bar at any time during the exam. The timer is shared
+                    across all {sectionNounPlural}.
                   </li>
                 ) : null}
                 <li>
@@ -594,7 +602,7 @@ export default function AomExamTest({
 
             {hasPaperNav ? (
               <div className="mx-6 mb-6 rounded-2xl border border-violet-100 bg-violet-50/70 p-4 sm:mx-10">
-                <h3 className="mb-3 text-sm font-bold text-slate-800">Papers in this test</h3>
+                <h3 className="mb-3 text-sm font-bold text-slate-800">{sectionsHeading}</h3>
                 <ul className="space-y-2 text-sm text-slate-700">
                   {paperSections.map((section, index) => (
                     <li key={section.id} className="flex items-center justify-between gap-3">
@@ -888,7 +896,13 @@ export default function AomExamTest({
         </div>
 
         {hasPaperNav ? (
-          <div className="mb-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
+          <div
+            className={
+              compactSectionNav
+                ? 'mb-4 flex flex-wrap gap-2'
+                : 'mb-4 grid grid-cols-1 gap-2 sm:grid-cols-3'
+            }
+          >
             {paperSections.map((section) => {
               const isActive = section.id === activeSection.id
               const answered = questions
@@ -900,16 +914,24 @@ export default function AomExamTest({
                   type="button"
                   onClick={() => goToSection(section)}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`rounded-2xl border-2 px-4 py-3 text-left shadow-sm transition ${
-                    isActive
-                      ? 'border-violet-600 bg-violet-600 text-white shadow-md'
-                      : 'border-white bg-white text-slate-800 hover:border-violet-300'
-                  }`}
+                  className={
+                    compactSectionNav
+                      ? `rounded-xl border-2 px-3 py-2 text-left shadow-sm transition ${
+                          isActive
+                            ? 'border-violet-600 bg-violet-600 text-white shadow-md'
+                            : 'border-white bg-white text-slate-800 hover:border-violet-300'
+                        }`
+                      : `rounded-2xl border-2 px-4 py-3 text-left shadow-sm transition ${
+                          isActive
+                            ? 'border-violet-600 bg-violet-600 text-white shadow-md'
+                            : 'border-white bg-white text-slate-800 hover:border-violet-300'
+                        }`
+                  }
                 >
                   <p className={`text-sm font-bold ${isActive ? 'text-white' : 'text-slate-800'}`}>
                     {section.title}
                   </p>
-                  <p className={`mt-1 text-xs ${isActive ? 'text-violet-100' : 'text-slate-500'}`}>
+                  <p className={`mt-0.5 text-xs ${isActive ? 'text-violet-100' : 'text-slate-500'}`}>
                     {answered}/{section.count} answered
                   </p>
                 </button>

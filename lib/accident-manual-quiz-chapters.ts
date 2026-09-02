@@ -1,0 +1,98 @@
+export const ACCIDENT_MANUAL_QUIZ_CHAPTERS = [
+  {
+    slug: 'chapter-1',
+    quizId: 'chapter-1',
+    title: 'Accident Manual Chapter 1',
+    shortTitle: 'Chapter 1',
+    icon: '⚠️',
+    color: 'from-red-500 to-rose-600',
+    description: 'Practice Chapter 1 questions on accident classification and inquiry in exam mode',
+  },
+  {
+    slug: 'chapter-2',
+    quizId: 'chapter-2',
+    title: 'Accident Manual Chapter 2',
+    shortTitle: 'Chapter 2',
+    icon: '📋',
+    color: 'from-rose-500 to-red-600',
+    description: 'Practice Chapter 2 questions on accident reporting and duties in exam mode',
+  },
+  {
+    slug: 'chapter-3',
+    quizId: 'chapter-3',
+    title: 'Accident Manual Chapter 3',
+    shortTitle: 'Chapter 3',
+    icon: '🚂',
+    color: 'from-orange-500 to-red-600',
+    description: 'Practice Chapter 3 questions from the Accident Manual in exam mode',
+  },
+  {
+    slug: 'chapter-4',
+    quizId: 'chapter-4',
+    title: 'Accident Manual Chapter 4',
+    shortTitle: 'Chapter 4',
+    icon: '📡',
+    color: 'from-red-500 to-orange-600',
+    description: 'Practice Chapter 4 questions from the Accident Manual in exam mode',
+  },
+  {
+    slug: 'chapter-5',
+    quizId: 'chapter-5',
+    title: 'Accident Manual Chapter 5',
+    shortTitle: 'Chapter 5',
+    icon: '🧯',
+    color: 'from-rose-500 to-pink-600',
+    description: 'Practice Chapter 5 questions from the Accident Manual in exam mode',
+  },
+  {
+    slug: 'chapter-6',
+    quizId: 'chapter-6',
+    title: 'Accident Manual Chapter 6',
+    shortTitle: 'Chapter 6',
+    icon: '🛠️',
+    color: 'from-red-600 to-rose-500',
+    description: 'Practice Chapter 6 questions from the Accident Manual in exam mode',
+  },
+  {
+    slug: 'chapter-7',
+    quizId: 'chapter-7',
+    title: 'Accident Manual Chapter 7',
+    shortTitle: 'Chapter 7',
+    icon: '📝',
+    color: 'from-orange-500 to-rose-600',
+    description: 'Practice Chapter 7 questions from the Accident Manual in exam mode',
+  },
+  {
+    slug: 'chapter-8',
+    quizId: 'chapter-8',
+    title: 'Accident Manual Chapter 8',
+    shortTitle: 'Chapter 8',
+    icon: '🚧',
+    color: 'from-rose-600 to-red-500',
+    description: 'Practice Chapter 8 questions from the Accident Manual in exam mode',
+  },
+  {
+    slug: 'chapter-9',
+    quizId: 'chapter-9',
+    title: 'Accident Manual Chapter 9',
+    shortTitle: 'Chapter 9',
+    icon: '📑',
+    color: 'from-red-500 to-pink-600',
+    description: 'Practice Chapter 9 questions from the Accident Manual in exam mode',
+  },
+  {
+    slug: 'am-appendix-v',
+    quizId: 'AM Appendix V',
+    title: 'Accident Manual Appendix V',
+    shortTitle: 'Appendix V',
+    icon: '📘',
+    color: 'from-rose-500 to-orange-600',
+    description: 'Practice Accident Manual Appendix V penalty questions in exam mode',
+  },
+] as const
+
+export type AccidentManualQuizChapter = (typeof ACCIDENT_MANUAL_QUIZ_CHAPTERS)[number]
+
+export function getAccidentManualQuizChapter(slug: string) {
+  return ACCIDENT_MANUAL_QUIZ_CHAPTERS.find((chapter) => chapter.slug === slug)
+}

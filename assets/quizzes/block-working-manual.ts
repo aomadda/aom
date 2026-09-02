@@ -130,6 +130,10 @@ export const blockWorkingManualQuizzes = {
             explanation:
               'Andy Warhol is famous for his "Campbell\'s Soup Cans" series, which became an icon of Pop Art.',
           },
+          
+        ],
+       
+        "chapter-2": [
           {
             question:
               "What is the technique of painting with water-soluble pigments called?",
@@ -253,9 +257,6 @@ export const blockWorkingManualQuizzes = {
             explanation:
               'Salvador Dalí painted "The Persistence of Memory," featuring melting clocks in a dreamlike landscape.',
           },
-        ],
-       
-        "chapter-2": [
           
         ],
       },
