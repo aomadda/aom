@@ -8,6 +8,7 @@ import {
   Check,
   Clock,
   Trash2,
+  X,
 } from 'lucide-react'
 
 import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
@@ -43,11 +44,19 @@ type StoredResult = {
   answers: (number | null)[]
 }
 
+export type AomExamPaperSection = {
+  id: string
+  title: string
+  startIndex: number
+  count: number
+}
+
 type AomExamTestProps = {
   title: string
   categoryId: string
   quizId: string
   questions: AomExamQuestion[]
+  sections?: AomExamPaperSection[]
   backHref: string
   backLabel: string
 }
@@ -85,6 +94,14 @@ function answerArray(length: number, source?: (number | null)[]) {
   })
 }
 
+function getSectionForIndex(sections: AomExamPaperSection[], index: number) {
+  return (
+    sections.find(
+      (section) => index >= section.startIndex && index < section.startIndex + section.count,
+    ) ?? sections[0]
+  )
+}
+
 function StatusSwatch({ status }: { status: AomQuestionStatus }) {
   return (
     <span
@@ -100,6 +117,7 @@ export default function AomExamTest({
   categoryId,
   quizId,
   questions,
+  sections,
   backHref,
   backLabel,
 }: AomExamTestProps) {
@@ -133,6 +151,12 @@ export default function AomExamTest({
 
   const durationSeconds = getExamDurationSeconds(questions.length || 1)
   const durationMinutes = Math.ceil(durationSeconds / 60)
+  const paperSections = useMemo<AomExamPaperSection[]>(() => {
+    if (sections && sections.length > 0) return sections
+    return [{ id: 'paper', title, startIndex: 0, count: questions.length }]
+  }, [questions.length, sections, title])
+  const hasPaperNav = Boolean(sections && sections.length > 1)
+  const sectionCursorRef = useRef<Record<string, number>>({})
 
   useEffect(() => {
     answersRef.current = userAnswers
@@ -148,7 +172,9 @@ export default function AomExamTest({
 
   useEffect(() => {
     currentQuestionRef.current = currentQuestion
-  }, [currentQuestion])
+    const section = getSectionForIndex(paperSections, currentQuestion)
+    if (section) sectionCursorRef.current[section.id] = currentQuestion
+  }, [currentQuestion, paperSections])
 
   const saveSession = useCallback(() => {
     if (questions.length === 0 || finishedRef.current || !endsAtRef.current) return
@@ -399,6 +425,15 @@ export default function AomExamTest({
     })
   }
 
+  const goToSection = (section: AomExamPaperSection) => {
+    const saved = sectionCursorRef.current[section.id]
+    const inRange =
+      typeof saved === 'number' &&
+      saved >= section.startIndex &&
+      saved < section.startIndex + section.count
+    goToQuestion(inRange ? saved : section.startIndex)
+  }
+
   const selectAnswer = (optionIndex: number) => {
     setUserAnswers((prev) => {
       const next = [...prev]
@@ -504,6 +539,9 @@ export default function AomExamTest({
                   Questions
                 </p>
                 <p className="mt-1 text-2xl font-bold text-violet-900">{questions.length}</p>
+                {hasPaperNav ? (
+                  <p className="text-xs text-violet-700">{paperSections.length} papers in one test</p>
+                ) : null}
               </div>
               <div className="rounded-2xl border border-purple-100 bg-purple-50 p-4">
                 <p className="text-xs font-semibold tracking-wide text-purple-600 uppercase">
@@ -529,6 +567,12 @@ export default function AomExamTest({
               <h2 className="text-lg font-bold text-slate-800">Exam instructions</h2>
               <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-slate-600">
                 <li>The total time is based on the number of questions in this paper.</li>
+                {hasPaperNav ? (
+                  <li>
+                    This test combines {paperSections.length} papers. You can open any paper from the
+                    top bar at any time during the exam. The timer is shared across all papers.
+                  </li>
+                ) : null}
                 <li>
                   Each correct answer carries <strong>{AOM_EXAM_POSITIVE_MARK} mark</strong>. Each
                   wrong answer attracts a negative mark of <strong>{AOM_EXAM_NEGATIVE_MARK}</strong>.
@@ -547,6 +591,24 @@ export default function AomExamTest({
                 </li>
               </ol>
             </div>
+
+            {hasPaperNav ? (
+              <div className="mx-6 mb-6 rounded-2xl border border-violet-100 bg-violet-50/70 p-4 sm:mx-10">
+                <h3 className="mb-3 text-sm font-bold text-slate-800">Papers in this test</h3>
+                <ul className="space-y-2 text-sm text-slate-700">
+                  {paperSections.map((section, index) => (
+                    <li key={section.id} className="flex items-center justify-between gap-3">
+                      <span>
+                        {index + 1}. {section.title}
+                      </span>
+                      <span className="shrink-0 text-xs font-semibold text-violet-700">
+                        {section.count} questions
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
 
             <div className="mx-6 mb-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:mx-10 sm:p-5">
               <h3 className="mb-3 text-sm font-bold text-slate-800">Question palette</h3>
@@ -677,60 +739,106 @@ export default function AomExamTest({
             <div className="bg-linear-to-r from-slate-950 via-violet-950 to-fuchsia-950 px-6 py-7 text-center text-white">
               <h2 className="text-2xl font-bold">Answer key & explanation</h2>
             </div>
-            <ol className="divide-y divide-slate-100">
-              {questions.map((question, index) => {
-                const userAnswer = userAnswers[index]
-                const skipped = userAnswer === null
-                const isCorrect = userAnswer === question.correct
-                return (
-                  <li key={`${index}-${question.question.slice(0, 24)}`} className="px-5 py-6 sm:px-8">
-                    <div className="mb-3 flex items-start justify-between gap-3">
-                      <h3 className="font-semibold text-slate-800">Question {index + 1}</h3>
-                      <span
-                        className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                          skipped
-                            ? 'bg-amber-100 text-amber-800'
-                            : isCorrect
-                              ? 'bg-emerald-100 text-emerald-800'
-                              : 'bg-red-100 text-red-800'
-                        }`}
-                      >
-                        {skipped ? 'Unanswered' : isCorrect ? 'Correct' : 'Wrong (−0.33)'}
-                      </span>
-                    </div>
-                    <p className="mb-4 text-sm leading-relaxed text-slate-700 sm:text-base">
-                      {question.question}
-                    </p>
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                        <p className="text-[11px] font-semibold tracking-wide text-slate-500 uppercase">
-                          Your answer
-                        </p>
-                        <p className="mt-1 text-sm font-medium text-slate-800">
-                          {userAnswer !== null ? question.options[userAnswer] : 'Not answered'}
-                        </p>
-                      </div>
-                      <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                        <p className="text-[11px] font-semibold tracking-wide text-emerald-700 uppercase">
-                          Correct answer
-                        </p>
-                        <p className="mt-1 text-sm font-medium text-emerald-900">
-                          {question.options[question.correct]}
-                        </p>
-                      </div>
-                    </div>
-                    {question.explanation ? (
-                      <div className="mt-3 rounded-2xl border border-sky-100 bg-sky-50 p-4">
-                        <p className="text-[11px] font-semibold tracking-wide text-sky-700 uppercase">
-                          Explanation
-                        </p>
-                        <p className="mt-1 text-sm text-sky-900">{question.explanation}</p>
-                      </div>
-                    ) : null}
-                  </li>
-                )
-              })}
-            </ol>
+            {paperSections.map((section) => (
+              <div key={section.id}>
+                {hasPaperNav ? (
+                  <div className="border-t border-slate-200 bg-slate-50 px-5 py-3 sm:px-8">
+                    <h3 className="text-sm font-bold tracking-wide text-violet-800 uppercase">
+                      {section.title}
+                    </h3>
+                  </div>
+                ) : null}
+                <ol className="divide-y divide-slate-100">
+                  {questions
+                    .slice(section.startIndex, section.startIndex + section.count)
+                    .map((question, localIndex) => {
+                      const index = section.startIndex + localIndex
+                      const userAnswer = userAnswers[index]
+                      const skipped = userAnswer === null
+                      const isCorrect = userAnswer === question.correct
+                      return (
+                        <li
+                          key={`${index}-${question.question.slice(0, 24)}`}
+                          className="px-5 py-6 sm:px-8"
+                        >
+                          <div className="mb-3 flex items-start justify-between gap-3">
+                            <h3 className="font-semibold text-slate-800">
+                              Question {localIndex + 1}
+                            </h3>
+                            <span
+                              className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                                skipped
+                                  ? 'bg-amber-100 text-amber-800'
+                                  : isCorrect
+                                    ? 'bg-emerald-100 text-emerald-800'
+                                    : 'bg-red-100 text-red-800'
+                              }`}
+                            >
+                              {skipped ? 'Unanswered' : isCorrect ? 'Correct' : 'Wrong (−0.33)'}
+                            </span>
+                          </div>
+                          <p className="mb-4 text-sm leading-relaxed text-slate-700 sm:text-base">
+                            {question.question}
+                          </p>
+                          <div className="space-y-2.5">
+                            {question.options.map((option, optionIndex) => {
+                              const isCorrectOption = optionIndex === question.correct
+                              return (
+                                <div
+                                  key={`${index}-${optionIndex}-${option}`}
+                                  className={`flex items-center gap-3 rounded-xl border-2 px-3 py-3 ${
+                                    isCorrectOption
+                                      ? 'border-emerald-200 bg-emerald-50'
+                                      : 'border-rose-100 bg-rose-50'
+                                  }`}
+                                >
+                                  {isCorrectOption ? (
+                                    <Check
+                                      className="h-5 w-5 shrink-0 text-emerald-600"
+                                      strokeWidth={3}
+                                      aria-label="Correct option"
+                                    />
+                                  ) : (
+                                    <X
+                                      className="h-5 w-5 shrink-0 text-rose-500"
+                                      strokeWidth={3}
+                                      aria-label="Incorrect option"
+                                    />
+                                  )}
+                                  <span
+                                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                                      isCorrectOption
+                                        ? 'bg-emerald-600 text-white'
+                                        : 'bg-rose-400 text-white'
+                                    }`}
+                                  >
+                                    {String.fromCharCode(65 + optionIndex)}
+                                  </span>
+                                  <span
+                                    className={`text-sm font-medium sm:text-base ${
+                                      isCorrectOption ? 'text-emerald-950' : 'text-rose-950'
+                                    }`}
+                                  >
+                                    {option}
+                                  </span>
+                                </div>
+                              )
+                            })}
+                          </div>
+                          {question.explanation ? (
+                            <div className="mt-3 rounded-2xl border border-sky-100 bg-sky-50 p-4">
+                              <p className="text-[11px] font-semibold tracking-wide text-sky-700 uppercase">
+                                Explanation
+                              </p>
+                              <p className="mt-1 text-sm text-sky-900">{question.explanation}</p>
+                            </div>
+                          ) : null}
+                        </li>
+                      )
+                    })}
+                </ol>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -740,6 +848,13 @@ export default function AomExamTest({
   const question = questions[currentQuestion]
   const selected = userAnswers[currentQuestion]
   const timerUrgent = timeLeft <= 5 * 60
+  const activeSection = getSectionForIndex(paperSections, currentQuestion)
+  const localQuestion = currentQuestion - activeSection.startIndex
+  const isLastQuestion = currentQuestion === questions.length - 1
+
+  if (!question || !activeSection) {
+    return null
+  }
 
   return (
     <div className="min-h-screen bg-linear-to-br from-violet-50 via-purple-50 to-fuchsia-50 px-3 py-4 sm:px-4 sm:py-6">
@@ -753,8 +868,13 @@ export default function AomExamTest({
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
-              Q {currentQuestion + 1} / {questions.length}
+              Q {localQuestion + 1} / {activeSection.count}
             </span>
+            {hasPaperNav ? (
+              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
+                Total {currentQuestion + 1} / {questions.length}
+              </span>
+            ) : null}
             <span
               className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-sm font-bold ${
                 timerUrgent ? 'bg-red-100 text-red-700' : 'bg-violet-100 text-violet-800'
@@ -767,10 +887,46 @@ export default function AomExamTest({
           </div>
         </div>
 
+        {hasPaperNav ? (
+          <div className="mb-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
+            {paperSections.map((section) => {
+              const isActive = section.id === activeSection.id
+              const answered = questions
+                .slice(section.startIndex, section.startIndex + section.count)
+                .filter((_, index) => userAnswers[section.startIndex + index] !== null).length
+              return (
+                <button
+                  key={section.id}
+                  type="button"
+                  onClick={() => goToSection(section)}
+                  aria-current={isActive ? 'page' : undefined}
+                  className={`rounded-2xl border-2 px-4 py-3 text-left shadow-sm transition ${
+                    isActive
+                      ? 'border-violet-600 bg-violet-600 text-white shadow-md'
+                      : 'border-white bg-white text-slate-800 hover:border-violet-300'
+                  }`}
+                >
+                  <p className={`text-sm font-bold ${isActive ? 'text-white' : 'text-slate-800'}`}>
+                    {section.title}
+                  </p>
+                  <p className={`mt-1 text-xs ${isActive ? 'text-violet-100' : 'text-slate-500'}`}>
+                    {answered}/{section.count} answered
+                  </p>
+                </button>
+              )
+            })}
+          </div>
+        ) : null}
+
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div className="rounded-2xl bg-white p-4 shadow-lg sm:p-6">
+            {hasPaperNav ? (
+              <p className="mb-2 text-xs font-semibold tracking-wide text-violet-600 uppercase">
+                {activeSection.title}
+              </p>
+            ) : null}
             <h2 className="mb-5 text-base leading-relaxed font-semibold text-slate-800 sm:text-lg">
-              {currentQuestion + 1}. {question.question}
+              {localQuestion + 1}. {question.question}
             </h2>
             <div className="space-y-2.5">
               {question.options.map((option, index) => {
@@ -811,8 +967,8 @@ export default function AomExamTest({
               })}
             </div>
 
-            <div className="mt-6 grid grid-cols-3 items-center gap-2">
-              <div className="justify-self-start">
+            <div className="mt-6 flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
                 <button
                   type="button"
                   onClick={() => currentQuestion > 0 && goToQuestion(currentQuestion - 1)}
@@ -821,8 +977,6 @@ export default function AomExamTest({
                 >
                   Previous
                 </button>
-              </div>
-              <div className="justify-self-center">
                 <button
                   type="button"
                   onClick={toggleReview}
@@ -835,33 +989,37 @@ export default function AomExamTest({
                   Review
                 </button>
               </div>
-              <div className="justify-self-end">
-                {currentQuestion === questions.length - 1 && selected !== null ? (
-                  <button
-                    type="button"
-                    onClick={() => setShowSubmitConfirm(true)}
-                    className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
-                  >
-                    Submit test
-                  </button>
-                ) : currentQuestion < questions.length - 1 ? (
-                  <button
-                    type="button"
-                    onClick={saveAndNext}
-                    className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
-                  >
-                    Save & next
-                  </button>
-                ) : null}
-              </div>
+              {isLastQuestion && selected !== null ? (
+                <button
+                  type="button"
+                  onClick={() => setShowSubmitConfirm(true)}
+                  className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
+                >
+                  Submit test
+                </button>
+              ) : currentQuestion < questions.length - 1 ? (
+                <button
+                  type="button"
+                  onClick={saveAndNext}
+                  className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
+                >
+                  Save & next
+                </button>
+              ) : null}
             </div>
           </div>
 
           <aside className="space-y-4">
             <div className="rounded-2xl bg-white p-4 shadow-lg sm:p-5">
-              <h3 className="mb-3 text-sm font-bold text-slate-800">Question palette</h3>
+              <h3 className="text-sm font-bold text-slate-800">Question palette</h3>
+              {hasPaperNav ? (
+                <p className="mb-3 mt-1 text-xs text-slate-500">{activeSection.title}</p>
+              ) : (
+                <div className="mb-3" />
+              )}
               <div className="grid grid-cols-5 gap-2 sm:grid-cols-6 lg:grid-cols-5">
-                {questions.map((_, index) => {
+                {Array.from({ length: activeSection.count }, (_, localIndex) => {
+                  const index = activeSection.startIndex + localIndex
                   const status = getQuestionStatus(
                     visited[index],
                     userAnswers[index] !== null,
@@ -875,9 +1033,9 @@ export default function AomExamTest({
                       className={`relative flex h-11 items-center justify-center rounded-lg text-sm font-bold ${STATUS_STYLES[status]} ${
                         currentQuestion === index ? 'ring-2 ring-offset-2 ring-slate-800' : ''
                       }`}
-                      aria-label={`Question ${index + 1}, ${status}`}
+                      aria-label={`Question ${localIndex + 1}, ${status}`}
                     >
-                      {index + 1}
+                      {localIndex + 1}
                       {status === 'answered-review' ? (
                         <span className="absolute -right-1 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md ring-2 ring-white">
                           <Check className="h-4 w-4 stroke-3" />
@@ -905,6 +1063,9 @@ export default function AomExamTest({
                 <p>Not visited: {counts.notVisited}</p>
                 <p>Marked for review: {counts.review}</p>
               </div>
+              {hasPaperNav ? (
+                <p className="mt-3 text-xs text-slate-500">Counts are for the full test.</p>
+              ) : null}
             </div>
           </aside>
         </div>

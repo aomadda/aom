@@ -120,6 +120,30 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom previous papers 2026 AOM Previous Papers Professional Subject GK Rajabhasha Establishment Financial Rules",
   },
   {
+    href: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+    title: "AOM Previous Papers 2026 — Establishment & Financial Rules",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM Previous Papers 2026",
+    keywords:
+      "aom tests aom previous papers 2026 establishment finance financial rules AOM Previous Papers 2026 Establishment",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+    title: "AOM Previous Papers 2026 — GK & Rajabhasha",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM Previous Papers 2026",
+    keywords:
+      "aom tests aom previous papers 2026 gk rajabhasha general knowledge AOM Previous Papers 2026 GK Rajabhasha",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+    title: "AOM Previous Papers 2026 — Professional Subject",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM Previous Papers 2026",
+    keywords:
+      "aom tests aom previous papers 2026 professional subject operating G&SR AOM Previous Papers 2026 Professional Subject",
+  },
+  {
     href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test01",
     title: "AOM Professional Subject Test 01",
     category: "AOM Tests",

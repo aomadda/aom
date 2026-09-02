@@ -189,8 +189,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/aom-tests/aom-professional-subject-test:id(\\d+)",
-        destination: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test:id",
+        source: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-tests/:path*",
+        destination: "/aom-tests/aom-professional-subject-tests/:path*",
         permanent: true,
       },
       {
@@ -201,6 +201,21 @@ const nextConfig: NextConfig = {
       {
         source: "/aom-tests/finance-establishment-rules/:path*",
         destination: "/aom-tests/aom-finance-establishment-rules-tests/:path*",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/professional-subject",
+        destination: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/gk-rajabhasha",
+        destination: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/establishment-finance-rules",
+        destination: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
         permanent: true,
       },
       {

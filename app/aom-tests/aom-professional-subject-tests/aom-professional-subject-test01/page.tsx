@@ -1,3 +1,5 @@
+'use client'
+
 import { aomProfessionalSubjectTest01 } from '@/assets/aom-tests/aom-professional-subject-tests/aom-professional-subject-test01'
 import AomExamTest from '@/components/aom-tests/AomExamTest'
 
