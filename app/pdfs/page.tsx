@@ -9,22 +9,10 @@ import {
   ShieldAlert,
   Settings,
   Sparkles,
-  ScrollText,
   Award,
 } from 'lucide-react'
 
 const pdfSections = [
-  {
-    href: '/pdfs/circulars',
-    title: 'Circulars',
-    subtitle: 'Safety, operating & bulletins',
-    description:
-      'Alert advice, fly leaf, operating safety and general circulars, fortnightly and monthly safety bulletins, safety drives, and rule of the month — browse and download PDFs.',
-    icon: ScrollText,
-    gradient: 'from-indigo-600 to-blue-700',
-    ring: 'ring-indigo-500/35',
-    iconBg: 'bg-indigo-500/20',
-  },
   {
     href: '/pdfs/authorities',
     title: 'Authority forms',
@@ -104,7 +92,7 @@ const PDFs = () => {
               PDF <span className="text-indigo-200">documents</span>
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-indigo-100/95 sm:text-lg">
-              Circulars, authority forms, and manual amendments — open a category to view lists and download files.
+              Authority forms and manual amendments — open a category to view lists and download files.
             </p>
           </div>
         </div>

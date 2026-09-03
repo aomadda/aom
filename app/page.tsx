@@ -7,9 +7,12 @@ import HomeRuleOfTheDay from '@/components/HomeRuleOfTheDay'
 type NavBox = { href: string; label: string; icon?: string }
 
 const topicsLinks: NavBox[] = [
+  { href: '/abbreviations', label: 'Abbreviations', icon: '📝' },
   { href: '/topics/accident-manual', label: 'Accident Manual', icon: '⚠️' },
   { href: '/topics/aom-special', label: 'AOM Special', icon: '✨' },
   { href: '/topics/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
+  { href: '/circulars', label: 'Circulars', icon: '📄' },
+  { href: '/definitions', label: 'Definitions', icon: '📖' },
   { href: '/topics/establishment-rules', label: 'Establishment rules', icon: '📜' },
   { href: '/topics/financial-rules', label: 'Financial rules', icon: '💰' },
   { href: '/topics/general-rules', label: 'General rules', icon: '📘' },
@@ -18,8 +21,10 @@ const topicsLinks: NavBox[] = [
   { href: '/topics/master-circulars', label: 'Master circulars', icon: '📜' },
   { href: '/topics/operating-manual', label: 'Operating Manual', icon: '📘' },
   { href: '/topics/operating-material', label: 'Operating material', icon: '📂' },
+  { href: '/pdfs', label: 'PDFs', icon: '📑' },
   { href: '/topics/railway-acts', label: 'Railway acts', icon: '⚖️' },
   { href: '/topics/railway-planning-schemes', label: 'Railway planning schemes', icon: '🗺️' },
+  { href: '/syllabus', label: 'Syllabus', icon: '📘' },
   { href: '/topics/working-time-table', label: 'Working Time Table', icon: '⏰' },
 ]
 
@@ -52,7 +57,6 @@ const manualsLinks: NavBox[] = [
 ]
 
 const pdfsLinks: NavBox[] = [
-  { href: '/pdfs/circulars', label: 'Circulars', icon: '📄' },
   { href: '/pdfs/authorities', label: 'Authority forms', icon: '🏅' },
   { href: '/pdfs/accident-manual-amendments', label: 'Accident Manual amendments', icon: '⚠️' },
   { href: '/pdfs/block-working-manual-amendments', label: 'Block Working Manual amendments', icon: '🔧' },
@@ -124,6 +128,18 @@ const aomTestsLinks: NavBox[] = [
 
 const exploreSections = [
   {
+    title: 'AOM Tests',
+    href: '/aom-tests',
+    panel: 'from-amber-700 via-orange-600 to-rose-500',
+    items: aomTestsLinks,
+  },
+  {
+    title: 'Quizzes',
+    href: '/quizzes',
+    panel: 'from-emerald-700 via-green-600 to-lime-500',
+    items: quizzesLinks,
+  },
+  {
     title: 'Topics',
     href: '/topics',
     panel: 'from-rose-600 via-pink-500 to-orange-500',
@@ -152,18 +168,6 @@ const exploreSections = [
     href: '/general-awareness',
     panel: 'from-teal-700 via-cyan-600 to-emerald-500',
     items: generalAwarenessLinks,
-  },
-  {
-    title: 'Quizzes',
-    href: '/quizzes',
-    panel: 'from-emerald-700 via-green-600 to-lime-500',
-    items: quizzesLinks,
-  },
-  {
-    title: 'AOM Tests',
-    href: '/aom-tests',
-    panel: 'from-amber-700 via-orange-600 to-rose-500',
-    items: aomTestsLinks,
   },
 ]
 
@@ -281,14 +285,14 @@ const Home = async () => {
                   >
                     {item.icon ? (
                       <span
-                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-xl sm:h-12 sm:w-12 sm:text-2xl"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-base lg:h-12 lg:w-12 lg:text-2xl"
                         aria-hidden
                       >
                         {item.icon}
                       </span>
                     ) : (
                       <span
-                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20 text-base font-bold text-white sm:h-12 sm:w-12 sm:text-lg"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white lg:h-12 lg:w-12 lg:text-2xl"
                         aria-hidden
                       >
                         {item.label.charAt(0)}

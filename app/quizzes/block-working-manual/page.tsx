@@ -9,7 +9,7 @@ import { BLOCK_WORKING_MANUAL_QUIZ_CHAPTERS } from '@/lib/block-working-manual-q
 const BlockWorkingManualQuizzesPage = () => {
   const pathname = usePathname()
 
-  return (
+            return (
     <div className="min-h-screen bg-linear-to-br from-teal-50 via-cyan-50 to-blue-50 py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center sm:mb-12">
@@ -25,13 +25,13 @@ const BlockWorkingManualQuizzesPage = () => {
               Choose a chapter below and attempt it with timer, palette, and answer key
             </p>
           </div>
-        </div>
+            </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8">
           {BLOCK_WORKING_MANUAL_QUIZ_CHAPTERS.map((chapter) => {
             const href = `/quizzes/block-working-manual/${chapter.slug}`
             const isActive = pathname === href
-            return (
+                return (
               <Link key={chapter.slug} href={href} className="group">
                 <div
                   className={`flex h-full flex-col overflow-hidden rounded-xl border border-white/20 bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:rounded-2xl ${
@@ -62,8 +62,8 @@ const BlockWorkingManualQuizzesPage = () => {
                           />
                         </svg>
                       </div>
-                    </div>
-                  </div>
+            </div>
+          </div>
 
                   <div className="flex flex-1 flex-col p-4 sm:p-6">
                     <p className="mb-4 flex-1 line-clamp-3 text-sm text-gray-600 sm:text-base">
@@ -80,22 +80,22 @@ const BlockWorkingManualQuizzesPage = () => {
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
-                        >
-                          <path
+                          >
+                            <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
                             d="M9 5l7 7-7 7"
-                          />
-                        </svg>
+                            />
+                          </svg>
                       </div>
                     </div>
                   </div>
                 </div>
               </Link>
-            )
-          })}
-        </div>
+                )
+              })}
+          </div>
 
         <div className="mt-12 text-center">
           <div className="inline-block rounded-xl border border-white/20 bg-white/60 p-6 shadow-lg backdrop-blur-sm">

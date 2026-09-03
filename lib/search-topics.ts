@@ -777,11 +777,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness awards cinema awards Cinema Awards",
   },
   {
-    href: "/pdfs/circulars",
+    href: "/circulars",
     title: "Circulars",
-    category: "PDFs",
-    parent: "PDFs",
-    keywords: "pdfs circulars Circulars",
+    category: "Circulars",
+    parent: "Circulars",
+    keywords: "circulars Circulars Railway Board Circulars",
   },
   {
     href: "/topics/information-technology-apps/cms",

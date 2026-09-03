@@ -9,13 +9,13 @@ import { KAVACH_QUIZ_CHAPTERS } from '@/lib/kavach-quiz-chapters'
 const KavachQuizzesPage = () => {
   const pathname = usePathname()
 
-  return (
+    return (
     <div className="min-h-screen bg-linear-to-br from-orange-50 via-amber-50 to-red-50 py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center sm:mb-12">
           <h1 className="mb-4 bg-linear-to-r from-orange-600 via-amber-600 to-red-600 bg-clip-text text-3xl font-bold text-transparent sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
             Kavach
-          </h1>
+            </h1>
 
           <div className="mx-auto max-w-3xl rounded-xl border border-white/20 bg-white/80 p-4 shadow-lg backdrop-blur-sm sm:rounded-2xl sm:p-6">
             <p className="mb-3 text-sm text-gray-600 sm:mb-4 sm:text-base md:text-lg">
@@ -25,13 +25,13 @@ const KavachQuizzesPage = () => {
               Choose a quiz below and attempt it with timer, palette, and answer key
             </p>
           </div>
-        </div>
+            </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8">
           {KAVACH_QUIZ_CHAPTERS.map((chapter) => {
             const href = `/quizzes/kavach/${chapter.slug}`
             const isActive = pathname === href
-            return (
+                return (
               <Link key={chapter.slug} href={href} className="group">
                 <div
                   className={`flex h-full flex-col overflow-hidden rounded-xl border border-white/20 bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:rounded-2xl ${
@@ -80,22 +80,22 @@ const KavachQuizzesPage = () => {
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
-                        >
-                          <path
+                          >
+                            <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
                             d="M9 5l7 7-7 7"
-                          />
-                        </svg>
+                            />
+                          </svg>
                       </div>
                     </div>
                   </div>
                 </div>
               </Link>
-            )
-          })}
-        </div>
+                )
+              })}
+          </div>
 
         <div className="mt-12 text-center">
           <div className="inline-block rounded-xl border border-white/20 bg-white/60 p-6 shadow-lg backdrop-blur-sm">

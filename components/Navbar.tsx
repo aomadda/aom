@@ -30,6 +30,65 @@ type NavbarProps = {
   user?: AuthUser
 }
 
+function desktopNavPillClass(active: boolean) {
+  return `relative inline-flex items-center gap-0.5 whitespace-nowrap rounded-full px-2 py-1.5 text-[12px] font-semibold text-white transition-all duration-300 lg:gap-1 lg:px-2.5 lg:text-[13px] xl:px-3 xl:text-sm ${
+    active
+      ? 'bg-white/20 font-bold shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] ring-1 ring-white/30'
+      : 'hover:bg-white/12'
+  }`
+}
+
+function Chevron({ open, className = 'h-3 w-3 lg:h-3.5 lg:w-3.5' }: { open: boolean; className?: string }) {
+  return (
+    <svg
+      className={`${className} transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  )
+}
+
+function DropdownShell({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <div
+      className={`absolute top-full right-0 z-50 mt-2 overflow-hidden rounded-3xl border border-violet-200/50 bg-white shadow-[0_24px_50px_-18px_rgba(76,29,149,0.28)] ring-1 ring-violet-950/5 backdrop-blur-xl ${className}`}
+    >
+      {children}
+    </div>
+  )
+}
+
+const dropdownHeaderClass =
+  'shrink-0 border-b border-violet-100/80 bg-linear-to-r from-violet-50/95 via-indigo-50/80 to-blue-50/90 px-5 py-3.5'
+const dropdownFooterClass =
+  'shrink-0 border-t border-violet-100/80 bg-linear-to-r from-violet-50/90 via-indigo-50/75 to-blue-50/85 px-5 py-3'
+
+function mobileNavItemClass(active: boolean) {
+  return `flex w-full items-center justify-between rounded-2xl px-4 py-3 text-base font-semibold transition-all duration-300 ${
+    active
+      ? 'border border-white/45 bg-white/25 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] backdrop-blur-md'
+      : 'border border-white/15 bg-white/10 text-white/90 backdrop-blur-sm hover:bg-white/18 hover:text-white'
+  }`
+}
+
+function mobileChildLinkClass(active: boolean) {
+  return `rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+    active
+      ? 'border border-white/40 bg-white/25 text-white shadow-md shadow-white/10 backdrop-blur-md'
+      : 'border border-white/10 bg-white/5 text-white/80 backdrop-blur-sm hover:bg-white/15 hover:text-white'
+  }`
+}
+
 const Navbar = ({ user = null }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -48,11 +107,6 @@ const Navbar = ({ user = null }: NavbarProps) => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const navLinks = [
-    { href: '/abbreviations', label: 'Abbreviations' },
-    { href: '/definitions', label: 'Definitions' },
-  ]
 
   const actsLinks = [
     { href: '/acts/disaster-management-act-2005', label: 'Disaster Management Act, 2005' },
@@ -151,131 +205,77 @@ const Navbar = ({ user = null }: NavbarProps) => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
         isScrolled
-          ? 'border-b border-purple-300/30 shadow-xl shadow-purple-500/20'
-          : 'border-b border-transparent shadow-lg shadow-purple-500/10'
+          ? 'border-b border-white/20 shadow-[0_12px_40px_-12px_rgba(76,29,149,0.55)]'
+          : 'border-b border-white/10 shadow-[0_8px_30px_-16px_rgba(67,56,202,0.45)]'
       }`}
-      style={{
-        background: isScrolled
-          ? 'linear-gradient(135deg, rgba(139, 92, 246, 0.95) 0%, rgba(124, 58, 237, 0.95) 50%, rgba(59, 130, 246, 0.95) 100%)'
-          : 'linear-gradient(135deg, rgba(139, 92, 246, 0.85) 0%, rgba(124, 58, 237, 0.85) 50%, rgba(59, 130, 246, 0.85) 100%)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-      }}
     >
-      <div className="mx-auto w-full max-w-360 px-3 sm:px-4 lg:px-6">
-        <div className="relative h-16 w-full">
-          {/* Left — brand */}
-          <div className="absolute left-0 top-1/2 z-20 flex -translate-y-1/2 items-center">
-            <Link
-              href="/"
-              className="group flex h-10 items-center rounded-xl px-1 transition-transform duration-300 hover:scale-[1.02]"
-            >
-              <span className="whitespace-nowrap text-lg font-bold tracking-tight text-white drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-xl sm:text-xl lg:text-2xl">
-                AOM Adda
-              </span>
-            </Link>
-          </div>
+      <div
+        className={`absolute inset-0 transition-opacity duration-500 ${
+          isScrolled ? 'opacity-100' : 'opacity-95'
+        }`}
+        style={{
+          background:
+            'linear-gradient(115deg, #4c1d95 0%, #5b21b6 28%, #4338ca 58%, #1d4ed8 100%)',
+        }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-70"
+        style={{
+          backgroundImage: `
+            radial-gradient(ellipse 60% 120% at 0% 0%, rgba(255,255,255,0.18), transparent 55%),
+            radial-gradient(ellipse 50% 100% at 100% 100%, rgba(56,189,248,0.2), transparent 50%)
+          `,
+        }}
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 backdrop-blur-xl"
+        style={{ WebkitBackdropFilter: 'blur(20px)' }}
+        aria-hidden
+      />
 
-          {/* Center — main nav (desktop) */}
-          <div className="absolute left-1/2 top-1/2 z-10 hidden w-max max-w-[calc(100%-24rem)] -translate-x-1/2 -translate-y-1/2 md:block">
-            <div className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-2 py-1 shadow-lg shadow-black/10 backdrop-blur-md lg:gap-3 lg:px-3 xl:gap-4">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px]"
-                >
-                  <span
-                    className={`relative z-10 transition-all duration-300 ${
-                      isActive
-                        ? 'text-white font-bold drop-shadow-lg'
-                        : 'text-white/90 group-hover:text-white group-hover:drop-shadow-md'
-                    }`}
-                  >
-                    {link.label}
-                  </span>
-                  {/* Animated underline */}
-                  <span
-                    className={`absolute bottom-1 left-0 right-0 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                      isActive ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'
-                    }`}
-                  ></span>
-                  {/* Hover background effect */}
-                  <span 
-                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 backdrop-blur-sm"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))'
-                    }}
-                  ></span>
-                  {/* Active state background */}
-                  {isActive && (
-                    <span 
-                      className="absolute inset-0 rounded-xl backdrop-blur-sm shadow-lg shadow-purple-500/20 -z-10"
-                      style={{
-                        background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))'
-                      }}
-                    ></span>
-                  )}
-                </Link>
-              )
-            })}
-            
+      <div className="relative z-10 mx-auto w-full max-w-360 px-3 sm:px-4 lg:px-6">
+        <div className="flex h-16 items-center gap-2 lg:gap-3">
+          {/* Left — brand */}
+          <Link
+            href="/"
+            className="group shrink-0 rounded-xl px-1 py-1 transition-all duration-300 hover:bg-white/10"
+          >
+            <span className="whitespace-nowrap text-lg font-bold tracking-tight text-white drop-shadow-sm sm:text-xl lg:text-2xl">
+              AOM Adda
+            </span>
+          </Link>
+
+          {/* Center — main nav (desktop): rounded-full pill covering Syllabus → General Awareness */}
+          <div className="hidden min-w-0 flex-1 lg:flex lg:items-center lg:justify-center">
+            <div className="flex w-max max-w-full flex-nowrap items-center gap-0.5 overflow-visible rounded-full border border-white/20 bg-white/10 px-1.5 py-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_8px_24px_-12px_rgba(0,0,0,0.35)] backdrop-blur-xl lg:gap-1 lg:px-2">
+              {/* Syllabus Link */}
+              <Link
+                href="/syllabus"
+                className={desktopNavPillClass(pathname.startsWith('/syllabus'))}
+              >
+                Syllabus
+              </Link>
+
             {/* Acts Dropdown */}
             <div 
               className="relative group"
               onMouseEnter={() => setIsActsDropdownOpen(true)}
               onMouseLeave={() => setIsActsDropdownOpen(false)}
             >
-              <Link
-                href="/acts"
-                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
-                  pathname.startsWith('/acts') ? 'font-bold' : ''
-                }`}
-              >
-                <span className="relative z-10 flex items-center gap-1 transition-all duration-300">
-                  Acts & Rules
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isActsDropdownOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-                {/* Animated underline */}
-                <span
-                  className={`absolute bottom-1 left-0 right-0 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                    pathname.startsWith('/acts') ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'
-                  }`}
-                ></span>
-                {/* Hover background effect */}
-                <span 
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 backdrop-blur-sm"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))'
-                  }}
-                ></span>
-                {/* Active state background */}
-                {pathname.startsWith('/acts') && (
-                  <span 
-                    className="absolute inset-0 rounded-xl backdrop-blur-sm shadow-lg shadow-purple-500/20 -z-10"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))'
-                    }}
-                  ></span>
-                )}
+              <Link href="/acts" className={desktopNavPillClass(pathname.startsWith('/acts'))}>
+                Acts & Rules
+                <Chevron open={isActsDropdownOpen} />
               </Link>
               
               {/* Dropdown Menu */}
               {isActsDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-100 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <DropdownShell className="w-100">
                   {/* Header */}
-                  <div className="bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
+                  <div className={dropdownHeaderClass}>
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-linear-to-r from-purple-500 to-blue-500"></span>
@@ -340,7 +340,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                   </div>
                   
                   {/* Footer */}
-                  <div className="bg-linear-to-r from-purple-50/50 via-blue-50/50 to-indigo-50/50 px-6 py-3.5 border-t border-purple-100/50">
+                  <div className={dropdownFooterClass}>
                     <Link
                       href="/acts"
                       onClick={() => setIsActsDropdownOpen(false)}
@@ -352,7 +352,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                       </svg>
                     </Link>
                   </div>
-                </div>
+                </DropdownShell>
               )}
             </div>
 
@@ -362,52 +362,16 @@ const Navbar = ({ user = null }: NavbarProps) => {
               onMouseEnter={() => setIsManualsDropdownOpen(true)}
               onMouseLeave={() => setIsManualsDropdownOpen(false)}
             >
-              <Link
-                href="/manuals"
-                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
-                  pathname.startsWith('/manuals') ? 'font-bold' : ''
-                }`}
-              >
-                <span className="relative z-10 flex items-center gap-1 transition-all duration-300">
-                  Manuals
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isManualsDropdownOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-                {/* Animated underline */}
-                <span
-                  className={`absolute bottom-1 left-0 right-0 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                    pathname.startsWith('/manuals') ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'
-                  }`}
-                ></span>
-                {/* Hover background effect */}
-                <span 
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 backdrop-blur-sm"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))'
-                  }}
-                ></span>
-                {/* Active state background */}
-                {pathname.startsWith('/manuals') && (
-                  <span 
-                    className="absolute inset-0 rounded-xl backdrop-blur-sm shadow-lg shadow-purple-500/20 -z-10"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))'
-                    }}
-                  ></span>
-                )}
+              <Link href="/manuals" className={desktopNavPillClass(pathname.startsWith('/manuals'))}>
+                Manuals
+                <Chevron open={isManualsDropdownOpen} />
               </Link>
               
               {/* Dropdown Menu */}
               {isManualsDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-125 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <DropdownShell className="w-125">
                   {/* Header */}
-                  <div className="bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
+                  <div className={dropdownHeaderClass}>
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-linear-to-r from-purple-500 to-blue-500"></span>
@@ -461,7 +425,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                   </div>
                   
                   {/* Footer */}
-                  <div className="bg-linear-to-r from-purple-50/50 via-blue-50/50 to-indigo-50/50 px-6 py-3.5 border-t border-purple-100/50">
+                  <div className={dropdownFooterClass}>
                     <Link
                       href="/manuals"
                       onClick={() => setIsManualsDropdownOpen(false)}
@@ -473,9 +437,19 @@ const Navbar = ({ user = null }: NavbarProps) => {
                       </svg>
                     </Link>
                   </div>
-                </div>
+                </DropdownShell>
               )}
             </div>
+
+            {/* PDFs Link */}
+            <Link href="/pdfs" className={desktopNavPillClass(pathname.startsWith('/pdfs'))}>
+              PDFs
+            </Link>
+
+            {/* Circulars Link */}
+            <Link href="/circulars" className={desktopNavPillClass(pathname.startsWith('/circulars'))}>
+              Circulars
+            </Link>
 
             {/* Topics Dropdown */}
             <div 
@@ -483,52 +457,16 @@ const Navbar = ({ user = null }: NavbarProps) => {
               onMouseEnter={() => setIsTopicsDropdownOpen(true)}
               onMouseLeave={() => setIsTopicsDropdownOpen(false)}
             >
-              <Link
-                href="/topics"
-                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
-                  pathname.startsWith('/topics') ? 'font-bold' : ''
-                }`}
-              >
-                <span className="relative z-10 flex items-center gap-1 transition-all duration-300">
-                  Topics
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isTopicsDropdownOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-                {/* Animated underline */}
-                <span
-                  className={`absolute bottom-1 left-0 right-0 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                    pathname.startsWith('/topics') ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'
-                  }`}
-                ></span>
-                {/* Hover background effect */}
-                <span 
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 backdrop-blur-sm"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))'
-                  }}
-                ></span>
-                {/* Active state background */}
-                {pathname.startsWith('/topics') && (
-                  <span 
-                    className="absolute inset-0 rounded-xl backdrop-blur-sm shadow-lg shadow-purple-500/20 -z-10"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))'
-                    }}
-                  ></span>
-                )}
+              <Link href="/topics" className={desktopNavPillClass(pathname.startsWith('/topics'))}>
+                Topics
+                <Chevron open={isTopicsDropdownOpen} />
               </Link>
               
               {/* Dropdown Menu */}
               {isTopicsDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-125 max-h-[min(70vh,560px)] flex flex-col bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <DropdownShell className="flex max-h-[min(70vh,560px)] w-125 flex-col">
                   {/* Header */}
-                  <div className="shrink-0 bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
+                  <div className={dropdownHeaderClass}>
                     <div className="flex items-center justify-between gap-3">
                       <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-linear-to-r from-purple-500 to-blue-500"></span>
@@ -582,7 +520,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                   </div>
                   
                   {/* Footer */}
-                  <div className="shrink-0 bg-linear-to-r from-purple-50/50 via-blue-50/50 to-indigo-50/50 px-6 py-3.5 border-t border-purple-100/50">
+                  <div className={dropdownFooterClass}>
                     <Link
                       href="/topics"
                       onClick={() => setIsTopicsDropdownOpen(false)}
@@ -594,7 +532,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                       </svg>
                     </Link>
                   </div>
-                </div>
+                </DropdownShell>
               )}
             </div>
 
@@ -604,52 +542,16 @@ const Navbar = ({ user = null }: NavbarProps) => {
               onMouseEnter={() => setIsQuizzesDropdownOpen(true)}
               onMouseLeave={() => setIsQuizzesDropdownOpen(false)}
             >
-              <Link
-                href="/quizzes"
-                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
-                  pathname.startsWith('/quizzes') ? 'font-bold' : ''
-                }`}
-              >
-                <span className="relative z-10 flex items-center gap-1 transition-all duration-300">
-                  Quizzes
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isQuizzesDropdownOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-                {/* Animated underline */}
-                <span
-                  className={`absolute bottom-1 left-0 right-0 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                    pathname.startsWith('/quizzes') ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'
-                  }`}
-                ></span>
-                {/* Hover background effect */}
-                <span 
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 backdrop-blur-sm"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))'
-                  }}
-                ></span>
-                {/* Active state background */}
-                {pathname.startsWith('/quizzes') && (
-                  <span 
-                    className="absolute inset-0 rounded-xl backdrop-blur-sm shadow-lg shadow-purple-500/20 -z-10"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))'
-                    }}
-                  ></span>
-                )}
+              <Link href="/quizzes" className={desktopNavPillClass(pathname.startsWith('/quizzes'))}>
+                Quizzes
+                <Chevron open={isQuizzesDropdownOpen} />
               </Link>
               
               {/* Dropdown Menu */}
               {isQuizzesDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-125 max-h-[min(70vh,560px)] flex flex-col bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
+                <DropdownShell className="flex max-h-[min(70vh,560px)] w-125 flex-col">
                   {/* Header */}
-                  <div className="shrink-0 bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
+                  <div className={dropdownHeaderClass}>
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-linear-to-r from-purple-500 to-blue-500"></span>
@@ -703,7 +605,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                   </div>
                   
                   {/* Footer */}
-                  <div className="shrink-0 bg-linear-to-r from-purple-50/50 via-blue-50/50 to-indigo-50/50 px-6 py-3.5 border-t border-purple-100/50">
+                  <div className={dropdownFooterClass}>
                     <Link
                       href="/quizzes"
                       onClick={() => setIsQuizzesDropdownOpen(false)}
@@ -715,7 +617,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                       </svg>
                     </Link>
                   </div>
-                </div>
+                </DropdownShell>
               )}
             </div>
 
@@ -725,49 +627,14 @@ const Navbar = ({ user = null }: NavbarProps) => {
               onMouseEnter={() => setIsAomTestsDropdownOpen(true)}
               onMouseLeave={() => setIsAomTestsDropdownOpen(false)}
             >
-              <Link
-                href="/aom-tests"
-                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
-                  pathname.startsWith('/aom-tests') ? 'font-bold' : ''
-                }`}
-              >
-                <span className="relative z-10 flex items-center gap-1 transition-all duration-300">
-                  AOM Tests
-                  <svg
-                    className={`h-4 w-4 transition-transform duration-300 ${isAomTestsDropdownOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-                <span
-                  className={`absolute bottom-1 left-0 right-0 h-0.5 rounded-full bg-white transition-all duration-300 ${
-                    pathname.startsWith('/aom-tests')
-                      ? 'scale-x-100 opacity-100'
-                      : 'scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100'
-                  }`}
-                ></span>
-                <span
-                  className="absolute inset-0 -z-10 rounded-xl opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))',
-                  }}
-                ></span>
-                {pathname.startsWith('/aom-tests') && (
-                  <span
-                    className="absolute inset-0 -z-10 rounded-xl shadow-lg shadow-purple-500/20 backdrop-blur-sm"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))',
-                    }}
-                  ></span>
-                )}
+              <Link href="/aom-tests" className={desktopNavPillClass(pathname.startsWith('/aom-tests'))}>
+                AOM Tests
+                <Chevron open={isAomTestsDropdownOpen} />
               </Link>
 
               {isAomTestsDropdownOpen && (
-                <div className="absolute top-full right-0 z-50 mt-2 flex max-h-[min(70vh,560px)] w-100 flex-col overflow-hidden rounded-2xl border border-purple-200/30 bg-white/98 shadow-2xl backdrop-blur-xl">
-                  <div className="shrink-0 border-b border-purple-100/50 bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4">
+                <DropdownShell className="flex max-h-[min(70vh,560px)] w-100 flex-col">
+                  <div className={dropdownHeaderClass}>
                     <div className="flex items-center justify-between">
                       <h3 className="flex items-center gap-2 text-sm font-bold tracking-wider text-gray-700 uppercase">
                         <span className="h-1.5 w-1.5 rounded-full bg-linear-to-r from-purple-500 to-blue-500"></span>
@@ -812,7 +679,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                     })}
                   </div>
 
-                  <div className="shrink-0 border-t border-purple-100/50 bg-linear-to-r from-purple-50/50 via-blue-50/50 to-indigo-50/50 px-6 py-3.5">
+                  <div className={dropdownFooterClass}>
                     <Link
                       href="/aom-tests"
                       onClick={() => setIsAomTestsDropdownOpen(false)}
@@ -829,7 +696,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                       </svg>
                     </Link>
                   </div>
-                </div>
+                </DropdownShell>
               )}
             </div>
 
@@ -841,46 +708,16 @@ const Navbar = ({ user = null }: NavbarProps) => {
             >
               <Link
                 href="/general-awareness"
-                className={`group relative whitespace-nowrap rounded-xl px-2 py-1.5 text-[13px] font-semibold text-white transition-all duration-300 lg:px-2.5 lg:text-sm xl:px-3 xl:text-[15px] ${
-                  pathname.startsWith('/general-awareness') ? 'font-bold' : ''
-                }`}
+                className={desktopNavPillClass(pathname.startsWith('/general-awareness'))}
               >
-                <span className="relative z-10 flex items-center gap-1 transition-all duration-300">
-                  General Awareness
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isGeneralAwarenessDropdownOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-                <span
-                  className={`absolute bottom-1 left-0 right-0 h-0.5 bg-white rounded-full transition-all duration-300 ${
-                    pathname.startsWith('/general-awareness') ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100'
-                  }`}
-                ></span>
-                <span 
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 backdrop-blur-sm"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(96, 165, 250, 0.2))'
-                  }}
-                ></span>
-                {pathname.startsWith('/general-awareness') && (
-                  <span 
-                    className="absolute inset-0 rounded-xl backdrop-blur-sm shadow-lg shadow-purple-500/20 -z-10"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(168, 85, 247, 0.3), rgba(96, 165, 250, 0.3))'
-                    }}
-                  ></span>
-                )}
+                General Awareness
+                <Chevron open={isGeneralAwarenessDropdownOpen} />
               </Link>
               
               {/* Dropdown Menu */}
               {isGeneralAwarenessDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-125 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-200/30 overflow-hidden z-50">
-                  <div className="bg-linear-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10 px-6 py-4 border-b border-purple-100/50">
+                <DropdownShell className="w-125">
+                  <div className={dropdownHeaderClass}>
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-linear-to-r from-purple-500 to-blue-500"></span>
@@ -925,7 +762,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                     })}
                   </div>
                   
-                  <div className="bg-linear-to-r from-purple-50/50 via-blue-50/50 to-indigo-50/50 px-6 py-3.5 border-t border-purple-100/50">
+                  <div className={dropdownFooterClass}>
                     <Link
                       href="/general-awareness"
                       onClick={() => setIsGeneralAwarenessDropdownOpen(false)}
@@ -937,22 +774,22 @@ const Navbar = ({ user = null }: NavbarProps) => {
                       </svg>
                     </Link>
                   </div>
-                </div>
+                </DropdownShell>
               )}
             </div>
             </div>
           </div>
 
-          {/* Right — username + admin pinned to right edge */}
-          <div className="absolute right-0 top-1/2 z-20 flex -translate-y-1/2 items-center gap-2">
-            <div className="hidden items-center gap-2 md:flex">
+          {/* Right — username + admin */}
+          <div className="ml-auto flex shrink-0 items-center gap-2">
+            <div className="hidden items-center gap-2.5 lg:flex">
               <AuthNav user={user} variant="desktop" />
               {user?.role === 'admin' ? (
                 <Link
                   href="/admin"
-                  className={`inline-flex h-10 shrink-0 items-center rounded-full px-4 text-sm font-bold tracking-wide shadow-md transition-all duration-300 ${
+                  className={`inline-flex h-10 shrink-0 items-center rounded-full px-4 text-sm font-bold tracking-wide shadow-[0_8px_20px_-10px_rgba(0,0,0,0.45)] ring-1 ring-white/30 transition-all duration-300 ${
                     pathname.startsWith('/admin')
-                      ? 'bg-white text-purple-700 ring-2 ring-white/70'
+                      ? 'bg-white text-violet-700 ring-2 ring-white/80'
                       : 'bg-linear-to-r from-amber-300 to-orange-400 text-slate-900 hover:from-amber-200 hover:to-orange-300 hover:shadow-lg'
                   }`}
                 >
@@ -962,70 +799,57 @@ const Navbar = ({ user = null }: NavbarProps) => {
             </div>
 
             <button
+              type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex h-10 w-10 items-center justify-center bg-transparent text-white transition-opacity duration-200 hover:opacity-80 md:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22)] backdrop-blur-md transition-all duration-200 hover:bg-white/20 lg:hidden"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              <svg
-                className={`h-6 w-6 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isMobileMenuOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12"></path>
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16"></path>
-                )}
-              </svg>
+              <span className="relative block h-3.5 w-4.5">
+                <span
+                  className={`absolute left-0 block h-0.5 w-4.5 rounded-full bg-white transition-all duration-300 ${
+                    isMobileMenuOpen ? 'top-1.5 rotate-45' : 'top-0'
+                  }`}
+                />
+                <span
+                  className={`absolute top-1.5 left-0 block h-0.5 w-4.5 rounded-full bg-white transition-all duration-300 ${
+                    isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 block h-0.5 w-4.5 rounded-full bg-white transition-all duration-300 ${
+                    isMobileMenuOpen ? 'top-1.5 -rotate-45' : 'top-3'
+                  }`}
+                />
+              </span>
             </button>
           </div>
         </div>
 
         {/* Mobile Menu — cap to viewport so nested accordions can scroll inside the screen */}
         <div
-          className={`md:hidden overflow-y-auto overflow-x-hidden overscroll-contain transition-all duration-300 ease-in-out ${
+          className={`lg:hidden overflow-y-auto overflow-x-hidden overscroll-contain transition-all duration-300 ease-in-out ${
             isMobileMenuOpen ? 'max-h-[calc(100dvh-4.5rem)] opacity-100 pb-4' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="flex flex-col space-y-2 pt-4">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 ${
-                    isActive
-                      ? 'bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md border-2 border-white/40'
-                      : 'text-white/90 bg-white/10 hover:bg-white/20 hover:text-white backdrop-blur-sm border border-white/20'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
-            })}
-            
+          <div className="mt-1 flex flex-col space-y-2 rounded-3xl border border-white/15 bg-white/8 p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] backdrop-blur-md">
+            {/* Syllabus Link */}
+            <Link
+              href="/syllabus"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={mobileNavItemClass(pathname.startsWith('/syllabus'))}
+            >
+              <span>Syllabus</span>
+            </Link>
+
             {/* Acts Link with Accordion */}
             <div>
               <button
                 onClick={() => setIsActsDropdownOpen(!isActsDropdownOpen)}
-                className={`w-full px-4 py-3 text-base font-semibold rounded-xl transition-all duration-300 flex items-center justify-between ${
-                  pathname.startsWith('/acts')
-                    ? 'bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md border-2 border-white/40'
-                    : 'text-white/90 bg-white/10 hover:bg-white/20 hover:text-white backdrop-blur-sm border border-white/20'
-                }`}
+                className={mobileNavItemClass(pathname.startsWith('/acts'))}
               >
                 <span>Acts & Rules</span>
-                <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${isActsDropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <Chevron open={isActsDropdownOpen} className="h-5 w-5" />
               </button>
               
               {/* Mobile Acts Dropdown */}
@@ -1045,11 +869,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                           setIsMobileMenuOpen(false)
                           setIsActsDropdownOpen(false)
                         }}
-                        className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 ${
-                          isActive
-                            ? 'bg-white/30 text-white shadow-md shadow-white/20 backdrop-blur-md border border-white/40'
-                            : 'text-white/80 bg-white/5 hover:bg-white/15 hover:text-white backdrop-blur-sm border border-white/10'
-                        }`}
+                        className={mobileChildLinkClass(isActive)}
                       >
                         {act.label}
                       </Link>
@@ -1063,21 +883,10 @@ const Navbar = ({ user = null }: NavbarProps) => {
             <div>
               <button
                 onClick={() => setIsManualsDropdownOpen(!isManualsDropdownOpen)}
-                className={`w-full px-4 py-3 text-base font-semibold rounded-xl transition-all duration-300 flex items-center justify-between ${
-                  pathname.startsWith('/manuals')
-                    ? 'bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md border-2 border-white/40'
-                    : 'text-white/90 bg-white/10 hover:bg-white/20 hover:text-white backdrop-blur-sm border border-white/20'
-                }`}
+                className={mobileNavItemClass(pathname.startsWith('/manuals'))}
               >
                 <span>Manuals</span>
-                <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${isManualsDropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <Chevron open={isManualsDropdownOpen} className="h-5 w-5" />
               </button>
               
               {/* Mobile Manuals Dropdown */}
@@ -1097,11 +906,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                           setIsMobileMenuOpen(false)
                           setIsManualsDropdownOpen(false)
                         }}
-                        className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-2 ${
-                          isActive
-                            ? 'bg-white/30 text-white shadow-md shadow-white/20 backdrop-blur-md border border-white/40'
-                            : 'text-white/80 bg-white/5 hover:bg-white/15 hover:text-white backdrop-blur-sm border border-white/10'
-                        }`}
+                        className={`${mobileChildLinkClass(isActive)} flex items-center gap-2`}
                       >
                         <span>{manual.icon}</span>
                         <span>{manual.label}</span>
@@ -1112,25 +917,32 @@ const Navbar = ({ user = null }: NavbarProps) => {
               </div>
             </div>
 
+            {/* PDFs Link */}
+            <Link
+              href="/pdfs"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={mobileNavItemClass(pathname.startsWith('/pdfs'))}
+            >
+              <span>PDFs</span>
+            </Link>
+
+            {/* Circulars Link */}
+            <Link
+              href="/circulars"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={mobileNavItemClass(pathname.startsWith('/circulars'))}
+            >
+              <span>Circulars</span>
+            </Link>
+
             {/* Topics Link with Accordion */}
             <div>
               <button
                 onClick={() => setIsTopicsDropdownOpen(!isTopicsDropdownOpen)}
-                className={`w-full px-4 py-3 text-base font-semibold rounded-xl transition-all duration-300 flex items-center justify-between ${
-                  pathname.startsWith('/topics')
-                    ? 'bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md border-2 border-white/40'
-                    : 'text-white/90 bg-white/10 hover:bg-white/20 hover:text-white backdrop-blur-sm border border-white/20'
-                }`}
+                className={mobileNavItemClass(pathname.startsWith('/topics'))}
               >
                 <span>Topics</span>
-                <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${isTopicsDropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <Chevron open={isTopicsDropdownOpen} className="h-5 w-5" />
               </button>
               
               {/* Mobile Topics — same A–Z order as desktop hover menu */}
@@ -1152,11 +964,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                           setIsMobileMenuOpen(false)
                           setIsTopicsDropdownOpen(false)
                         }}
-                        className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-2 ${
-                          isActive
-                            ? 'bg-white/30 text-white shadow-md shadow-white/20 backdrop-blur-md border border-white/40'
-                            : 'text-white/80 bg-white/5 hover:bg-white/15 hover:text-white backdrop-blur-sm border border-white/10'
-                        }`}
+                        className={`${mobileChildLinkClass(isActive)} flex items-center gap-2`}
                       >
                         <span>{topic.icon}</span>
                         <span>{topic.label}</span>
@@ -1171,21 +979,10 @@ const Navbar = ({ user = null }: NavbarProps) => {
             <div>
               <button
                 onClick={() => setIsQuizzesDropdownOpen(!isQuizzesDropdownOpen)}
-                className={`w-full px-4 py-3 text-base font-semibold rounded-xl transition-all duration-300 flex items-center justify-between ${
-                  pathname.startsWith('/quizzes')
-                    ? 'bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md border-2 border-white/40'
-                    : 'text-white/90 bg-white/10 hover:bg-white/20 hover:text-white backdrop-blur-sm border border-white/20'
-                }`}
+                className={mobileNavItemClass(pathname.startsWith('/quizzes'))}
               >
                 <span>Quizzes</span>
-                <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${isQuizzesDropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <Chevron open={isQuizzesDropdownOpen} className="h-5 w-5" />
               </button>
               
               {/* Mobile Quizzes Dropdown — viewport-based height + touch scroll */}
@@ -1207,11 +1004,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                           setIsMobileMenuOpen(false)
                           setIsQuizzesDropdownOpen(false)
                         }}
-                        className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-2 ${
-                          isActive
-                            ? 'bg-white/30 text-white shadow-md shadow-white/20 backdrop-blur-md border border-white/40'
-                            : 'text-white/80 bg-white/5 hover:bg-white/15 hover:text-white backdrop-blur-sm border border-white/10'
-                        }`}
+                        className={`${mobileChildLinkClass(isActive)} flex items-center gap-2`}
                       >
                         <span>{quiz.icon}</span>
                         <span>{quiz.label}</span>
@@ -1225,21 +1018,10 @@ const Navbar = ({ user = null }: NavbarProps) => {
             <div>
               <button
                 onClick={() => setIsAomTestsDropdownOpen(!isAomTestsDropdownOpen)}
-                className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition-all duration-300 ${
-                  pathname.startsWith('/aom-tests')
-                    ? 'border-2 border-white/40 bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md'
-                    : 'border border-white/20 bg-white/10 text-white/90 backdrop-blur-sm hover:bg-white/20 hover:text-white'
-                }`}
+                className={mobileNavItemClass(pathname.startsWith('/aom-tests'))}
               >
                 <span>AOM Tests</span>
-                <svg
-                  className={`h-5 w-5 transition-transform duration-300 ${isAomTestsDropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <Chevron open={isAomTestsDropdownOpen} className="h-5 w-5" />
               </button>
 
               <div
@@ -1260,11 +1042,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                           setIsMobileMenuOpen(false)
                           setIsAomTestsDropdownOpen(false)
                         }}
-                        className={`flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
-                          isActive
-                            ? 'border border-white/40 bg-white/30 text-white shadow-md shadow-white/20 backdrop-blur-md'
-                            : 'border border-white/10 bg-white/5 text-white/80 backdrop-blur-sm hover:bg-white/15 hover:text-white'
-                        }`}
+                        className={`${mobileChildLinkClass(isActive)} flex items-center gap-2`}
                       >
                         <span>{test.icon}</span>
                         <span>{test.label}</span>
@@ -1279,21 +1057,10 @@ const Navbar = ({ user = null }: NavbarProps) => {
             <div>
               <button
                 onClick={() => setIsGeneralAwarenessDropdownOpen(!isGeneralAwarenessDropdownOpen)}
-                className={`w-full px-4 py-3 text-base font-semibold rounded-xl transition-all duration-300 flex items-center justify-between ${
-                  pathname.startsWith('/general-awareness')
-                    ? 'bg-white/30 text-white shadow-lg shadow-white/20 backdrop-blur-md border-2 border-white/40'
-                    : 'text-white/90 bg-white/10 hover:bg-white/20 hover:text-white backdrop-blur-sm border border-white/20'
-                }`}
+                className={mobileNavItemClass(pathname.startsWith('/general-awareness'))}
               >
                 <span>General Awareness</span>
-                <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${isGeneralAwarenessDropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <Chevron open={isGeneralAwarenessDropdownOpen} className="h-5 w-5" />
               </button>
               
               {/* Mobile General Awareness Dropdown */}
@@ -1313,11 +1080,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
                           setIsMobileMenuOpen(false)
                           setIsGeneralAwarenessDropdownOpen(false)
                         }}
-                        className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 flex items-center gap-2 ${
-                          isActive
-                            ? 'bg-white/30 text-white shadow-md shadow-white/20 backdrop-blur-md border border-white/40'
-                            : 'text-white/80 bg-white/5 hover:bg-white/15 hover:text-white backdrop-blur-sm border border-white/10'
-                        }`}
+                        className={`${mobileChildLinkClass(isActive)} flex items-center gap-2`}
                       >
                         <span>{item.icon}</span>
                         <span>{item.label}</span>
@@ -1338,9 +1101,9 @@ const Navbar = ({ user = null }: NavbarProps) => {
               <Link
                 href="/admin"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`rounded-full px-4 py-3 text-center text-base font-bold transition-all duration-300 ${
+                className={`rounded-full px-4 py-3 text-center text-base font-bold shadow-[0_8px_20px_-10px_rgba(0,0,0,0.4)] ring-1 ring-white/25 transition-all duration-300 ${
                   pathname.startsWith('/admin')
-                    ? 'bg-white text-purple-700 shadow-lg'
+                    ? 'bg-white text-violet-700'
                     : 'bg-linear-to-r from-amber-300 to-orange-400 text-slate-900'
                 }`}
               >
