@@ -1,0 +1,132 @@
+export const aomProfessionalSubjectTest04 = {
+    tests: {
+        'aom-professional-subject-test-04': [
+            {
+                question: 'The maximum speed (in kmph) of BCNAHS in loaded condition over the network of Indian Railway subject to other temporary and permanent speed restrictions is __________.',
+                options: ['60 kmph', '75 kmph', '90 kmph', '100 kmph'],
+                correct: 3,
+                explanation: 'The maximum speed (in kmph) of BCNAHS in loaded condition over the network of Indian Railway subject to other temporary and permanent speed restrictions is 100 kmph.',
+            },
+            {
+                question: 'The maximum speed (in kmph) of BOSTHS in loaded condition over the network of Indian Railway subject to other temporary and permanent speed restrictions is __________.',
+                options: ['60 kmph', '75 kmph', '90 kmph', '100 kmph'],
+                correct: 3,
+                explanation: 'The maximum speed (in kmph) of BOSTHS in loaded condition over the network of Indian Railway subject to other temporary and permanent speed restrictions is 100 kmph.',
+            },
+            {
+                question: 'The maximum speed (in kmph) of BOXNHL in loaded condition over the network of Indian Railway subject to other temporary and permanent speed restrictions is __________.',
+                options: ['60 kmph', '75 kmph', '90 kmph', '100 kmph'],
+                correct: 1,
+                explanation: 'The maximum speed (in kmph) of BOXNHL in loaded condition over the network of Indian Railway subject to other temporary and permanent speed restrictions is 75 kmph.',
+            },
+            {
+                question: 'According to the Preferential Traffic Order, who is the Accepting authority for programmed traffic of POL under Priority C?',
+                options: ['Central Government', 'DRM', 'Railway Board', 'General Manager'],
+                correct: 2,
+                explanation: 'According to the Preferential Traffic Order, the Railway Board is the Accepting authority for programmed traffic of POL under Priority C.',
+            },
+            {
+                question: 'Who is the principal technical advisor to Central Government on matters pertaining to Commissioners of Railway Safety?',
+                options: ['CCRS', 'Railway Board', 'DRM', 'General Manager'],
+                correct: 0,
+                explanation: 'The principal technical advisor to Central Government on matters pertaining to Commissioners of Railway Safety is the Chief Commissioner of Railway Safety (CCRS).',
+            },
+            {
+                question: 'On a double line Broad Gauge section, Panel interlocking at a station is to be replaced with Electronic Interlocking. Which plan head is best suited to propose this work?',
+                options: ['PH 11', 'PH 21', 'PH 33', 'PH 41'],
+                correct: 2,
+                explanation: 'The plan head best suited to propose this work is the PH 33.',
+            },
+            {
+                question: 'Which module of ICMS is used for analysis of punctuality loss and its causes?',
+                options: ['COIS', 'PAM', 'TMS', 'Time Tabling Module'],
+                correct: 1,
+                explanation: 'The module of ICMS used for analysis of punctuality loss and its causes is the PAM.',
+            },
+            {
+                question: 'For taking OFF the Home signal, Derailing switch can substitute for signal overlap.',
+                options: ['Under approved special instructions', 'Under approved instructions', 'Under approval of PCSTE', 'With speed restriction of 50 kmph'],
+                correct: 0,
+                explanation: 'For taking OFF the Home signal, Derailing switch can substitute for signal overlap under approved special instructions.',
+            },
+            {
+                question: 'Which is vital equipment for safety of passengers coaches?',
+                options: ['Alarm chain', 'FDAS', 'Emergency window', 'All the above'],
+                correct: 3,
+                explanation: 'All the above are vital equipment for safety of passengers coaches.',
+            },
+            {
+                question: 'Who is nominated by the Railway Board under disaster management plan to declare an untoward incident as railway disaster?',
+                options: ['General Manager', 'CCRS', 'PCOM', 'PCE'],
+                correct: 0,
+                explanation: 'The General Manager is nominated by the Railway Board under disaster management plan to declare an untoward incident as railway disaster.',
+            },
+            {
+                question: 'Which is not a constituent of formula for Wagon Turnround (WTR)?',
+                options: ['Effective divisional wagon holding', 'Wagons loaded by the division', 'Loaded wagons received by the division', 'Total number of wagons interchanged by division'],
+                correct: 3,
+                explanation: 'Total number of wagons interchanged by division is not a constituent of formula for Wagon Turnround (WTR).',
+            },
+            {
+                question: 'Charges collected by Railways from container train operators for moving their wagons on Indian Railway network is __________.',
+                options: ['Freight charges', 'Haulage charges', 'Operating charges', 'Track access charges'],
+                correct: 1,
+                explanation: 'Charges collected by Railways from container train operators for moving their wagons on Indian Railway network is Haulage charges.',
+            },
+            {
+                question: 'Which organization handles booking of Full Tariff Rate (FTR) trains?',
+                options: ['IRCTC', 'IRFC', 'RVNL', 'CONCOR'],
+                correct: 0,
+                explanation: 'IRCTC (Indian Railway Catering and Tourism Corporation) handles booking of Full Tariff Rate (FTR) trains.',
+            },
+            {
+                question: 'What is the code for LHB, vestibuled, air conditioned executive chair car?',
+                options: ['LWFCZAC', 'WSCZAC', 'LWFAC', 'LWSCZAC'],
+                correct: 0,
+                explanation: 'The code for LHB, vestibuled, air conditioned executive chair car is LWFCZAC.',
+            },
+            {
+                question: 'What is the periodicity of POH (SS-II) of LHG coaches?',
+                options: ['2 years + 60 days', '18 months + 60 days', '36 months/ 12 lakh km earned whichever is earlier', '3 years + 60 days'],
+                correct: 2,
+                explanation: 'The periodicity of POH (SS-II) of LHG coaches is 36 months/ 12 lakh km earned whichever is earlier.',
+            },
+            {
+                question: 'On a double line where trains on the two lines run in opposite directions, when a Loco Pilot becomes aware that his train has met with an accident, what action should he take?',
+                options: ['Switch on the flasher, switch on the headlights and protect the train from the front end', 'Switch on the flasher, swith off the headlights and protect the adjacent line from the front', 'Switch on the flasher, swithc on the headlights, place banner flag on adjacent line', 'Switch on the flasher and tell train manager to protect the adjacent line'],
+                correct: 1,
+                explanation: 'On a double line where trains on the two lines run in opposite directions, when a Loco Pilot becomes aware that his train has met with an accident, he should switch on the flasher, swith off the headlights and protect the adjacent line from the front.',
+            },
+            {
+                question: 'BCACBM wagons are used for loading of __________.',
+                options: ['Containers', 'Motor cars', 'Parcels', 'B class ODC consignments'],
+                correct: 1,
+                explanation: 'BCACBM wagons are used for loading of Motor cars.',
+            },
+            {
+                question: 'A consignment has a gross clearance of 23 cm from minimum fixed structure profile. What will be its ODC class?',
+                options: ['A', 'B', 'C', 'Not permitted as ODC'],
+                correct: 0,
+                explanation: 'A consignment has a gross clearance of 23 cm from minimum fixed structure profile. It will be class A.',
+            },
+            {
+                question: 'What is the prupose of granting block for BCM?',
+                options: ['Cleaing of shoulder ballast', 'Laying of track', 'Ballast screening of plain track and turnouts', 'None of the above'],
+                correct: 2,
+                explanation: 'The purpose of granting block for BCM is to ballast screening of plain track and turnouts.',
+            },
+            {
+                question: 'What is the periodicity of POH of BTPN wagons (in years)?',
+                options: ['2 years', '3 years', '4 years', '6 years'],
+                correct: 3,
+                explanation: 'The periodicity of POH of BTPN wagons (in years) is 6 years.',
+            },
+            {
+                question: 'In operating statistics, which of the following is a fundamental unit?',
+                options: ['Distance', 'Service', 'Wagon kilometer', 'Net tonne Kilometer per wagon day'],
+                correct: 2,
+                explanation: 'In operating statistics, Wagon kilometer is a fundamental unit.',
+            },
+        ],
+    },
+}

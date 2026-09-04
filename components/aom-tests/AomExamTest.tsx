@@ -1011,7 +1011,7 @@ export default function AomExamTest({
                   Review
                 </button>
               </div>
-              {isLastQuestion && selected !== null ? (
+              {isLastQuestion ? (
                 <button
                   type="button"
                   onClick={() => setShowSubmitConfirm(true)}
@@ -1019,7 +1019,7 @@ export default function AomExamTest({
                 >
                   Submit test
                 </button>
-              ) : currentQuestion < questions.length - 1 ? (
+              ) : (
                 <button
                   type="button"
                   onClick={saveAndNext}
@@ -1027,7 +1027,7 @@ export default function AomExamTest({
                 >
                   Save & next
                 </button>
-              ) : null}
+              )}
             </div>
           </div>
 
