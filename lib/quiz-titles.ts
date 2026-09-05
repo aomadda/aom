@@ -8,6 +8,8 @@ const QUIZ_TITLES: Record<string, string> = {
   'aom-professional-subject-test-04': 'AOM Professional Subject Test 04',
   'aom-professional-subject-test-05': 'AOM Professional Subject Test 05',
   'aom-professional-subject-test-06': 'AOM Professional Subject Test 06',
+  'aom-finance-establishment-rules-test-01': 'AOM Finance & Establishment Rules Test 01',
+  'aom-finance-establishment-rules-test-02': 'AOM Finance & Establishment Rules Test 02',
   'gk-rajabhasha': 'AOM Previous Papers 2026 — GK & Rajabhasha',
   'establishment-finance-rules': 'AOM Previous Papers 2026 — Establishment & Financial Rules',
   'accident-manual': 'Accident Manual',
