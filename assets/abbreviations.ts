@@ -416,6 +416,10 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      { acronym: "CCEA", fullForm: "Cabinet Committee on Economic Affairs",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { acronym: "CCI", fullForm: "Container Corporation of India",
         explanation: "Will be added later",
         reference: "--"

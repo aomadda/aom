@@ -254,6 +254,14 @@ export const searchTopics: SearchTopic[] = [
       "aom tests professional subject test 05 AOM Professional Subject Test 05 paper mock operating G&SR signalling",
   },
   {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test06",
+    title: "AOM Professional Subject Test 06",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 06 AOM Professional Subject Test 06 paper mock operating G&SR signalling",
+  },
+  {
     href: "/topics/aom-special",
     title: "AOM Special",
     category: "Study Topics",
