@@ -85,6 +85,12 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      {
+        acronym: "AFTC",
+        fullForm: "Audio Frequency Track Circuit",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { 
         acronym: "AFTO", 
         fullForm: "Automobile Frieght Train Operators",
@@ -1064,8 +1070,12 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      { acronym: "DSDC", fullForm: "Double Stack Dwarf Container",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { acronym: "DSO", fullForm: "Divisional Safety Officer",
-        explanation: "he officer supervising safety measures, practices, and compliance within the division",
+        explanation: "The officer supervising safety measures, practices, and compliance within the division",
         reference: "--"
       },
       { acronym: "DSTE",

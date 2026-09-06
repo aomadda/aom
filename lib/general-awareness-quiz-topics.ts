@@ -34,7 +34,7 @@ export const GENERAL_AWARENESS_QUIZ_TOPICS: GeneralAwarenessQuizTopic[] = [
     color: 'from-emerald-500 to-green-600',
     description:
       'Quiz questions on cells, physiology, ecology, genetics, and core concepts in biology for exam preparation.',
-    quizIds: quizIds(2),
+    quizIds: quizIds(6),
   },
   {
     slug: 'botany',
@@ -56,7 +56,7 @@ export const GENERAL_AWARENESS_QUIZ_TOPICS: GeneralAwarenessQuizTopic[] = [
     color: 'from-cyan-500 to-blue-600',
     description:
       'Organic, inorganic, and physical chemistry questions covering periodic trends, reactions, and everyday concepts.',
-    quizIds: quizIds(2),
+    quizIds: quizIds(7),
   },
   {
     slug: 'current-affairs',
@@ -67,7 +67,7 @@ export const GENERAL_AWARENESS_QUIZ_TOPICS: GeneralAwarenessQuizTopic[] = [
     color: 'from-sky-500 to-indigo-600',
     description:
       'Recent events, appointments, indexes, honours, defence, economics, and global developments for GK.',
-    quizIds: quizIds(1),
+    quizIds: quizIds(3),
   },
   {
     slug: 'geography',
@@ -78,7 +78,7 @@ export const GENERAL_AWARENESS_QUIZ_TOPICS: GeneralAwarenessQuizTopic[] = [
     color: 'from-teal-500 to-cyan-600',
     description:
       'Physical and human geography, Indian and world geography, maps, climates, rivers, and natural resources.',
-    quizIds: quizIds(2),
+    quizIds: quizIds(3),
   },
   {
     slug: 'history',
@@ -89,7 +89,7 @@ export const GENERAL_AWARENESS_QUIZ_TOPICS: GeneralAwarenessQuizTopic[] = [
     color: 'from-amber-500 to-orange-600',
     description:
       'Ancient, medieval, and modern history timelines, personalities, wars, treaties, and major movements.',
-    quizIds: quizIds(13),
+    quizIds: quizIds(9),
   },
   {
     slug: 'physics',
@@ -100,7 +100,7 @@ export const GENERAL_AWARENESS_QUIZ_TOPICS: GeneralAwarenessQuizTopic[] = [
     color: 'from-violet-500 to-purple-600',
     description:
       'Mechanics, heat, light, electricity, modern physics fundamentals, SI units, and formula-based revisions.',
-    quizIds: quizIds(3),
+    quizIds: quizIds(6),
   },
   {
     slug: 'polity',
@@ -111,7 +111,7 @@ export const GENERAL_AWARENESS_QUIZ_TOPICS: GeneralAwarenessQuizTopic[] = [
     color: 'from-blue-600 to-indigo-700',
     description:
       'Indian Constitution, central and state organs, judiciary, Panchayati Raj, and fundamental duties and rights.',
-    quizIds: quizIds(10),
+    quizIds: quizIds(13),
   },
   {
     slug: 'zoology',

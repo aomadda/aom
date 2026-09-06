@@ -169,8 +169,6 @@ export const biologyQuiz = {
         correct: 3,
         explanation: 'Urea + Uric acid is the correct answer because it is the nitrogenous waste that is removed by the human kidney.',
       },
-    ],
-    'quiz-2': [
       {
         question:
           'Within the nucleus of eukaryotic cells, which of the following structures contains the tightly coiled genetic material?',
@@ -178,531 +176,12 @@ export const biologyQuiz = {
         correct: 1,
         explanation: 'Chromosomes are the structures that contain the tightly coiled genetic material in the nucleus of eukaryotic cells.',
       },
-      {
-        question:
-          'Which disease is caused by the accumulation of lipids in brain cells due to the deficiency or inactivation of lipid digestion enzymes?',
-        options: ['Alzheimer\'s disease', 'Parkinson\'s disease', 'Huntington\'s disease', 'Tay-Sachs\'s disease'],
-        correct: 3,
-        explanation: 'Tay-Sachs\'s disease is the correct answer because it is the disease that is caused by the accumulation of lipids in brain cells due to the deficiency or inactivation of lipid digestion enzymes.',
-      },
-      {
-        question:
-          'Which of the following is classified as micronutrients?',
-        options: ['Vitamins', 'Fats', 'Proteins', 'Carbohydrates'],
-        correct: 0,
-        explanation: 'Vitamins are the nutrients that are required in small amounts by the body.',
-      },
-      {
-        question:
-          'Which of the following organelle of the eukaryotic cells are also called suicidal bags?',
-        options: ['Chromosomes', 'Mitochondria', 'Lysosomes', 'Chloroplasts'],
-        correct: 2,
-        explanation: 'Lysosomes are the organelle of the eukaryotic cells that are also called suicidal bags.',
-      },
-      {
-        question:
-          '__________ contributed to the theories of inheritance of trains in living things.',
-        options: ['Gregor Mendel', 'JBS Haldane', 'Charles Darwin', 'Stanley Miller'],
-        correct: 0,
-        explanation: 'Gregor Mendel is the correct answer because he contributed to the theories of inheritance of trains in living things. Gregor Mendel is the scientist who contributed to the theories of inheritance of trains in living things.',
-      },
-      {
-        question:
-          'Ascorbic acid is a water-soluble vitamin deficiency of which leads to scurvy. Identify the vitamin.',
-        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
-        correct: 2,
-        explanation: 'Vitamin C is the correct answer because it is the vitamin that is a water-soluble vitamin deficiency of which leads to scurvy.',
-      },
-      {
-        question:
-          'Which of the following is the most abundant protein in the biosphere?',
-        options: ['Collagen', 'GLUT-4', 'Mysin', 'Rubisco'],
-        correct: 3,
-        explanation: 'Rubisco is the protein that is most abundant in the biosphere.',
-      },
-      {
-        question:
-          'How is urea removed from the blood by an artificial kidney?',
-        options: ['Filtration', 'Diffusion', 'Osmosis', 'Excretion'],
-        correct: 0,
-        explanation: 'Filtration is the process that is used to remove urea from the blood by an artificial kidney.',
-      },
-      {
-        question:
-          'Which of the following scientists coined the term "Cell" used in biology?',
-        options: ['Alexander Fleming', 'Craig Venter', 'James D. Watson', 'Robert Hooke'],
-        correct: 3,
-        explanation: 'Robert Hooke is the scientist who coined the term "Cell" used in biology.',
-      },
-      {
-        question:
-          'Which of the following is an invisible biological hazard in food?',
-        options: ['Fly', 'Molds', 'Weevils', 'Worms'],
-        correct: 1,
-        explanation: 'Molds are the invisible biological hazard in food.',
-      },
-      {
-        question:
-          'Which of the following is called the hunger harmone? Because it stimulates appetite, increases food intake and increases fat storage?',
-        options: ['Insulin', 'Ghrelin', 'Gastrin', 'Leptin'],
-        correct: 1,
-        explanation: 'Ghrelin is the hormone that is called the hunger harmone.',
-      },
-      {
-        question:
-          'Which of the following is also known as congenital ovarian hypoplasia syndrome which is only found in females?',
-        options: ['Klinefelter syndrome', 'Turner syndrome', 'Down syndrome', 'Kallmann syndrome'],
-        correct: 1,
-        explanation: 'Turner syndrome is the correct answer because it is the syndrome that is also known as congenital ovarian hypoplasia syndrome which is only found in females.',
-      },
-      {
-        question:
-          'Which type of protein causes coagulation in milk during the cheese-making process?',
-        options: ['Casein', 'Gluten', 'Globulin', 'Gelatin'],
-        correct: 0,
-        explanation: 'Casein is the correct answer because it is the protein that causes coagulation in milk during the cheese-making process.',
-      },
-      {
-        question:
-          'Which of the following foods is a rich source of dietary fiber for human beings?',
-        options: ['Cheese', 'Fish', 'Oats', 'Eggs'],
-        correct: 2,
-        explanation: 'Oats is the correct answer.',
-      },
-      {
-        question:
-          'As per World Health Organization, keeping salt intake to less than _________ helps to prevent hypertension, and reduce the risk of heart disease and stroke in the adults.',
-        options: ['5 grams per day', '10 grams per day', '15 grams per day', '20 grams per day'],
-        correct: 0,
-        explanation: '5 grams per day is the correct answer',
-      },
-      {
-        question:
-          'A neuron receives nerve impulse from another neuron through which of the following structure?',
-        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
-        correct: 0,
-        explanation: 'Dendrites are the structures that receive the nerve impulse from another neuron.',
-      },
-      {
-        question:
-          'A baby receives its nutrition in the mother\'s womb through which of the following ________',
-        options: ['Uterus', 'Placenta', 'Fallopian tube', 'Amnion'],
-        correct: 1,
-        explanation: 'Placenta is the structure that receives the nutrition from the mother to the baby in the mother\'s womb.',
-      },
-      {
-        question:
-          'Which disease is caused by the deficiency of protein in our body?',
-        options: ['Marasmus', 'Kwashiorkor', 'Pellagra', 'Beriberi'],
-        correct: 1,
-        explanation: 'Kwashiorkor is the disease that is caused by the deficiency of protein in our body.',
-      },
-      {
-        question:
-          'What branch of biology focuses on the study of inheritance patterns in living organisms?',
-        options: ['Genetics', 'Biotechnology', 'Anthropology', 'Anatomy'],
-        correct: 0,
-        explanation: 'Genetics is the branch of biology that focuses on the study of inheritance patterns in living organisms.',
-      },
-      {
-        question:
-          'Tetanus disease affects which organ of the human body?',
-        options: ['Lungs', 'Nervous system', 'Liver', 'Kidneys'],
-        correct: 1,
-        explanation: 'Nervous system is the correct answer.',
-      },
-      {
-        question:
-          'To get rid of pain in the stomach during indigestion, people usually take ________',
-        options: ['Gastric juice', 'Lemon juice', 'Milk of magnesia', 'None of these'],
-        correct: 2,
-        explanation: 'Milk of magnesia is the correct answer because it is the medicine that is used to get rid of pain in the stomach during indigestion.',
-      },
-      {
-        question:
-          'The enzymes responsible for final conversion of Proteins into amino acids, complex carbohydrates into glucose and fats into fatty acids and glycerol is present in ________',
-        options: ['Bile juice', 'Gastric juice', 'Intestinal juice', 'Pancreatic juice'],
-        correct: 3,
-        explanation: 'Intestinal juice is the correct answer because it is the enzyme that is responsible for the final conversion of Proteins into amino acids, complex carbohydrates into glucose and fats into fatty acids and glycerol.',
-      },
-      {
-        question:
-          'Which of the following is the major female hormone in the human body?',
-        options: ['Testosterone', 'Estrogen', 'Progesterone', 'Androgen'],
-        correct: 1,
-        explanation: 'Estrogen is the correct answer because it is the major female hormone in the human body.',
-      },
-      {
-        question:
-          'When did the Hershey-Chase experiment provide solid evidence that DNA, not protein, is the genetic material?',
-        options: ['1952', '1953', '1954', '1955'],
-        correct: 1,
-        explanation: '1953 is the correct answer because it is the year when the Hershey-Chase experiment provided solid evidence that DNA, not protein, is the genetic material.',
-      },
-      {
-        question:
-          'A neuron receives nerve impulse from another neuron through which of the following structure?',
-        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
-        correct: 0,
-        explanation: 'Dendrites are the structures that receive the nerve impulse from another neuron.',
-      },
-      {
-        question:
-          'To which part of the body does cochlea belong?',
-        options: ['Ear', 'Eye', 'Brain', 'Heart'],
-        correct: 0,
-        explanation: 'Ear is the correct answer because it is the part of the body that does cochlea belong.',
-      },
-      {
-        question:
-          'Which of the following is/are called biological catalysts?',
-        options: ['Enzymes', 'Hormones', 'Vitamins', 'Minerals'],
-        correct: 0,
-        explanation: 'Enzymes are the biological catalysts.',
-      },
-      {
-        question:
-          'Which of the following diseases is caused due to deficiency of Vitamin D?',
-        options: ['Rickets', 'Night blindness', 'Scurvy', 'Pellagra'],
-        correct: 0,
-        explanation: 'Rickets is the correct answer because it is the disease that is caused due to deficiency of Vitamin D.',
-      },
-      {
-        question:
-          'Use of regenerative cells in the process of budding is present in ________',
-        options: ['Amoeba', 'Hydra', 'Tunicate', 'Plants'],
-        correct: 1,
-        explanation: 'Hydra is the correct answer.',
-      },
-      {
-        question:
-          'Which species of the Plasmodium parasite is identified as the most deadly and a major cause of malaria-related deaths worldwide?',
-        options: ['Plasmodium falciparum', 'Plasmodium vivax', 'Plasmodium ovale', 'Plasmodium malariae'],
-        correct: 0,
-        explanation: 'Plasmodium falciparum is the correct answer.',
-      },
-      {
-        question:
-          'A cell divides to form two identical daughter cells, each having the same chromosome number as the parent cell. What type of cell division is this called?',
-        options: ['Mitosis', 'Meiosis', 'Budding', 'Binary fusion'],
-        correct: 0,
-        explanation: 'Mitosis is the correct answer.',
-      },
-      {
-        question:
-          'The sexual act is a very intimate connection of bodies and there are many diseases that can be transmitted sexually. Which of the following is caused by bacteria?',
-        options: ['Warts', 'Gonorrhea', 'Syphilis', 'Both Syphilis and Gonorrhea'],
-        correct: 3,
-        explanation: 'Both Syphilis and Gonorrhea are the correct answer.',
-      },
-      {
-        question:
-          'What are the two versions of a gene controlling a trait called?',
-        options: ['Alleles', 'Chromosomes', 'DNA', 'RNA'],
-        correct: 0,
-        explanation: 'Alleles are the correct answer because they are the two versions of a gene controlling a trait.',
-      },
-      {
-        question:
-          'Which of the following is called a motile germ cell?',
-        options: ['Sperm', 'Ovum', 'Zygote', 'Spore'],
-        correct: 0,
-        explanation: 'Sperm is the correct answer because it is the motile germ cell.',
-      },
-      {
-        question:
-          '________ softens the bone surface a the joints',
-        options: ['Cartilage', 'Areolar', 'Muscle', 'Ligament'],
-        correct: 0,
-        explanation: 'Cartilage is the correct answer because it is the tissue that softens the bone surface a the joints.',
-      },
-      {
-        question:
-          'A glucose meter is generally used as a monitor by a ________ patient?',
-        options: ['Hypoglycemic', 'Hypertensive', 'Asthmatic', 'Hyperthyroid'],
-        correct: 0,
-        explanation: 'Hypoglycemic is the correct answer because it is the patient that is generally used as a monitor by a hypoglycemic patient.',
-      },
-      {
-        question:
-          'Nyctalopia is a condition that occurs due to the deficiency of which of the following vitamins?',
-        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
-        correct: 0,
-        explanation: 'Vitamin A is the correct answer because it is the vitamin that is deficient in Nyctalopia.',
-      },
-      {
-        question:
-          'Early blight is a common disease seen in which of the following?',
-        options: ['Ginger', 'Potato', 'Chilli', 'Cucumber'],
-        correct: 1,
-        explanation: 'Potato is the correct answer',
-      },
-      {
-        question:
-          'Bile is stored in which of the following organ?',
-        options: ['Spleen', 'Gallbladder', 'Intestine', 'Appendix'],
-        correct: 1,
-        explanation: 'Gallbladder is the correct answer',
-      },
-      {
-        question:
-          'Which is the largest bone in the human body?',
-        options: ['Femur', 'Humerus', 'Tibia', 'Radius'],
-        correct: 0,
-        explanation: 'Femur is the correct answer',
-      },
-      {
-        question:
-          'Which of the following glands is a source of the enzyme Ptyalin?',
-        options: ['Salivary gland', 'Pancreas', 'Thyroid gland', 'Adrenal gland'],
-        correct: 0,
-        explanation: 'Salivary gland is the correct answer',
-      },
-      {
-        question:
-          'Which of the following is the largest part of the human brain?',
-        options: ['Cerebrum', 'Cerebellum', 'Medulla oblongata', 'Hypothalamus'],
-        correct: 0,
-        explanation: 'Cerebrum is the correct answer',
-      },
-      {
-        question:
-          'Salk vaccine is connected with which one of the following diseases?',
-        options: ['Polio', 'Tetanus', 'Malaria', 'Tuberculosis'],
-        correct: 0,
-        explanation: 'Polio is the correct answer',
-      },
-      {
-        question:
-          'The blood vessels supplying blood to the kidney are called ________',
-        options: ['Carotid artery', 'Hepatic artery', 'Pulmonary artery', 'Renal artery'],
-        correct: 3,
-        explanation: 'Renal artery is the correct answer',
-      },
-      {
-        question:
-          'Which lobe of the human brain is associated with hearing?',
-        options: ['Frontal lobe', 'Parietal lobe', 'Occipital lobe', 'Temporal lobe'],
-        correct: 3,
-        explanation: 'Temporal lobe is the correct answer',
-      },
-      {
-        question:
-          'Prothrombin is responsible for clotting of blood is produced in which of the following?',
-        options: ['Liver', 'Kidney', 'Pancreas', 'Heart'],
-        correct: 0,
-        explanation: 'Liver is the correct answer',
-      },
-      {
-        question:
-          'Myopia is a defect of eyes which also called as ________',
-        options: ['Short sightedness', 'Long sightedness', 'Astigmatism', 'Presbyopia'],
-        correct: 0,
-        explanation: 'Short sightedness is the correct answer',
-      },
-      {
-        question:
-          'Prothrombin is responsible for clotting of blood is released by which of the following?',
-        options: ['Blood platelets', 'Small intestine', 'Large intestine', 'Heart'],
-        correct: 0,
-        explanation: 'Blood platelets is the correct answer',
-      },
-      {
-        question:
-          'The enzyme that is present in the saliva of the human body is ________',
-        options: ['Ptyalin', 'Amylase', 'Trypsin', 'Protease'],
-        correct: 1,
-        explanation: 'Amylase is the correct answer.',
-      },
-      {
-        question:
-          'Which of the following is essential to regulate the heart beat?',
-        options: ['Iron', 'Potassium', 'Sulphur', 'Calcium'],
-        correct: 1,
-        explanation: 'Potassium is the correct answer',
-      },
-      {
-        question:
-          'Cod liver oil is a rich source of which of the following vitamins?',
-        options: ['Vitamin K', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
-        correct: 3,
-        explanation: 'Vitamin A and D are the correct answer',
-      },
-      {
-        question:
-          'The thymus gland produces which of the following hormones?',
-        options: ['Thyroid hormone', 'Thyroxin', 'Thymosin', 'Thyronine'],
-        correct: 2,
-        explanation: 'Thymosin is the correct answer',
-      },
-      {
-        question:
-          'In what form is the enerby derived from the food we eat is stored in our body?',
-        options: ['Glucose', 'Glycogen', 'Maltose', 'Sucrose'],
-        correct: 1,
-        explanation: 'Glycogen is the correct answer',
-      }, 
-      {
-        question:
-          'Which of the following is secreted by the liver?',
-        options: ['Insulin', 'Glucagon', 'Bile', 'Pancreatic juice'],
-        correct: 2,
-        explanation: 'Bile is the correct answer',
-      }, 
-      {
-        question:
-          'The enzyme that is present in the saliva of the man is ________',
-        options: ['Ptyalin', 'Amylase', 'Trypsin', 'Protease'],
-        correct: 1,
-        explanation: 'Amylase is the correct answer',
-      }, 
-      {
-        question:
-          'Deficiency of which of the following vitamins i the human diet causes a disease called xerophthalmia?',
-        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
-        correct: 0,
-        explanation: 'Vitamin A is the correct answer',
-      },
-      {
-        question:
-          '________ is a hormone that regulates the amount of glucose in the blood',
-        options: ['Insulin', 'Glucagon', 'Cortisol', 'Testosterone'],
-        correct: 0,
-        explanation: 'Insulin is the correct answer',
-      },
-      {
-        question:
-          'The outermost layer of the skin is called ________',
-        options: ['Epidermis', 'Dermis', 'Hypodermis', 'Cutin'],
-        correct: 0,
-        explanation: 'Epidermis is the correct answer',
-      },
-      {
-        question:
-          'Which of the following is the largest organ of the human body?',
-        options: ['Skin', 'Liver', 'Heart', 'Brain'],
-        correct: 0,
-        explanation: 'Skin is the correct answer',
-      },
-      {
-        question:
-          'Where is ammonia in the human body is converted into urea?',
-        options: ['Liver', 'Kidney', 'Pancreas', 'Heart'],
-        correct: 0,
-        explanation: 'Liver is the correct answer',
-      },
-      {
-        question:
-          'Where is insulin produced in the human body?',
-        options: ['Pancreas', 'Kidney', 'Liver', 'Spleen'],
-        correct: 0,
-        explanation: 'Pancreas is the correct answer',
-      },
-      {
-        question:
-          'On which of the following pinciples does the human eye work?',
-        options: ['Refraction of light', 'Reflection of light', 'Scattering of light', 'Diffraction of light'],
-        correct: 0,
-        explanation: 'Refraction of light is the correct answer',
-      },
-      {
-        question:
-          'Astigmatism is a disease which affects which of the following?',
-        options: ['Vision', 'Hearing', 'Speech', 'Walking'],
-        correct: 0,
-        explanation: 'Vision is the correct answer',
-      },
-      {
-        question:
-          'Which part of the body does rheumatism affect?',
-        options: ['Joints', 'Muscles', 'Nerves', 'Brain'],
-        correct: 0,
-        explanation: 'Joints is the correct answer',
-      },
-      {
-        question:
-          'Which cell organelle is associated with the generation of ATP (Adenosine Triphosphate)?',
-        options: ['Mitochondria', 'Nucleus', 'Cytoplasm', 'Endoplasmic reticulum'],
-        correct: 0,
-        explanation: 'Mitochondria is the correct answer',
-      },
-      {
-        question:
-          'Which part of the neuron is responsible for acquiring information?',
-        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
-        correct: 0,
-        explanation: 'Dendrites is the correct answer',
-      },
-      {
-        question:
-          'What type of nutrition is observed in mushrooms?',
-        options: ['Autotrophic', 'Heterotrophic', 'Saprophytic', 'Symbiotic'],
-        correct: 2,
-        explanation: 'Saprophytic is the correct answer',
-      },
-      {
-        question:
-          'Which human body part can well be called the "Chemical Factory" of the body?',
-        options: ['Liver', 'Heart', 'Lungs', 'Kidney'],
-        correct: 0,
-        explanation: 'Liver is the correct answer',
-      },
-      {
-        question:
-          'Which vitamin gets destroyed on heating?',
-        options: ['Vitamin A', 'Vitamin B1', 'Vitamin D', 'Vitamin E'],
-        correct: 1,
-        explanation: 'Vitamin B1 is the correct answer',
-      },
-      {
-        question:
-          'Which vitamin is known as the "Wound healing vitamin"?',
-        options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'],
-        correct: 2,
-        explanation: 'Vitamin C is the correct answer',
-      },
-      {
-        question:
-          'Which vitamin commonly known as the "Sunshine vitamin" becuase our skin can produce it when exposed to sunlight?',
-        options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'],
-        correct: 3,
-        explanation: 'Vitamin D is the correct answer',
-      },
-      {
-        question:
-          'Which blood group is known as the "Universal donor"?',
-        options: ['A', 'B', 'AB', 'O'],
-        correct: 3,
-        explanation: 'O is the correct answer',
-      },
-      {
-        question:
-          'Which blood group is known as the "Universal recipient"?',
-        options: ['A', 'B', 'AB', 'O'],
-        correct: 2,
-        explanation: 'AB is the correct answer',
-      },
-      {
-        question:
-          'Which blood component is responsible for maintaining blood pressure and regulating fluid balance?',
-        options: ['Plasma', 'Red blood cells', 'White blood cells', 'Platelets'],
-        correct: 0,
-        explanation: 'Plasma is the correct answer',
-      },
-      {
-        question:
-          'Blood protein which initiates clotting of blood is called ________',
-        options: ['Fibrin', 'Thrombin', 'Prothrombin', 'Fibrinogen'],
-        correct: 2,
-        explanation: 'Prothrombin is the correct answer',
-      },
-      {
-        question:
-          'The blood vessel supplying blood to the kidney is the ______',
-        options: ['Renal artery', 'Hepatic artery', 'Pulmonary artery', 'Carotid artery'],
-        correct: 0,
-        explanation: 'Renal artery is the correct answer',
-      },
+    ],
+    'quiz-2': [
+      
+      
+      
+      
       {
         question:
           'In which part of the human body is Villi present?',
@@ -878,6 +357,542 @@ export const biologyQuiz = {
         correct: 0,
         explanation: 'Iodine is the correct answer',
       },
+      
+    ],
+    'quiz-3': [
+      
+      {
+        question:
+          'Which disease is caused by the accumulation of lipids in brain cells due to the deficiency or inactivation of lipid digestion enzymes?',
+        options: ['Alzheimer\'s disease', 'Parkinson\'s disease', 'Huntington\'s disease', 'Tay-Sachs\'s disease'],
+        correct: 3,
+        explanation: 'Tay-Sachs\'s disease is the correct answer because it is the disease that is caused by the accumulation of lipids in brain cells due to the deficiency or inactivation of lipid digestion enzymes.',
+      },
+      {
+        question:
+          'Which of the following is classified as micronutrients?',
+        options: ['Vitamins', 'Fats', 'Proteins', 'Carbohydrates'],
+        correct: 0,
+        explanation: 'Vitamins are the nutrients that are required in small amounts by the body.',
+      },
+      {
+        question:
+          'Which of the following organelle of the eukaryotic cells are also called suicidal bags?',
+        options: ['Chromosomes', 'Mitochondria', 'Lysosomes', 'Chloroplasts'],
+        correct: 2,
+        explanation: 'Lysosomes are the organelle of the eukaryotic cells that are also called suicidal bags.',
+      },
+      {
+        question:
+          '__________ contributed to the theories of inheritance of trains in living things.',
+        options: ['Gregor Mendel', 'JBS Haldane', 'Charles Darwin', 'Stanley Miller'],
+        correct: 0,
+        explanation: 'Gregor Mendel is the correct answer because he contributed to the theories of inheritance of trains in living things. Gregor Mendel is the scientist who contributed to the theories of inheritance of trains in living things.',
+      },
+      {
+        question:
+          'Ascorbic acid is a water-soluble vitamin deficiency of which leads to scurvy. Identify the vitamin.',
+        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 2,
+        explanation: 'Vitamin C is the correct answer because it is the vitamin that is a water-soluble vitamin deficiency of which leads to scurvy.',
+      },
+      {
+        question:
+          'Which of the following is the most abundant protein in the biosphere?',
+        options: ['Collagen', 'GLUT-4', 'Mysin', 'Rubisco'],
+        correct: 3,
+        explanation: 'Rubisco is the protein that is most abundant in the biosphere.',
+      },
+      {
+        question:
+          'How is urea removed from the blood by an artificial kidney?',
+        options: ['Filtration', 'Diffusion', 'Osmosis', 'Excretion'],
+        correct: 0,
+        explanation: 'Filtration is the process that is used to remove urea from the blood by an artificial kidney.',
+      },
+      {
+        question:
+          'Which of the following scientists coined the term "Cell" used in biology?',
+        options: ['Alexander Fleming', 'Craig Venter', 'James D. Watson', 'Robert Hooke'],
+        correct: 3,
+        explanation: 'Robert Hooke is the scientist who coined the term "Cell" used in biology.',
+      },
+      {
+        question:
+          'Which of the following is an invisible biological hazard in food?',
+        options: ['Fly', 'Molds', 'Weevils', 'Worms'],
+        correct: 1,
+        explanation: 'Molds are the invisible biological hazard in food.',
+      },
+      {
+        question:
+          'Which of the following is called the hunger harmone? Because it stimulates appetite, increases food intake and increases fat storage?',
+        options: ['Insulin', 'Ghrelin', 'Gastrin', 'Leptin'],
+        correct: 1,
+        explanation: 'Ghrelin is the hormone that is called the hunger harmone.',
+      },
+      {
+        question:
+          'Which of the following is also known as congenital ovarian hypoplasia syndrome which is only found in females?',
+        options: ['Klinefelter syndrome', 'Turner syndrome', 'Down syndrome', 'Kallmann syndrome'],
+        correct: 1,
+        explanation: 'Turner syndrome is the correct answer because it is the syndrome that is also known as congenital ovarian hypoplasia syndrome which is only found in females.',
+      },
+      {
+        question:
+          'Which type of protein causes coagulation in milk during the cheese-making process?',
+        options: ['Casein', 'Gluten', 'Globulin', 'Gelatin'],
+        correct: 0,
+        explanation: 'Casein is the correct answer because it is the protein that causes coagulation in milk during the cheese-making process.',
+      },
+      {
+        question:
+          'Which of the following foods is a rich source of dietary fiber for human beings?',
+        options: ['Cheese', 'Fish', 'Oats', 'Eggs'],
+        correct: 2,
+        explanation: 'Oats is the correct answer.',
+      },
+      {
+        question:
+          'As per World Health Organization, keeping salt intake to less than _________ helps to prevent hypertension, and reduce the risk of heart disease and stroke in the adults.',
+        options: ['5 grams per day', '10 grams per day', '15 grams per day', '20 grams per day'],
+        correct: 0,
+        explanation: '5 grams per day is the correct answer',
+      },
+      {
+        question:
+          'A neuron receives nerve impulse from another neuron through which of the following structure?',
+        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
+        correct: 0,
+        explanation: 'Dendrites are the structures that receive the nerve impulse from another neuron.',
+      },
+      {
+        question:
+          'A baby receives its nutrition in the mother\'s womb through which of the following ________',
+        options: ['Uterus', 'Placenta', 'Fallopian tube', 'Amnion'],
+        correct: 1,
+        explanation: 'Placenta is the structure that receives the nutrition from the mother to the baby in the mother\'s womb.',
+      },
+      {
+        question:
+          'Which disease is caused by the deficiency of protein in our body?',
+        options: ['Marasmus', 'Kwashiorkor', 'Pellagra', 'Beriberi'],
+        correct: 1,
+        explanation: 'Kwashiorkor is the disease that is caused by the deficiency of protein in our body.',
+      },
+      {
+        question:
+          'What branch of biology focuses on the study of inheritance patterns in living organisms?',
+        options: ['Genetics', 'Biotechnology', 'Anthropology', 'Anatomy'],
+        correct: 0,
+        explanation: 'Genetics is the branch of biology that focuses on the study of inheritance patterns in living organisms.',
+      },
+      {
+        question:
+          'Tetanus disease affects which organ of the human body?',
+        options: ['Lungs', 'Nervous system', 'Liver', 'Kidneys'],
+        correct: 1,
+        explanation: 'Nervous system is the correct answer.',
+      },
+      {
+        question:
+          'To get rid of pain in the stomach during indigestion, people usually take ________',
+        options: ['Gastric juice', 'Lemon juice', 'Milk of magnesia', 'None of these'],
+        correct: 2,
+        explanation: 'Milk of magnesia is the correct answer because it is the medicine that is used to get rid of pain in the stomach during indigestion.',
+      },
+      {
+        question:
+          'The enzymes responsible for final conversion of Proteins into amino acids, complex carbohydrates into glucose and fats into fatty acids and glycerol is present in ________',
+        options: ['Bile juice', 'Gastric juice', 'Intestinal juice', 'Pancreatic juice'],
+        correct: 3,
+        explanation: 'Intestinal juice is the correct answer because it is the enzyme that is responsible for the final conversion of Proteins into amino acids, complex carbohydrates into glucose and fats into fatty acids and glycerol.',
+      },
+      {
+        question:
+          'Which of the following is the major female hormone in the human body?',
+        options: ['Testosterone', 'Estrogen', 'Progesterone', 'Androgen'],
+        correct: 1,
+        explanation: 'Estrogen is the correct answer because it is the major female hormone in the human body.',
+      },
+      {
+        question:
+          'When did the Hershey-Chase experiment provide solid evidence that DNA, not protein, is the genetic material?',
+        options: ['1952', '1953', '1954', '1955'],
+        correct: 1,
+        explanation: '1953 is the correct answer because it is the year when the Hershey-Chase experiment provided solid evidence that DNA, not protein, is the genetic material.',
+      },
+      {
+        question:
+          'A neuron receives nerve impulse from another neuron through which of the following structure?',
+        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
+        correct: 0,
+        explanation: 'Dendrites are the structures that receive the nerve impulse from another neuron.',
+      },
+      {
+        question:
+          'To which part of the body does cochlea belong?',
+        options: ['Ear', 'Eye', 'Brain', 'Heart'],
+        correct: 0,
+        explanation: 'Ear is the correct answer because it is the part of the body that does cochlea belong.',
+      },
+      
+    ],
+    'quiz-4': [
+      {
+        question:
+          'Which of the following is/are called biological catalysts?',
+        options: ['Enzymes', 'Hormones', 'Vitamins', 'Minerals'],
+        correct: 0,
+        explanation: 'Enzymes are the biological catalysts.',
+      },
+      {
+        question:
+          'Which of the following diseases is caused due to deficiency of Vitamin D?',
+        options: ['Rickets', 'Night blindness', 'Scurvy', 'Pellagra'],
+        correct: 0,
+        explanation: 'Rickets is the correct answer because it is the disease that is caused due to deficiency of Vitamin D.',
+      },
+      {
+        question:
+          'Use of regenerative cells in the process of budding is present in ________',
+        options: ['Amoeba', 'Hydra', 'Tunicate', 'Plants'],
+        correct: 1,
+        explanation: 'Hydra is the correct answer.',
+      },
+      {
+        question:
+          'Which species of the Plasmodium parasite is identified as the most deadly and a major cause of malaria-related deaths worldwide?',
+        options: ['Plasmodium falciparum', 'Plasmodium vivax', 'Plasmodium ovale', 'Plasmodium malariae'],
+        correct: 0,
+        explanation: 'Plasmodium falciparum is the correct answer.',
+      },
+      {
+        question:
+          'A cell divides to form two identical daughter cells, each having the same chromosome number as the parent cell. What type of cell division is this called?',
+        options: ['Mitosis', 'Meiosis', 'Budding', 'Binary fusion'],
+        correct: 0,
+        explanation: 'Mitosis is the correct answer.',
+      },
+      {
+        question:
+          'The sexual act is a very intimate connection of bodies and there are many diseases that can be transmitted sexually. Which of the following is caused by bacteria?',
+        options: ['Warts', 'Gonorrhea', 'Syphilis', 'Both Syphilis and Gonorrhea'],
+        correct: 3,
+        explanation: 'Both Syphilis and Gonorrhea are the correct answer.',
+      },
+      {
+        question:
+          'What are the two versions of a gene controlling a trait called?',
+        options: ['Alleles', 'Chromosomes', 'DNA', 'RNA'],
+        correct: 0,
+        explanation: 'Alleles are the correct answer because they are the two versions of a gene controlling a trait.',
+      },
+      {
+        question:
+          'Which of the following is called a motile germ cell?',
+        options: ['Sperm', 'Ovum', 'Zygote', 'Spore'],
+        correct: 0,
+        explanation: 'Sperm is the correct answer because it is the motile germ cell.',
+      },
+      {
+        question:
+          '________ softens the bone surface a the joints',
+        options: ['Cartilage', 'Areolar', 'Muscle', 'Ligament'],
+        correct: 0,
+        explanation: 'Cartilage is the correct answer because it is the tissue that softens the bone surface a the joints.',
+      },
+      {
+        question:
+          'A glucose meter is generally used as a monitor by a ________ patient?',
+        options: ['Hypoglycemic', 'Hypertensive', 'Asthmatic', 'Hyperthyroid'],
+        correct: 0,
+        explanation: 'Hypoglycemic is the correct answer because it is the patient that is generally used as a monitor by a hypoglycemic patient.',
+      },
+      {
+        question:
+          'Nyctalopia is a condition that occurs due to the deficiency of which of the following vitamins?',
+        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 0,
+        explanation: 'Vitamin A is the correct answer because it is the vitamin that is deficient in Nyctalopia.',
+      },
+      {
+        question:
+          'Early blight is a common disease seen in which of the following?',
+        options: ['Ginger', 'Potato', 'Chilli', 'Cucumber'],
+        correct: 1,
+        explanation: 'Potato is the correct answer',
+      },
+      {
+        question:
+          'Bile is stored in which of the following organ?',
+        options: ['Spleen', 'Gallbladder', 'Intestine', 'Appendix'],
+        correct: 1,
+        explanation: 'Gallbladder is the correct answer',
+      },
+      {
+        question:
+          'Which is the largest bone in the human body?',
+        options: ['Femur', 'Humerus', 'Tibia', 'Radius'],
+        correct: 0,
+        explanation: 'Femur is the correct answer',
+      },
+      {
+        question:
+          'Which of the following glands is a source of the enzyme Ptyalin?',
+        options: ['Salivary gland', 'Pancreas', 'Thyroid gland', 'Adrenal gland'],
+        correct: 0,
+        explanation: 'Salivary gland is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the largest part of the human brain?',
+        options: ['Cerebrum', 'Cerebellum', 'Medulla oblongata', 'Hypothalamus'],
+        correct: 0,
+        explanation: 'Cerebrum is the correct answer',
+      },
+      {
+        question:
+          'Salk vaccine is connected with which one of the following diseases?',
+        options: ['Polio', 'Tetanus', 'Malaria', 'Tuberculosis'],
+        correct: 0,
+        explanation: 'Polio is the correct answer',
+      },
+      {
+        question:
+          'The blood vessels supplying blood to the kidney are called ________',
+        options: ['Carotid artery', 'Hepatic artery', 'Pulmonary artery', 'Renal artery'],
+        correct: 3,
+        explanation: 'Renal artery is the correct answer',
+      },
+      {
+        question:
+          'Which lobe of the human brain is associated with hearing?',
+        options: ['Frontal lobe', 'Parietal lobe', 'Occipital lobe', 'Temporal lobe'],
+        correct: 3,
+        explanation: 'Temporal lobe is the correct answer',
+      },
+      {
+        question:
+          'Prothrombin is responsible for clotting of blood is produced in which of the following?',
+        options: ['Liver', 'Kidney', 'Pancreas', 'Heart'],
+        correct: 0,
+        explanation: 'Liver is the correct answer',
+      },
+      {
+        question:
+          'Myopia is a defect of eyes which also called as ________',
+        options: ['Short sightedness', 'Long sightedness', 'Astigmatism', 'Presbyopia'],
+        correct: 0,
+        explanation: 'Short sightedness is the correct answer',
+      },
+      {
+        question:
+          'Prothrombin is responsible for clotting of blood is released by which of the following?',
+        options: ['Blood platelets', 'Small intestine', 'Large intestine', 'Heart'],
+        correct: 0,
+        explanation: 'Blood platelets is the correct answer',
+      },
+      {
+        question:
+          'The enzyme that is present in the saliva of the human body is ________',
+        options: ['Ptyalin', 'Amylase', 'Trypsin', 'Protease'],
+        correct: 1,
+        explanation: 'Amylase is the correct answer.',
+      },
+      {
+        question:
+          'Which of the following is essential to regulate the heart beat?',
+        options: ['Iron', 'Potassium', 'Sulphur', 'Calcium'],
+        correct: 1,
+        explanation: 'Potassium is the correct answer',
+      },
+      {
+        question:
+          'Cod liver oil is a rich source of which of the following vitamins?',
+        options: ['Vitamin K', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 3,
+        explanation: 'Vitamin A and D are the correct answer',
+      },
+    ],
+    'quiz-5': [
+      {
+        question:
+          'The thymus gland produces which of the following hormones?',
+        options: ['Thyroid hormone', 'Thyroxin', 'Thymosin', 'Thyronine'],
+        correct: 2,
+        explanation: 'Thymosin is the correct answer',
+      },
+      {
+        question:
+          'In what form is the enerby derived from the food we eat is stored in our body?',
+        options: ['Glucose', 'Glycogen', 'Maltose', 'Sucrose'],
+        correct: 1,
+        explanation: 'Glycogen is the correct answer',
+      }, 
+      {
+        question:
+          'Which of the following is secreted by the liver?',
+        options: ['Insulin', 'Glucagon', 'Bile', 'Pancreatic juice'],
+        correct: 2,
+        explanation: 'Bile is the correct answer',
+      }, 
+      {
+        question:
+          'The enzyme that is present in the saliva of the man is ________',
+        options: ['Ptyalin', 'Amylase', 'Trypsin', 'Protease'],
+        correct: 1,
+        explanation: 'Amylase is the correct answer',
+      }, 
+      {
+        question:
+          'Deficiency of which of the following vitamins i the human diet causes a disease called xerophthalmia?',
+        options: ['Vitamin A', 'Vitamin B2', 'Vitamin C', 'Vitamin D'],
+        correct: 0,
+        explanation: 'Vitamin A is the correct answer',
+      },
+      {
+        question:
+          '________ is a hormone that regulates the amount of glucose in the blood',
+        options: ['Insulin', 'Glucagon', 'Cortisol', 'Testosterone'],
+        correct: 0,
+        explanation: 'Insulin is the correct answer',
+      },
+      {
+        question:
+          'The outermost layer of the skin is called ________',
+        options: ['Epidermis', 'Dermis', 'Hypodermis', 'Cutin'],
+        correct: 0,
+        explanation: 'Epidermis is the correct answer',
+      },
+      {
+        question:
+          'Which of the following is the largest organ of the human body?',
+        options: ['Skin', 'Liver', 'Heart', 'Brain'],
+        correct: 0,
+        explanation: 'Skin is the correct answer',
+      },
+      {
+        question:
+          'Where is ammonia in the human body is converted into urea?',
+        options: ['Liver', 'Kidney', 'Pancreas', 'Heart'],
+        correct: 0,
+        explanation: 'Liver is the correct answer',
+      },
+      {
+        question:
+          'Where is insulin produced in the human body?',
+        options: ['Pancreas', 'Kidney', 'Liver', 'Spleen'],
+        correct: 0,
+        explanation: 'Pancreas is the correct answer',
+      },
+      {
+        question:
+          'On which of the following pinciples does the human eye work?',
+        options: ['Refraction of light', 'Reflection of light', 'Scattering of light', 'Diffraction of light'],
+        correct: 0,
+        explanation: 'Refraction of light is the correct answer',
+      },
+      {
+        question:
+          'Astigmatism is a disease which affects which of the following?',
+        options: ['Vision', 'Hearing', 'Speech', 'Walking'],
+        correct: 0,
+        explanation: 'Vision is the correct answer',
+      },
+      {
+        question:
+          'Which part of the body does rheumatism affect?',
+        options: ['Joints', 'Muscles', 'Nerves', 'Brain'],
+        correct: 0,
+        explanation: 'Joints is the correct answer',
+      },
+      {
+        question:
+          'Which cell organelle is associated with the generation of ATP (Adenosine Triphosphate)?',
+        options: ['Mitochondria', 'Nucleus', 'Cytoplasm', 'Endoplasmic reticulum'],
+        correct: 0,
+        explanation: 'Mitochondria is the correct answer',
+      },
+      {
+        question:
+          'Which part of the neuron is responsible for acquiring information?',
+        options: ['Dendrites', 'Axon', 'Soma', 'Synapse'],
+        correct: 0,
+        explanation: 'Dendrites is the correct answer',
+      },
+      {
+        question:
+          'What type of nutrition is observed in mushrooms?',
+        options: ['Autotrophic', 'Heterotrophic', 'Saprophytic', 'Symbiotic'],
+        correct: 2,
+        explanation: 'Saprophytic is the correct answer',
+      },
+      {
+        question:
+          'Which human body part can well be called the "Chemical Factory" of the body?',
+        options: ['Liver', 'Heart', 'Lungs', 'Kidney'],
+        correct: 0,
+        explanation: 'Liver is the correct answer',
+      },
+      {
+        question:
+          'Which vitamin gets destroyed on heating?',
+        options: ['Vitamin A', 'Vitamin B1', 'Vitamin D', 'Vitamin E'],
+        correct: 1,
+        explanation: 'Vitamin B1 is the correct answer',
+      },
+      {
+        question:
+          'Which vitamin is known as the "Wound healing vitamin"?',
+        options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'],
+        correct: 2,
+        explanation: 'Vitamin C is the correct answer',
+      },
+      {
+        question:
+          'Which vitamin commonly known as the "Sunshine vitamin" becuase our skin can produce it when exposed to sunlight?',
+        options: ['Vitamin A', 'Vitamin B1', 'Vitamin C', 'Vitamin D'],
+        correct: 3,
+        explanation: 'Vitamin D is the correct answer',
+      },
+      {
+        question:
+          'Which blood group is known as the "Universal donor"?',
+        options: ['A', 'B', 'AB', 'O'],
+        correct: 3,
+        explanation: 'O is the correct answer',
+      },
+      {
+        question:
+          'Which blood group is known as the "Universal recipient"?',
+        options: ['A', 'B', 'AB', 'O'],
+        correct: 2,
+        explanation: 'AB is the correct answer',
+      },
+      {
+        question:
+          'Which blood component is responsible for maintaining blood pressure and regulating fluid balance?',
+        options: ['Plasma', 'Red blood cells', 'White blood cells', 'Platelets'],
+        correct: 0,
+        explanation: 'Plasma is the correct answer',
+      },
+      {
+        question:
+          'Blood protein which initiates clotting of blood is called ________',
+        options: ['Fibrin', 'Thrombin', 'Prothrombin', 'Fibrinogen'],
+        correct: 2,
+        explanation: 'Prothrombin is the correct answer',
+      },
+      {
+        question:
+          'The blood vessel supplying blood to the kidney is the ______',
+        options: ['Renal artery', 'Hepatic artery', 'Pulmonary artery', 'Carotid artery'],
+        correct: 0,
+        explanation: 'Renal artery is the correct answer',
+      },
+    ],
+    'quiz-6': [
       {
         question:
           'Which of the following is properly known as Vitamin E?',

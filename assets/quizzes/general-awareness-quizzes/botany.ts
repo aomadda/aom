@@ -57,8 +57,6 @@ export const botanyQuiz = {
         correct: 0,
         explanation: 'Stamen is the correct answer because it is the male reproductive part of a flower. Stamen is a part of the flower that is responsible for the production of pollen grains.',
       },
-    ],
-    'quiz-2': [
       {
         question:
           'The ________ acts as a food store in plant seeds.',
@@ -179,6 +177,9 @@ export const botanyQuiz = {
         correct: 2,
         explanation: 'Gibberellin is the correct answer',
       },
+    ],
+    'quiz-2': [
+      
       {
         question:
           'The presence of what distinguishes a plant cell from an animal cell?',

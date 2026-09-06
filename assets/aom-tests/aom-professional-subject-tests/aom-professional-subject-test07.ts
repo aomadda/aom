@@ -1,0 +1,138 @@
+export const aomProfessionalSubjectTest07 = {
+    tests: {
+        'aom-professional-subject-test-07': [
+            {
+                question: 'According to Railway Act 1989, which particulars shall be mentioned on ticket supplied to passengers on payment of fare?',
+                options: ['Date of issue', 'Class of travel', 'Amount of fare', 'All of the above'],
+                correct: 3,
+                explanation: 'All the above',
+            },
+            {
+                question: 'Which of the following is mandatory equipment of each Train manager of passenger carrying trains?',
+                options: ['Stock of detonators', 'First aid box', 'A watch', 'All of the above'],
+                correct: 3,
+                explanation: 'All of the above',
+            },
+            {
+                question: 'Inquiry by CRS into accidents involving passenger carrying trains resulting in loss of human lives is conducted under Section _______ of the Railway Act 1989.',
+                options: ['114', '115', '116', '117'],
+                correct: 0,
+                explanation: 'Inquiry by CRS into accidents involving passenger carrying trains resulting in loss of human lives is conducted under Section 114 of the Railway Act 1989.',
+            },
+            {
+                question: 'Which section of the Railway Act 1989 authorizes the central government to fix the maximum carrying capacity of wagons?',
+                options: ['72', '73', '74', '75'],
+                correct: 0,
+                explanation: 'Section 72 of the Railway Act 1989 authorizes the central government to fix the maximum carrying capacity of wagons.',
+            },
+            {
+                question: 'In planning process, what is eDAS portal used for?',
+                options: ['Approval of ESP', 'Scrutiny of estimates', 'Uploading DPRs', 'Executing siding agreements'],
+                correct: 0,
+                explanation: 'Approval of ESP is done on eDAS portal.',
+            },
+            {
+                question: 'Under which section of the Railway Act 1989 provision of Alarm Chain is made in the passenger carrying trains?',
+                options: ['57', '58', '59', '60'],
+                correct: 2,
+                explanation: 'Provision of Alarm Chain is made in the passenger carrying trains under Section 59 of the Railway Act 1989.',
+            },
+            {
+                question: 'Which of the following is the primary objective of Railway Protection Force?',
+                options: ['To protect railway property', 'To protect railway employees', 'To protect railway passengers', 'To protect railway infrastructure'],
+                correct: 0,
+                explanation: 'To protect railway property is the primary objective of Railway Protection Force.',
+            },
+            {
+                question: 'Speedometer of a loco has gone defective in home shed. Can it be turned out to work a coaching link?',
+                options: ['Yes', 'No', 'Yes, with the approval of PCEE', 'Yes, if it is not in Rajadhani link'],
+                correct: 1,
+                explanation: 'No, it cannot be turned out to work a coaching link.',
+            },
+            {
+                question: 'Which department is responsible for the maintenance of Weighbridges?',
+                options: ['Commercial', 'Engineering', 'Mechanical', 'Operating'],
+                correct: 2,
+                explanation: 'Mechanical department is responsible for the maintenance of Weighbridges.',
+            },
+            {
+                question: 'In absolute block section, a station master has noticed that a passing a train without a tail lamp on the last vehicle. What action should be taken?',
+                options: ['Withhold closing of the block section and advice station in advance to confirm the train is complete', 'Close the block section and advice the station in advance to remedy the defect', 'Withhold closing of the block section, and advice the station in advance to stop the train to remedy the defect and to advise whether or not the train is complete', 'None of the above'],
+                correct: 2,
+                explanation: 'Withhold closing of the block section, and advice the station in advance to stop the train to remedy the defect and to advise whether or not the train is complete.',
+            },
+            {
+                question: 'In case of speedometer/recorder becoming defective during the run the train should run at a speed prescribed by the _______',
+                options: ['Special instructions', 'Approved special instructions', 'PCEE', 'RDSO'],
+                correct: 0,
+                explanation: 'Special instructions are prescribed by the RDC.',
+            },
+            {
+                question: 'According to GR 4.14(2), an engine employed exclusively on shunting at station shall, at night exhibit in addition to head light _______',
+                options: ['Two white marker lights in front and in rear', 'A flashing red light in front and in rear', 'Two red marker lights in front and in rear', 'None of the above'],
+                correct: 2,
+                explanation: 'Two red marker lights in front and in rear are required to be exhibited in addition to head light.',
+            },
+            {
+                question: 'What speed is presecribed in GR 9.02, when an automatic stop signal on double line is to be passed at ON in clear visibility?',
+                options: ['15 km/h', '20 km/h', '25 km/h', 'No specific speed is prescribed'],
+                correct: 3,
+                explanation: 'No specific speed is prescribed in GR 9.02, when an automatic stop signal on double line is to be passed at ON in clear visibility.',
+            },
+            {
+                question: 'In single distant territory, the adequate distance between the distant signal and the first stop signal should not be less than _______',
+                options: ['1000 m', '1500 m', '2000 m', '2500 m'],
+                correct: 0,
+                explanation: '1000 m is the adequate distance between the distant signal and the first stop signal.',
+            },
+            {
+                question: 'Which of the following types of indications are available on the station control panel?',
+                options: ['Power supply', 'Track circuit', 'Route', 'All of the above'],
+                correct: 3,
+                explanation: 'All of the above types of indications are available on the station control panel.',
+            },
+            {
+                question: 'According to GR 3.32(1) at class B station over a single line section worked on absolute block system, where obstructing the line outside the Home signal is permitted under special instructions, ___________ is provided.',
+                options: ['Shunting Limit Board', 'Block section limit board', 'Indication Board', 'None of the above'],
+                correct: 0,
+                explanation: 'Shunting Limit Board is provided according to GR 3.32(1) at class B station over a single line section worked on absolute block system, where obstructing the line outside the Home signal is permitted under special instructions.',
+            },
+            {
+                question: 'In the context of signalling, what is AFTC?',
+                options: ['Alternate Frequency Track Circuit', 'Aditional Fail-Safe Track Circuit', 'Audio Frequency Track Circuit', 'None of the above'],
+                correct: 2,
+                explanation: 'Audio Frequency Track Circuit is AFTC.',
+            },
+            {
+                question: 'Is sanction of CRS required for closing of manned LC gate after approval of district administration?',
+                options: ['Yes', 'No', 'Yes, only if TVU is more than 1000', 'Yes, only for main line'],
+                correct: 1,
+                explanation: 'No, sanction of CRS is not required for closing of manned LC gate after approval of district administration.',
+            },
+            {
+                question: 'Will the provision of electrical lifting barrier at an already interlocked level crossing gate require approval of CRS?',
+                options: ['Yes', 'No', 'No, only if it si in siding', 'Yes, only if TVU is more than 1000 '],
+                correct: 1,
+                explanation: 'No, sanction of CRS is not required for closing of manned LC gate after approval of district administration.',
+            },
+            {
+                question: 'Which of the following parameters is not included in revenue freight traffic statement?',
+                options: ['Number of rakes', 'Number of wagons', 'NTKM', 'Average load'],
+                correct: 2,
+                explanation: 'Freight traffic by destination is not included in revenue freight traffic statement.',
+            },
+            {
+                question: 'Revenue freight traffic statstics is based on which source document?',
+                options: ['Classification Rate Tables', 'Electronic RR', 'Weightment reports', 'None of the above'],
+                correct: 1,
+                explanation: 'Revenue freight traffic statstics is based on Electronic RR.',
+            },
+            {
+                question: 'BCACBM wagons are used for loading of _______',
+                options: ['Containers', 'Motor cars', 'Parcels', 'B class ODC consignments'],
+                correct: 1,
+                explanation: 'BCACBM wagons are used for loading of Motor cars.',
+            },
+        ],
+    },
+};
