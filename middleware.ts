@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { jwtVerify } from 'jose'
 import { COOKIE_NAME } from '@/lib/auth/constants'
+import { getPdfCdnUrl, isPdfPath } from '@/lib/pdf-cdn'
 
 const PUBLIC_PAGE_PATHS = new Set(['/', '/login', '/register', '/admin/login', '/forgot-password'])
 const PUBLIC_API_PREFIXES = [
@@ -77,6 +78,13 @@ export async function middleware(request: NextRequest) {
   if (isAdminRoute && pathname !== '/api/admin/login') {
     if (!session.valid || session.role !== 'admin') {
       return NextResponse.redirect(new URL('/admin/login', request.url))
+    }
+  }
+
+  if (isPdfPath(pathname)) {
+    const pdfCdnUrl = getPdfCdnUrl(pathname)
+    if (pdfCdnUrl) {
+      return NextResponse.redirect(pdfCdnUrl)
     }
   }
 

@@ -910,70 +910,6 @@ const ContentPage = () => {
 
   const ContentComponent = pageComponents[pageNumber] || appendixComponents[pageNumber]
 
-  const openPDF = () => {
-    const isAppendix = Boolean(appendixComponents[pageNumber])
-    let pdfPath = ''
-    
-    if (isAppendix) {
-      // Handle special cases for appendix pages that have different file names
-      const specialCases: { [key: string]: string } = {
-        '145': 'AMAppendixPage145A.pdf', // This page has multiple variants
-        '146': 'AMAppendixPage146A.pdf', // This page has multiple variants
-        '147': 'AMAppendixPage147A.pdf', // This page has multiple variants
-        '148': 'AMAppendixPage148A.pdf', // This page has multiple variants
-        '149': 'AMAppendixPage149A.pdf', // This page has multiple variants
-        '156': 'AMAppendixPage156A.pdf', // This page has multiple variants
-        '161': 'AMAppendixPage161A.pdf', // This page has multiple variants
-        '188': 'AMAppendixPage188A.pdf', // This page has multiple variants  
-        '190': 'AMAppendixPage190A.pdf', // This page has multiple variants
-        '205': 'AMAppendixPage205A.pdf', // This page has multiple variants
-        '208': 'AMAppendixPage208A.pdf'  // This page has multiple variants
-      }
-      
-      if (specialCases[pageNumber]) {
-        pdfPath = `/accident-manual-pdfs/am-appendix-pages/${specialCases[pageNumber]}`
-      } else {
-        pdfPath = `/accident-manual-pdfs/am-appendix-pages/AMAppendixPage${pageNumber}.pdf`
-      }
-    } else {
-      // Handle special cases for chapter pages that have different file names
-      const specialCases: { [key: string]: string } = {
-        '101': 'AMCHAPTERPAGE101A.pdf', // This page has multiple variants
-        '103': 'AMCHAPTERPAGE103A.pdf', // This page has multiple variants
-        '104': 'AMCHAPTERPAGE104A.pdf', // This page has multiple variants
-        '106': 'AMCHAPTERPAGE106A.pdf', // This page has multiple variants
-        '108': 'AMCHAPTERPAGE108A.pdf', // This page has multiple variants
-        '109': 'AMCHAPTERPAGE109A.pdf', // This page has multiple variants
-        '113': 'AMCHAPTERPAGE113A.pdf', // This page has multiple variants
-        '114': 'AMCHAPTERPAGE114A.pdf', // This page has multiple variants
-        '115': 'AMCHAPTERPAGE115A.pdf', // This page has multiple variants
-        '116': 'AMCHAPTERPAGE116A.pdf', // This page has multiple variants
-        '118': 'AMCHAPTERPAGE118A.pdf', // This page has multiple variants
-        '119': 'AMCHAPTERPAGE119A.pdf', // This page has multiple variants
-        '121': 'AMCHAPTERPAGE121A.pdf', // This page has multiple variants
-        '122': 'AMCHAPTERPAGE122A.pdf', // This page has multiple variants
-        '123': 'AMCHAPTERPAGE123A.pdf', // This page has multiple variants
-        '125': 'AMCHAPTERPAGE125A.pdf', // This page has multiple variants
-        '127': 'AMCHAPTERPAGE127A.pdf', // This page has multiple variants
-        '128': 'AMCHAPTERPAGE128A.pdf', // This page has multiple variants
-        '129': 'AMCHAPTERPAGE129A.pdf', // This page has multiple variants
-        '130': 'AMCHAPTERPAGE130A.pdf', // This page has multiple variants
-        '131': 'AMCHAPTERPAGE131A.pdf', // This page has multiple variants
-        '132': 'AMCHAPTERPAGE132A.pdf', // This page has multiple variants
-        '133': 'AMCHAPTERPAGE133A.pdf', // This page has multiple variants
-        '134': 'AMCHAPTERPAGE134A.pdf'  // This page has multiple variants
-      }
-      
-      if (specialCases[pageNumber]) {
-        pdfPath = `/accident-manual-pdfs/am-chapter-pages/${specialCases[pageNumber]}`
-      } else {
-        pdfPath = `/accident-manual-pdfs/am-chapter-pages/AMCHAPTERPAGE${pageNumber}.pdf`
-      }
-    }
-    
-    window.open(pdfPath, '_blank')
-  }
-
   // Flatten rules for topic lookup and for prev/next labels
   const amAppendixRules = useMemo(() => {
     return [
@@ -1128,33 +1064,18 @@ const ContentPage = () => {
       {/* Header Navigation */}
       <div className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-2 lg:px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => router.push('/manuals/accident-manual')}
-                className="flex items-center space-x-2 bg-linear-to-r from-red-500 to-orange-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-red-600 hover:to-orange-700 transition-all duration-300 mr-2"
-              >
-                <span>Back to Index</span>
-              </button>
-            </div>
+          <div className="flex items-center justify-between gap-2">
+            <button
+              onClick={() => router.push('/manuals/accident-manual')}
+              className="flex shrink-0 items-center space-x-2 bg-linear-to-r from-red-500 to-orange-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-red-600 hover:to-orange-700 transition-all duration-300"
+            >
+              <span>Back to Index</span>
+            </button>
 
-            <div className="bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 mr-2 rounded-sm backdrop-blur-sm border border-red-400/30">
-                <ul className="space-y-1 text-center">
-                  <li className="flex items-center space-x-2">
-                    <span className="text-white text-xs lg:text-base">{currentRule ? `Topic : ${currentRule.title}` : 'Topic title not found for this page.'}</span>
-                  </li>
-                </ul>
-              </div>
-
-            <div className="flex items-center space-x-4">
-              
-
-              <button
-                onClick={openPDF}
-                className="flex items-center space-x-2 bg-linear-to-r from-red-500 to-pink-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-red-600 hover:to-pink-700 transition-all duration-300"
-              >
-                <span>Document</span>
-              </button>
+            <div className="bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 rounded-sm backdrop-blur-sm border border-red-400/30 max-w-[65%] text-right">
+              <span className="text-white text-xs lg:text-base">
+                {currentRule ? `Topic : ${currentRule.title}` : 'Topic title not found for this page.'}
+              </span>
             </div>
           </div>
         </div>

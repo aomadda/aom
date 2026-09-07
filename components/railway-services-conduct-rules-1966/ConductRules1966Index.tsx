@@ -1,25 +1,12 @@
 "use client"
-import React, { useState, useEffect } from 'react'
-import { BookOpen, Scale, Shield, Users, FileText, ChevronDown, ChevronUp, ExternalLink, BookOpenCheck, Gavel, Briefcase, Newspaper, MessageSquare, Gift, Home, Banknote, Heart, Megaphone, Vote, UserCheck, AlertTriangle, FileSearch } from 'lucide-react'
+import React, { useState } from 'react'
+import { BookOpen, Scale, Shield, Users, FileText, ChevronDown, ChevronUp, BookOpenCheck, Gavel, Briefcase, Newspaper, MessageSquare, Gift, Home, Banknote, Heart, Megaphone, Vote, UserCheck, AlertTriangle, FileSearch } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 const ConductRules1966Index = () => {
   const [expandedSections, setExpandedSections] = useState<number[]>([])
-  const [isMobile, setIsMobile] = useState(false)
-  const [openingPDF, setOpeningPDF] = useState<string | null>(null)
   const [openingContent, setOpeningContent] = useState<string | null>(null)
   const router = useRouter()
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    
-    checkDevice()
-    window.addEventListener('resize', checkDevice)
-    
-    return () => window.removeEventListener('resize', checkDevice)
-  }, [])
 
   const toggleSection = (sectionId: number) => {
     setExpandedSections(prev => {
@@ -28,21 +15,6 @@ const ConductRules1966Index = () => {
       }
       return [sectionId]
     })
-  }
-
-  const openPDF = (ruleNumber: string) => {
-    const pdfFileName = `ConductRules1966Rule${ruleNumber}.pdf`
-    const pdfPath = `/railway-services-conduct-rules-1966/${pdfFileName}`
-    
-    setOpeningPDF(ruleNumber)
-    setTimeout(() => {
-      if (isMobile) {
-        window.location.href = pdfPath
-      } else {
-        window.open(pdfPath, '_blank')
-        setOpeningPDF(null)
-      }
-    }, 100)
   }
 
   const openContent = (ruleNumber: string) => {
@@ -239,25 +211,6 @@ const ConductRules1966Index = () => {
                                 </p>
                               </div>
                               <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-3 mt-2">
-                                {/* View Document Button */}
-                                <button
-                                  onClick={() => openPDF(rule.number)}
-                                  disabled={openingPDF === rule.number}
-                                  className={`flex items-center space-x-2 px-3 py-1.5 text-white text-sm font-medium rounded-md transition-all duration-300 ${
-                                    openingPDF === rule.number
-                                      ? 'bg-gray-500 cursor-not-allowed'
-                                      : 'bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 hover:shadow-lg hover:scale-105'
-                                  }`}
-                                >
-                                  {openingPDF === rule.number ? (
-                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                  ) : (
-                                    <FileText className="w-4 h-4" />
-                                  )}
-                                  <span>{openingPDF === rule.number ? 'Opening...' : 'View Document'}</span>
-                                  {!isMobile && openingPDF !== rule.number && <ExternalLink className="w-3 h-3" />}
-                                </button>
-                                
                                 {/* View Content Button */}
                                 <button
                                   onClick={() => openContent(rule.number)}

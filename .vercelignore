@@ -1,0 +1,3 @@
+# Keep PDFs on GitHub for the CDN. Do not upload them with CLI deploys.
+public/*.pdf
+public/**/*.pdf

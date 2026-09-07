@@ -1,25 +1,12 @@
 "use client"
-import React, { useState, useEffect } from 'react'
-import { BookOpen, FileText, AlertTriangle, Shield, Users, CheckCircle, AlertCircle, Search, Gavel, Clipboard, Heart, ChevronDown, ChevronUp, ExternalLink, BookOpenCheck } from 'lucide-react'
+import React, { useState } from 'react'
+import { BookOpen, FileText, AlertTriangle, Shield, Users, CheckCircle, AlertCircle, Search, Gavel, Clipboard, Heart, ChevronDown, ChevronUp, BookOpenCheck } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 const AccidentManualChapters = () => {
   const [expandedChapters, setExpandedChapters] = useState<number[]>([])
-  const [isMobile, setIsMobile] = useState(false)
-  const [openingPDF, setOpeningPDF] = useState<string | null>(null)
   const [openingContent, setOpeningContent] = useState<string | null>(null)
   const router = useRouter()
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-
-    checkDevice()
-    window.addEventListener('resize', checkDevice)
-
-    return () => window.removeEventListener('resize', checkDevice)
-  }, [])
 
   const toggleChapter = (chapterId: number) => {
     setExpandedChapters(prev => {
@@ -30,65 +17,6 @@ const AccidentManualChapters = () => {
       // If chapter is collapsed, expand it and collapse all others (accordion behavior)
       return [chapterId]
     })
-  }
-
-  const openPDF = (pageNumber: string) => {
-    // Handle special cases for page numbers that have different file names
-    let pdfFileName = ''
-    
-    // Extract base number from page (e.g., "1A" -> "1", "101" -> "101")
-    const baseNumber = pageNumber.replace(/[A-Z]/gi, '')
-    
-    // Special cases for pages that don't follow the standard naming pattern
-    const specialCases: { [key: string]: string } = {
-      '101': 'AMCHAPTERPAGE101A.pdf',
-      '103': 'AMCHAPTERPAGE103A.pdf',
-      '104': 'AMCHAPTERPAGE104A.pdf',
-      '106': 'AMCHAPTERPAGE106A.pdf',
-      '108': 'AMCHAPTERPAGE108A.pdf',
-      '109': 'AMCHAPTERPAGE109A.pdf',
-      '113': 'AMCHAPTERPAGE113A.pdf',
-      '114': 'AMCHAPTERPAGE114A.pdf',
-      '115': 'AMCHAPTERPAGE115A.pdf',
-      '116': 'AMCHAPTERPAGE116A.pdf',
-      '118': 'AMCHAPTERPAGE118A.pdf',
-      '119': 'AMCHAPTERPAGE119A.pdf',
-      '121': 'AMCHAPTERPAGE121A.pdf',
-      '122': 'AMCHAPTERPAGE122A.pdf',
-      '123': 'AMCHAPTERPAGE123A.pdf',
-      '125': 'AMCHAPTERPAGE125A.pdf',
-      '127': 'AMCHAPTERPAGE127A.pdf',
-      '128': 'AMCHAPTERPAGE128A.pdf',
-      '129': 'AMCHAPTERPAGE129A.pdf',
-      '130': 'AMCHAPTERPAGE130A.pdf',
-      '131': 'AMCHAPTERPAGE131A.pdf',
-      '132': 'AMCHAPTERPAGE132A.pdf',
-      '133': 'AMCHAPTERPAGE133A.pdf',
-      '134': 'AMCHAPTERPAGE134A.pdf'
-    }
-    
-    if (specialCases[baseNumber]) {
-      pdfFileName = specialCases[baseNumber]
-    } else {
-      // Standard naming: AMCHAPTERPAGE{pageNumber}.pdf (e.g., AMCHAPTERPAGE1A.pdf)
-      pdfFileName = `AMCHAPTERPAGE${pageNumber.toUpperCase()}.pdf`
-    }
-    
-    const pdfPath = `/accident-manual-pdfs/am-chapter-pages/${pdfFileName}`
-
-    setOpeningPDF(pageNumber)
-
-    // Small delay to show loading state
-    setTimeout(() => {
-      if (isMobile) {
-        // For mobile devices, open PDF directly in the same tab
-        window.location.href = pdfPath
-      } else {
-        // For large devices, open PDF in new tab
-        window.open(pdfPath, '_blank')
-        setOpeningPDF(null)
-      }
-    }, 100)
   }
 
   const openContent = (pageNumber: string) => {
@@ -537,25 +465,6 @@ const AccidentManualChapters = () => {
                                 {rule.title}
                               </p>
                               <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-3 mt-2">
-                                {/* View Document Button */}
-                                <button
-                                  onClick={() => openPDF(rule.page)}
-                                  disabled={openingPDF === rule.page}
-                                  className={`flex items-center space-x-2 px-3 py-1.5 text-white text-sm font-medium rounded-md transition-all duration-300 ${
-                                    openingPDF === rule.page
-                                      ? 'bg-gray-500 cursor-not-allowed'
-                                      : 'bg-linear-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 hover:shadow-lg hover:scale-105'
-                                  }`}
-                                >
-                                  {openingPDF === rule.page ? (
-                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                  ) : (
-                                    <FileText className="w-4 h-4" />
-                                  )}
-                                  <span>{openingPDF === rule.page ? 'Opening...' :  'View Document'}</span>
-                                  {!isMobile && openingPDF !== rule.page && <ExternalLink className="w-3 h-3" />}
-                                </button>
-
                                 {/* View Content Button */}
                                 <button
                                   onClick={() => openContent(rule.page)}

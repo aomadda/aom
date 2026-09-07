@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useCallback } from 'react'
-import { FileText, AlertTriangle, Heart, ChevronDown, ChevronUp, BookOpen, ExternalLink, BookOpenCheck, CheckCircle } from 'lucide-react'
+import { FileText, AlertTriangle, Heart, ChevronDown, ChevronUp, BookOpen, BookOpenCheck, CheckCircle } from 'lucide-react'
 import { AlertCircle, Gavel } from 'lucide-react'
 import { FileSpreadsheet } from 'lucide-react'
 import { useRouter } from 'next/navigation'
@@ -10,7 +10,6 @@ const heroSubtitle = "Complete Appendix Index for General and Subsidiary Rules"
 
 const GeneralSubsidiaryRulesAppendix = () => {
   const [expandedAppendices, setExpandedAppendices] = useState<number[]>([])
-  const [openingPDF, setOpeningPDF] = useState<string | null>(null)
   const [openingContent, setOpeningContent] = useState<string | null>(null)
   const router = useRouter()
 
@@ -21,40 +20,6 @@ const GeneralSubsidiaryRulesAppendix = () => {
       }
       return [appendixId]
     })
-  }, [])
-
-  const openPDF = useCallback((pageNumber: string) => {
-    // Handle special cases for page numbers that have different file names
-    let pdfFileName = ''
-    
-    // Convert page number to PDF filename format
-    // Handle cases like "350", "356A", "464D", etc.
-    const formattedPage = pageNumber.toUpperCase()
-    pdfFileName = `GSRAppendixPage${formattedPage}.pdf`
-    
-    const pdfPath = `/general-subsidiary-rules-pdf-pages/g&sr-appendix-pdf-pages/${pdfFileName}`
-
-    setOpeningPDF(pageNumber)
-
-    setTimeout(() => {
-      try {
-        // Use matchMedia for more reliable mobile detection
-        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches
-        if (isMobileDevice) {
-          window.location.href = pdfPath
-        } else {
-          const newWindow = window.open(pdfPath, '_blank')
-          if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-            // Popup blocked, fallback to same window
-            window.location.href = pdfPath
-          }
-          setOpeningPDF(null)
-        }
-      } catch (error) {
-        console.error('Error opening PDF:', error)
-        setOpeningPDF(null)
-      }
-    }, 100)
   }, [])
 
   const openContent = useCallback((pageNumber: string) => {
@@ -497,24 +462,6 @@ const GeneralSubsidiaryRulesAppendix = () => {
                                 {item.title}
                               </p>
                               <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-3 mt-2">
-                                <button
-                                  onClick={() => openPDF(item.page)}
-                                  disabled={openingPDF === item.page}
-                                  className={`flex items-center space-x-2 px-3 py-1.5 text-white text-sm font-medium rounded-md transition-all duration-200 ${
-                                    openingPDF === item.page
-                                      ? 'bg-gray-500 cursor-not-allowed'
-                                      : 'bg-gradient-to-r from-emerald-500 to-teal-600 active:from-emerald-600 active:to-teal-700 md:hover:from-emerald-600 md:hover:to-teal-700 md:hover:shadow-lg md:hover:scale-105'
-                                  }`}
-                                >
-                                  {openingPDF === item.page ? (
-                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                  ) : (
-                                    <FileText className="w-4 h-4" />
-                                  )}
-                                  <span>{openingPDF === item.page ? 'Opening...' : 'View Document'}</span>
-                                  {openingPDF !== item.page && <ExternalLink className="w-3 h-3 hidden md:block" />}
-                                </button>
-
                                 <button
                                   onClick={() => openContent(item.page)}
                                   disabled={openingContent === item.page}

@@ -68,22 +68,6 @@ const ContentPage = () => {
 
   // Check if it's a chapter or appendix page
   const ContentComponent = chapterPageComponents[chapterPageId] || appendixPageComponents[chapterPageId]
-  const isAppendix = Boolean(appendixPageComponents[chapterPageId])
-
-  const openPDF = () => {
-    let pdfFileName = ''
-    let pdfPath = ''
-    
-    if (isAppendix) {
-      pdfFileName = `GSRAppendixPage${chapterPageId}.pdf`
-      pdfPath = `/general-subsidiary-rules-pdf-pages/g&sr-appendix-pdf-pages/${pdfFileName}`
-    } else {
-      pdfFileName = `GSRChapterPage${chapterPageId}.pdf`
-      pdfPath = `/general-subsidiary-rules-pdf-pages/g&sr-chapter-pdf-pages/${pdfFileName}`
-    }
-    
-    window.open(pdfPath, '_blank')
-  }
 
   // Get all available pages (chapters + appendices) for navigation
   const allPages = useMemo(() => {
@@ -162,34 +146,23 @@ const ContentPage = () => {
       <div className={`bg-white/10 ${isMobile ? 'backdrop-blur-sm' : 'backdrop-blur-lg'} border-b border-white/20 sticky top-0 z-50`}>
         <div className="max-w-7xl mx-auto px-2 lg:px-4 py-3 lg:py-4">
           <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center">
-              <button
-                onClick={() => {
-                  if (!isNavigating) {
-                    setIsNavigating(true)
-                    router.push('/manuals/general-subsidiary-rules')
-                  }
-                }}
-                disabled={isNavigating}
-                className="flex items-center space-x-1 bg-linear-to-r from-blue-500 to-indigo-600 text-white text-xs lg:text-base lg:px-4 px-2 py-1.5 lg:py-2 rounded-sm active:scale-95 transition-transform duration-200 disabled:opacity-50"
-              >
-                <span>Back</span>
-              </button>
-            </div>
+            <button
+              onClick={() => {
+                if (!isNavigating) {
+                  setIsNavigating(true)
+                  router.push('/manuals/general-subsidiary-rules')
+                }
+              }}
+              disabled={isNavigating}
+              className="flex shrink-0 items-center space-x-1 bg-linear-to-r from-blue-500 to-indigo-600 text-white text-xs lg:text-base lg:px-4 px-2 py-1.5 lg:py-2 rounded-sm active:scale-95 transition-transform duration-200 disabled:opacity-50"
+            >
+              <span>Back to Index</span>
+            </button>
 
-            <div className="bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-1.5 lg:py-2 rounded-sm border border-blue-400/30 flex-1 min-w-0">
-              <p className="text-white text-xs lg:text-sm text-center truncate">
+            <div className="bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-1.5 lg:py-2 rounded-sm border border-blue-400/30 max-w-[65%] text-right">
+              <p className="text-white text-xs lg:text-sm truncate">
                 {getTopicName(chapterPageId)}
               </p>
-            </div>
-
-            <div className="flex items-center">
-              <button
-                onClick={openPDF}
-                className="flex items-center space-x-1 bg-linear-to-r from-red-500 to-pink-600 text-white text-xs lg:text-base lg:px-4 px-2 py-1.5 lg:py-2 rounded-sm active:scale-95 transition-transform duration-200"
-              >
-                <span>PDF</span>
-              </button>
             </div>
           </div>
         </div>

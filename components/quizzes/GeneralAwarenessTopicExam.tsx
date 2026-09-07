@@ -7,12 +7,15 @@ import {
   formatGeneralAwarenessQuizLabel,
   getGeneralAwarenessQuizTopic,
 } from '@/lib/general-awareness-quiz-topics'
-import type { AomExamQuestion } from '@/lib/aom-exam'
+import {
+  toAomExamQuestions,
+  type AomExamQuestionInput,
+} from '@/lib/aom-exam'
 
 type GeneralAwarenessTopicExamProps = {
   topicSlug: string
   quizId: string
-  questions: AomExamQuestion[]
+  questions: readonly AomExamQuestionInput[]
 }
 
 export default function GeneralAwarenessTopicExam({
@@ -22,6 +25,7 @@ export default function GeneralAwarenessTopicExam({
 }: GeneralAwarenessTopicExamProps) {
   const topic = getGeneralAwarenessQuizTopic(topicSlug)
   const label = formatGeneralAwarenessQuizLabel(quizId)
+  const examQuestions = toAomExamQuestions(questions)
 
   if (!topic || !topic.quizIds.includes(quizId)) {
     return (
@@ -45,7 +49,7 @@ export default function GeneralAwarenessTopicExam({
       title={`${topic.examTitle} — ${label}`}
       categoryId={topic.categoryId}
       quizId={quizId}
-      questions={questions}
+      questions={examQuestions}
       backHref={`/quizzes/general-awareness/${topic.slug}`}
       backLabel={`Back to ${topic.title}`}
     />

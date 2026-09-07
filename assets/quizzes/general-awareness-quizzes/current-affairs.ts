@@ -2,7 +2,6 @@ export const currentAffairsQuiz = {
   quizzes: {
     'quiz-1': [
       {
-        id: 1,
         question: "India won its first ever Commonwealth Games gold medal in which sport?",
         options: [
         "Athletics",
@@ -10,10 +9,9 @@ export const currentAffairsQuiz = {
         "Tennis",
         "Badminton",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 2,
         question: "The Gold Monetisation Scheme was launched in which year?",
         options: [
         "2015",
@@ -21,10 +19,9 @@ export const currentAffairsQuiz = {
         "2017",
         "2018",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 3,
         question: "The \"Global Engagement Scheme\" is implemented by which of the following ministries?",
         options: [
         "External Affairs",
@@ -32,10 +29,9 @@ export const currentAffairsQuiz = {
         "Ministry of Culture",
         "Ministry of Tourism",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       },
       {
-        id: 4,
         question: "Who was the first Indian badminton player to win a gold medal at the Olympics?",
         options: [
         "P V Sindhu",
@@ -43,10 +39,9 @@ export const currentAffairsQuiz = {
         "Saina Nehwal",
         "PT Usha",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 5,
         question: "Which global event in 1992 popularized sustainable development?",
         options: [
         "Kyoto Protocol",
@@ -54,10 +49,9 @@ export const currentAffairsQuiz = {
         "Montreal Protocol",
         "Paris Agreement",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 6,
         question: "Which famous Indian classical singer was awarded the Bharat Ratna in 1998 for her contribution to Carnatic music?",
         options: [
         "M.S. Subbulakshmi",
@@ -65,10 +59,9 @@ export const currentAffairsQuiz = {
         "Shubha Mudgal",
         "Kishori Amonkar",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 7,
         question: "Inida adopted the United Nations Sustainable Development Goals (SDGs) in which year?",
         options: [
         "2015",
@@ -76,10 +69,9 @@ export const currentAffairsQuiz = {
         "2017",
         "2018",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 8,
         question: "In which year was the first Regional Rural Banks (RRB) established in India?",
         options: [
         "1975",
@@ -87,10 +79,9 @@ export const currentAffairsQuiz = {
         "1977",
         "1978",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 9,
         question: "Which of the following renowned Indian musicians performed at the Red Fort on the occasion of India's Independence Day in 1947?",
         options: [
         "Ravi Shankar",
@@ -98,10 +89,9 @@ export const currentAffairsQuiz = {
         "Bhimsen Joshi",
         "Hari Prasad Chaurasia",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 10,
         question: "Folk songs of Haryana are commonly known by which of the following names?",
         options: [
         "Baul",
@@ -109,10 +99,9 @@ export const currentAffairsQuiz = {
         "Bihu",
         "Raganis",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 11,
         question: "Which folk music form of Uttar Pradesh is traditionally sung during the monsson season by women?",
         options: [
         "Bhatiali",
@@ -120,10 +109,9 @@ export const currentAffairsQuiz = {
         "Lavani",
         "Maang",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 12,
         question: "The report \"Strategic Roadmap for Making Ayurveda Global\", relased by NITI Aayog in July 2026, aims to transform Ayurveda into a globally recognized healthcare system by __________.",
         options: [
         "2030",
@@ -131,10 +119,9 @@ export const currentAffairsQuiz = {
         "2040",
         "2047",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 13,
         question: "The Government of India launched the Smart Cities Mission in which year?",
         options: [
         "2015",
@@ -142,10 +129,9 @@ export const currentAffairsQuiz = {
         "2017",
         "2018",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 14,
         question: "Which Indian Musician and sitar player is the founder of the National Orchestra of India?",
         options: [
         "Ravi Shankar",
@@ -153,10 +139,9 @@ export const currentAffairsQuiz = {
         "Bhimsen Joshi",
         "Hari Prasad Chaurasia",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 15,
         question: "Who among the following renowned musicians is celebrated for popularising the unique instrument knonw as the \"Sarod\" and is considered one of the most famous maestros of the Senia Shahjahanpur Gharana?",
         options: [
         "Ustad Amjad Ali Khan",
@@ -164,10 +149,9 @@ export const currentAffairsQuiz = {
         "Ustad Allarakha",
         "Ustad Zakir Hussain",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 16,
         question: "Which of the following is the highest award in the Rashtriya Vigyan Puraskar awards",
         options: [
         "Vigyan vajra",
@@ -175,10 +159,9 @@ export const currentAffairsQuiz = {
         "Vighay Shri",
         "Vigyan Ratna",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 17,
         question: "International Plastic Free Day is observed on which date?",
         options: [
         "03 June",
@@ -186,10 +169,9 @@ export const currentAffairsQuiz = {
         "03 August",
         "03 September",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 18,
         question: "The Borjuli Wild Rice Site in Assam was notified as a Biodiversity Heritage Site (BHS) under which Act?",
         options: [
         "The Biological Diversity Act, 2002",
@@ -197,10 +179,9 @@ export const currentAffairsQuiz = {
         "The Forest Act, 1927",
         "The Wildlife Protection Act, 1972",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 19,
         question: "After receiving 23 new Geographical Indication (GI) tags in June 2026, West Bengal ranked __________ nationally with a total of 59 GI registrations.",
         options: [
         "First",
@@ -208,10 +189,9 @@ export const currentAffairsQuiz = {
         "Third",
         "Fourth",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 20,
         question: "In which year was the Integrated Child Development Scheme (ICDS) launched in India?",
         options: [
         "1975",
@@ -219,10 +199,9 @@ export const currentAffairsQuiz = {
         "1977",
         "1978",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 21,
         question: "The Green Revolution was commenced under the leadership of whom among the following Prime Ministers of India?",
         options: [
         "Indira Gandhi",
@@ -230,10 +209,9 @@ export const currentAffairsQuiz = {
         "Morarji Desai",
         "Lal Bahadur Shastri",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 22,
         question: "The first Indian woman judge of the Supreme Court of India was",
         options: [
         "Justice Indira Banerjee",
@@ -241,10 +219,9 @@ export const currentAffairsQuiz = {
         "Justice Bhanumati Joshi",
         "Fatima Beevi",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 23,
         question: "After receiving 8 new Geographical Indication (GI) tags in July 2026, the total number of GI-tagged products in Himachal Pradesh reached __________.",
         options: [
         "14",
@@ -252,10 +229,9 @@ export const currentAffairsQuiz = {
         "16",
         "17",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       },
       {
-        id: 24,
         question: "How many Tiger Reserves have been indentified by the Government of India for priority recovery through science-led Interventions in June 2026?",
         options: [
         "20",
@@ -263,10 +239,9 @@ export const currentAffairsQuiz = {
         "24",
         "25",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 25,
         question: "__________ or \"Dance of Enchantress\" is a solo dance, performed by primarily by women, in the state of Kerala.",
         options: [
         "Bharatanatyam",
@@ -274,12 +249,11 @@ export const currentAffairsQuiz = {
         "Kathakali",
         "Mohiniyattam",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       }
     ],
     'quiz-2': [
       {
-        id: 1,
         question: "Which of the following dance forms is known as the mother of all other classical dance forms of India?",
         options: [
         "Bharatanatyam",
@@ -287,10 +261,9 @@ export const currentAffairsQuiz = {
         "Kathakali",
         "Mohiniyattam",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 2,
         question: "Which of the following indicates the correct number of main regional styles of the classical Chhau dance form?",
         options: [
         "2",
@@ -298,10 +271,9 @@ export const currentAffairsQuiz = {
         "4",
         "5",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 3,
         question: "Name the famous Malayalam poet who was instrumental in the revival of Kathakali as an art form.",
         options: [
         "Kumaranasan",
@@ -309,10 +281,9 @@ export const currentAffairsQuiz = {
         "Vallathol Narayana Menon",
         "Vyloppilli Srredhara Menon",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       },
       {
-        id: 4,
         question: "Which classical dance form was traditionally performed by Maharis (female temple dancers) in the sanctum of Jagannath Temple, Puri?",
         options: [
         "Bharatanatyam",
@@ -320,10 +291,9 @@ export const currentAffairsQuiz = {
         "Odissi",
         "Mohiniyattam",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       },
       {
-        id: 5,
         question: "Guru Bipin Singh was a legend in the field of which classical dance form?",
         options: [
         "Bharatanatyam",
@@ -331,10 +301,9 @@ export const currentAffairsQuiz = {
         "Odissi",
         "Mohiniyattam",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 6,
         question: "Sitara Devi was a dancer of the popular North Indian classical dance form __________.",
         options: [
         "Kathak",
@@ -342,10 +311,9 @@ export const currentAffairsQuiz = {
         "Kathakali",
         "Sattriya",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 7,
         question: "Guru Pankaj Charan and Guru Debaprasad Das are associated with which of the following classical dance forms?",
         options: [
         "Odissi",
@@ -353,10 +321,9 @@ export const currentAffairsQuiz = {
         "Kathak",
         "Sattriya",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 8,
         question: "Which Five-year Plan primarily focused on the \"Garibi Hatao\" slogan?",
         options: [
         "First Five-year Plan",
@@ -364,10 +331,9 @@ export const currentAffairsQuiz = {
         "Fourth Five-year Plan",
         "Fifth Five-year Plan",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 9,
         question: "Which of the following is the correct number of main regional styles of the classical Manipuri dance form?",
         options: [
         "2",
@@ -375,10 +341,9 @@ export const currentAffairsQuiz = {
         "4",
         "5",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 10,
         question: "Which of the following Indian Stadium is renowned as a major venue for Hockey matches?",
         options: [
         "Chidambaram Stadium",
@@ -386,10 +351,9 @@ export const currentAffairsQuiz = {
         "Kalinga Stadium",
         "Feroz Shah Kotla Stadium",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       },
       {
-        id: 11,
         question: "With what musical instrument is Ustad Binda Khan associated?",
         options: [
         "Sitar",
@@ -397,10 +361,9 @@ export const currentAffairsQuiz = {
         "Sarod",
         "Tabla",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 12,
         question: "Warli painting, a traditional tribal art form, originates from which Indian state?",
         options: [
         "Maharashtra",
@@ -408,10 +371,9 @@ export const currentAffairsQuiz = {
         "Rajasthan",
         "Gujarat",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 13,
         question: "\"Lu-Ngai-Ni\" festival is celebrated in which Indian state?",
         options: [
         "Manipur",
@@ -419,10 +381,9 @@ export const currentAffairsQuiz = {
         "Mizoram",
         "Nagaland",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 14,
         question: "Which of the following commissions recommended the creation of the Inter-State Council?",
         options: [
         "Rajaji Commission",
@@ -430,10 +391,9 @@ export const currentAffairsQuiz = {
         "Nariman Commission",
         "Sarkaria Commission",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 15,
         question: "Which Indian athlete won the nations first-ever Asian Games gold medal?",
         options: [
         "K D Jadhav",
@@ -441,10 +401,9 @@ export const currentAffairsQuiz = {
         "Primal Roy",
         "Sachin Nag",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 16,
         question: "Minor points called \"Yuko\" are part of which of the following sports?",
         options: [
         "Hockey",
@@ -452,10 +411,9 @@ export const currentAffairsQuiz = {
         "Skating",
         "Judo",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 17,
         question: "In which year was radio broadcasting started in India by the Radio Club of Bombay?",
         options: [
         "1923",
@@ -463,10 +421,9 @@ export const currentAffairsQuiz = {
         "1929",
         "1930",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 18,
         question: "Which city is popularly known as the \"City of Dreaming Spires\"?",
         options: [
         "London",
@@ -474,10 +431,9 @@ export const currentAffairsQuiz = {
         "Rome",
         "Oxford",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 19,
         question: "The term _______ is used to describe those receipts which can not be claimed from the government and are non redeemable",
         options: [
         "Capital Receipts",
@@ -485,10 +441,9 @@ export const currentAffairsQuiz = {
         "Unsecured Receipts",
         "Non-Convertible Receipts",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 20,
         question: "Viksit Bharat-Guarantee for Rozgar and Ajeevika Mission (Grameen)[VB-G RAM G]Act, 2025 will come into effect from which date?",
         options: [
         "01 July 2026",
@@ -496,10 +451,9 @@ export const currentAffairsQuiz = {
         "01 September 2026",
         "01 October 2026",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 21,
         question: "Under the VB-G RAM G Bill, what is the reivsed annual employment guarantee per rural household?",
         options: [
         "100 days",
@@ -507,10 +461,9 @@ export const currentAffairsQuiz = {
         "120 days",
         "125 days",
         ],
-        correctAnswer: undefined,
+        correct: 3,
       },
       {
-        id: 22,
         question: "When a person is NOT paying anything for public goods, it is known as _______.",
         options: [
         "Free Rider",
@@ -518,10 +471,9 @@ export const currentAffairsQuiz = {
         "Rivalrous good",
         "Non-rivalrous good",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 23,
         question: "Which of the following is the coverage provided by the \"Pradhan Mantri Suraksha Bima Yojana\" (PMSBY)\" in case of Partial disability?",
         options: [
         "1 lakh",
@@ -529,10 +481,9 @@ export const currentAffairsQuiz = {
         "3 lakh",
         "4 lakh",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 24,
         question: "During the 80th Independence Day celebrations in 2026, Prime Minister Narendra Modi introduced a new framework to accelerate India's journey towards becoming a Viksit Bharat.",
         options: [
         "Amrit Kal Mission",
@@ -540,10 +491,9 @@ export const currentAffairsQuiz = {
         "Sapta Dhara",
         "Viksit Bharat Sankalp",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       },
       {
-        id: 25,
         question: "India won its first-ever Common Wealth Games gold medal in which sport?",
         options: [
         "Hockey",
@@ -551,12 +501,11 @@ export const currentAffairsQuiz = {
         "Weightlifting",
         "Wrestling",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       }
     ],
     'quiz-3': [
       {
-        id: 1,
         question: "In which year was the first Regional Bank established in India?",
         options: [
         "1975",
@@ -564,10 +513,9 @@ export const currentAffairsQuiz = {
         "1982",
         "1985",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 2,
         question: "The report \"Strategic Roadmap for Making Ayurveda Global\", released by NITI Aayog in July 2026, aims to make Ayurveda a global brand by which year?",
         options: [
         "2030",
@@ -575,10 +523,9 @@ export const currentAffairsQuiz = {
         "2047",
         "2050",
         ],
-        correctAnswer: undefined,
+        correct: 2,
       },
       {
-        id: 3,
         question: "The Companies Act, _______ is an act to consolidate and amend the law relating to companies.",
         options: [
         "2005",
@@ -586,10 +533,9 @@ export const currentAffairsQuiz = {
         "2015",
         "2017",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       },
       {
-        id: 4,
         question: "Who among the following is India's first-ever two-time Olympic medallist in an individual event and the first Indian to win a wrestling world championship?",
         options: [
         "Sushil Kumar",
@@ -597,10 +543,9 @@ export const currentAffairsQuiz = {
         "Yogeshwar Dutt",
         "Harpreet Singh",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 5,
         question: "Which of the following is India's first Integrated Green Field Smart City?",
         options: [
         "Atal Nagar, Chhattisgarh",
@@ -608,10 +553,9 @@ export const currentAffairsQuiz = {
         "Bhopal, Madhya Pradesh",
         "Chennai, Tamil Nadu",
         ],
-        correctAnswer: undefined,
+        correct: 0,
       },
       {
-        id: 6,
         question: "In the year 2010, the Government of India had categorised which animal as the National Heritage Animal of India?",
         options: [
         "Dolphin",
@@ -619,7 +563,7 @@ export const currentAffairsQuiz = {
         "Lion",
         "Cheetah",
         ],
-        correctAnswer: undefined,
+        correct: 1,
       }
     ],
   },

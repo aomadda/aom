@@ -1,26 +1,13 @@
 "use client"
-import React, { useState, useEffect, useRef } from 'react'
-import { BookOpen, Train, Building, Settings, AlertTriangle, BarChart3, ChevronDown, ChevronUp, CheckCircle, Signal, Eye, Target, ExternalLink, FileText, BookOpenCheck } from 'lucide-react'
+import React, { useState, useRef } from 'react'
+import { BookOpen, Train, Building, Settings, AlertTriangle, BarChart3, ChevronDown, ChevronUp, CheckCircle, Signal, Eye, Target, BookOpenCheck } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 const OPTGIndex = () => {
   const [expandedSections, setExpandedSections] = useState<number[]>([])
-  const [isMobile, setIsMobile] = useState(false)
-  const [openingPDF, setOpeningPDF] = useState<string | null>(null)
   const [openingContent, setOpeningContent] = useState<string | null>(null)
   const router = useRouter()
   const navigatingRef = useRef(false)
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    
-    checkDevice()
-    window.addEventListener('resize', checkDevice)
-    
-    return () => window.removeEventListener('resize', checkDevice)
-  }, [])
 
   const toggleSection = (sectionId: number) => {
     setExpandedSections(prev => {
@@ -29,32 +16,6 @@ const OPTGIndex = () => {
       }
       return [sectionId]
     })
-  }
-
-  const openPDF = (pageNumber: string) => {
-    // Handle special cases for page numbers
-    let pdfFileName = ''
-    
-    if (pageNumber === '1') {
-      pdfFileName = 'OMPaege1.pdf' // Special case for page 1
-    } else {
-      pdfFileName = `OMPage${pageNumber.padStart(2, '0')}.pdf`
-    }
-    
-    const pdfPath = `/operating-manual-pdfs/${pdfFileName}`
-    
-    setOpeningPDF(pageNumber)
-    // Small delay to show loading state
-    setTimeout(() => {
-      if (isMobile) {
-        // For mobile devices, open PDF directly in the same tab
-        window.location.href = pdfPath
-      } else {
-        // For large devices, open PDF in new tab
-        window.open(pdfPath, '_blank')
-        setOpeningPDF(null)
-      }
-    }, 100)
   }
 
   const openContent = (pageNumber: string) => {
@@ -317,25 +278,6 @@ const OPTGIndex = () => {
                                 {topic.title}
                               </p>
                               <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-3 mt-2">
-                                {/* View Document Button */}
-                                <button
-                                  onClick={() => openPDF(topic.page)}
-                                  disabled={openingPDF === topic.page}
-                                  className={`flex items-center space-x-2 px-3 py-1.5 text-white text-sm font-medium rounded-md transition-all duration-300 ${
-                                    openingPDF === topic.page
-                                      ? 'bg-gray-500 cursor-not-allowed'
-                                      : 'bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 hover:shadow-lg hover:scale-105'
-                                  }`}
-                                >
-                                  {openingPDF === topic.page ? (
-                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                  ) : (
-                                    <FileText className="w-4 h-4" />
-                                  )}
-                                  <span>{openingPDF === topic.page ? 'Opening...' : 'View Document'}</span>
-                                  {!isMobile && openingPDF !== topic.page && <ExternalLink className="w-3 h-3" />}
-                                </button>
-                                
                                 {/* View Content Button */}
                                 <button
                                   onClick={() => openContent(topic.page)}
@@ -353,10 +295,6 @@ const OPTGIndex = () => {
                                   )}
                                   <span>{openingContent === topic.page ? 'Opening...' : 'View Content'}</span>
                                 </button>
-                                
-                                {/* <span className="text-gray-400 text-xs lg:ml-2">
-                                  {isMobile ? '📄 View Document & 📖 View Content' : '📄 PDF in new tab & 📖 Content in same tab'}
-                                </span> */}
                               </div>
                             </div>
                           </div>

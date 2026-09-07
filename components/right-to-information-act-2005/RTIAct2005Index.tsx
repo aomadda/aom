@@ -1,25 +1,12 @@
 "use client"
-import React, { useState, useEffect } from 'react'
-import { BookOpen, Eye, Shield, FileText, Settings, ChevronDown, ChevronUp, ExternalLink, BookOpenCheck, Gavel, Building2 } from 'lucide-react'
+import React, { useState } from 'react'
+import { BookOpen, Eye, Shield, FileText, Settings, ChevronDown, ChevronUp, BookOpenCheck, Gavel, Building2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 const RTIAct2005Index = () => {
   const [expandedSections, setExpandedSections] = useState<number[]>([])
-  const [isMobile, setIsMobile] = useState(false)
-  const [openingPDF, setOpeningPDF] = useState<string | null>(null)
   const [openingContent, setOpeningContent] = useState<string | null>(null)
   const router = useRouter()
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    
-    checkDevice()
-    window.addEventListener('resize', checkDevice)
-    
-    return () => window.removeEventListener('resize', checkDevice)
-  }, [])
 
   const toggleSection = (sectionId: number) => {
     setExpandedSections(prev => {
@@ -28,39 +15,6 @@ const RTIAct2005Index = () => {
       }
       return [sectionId]
     })
-  }
-
-  const normalizeSectionNumber = (sectionNumber: string) => {
-    if (/^\d+$/.test(sectionNumber)) {
-      return sectionNumber
-    }
-
-    const digits = sectionNumber.match(/\d+/g)
-    if (digits?.length) {
-      return digits.join('')
-    }
-
-    return null
-  }
-
-  const openPDF = (sectionNumber: string) => {
-    const normalized = normalizeSectionNumber(sectionNumber)
-    if (!normalized) {
-      return
-    }
-
-    const pdfFileName = `RTIACT2005Section${normalized}.pdf`
-    const pdfPath = `/right-to-information-act-2005/${pdfFileName}`
-
-    setOpeningPDF(sectionNumber)
-    setTimeout(() => {
-      if (isMobile) {
-        window.location.href = pdfPath
-      } else {
-        window.open(pdfPath, '_blank')
-        setOpeningPDF(null)
-      }
-    }, 100)
   }
 
   const openContent = (sectionNumber: string) => {
@@ -270,10 +224,6 @@ const RTIAct2005Index = () => {
                     <div className="py-4 lg:px-4 px-2">
                       <div className="grid gap-3">
                         {chapter.sections.map((section, index) => {
-                          const pdfSection = normalizeSectionNumber(section.number)
-                          const isPdfLoading = openingPDF === section.number
-                          const isPdfAvailable = Boolean(pdfSection)
-
                           return (
                             <div
                               key={index}
@@ -287,33 +237,6 @@ const RTIAct2005Index = () => {
                                   {section.number.includes('Schedule') ? section.title : `Section ${section.number}: ${section.title}`}
                                 </p>
                                 <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-3 mt-2">
-                                  {/* View Document Button */}
-                                  <button
-                                    onClick={() => isPdfAvailable && openPDF(section.number)}
-                                    disabled={!isPdfAvailable || isPdfLoading}
-                                    className={`flex items-center space-x-2 px-3 py-1.5 text-white text-sm font-medium rounded-md transition-all duration-300 ${
-                                      !isPdfAvailable
-                                        ? 'bg-gray-500 cursor-not-allowed opacity-60'
-                                        : isPdfLoading
-                                          ? 'bg-gray-500 cursor-not-allowed'
-                                          : 'bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 hover:shadow-lg hover:scale-105'
-                                    }`}
-                                  >
-                                    {isPdfLoading ? (
-                                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                    ) : (
-                                      <FileText className="w-4 h-4" />
-                                    )}
-                                    <span>
-                                      {!isPdfAvailable
-                                        ? 'Document Unavailable'
-                                        : isPdfLoading
-                                          ? 'Opening...'
-                                          : 'View Document'}
-                                    </span>
-                                    {!isMobile && isPdfAvailable && !isPdfLoading && <ExternalLink className="w-3 h-3" />}
-                                  </button>
-                                  
                                   {/* View Content Button */}
                                   <button
                                     onClick={() => openContent(section.number.includes('Schedule') ? section.number.toLowerCase().replace(' ', '-') : section.number)}

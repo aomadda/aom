@@ -124,18 +124,6 @@ const ContentPage = () => {
 
   const ContentComponent = ruleComponents[ruleNumber]
 
-  const openPDF = () => {
-    let pdfFileName = ''
-    if (ruleNumber.startsWith('schedule')) {
-      const scheduleNum = ruleNumber.replace('schedule', '').replace('-', '').toUpperCase()
-      pdfFileName = `DASection${scheduleNum === '1' ? '1' : scheduleNum === '2' ? '2' : '3'}.pdf`
-    } else {
-      pdfFileName = `DARule${ruleNumber.replace(/[^0-9]/g, '')}.pdf`
-    }
-    const pdfPath = `/railway-servants-da-rules-1968/${pdfFileName}`
-    window.open(pdfPath, '_blank')
-  }
-
   const getRuleTitle = (rule: string): string => {
     if (rule.startsWith('schedule')) {
       const num = rule.replace('schedule', '').replace('-', '').toUpperCase()
@@ -203,29 +191,18 @@ const ContentPage = () => {
       {/* Header Navigation */}
       <div className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-2 lg:px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => router.push('/acts/railway-servants-da-rules-1968')}
-                className="flex items-center space-x-2 bg-linear-to-r from-blue-500 to-indigo-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 mr-2"
-              >
-                <span>Back to Index</span>
-              </button>
-            </div>
+          <div className="flex items-center justify-between gap-2">
+            <button
+              onClick={() => router.push('/acts/railway-servants-da-rules-1968')}
+              className="flex shrink-0 items-center space-x-2 bg-linear-to-r from-blue-500 to-indigo-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-blue-600 hover:to-indigo-700 transition-all duration-300"
+            >
+              <span>Back to Index</span>
+            </button>
 
-            <div className="bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 mr-2 rounded-sm backdrop-blur-sm border border-blue-400/30">
-              <p className="text-white text-xs lg:text-base text-center">
+            <div className="bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 rounded-sm backdrop-blur-sm border border-blue-400/30 max-w-[65%] text-right">
+              <p className="text-white text-xs lg:text-base">
                 Topic : {getRuleTitle(ruleNumber)}
               </p>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={openPDF}
-                className="flex items-center space-x-2 bg-linear-to-r from-red-500 to-pink-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-red-600 hover:to-pink-700 transition-all duration-300"
-              >
-                <span>Document</span>
-              </button>
             </div>
           </div>
         </div>

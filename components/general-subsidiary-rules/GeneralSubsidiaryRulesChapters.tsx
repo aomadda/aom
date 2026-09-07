@@ -2,7 +2,7 @@
 // Tailwind CSS gradient classes are correct - warnings are false positives
 
 import React, { useState, useCallback } from "react"
-import { BookOpen, Layers, Users, RadioTower, TrainFront, Building2, AlertTriangle, GitBranch, Blocks, Workflow, ArrowRightLeft, Shield, Ticket, LifeBuoy, CircuitBoard, Hammer, Fence, Zap, Puzzle, ChevronDown, ChevronUp, FileText, BookOpenCheck, ExternalLink } from "lucide-react"
+import { BookOpen, Layers, Users, RadioTower, TrainFront, Building2, AlertTriangle, GitBranch, Blocks, Workflow, ArrowRightLeft, Shield, Ticket, LifeBuoy, CircuitBoard, Hammer, Fence, Zap, Puzzle, ChevronDown, ChevronUp, BookOpenCheck } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { getPageIdFromRule } from '@/lib/g&sr-chapter-mapping'
 
@@ -623,17 +623,13 @@ const ChapterCard = React.memo(({
   chapter, 
   isExpanded, 
   onToggle, 
-  openingPDF, 
   openingContent, 
-  onOpenPDF, 
   onOpenContent 
 }: {
   chapter: Chapter
   isExpanded: boolean
   onToggle: () => void
-  openingPDF: string | null
   openingContent: string | null
-  onOpenPDF: (ruleNumber: string, chapterId: number) => void
   onOpenContent: (ruleNumber: string, chapterId: number) => void
 }) => {
   const extractRuleNumber = (rule: string): string => {
@@ -680,7 +676,6 @@ const ChapterCard = React.memo(({
             {chapter.rules.map((rule, index) => {
               const ruleNumber = extractRuleNumber(rule)
               const ruleKey = `${chapter.id}-${ruleNumber}-${index}`
-              const isOpeningPDF = openingPDF === `${chapter.id}-${ruleNumber}`
               const isOpeningContent = openingContent === `${chapter.id}-${ruleNumber}`
               const hasRuleNumber = ruleNumber.length > 0 && /^\d+\.\d+/.test(ruleNumber)
               const ruleBlurClass = 'backdrop-blur-none md:backdrop-blur-sm'
@@ -694,27 +689,6 @@ const ChapterCard = React.memo(({
                   
                   {hasRuleNumber && (
                     <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-3 mt-3 pt-3 border-t border-white/10">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          onOpenPDF(ruleNumber, chapter.id)
-                        }}
-                        disabled={isOpeningPDF}
-                        className={`flex items-center space-x-2 px-3 py-1.5 text-white text-sm font-medium rounded-md transition-all duration-200 ${
-                          isOpeningPDF
-                            ? 'bg-gray-500 cursor-not-allowed'
-                            : 'bg-linear-to-r from-blue-500 to-indigo-600 active:from-blue-600 active:to-indigo-700 md:hover:from-blue-600 md:hover:to-indigo-700 md:hover:shadow-lg md:hover:scale-105'
-                        }`}
-                      >
-                        {isOpeningPDF ? (
-                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        ) : (
-                          <FileText className="w-4 h-4" />
-                        )}
-                        <span>{isOpeningPDF ? 'Opening...' : 'View Document'}</span>
-                        {!isOpeningPDF && <ExternalLink className="w-3 h-3 hidden md:block" />}
-                      </button>
-                      
                       <button
                         onClick={(e) => {
                           e.stopPropagation()
@@ -750,7 +724,6 @@ ChapterCard.displayName = 'ChapterCard'
 
 const GeneralSubsidiaryRulesChapters = () => {
   const [expandedChapters, setExpandedChapters] = useState<number[]>([])
-  const [openingPDF, setOpeningPDF] = useState<string | null>(null)
   const [openingContent, setOpeningContent] = useState<string | null>(null)
   const router = useRouter()
 
@@ -779,39 +752,6 @@ const GeneralSubsidiaryRulesChapters = () => {
     // Last resort: return rule number without dots
     return ruleNumber.replace(/\./g, '')
   }, [])
-
-  const openPDF = useCallback((ruleNumber: string, chapterId: number) => {
-    const pageId = ruleToPageId(ruleNumber)
-    if (!pageId) {
-      console.error(`No page ID found for rule ${ruleNumber}`)
-      setOpeningPDF(null)
-      return
-    }
-    
-    const pdfFileName = `GSRChapterPage${pageId}.pdf`
-    const pdfPath = `/general-subsidiary-rules-pdf-pages/g&sr-chapter-pdf-pages/${pdfFileName}`
-    
-    setOpeningPDF(`${chapterId}-${ruleNumber}`)
-    setTimeout(() => {
-      try {
-        // Use matchMedia for more reliable mobile detection
-        const isMobileDevice = window.matchMedia('(max-width: 768px)').matches
-        if (isMobileDevice) {
-          window.location.href = pdfPath
-        } else {
-          const newWindow = window.open(pdfPath, '_blank')
-          if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-            // Popup blocked, fallback to same window
-            window.location.href = pdfPath
-          }
-          setOpeningPDF(null)
-        }
-      } catch (error) {
-        console.error('Error opening PDF:', error)
-        setOpeningPDF(null)
-      }
-    }, 100)
-  }, [ruleToPageId])
 
   const openContent = useCallback((ruleNumber: string, chapterId: number) => {
     const pageId = ruleToPageId(ruleNumber)
@@ -869,9 +809,7 @@ const GeneralSubsidiaryRulesChapters = () => {
                 chapter={chapter}
                 isExpanded={expandedChapters.includes(chapter.id)}
                 onToggle={() => toggleChapter(chapter.id)}
-                openingPDF={openingPDF}
                 openingContent={openingContent}
-                onOpenPDF={openPDF}
                 onOpenContent={openContent}
               />
             ))}

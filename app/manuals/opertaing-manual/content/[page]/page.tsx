@@ -137,19 +137,6 @@ const ContentPage = () => {
 
   const ContentComponent = pageComponents[pageNumber]
 
-  const openPDF = () => {
-    let pdfFileName = ''
-    
-    if (pageNumber === '1') {
-      pdfFileName = 'OMPaege1.pdf'
-    } else {
-      pdfFileName = `OMPage${pageNumber.padStart(2, '0')}.pdf`
-    }
-    
-    const pdfPath = `/operating-manual-pdfs/${pdfFileName}`
-    window.open(pdfPath, '_blank')
-  }
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 flex items-center justify-center">
@@ -185,19 +172,15 @@ const ContentPage = () => {
       {/* Header Navigation */}
       <div className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-2 lg:px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => router.push('/manuals/opertaing-manual')}
-                className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 mr-2"
-              >
-                <span>Back to Index</span>
-              </button>
-              
-              
-            </div>
+          <div className="flex items-center justify-between gap-2">
+            <button
+              onClick={() => router.push('/manuals/opertaing-manual')}
+              className="flex shrink-0 items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-blue-600 hover:to-indigo-700 transition-all duration-300"
+            >
+              <span>Back to Index</span>
+            </button>
 
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 mr-2 rounded-sm backdrop-blur-sm border border-blue-400/30">
+            <div className="bg-gradient-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 rounded-sm backdrop-blur-sm border border-blue-400/30 max-w-[65%] text-right">
               <ul className="space-y-1 text-center">
                   {(() => {
                     // OPTGManualIndex లోని sections array ని ఇక్కడ define చేయాలి లేదా import చేయాలి.
@@ -289,7 +272,7 @@ const ContentPage = () => {
                     // ఇప్పుడు pageNumber కి match అయ్యే topic తీసుకోవాలి
                     const topic = allTopics.find(t => t.page === pageNumber);
                     return topic ? (
-                      <li className="flex items-center space-x-2">
+                      <li>
                         <span className="text-white text-xs lg:text-base">Topic : {topic.title}</span>
                       </li>
                     ) : (
@@ -298,15 +281,6 @@ const ContentPage = () => {
                   })()}
                 </ul>
               </div>
-            
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={openPDF}
-                className="flex items-center space-x-2 bg-gradient-to-r from-red-500 to-pink-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-red-600 hover:to-pink-700 transition-all duration-300"
-              >
-                <span>Document</span>
-              </button>
-            </div>
           </div>
         </div>
       </div>

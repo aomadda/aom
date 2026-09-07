@@ -768,44 +768,6 @@ const ContentPage = () => {
 
   const ContentComponent = pageComponents[pageNumber]
 
-  const openPDF = () => {
-    // Determine if it's Part A, B, C, Annexure, or Annexure One
-    const isPartB = pageNumber.startsWith('B')
-    const isPartC = pageNumber.startsWith('C')
-    const isAnnexure = pageNumber.startsWith('A')
-    const isAnnexureOne = pageNumber.startsWith('O')
-    const actualPageNumber = (isPartB || isPartC || isAnnexure || isAnnexureOne) ? pageNumber.substring(1) : pageNumber
-    
-    let pdfFileName = ''
-    let pdfPath = ''
-    
-    if (isAnnexureOne) {
-      pdfFileName = `BWMAnnexureOnePage${actualPageNumber}.pdf`
-      pdfPath = `/block-working-manual-pdfs/BWMAnnexureOnePages/${pdfFileName}`
-    } else if (isAnnexure) {
-      pdfFileName = `BWMAnnexurePage${actualPageNumber}.pdf`
-      pdfPath = `/block-working-manual-pdfs/BWMAnnexurePages/${pdfFileName}`
-    } else if (isPartC) {
-      pdfFileName = `BWMPartCPage${actualPageNumber}.pdf`
-      pdfPath = `/block-working-manual-pdfs/BWMPartCPages/${pdfFileName}`
-    } else if (isPartB) {
-      pdfFileName = `BWMPartBPage${actualPageNumber}.pdf`
-      pdfPath = `/block-working-manual-pdfs/BWMPartBPages/${pdfFileName}`
-    } else {
-      pdfFileName = `BWMPartAPage${pageNumber}.pdf`
-      pdfPath = `/block-working-manual-pdfs/BWMPartAPages/${pdfFileName}`
-    }
-    
-    try {
-      // Open PDF in new tab
-      window.open(pdfPath, '_blank', 'noopener,noreferrer')
-    } catch (error) {
-      console.error('Error opening PDF:', error)
-      // Fallback: try without parameters
-      window.open(pdfPath, '_blank')
-    }
-  }
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-linear-to-br from-blue-900 via-indigo-900 to-purple-900 flex items-center justify-center">
@@ -879,31 +841,16 @@ const ContentPage = () => {
       {/* Header Navigation */}
       <div className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-2 lg:px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => router.push('/manuals/block-working-manual')}
-                className={`flex items-center space-x-2 bg-linear-to-r ${headerGradient} text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:brightness-110 transition-all duration-300 mr-2`}
-              >
-                <span>Back to Index</span>
-              </button>
-            </div>
+          <div className="flex items-center justify-between gap-2">
+            <button
+              onClick={() => router.push('/manuals/block-working-manual')}
+              className={`flex shrink-0 items-center space-x-2 bg-linear-to-r ${headerGradient} text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:brightness-110 transition-all duration-300`}
+            >
+              <span>Back to Index</span>
+            </button>
 
-            <div className={`bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 mr-2 rounded-sm backdrop-blur-sm border ${borderColor}`}>
-              <ul className="space-y-1 text-center">
-                <li className="flex items-center justify-center space-x-2">
-                  <span className="text-white text-xs lg:text-sm">Topic: {getRuleTitle(pageNumber)}</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={openPDF}
-                className="flex items-center space-x-2 bg-linear-to-r from-red-500 to-pink-600 text-white text-xs lg:text-base lg:px-4 px-2 py-2 rounded-sm hover:from-red-600 hover:to-pink-700 transition-all duration-300"
-              >
-                <span>Document</span>
-              </button>
+            <div className={`bg-linear-to-r from-green-500 to-emerald-600 lg:px-4 px-2 py-2 rounded-sm backdrop-blur-sm border ${borderColor} max-w-[65%] text-right`}>
+              <span className="text-white text-xs lg:text-sm">Topic: {getRuleTitle(pageNumber)}</span>
             </div>
           </div>
         </div>

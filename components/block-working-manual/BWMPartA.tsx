@@ -1,25 +1,12 @@
 "use client"
-import React, { useState, useEffect } from 'react'
-import { BookOpen, AlertTriangle, CheckCircle, AlertCircle, Search, Clipboard, ChevronDown, ChevronUp, Train, Signal, Wrench, AlertTriangle as ExclamationTriangle, FileText, BookOpenCheck, ExternalLink } from 'lucide-react'
+import React, { useState } from 'react'
+import { BookOpen, AlertTriangle, CheckCircle, AlertCircle, Search, Clipboard, ChevronDown, ChevronUp, Train, Signal, Wrench, AlertTriangle as ExclamationTriangle, BookOpenCheck } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 const BWMPartA = () => {
   const [expandedChapters, setExpandedChapters] = useState<number[]>([])
-  const [isMobile, setIsMobile] = useState(false)
-  const [openingPDF, setOpeningPDF] = useState<string | null>(null)
   const [openingContent, setOpeningContent] = useState<string | null>(null)
   const router = useRouter()
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-    
-    checkDevice()
-    window.addEventListener('resize', checkDevice)
-    
-    return () => window.removeEventListener('resize', checkDevice)
-  }, [])
 
   const toggleChapter = (chapterId: number) => {
     setExpandedChapters(prev => {
@@ -28,27 +15,6 @@ const BWMPartA = () => {
       }
       return [chapterId]
     })
-  }
-
-  const openPDF = (page: string) => {
-    const pdfFileName = `BWMPartAPage${page}.pdf`
-    const pdfPath = `/block-working-manual-pdfs/BWMPartAPages/${pdfFileName}`
-    
-    setOpeningPDF(page)
-    
-    // Small delay to show loading state
-    setTimeout(() => {
-      try {
-        // Always try to open in new tab
-        window.open(pdfPath, '_blank', 'noopener,noreferrer')
-      } catch (error) {
-        console.error('Error opening PDF:', error)
-        // Fallback: try without parameters
-        window.open(pdfPath, '_blank')
-      } finally {
-        setOpeningPDF(null)
-      }
-    }, 100)
   }
 
   const openContent = (page: string) => {
@@ -310,25 +276,6 @@ const BWMPartA = () => {
                                 Rule {rule.number} • Page - {rule.page}
                               </p>
                               <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-2 lg:space-y-0 lg:space-x-3 mt-2">
-                                {/* View Document Button */}
-                                <button
-                                  onClick={() => openPDF(rule.page)}
-                                  disabled={openingPDF === rule.page}
-                                  className={`flex items-center space-x-2 px-3 py-1.5 text-white text-sm font-medium rounded-md transition-all duration-300 ${
-                                    openingPDF === rule.page
-                                      ? 'bg-gray-500 cursor-not-allowed'
-                                      : 'bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 hover:shadow-lg hover:scale-105'
-                                  }`}
-                                >
-                                  {openingPDF === rule.page ? (
-                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                  ) : (
-                                    <FileText className="w-4 h-4" />
-                                  )}
-                                  <span>{openingPDF === rule.page ? 'Opening...' : 'View Document'}</span>
-                                  {!isMobile && openingPDF !== rule.page && <ExternalLink className="w-3 h-3" />}
-                                </button>
-                                
                                 {/* View Content Button */}
                                 <button
                                   onClick={() => openContent(rule.page)}

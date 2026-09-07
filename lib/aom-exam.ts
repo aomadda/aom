@@ -5,6 +5,30 @@ export type AomExamQuestion = {
   explanation?: string
 }
 
+export type AomExamQuestionInput = {
+  question: string
+  options: string[]
+  correct?: number
+  correctAnswer?: number
+  explanation?: string
+}
+
+export function toAomExamQuestions(
+  questions: readonly AomExamQuestionInput[],
+): AomExamQuestion[] {
+  return questions.map((question) => ({
+    question: question.question,
+    options: question.options,
+    explanation: question.explanation,
+    correct:
+      typeof question.correct === 'number'
+        ? question.correct
+        : typeof question.correctAnswer === 'number'
+          ? question.correctAnswer
+          : 0,
+  }))
+}
+
 export type AomQuestionStatus =
   | 'not-visited'
   | 'not-answered'
