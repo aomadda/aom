@@ -1,14 +1,14 @@
 'use client'
 
-import { aomPreviousPapersQuizzes } from '@/assets/quizzes/aom-previous-papers/aom-previous-papers-2026/aom-previous-papers-2026'
+import { aom30LDCETests } from '@/assets/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026'
 import AomExamTest, { type AomExamPaperSection } from '@/components/aom-tests/AomExamTest'
 
-const QUIZ_ID = 'aom-previous-papers-2026'
+const QUIZ_ID = 'aom-30%-ldce-2026'
 
-export default function AomPreviousPapers2026Page() {
-  const professional = aomPreviousPapersQuizzes.quizzes['professional-subject'] ?? []
-  const gkRajabhasha = aomPreviousPapersQuizzes.quizzes['gk-rajabhasha'] ?? []
-  const establishment = aomPreviousPapersQuizzes.quizzes['establishment-finance-rules'] ?? []
+export default function Aom30PercentLdce2026Page() {
+  const professional = aom30LDCETests.tests['professional-subject'] ?? []
+  const gkRajabhasha = aom30LDCETests.tests['gk-rajabhasha'] ?? []
+  const establishment = aom30LDCETests.tests['establishment-finance-rules'] ?? []
   const questions = [...professional, ...gkRajabhasha, ...establishment]
   const sections: AomExamPaperSection[] = [
     {
@@ -33,8 +33,8 @@ export default function AomPreviousPapers2026Page() {
 
   return (
     <AomExamTest
-      title="AOM Previous Papers 2026"
-      categoryId="aom-previous-papers-2026"
+      title="AOM 30% LDCE 2026"
+      categoryId="aom-30%-ldce-2026"
       quizId={QUIZ_ID}
       questions={questions}
       sections={sections}

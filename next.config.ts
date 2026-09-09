@@ -204,18 +204,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/professional-subject",
-        destination: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
         permanent: true,
       },
       {
-        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/gk-rajabhasha",
-        destination: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/:path*",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
         permanent: true,
       },
       {
-        source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/establishment-finance-rules",
-        destination: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
+        source: "/aom-tests/aom-previous-years-papers/aom-previous-paper-2022",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2022",
         permanent: true,
       },
       {
@@ -227,6 +227,26 @@ const nextConfig: NextConfig = {
         source: "/aom-tests/gk-rajabhasha/:path*",
         destination: "/aom-tests/aom-gk-rajabhasha-tests/:path*",
         permanent: true,
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2022",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2022",
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2023",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2023",
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2026",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2024",
+        destination: "/aom-tests/aom-previous-years-papers/aom-70%-ldce-2024",
       },
     ];
   },

@@ -1,5 +1,5 @@
-export const aomPreviousPapersQuizzes = {
-  quizzes: {
+export const aom30LDCETests = {
+  tests: {
     'professional-subject': [
       {
         question: "Which of the given option modules is NOT part of the ICMS (Integrated Coaching Management System)?",
@@ -1925,7 +1925,7 @@ export const aomPreviousPapersQuizzes = {
           "None of the given options",
           "Self-imposed expenditure discipline against the cash content of budget allotment",
           "Imposing restrictions on drawing limits on banks",
-          "Self-imposed expenditure discipline against budget allotment ], } }",
+          "Self-imposed expenditure discipline against budget allotment",
         ],
         correct: 1,
         explanation: "Self-imposed expenditure discipline against the cash content of budget allotment is the correct answer.",

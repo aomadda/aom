@@ -176,7 +176,7 @@ const GlobalSearch = () => {
                   {results.map((topic, index) => {
                     const isActive = index === activeIndex
                     return (
-                      <li key={topic.href}>
+                      <li key={`${topic.href}::${topic.title}`}>
                         <Link
                           id={`global-search-result-${index}`}
                           href={topic.href}

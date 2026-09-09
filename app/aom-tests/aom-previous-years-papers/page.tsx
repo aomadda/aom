@@ -6,22 +6,40 @@ import { usePathname } from 'next/navigation'
 
 const papers = [
   {
-    href: '/aom-tests/aom-previous-years-papers/aom-previous-paper-2022',
-    title: 'AOM Previous Paper 2022',
+    href: '/aom-tests/aom-previous-years-papers/aom-30%-ldce-2022',
+    title: 'AOM 30% LDCE 2022',
     year: '2022',
     icon: '📝',
     color: 'from-rose-500 to-red-600',
     description:
-      'Practice the AOM Previous Paper 2022 with questions covering operating, establishment and related topics',
+      'Practice the AOM 30% LDCE 2022 paper with questions covering operating, establishment and related topics',
   },
   {
-    href: '/aom-tests/aom-previous-years-papers/aom-previous-papers-2026',
-    title: 'AOM Previous Papers 2026',
+    href: '/aom-tests/aom-previous-years-papers/aom-30%-ldce-2023',
+    title: 'AOM 30% LDCE 2023',
+    year: '2023',
+    icon: '📘',
+    color: 'from-pink-500 to-fuchsia-600',
+    description:
+      'Practice the AOM 30% LDCE 2023 paper with questions covering operating, statistics and accident-related topics',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-70%-ldce-2024',
+    title: 'AOM 70% LDCE 2024',
+    year: '2024',
+    icon: '📗',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice the AOM 70% LDCE 2024 paper with questions covering operating, wagon supply and related topics',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026',
+    title: 'AOM 30% LDCE 2026',
     year: '2026',
     icon: '📑',
     color: 'from-orange-500 to-amber-600',
     description:
-      'Practice AOM exam papers: Professional Subject, GK & Rajabhasha, and Establishment & Financial Rules',
+      'Practice the AOM 30% LDCE 2026 paper: Professional Subject, GK & Rajabhasha, and Establishment & Financial Rules',
   },
 ]
 
