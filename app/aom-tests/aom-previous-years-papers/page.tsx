@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const papers = [
   {
-    href: '/aom-tests/aom-previous-years-papers/aom-30%-ldce-2022',
+    href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022',
     title: 'AOM 30% LDCE 2022',
     year: '2022',
     icon: '📝',
@@ -15,7 +15,7 @@ const papers = [
       'Practice the AOM 30% LDCE 2022 paper with questions covering operating, establishment and related topics',
   },
   {
-    href: '/aom-tests/aom-previous-years-papers/aom-30%-ldce-2023',
+    href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023',
     title: 'AOM 30% LDCE 2023',
     year: '2023',
     icon: '📘',
@@ -24,7 +24,7 @@ const papers = [
       'Practice the AOM 30% LDCE 2023 paper with questions covering operating, statistics and accident-related topics',
   },
   {
-    href: '/aom-tests/aom-previous-years-papers/aom-70%-ldce-2024',
+    href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2024',
     title: 'AOM 70% LDCE 2024',
     year: '2024',
     icon: '📗',
@@ -33,7 +33,7 @@ const papers = [
       'Practice the AOM 70% LDCE 2024 paper with questions covering operating, wagon supply and related topics',
   },
   {
-    href: '/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026',
+    href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026',
     title: 'AOM 30% LDCE 2026',
     year: '2026',
     icon: '📑',

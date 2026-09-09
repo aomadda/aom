@@ -205,17 +205,37 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026",
-        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
         permanent: true,
       },
       {
         source: "/aom-tests/aom-previous-years-papers/aom-previous-papers-2026/:path*",
-        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
         permanent: true,
       },
       {
         source: "/aom-tests/aom-previous-years-papers/aom-previous-paper-2022",
-        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2022",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2022",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2023",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2026",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2024",
+        destination: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2024",
         permanent: true,
       },
       {
@@ -227,26 +247,6 @@ const nextConfig: NextConfig = {
         source: "/aom-tests/gk-rajabhasha/:path*",
         destination: "/aom-tests/aom-gk-rajabhasha-tests/:path*",
         permanent: true,
-      },
-    ];
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2022",
-        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2022",
-      },
-      {
-        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2023",
-        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2023",
-      },
-      {
-        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2026",
-        destination: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
-      },
-      {
-        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2024",
-        destination: "/aom-tests/aom-previous-years-papers/aom-70%-ldce-2024",
       },
     ];
   },

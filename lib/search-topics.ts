@@ -120,7 +120,7 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes accident manual chapter 9 Accident Manual Chapter 9 exam",
   },
   {
-    href: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2022",
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
     title: "AOM 30% LDCE 2022",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers",
@@ -128,7 +128,7 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom 30% ldce 2022 AOM 30% LDCE 2022 previous paper exam practice previous years",
   },
   {
-    href: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2023",
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023",
     title: "AOM 30% LDCE 2023",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers",
@@ -136,7 +136,7 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom 30% ldce 2023 AOM 30% LDCE 2023 previous paper exam practice previous years operating statistics",
   },
   {
-    href: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
     title: "AOM 30% LDCE 2026",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers",
@@ -144,7 +144,7 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom 30% ldce 2026 AOM 30% LDCE 2026 previous papers professional subject GK Rajabhasha Establishment Financial Rules",
   },
   {
-    href: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
     title: "AOM 30% LDCE 2026 — Establishment & Financial Rules",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2026",
@@ -152,7 +152,7 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom 30% ldce 2026 establishment finance financial rules AOM 30% LDCE 2026 Establishment",
   },
   {
-    href: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
     title: "AOM 30% LDCE 2026 — GK & Rajabhasha",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2026",
@@ -160,7 +160,7 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom 30% ldce 2026 gk rajabhasha general knowledge AOM 30% LDCE 2026 GK Rajabhasha",
   },
   {
-    href: "/aom-tests/aom-previous-years-papers/aom-30%-ldce-2026",
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
     title: "AOM 30% LDCE 2026 — Professional Subject",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2026",
@@ -168,7 +168,7 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom 30% ldce 2026 professional subject operating G&SR AOM 30% LDCE 2026 Professional Subject",
   },
   {
-    href: "/aom-tests/aom-previous-years-papers/aom-70%-ldce-2024",
+    href: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2024",
     title: "AOM 70% LDCE 2024",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers",
