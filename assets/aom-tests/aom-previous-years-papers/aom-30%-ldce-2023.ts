@@ -544,38 +544,266 @@ export const aom30Ldce2023 = {
                             },
 
 
+{
+  question: 'Which Tennis player has been on the top of the ATP rakings for maximum period?',
+  options: ['Novak Djokovic', 'Roger Federer', 'Rafael Nadal', 'None of the above'],
+  correct: 0,
+  explanation: 'Novak Djokovic is the correct answer.',
+},
+{
+  question: 'Which Indian athlete is also known as "Udan Pari"?',
+  options: ['Hima Das', 'Dutee Chand', 'PT Usha', 'None of the above'],
+  correct: 2,
+  explanation: 'PT Usha is the correct answer.',
+},
+{
+  question: 'Which Indian cricketer has also been President of BCCI?',
+  options: ['Kapil Dev', 'Sunil Gavaskar', 'Sourav Ganguly', 'None of the above'],
+  correct: 2,
+  explanation: 'Sourav Ganguly is the correct answer.',
+},
+{
+  question: 'Which country has won the most World cups in Football?',
+  options: ['Brazil', 'Germany', 'Argentina', 'None of the above'],
+  correct: 0,
+  explanation: 'Brazil is the correct answer.',
+},
+{
+  question: 'Who is the first Indian player to win an individual Gold in Olympics?',
+  options: ['Abhinav Bindra', 'Neeraj Chopra', 'Sushil Kumar', 'None of the above'],
+  correct: 0,
+  explanation: 'Abhinav Bindra is the correct answer.',
+},
+{
+  question: 'Vijender Signgh is associated with which sport?',
+  options: ['Boxing', 'Archery', 'Wrestling', 'None of the above'],
+  correct: 0,
+  explanation: 'Boxing is the correct answer.',
+},
+{
+  question: 'The number of centuries made by Sachin Tendulkar in International matches is ________',
+  options: ['98', '99', '100', 'None of the above'],
+  correct: 2,
+  explanation: '100 is the correct answer.',
+},
+{
+  question: 'Irani Trophy is associated with which sport?',
+  options: ['Cricket', 'Football', 'Hockey', 'None of the above'],
+  correct: 0,
+  explanation: 'Cricket is the correct answer.',
+},
+{
+  question: 'The number of Gold medals won by India in Olympics till now is ________',
+  options: ['7', '8', '9', 'None of the above'],
+  correct: 1,
+  explanation: '8 is the correct answer.',
+},
+{
+  question: 'The word "Butterfly" is associated with which sport?',
+  options: ['Swimming', 'Football', 'Hockey', 'None of the above'],
+  correct: 0,
+  explanation: 'Swimming is the correct answer.',
+},
+{
+  question: 'Which one of the following does NOT constitute the electoral college for electing the President of India?',
+  options: ['Elected member of Lok Sabha', 'Elected member of Rajya Sabha', 'Elected member of State Legislative Assembly each state', 'None of the above'],
+  correct: 3,
+  explanation: 'None of the above is the correct answer.',
+},
+{
+  question: 'A person who is not a member of Parliament can be appointed as a Minister by the President of India for a maximum period of ________',
+  options: ['6 months', '1 year', '2 years', 'None of the above'],
+  correct: 0,
+  explanation: '6 months is the correct answer.',
+},
+{
+  question: 'Who among the following can be attend meetings of the Union Cabinet?',
+  options: ['Cabinet Ministers', 'Ministers of State', 'Deputy Ministers', 'None of the above'],
+  correct: 0,
+  explanation: 'Cabinet Ministers is the correct answer.',
+},
+{
+  question: 'When was the Constitution of India implemented?',
+  options: ['26th January 1950', '26th January 1951', '26th January 1952', 'None of the above'],
+  correct: 0,
+  explanation: '26th January 1950 is the correct answer.',
+},
+{
+  question: 'What is the strength of the Public Accounts Committee?',
+  options: ['10 from Lok Sabha and 5 from Rajya Sabha', '15 from Lok Sabha and 7 from Rajya Sabha', '15 from Lok Sabha and 10 from Rajya Sabha', 'None of the above'],
+  correct: 1,
+  explanation: '15 from Lok Sabha and 7 from Rajya Sabha is the correct answer.',
+},
+{
+  question: 'Quit India Movement was launched in response to ________',
+  options: ['The Rowlatt Act', 'The Simon Commission', 'Cripps Proposal', 'None of the above'],
+  correct: 2,
+  explanation: 'Cripps Proposal is the correct answer.',
+},
+{
+  question: 'The state of Bengal was partitioned by Lord Curzon in the year ________',
+  options: ['1905', '1906', '1907', 'None of the above'],
+  correct: 0,
+  explanation: '1905 is the correct answer.',
+},
+{
+  question: 'Indian National Congress was founded in the year ________',
+  options: ['1885', '1886', '1887', 'None of the above'],
+  correct: 0,
+  explanation: '1885 is the correct answer.',
+},
+{
+  question: 'Who was the Gandhiji\'s nominee defeated by Subash Chandra Bose for the Presidentship of the Congress in 1939?',
+  options: ['Pattabhi Sitaramayya', 'Sardar Vallabhbhai Patel', 'Srinivas Iyengar', 'None of the above'],
+  correct: 0,
+  explanation: 'Pattabhi Sitaramayya is the correct answer.',
+},
+{
+  question: 'The battle of Plassey was fought in the year ________',
+  options: ['1757', '1758', '1759', 'None of the above'],
+  correct: 0,
+  explanation: '1757 is the correct answer.',
+},
+{
+  question: 'Tulasidas the author of Ramcharitmanas was a contemporary of which of the following Rulers?',
+  options: ['Akbar', 'Shah Jahan', 'Aurangzeb', 'None of the above'],
+  correct: 0,
+  explanation: 'Akbar is the correct answer.',
+},
+{
+  question: 'The Radcliffe line is a boundary between which two countries?',
+  options: ['India and Pakistan', 'India and China', 'India and Myanmar', 'None of the above'],
+  correct: 0,
+  explanation: 'India and Pakistan is the correct answer.',
+},
+{
+  question: 'The following monsoon contributes most of the rains in India?',
+  options: ['North West Monsoon', 'South West Monsoon', 'North East Monsoon', 'None of the above'],
+  correct: 1,
+  explanation: 'South West Monsoon is the correct answer.',
+},
+{
+  question: 'Which atomic power station in India is built completely indigenously?',
+  options: ['Tarapur', 'Kalpakkam', 'Rajasthan', 'None of the above'],
+  correct: 3,
+  explanation: 'None of the above is the correct answer.',
+},
+{
+  question: 'Which of the following important rivers of Indian does NOT originate in the Western Ghats?',
+  options: ['Godavari', 'Kaveri', 'Krishna', 'None of the above'],
+  correct: 3,
+  explanation: 'None of the above is the correct answer.',
+},
+{
+  question: 'When it is noon IST at Allahabad in India, the time at Greenwhich in London is ________',
+  options: ['06:30 hours', '17:30 hours', 'Midnight, GMT', 'None of the above'],
+  correct: 0,
+  explanation: '06:30 hours is the correct answer.',
+},
+{
+  question: 'Carbon, diamond and graphite are together called as ________',
+  options: ['Allotropes', 'Isomers', 'Isomorphs', 'None of the above'],
+  correct: 0,
+  explanation: 'Allotropes is the correct answer.',
+},
+{
+  question: 'The first chairman of Atomic Energy Commission was ________',
+  options: ['Dr. Homi J Bhabha', 'Dr. Vikram Sarabhai', 'Chandrasekhara Venkata Raman', 'None of the above'],
+  correct: 0,
+  explanation: 'Dr. Homi J Bhabha is the correct answer.',
+},
+{
+  question: 'Name the Governor General who abolished the Sati Pratha in 1829?',
+  options: ['Lord William Bentinck', 'Lord William Mayo', 'Lord Cornwallis', 'None of the above'],
+  correct: 0,
+  explanation: 'Lord William Bentinck is the correct answer.',
+},
+{
+  question: 'The Yellowstone National Park is located in which country?',
+  options: ['Russia', 'Canada', 'USA', 'None of the above'],
+  correct: 2,
+  explanation: 'USA is the correct answer.',
+},
+{
+  question: 'Who founded the Indian Statistical Institute on 17 December 1931?',
+  options: ['R A Fisher', 'P C Mahalanobis', 'F Yates', 'None of the above'],
+  correct: 1,
+  explanation: 'P C Mahalanobis is the correct answer.',
+},
+{
+  question: 'Who was the first Indian to win all England Badminton Championships?',
+  options: ['Prakash Padukone', 'P. V. Sindhu', 'Saina Nehwal', 'None of the above'],
+  correct: 0,
+  explanation: 'Prakash Padukone is the correct answer.',
+},
+{
+  question: 'Between whom did the third battle of Panipat was fought?',
+  options: ['Akbar & Hemu', 'Ahmad Shah Abdali & Maratha', 'Babur and Ibrahim Lodi', 'None of the above'],
+  correct: 1,
+  explanation: 'Ahmad Shah Abdali and Maratha is the correct answer.',
+},
+{
+  question: 'If the pH value of any type of soil is 10, then the soil will be considered as ________',
+  options: ['Acidic', 'Basic', 'Alkaline', 'None of the above'],
+  correct: 2,
+  explanation: 'Alkaline is the correct answer.',
+},
+{
+  question: 'Nanda Devi peak is located in which state?',
+  options: ['Uttarakhand', 'Himachal Pradesh', 'Jammu and Kashmir', 'None of the above'],
+  correct: 0,
+  explanation: 'Uttarakhand is the correct answer.',
+},
+{
+  question: 'Silent Valley National Park is located in which state?',
+  options: ['Kerala', 'Tamil Nadu', 'Karnataka', 'None of the above'],
+  correct: 0,
+  explanation: 'Kerala is the correct answer.',
+},
+{
+  question: 'What is the literacy rate in India as on 2011?',
+  options: ['74.04%', '75.04%', '76.04%', 'None of the above'],
+  correct: 0,
+  explanation: '74.04% is the correct answer.',
+},
+{
+  question: 'Coking Coil is a vital input in which of the folowing industries?',
+  options: ['Sponge Iron', 'Steel', 'Copper', 'None of the above'],
+  correct: 1,
+  explanation: 'Steel is the correct answer.',
+},
+{
+  question: 'Who is the Director of the RRR, whose song won the Oscar Award for Best Original Song in 2023?',
+  options: ['S. S. Rajamouli', 'Rajkumar Hirani', 'Rajkumar Santoshi', 'None of the above'],
+  correct: 0,
+  explanation: 'S. S. Rajamouli is the correct answer.',
+},
+{
+  question: 'Which country has recently banned domestic flights for journeys that are possible in less than two and half hours by Train?',
+  options: ['India', 'France', 'Spain', 'None of the above'],
+  correct: 1,
+  explanation: 'France is the correct answer.',
+},
+{
+  question: 'Who is called an employee proficient in Hindi?',
+  options: ['Knowledge of Hindi at Primary level', 'Passed Primary level exam in Hindi medium', 'Knowledge of Hindi at Matriculation level', 'Matriculation level exam passed in Hindi medium'],
+  correct: 3,
+  explanation: 'Matriculation level exam passed in Hindi medium is the correct answer.',
+},
+{
+  question: 'Which is the foreign language included in the Eight Schedule?',
+  options: ['Nepali', 'Persian', 'English', 'None of the above'],
+  correct: 0,
+  explanation: 'Nepali is the correct answer.',
+},
+{
+  question: 'Who is the Chairman of Railway Board Official Language Implementation Committee?',
+  options: ['Minister of Railways', 'Prime Minister', 'Chairman and CEO, Railway Board', 'None of the above'],
+  correct: 2,
+  explanation: 'Chairman and CEO, Railway Board is the correct answer.',
+},
 
-
-
-
-
-
-
-
-
-
-
-
-                            
-                            {
-                              question: 'Who is called an employee proficient in Hindi?',
-                              options: ['Knowledge of Hindi at Primary level', 'Passed Primary level exam in Hindi medium', 'Knowledge of Hindi at Matriculation level', 'Matriculation level exam passed in Hindi medium'],
-                              correct: 0,
-                              explanation: 'Matriculation level exam passed in Hindi medium is the correct answer.',
-                            },
-                            {
-                              question: 'Which is the foreign language included in the Eight Schedule?',
-                              options: ['Nepali', 'Persian', 'English', 'None of the above'],
-                              correct: 0,
-                              explanation: 'Nepali is the correct answer.',
-                            },
-                            {
-                              question: 'Who is the Chairman of Railway Board Official Language Implementation Committee?',
-                              options: ['Minister of Railways', 'Prime Minister', 'Chairman and CEO, Railway Board', 'None of the above'],
-                              correct: 0,
-                              explanation: 'Chairman and CEO, Railway Board is the correct answer.',
-                            },
-                            {
+{
                               question: 'Who is the Chairman of Central Hindi Committee?',
                               options: ['Home Minister', 'Prime Minister', 'Railway Minister', 'None of the above'],
                               correct: 0,
