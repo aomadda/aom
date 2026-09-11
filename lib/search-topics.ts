@@ -302,6 +302,38 @@ export const searchTopics: SearchTopic[] = [
       "aom tests professional subject test 09 AOM Professional Subject Test 09 paper mock operating G&SR signalling",
   },
   {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test10",
+    title: "AOM Professional Subject Test 10",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 10 AOM Professional Subject Test 10 paper mock operating G&SR signalling",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test11",
+    title: "AOM Professional Subject Test 11",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 11 AOM Professional Subject Test 11 paper mock operating G&SR signalling",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test12",
+    title: "AOM Professional Subject Test 12",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 12 AOM Professional Subject Test 12 paper mock operating G&SR signalling",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test13",
+    title: "AOM Professional Subject Test 13",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 13 AOM Professional Subject Test 13 paper mock operating G&SR signalling",
+  },
+  {
     href: "/topics/aom-special",
     title: "AOM Special",
     category: "Study Topics",
@@ -3243,6 +3275,30 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules railway services pension rules 1993 family pension disability",
   },
   {
+    href: "/quizzes/railway-current-affairs-2026",
+    title: "Railway Current Affairs 2026",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords:
+      "quizzes railway current affairs 2026 Railway Current Affairs 2026 Vande Bharat KAVACH TAG exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/february-2026",
+    title: "Railway Current Affairs February 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs february 2026 TAG IRCTC Aadhaar Amrit Bharat exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/january-2026",
+    title: "Railway Current Affairs January 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs january 2026 Vande Bharat Sleeper KAVACH DFC Economic Survey exam",
+  },
+  {
     href: "/quizzes/railway-gk",
     title: "Railway Gk",
     category: "Quizzes",
@@ -3907,6 +3963,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material temporary single line Temporary Single Line (TSL) S.R. 6.02.1 T/D 602 obstructed double line",
+  },
+  {
+    href: "/topics/operating-manual/track-machines",
+    title: "Track Machines",
+    category: "Study Topics",
+    parent: "Topics › Operating Manual",
+    keywords:
+      "topics operating manual track machines Track Machines 09-3X CSM UNO DUO WST BCM FRM UNI DGS TRT PQRS T-28 UIV BRM tamping ballast block period",
   },
   {
     href: "/topics/operating-material/track-tamping-machine",

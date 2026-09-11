@@ -106,6 +106,14 @@ const Quizzes = () => {
       description: 'Learn operating procedures, train movement rules, station operations, and safety protocols'
     },
     {
+      href: '/quizzes/railway-current-affairs-2026',
+      title: 'Railway Current Affairs 2026',
+      icon: '📰',
+      color: 'from-cyan-500 to-sky-600',
+      hoverColor: 'from-cyan-600 to-sky-700',
+      description: 'Practice month-wise railway current affairs for 2026 — Vande Bharat Sleeper, KAVACH, TAG 2026, and related updates'
+    },
+    {
       href: '/quizzes/railway-gk',
       title: 'Railway GK',
       icon: '🧠',

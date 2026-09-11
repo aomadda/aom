@@ -77,6 +77,38 @@ const tests = [
     description:
       'Practice paper 9 on operating, G&SR, manuals, and signalling for the AOM examination',
   },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test10',
+    title: 'AOM Professional Subject Test 10',
+    icon: '📗',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 10 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test11',
+    title: 'AOM Professional Subject Test 11',
+    icon: '📒',
+    color: 'from-indigo-500 to-fuchsia-600',
+    description:
+      'Practice paper 11 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test12',
+    title: 'AOM Professional Subject Test 12',
+    icon: '📙',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 12 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test13',
+    title: 'AOM Professional Subject Test 13',
+    icon: '📕',
+    color: 'from-violet-600 to-purple-500',
+    description:
+      'Practice paper 13 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
 ]
 
 const ProfessionalSubjectPage = () => {
