@@ -17,6 +17,7 @@ import {
   Plane,
   Scale,
   ScrollText,
+  Timer,
   TrendingUp,
   Users,
   UsersRound,
@@ -45,6 +46,18 @@ const establishmentTopics = [
     iconClassName: 'text-rose-200',
     borderClassName: 'border-rose-500/25 hover:border-rose-400/45',
     ringClassName: 'ring-rose-500/10',
+  },
+  {
+    href: '/topics/establishment-rules/engineering-time-allowance',
+    title: 'Engineering Time Allowance',
+    subtitle: 'ETA',
+    description:
+      'Provision of Engineering Time Allowance(ETA) for Faster execution of capacity enhancement/asset maintenance works.',
+    icon: Timer,
+    accent: 'from-amber-500/20 via-orange-500/10 to-transparent',
+    iconClassName: 'text-amber-200',
+    borderClassName: 'border-amber-500/25 hover:border-amber-400/45',
+    ringClassName: 'ring-amber-500/10',
   },
   {
     href: '/topics/establishment-rules/govt-pension',

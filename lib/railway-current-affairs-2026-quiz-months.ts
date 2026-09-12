@@ -19,6 +19,26 @@ export const RAILWAY_CURRENT_AFFAIRS_2026_QUIZ_MONTHS = [
     description:
       'Practice February 2026 railway current affairs — TAG 2026, IRCTC Aadhaar booking, Amrit Bharat, and related updates',
   },
+  {
+    slug: 'march-2026',
+    quizId: 'march-2026',
+    title: 'Railway Current Affairs — March 2026',
+    shortTitle: 'March 2026',
+    icon: '🌸',
+    color: 'from-indigo-500 to-violet-600',
+    description:
+      'Practice March 2026 railway current affairs — Vande Bharat, Western DFC, Reform Express, MUTP, and KAVACH',
+  },
+  {
+    slug: 'april-2026',
+    quizId: 'april-2026',
+    title: 'Railway Current Affairs — April 2026',
+    shortTitle: 'April 2026',
+    icon: '🌤️',
+    color: 'from-violet-500 to-fuchsia-600',
+    description:
+      'Practice April 2026 railway current affairs — electrification, freight, summer specials, Amrit Bharat, and track safety',
+  },
 ] as const
 
 export type RailwayCurrentAffairs2026QuizMonth =

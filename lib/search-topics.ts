@@ -334,6 +334,46 @@ export const searchTopics: SearchTopic[] = [
       "aom tests professional subject test 13 AOM Professional Subject Test 13 paper mock operating G&SR signalling",
   },
   {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test14",
+    title: "AOM Professional Subject Test 14",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 14 AOM Professional Subject Test 14 paper mock operating G&SR signalling goods shed WTR ODC",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test15",
+    title: "AOM Professional Subject Test 15",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 15 AOM Professional Subject Test 15 paper mock operating G&SR signalling ODC SWR KAVACH",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test16",
+    title: "AOM Professional Subject Test 16",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 16 AOM Professional Subject Test 16 paper mock operating G&SR signalling TI inspection Automatic block CRS",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test17",
+    title: "AOM Professional Subject Test 17",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 17 AOM Professional Subject Test 17 paper mock operating G&SR signalling Automatic block GCT weighbridge",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test18",
+    title: "AOM Professional Subject Test 18",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 18 AOM Professional Subject Test 18 paper mock operating G&SR signalling KAVACH ODC TMS GCT",
+  },
+  {
     href: "/topics/aom-special",
     title: "AOM Special",
     category: "Study Topics",
@@ -1321,6 +1361,14 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material engine unable to haul the load Engine Unable to Haul the Load relief engine push back divided train working T/609 G.R. S.R. 6.09",
   },
   {
+    href: "/topics/establishment-rules/engineering-time-allowance",
+    title: "Engineering Time Allowance",
+    category: "Study Topics",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules engineering time allowance ETA Engineering Time Allowance PCE PCOM GM CTR PSR 130 kmph Board letter 2023",
+  },
+  {
     href: "/topics/operating-material/Exchange-of-all-right-signals",
     title: "Exchange of All Right Signals",
     category: "Study Topics",
@@ -1348,7 +1396,7 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics",
     keywords:
-      "topics establishment rules Establishment Rules APAR HRMS MACP Quarters Service Rules Staff Benefit Fund Transfers",
+      "topics establishment rules Establishment Rules APAR CAT Engineering Time Allowance ETA HRMS MACP Quarters Service Rules Staff Benefit Fund Transfers",
   },
   {
     href: "/general-awareness/world-information/europe-countries",
@@ -3280,7 +3328,15 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes",
     keywords:
-      "quizzes railway current affairs 2026 Railway Current Affairs 2026 Vande Bharat KAVACH TAG exam",
+      "quizzes railway current affairs 2026 Railway Current Affairs 2026 Vande Bharat KAVACH TAG exam March April",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/april-2026",
+    title: "Railway Current Affairs April 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs april 2026 electrification freight summer specials Amrit Bharat composite sleepers exam",
   },
   {
     href: "/quizzes/railway-current-affairs-2026/february-2026",
@@ -3297,6 +3353,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Railway Current Affairs 2026",
     keywords:
       "quizzes railway current affairs january 2026 Vande Bharat Sleeper KAVACH DFC Economic Survey exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/march-2026",
+    title: "Railway Current Affairs March 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs march 2026 Vande Bharat Western DFC Reform Express MUTP KAVACH exam",
   },
   {
     href: "/quizzes/railway-gk",

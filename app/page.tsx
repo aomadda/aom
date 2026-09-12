@@ -114,6 +114,7 @@ const quizzesLinks: NavBox[] = [
   { href: '/quizzes/operating-department', label: 'Operating Department', icon: '🚂' },
   { href: '/quizzes/operating-manual', label: 'Operating Manual', icon: '📘' },
   { href: '/quizzes/rajabhasha', label: 'Rajabhasha', icon: '📝' },
+  { href: '/quizzes/railway-current-affairs-2026', label: 'Railway Current Affairs 2026', icon: '📰' },
   { href: '/quizzes/railway-gk', label: 'RailwayGK', icon: '🧠' },
   { href: '/quizzes/railway-statistics', label: 'Railway Statistics', icon: '📊' },
 ]

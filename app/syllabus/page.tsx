@@ -476,6 +476,249 @@ xi.	On Board Monitoring of Rolling Stock (OMRS).
           </p>
         </div>
 
+        {/* Selection Process Section */}
+        <div className="mb-12 overflow-hidden rounded-xl bg-white shadow-xl">
+          <div className="bg-linear-to-r from-indigo-600 via-violet-600 to-blue-700 px-4 py-6 text-center text-white lg:px-8 lg:py-8">
+            <h2 className="text-xl font-bold tracking-wide sm:text-2xl lg:text-3xl">
+              AOM GROUP &apos;B&apos; — SELECTION PROCESS
+            </h2>
+            <p className="mt-3 text-sm font-medium text-indigo-100 sm:text-base lg:text-lg">
+              30% LDCE and 70% Selection
+            </p>
+          </div>
+
+          <div className="space-y-8 p-3 sm:p-5 lg:p-8">
+            <div className="overflow-hidden rounded-xl border border-indigo-100 shadow-sm">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-160 border-collapse text-left">
+                  <thead>
+                    <tr>
+                      <th className="bg-slate-800 px-4 py-3.5 text-xs font-semibold tracking-wide text-white sm:text-sm">
+                        Particulars
+                      </th>
+                      <th className="bg-linear-to-r from-blue-600 to-blue-700 px-4 py-3.5 text-xs font-semibold tracking-wide text-white sm:text-sm">
+                        70% Selection
+                      </th>
+                      <th className="bg-linear-to-r from-violet-600 to-indigo-700 px-4 py-3.5 text-xs font-semibold tracking-wide text-white sm:text-sm">
+                        30% LDCE
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-sm text-gray-700 sm:text-base">
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-slate-50 px-4 py-3.5 font-semibold text-slate-800">Quota</th>
+                      <td className="bg-blue-50/70 px-4 py-3.5 font-medium text-blue-900">70%</td>
+                      <td className="bg-violet-50/70 px-4 py-3.5 font-medium text-violet-900">30%</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-white px-4 py-3.5 font-semibold text-slate-800">Service eligibility*</th>
+                      <td className="px-4 py-3.5">Normally 3 years in Level-6 &amp; above</td>
+                      <td className="px-4 py-3.5">Normally 5 years in Level-6 &amp; above</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-slate-50 px-4 py-3.5 font-semibold text-slate-800">Written CBT</th>
+                      <td className="bg-blue-50/40 px-4 py-3.5">100 marks</td>
+                      <td className="bg-violet-50/40 px-4 py-3.5">150 marks</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-white px-4 py-3.5 font-semibold text-slate-800">Qualifying standard</th>
+                      <td className="px-4 py-3.5">60/100</td>
+                      <td className="px-4 py-3.5">90/150</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-slate-50 px-4 py-3.5 font-semibold text-slate-800">Negative marking</th>
+                      <td className="bg-blue-50/40 px-4 py-3.5">No</td>
+                      <td className="bg-violet-50/40 px-4 py-3.5">1/3 for wrong answer</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-white px-4 py-3.5 font-semibold text-slate-800">Viva-voce</th>
+                      <td className="px-4 py-3.5">25 marks</td>
+                      <td className="px-4 py-3.5">25 marks</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-slate-50 px-4 py-3.5 font-semibold text-slate-800">Record of Service</th>
+                      <td className="bg-blue-50/40 px-4 py-3.5">25 marks</td>
+                      <td className="bg-violet-50/40 px-4 py-3.5">25 marks</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-white px-4 py-3.5 font-semibold text-slate-800">Selection basis</th>
+                      <td className="px-4 py-3.5">Selection with seniority considerations</td>
+                      <td className="px-4 py-3.5">Merit-based</td>
+                    </tr>
+                    <tr className="border-t border-slate-100">
+                      <th className="bg-slate-50 px-4 py-3.5 font-semibold text-slate-800">Viva zone</th>
+                      <td className="bg-blue-50/40 px-4 py-3.5">As prescribed for selection</td>
+                      <td className="bg-violet-50/40 px-4 py-3.5">
+                        Up to 5 × vacancies, community-wise, subject to rules
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-center text-lg font-bold text-slate-800 sm:text-xl lg:text-2xl">
+                Computer Based Test Syllabus
+              </h3>
+              <div className="overflow-hidden rounded-xl border border-violet-100 shadow-sm">
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-130 border-collapse text-left">
+                    <thead>
+                      <tr>
+                        <th className="bg-slate-800 px-4 py-3.5 text-xs font-semibold tracking-wide text-white sm:text-sm">
+                          Subject
+                        </th>
+                        <th className="bg-linear-to-r from-blue-600 to-blue-700 px-4 py-3.5 text-center text-xs font-semibold tracking-wide text-white sm:text-sm">
+                          70% Marks
+                        </th>
+                        <th className="bg-linear-to-r from-violet-600 to-indigo-700 px-4 py-3.5 text-center text-xs font-semibold tracking-wide text-white sm:text-sm">
+                          30% Marks
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm text-gray-700 sm:text-base">
+                      <tr className="border-t border-slate-100">
+                        <th className="bg-slate-50 px-4 py-3.5 font-semibold text-slate-800">
+                          Professional / Operating
+                        </th>
+                        <td className="px-4 py-3.5 text-center font-medium">70</td>
+                        <td className="px-4 py-3.5 text-center font-medium">80</td>
+                      </tr>
+                      <tr className="border-t border-slate-100">
+                        <th className="bg-white px-4 py-3.5 font-semibold text-slate-800">
+                          General Knowledge + Official Language
+                        </th>
+                        <td className="px-4 py-3.5 text-center">-</td>
+                        <td className="px-4 py-3.5 text-center font-medium">40</td>
+                      </tr>
+                      <tr className="border-t border-slate-100">
+                        <th className="bg-slate-50 px-4 py-3.5 font-semibold text-slate-800">
+                          Establishment &amp; Financial Rules
+                        </th>
+                        <td className="px-4 py-3.5 text-center">30 (with Official Language)</td>
+                        <td className="px-4 py-3.5 text-center font-medium">30</td>
+                      </tr>
+                      <tr className="border-t border-indigo-100">
+                        <th className="bg-linear-to-r from-indigo-600 to-violet-600 px-4 py-3.5 font-bold text-white">
+                          Total
+                        </th>
+                        <td className="bg-indigo-50 px-4 py-3.5 text-center font-bold text-indigo-900">100</td>
+                        <td className="bg-violet-50 px-4 py-3.5 text-center font-bold text-violet-900">150</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-emerald-100 bg-linear-to-br from-emerald-50 via-white to-teal-50 p-4 shadow-sm sm:p-6">
+              <h3 className="mb-3 text-lg font-bold text-emerald-800 sm:text-xl">
+                Viva &amp; Record of Service
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
+                Viva-voce: 25 marks. Record of Service: 25 marks. The applicable minimum
+                combined/individual standards, medical requirements and panel procedure should be
+                checked in the current notification.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-center text-lg font-bold text-slate-800 sm:text-xl lg:text-2xl">
+                Selection Flow
+              </h3>
+              <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
+                <div className="rounded-xl border border-blue-100 bg-linear-to-br from-blue-50 to-white p-4 shadow-sm sm:p-5">
+                  <p className="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm leading-relaxed text-blue-950 sm:text-base">
+                    <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white sm:text-sm">
+                      70%:
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-blue-100">
+                      Eligibility
+                    </span>
+                    <span className="font-semibold text-blue-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-blue-100">
+                      CBT (100)
+                    </span>
+                    <span className="font-semibold text-blue-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-blue-100">
+                      Qualify
+                    </span>
+                    <span className="font-semibold text-blue-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-blue-100">
+                      Medical/required stages
+                    </span>
+                    <span className="font-semibold text-blue-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-blue-100">
+                      Viva (25) + Record (25)
+                    </span>
+                    <span className="font-semibold text-blue-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-blue-100">
+                      Panel under prescribed selection/seniority principles.
+                    </span>
+                  </p>
+                </div>
+                <div className="rounded-xl border border-violet-100 bg-linear-to-br from-violet-50 to-white p-4 shadow-sm sm:p-5">
+                  <p className="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm leading-relaxed text-violet-950 sm:text-base">
+                    <span className="rounded-full bg-violet-600 px-3 py-1 text-xs font-bold text-white sm:text-sm">
+                      30%:
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-violet-100">
+                      Eligibility
+                    </span>
+                    <span className="font-semibold text-violet-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-violet-100">
+                      Centralized CBT (150)
+                    </span>
+                    <span className="font-semibold text-violet-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-violet-100">
+                      Qualify
+                    </span>
+                    <span className="font-semibold text-violet-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-violet-100">
+                      Top candidates for viva (up to 5× vacancies, as prescribed)
+                    </span>
+                    <span className="font-semibold text-violet-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-violet-100">
+                      Medical/required stages
+                    </span>
+                    <span className="font-semibold text-violet-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-violet-100">
+                      Viva (25) + Record (25)
+                    </span>
+                    <span className="font-semibold text-violet-500">
+                      →
+                    </span>
+                    <span className="rounded-lg bg-white px-3 py-1.5 font-medium shadow-sm ring-1 ring-violet-100">
+                      Final merit panel.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Syllabus Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {sections.map((section, sectionIndex) => (

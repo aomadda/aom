@@ -1272,6 +1272,10 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      { acronym: "ETA", fullForm: "Engineering Time Allowance",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       {
         "acronym": "ETKM",
         "fullForm": "Equated Track Kilometers",
