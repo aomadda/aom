@@ -374,6 +374,14 @@ export const searchTopics: SearchTopic[] = [
       "aom tests professional subject test 18 AOM Professional Subject Test 18 paper mock operating G&SR signalling KAVACH ODC TMS GCT",
   },
   {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test19",
+    title: "AOM Professional Subject Test 19",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 19 AOM Professional Subject Test 19 paper mock operating G&SR signalling accident inquiry CRS yard",
+  },
+  {
     href: "/topics/aom-special",
     title: "AOM Special",
     category: "Study Topics",

@@ -24,6 +24,7 @@ const QUIZ_TITLES: Record<string, string> = {
   'aom-professional-subject-test-16': 'AOM Professional Subject Test 16',
   'aom-professional-subject-test-17': 'AOM Professional Subject Test 17',
   'aom-professional-subject-test-18': 'AOM Professional Subject Test 18',
+  'aom-professional-subject-test-19': 'AOM Professional Subject Test 19',
   'aom-finance-establishment-rules-test-01': 'AOM Finance & Establishment Rules Test 01',
   'aom-finance-establishment-rules-test-02': 'AOM Finance & Establishment Rules Test 02',
   'aom-finance-establishment-rules-test-04': 'AOM Finance & Establishment Rules Test 04',

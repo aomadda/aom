@@ -149,6 +149,14 @@ const tests = [
     description:
       'Practice paper 18 on operating, G&SR, manuals, and signalling for the AOM examination',
   },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test19',
+    title: 'AOM Professional Subject Test 19',
+    icon: '📕',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 19 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
 ]
 
 const ProfessionalSubjectPage = () => {

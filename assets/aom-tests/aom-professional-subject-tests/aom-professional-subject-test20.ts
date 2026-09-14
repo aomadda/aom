@@ -1,0 +1,120 @@
+export const aomProfessionalSubjectTest20 = {
+    tests: {
+        'aom-professional-subject-test-20': [
+            {
+                question: `The target for acceptance of Inquiry report by DRM/GM is _______`,
+                options: ['D + 7', 'D + 10', 'D + 15', 'D + 20'],
+                correct: 1,
+                explanation: `The correct answer is D + 10.`,
+            },
+            {
+                question: `On a dobule line section, where a sand hump of approved design is not provided, except under approved special instructions, the adequate distance required beyond the starter for taking OFF a two-aspect colour light Home signal for an approaching train shall be _______`,
+                options: ['120 m', '180 m', '240 m', '300 m'],
+                correct: 1,
+                explanation: `The correct answer is 180 m.`,
+            },
+            {
+                question: `A derailing switch shall be deemed to ba an efficent substitute for the adequate distance for taking OFF a Home signal of a station otherwise than a terminal station under ______`,
+                options: ['Special instructions', 'Approved special instructions', 'Derailing switch cannot be used', 'None of the above'],
+                correct: 1,
+                explanation: `The correct answer is Approved special instructions.`,
+            },
+            {
+                question: `The permission to provide Non-interlocked level crossing gate shall be given by _______`,
+                options: ['CRS', 'GM', 'DRM', 'Railway Board'],
+                correct: 0,
+                explanation: `The correct answer is CRS.`,
+            },
+            {
+                question: `Under which category of accident is "Fire in Trains" classified?`,
+                options: ['Class A', 'Class B', 'Class C', 'Class D'],
+                correct: 1,
+                explanation: `The correct answer is Class B.`,
+            },
+            {
+                question: `A train entering a block section without any authority to proceed constitutes accident under which category?`,
+                options: ['Class E', 'Class F', 'Class G', 'Class H'],
+                correct: 2,
+                explanation: `The correct answer is Class G.`,
+            },
+            {
+                question: `Which of the following commodity constitutes the highest share of the freight in Indian Railways?`,
+                options: ['Coal', 'Steel', 'Iron Ore', 'Agricultural Products'],
+                correct: 0,
+                explanation: `The correct answer is Coal.`,
+            },
+            {
+                question: `Which of the following is the first priority task of Railway servant at the site of a serious accident?`,
+                options: ['To attend the injuered person', 'To protect the adjacent line in case of double line section', 'To preserve clues of accident', 'To report the accident to the higher authority'],
+                correct: 1,
+                explanation: `The correct answer is To protect the adjacent line in case of double line section.`,
+            },
+            {
+                question: `Untoward incidents are covered under which section of the Railway Act 1989?`,
+                options: ['Section 114', 'Section 114A', 'Section 124', 'Section 124A'],
+                correct: 3,
+                explanation: `The correct answer is Section 124A.`,
+            },
+            {
+                question: `When is "Green Notice" is issued?`,
+                options: ['Consequential train accident', 'Temporary single line working', 'Non-interlocked working', 'None of the above'],
+                correct: 2,
+                explanation: `The correct answer is Non-interlocked working.`,
+            },
+            {
+                question: `Which of the following organization is related to Bullet train in India?`,
+                options: ['IRFC', 'RVNL', 'RLDA', 'NHSRC'],
+                correct: 3,
+                explanation: `The correct answer is NHSRC.`,
+            },
+            {
+                question: `Which of the following is NOT the objective of marshalling a train?`,
+                options: ['Safety', 'Operational expediency', 'Customer convenience', 'Operating efficiency'],
+                correct: 2,
+                explanation: `The correct answer is Customer convenience.`,
+            },
+            {
+                question: `Which of the following scheme is related to Station Redevelopment works?`,
+                options: ['Amrit Bharat Station scheme', 'Vande Bharat Station Scheme', 'Mahatma Gandhi Station Scheme', 'None of the above'],
+                correct: 0,
+                explanation: `The correct answer is Amrit Bharat Station scheme.`,
+            },
+            {
+                question: `Which of the following is NOT regarding the master circular on Gati Shakti Cargo Terminal?`,
+                options: ['It is applicable for all new goods terminals', 'It is applicable for existing private siding/PFTs that may opt for this', 'The terminal can only be developed in private land', 'It supersedes all the earlier policies on private sidings.'],
+                correct: 2,
+                explanation: `The correct answer is The terminal can only be developed in private land.`,
+            },
+            {
+                question: `Which of the following contributes to enhancement of the line capacity?`,
+                options: ['Splitting block section with provision of IBS', 'Introducing Automatic block system of working', 'Doubling the single line section', 'All of the above'],
+                correct: 2,
+                explanation: `The correct answer is All of the above.`,
+            },
+            {
+                question: `Which of the following is provided to avoid surface crossing of trains?`,
+                options: ['Y connection', 'Rail Flyover', 'Road Over Bridge', 'Road under Rail flyover'],
+                correct: 1,
+                explanation: `The correct answer is Rail Flyover.`,
+            },
+            {
+                question: `Under which Plan Head the development of station is done under Amrit Bharat Station scheme?`,
+                options: ['Plan Head 16', 'Plan Head 17', 'Plan Head 33', 'Plan Head 53'],
+                correct: 3,
+                explanation: `The correct answer is Plan Head 53.`,
+            },
+            {
+                question: `Which of the following is known as Electronic Interlocking?`,
+                options: ['Route Relay interlocking', 'Panel interlocking', 'Solid state interlocking', 'None of the above'],
+                correct: 2,
+                explanation: `The correct answer is Solid state interlocking.`,
+            },
+            {
+                question: `The standard rake size of BCNA is _______`,
+                options: ['40', '42', '44', '50'],
+                correct: 1,
+                explanation: `The correct answer is 42.`,
+            },
+        ],
+    },
+}
