@@ -382,6 +382,30 @@ export const searchTopics: SearchTopic[] = [
       "aom tests professional subject test 19 AOM Professional Subject Test 19 paper mock operating G&SR signalling accident inquiry CRS yard",
   },
   {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test20",
+    title: "AOM Professional Subject Test 20",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 20 AOM Professional Subject Test 20 paper mock operating G&SR signalling accident inquiry DRM GM",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test21",
+    title: "AOM Professional Subject Test 21",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 21 AOM Professional Subject Test 21 paper mock operating G&SR signalling MRCF Latur",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test22",
+    title: "AOM Professional Subject Test 22",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 22 AOM Professional Subject Test 22 paper mock operating G&SR signalling CTRB",
+  },
+  {
     href: "/topics/aom-special",
     title: "AOM Special",
     category: "Study Topics",
@@ -3336,7 +3360,7 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes",
     keywords:
-      "quizzes railway current affairs 2026 Railway Current Affairs 2026 Vande Bharat KAVACH TAG exam March April",
+      "quizzes railway current affairs 2026 Railway Current Affairs 2026 Vande Bharat KAVACH TAG exam March April May June July August",
   },
   {
     href: "/quizzes/railway-current-affairs-2026/april-2026",
@@ -3345,6 +3369,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Railway Current Affairs 2026",
     keywords:
       "quizzes railway current affairs april 2026 electrification freight summer specials Amrit Bharat composite sleepers exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/august-2026",
+    title: "Railway Current Affairs August 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs august 2026 KAVACH Izzatnagar CTO All India licence freight exam",
   },
   {
     href: "/quizzes/railway-current-affairs-2026/february-2026",
@@ -3363,12 +3395,36 @@ export const searchTopics: SearchTopic[] = [
       "quizzes railway current affairs january 2026 Vande Bharat Sleeper KAVACH DFC Economic Survey exam",
   },
   {
+    href: "/quizzes/railway-current-affairs-2026/july-2026",
+    title: "Railway Current Affairs July 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs july 2026 hydrogen train Jind Sonipat indigenous fuel cell exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/june-2026",
+    title: "Railway Current Affairs June 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs june 2026 hydrogen train trial RRB Technician CEN exam",
+  },
+  {
     href: "/quizzes/railway-current-affairs-2026/march-2026",
     title: "Railway Current Affairs March 2026",
     category: "Quizzes",
     parent: "Quizzes › Railway Current Affairs 2026",
     keywords:
       "quizzes railway current affairs march 2026 Vande Bharat Western DFC Reform Express MUTP KAVACH exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/may-2026",
+    title: "Railway Current Affairs May 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs may 2026 CCEA multitracking Kazipet Vijayawada Sarkhej Dholera exam",
   },
   {
     href: "/quizzes/railway-gk",

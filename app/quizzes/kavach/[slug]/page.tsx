@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
-import { kavachQuizzes } from '@/assets/quizzes/kavach'
+import { kavachQuizzes } from '@/assets/quizzes/professional-subject/kavach'
 import AomExamTest from '@/components/aom-tests/AomExamTest'
 import { getKavachQuizChapter } from '@/lib/kavach-quiz-chapters'
 
@@ -19,7 +19,7 @@ export default function KavachChapterQuizPage() {
           <h1 className="mb-2 text-xl font-bold text-gray-800">Quiz not found</h1>
           <p className="mb-6 text-gray-600">This Kavach quiz does not exist.</p>
           <Link
-            href="/quizzes/kavach"
+            href="/quizzes/professional-subject/kavach"
             className="inline-flex rounded-full bg-linear-to-r from-orange-600 to-red-600 px-6 py-2.5 font-medium text-white"
           >
             Back to Kavach
@@ -42,7 +42,7 @@ export default function KavachChapterQuizPage() {
       categoryId="kavach"
       quizId={chapter.quizId}
       questions={questions}
-      backHref="/quizzes/kavach"
+      backHref="/quizzes/professional-subject/kavach"
       backLabel="Back to Kavach"
     />
   )

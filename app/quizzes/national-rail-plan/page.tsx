@@ -29,7 +29,7 @@ const NationalRailPlanQuizzesPage = () => {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8">
           {NATIONAL_RAIL_PLAN_QUIZ_CHAPTERS.map((chapter) => {
-            const href = `/quizzes/national-rail-plan/${chapter.slug}`
+            const href = `/quizzes/professional-subject/national-rail-plan/${chapter.slug}`
             const isActive = pathname === href
                 return (
               <Link key={chapter.slug} href={href} className="group">

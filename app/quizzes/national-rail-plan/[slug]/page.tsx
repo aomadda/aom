@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
-import { nationalRailPlanQuizzes } from '@/assets/quizzes/national-rail-plan'
+import { nationalRailPlanQuizzes } from '@/assets/quizzes/professional-subject/national-rail-plan'
 import AomExamTest from '@/components/aom-tests/AomExamTest'
 import { getNationalRailPlanQuizChapter } from '@/lib/national-rail-plan-quiz-chapters'
 
@@ -19,7 +19,7 @@ export default function NationalRailPlanChapterQuizPage() {
           <h1 className="mb-2 text-xl font-bold text-gray-800">Chapter not found</h1>
           <p className="mb-6 text-gray-600">This National Rail Plan quiz does not exist.</p>
           <Link
-            href="/quizzes/national-rail-plan"
+            href="/quizzes/professional-subject/national-rail-plan"
             className="inline-flex rounded-full bg-linear-to-r from-indigo-600 to-blue-600 px-6 py-2.5 font-medium text-white"
           >
             Back to National Rail Plan
@@ -40,7 +40,7 @@ export default function NationalRailPlanChapterQuizPage() {
       categoryId="national-rail-plan"
       quizId={chapter.quizId}
       questions={questions}
-      backHref="/quizzes/national-rail-plan"
+      backHref="/quizzes/professional-subject/national-rail-plan"
       backLabel="Back to National Rail Plan"
     />
   )
