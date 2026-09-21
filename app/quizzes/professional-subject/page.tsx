@@ -6,4 +6,4 @@ const ProfessionalSubjectPage = () => {
   )
 }
 
-export default Pro
+export default ProfessionalSubjectPage;

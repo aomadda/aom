@@ -1,5 +1,5 @@
 ---
-description: AOM Adda project conventions — Next.js 16 App Router, search index, auth
+description: AOM Adda project conventions — Next.js 16 App Router, search index, auth, tests
 alwaysApply: true
 ---
 
@@ -11,7 +11,7 @@ Railway AOM exam-prep site. Next.js 16 App Router, React 19, TypeScript, Tailwin
 
 This is not the Next.js from training data. Before writing framework code, read the matching guide in `node_modules/next/dist/docs/` and heed deprecation notices.
 
-- App Router only (`app/`). Routes live under `/topics`, `/manuals`, `/acts`, `/quizzes`, `/general-awareness`, `/pdfs`, `/api`.
+- App Router only (`app/`). Routes live under `/topics`, `/manuals`, `/acts`, `/quizzes`, `/general-awareness`, `/pdfs`, `/aom-tests`, `/api`.
 - Server Components by default. Add `'use client'` only when the file needs client APIs.
 - Use `next/link` for navigation and `NextResponse` in route handlers.
 
@@ -37,8 +37,15 @@ Place it alphabetically by `title` among nearby entries. Do not skip the search 
 - Validate request bodies with Zod in `lib/validations`. Return `{ error, fieldErrors }` on 400.
 - Keep public paths in `middleware.ts` (`PUBLIC_PAGE_PATHS`, `PUBLIC_API_PREFIXES`) when adding unauthenticated routes.
 
+## AOM tests
+
+- Questions: `assets/aom-tests/<category>/<slug>.ts`. Pages: `app/aom-tests/<category>/<slug>/page.tsx`.
+- Reuse `AomExamTest`. Match nearby tests for `QUIZ_ID`, title, `categoryId`, and `backHref`.
+- Also list the test on the category index page and in `lib/search-topics.ts`.
+
 ## Style
 
 - Match the file you are editing (quotes, exports, component shape).
 - Do not mass-refactor the large generated trees under `components/` (manuals, acts, chapter/section pages).
 - Do not commit `.env` or secrets.
+- Respond to the user in Telugu.

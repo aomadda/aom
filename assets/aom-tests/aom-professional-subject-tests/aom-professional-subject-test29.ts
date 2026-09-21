@@ -1,0 +1,305 @@
+export const aomProfessionalSubjectTest29 = {
+    tests: {
+        'aom-professional-subject-test-29': [
+            {
+                question: `The maximum speed of BOSTHS in loaded condition over the network of Indian Railway subject to other temporary and permanent speed restrictions is _______ km/h`,
+                options: ['100', '110', '120', '130'],
+                correct: 1,
+                explanation: `The correct answer is 100 km/h.`,
+            },
+            {
+                question: `(A) The Rationalization of Routes is done as per section 71 of the Railway Act, 1989.
+                (B) The provisions of the Rationalization shceme not apply to ODC, POL traffic and edible salt i.e for human consumption.`,
+                options: ['A is correct', 'B is correct', 'Both A and B are correct', 'Both A and B are incorrect'],
+                correct: 2,
+                explanation: `The correct answer is Both A and B are correct.`,
+            },
+            {
+                question: `According to the Preferential Traffic Order, who is the Accepting authority for programmed traffic of POL under priority C?`,
+                options: ['GM', 'DRM', 'Railway Board', 'Ministry of Petroleum'],
+                correct: 2,
+                explanation: `The correct answer is Railway Board.`,
+            },
+            {
+                question: `Who is the principal technical advisor to Central Government on matters pertaining to Commissioners of Railways Safety?`,
+                options: ['CCRS', 'DG, RDSO', 'Railway Board', 'DG, Safety'],
+                correct: 0,
+                explanation: `The correct answer is CCRS.`,
+            },
+            {
+                question: `On a double line Broad Gauge section, Panel interlocking at a station is to be replaced with EI. Which plan head is best suited to propose this work?`,
+                options: ['PH 11', 'PH 21', 'PH 33', 'PH 53'],
+                correct: 2,
+                explanation: `The correct answer is PH 33.`,
+            },
+            {
+                question: `For taking OFF the Home signal, Derailing switch can substitute for signal overlap under ________`,
+                options: ['Special instructions', 'Approved instructions', 'Approved special instructions', 'Approval of PCSTE'],
+                correct: 2,
+                explanation: `The correct answer is Approved special instructions.`,
+            },
+            {
+                question: `Who is nominated by the Board under disaster management plan to declare an untoward incident as railway disaster?`,
+                options: ['DRM', 'GM', 'CCRS', 'DG, Safety'],
+                correct: 1,
+                explanation: `The correct answer is GM.`,
+            },
+            {
+                question: `Which is NOT a constituent of formula for WTR?`,
+                options: ['Effective divisional wagon holding', 'Wagons loaded by the division', 'Loaded wagons received by the division', 'Total number of wagons interchanged by the division'],
+                correct: 3,
+                explanation: `The correct answer is Total number of wagons interchanged by the division.`,
+            },
+            {
+                question: `Charges collected by Railways from container train operators for moving their wagons on Indian Railway network is called ________`,
+                options: ['Haulage Charges', 'Freight Charges', 'Track access charges', 'None of the above'],
+                correct: 0,
+                explanation: `The correct answer is Haulage Charges.`,
+            },
+            {
+                question: `Which organization handles the booking of FTR trains?`,
+                options: ['Railway Board', 'IRCTC', 'CONCOR', 'Zonal Railway'],
+                correct: 1,
+                    explanation: `The correct answer is IRCTC.`,
+                },
+            {
+                question: `What is the code for LHB, vestibuled, air conditioned executive chair car?`,
+                options: ['LWFCZAC', 'WSCZAC', 'LWFAC', 'LWSCZAC'],
+                correct: 0,
+                explanation: `The correct answer is LWFCZAC.`,
+            },
+            {
+                question: `What is the periodicity of POH (SS-II) of LHB Coaches?`,
+                options: ['2 years + 60 days', '18 months + 60 days', '36 months/12 lakh km earned whichever is earlier', '3 years + 60 days'],
+                correct: 2,
+                explanation: `The correct answer is 36 months/12 lakh km earned whichever is earlier.`,
+            },
+            {
+                question: `A consignment has a gross clearance of 23 cm from minimum fixed structure profile. What will be its ODC class?`,
+                options: ['Class A', 'Class B', 'Class C', 'Not permitted as ODC'],
+                correct: 0,
+                explanation: `The correct answer is Class A.`,
+            },
+            {
+                question: `What is the periodicity of POH of BTPN wagons (in years)?`,
+                options: ['4 years', '5 years', '6 years', '7 year'],
+                correct: 2,
+                explanation: `The correct answer is 6 years.`,
+            },
+            {
+                question: `The electrified Broad Gauge route on Indian Railway (including DFCCIL) as on 31.03.2026 is ________ km.`,
+                options: ['65,510 km', '67,230 km', '68,439 km', '69,873 km'],
+                correct: 3,
+                explanation: `The correct answer is 69,873 km.`,
+            },
+            {
+                question: `In coaching operations, which is not true about HOG technology?`,
+                options: ['It increases passenger carrying capacity of a train', 'It reduces consumption of diesel for electricity generation', 'It imporoves braking characteristics of loco', 'It reduces requirement of power car'],
+                correct: 2,
+                explanation: `The correct answer is It imporoves braking characteristics of loco.`,
+            },
+            {
+                question: `What is the duration of concession agreement between private container train operators and Indian Railways?`,
+                options: ['5 years', '10 years', '15 years', '20 years'],
+                correct: 3,
+                explanation: `The correct answer is 20 years.`,
+            },
+            {
+                question: `According to the Disaster Management Plan, which is the nodal department for rescue centric training of railway personnel?`,
+                options: ['Engineering Department', 'Mechanical Department', 'Traffic Department', 'Safety Department'],
+                correct: 1,
+                explanation: `The correct answer is Mechanical Department.`,
+            },
+            {
+                question: `If siding owner installs an EIMWB at his own cost, how much extra free time for weighment will be admissible to him?`,
+                options: ['30 minutes', '1 hour', '2 hours', 'No extra free time'],
+                correct: 3,
+                explanation: `The correct answer is No extra free time.`,
+            },
+            {
+                question: `Which is NOT a function of Control Office?`,
+                options: ['Report accident to divisional officers', 'Permit engineering blocks', 'Registration of indents for loading', 'Movement of wagons for unloading'],
+                correct: 2,
+                explanation: `The correct answer is Registration of indents for loading.`,
+            },
+            {
+                question: `Horizontal distance from center of track to signal post, OHE mast etc, is known as ________`,
+                options: ['Gross clearance', 'Implantation', 'Overlap', 'Stagger'],
+                correct: 1,
+                explanation: `The correct answer is Implantation.`,
+            },
+            {
+                question: `Which member of the Railway Board is responsible for compilation of operating and other types of railway statistics?`,
+                options: ['Member, Operations and Business Development', 'Member, Infrastructure', 'Member, Traction and Rolling Stock', 'Member, Finance'],
+                correct: 3,
+                explanation: `The correct answer is Member, Finance.`,
+            },
+            {
+                question: `The target time for turning out ARMV from the sounding of the siren is ________ minutes.`,
+                options: ['10', '15', '20', '25'],
+                correct: 2,
+                explanation: `The correct answer is 20 minutes.`,
+            },
+            {
+                question: `Which of the following is a standard composition of freight rake?`,
+                options: ['32 BTPGLN', '35 BCNA', '35 BLCA or BLCB', '58 BRN'],
+                correct: 0,
+                explanation: `The correct answer is 32 BTPGLN.`,
+            },
+            {
+                question: `According to Schedule of Dimensions, 2022, what is the minimum center to center distance between two adjacent straight track in case of new works?`,
+                options: ['4265 mm', '4675 mm', '4750 mm', '5300 mm'],
+                correct: 3,
+                explanation: `The correct answer is 5300 mm.`,
+            },
+            {
+                question: `In the context of planning, what is IRPSM?`,
+                options: ['Indian Railways Projects Sanctioned and Management', 'Indian Railway Planning System Module', 'Integrated Railway Planning System and Monitoring', 'None of the above'],
+                correct: 0,
+                explanation: `The correct answer is Indian Railways Projects Sanctioned and Management.`,
+            },
+            {
+                question: `Which of the following is a GPS based tracking system used by Control Office for tracking locomotives?`,
+                options: ['COA', 'RTIS', 'SATSANG', 'SFOORTI'],
+                correct: 1,
+                explanation: `The correct answer is RTIS.`,
+            },
+            {
+                question: `According to GR 5.13(3), the speed during shunting operations shall not exceed ________ km/h unless otherwise authorized by special instructions?`,
+                options: ['10 km/h', '15 km/h', '20 km/h', '25 km/h'],
+                correct: 1,
+                explanation: `The correct answer is 15 km/h.`,
+            },
+            {
+                question: `Which of the following commodities has the highest classification rate?`,
+                options: ['Cement', 'Coal', 'Fertilizers', 'POL'],
+                correct: 3,
+                explanation: `The correct answer is POL.`,
+            },
+            {
+                question: `In a division having diesel and electric loco operation, Control Office can prepare loco outage based on ________`,
+                options: ['Type of traction', 'Type of service', 'Home shed', 'All of the above'],
+                correct: 3,
+                explanation: `The correct answer is All of the above.`,
+            },
+            {
+                question: `In the context of FOIS, what is FNR?`,
+                options: ['Freight Number Record', 'Freight Name Record', 'Freight Notice Record', 'Freight Number Receipt'],
+                correct: 0,
+                explanation: `The correct answer is Freight Number Record.`,
+            },
+            {
+                question: `According to the Disaster Management Plan, who is the Chairperson of the National Crisis Management Committee?`,
+                options: ['Prime Minister', 'Home Minister', 'Cabinet Secretary', 'Home Secretary'],
+                correct: 2,
+                explanation: `The correct answer is Cabinet Secretary.`,
+            },
+            {
+                question: `What is ESP?`,
+                options: ['Emergency Safety Plan', 'Engineering Scale Plan', 'Engineering Signal Plan', 'Emergency Service Plan'],
+                correct: 1,
+                explanation: `The correct answer is Engineering Scale Plan.`,
+            },
+            {
+                question: `At an intermediate station with MACLS on double line, what is the adequate distance beyond the starter that must be kept clear for taking OFF the Home signal?`,
+                options: ['120 m', '180 m', '300 m', '400 m'],
+                correct: 0,
+                explanation: `The correct answer is 120 m.`,
+            },
+            {
+                question: `According to RPC-4, what is the validity limit of Mail/Express train with LHB rake with round trip BPC?`,
+                options: ['3500 km', '4000 km', '4500 km', '5000 km'],
+                correct: 1,
+                explanation: `The correct answer is 4000 km.`,
+            },
+            {
+                question: `In case of absolute block system, can calling on signal be placed below the LSS?`,
+                options: ['Yes', 'No', 'Yes, but with special instructions', 'No, but with approved special instructions'],
+                correct: 1,
+                explanation: `The correct answer is No.`,
+            },
+            {
+                question: `In MACLS territory, goods warning board to warn the Loco Pilot of approaching a stop signal is provided at a distance of ________ in rear of the First stop signal of a station`,
+                options: ['1200 m', '1300 m', '1400 m', '1500 m'],
+                correct: 2,
+                explanation: `The correct answer is 1400 m.`,
+            },
+            {
+                question: `According to the Preferential Traffic Order, levy sugar for PDS sponsored by FCI is under ________ priority?`,
+                options: ['A', 'B', 'C', 'D'],
+                correct: 1,
+                explanation: `The correct answer is B.`,
+            },
+            {
+                question: `Expand POMKA`,
+                options: ['Positive Medical Knowledge Application', 'Portable Mechanical Kit for Air-springs', 'Power Management Knowledge Application', 'Portable Medical Kit for Accident'],
+                correct: 3,
+                explanation: `The correct answer is Portable Medical Kit for Accident.`,
+            },
+            {
+                question: `According to GR 3.32(2), on a BSLB the words "Block Section Limit" should face ________`,
+                options: ['The direction of the station', 'The direction of the block section', 'The adjacent line', 'None of the above'],
+                correct: 0,
+                explanation: `The correct answer is The direction of the station.`,
+            },
+            {
+                question: `For freight traffic, the issue of RR is mandated by section ________ of the Railway Act, 1989`,
+                options: ['64', '65', '66', '67'],
+                correct: 1,
+                explanation: `The correct answer is 65.`,
+            },
+            {
+                question: `When a train carrying passengers has been brought to a stand at a station, the Loco Pilot shall not move it except ________`,
+                options: ['Under orders of the Guard', 'To avert an accident', 'Under orders of the Guard or to avert an accident', 'To maintain punctuality'],
+                correct: 2,
+                explanation: `The correct answer is Under orders of the Guard or to avert an accident.`,
+            },
+            {
+                question: `According to G&SR, when a shunt signal is provided on the same post as the stop signal, what will be its aspect in ON position?`,
+                options: ['It will be blank', 'Two horizontal white lights', 'Two horizontal yellow lights', 'Two diagonal white lights'],
+                correct: 0,
+                explanation: `The correct answer is It will be blank.`,
+            },
+            {
+                question: `A fixed signal can be placed on the right side of the line to which it refers with ________`,
+                options: ['Approval of DRM', 'Approval of GM', 'Special instructions', 'Approved special instructions'],
+                correct: 2,
+                explanation: `The correct answer is Special instructions.`,
+            },
+            {
+                question: `The Freight Yield per Nett Tonne Kiometer (in paise) of Indian Railway for 2024-25 was ________`,
+                options: ['170.31', '173.34', '175.31', '178.34'],
+                correct: 1,
+                explanation: `The correct answer is 173.34.`,
+            },
+            {
+                question: `Last Vehicle Verification (LVV) is ________ at stations with centralized operation if the speed of the train is up to 110 km/h?`,
+                options: ['Not required', 'Required', 'desirable', 'Not compulsory'],
+                correct: 1,
+                explanation: `The correct answer is Required.`,
+            },
+            {
+                question: `For operation of Track machine during traffic block under GR 4.65
+                (A) Adequate distance of 200 m to be maintained between each track machine while moving i a convoy.
+                (B) First track machine while movin in convoy in traffic block shall move with maximum permissible speed and following track machines in convoy shall move with the speed of 40 kmph or lowest maximum permissible speed in the group whichever is lower duly following TSR/PSR in section.`,
+                options: ['A is correct', 'B is correct', 'Both A and B are correct', 'Both A and B are incorrect'],
+                correct: 1,
+                explanation: `The correct answer is B is correct.`,
+            },
+            {
+                question: `The sanctioning authority in case of combination of  colour light double distant signaling with Intermediate Block signalling in section alongwith corresponding changes at adjacent stations without yard modelling is ________`,
+                options: ['CRS', 'GM', 'PCOM', 'PCSTE'],
+                correct: 1,
+                explanation: `The correct answer is GM.`,
+            },
+            {
+                question: `The shortest section of OHE that can be isolated remotely is ________`,
+                options: ['Elementary section', 'Neutral section', 'Sector', 'Sub sector'],
+                correct: 3,
+                explanation: `The correct answer is Sub sector.`,
+            },
+            
+            
+        ]
+    }
+}

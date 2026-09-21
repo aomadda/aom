@@ -216,6 +216,366 @@ export const searchTopics: SearchTopic[] = [
       "aom tests gk rajabhasha test 05 AOM GK Rajabhasha Test 05 paper mock Hindi",
   },
   {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test06",
+    title: "AOM GK & Rajabhasha Test 06",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 06 AOM GK Rajabhasha Test 06 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test07",
+    title: "AOM GK & Rajabhasha Test 07",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 07 AOM GK Rajabhasha Test 07 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test08",
+    title: "AOM GK & Rajabhasha Test 08",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 08 AOM GK Rajabhasha Test 08 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test09",
+    title: "AOM GK & Rajabhasha Test 09",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 09 AOM GK Rajabhasha Test 09 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test10",
+    title: "AOM GK & Rajabhasha Test 10",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 10 AOM GK Rajabhasha Test 10 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test11",
+    title: "AOM GK & Rajabhasha Test 11",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 11 AOM GK Rajabhasha Test 11 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test12",
+    title: "AOM GK & Rajabhasha Test 12",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 12 AOM GK Rajabhasha Test 12 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test13",
+    title: "AOM GK & Rajabhasha Test 13",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 13 AOM GK Rajabhasha Test 13 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test14",
+    title: "AOM GK & Rajabhasha Test 14",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 14 AOM GK Rajabhasha Test 14 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test15",
+    title: "AOM GK & Rajabhasha Test 15",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 15 AOM GK Rajabhasha Test 15 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test16",
+    title: "AOM GK & Rajabhasha Test 16",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 16 AOM GK Rajabhasha Test 16 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test17",
+    title: "AOM GK & Rajabhasha Test 17",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 17 AOM GK Rajabhasha Test 17 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test18",
+    title: "AOM GK & Rajabhasha Test 18",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 18 AOM GK Rajabhasha Test 18 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test19",
+    title: "AOM GK & Rajabhasha Test 19",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 19 AOM GK Rajabhasha Test 19 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test20",
+    title: "AOM GK & Rajabhasha Test 20",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 20 AOM GK Rajabhasha Test 20 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test21",
+    title: "AOM GK & Rajabhasha Test 21",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 21 AOM GK Rajabhasha Test 21 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test22",
+    title: "AOM GK & Rajabhasha Test 22",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 22 AOM GK Rajabhasha Test 22 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test23",
+    title: "AOM GK & Rajabhasha Test 23",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 23 AOM GK Rajabhasha Test 23 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test24",
+    title: "AOM GK & Rajabhasha Test 24",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 24 AOM GK Rajabhasha Test 24 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test25",
+    title: "AOM GK & Rajabhasha Test 25",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 25 AOM GK Rajabhasha Test 25 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test26",
+    title: "AOM GK & Rajabhasha Test 26",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 26 AOM GK Rajabhasha Test 26 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test27",
+    title: "AOM GK & Rajabhasha Test 27",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 27 AOM GK Rajabhasha Test 27 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test28",
+    title: "AOM GK & Rajabhasha Test 28",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 28 AOM GK Rajabhasha Test 28 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test29",
+    title: "AOM GK & Rajabhasha Test 29",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 29 AOM GK Rajabhasha Test 29 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test30",
+    title: "AOM GK & Rajabhasha Test 30",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 30 AOM GK Rajabhasha Test 30 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test31",
+    title: "AOM GK & Rajabhasha Test 31",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 31 AOM GK Rajabhasha Test 31 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test32",
+    title: "AOM GK & Rajabhasha Test 32",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 32 AOM GK Rajabhasha Test 32 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test33",
+    title: "AOM GK & Rajabhasha Test 33",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 33 AOM GK Rajabhasha Test 33 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test34",
+    title: "AOM GK & Rajabhasha Test 34",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 34 AOM GK Rajabhasha Test 34 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test35",
+    title: "AOM GK & Rajabhasha Test 35",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 35 AOM GK Rajabhasha Test 35 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test36",
+    title: "AOM GK & Rajabhasha Test 36",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 36 AOM GK Rajabhasha Test 36 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test37",
+    title: "AOM GK & Rajabhasha Test 37",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 37 AOM GK Rajabhasha Test 37 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test38",
+    title: "AOM GK & Rajabhasha Test 38",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 38 AOM GK Rajabhasha Test 38 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test39",
+    title: "AOM GK & Rajabhasha Test 39",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 39 AOM GK Rajabhasha Test 39 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test40",
+    title: "AOM GK & Rajabhasha Test 40",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 40 AOM GK Rajabhasha Test 40 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test41",
+    title: "AOM GK & Rajabhasha Test 41",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 41 AOM GK Rajabhasha Test 41 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test42",
+    title: "AOM GK & Rajabhasha Test 42",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 42 AOM GK Rajabhasha Test 42 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test43",
+    title: "AOM GK & Rajabhasha Test 43",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 43 AOM GK Rajabhasha Test 43 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test44",
+    title: "AOM GK & Rajabhasha Test 44",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 44 AOM GK Rajabhasha Test 44 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test45",
+    title: "AOM GK & Rajabhasha Test 45",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 45 AOM GK Rajabhasha Test 45 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test46",
+    title: "AOM GK & Rajabhasha Test 46",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 46 AOM GK Rajabhasha Test 46 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test47",
+    title: "AOM GK & Rajabhasha Test 47",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 47 AOM GK Rajabhasha Test 47 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test48",
+    title: "AOM GK & Rajabhasha Test 48",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 48 AOM GK Rajabhasha Test 48 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test49",
+    title: "AOM GK & Rajabhasha Test 49",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 49 AOM GK Rajabhasha Test 49 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test50",
+    title: "AOM GK & Rajabhasha Test 50",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM GK & Rajabhasha Tests",
+    keywords:
+      "aom tests gk rajabhasha test 50 AOM GK Rajabhasha Test 50 paper mock Hindi",
+  },
+  {
     href: "/aom-tests/aom-practice-tests",
     title: "AOM Practice Tests",
     category: "AOM Tests",
@@ -405,6 +765,231 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "aom tests professional subject test 22 AOM Professional Subject Test 22 paper mock operating G&SR signalling CTRB",
   },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test23",
+    title: "AOM Professional Subject Test 23",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 23 AOM Professional Subject Test 23 paper mock operating G&SR signalling authority to proceed rolling block GCT height gauge",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test24",
+    title: "AOM Professional Subject Test 24",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 24 AOM Professional Subject Test 24 paper mock operating G&SR signalling KAVACH T/509 weighbridge GCTO Vande Bharat",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test25",
+    title: "AOM Professional Subject Test 25",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 25 AOM Professional Subject Test 25 paper mock operating G&SR signalling DFC COIS PAM CADAT EOTT ODC",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test26",
+    title: "AOM Professional Subject Test 26",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 26 AOM Professional Subject Test 26 paper mock operating G&SR signalling RTIS Rail Sugam PDD WTR COA loco outage mini rake ODC",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test27",
+    title: "AOM Professional Subject Test 27",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 27 AOM Professional Subject Test 27 paper mock operating G&SR signalling BSLB marshalling yard CMS MILRAIL calling-on shunt signal",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test28",
+    title: "AOM Professional Subject Test 28",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 28 AOM Professional Subject Test 28 paper mock operating G&SR signalling time table CRS isolation coal priority hand signal",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test29",
+    title: "AOM Professional Subject Test 29",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 29 AOM Professional Subject Test 29 paper mock operating G&SR signalling BOSTHS CCRS rationalization POL PH 33 derailing switch",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test30",
+    title: "AOM Professional Subject Test 30",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 30 AOM Professional Subject Test 30 paper mock operating G&SR signalling CAMTECH ICMS ART fog loco outage WAG-9H disaster",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test31",
+    title: "AOM Professional Subject Test 31",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 31 AOM Professional Subject Test 31 paper mock operating G&SR signalling CRS Railway Act eDAS alarm chain tail lamp",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test32",
+    title: "AOM Professional Subject Test 32",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 32 AOM Professional Subject Test 32 paper mock operating G&SR signalling wagon census WAP4 speedometer MPS 11 digit",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test33",
+    title: "AOM Professional Subject Test 33",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 33 AOM Professional Subject Test 33 paper mock operating G&SR signalling FOIS revenue freight stacking ODC clearance",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test34",
+    title: "AOM Professional Subject Test 34",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 34 AOM Professional Subject Test 34 paper mock operating G&SR signalling GCTO level crossing WTR speedometer",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test35",
+    title: "AOM Professional Subject Test 35",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 35 AOM Professional Subject Test 35 paper mock operating G&SR signalling Lurch WILD RDSO axle load OHE T/A 1525",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test36",
+    title: "AOM Professional Subject Test 36",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 36 AOM Professional Subject Test 36 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test37",
+    title: "AOM Professional Subject Test 37",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 37 AOM Professional Subject Test 37 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test38",
+    title: "AOM Professional Subject Test 38",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 38 AOM Professional Subject Test 38 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test39",
+    title: "AOM Professional Subject Test 39",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 39 AOM Professional Subject Test 39 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test40",
+    title: "AOM Professional Subject Test 40",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 40 AOM Professional Subject Test 40 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test41",
+    title: "AOM Professional Subject Test 41",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 41 AOM Professional Subject Test 41 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test42",
+    title: "AOM Professional Subject Test 42",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 42 AOM Professional Subject Test 42 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test43",
+    title: "AOM Professional Subject Test 43",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 43 AOM Professional Subject Test 43 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test44",
+    title: "AOM Professional Subject Test 44",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 44 AOM Professional Subject Test 44 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test45",
+    title: "AOM Professional Subject Test 45",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 45 AOM Professional Subject Test 45 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test46",
+    title: "AOM Professional Subject Test 46",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 46 AOM Professional Subject Test 46 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test47",
+    title: "AOM Professional Subject Test 47",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 47 AOM Professional Subject Test 47 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test48",
+    title: "AOM Professional Subject Test 48",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 48 AOM Professional Subject Test 48 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test49",
+    title: "AOM Professional Subject Test 49",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 49 AOM Professional Subject Test 49 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+  {
+    href: "/aom-tests/aom-professional-subject-tests/aom-professional-subject-test50",
+    title: "AOM Professional Subject Test 50",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests professional subject test 50 AOM Professional Subject Test 50 paper mock operating G&SR signalling goods train average speed BG 2024-25",
+  },
+
   {
     href: "/topics/aom-special",
     title: "AOM Special",
@@ -1528,6 +2113,366 @@ export const searchTopics: SearchTopic[] = [
     parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
     keywords:
       "aom tests aom finance establishment rules tests test 05 AOM Finance & Establishment Rules Test 05 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test06",
+    title: "AOM Finance & Establishment Rules Test 06",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 06 AOM Finance & Establishment Rules Test 06 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test07",
+    title: "AOM Finance & Establishment Rules Test 07",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 07 AOM Finance & Establishment Rules Test 07 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test08",
+    title: "AOM Finance & Establishment Rules Test 08",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 08 AOM Finance & Establishment Rules Test 08 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test09",
+    title: "AOM Finance & Establishment Rules Test 09",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 09 AOM Finance & Establishment Rules Test 09 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test10",
+    title: "AOM Finance & Establishment Rules Test 10",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 10 AOM Finance & Establishment Rules Test 10 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test11",
+    title: "AOM Finance & Establishment Rules Test 11",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 11 AOM Finance & Establishment Rules Test 11 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test12",
+    title: "AOM Finance & Establishment Rules Test 12",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 12 AOM Finance & Establishment Rules Test 12 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test13",
+    title: "AOM Finance & Establishment Rules Test 13",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 13 AOM Finance & Establishment Rules Test 13 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test14",
+    title: "AOM Finance & Establishment Rules Test 14",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 14 AOM Finance & Establishment Rules Test 14 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test15",
+    title: "AOM Finance & Establishment Rules Test 15",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 15 AOM Finance & Establishment Rules Test 15 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test16",
+    title: "AOM Finance & Establishment Rules Test 16",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 16 AOM Finance & Establishment Rules Test 16 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test17",
+    title: "AOM Finance & Establishment Rules Test 17",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 17 AOM Finance & Establishment Rules Test 17 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test18",
+    title: "AOM Finance & Establishment Rules Test 18",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 18 AOM Finance & Establishment Rules Test 18 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test19",
+    title: "AOM Finance & Establishment Rules Test 19",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 19 AOM Finance & Establishment Rules Test 19 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test20",
+    title: "AOM Finance & Establishment Rules Test 20",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 20 AOM Finance & Establishment Rules Test 20 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test21",
+    title: "AOM Finance & Establishment Rules Test 21",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 21 AOM Finance & Establishment Rules Test 21 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test22",
+    title: "AOM Finance & Establishment Rules Test 22",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 22 AOM Finance & Establishment Rules Test 22 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test23",
+    title: "AOM Finance & Establishment Rules Test 23",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 23 AOM Finance & Establishment Rules Test 23 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test24",
+    title: "AOM Finance & Establishment Rules Test 24",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 24 AOM Finance & Establishment Rules Test 24 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test25",
+    title: "AOM Finance & Establishment Rules Test 25",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 25 AOM Finance & Establishment Rules Test 25 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test26",
+    title: "AOM Finance & Establishment Rules Test 26",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 26 AOM Finance & Establishment Rules Test 26 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test27",
+    title: "AOM Finance & Establishment Rules Test 27",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 27 AOM Finance & Establishment Rules Test 27 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test28",
+    title: "AOM Finance & Establishment Rules Test 28",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 28 AOM Finance & Establishment Rules Test 28 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test29",
+    title: "AOM Finance & Establishment Rules Test 29",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 29 AOM Finance & Establishment Rules Test 29 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test30",
+    title: "AOM Finance & Establishment Rules Test 30",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 30 AOM Finance & Establishment Rules Test 30 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test31",
+    title: "AOM Finance & Establishment Rules Test 31",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 31 AOM Finance & Establishment Rules Test 31 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test32",
+    title: "AOM Finance & Establishment Rules Test 32",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 32 AOM Finance & Establishment Rules Test 32 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test33",
+    title: "AOM Finance & Establishment Rules Test 33",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 33 AOM Finance & Establishment Rules Test 33 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test34",
+    title: "AOM Finance & Establishment Rules Test 34",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 34 AOM Finance & Establishment Rules Test 34 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test35",
+    title: "AOM Finance & Establishment Rules Test 35",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 35 AOM Finance & Establishment Rules Test 35 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test36",
+    title: "AOM Finance & Establishment Rules Test 36",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 36 AOM Finance & Establishment Rules Test 36 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test37",
+    title: "AOM Finance & Establishment Rules Test 37",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 37 AOM Finance & Establishment Rules Test 37 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test38",
+    title: "AOM Finance & Establishment Rules Test 38",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 38 AOM Finance & Establishment Rules Test 38 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test39",
+    title: "AOM Finance & Establishment Rules Test 39",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 39 AOM Finance & Establishment Rules Test 39 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test40",
+    title: "AOM Finance & Establishment Rules Test 40",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 40 AOM Finance & Establishment Rules Test 40 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test41",
+    title: "AOM Finance & Establishment Rules Test 41",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 41 AOM Finance & Establishment Rules Test 41 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test42",
+    title: "AOM Finance & Establishment Rules Test 42",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 42 AOM Finance & Establishment Rules Test 42 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test43",
+    title: "AOM Finance & Establishment Rules Test 43",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 43 AOM Finance & Establishment Rules Test 43 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test44",
+    title: "AOM Finance & Establishment Rules Test 44",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 44 AOM Finance & Establishment Rules Test 44 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test45",
+    title: "AOM Finance & Establishment Rules Test 45",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 45 AOM Finance & Establishment Rules Test 45 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test46",
+    title: "AOM Finance & Establishment Rules Test 46",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 46 AOM Finance & Establishment Rules Test 46 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test47",
+    title: "AOM Finance & Establishment Rules Test 47",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 47 AOM Finance & Establishment Rules Test 47 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test48",
+    title: "AOM Finance & Establishment Rules Test 48",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 48 AOM Finance & Establishment Rules Test 48 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test49",
+    title: "AOM Finance & Establishment Rules Test 49",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 49 AOM Finance & Establishment Rules Test 49 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test50",
+    title: "AOM Finance & Establishment Rules Test 50",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 50 AOM Finance & Establishment Rules Test 50 paper mock",
   },
   {
     href: "/quizzes/financial-rules",

@@ -1,9 +1,21 @@
-import React from 'react'
+'use client'
 
-const AOMGKRajabhashaTest03Page = () => {
+import { aomGkRajabhashaTest03 } from '@/assets/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test-03'
+import AomExamTest from '@/components/aom-tests/AomExamTest'
+
+const QUIZ_ID = 'aom-gk-rajabhasha-test-03'
+
+export default function AOMGKRajabhashaTest03Page() {
+  const questions = aomGkRajabhashaTest03.test[QUIZ_ID] ?? []
+
   return (
-    <div>AOM GK Rajabhasha Test 03 Page</div>
+    <AomExamTest
+      title="AOM GK & Rajabhasha Test 03"
+      categoryId="aom-gk-rajabhasha-tests"
+      quizId={QUIZ_ID}
+      questions={questions}
+      backHref="/aom-tests/aom-gk-rajabhasha-tests"
+      backLabel="Back to AOM GK & Rajabhasha Tests"
+    />
   )
 }
-
-export default AOMGKRajabhashaTest03Page

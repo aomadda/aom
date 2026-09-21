@@ -181,6 +181,230 @@ const tests = [
     description:
       'Practice paper 22 on operating, G&SR, manuals, and signalling for the AOM examination',
   },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test23',
+    title: 'AOM Professional Subject Test 23',
+    icon: '📒',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 23 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test24',
+    title: 'AOM Professional Subject Test 24',
+    icon: '📙',
+    color: 'from-indigo-500 to-fuchsia-600',
+    description:
+      'Practice paper 24 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test25',
+    title: 'AOM Professional Subject Test 25',
+    icon: '📕',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 25 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test26',
+    title: 'AOM Professional Subject Test 26',
+    icon: '📔',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 26 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test27',
+    title: 'AOM Professional Subject Test 27',
+    icon: '📓',
+    color: 'from-indigo-600 to-fuchsia-500',
+    description:
+      'Practice paper 27 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test28',
+    title: 'AOM Professional Subject Test 28',
+    icon: '📗',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 28 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test29',
+    title: 'AOM Professional Subject Test 29',
+    icon: '📒',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 29 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test30',
+    title: 'AOM Professional Subject Test 30',
+    icon: '📙',
+    color: 'from-indigo-500 to-fuchsia-600',
+    description:
+      'Practice paper 30 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test31',
+    title: 'AOM Professional Subject Test 31',
+    icon: '📕',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 31 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test32',
+    title: 'AOM Professional Subject Test 32',
+    icon: '📔',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 32 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test33',
+    title: 'AOM Professional Subject Test 33',
+    icon: '📓',
+    color: 'from-indigo-600 to-violet-500',
+    description:
+      'Practice paper 33 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test34',
+    title: 'AOM Professional Subject Test 34',
+    icon: '📗',
+    color: 'from-violet-500 to-fuchsia-600',
+    description:
+      'Practice paper 34 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test35',
+    title: 'AOM Professional Subject Test 35',
+    icon: '📒',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 35 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test36',
+    title: 'AOM Professional Subject Test 36',
+    icon: '📙',
+    color: 'from-indigo-500 to-fuchsia-600',
+    description:
+      'Practice paper 36 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test37',
+    title: 'AOM Professional Subject Test 37',
+    icon: '📕',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 37 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test38',
+    title: 'AOM Professional Subject Test 38',
+    icon: '📔',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 38 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test39',
+    title: 'AOM Professional Subject Test 39',
+    icon: '📓',
+    color: 'from-indigo-600 to-fuchsia-500',
+    description:
+      'Practice paper 39 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test40',
+    title: 'AOM Professional Subject Test 40',
+    icon: '📗',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 40 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test41',
+    title: 'AOM Professional Subject Test 41',
+    icon: '📒',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 41 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test42',
+    title: 'AOM Professional Subject Test 42',
+    icon: '📙',
+    color: 'from-indigo-500 to-fuchsia-600',
+    description:
+      'Practice paper 42 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test43',
+    title: 'AOM Professional Subject Test 43',
+    icon: '📕',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 43 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test44',
+    title: 'AOM Professional Subject Test 44',
+    icon: '📔',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 44 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test45',
+    title: 'AOM Professional Subject Test 45',
+    icon: '📓',
+    color: 'from-indigo-600 to-violet-500',
+    description:
+      'Practice paper 45 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test46',
+    title: 'AOM Professional Subject Test 46',
+    icon: '📗',
+    color: 'from-violet-500 to-fuchsia-600',
+    description:
+      'Practice paper 46 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test47',
+    title: 'AOM Professional Subject Test 47',
+    icon: '📒',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 47 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test48',
+    title: 'AOM Professional Subject Test 48',
+    icon: '📙',
+    color: 'from-indigo-500 to-fuchsia-600',
+    description:
+      'Practice paper 48 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test49',
+    title: 'AOM Professional Subject Test 49',
+    icon: '📕',
+    color: 'from-fuchsia-500 to-violet-600',
+    description:
+      'Practice paper 49 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-professional-subject-tests/aom-professional-subject-test50',
+    title: 'AOM Professional Subject Test 50',
+    icon: '📔',
+    color: 'from-purple-500 to-indigo-600',
+    description:
+      'Practice paper 50 on operating, G&SR, manuals, and signalling for the AOM examination',
+  },
 ]
 
 const ProfessionalSubjectPage = () => {

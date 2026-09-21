@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const tests = [
   {
-    href: '/aom-tests/finance-establishment-rules/aom-finance-establishment-rules-test01',
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test01',
     title: 'Finance & Establishment Rules Test 01',
     icon: '💰',
     color: 'from-emerald-500 to-teal-600',
@@ -14,7 +14,7 @@ const tests = [
       'Practice paper 1 on finance, accounts, tenders, and establishment rules for the AOM examination',
   },
   {
-    href: '/aom-tests/finance-establishment-rules/aom-finance-establishment-rules-test02',
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test02',
     title: 'Finance & Establishment Rules Test 02',
     icon: '📊',
     color: 'from-teal-500 to-cyan-600',
@@ -22,7 +22,7 @@ const tests = [
       'Practice paper 2 on finance, accounts, tenders, and establishment rules for the AOM examination',
   },
   {
-    href: '/aom-tests/finance-establishment-rules/aom-finance-establishment-rules-test03',
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test03',
     title: 'Finance & Establishment Rules Test 03',
     icon: '🧾',
     color: 'from-green-500 to-emerald-600',
@@ -30,7 +30,7 @@ const tests = [
       'Practice paper 3 on finance, accounts, tenders, and establishment rules for the AOM examination',
   },
   {
-    href: '/aom-tests/finance-establishment-rules/aom-finance-establishment-rules-test04',
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test04',
     title: 'Finance & Establishment Rules Test 04',
     icon: '📋',
     color: 'from-lime-500 to-green-600',
@@ -38,12 +38,372 @@ const tests = [
       'Practice paper 4 on finance, accounts, tenders, and establishment rules for the AOM examination',
   },
   {
-    href: '/aom-tests/finance-establishment-rules/aom-finance-establishment-rules-test05',
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test05',
     title: 'Finance & Establishment Rules Test 05',
     icon: '🏦',
     color: 'from-cyan-500 to-teal-600',
     description:
       'Practice paper 5 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test06',
+    title: 'Finance & Establishment Rules Test 06',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 6 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test07',
+    title: 'Finance & Establishment Rules Test 07',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 7 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test08',
+    title: 'Finance & Establishment Rules Test 08',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 8 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test09',
+    title: 'Finance & Establishment Rules Test 09',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 9 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test10',
+    title: 'Finance & Establishment Rules Test 10',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 10 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test11',
+    title: 'Finance & Establishment Rules Test 11',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 11 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test12',
+    title: 'Finance & Establishment Rules Test 12',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 12 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test13',
+    title: 'Finance & Establishment Rules Test 13',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 13 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test14',
+    title: 'Finance & Establishment Rules Test 14',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 14 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test15',
+    title: 'Finance & Establishment Rules Test 15',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 15 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test16',
+    title: 'Finance & Establishment Rules Test 16',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 16 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test17',
+    title: 'Finance & Establishment Rules Test 17',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 17 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test18',
+    title: 'Finance & Establishment Rules Test 18',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 18 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test19',
+    title: 'Finance & Establishment Rules Test 19',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 19 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test20',
+    title: 'Finance & Establishment Rules Test 20',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 20 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test21',
+    title: 'Finance & Establishment Rules Test 21',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 21 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test22',
+    title: 'Finance & Establishment Rules Test 22',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 22 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test23',
+    title: 'Finance & Establishment Rules Test 23',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 23 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test24',
+    title: 'Finance & Establishment Rules Test 24',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 24 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test25',
+    title: 'Finance & Establishment Rules Test 25',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 25 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test26',
+    title: 'Finance & Establishment Rules Test 26',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 26 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test27',
+    title: 'Finance & Establishment Rules Test 27',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 27 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test28',
+    title: 'Finance & Establishment Rules Test 28',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 28 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test29',
+    title: 'Finance & Establishment Rules Test 29',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 29 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test30',
+    title: 'Finance & Establishment Rules Test 30',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 30 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test31',
+    title: 'Finance & Establishment Rules Test 31',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 31 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test32',
+    title: 'Finance & Establishment Rules Test 32',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 32 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test33',
+    title: 'Finance & Establishment Rules Test 33',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 33 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test34',
+    title: 'Finance & Establishment Rules Test 34',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 34 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test35',
+    title: 'Finance & Establishment Rules Test 35',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 35 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test36',
+    title: 'Finance & Establishment Rules Test 36',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 36 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test37',
+    title: 'Finance & Establishment Rules Test 37',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 37 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test38',
+    title: 'Finance & Establishment Rules Test 38',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 38 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test39',
+    title: 'Finance & Establishment Rules Test 39',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 39 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test40',
+    title: 'Finance & Establishment Rules Test 40',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 40 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test41',
+    title: 'Finance & Establishment Rules Test 41',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 41 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test42',
+    title: 'Finance & Establishment Rules Test 42',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 42 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test43',
+    title: 'Finance & Establishment Rules Test 43',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 43 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test44',
+    title: 'Finance & Establishment Rules Test 44',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 44 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test45',
+    title: 'Finance & Establishment Rules Test 45',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 45 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test46',
+    title: 'Finance & Establishment Rules Test 46',
+    icon: '💰',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice paper 46 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test47',
+    title: 'Finance & Establishment Rules Test 47',
+    icon: '📊',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice paper 47 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test48',
+    title: 'Finance & Establishment Rules Test 48',
+    icon: '🧾',
+    color: 'from-green-500 to-emerald-600',
+    description:
+      'Practice paper 48 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test49',
+    title: 'Finance & Establishment Rules Test 49',
+    icon: '📋',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice paper 49 on finance, accounts, tenders, and establishment rules for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test50',
+    title: 'Finance & Establishment Rules Test 50',
+    icon: '🏦',
+    color: 'from-cyan-500 to-teal-600',
+    description:
+      'Practice paper 50 on finance, accounts, tenders, and establishment rules for the AOM examination',
   },
 ]
 

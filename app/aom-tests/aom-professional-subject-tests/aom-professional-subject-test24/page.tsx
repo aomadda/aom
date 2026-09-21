@@ -1,11 +1,21 @@
-import React from 'react'
+'use client'
 
-const AomProfessionalSubjectTest24Page = () => {
+import { aomProfessionalSubjectTest24 } from '@/assets/aom-tests/aom-professional-subject-tests/aom-professional-subject-test24'
+import AomExamTest from '@/components/aom-tests/AomExamTest'
+
+const QUIZ_ID = 'aom-professional-subject-test-24'
+
+export default function AOMProfessionalSubjectTest24Page() {
+  const questions = aomProfessionalSubjectTest24.tests[QUIZ_ID] ?? []
+
   return (
-    <div>
-        <h1>AOM Professional Subject Test 24</h1>
-    </div>
+    <AomExamTest
+      title="AOM Professional Subject Test 24"
+      categoryId="aom-professional-subject-tests"
+      quizId={QUIZ_ID}
+      questions={questions}
+      backHref="/aom-tests/aom-professional-subject-tests"
+      backLabel="Back to AOM Professional Subject Tests"
+    />
   )
 }
-
-export default AomProfessionalSubjectTest24Page

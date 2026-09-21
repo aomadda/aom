@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const tests = [
   {
-    href: '/aom-tests/gk-rajabhasha/aom-gk-rajabhasha-test01',
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test01',
     title: 'AOM GK & Rajabhasha Test 01',
     icon: '🌐',
     color: 'from-sky-500 to-indigo-600',
@@ -14,7 +14,7 @@ const tests = [
       'Practice paper 1 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
   },
   {
-    href: '/aom-tests/gk-rajabhasha/aom-gk-rajabhasha-test02',
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test02',
     title: 'AOM GK & Rajabhasha Test 02',
     icon: '🧠',
     color: 'from-indigo-500 to-blue-600',
@@ -22,7 +22,7 @@ const tests = [
       'Practice paper 2 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
   },
   {
-    href: '/aom-tests/gk-rajabhasha/aom-gk-rajabhasha-test03',
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test03',
     title: 'AOM GK & Rajabhasha Test 03',
     icon: '🇮🇳',
     color: 'from-blue-500 to-sky-600',
@@ -30,7 +30,7 @@ const tests = [
       'Practice paper 3 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
   },
   {
-    href: '/aom-tests/gk-rajabhasha/aom-gk-rajabhasha-test04',
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test04',
     title: 'AOM GK & Rajabhasha Test 04',
     icon: '📰',
     color: 'from-cyan-500 to-indigo-600',
@@ -38,12 +38,372 @@ const tests = [
       'Practice paper 4 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
   },
   {
-    href: '/aom-tests/gk-rajabhasha/aom-gk-rajabhasha-test05',
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test05',
     title: 'AOM GK & Rajabhasha Test 05',
     icon: '🗣️',
     color: 'from-violet-500 to-indigo-600',
     description:
       'Practice paper 5 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test06',
+    title: 'AOM GK & Rajabhasha Test 06',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 6 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test07',
+    title: 'AOM GK & Rajabhasha Test 07',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 7 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test08',
+    title: 'AOM GK & Rajabhasha Test 08',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 8 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test09',
+    title: 'AOM GK & Rajabhasha Test 09',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 9 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test10',
+    title: 'AOM GK & Rajabhasha Test 10',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 10 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test11',
+    title: 'AOM GK & Rajabhasha Test 11',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 11 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test12',
+    title: 'AOM GK & Rajabhasha Test 12',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 12 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test13',
+    title: 'AOM GK & Rajabhasha Test 13',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 13 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test14',
+    title: 'AOM GK & Rajabhasha Test 14',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 14 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test15',
+    title: 'AOM GK & Rajabhasha Test 15',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 15 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test16',
+    title: 'AOM GK & Rajabhasha Test 16',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 16 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test17',
+    title: 'AOM GK & Rajabhasha Test 17',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 17 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test18',
+    title: 'AOM GK & Rajabhasha Test 18',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 18 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test19',
+    title: 'AOM GK & Rajabhasha Test 19',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 19 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test20',
+    title: 'AOM GK & Rajabhasha Test 20',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 20 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test21',
+    title: 'AOM GK & Rajabhasha Test 21',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 21 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test22',
+    title: 'AOM GK & Rajabhasha Test 22',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 22 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test23',
+    title: 'AOM GK & Rajabhasha Test 23',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 23 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test24',
+    title: 'AOM GK & Rajabhasha Test 24',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 24 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test25',
+    title: 'AOM GK & Rajabhasha Test 25',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 25 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test26',
+    title: 'AOM GK & Rajabhasha Test 26',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 26 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test27',
+    title: 'AOM GK & Rajabhasha Test 27',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 27 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test28',
+    title: 'AOM GK & Rajabhasha Test 28',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 28 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test29',
+    title: 'AOM GK & Rajabhasha Test 29',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 29 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test30',
+    title: 'AOM GK & Rajabhasha Test 30',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 30 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test31',
+    title: 'AOM GK & Rajabhasha Test 31',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 31 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test32',
+    title: 'AOM GK & Rajabhasha Test 32',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 32 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test33',
+    title: 'AOM GK & Rajabhasha Test 33',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 33 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test34',
+    title: 'AOM GK & Rajabhasha Test 34',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 34 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test35',
+    title: 'AOM GK & Rajabhasha Test 35',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 35 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test36',
+    title: 'AOM GK & Rajabhasha Test 36',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 36 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test37',
+    title: 'AOM GK & Rajabhasha Test 37',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 37 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test38',
+    title: 'AOM GK & Rajabhasha Test 38',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 38 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test39',
+    title: 'AOM GK & Rajabhasha Test 39',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 39 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test40',
+    title: 'AOM GK & Rajabhasha Test 40',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 40 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test41',
+    title: 'AOM GK & Rajabhasha Test 41',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 41 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test42',
+    title: 'AOM GK & Rajabhasha Test 42',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 42 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test43',
+    title: 'AOM GK & Rajabhasha Test 43',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 43 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test44',
+    title: 'AOM GK & Rajabhasha Test 44',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 44 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test45',
+    title: 'AOM GK & Rajabhasha Test 45',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 45 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test46',
+    title: 'AOM GK & Rajabhasha Test 46',
+    icon: '🌐',
+    color: 'from-sky-500 to-indigo-600',
+    description:
+      'Practice paper 46 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test47',
+    title: 'AOM GK & Rajabhasha Test 47',
+    icon: '🧠',
+    color: 'from-indigo-500 to-blue-600',
+    description:
+      'Practice paper 47 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test48',
+    title: 'AOM GK & Rajabhasha Test 48',
+    icon: '🇮🇳',
+    color: 'from-blue-500 to-sky-600',
+    description:
+      'Practice paper 48 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test49',
+    title: 'AOM GK & Rajabhasha Test 49',
+    icon: '📰',
+    color: 'from-cyan-500 to-indigo-600',
+    description:
+      'Practice paper 49 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
+  },
+  {
+    href: '/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test50',
+    title: 'AOM GK & Rajabhasha Test 50',
+    icon: '🗣️',
+    color: 'from-violet-500 to-indigo-600',
+    description:
+      'Practice paper 50 on general knowledge, current affairs, and Rajabhasha for the AOM examination',
   },
 ]
 
