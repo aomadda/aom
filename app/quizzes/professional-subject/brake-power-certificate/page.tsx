@@ -1,9 +1,18 @@
-import React from 'react'
+'use client'
 
-const BrakePowerCertificatePage = () => {
+import { brakePowerCertificate } from '@/assets/quizzes/professional-subject/brake-power-certificate'
+import ProfessionalSubjectQuizPage from '@/components/quizzes/ProfessionalSubjectQuizPage'
+
+const QUIZ_ID = 'brake-power-certificate'
+
+export default function BrakePowerCertificateQuizPage() {
+  const questions = brakePowerCertificate[QUIZ_ID] ?? []
+
   return (
-    <div>BrakePowerCertificatePage</div>
+    <ProfessionalSubjectQuizPage
+      title="Brake Power Certificate"
+      quizId={QUIZ_ID}
+      questions={questions}
+    />
   )
 }
-
-export default BrakePowerCertificatePage

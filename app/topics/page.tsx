@@ -5,6 +5,7 @@ import Link from 'next/link'
 import {
   ArrowLeftRight,
   BookOpen,
+  Briefcase,
   Building2,
   ChevronRight,
   ClipboardList,
@@ -117,6 +118,17 @@ const topicSections: { heading: string; blurb: string; items: TopicCard[] }[] = 
         gradient: 'from-indigo-600 to-blue-800',
         ring: 'ring-indigo-500/30',
         iconBg: 'bg-indigo-500/20',
+      },
+      {
+        href: '/topics/professional-subject',
+        title: 'Professional Subject',
+        subtitle: 'AOM professional notes',
+        description:
+          'Preferential traffic order, freight terminals, wagon speeds, ODC, and other AOM professional subject notes.',
+        icon: Briefcase,
+        gradient: 'from-orange-600 to-amber-800',
+        ring: 'ring-orange-500/30',
+        iconBg: 'bg-orange-500/20',
       },
       {
         href: '/topics/working-time-table',

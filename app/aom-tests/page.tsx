@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 const tests = [
   {
     href: '/aom-tests/aom-practice-tests',
-    title: 'AOM Practice Tests',
+    title: 'AOM Model Tests',
     icon: '📝',
     color: 'from-amber-500 to-orange-600',
     description:

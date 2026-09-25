@@ -1,9 +1,18 @@
-import React from 'react'
+'use client'
 
-const GatiShaktiCargoTerminalPage = () => {
+import { gatiShaktiCargoTerminal } from '@/assets/quizzes/professional-subject/gati-shakti-cargo-terminal'
+import ProfessionalSubjectQuizPage from '@/components/quizzes/ProfessionalSubjectQuizPage'
+
+const QUIZ_ID = 'gati-shakti-cargo-terminal'
+
+export default function GatiShaktiCargoTerminalQuizPage() {
+  const questions = gatiShaktiCargoTerminal[QUIZ_ID] ?? []
+
   return (
-    <div>GatiShaktiCargoTerminalPage</div>
+    <ProfessionalSubjectQuizPage
+      title="Gati Shakti Cargo Terminal"
+      quizId={QUIZ_ID}
+      questions={questions}
+    />
   )
 }
-
-export default GatiShaktiCargoTerminalPage

@@ -74,22 +74,6 @@ const Quizzes = () => {
       description: 'Comprehensive rules covering general operations, subsidiary procedures, and standard protocols'
     },
     {
-      href: '/quizzes/kavach',
-      title: 'Kavach',
-      icon: '🛡️',
-      color: 'from-orange-500 to-red-600',
-      hoverColor: 'from-orange-600 to-red-700',
-      description: 'Master the Kavach train protection system, safety features, and collision avoidance technology'
-    },
-    {
-      href: '/quizzes/national-rail-plan',
-      title: 'National Rail Plan',
-      icon: '🗺️',
-      color: 'from-indigo-500 to-blue-600',
-      hoverColor: 'from-indigo-600 to-blue-700',
-      description: 'Test your knowledge of the National Rail Plan, Vision 2024, HDN routes, and capacity planning'
-    },
-    {
       href: '/quizzes/operating-department',
       title: 'Operating Department',
       icon: '🚂',
@@ -104,6 +88,14 @@ const Quizzes = () => {
       color: 'from-sky-500 to-blue-600',
       hoverColor: 'from-sky-600 to-blue-700',
       description: 'Learn operating procedures, train movement rules, station operations, and safety protocols'
+    },
+    {
+      href: '/quizzes/professional-subject',
+      title: 'Professional Subject',
+      icon: '🚂',
+      color: 'from-orange-500 to-amber-600',
+      hoverColor: 'from-orange-600 to-amber-700',
+      description: 'Practice AOM professional subject quizzes on accident inquiries, traffic, terminals, ODC, and wagon working'
     },
     {
       href: '/quizzes/railway-current-affairs-2026',

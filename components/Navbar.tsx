@@ -19,6 +19,7 @@ const topicsLinksRaw: TopicNavLink[] = [
   { href: '/topics/master-circulars', label: 'Master circulars', icon: '📜' },
   { href: '/topics/operating-manual', label: 'Operating Manual', icon: '📘' },
   { href: '/topics/operating-material', label: 'Operating material', icon: '📂' },
+  { href: '/topics/professional-subject', label: 'Professional Subject', icon: '🚂' },
   { href: '/topics/railway-acts', label: 'Railway acts', icon: '⚖️' },
   { href: '/topics/railway-planning-schemes', label: 'Railway planning schemes', icon: '🗺️' },
   { href: '/topics/working-time-table', label: 'Working Time Table', icon: '⏰' },
@@ -130,7 +131,6 @@ const Navbar = ({ user = null }: NavbarProps) => {
     { href: '/manuals/accident-manual', label: 'Accident Manual', icon: '⚠️' },
     { href: '/manuals/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
     { href: '/manuals/general-subsidiary-rules', label: 'General Subsidiary Rules', icon: '📋' },
-    { href: '/manuals/opertaing-manual', label: 'Operating Manual', icon: '📘' },
     { href: '/manuals/indian-railways-operating-manual', label: 'Indian Railways Operating Manual', icon: '🚂' },
     { href: '/manuals/station-working-rules', label: 'Station Working Rules', icon: '🚉' },
     { href: '/manuals/working-time-table', label: 'Working Time Table', icon: '⏰' },
@@ -144,10 +144,9 @@ const Navbar = ({ user = null }: NavbarProps) => {
     { href: '/quizzes/financial-rules', label: 'Financial Rules', icon: '💰' },
     { href: '/quizzes/general-awareness', label: 'General Awareness', icon: '🌐' },
     { href: '/quizzes/general-subsidiary-rules', label: 'General Subsidiary Rules', icon: '📋' },
-    { href: '/quizzes/kavach', label: 'Kavach', icon: '🛡️' },
-    { href: '/quizzes/national-rail-plan', label: 'National Rail Plan', icon: '🗺️' },
     { href: '/quizzes/operating-department', label: 'Operating Department', icon: '🚂' },
     { href: '/quizzes/operating-manual', label: 'Operating Manual', icon: '📘' },
+    { href: '/quizzes/professional-subject', label: 'Professional Subject', icon: '🚂' },
     { href: '/quizzes/rajabhasha', label: 'Rajabhasha', icon: '📝' },
     { href: '/quizzes/railway-current-affairs-2026', label: 'Railway Current Affairs 2026', icon: '📰' },
     { href: '/quizzes/railway-gk', label: 'RailwayGK', icon: '🧠' },
@@ -155,7 +154,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
   ]
 
   const aomTestsLinks = [
-    { href: '/aom-tests/aom-practice-tests', label: 'AOM Practice Tests', icon: '📝' },
+    { href: '/aom-tests/aom-model-tests', label: 'AOM Model Tests', icon: '📝' },
     { href: '/aom-tests/aom-previous-years-papers', label: 'AOM Previous Years Papers', icon: '📂' },
     { href: '/aom-tests/aom-finance-establishment-rules-tests', label: 'Finance & Establishment Rules', icon: '💰' },
     { href: '/aom-tests/aom-gk-rajabhasha-tests', label: 'GK & Rajabhasha', icon: '🌐' },
@@ -442,10 +441,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               )}
             </div>
 
-            {/* PDFs Link */}
-            <Link href="/pdfs" className={desktopNavPillClass(pathname.startsWith('/pdfs'))}>
-              PDFs
-            </Link>
+            
 
             {/* Circulars Link */}
             <Link href="/circulars" className={desktopNavPillClass(pathname.startsWith('/circulars'))}>
@@ -918,14 +914,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
               </div>
             </div>
 
-            {/* PDFs Link */}
-            <Link
-              href="/pdfs"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={mobileNavItemClass(pathname.startsWith('/pdfs'))}
-            >
-              <span>PDFs</span>
-            </Link>
+            
 
             {/* Circulars Link */}
             <Link

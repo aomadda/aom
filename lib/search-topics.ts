@@ -22,6 +22,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness abbreviations Abbreviations",
   },
   {
+    href: "/topics/professional-subject/accident-inquiries",
+    title: "Accident Inquiries",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject accident inquiries Accident Inquiries",
+  },
+  {
+    href: "/quizzes/professional-subject/accident-inquiries",
+    title: "Accident Inquiries",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject accident inquiries Accident Inquiries",
+  },
+  {
     href: "/manuals/accident-manual",
     title: "Accident Manual",
     category: "Manuals",
@@ -42,13 +57,7 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes",
     keywords: "quizzes accident manual Accident Manual chapters appendix exam",
   },
-  {
-    href: "/pdfs/accident-manual-amendments",
-    title: "Accident Manual Amendments",
-    category: "PDFs",
-    parent: "PDFs",
-    keywords: "pdfs accident manual amendments Accident Manual Amendments",
-  },
+  
   {
     href: "/quizzes/accident-manual/am-appendix-v",
     title: "Accident Manual Appendix V",
@@ -118,6 +127,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Accident Manual",
     keywords: "quizzes accident manual chapter 9 Accident Manual Chapter 9 exam",
+  },
+  {
+    href: "/quizzes/professional-subject/accidents-classification",
+    title: "Accidents Classification",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject accidents classification Accidents Classification",
   },
   {
     href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
@@ -576,11 +592,11 @@ export const searchTopics: SearchTopic[] = [
       "aom tests gk rajabhasha test 50 AOM GK Rajabhasha Test 50 paper mock Hindi",
   },
   {
-    href: "/aom-tests/aom-practice-tests",
-    title: "AOM Practice Tests",
+    href: "/aom-tests/aom-model-tests",
+    title: "AOM Model Tests",
     category: "AOM Tests",
     parent: "AOM Tests",
-    keywords: "aom tests aom practice tests AOM Practice Tests mock exam timed paper",
+    keywords: "aom tests aom model tests AOM Model Tests aom practice tests AOM Practice Tests mock exam timed paper",
   },
   {
     href: "/aom-tests/aom-previous-years-papers",
@@ -1164,11 +1180,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material authorised officer Authorised Officer authorized officer PCOM G.R. 1.02",
   },
   {
-    href: "/pdfs/authorities",
-    title: "Authorities",
-    category: "PDFs",
-    parent: "PDFs",
-    keywords: "pdfs authorities Authorities",
+    href: "/quizzes/professional-subject/authority-forms",
+    title: "Authority Forms",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject authority forms Authority Forms",
   },
   {
     href: "/topics/operating-material/authority-to-proceed",
@@ -1176,6 +1192,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material authority to proceed Authority to Proceed ATP G.R. 1.02(6)",
+  },
+  {
+    href: "/quizzes/professional-subject/authorization-permissions",
+    title: "Authorization Permissions",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject authorization permissions Authorization Permissions",
   },
   {
     href: "/topics/operating-material/automatic-block-system",
@@ -1308,6 +1331,13 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material bell signals Bell Signals loco pilot motorman guard codes acknowledgement",
   },
   {
+    href: "/quizzes/professional-subject/bell-whistle-codes",
+    title: "Bell Whistle Codes",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject bell whistle codes Bell Whistle Codes",
+  },
+  {
     href: "/topics/operating-material/block-forward",
     title: "Block Forward",
     category: "Study Topics",
@@ -1376,13 +1406,7 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes",
     keywords: "quizzes block working manual Block Working Manual chapters exam",
   },
-  {
-    href: "/pdfs/block-working-manual-amendments",
-    title: "Block Working Manual Amendments",
-    category: "PDFs",
-    parent: "PDFs",
-    keywords: "pdfs block working manual amendments Block Working Manual Amendments",
-  },
+  
   {
     href: "/quizzes/block-working-manual/chapter-1",
     title: "Block Working Manual Chapter 1",
@@ -1434,6 +1458,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material brake power certificate Brake Power Certificate BPC freight CC rake premium end-to-end TXR",
+  },
+  {
+    href: "/quizzes/professional-subject/brake-power-certificate",
+    title: "Brake Power Certificate",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject brake power certificate Brake Power Certificate",
   },
   {
     href: "/topics/operating-material/brake-van",
@@ -1603,6 +1634,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Working Time Table",
     keywords: "topics working time table coaches data Coaches Data",
+  },
+  {
+    href: "/quizzes/professional-subject/coaches-data",
+    title: "Coaches Data",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject coaches data Coaches Data",
   },
   {
     href: "/topics/operating-material/coacting-signal",
@@ -1836,6 +1874,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness important days december December",
   },
   {
+    href: "/quizzes/professional-subject/dedicated-freight-corridors",
+    title: "Dedicated Freight Corridors",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject dedicated freight corridors Dedicated Freight Corridors",
+  },
+  {
     href: "/topics/operating-material/defective-signals",
     title: "Defective Signals",
     category: "Study Topics",
@@ -1914,11 +1959,26 @@ export const searchTopics: SearchTopic[] = [
       "topics aom special distance wise Distance Wise Distances clearance ODC detonators signal overlap gradients AOM exam",
   },
   {
+    href: "/quizzes/professional-subject/distance-wise",
+    title: "Distance Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject distance wise Distance Wise",
+  },
+  {
     href: "/topics/operating-material/distant-signal",
     title: "Distant Signal",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material distant signal Distant Signal G.R S.R. 3.07 P marker double distant",
+  },
+  {
+    href: "/topics/professional-subject/double-stack-dwarf-container",
+    title: "Double Stack Dwarf Container",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject double stack dwarf container Double Stack Dwarf Container",
   },
   {
     href: "/topics/information-technology-apps/e-drishti",
@@ -2539,6 +2599,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material gate signal Gate Signal G.R. S.R. 3.34 3.73 LC G marker",
   },
   {
+    href: "/topics/professional-subject/gati-shakti-cargo-terminal",
+    title: "Gati Shakti Cargo Terminal",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject gati shakti cargo terminal Gati Shakti Cargo Terminal",
+  },
+  {
+    href: "/quizzes/professional-subject/gati-shakti-cargo-terminal",
+    title: "Gati Shakti Cargo Terminal",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject gati shakti cargo terminal Gati Shakti Cargo Terminal",
+  },
+  {
     href: "/topics/railway-planning-schemes/gati-shakti-terminals",
     title: "Gati Shakti Terminals",
     category: "Study Topics",
@@ -2716,13 +2791,7 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › General & Subsidiary Rules",
     keywords: "quizzes general subsidiary rules chapter 16 General & Subsidiary Rules Chapter 16 G&SR GSR exam",
   },
-  {
-    href: "/pdfs/general-subsidiary-rules-amendments",
-    title: "General & Subsidiary Rules Amendments (G&SR Amendments)",
-    category: "PDFs",
-    parent: "PDFs",
-    keywords: "pdfs general & subsidiary rules amendments General & Subsidiary Rules Amendments G&SR Amendments",
-  },
+  
   {
     href: "/topics/aom-special/general-subsidiary-rules-appendix",
     title: "G&SR Appendix",
@@ -2809,6 +2878,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Establishment Rules",
     keywords: "topics establishment rules govt pension Government Pension (GP) OPS",
+  },
+  {
+    href: "/quizzes/professional-subject/gradients-wise",
+    title: "Gradients Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject gradients wise Gradients Wise",
   },
   {
     href: "/general-awareness/states-information/gujarat",
@@ -3023,6 +3099,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness indian penal code Indian Penal Code (IPC)",
   },
   {
+    href: "/quizzes/professional-subject/indian-railway-act-1989",
+    title: "Indian Railway Act 1989",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject indian railway act 1989 Indian Railway Act 1989",
+  },
+  {
     href: "/topics/indian-railways",
     title: "Indian Railways (IR)",
     category: "Study Topics",
@@ -3203,14 +3286,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information karnataka Karnataka",
   },
   {
-    href: "/quizzes/kavach",
+    href: "/quizzes/professional-subject/kavach",
     title: "Kavach",
     category: "Quizzes",
     parent: "Quizzes",
     keywords: "quizzes kavach Kavach",
   },
   {
-    href: "/quizzes/kavach/kavach",
+    href: "/quizzes/professional-subject/kavach/kavach",
     title: "Kavach Quiz",
     category: "Quizzes",
     parent: "Quizzes › Kavach",
@@ -3292,6 +3375,13 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material loco pilot entered without atp Loco Pilot Entered Block Section Without ATP G.R. S.R. 6.06 PLCT",
   },
   {
+    href: "/quizzes/professional-subject/locos-data",
+    title: "Locos Data",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject locos data Locos Data",
+  },
+  {
     href: "/topics/operating-material/lorry",
     title: "Lorry",
     category: "Study Topics",
@@ -3322,6 +3412,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material marshalling Marshalling APPENDIX VIII explosives petroleum dead engines SLR saloons",
+  },
+  {
+    href: "/quizzes/professional-subject/marshalling",
+    title: "Marshalling",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject marshalling Marshalling",
   },
   {
     href: "/topics/operating-material/material-train",
@@ -3391,6 +3488,14 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness",
     keywords: "general awareness maharatna companies Maharatna Companies",
+  },
+  {
+    href: "/topics/professional-subject/maintenance-traffic-spare-coaches",
+    title: "Maintenance Traffic Spare Coaches",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject maintenance traffic spare coaches Maintenance Traffic Spare Coaches",
   },
   {
     href: "/topics/financial-rules/major-heads",
@@ -3529,6 +3634,13 @@ export const searchTopics: SearchTopic[] = [
       "topics aom special numbers wise Numbers Wise Numbers wagon limits dead engines AOM exam",
   },
   {
+    href: "/quizzes/professional-subject/numbers-wise",
+    title: "Numbers Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject numbers wise Numbers Wise",
+  },
+  {
     href: "/general-awareness/world-information/north-american-countries",
     title: "North American Countries",
     category: "General Awareness",
@@ -3655,13 +3767,7 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Operating Department",
     keywords: "quizzes operating department chapter 8 Operating Department Chapter 8 exam",
   },
-  {
-    href: "/manuals/opertaing-manual",
-    title: "Operating Manual",
-    category: "Manuals",
-    parent: "Manuals",
-    keywords: "manuals opertaing manual Operating Manual",
-  },
+  
   {
     href: "/topics/operating-manual",
     title: "Operating Manual",
@@ -3859,6 +3965,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material Operating Material authorised officer",
   },
   {
+    href: "/quizzes/professional-subject/operating-statistics",
+    title: "Operating Statistics",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject operating statistics Operating Statistics",
+  },
+  {
     href: "/topics/operating-material/operating-authorities",
     title: "Operating Authorities",
     category: "Study Topics",
@@ -3896,6 +4009,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material outer signal Outer Signal FSS TAS class B T/369",
   },
   {
+    href: "/topics/professional-subject/over-dimensional-consignment",
+    title: "Over Dimensional Consignment",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject over dimensional consignment Over Dimensional Consignment ODC",
+  },
+  {
+    href: "/quizzes/professional-subject/over-dimensional-consignment",
+    title: "Over Dimensional Consignment",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject over dimensional consignment Over Dimensional Consignment",
+  },
+  {
     href: "/topics/operating-material/panel-interlocking",
     title: "Panel Interlocking",
     category: "Study Topics",
@@ -3918,13 +4046,7 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material patrolling of lines Patrolling of Lines Appendix IV G.R. 15.05 monsoon patrol beat book",
   },
-  {
-    href: "/pdfs",
-    title: "PDF Documents",
-    category: "PDFs",
-    parent: "PDFs",
-    keywords: "pdfs PDF Documents",
-  },
+  
   {
     href: "/general-awareness/awards/peace-service-awards",
     title: "Peace Service Awards",
@@ -3939,6 +4061,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special percentage wise Percentage Wise Percentages brake power AOM exam",
+  },
+  {
+    href: "/quizzes/professional-subject/percentage-wise",
+    title: "Percentage Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject percentage wise Percentage Wise",
   },
   {
     href: "/quizzes/establishment-rules/permanent-negotiating-machinery",
@@ -4071,6 +4200,20 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material power block Power Block S.R. 17.04 OHE TPC SCOR Permit to Work collars E/Tr.D",
   },
   {
+    href: "/quizzes/professional-subject/preferential-traffic-order",
+    title: "Preferential Traffic Order",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject preferential traffic order Preferential Traffic Order",
+  },
+  {
+    href: "/quizzes/professional-subject/premium-special-trains",
+    title: "Premium Special Trains",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject premium special trains Premium Special Trains",
+  },
+  {
     href: "/quizzes/general-awareness/polity",
     title: "Polity",
     category: "Quizzes",
@@ -4183,6 +4326,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics financial rules primary units Primary Units",
   },
   {
+    href: "/topics/professional-subject/private-freight-terminal",
+    title: "Private Freight Terminal",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject private freight terminal Private Freight Terminal PFT",
+  },
+  {
     href: "/topics/block-working-manual/private-numbers",
     title: "Private Numbers (PN)",
     category: "Study Topics",
@@ -4206,6 +4357,22 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps prs application PRS Application Passenger Reservation System (PRS) Application",
   },
 
+  {
+    href: "/topics/professional-subject",
+    title: "Professional Subject",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords:
+      "topics professional subject Professional Subject preferential traffic order freight terminal wagon speeds ODC",
+  },
+  {
+    href: "/quizzes/professional-subject",
+    title: "Professional Subject",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords:
+      "quizzes professional subject Professional Subject accident inquiries traffic terminals ODC wagons",
+  },
   {
     href: "/topics/operating-material/protection-of-train",
     title: "Protection of Train",
@@ -4449,21 +4616,21 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes railway statistics chapter 2 Railway Statistics Chapter 2 exam punctuality",
   },
   {
-    href: "/quizzes/national-rail-plan",
+    href: "/quizzes/professional-subject/national-rail-plan",
     title: "National Rail Plan (NRP)",
     category: "Quizzes",
     parent: "Quizzes",
     keywords: "quizzes national rail plan National Rail Plan (NRP) Vision 2024 HDN HUN capacity",
   },
   {
-    href: "/quizzes/national-rail-plan/chapter-1",
+    href: "/quizzes/professional-subject/national-rail-plan/chapter-1",
     title: "National Rail Plan Chapter 1",
     category: "Quizzes",
     parent: "Quizzes › National Rail Plan",
     keywords: "quizzes national rail plan chapter 1 National Rail Plan Chapter 1 NRP exam Vision 2024",
   },
   {
-    href: "/quizzes/national-rail-plan/chapter-2",
+    href: "/quizzes/professional-subject/national-rail-plan/chapter-2",
     title: "National Rail Plan Chapter 2",
     category: "Quizzes",
     parent: "Quizzes › National Rail Plan",
@@ -4623,6 +4790,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material reception signals Reception Signals Outer Home Routing",
+  },
+  {
+    href: "/quizzes/professional-subject/registers-records-preserved",
+    title: "Registers Records Preserved",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject registers records preserved Registers Records Preserved",
   },
   {
     href: "/topics/operating-material/relay-room",
@@ -4865,6 +5039,20 @@ export const searchTopics: SearchTopic[] = [
       "topics aom special speed restrictions Speed Restrictions TSR PSR caution AOM exam",
   },
   {
+    href: "/quizzes/professional-subject/speed-restrictions",
+    title: "Speed Restrictions",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject speed restrictions Speed Restrictions",
+  },
+  {
+    href: "/topics/professional-subject/speeds-of-wagons",
+    title: "Speeds of Wagons",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords: "topics professional subject speeds of wagons Speeds of Wagons",
+  },
+  {
     href: "/general-awareness/sports",
     title: "Sports",
     category: "General Awareness",
@@ -4944,6 +5132,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material station master Station Master G.R. 1.02(53)",
+  },
+  {
+    href: "/quizzes/professional-subject/station-working-rules",
+    title: "Station Working Rules",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject station working rules Station Working Rules",
   },
 
   {
@@ -5127,6 +5322,13 @@ export const searchTopics: SearchTopic[] = [
       "topics aom special timings wise Timings Wise Timings time limits AOM exam",
   },
   {
+    href: "/quizzes/professional-subject/timings-wise",
+    title: "Timings Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject timings wise Timings Wise",
+  },
+  {
     href: "/quizzes/establishment-rules/trade-union-act-1926",
     title: "Trade Union Act 1926",
     category: "Quizzes",
@@ -5260,11 +5462,25 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material visibility test object Visibility Test Object (VTO) VTP Fog signal post G.R S.R. 3.61",
   },
   {
+    href: "/quizzes/professional-subject/wagon-turn-round",
+    title: "Wagon Turn Round",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject wagon turn round Wagon Turn Round",
+  },
+  {
     href: "/topics/working-time-table/wagons-data",
     title: "Wagons Data",
     category: "Study Topics",
     parent: "Topics › Working Time Table",
     keywords: "topics working time table wagons data Wagons Data",
+  },
+  {
+    href: "/quizzes/professional-subject/wagons-data",
+    title: "Wagons Data",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject wagons data Wagons Data",
   },
   {
     href: "/topics/operating-material/warner-signal",
@@ -5375,6 +5591,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special years wise Years Wise Years time periods AOM exam",
+  },
+  {
+    href: "/quizzes/professional-subject/years-wise",
+    title: "Years Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject years wise Years Wise",
   },
   {
     href: "/quizzes/general-awareness/zoology",

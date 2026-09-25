@@ -1,9 +1,18 @@
-import React from 'react'
+'use client'
 
-const OverDimensionalConsignmentPage = () => {
+import { overDimensionalConsignment } from '@/assets/quizzes/professional-subject/over-dimensional-consignment'
+import ProfessionalSubjectQuizPage from '@/components/quizzes/ProfessionalSubjectQuizPage'
+
+const QUIZ_ID = 'over-dimensional-consignment'
+
+export default function OverDimensionalConsignmentQuizPage() {
+  const questions = overDimensionalConsignment[QUIZ_ID] ?? []
+
   return (
-    <div>OverDimensionalConsignmentPage</div>
+    <ProfessionalSubjectQuizPage
+      title="Over Dimensional Consignment"
+      quizId={QUIZ_ID}
+      questions={questions}
+    />
   )
 }
-
-export default OverDimensionalConsignmentPage
