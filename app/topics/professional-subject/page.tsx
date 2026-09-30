@@ -7,6 +7,7 @@ import {
   Gauge,
   Ruler,
   TriangleAlert,
+  Users,
   Warehouse,
   Wrench,
 } from 'lucide-react'
@@ -68,6 +69,17 @@ const professionalSubjectTopics = [
     ringClassName: 'ring-violet-500/10',
   },
   {
+    href: '/topics/professional-subject/operating-staff-categorization',
+    title: 'Operating Staff Categorization',
+    subtitle: 'Staff categories',
+    description: 'Operating staff categorization study notes for the AOM professional subject.',
+    icon: Users,
+    accent: 'from-fuchsia-500/20 via-pink-500/10 to-transparent',
+    iconClassName: 'text-fuchsia-200',
+    borderClassName: 'border-fuchsia-500/25 hover:border-fuchsia-400/45',
+    ringClassName: 'ring-fuchsia-500/10',
+  },
+  {
     href: '/topics/professional-subject/private-freight-terminal',
     title: 'Private Freight Terminal',
     subtitle: 'PFT',
@@ -115,7 +127,7 @@ const ProfessionalSubjectPage = () => {
             Professional Subject
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            AOM professional subject notes — accident inquiries, containers, terminals, coaches, ODC, and wagon speeds.
+            AOM professional subject notes — accident inquiries, containers, terminals, coaches, ODC, staff categorization, and wagon speeds.
           </p>
         </div>
 

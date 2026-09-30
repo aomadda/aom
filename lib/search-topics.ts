@@ -3965,6 +3965,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material Operating Material authorised officer",
   },
   {
+    href: "/topics/professional-subject/operating-staff-categorization",
+    title: "Operating Staff Categorization",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject operating staff categorization Operating Staff Categorization",
+  },
+  {
     href: "/quizzes/professional-subject/operating-statistics",
     title: "Operating Statistics",
     category: "Quizzes",
