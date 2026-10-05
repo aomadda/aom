@@ -791,13 +791,12 @@ export default function AomExamTest({
                             {question.options.map((option, optionIndex) => {
                               const isCorrectOption = optionIndex === question.correct
                               const isUserOption = userAnswer === optionIndex
-                              const rightLabel = isCorrectOption
-                                ? skipped
-                                  ? 'Correct answer (Unanswered)'
-                                  : 'Correct answer'
-                                : isUserOption && !isCorrect
-                                  ? 'Your answer'
-                                  : null
+                              const rightLabel =
+                                isCorrectOption && isCorrect
+                                  ? 'Correct'
+                                  : isUserOption && !isCorrect
+                                    ? 'Your answer'
+                                    : null
                               return (
                                 <div
                                   key={`${index}-${optionIndex}-${option}`}

@@ -228,11 +228,108 @@ export const aomProfessionalSubjectTest49 = {
                 explanation: `Foodgrains.`,
             },
             {
-                question: ``,
-                options: ['Speed = Distance / Time', 'Speed = Time / Distance', 'Speed = Distance * Time', 'Speed = Distance + Time'],
+                question: `When checking an ESP, how much minimum radius of curve will you accept as per SOD for BG?`,
+                options: ['175 m', '180 m', '185 m', '190 m'],
                 correct: 0,
-                explanation: `Speed = Distance / Time.`,
+                explanation: `175 m.`,
             },
+            {
+                question: `In case of ODC, what is the minimum gross clearance from from the over head contact wire that can be permitted over electrified section?`,
+                options: ['100 mm', '150 mm', '175 mm', '200 mm'],
+                correct: 0,
+                explanation: `100 mm.`,
+            },
+            {
+                question: `According to the Disaster Management Plan, what is CBRN?`,
+                options: ['Critical Backup Resource Network', 'Critical Bottleneck Railway Network', 'Chemical Biological Radilogical Nuclear', 'None of the above'],
+                correct: 2,
+                explanation: `Chemical Biological Radilogical Nuclear.`,
+            },
+            {
+                question: `Under the DMP, which department is responsible for evacuation of people and animals in case of a railway disaster?`,
+                options: ['Commercial department', 'Operating department', 'Safety department', 'Engineering department'],
+                correct: 1,
+                explanation: `Operating department.`,
+            },
+            {
+                question: `The CCRS organization is under the administrative control of ______`,
+                options: ['Ministry of Railways', 'Ministry of Civil Aviation', 'Ministry of Home Affairs', 'Ministry of Defence'],
+                correct: 1,
+                explanation: `Ministry of Civil Aviation.`,
+            },
+            {
+                question: `When LG gate is closed and locked, Gate control provided on the SM\'s control panel shall display ______ indication`,
+                options: ['Steady Red', 'Staedy Green', 'Steady Yellow', 'Flashing Yellow'],
+                correct: 2,
+                explanation: `Steady Yellow.`,
+            },
+            {
+                question: `Dispensation for non isolated shunting movements with separation distance of more than 120 m can be permitted by ______`,
+                options: ['PCOM', 'GM', 'CRS', 'PCSO'],
+                correct: 0,
+                explanation: `PCOM.`,
+            },
+            {
+                question: `What is the purpose of traffic block for de-stressing of track?`,
+                options: ['Avoid weld failure', 'Aviod buckling', 'Improve riding', 'Improve drainage'],
+                correct: 1,
+                explanation: `Aviod buckling.`,
+            },
+            {
+                question: `Expand DCPT in the context of estimation of line capacity unilization over a period of time?`,
+                options: ['Data Center for Planning Traffic', 'Digital Capacity Planning Tool', 'Direct Capacity Planning Table', 'Digital Capacity for Planning Transportation'],
+                correct: 1,
+                explanation: `Daily Capacity Planning Tool.`,
+            },
+            {
+                question: `What is the frequency of crew review by the division?`,
+                options: ['Monthly', 'Quarterly', 'Half Yearly', 'Yearly'],
+                correct: 3,
+                explanation: `Yearly.`,
+            },
+            {
+                question: `Which wagon defect is detected by HABD equipment?`,
+                options: ['Broken spring', 'Hot axle', 'Body bulging', 'Hanging part'],
+                correct: 1,
+                explanation: `Hot axle.`,
+            },
+            {
+                question: `How many TEUs are carried in fully loaded double stack container rake?`,
+                options: ['120', '150', '180', '200'],
+                correct: 2,
+                explanation: `180.`,
+            },
+            {
+                question: `Under the Gati Shakti Policy, who is the Railway administration?`,
+                options: ['DRM', 'GM', 'PCCM', 'PCOM'],
+                correct: 0,
+                explanation: `DRM.`,
+            },
+            {
+                question: `Which of the following is a double decker, AC chair car intercity train?`,
+                options: ['Tejas express', 'Uday express', 'Yuva express', 'Sampark Kranti express'],
+                correct: 1,
+                explanation: `Uday express.`,
+            },
+            {
+                question: `Which of the following is an economical, unreserved, superfast Mail/Express service?`,
+                options: ['Antyodaya express', 'Hamsafar express', 'Garib Rath express', 'None of the above'],
+                correct: 0,
+                explanation: `Antyodaya express.`,
+            },
+            {
+                question: `Which of the following locos is better suited for operation of heavy trains in graded section?`,
+                options: ['WAG5', 'WAG7', 'WAG9', 'WAG9HH'],
+                correct: 3,
+                explanation: `WAG9HH.`,
+            },
+            {
+                question: `In planning process, NPG stands for ______`,
+                options: ['National Planning Group', 'National Planning Gateway', 'Network Planning Group', 'New Project Grant'],
+                correct: 2,
+                explanation: `Network Planning Group.`,
+            },
+            
         ]
     }
 }
