@@ -8,7 +8,6 @@ import {
   Check,
   Clock,
   Trash2,
-  X,
 } from 'lucide-react'
 
 import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
@@ -793,7 +792,9 @@ export default function AomExamTest({
                               const isCorrectOption = optionIndex === question.correct
                               const isUserOption = userAnswer === optionIndex
                               const rightLabel = isCorrectOption
-                                ? 'Correct answer'
+                                ? skipped
+                                  ? 'Correct answer (Unanswered)'
+                                  : 'Correct answer'
                                 : isUserOption && !isCorrect
                                   ? 'Your answer'
                                   : null
@@ -806,19 +807,6 @@ export default function AomExamTest({
                                       : 'border-rose-500/25 bg-rose-500/10'
                                   }`}
                                 >
-                                  {isCorrectOption ? (
-                                    <Check
-                                      className="h-5 w-5 shrink-0 text-emerald-400"
-                                      strokeWidth={3}
-                                      aria-label="Correct option"
-                                    />
-                                  ) : (
-                                    <X
-                                      className="h-5 w-5 shrink-0 text-rose-400"
-                                      strokeWidth={3}
-                                      aria-label="Incorrect option"
-                                    />
-                                  )}
                                   <span
                                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
                                       isCorrectOption

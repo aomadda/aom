@@ -200,8 +200,38 @@ export const aomProfessionalSubjectTest49 = {
             {
                 question: `How many detonators should be placed on the broad gauge line at a distance of 1200 meters from the obstruction.`,
                 options: ['1', '2', '3', '4'],
-                correct: 1,
-                explanation: `2.`,
+                correct: 2,
+                explanation: `3.`,
+            },
+            {
+                question: `EOTT means ______`,
+                options: ['Enhancement of Train Transformation System', 'Enhancement of Operations of Trains Traffic System', 'Enhancement of Operations Transformation Trains System', 'End of Train Telemetry System'],
+                correct: 3,
+                explanation: `End of Train Telemetry System.`,
+            },
+            {
+                question: `BPC becomes invalid in a premium air brake rake, if more than ________ 8 wheeler wagons get detached from the rake.`,
+                options: ['4', '5', '6', '7'],
+                correct: 0,
+                explanation: `4.`,
+            },
+            {
+                question: `DFC routes have upgraded design features of ______ axle load for bridges and formation.`,
+                options: ['30 tonnes', '31.6 tonnes', '32.5 tonnes', '33.5 tonnes'],
+                correct: 2,
+                explanation: `32.5 tonnes.`,
+            },
+            {
+                question: `Which of the following commodity is permitted to be carried in Ro-Ro service?`,
+                options: ['Iron ore', 'Coal & Coke', 'Foodgrains', 'Military traffic'],
+                correct: 2,
+                explanation: `Foodgrains.`,
+            },
+            {
+                question: ``,
+                options: ['Speed = Distance / Time', 'Speed = Time / Distance', 'Speed = Distance * Time', 'Speed = Distance + Time'],
+                correct: 0,
+                explanation: `Speed = Distance / Time.`,
             },
         ]
     }
