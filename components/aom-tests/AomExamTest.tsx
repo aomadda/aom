@@ -764,10 +764,6 @@ export default function AomExamTest({
                       const userAnswer = userAnswers[index]
                       const skipped = userAnswer === null || question.options[userAnswer] == null
                       const isCorrect = userAnswer === question.correct
-                      const yourAnswer = skipped
-                        ? 'Unanswered'
-                        : `${String.fromCharCode(65 + userAnswer)}. ${question.options[userAnswer]}`
-                      const correctAnswer = `${String.fromCharCode(65 + question.correct)}. ${question.options[question.correct] ?? ''}`
                       return (
                         <li
                           key={`${index}-${question.question.slice(0, 24)}`}
@@ -795,6 +791,12 @@ export default function AomExamTest({
                           <div className="space-y-2.5">
                             {question.options.map((option, optionIndex) => {
                               const isCorrectOption = optionIndex === question.correct
+                              const isUserOption = userAnswer === optionIndex
+                              const rightLabel = isCorrectOption
+                                ? 'Correct answer'
+                                : isUserOption && !isCorrect
+                                  ? 'Your answer'
+                                  : null
                               return (
                                 <div
                                   key={`${index}-${optionIndex}-${option}`}
@@ -827,39 +829,24 @@ export default function AomExamTest({
                                     {String.fromCharCode(65 + optionIndex)}
                                   </span>
                                   <span
-                                    className={`text-sm font-medium sm:text-base ${
+                                    className={`min-w-0 text-sm font-medium sm:text-base ${
                                       isCorrectOption ? 'text-emerald-100' : 'text-rose-100'
                                     }`}
                                   >
                                     {option}
                                   </span>
+                                  {rightLabel ? (
+                                    <span
+                                      className={`ml-auto shrink-0 text-[11px] font-semibold tracking-wide uppercase ${
+                                        isCorrectOption ? 'text-emerald-300' : 'text-rose-200'
+                                      }`}
+                                    >
+                                      {rightLabel}
+                                    </span>
+                                  ) : null}
                                 </div>
                               )
                             })}
-                          </div>
-                          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-                              <p className="text-[11px] font-semibold tracking-wide text-slate-400 uppercase">
-                                Your answer:
-                              </p>
-                              <p
-                                className={`mt-1 text-sm font-medium ${
-                                  skipped
-                                    ? 'text-amber-200'
-                                    : isCorrect
-                                      ? 'text-emerald-200'
-                                      : 'text-rose-200'
-                                }`}
-                              >
-                                {yourAnswer}
-                              </p>
-                            </div>
-                            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3">
-                              <p className="text-[11px] font-semibold tracking-wide text-emerald-300 uppercase">
-                                Correct answer:
-                              </p>
-                              <p className="mt-1 text-sm font-medium text-emerald-100">{correctAnswer}</p>
-                            </div>
                           </div>
                           {question.explanation ? (
                             <div className="mt-3 rounded-2xl border border-sky-500/30 bg-sky-500/10 p-4">
