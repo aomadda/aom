@@ -683,45 +683,45 @@ export default function AomExamTest({
   if (phase === 'results') {
     const result = scoreExam(questions, userAnswers)
     return (
-      <div className="min-h-screen bg-linear-to-br from-violet-50 via-purple-50 to-fuchsia-50 px-4 py-8 sm:py-12">
+      <div className="min-h-screen bg-slate-950 px-4 py-8 sm:py-12">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-6 rounded-3xl bg-white p-6 shadow-2xl sm:p-8">
+          <div className="mb-6 rounded-3xl border border-violet-500/20 bg-slate-950 p-6 shadow-xl sm:p-8">
             <div className="text-center">
-              <p className="text-xs font-semibold tracking-[0.2em] text-violet-500 uppercase">
+              <p className="text-xs font-semibold tracking-[0.2em] text-violet-300 uppercase">
                 Result
               </p>
-              <h1 className="mt-2 text-2xl font-bold text-slate-800 sm:text-3xl">{title}</h1>
+              <h1 className="mt-2 text-2xl font-bold text-slate-100 sm:text-3xl">{title}</h1>
               <div className="mx-auto mt-6 flex h-28 w-28 items-center justify-center rounded-full bg-linear-to-br from-violet-600 to-fuchsia-600 text-white">
                 <div>
                   <div className="text-2xl font-bold">{formatExamMarks(result.marks)}</div>
                   <div className="text-xs text-violet-100">/ {result.maxMarks}</div>
                 </div>
               </div>
-              <p className="mt-4 text-sm text-slate-600">
+              <p className="mt-4 text-sm text-slate-400">
                 Net marks after −{AOM_EXAM_NEGATIVE_MARK} for each wrong answer
               </p>
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-center">
-                <div className="text-2xl font-bold text-emerald-700">{result.correct}</div>
-                <div className="text-xs font-medium text-emerald-800">Correct</div>
+              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center">
+                <div className="text-2xl font-bold text-emerald-200">{result.correct}</div>
+                <div className="text-xs font-medium text-emerald-300">Correct</div>
               </div>
-              <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-center">
-                <div className="text-2xl font-bold text-red-700">{result.wrong}</div>
-                <div className="text-xs font-medium text-red-800">Wrong</div>
+              <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-center">
+                <div className="text-2xl font-bold text-red-200">{result.wrong}</div>
+                <div className="text-xs font-medium text-red-300">Wrong</div>
               </div>
-              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-center">
-                <div className="text-2xl font-bold text-amber-700">{result.unanswered}</div>
-                <div className="text-xs font-medium text-amber-800">Unanswered</div>
+              <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4 text-center">
+                <div className="text-2xl font-bold text-amber-200">{result.unanswered}</div>
+                <div className="text-xs font-medium text-amber-300">Unanswered</div>
               </div>
-              <div className="rounded-2xl border border-violet-200 bg-violet-50 p-4 text-center">
-                <div className="text-2xl font-bold text-violet-700">{result.percentage}%</div>
-                <div className="text-xs font-medium text-violet-800">Score</div>
+              <div className="rounded-2xl border border-violet-500/30 bg-violet-500/10 p-4 text-center">
+                <div className="text-2xl font-bold text-violet-200">{result.percentage}%</div>
+                <div className="text-xs font-medium text-violet-300">Score</div>
               </div>
             </div>
 
-            <p className="mt-4 text-center text-sm text-slate-500">
+            <p className="mt-4 text-center text-sm text-slate-400">
               {result.correct} × {AOM_EXAM_POSITIVE_MARK} − {result.wrong} × {AOM_EXAM_NEGATIVE_MARK}{' '}
               = {formatExamMarks(result.marks)} marks
             </p>
@@ -736,56 +736,60 @@ export default function AomExamTest({
               <button
                 type="button"
                 onClick={() => router.push('/dashboard')}
-                className="inline-flex flex-1 items-center justify-center rounded-full bg-slate-800 px-6 py-2.5 text-sm font-semibold text-white"
+                className="inline-flex flex-1 items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white"
               >
                 View dashboard
               </button>
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+          <div className="overflow-hidden rounded-3xl border border-violet-500/20 bg-slate-950 shadow-xl">
             <div className="bg-linear-to-r from-slate-950 via-violet-950 to-fuchsia-950 px-6 py-7 text-center text-white">
               <h2 className="text-2xl font-bold">Answer key & explanation</h2>
             </div>
             {paperSections.map((section) => (
               <div key={section.id}>
                 {hasPaperNav ? (
-                  <div className="border-t border-slate-200 bg-slate-50 px-5 py-3 sm:px-8">
-                    <h3 className="text-sm font-bold tracking-wide text-violet-800 uppercase">
+                  <div className="border-t border-white/10 bg-slate-900 px-5 py-3 sm:px-8">
+                    <h3 className="text-sm font-bold tracking-wide text-violet-200 uppercase">
                       {section.title}
                     </h3>
                   </div>
                 ) : null}
-                <ol className="divide-y divide-slate-100">
+                <ol className="divide-y divide-white/10">
                   {questions
                     .slice(section.startIndex, section.startIndex + section.count)
                     .map((question, localIndex) => {
                       const index = section.startIndex + localIndex
                       const userAnswer = userAnswers[index]
-                      const skipped = userAnswer === null
+                      const skipped = userAnswer === null || question.options[userAnswer] == null
                       const isCorrect = userAnswer === question.correct
+                      const yourAnswer = skipped
+                        ? 'Unanswered'
+                        : `${String.fromCharCode(65 + userAnswer)}. ${question.options[userAnswer]}`
+                      const correctAnswer = `${String.fromCharCode(65 + question.correct)}. ${question.options[question.correct] ?? ''}`
                       return (
                         <li
                           key={`${index}-${question.question.slice(0, 24)}`}
                           className="px-5 py-6 sm:px-8"
                         >
                           <div className="mb-3 flex items-start justify-between gap-3">
-                            <h3 className="font-semibold text-slate-800">
+                            <h3 className="font-semibold text-slate-100">
                               Question {localIndex + 1}
                             </h3>
                             <span
                               className={`rounded-full px-3 py-1 text-xs font-semibold ${
                                 skipped
-                                  ? 'bg-amber-100 text-amber-800'
+                                  ? 'bg-amber-500/15 text-amber-200'
                                   : isCorrect
-                                    ? 'bg-emerald-100 text-emerald-800'
-                                    : 'bg-red-100 text-red-800'
+                                    ? 'bg-emerald-500/15 text-emerald-200'
+                                    : 'bg-red-500/15 text-red-200'
                               }`}
                             >
                               {skipped ? 'Unanswered' : isCorrect ? 'Correct' : 'Wrong (−0.33)'}
                             </span>
                           </div>
-                          <p className="mb-4 text-sm leading-relaxed text-slate-700 sm:text-base">
+                          <p className="mb-4 text-sm leading-relaxed text-slate-300 sm:text-base">
                             {question.question}
                           </p>
                           <div className="space-y-2.5">
@@ -796,19 +800,19 @@ export default function AomExamTest({
                                   key={`${index}-${optionIndex}-${option}`}
                                   className={`flex items-center gap-3 rounded-xl border-2 px-3 py-3 ${
                                     isCorrectOption
-                                      ? 'border-emerald-200 bg-emerald-50'
-                                      : 'border-rose-100 bg-rose-50'
+                                      ? 'border-emerald-500/40 bg-emerald-500/10'
+                                      : 'border-rose-500/25 bg-rose-500/10'
                                   }`}
                                 >
                                   {isCorrectOption ? (
                                     <Check
-                                      className="h-5 w-5 shrink-0 text-emerald-600"
+                                      className="h-5 w-5 shrink-0 text-emerald-400"
                                       strokeWidth={3}
                                       aria-label="Correct option"
                                     />
                                   ) : (
                                     <X
-                                      className="h-5 w-5 shrink-0 text-rose-500"
+                                      className="h-5 w-5 shrink-0 text-rose-400"
                                       strokeWidth={3}
                                       aria-label="Incorrect option"
                                     />
@@ -817,14 +821,14 @@ export default function AomExamTest({
                                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
                                       isCorrectOption
                                         ? 'bg-emerald-600 text-white'
-                                        : 'bg-rose-400 text-white'
+                                        : 'bg-rose-500 text-white'
                                     }`}
                                   >
                                     {String.fromCharCode(65 + optionIndex)}
                                   </span>
                                   <span
                                     className={`text-sm font-medium sm:text-base ${
-                                      isCorrectOption ? 'text-emerald-950' : 'text-rose-950'
+                                      isCorrectOption ? 'text-emerald-100' : 'text-rose-100'
                                     }`}
                                   >
                                     {option}
@@ -833,12 +837,36 @@ export default function AomExamTest({
                               )
                             })}
                           </div>
+                          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                              <p className="text-[11px] font-semibold tracking-wide text-slate-400 uppercase">
+                                Your answer:
+                              </p>
+                              <p
+                                className={`mt-1 text-sm font-medium ${
+                                  skipped
+                                    ? 'text-amber-200'
+                                    : isCorrect
+                                      ? 'text-emerald-200'
+                                      : 'text-rose-200'
+                                }`}
+                              >
+                                {yourAnswer}
+                              </p>
+                            </div>
+                            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3">
+                              <p className="text-[11px] font-semibold tracking-wide text-emerald-300 uppercase">
+                                Correct answer:
+                              </p>
+                              <p className="mt-1 text-sm font-medium text-emerald-100">{correctAnswer}</p>
+                            </div>
+                          </div>
                           {question.explanation ? (
-                            <div className="mt-3 rounded-2xl border border-sky-100 bg-sky-50 p-4">
-                              <p className="text-[11px] font-semibold tracking-wide text-sky-700 uppercase">
+                            <div className="mt-3 rounded-2xl border border-sky-500/30 bg-sky-500/10 p-4">
+                              <p className="text-[11px] font-semibold tracking-wide text-sky-300 uppercase">
                                 Explanation
                               </p>
-                              <p className="mt-1 text-sm text-sky-900">{question.explanation}</p>
+                              <p className="mt-1 text-sm text-sky-100">{question.explanation}</p>
                             </div>
                           ) : null}
                         </li>

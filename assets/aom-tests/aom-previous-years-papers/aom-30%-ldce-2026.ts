@@ -856,8 +856,8 @@ export const aom30LDCETests = {
           "Proceed",
           "Caution",
         ],
-        correct: 3,
-        explanation: "Caution is the correct answer.",
+        correct: 2,
+        explanation: "Proceed is the correct answer.",
       },
       {
         question: "An EMU train uses which type of coupling?",

@@ -2,10 +2,206 @@ export const aomProfessionalSubjectTest49 = {
     tests: {
         'aom-professional-subject-test-49': [
             {
-                question: `The average speed of goods train (BG) in kmph for all traction of Indian Railways in 2024-25 was ________`,
-                options: ['23.4', '24.5', '25', '25.3'],
+                question: `Who will be the Nodal officer to process the case for giving permission for Over Dimensional Consignment (ODC) on multi Axle trailers through Railway level crossing?`,
+                options: ['Sr.DOM', 'Sr.DSTE', 'Sr.DEP', 'Sr.DGM'],
                 correct: 0,
-                explanation: `The correct answer is 57.`,
+                explanation: `Sr.DOM.`,
+            },
+            {
+                question: `The permissible limit of flat tyre in the locomotive of goods train (BG) is ______`,
+                options: ['40 mm', '50 mm', '60 mm', '70 mm'],
+                correct: 1,
+                explanation: `50 mm.`,
+            },
+            {
+                question: `(A) Where it is not possible to obtain 200 meters of continuous visibility of any stop signal (due to constraints), then a suitable speed restriction shall be imposed.
+                (B) The minimum visibility of Distant signal shall be 400 meters`,
+                options: ['(A) only', '(B) only', '(A) and (B)', 'None of the above'],
+                correct: 2,
+                explanation: `(A) and (B).`,
+            },
+            {
+                question: `(A) FOIS and TMS with limited access shall be installed at the GCT at the cost of GCTO.
+                (B) Complete maintenance of FOIS and TMS shall be done by Railway its own cost.`,
+                options: ['(A) only', '(B) only', '(A) and (B)', 'None of the above'],
+                correct: 2,
+                explanation: `(A) and (B).`,
+            },
+            {
+                question: `(A) DRM/GM shall order the inquiry if no particula department accepts the responsibility.
+                (B) DRM/GM may decide to have the inquiry conducted even if a particular department accepts the responsibility.`,
+                options: ['(A) only', '(B) only', '(A) and (B)', 'None of the above'],
+                correct: 2,
+                explanation: `(A) and (B).`,
+            },
+            {
+                question: `In sections where there is provision of MACL signal with only one Distant signal, warning board provided will be of which type?`,
+                options: ['Goods warning board', 'Passenger warning board', 'Goods and Passenger warning board', 'None of the above'],
+                correct: 0,
+                explanation: `Goods warning board.`,
+            },
+            {
+                question: `Minimum visibility distance of Warner signal when placed on a post by itself is ______`,
+                options: ['100 meters', '200 meters', '300 meters', '400 meters'],
+                correct: 3,
+                explanation: `400 meters.`,
+            },
+            {
+                question: `At what restricted speed will the Loco pilot proceed if the visibility is not clear while passing the Automatic stop signal in ON position in a double line section?`,
+                options: ['10 km/h', '15 km/h', '20 km/h', '25 km/h'],
+                correct: 0,
+                explanation: `10 km/h.`,
+            },
+            {
+                question: `If two or more trains have to run in Pilot guard system, by which train pilot guard will be sent?`,
+                options: ['First train', 'Last train', 'Any train', 'None of the above'],
+                correct: 1,
+                explanation: `Last train.`,
+            },
+            {
+                question: `Position of asset failure can be analyzed through ______`,
+                options: ['COIS', 'FOIS', 'PAM', 'TMS'],
+                correct: 2,
+                explanation: `PAM.`,
+            },
+            {
+                question: `Corridor blocks of ______ hours have been provided in Zero Based Time Table`,
+                options: ['3', '4', '5', '6'],
+                correct: 0,
+                explanation: `3.`,
+            },
+            {
+                question: `Normally upper class coaches shall be marshalled in the ______ of the train`,
+                options: ['Front end', 'Middle', 'Rear end', 'Anywhere'],
+                correct: 1,
+                explanation: `Middle.`,
+            },
+            {
+                question: `Which of the following does NOT feature in the Yard working instructions of a Marshalling Yard?`,
+                options: ['Full description of the yard including number of lines with their holding capacity', 'Marshalling order in force', 'Quantum of inward, outward and internal traffic required to be dealt with by the yard and their timing', 'Speed of the train in main line after dispatch'],
+                correct: 3,
+                explanation: `Speed of the train in main line after dispatch.`,
+            },
+            {
+                question: `Full form of RRSK is ______`,
+                options: ['Rashtriya Rail Suraksha Kosh', 'Rashtriya Rail Security Kosh', 'Rashtriya Road Sanrakshan Kosh', 'Rashtriya Rail Sanraksha Kosh'],
+                correct: 3,
+                explanation: `Rashtriya Rail Sanraksha Kosh.`,
+            },
+            {
+                question: `Every Loco Pilot and ALP shall "Sign on" ______ minutes in advance for examining and taking over the Multiple Unit Electric Engine in the shed.`,
+                options: ['30', '35', '40', '45'],
+                correct: 3,
+                explanation: `45.`,
+            },
+            {
+                question: `In case of train running with LHB coaches with deflated air spring in secondary stage suspension, train is permitted to run at ______ kmph speed.`,
+                options: ['60', '75', '90', '95'],
+                correct: 0,
+                explanation: `60.`,
+            },
+            {
+                question: `Which of the following statement are NOT correct about mini rake?`,
+                options: ['Mini rake can be loaded with iron ore', 'Mini rake is charged at Train load class', 'Mini rakes are permitted only in covered wagons', 'Free time loading/unloading of mini rakes will be 5 hours'],
+                correct: 0,
+                explanation: `Mini rake can be loaded with iron ore.`,
+            },
+            {
+                question: `In case of emergency, CC+6 loaded wagons can be permitted on excepted CC+6 routes. Permission can be granted by ______`,
+                options: ['GM', 'PCOM', 'CRS', 'PCE'],
+                correct: 3,
+                explanation: `PCE.`,
+            },
+            {
+                question: `What is the minimum Axle load route prevailing in Indian Railways?`,
+                options: ['20 tonnes', '21 tonnes', '22 tonnes', '23 tonnes'],
+                correct: 2,
+                explanation: `22 tonnes.`,
+            },
+            {
+                question: `A decrease in net tonne kilometer per engine hours may be due to ______`,
+                options: ['Increase in the proportion of unbalanced traffic', 'Increase in the average starting wagon load', 'Decrease in shunting engine hours', 'Decrease i light engine hours'],
+                correct: 0,
+                explanation: `Increase in the proportion of unbalanced traffic.`,
+            },
+            {
+                question: `"Smell of burning grease" is the symptom of ______`,
+                options: ['Brake binding', 'Flat tyre', 'Hot axle', 'Seizure of roller bearing'],
+                correct: 3,
+                explanation: `Seizure of roller bearing.`,
+            },
+            {
+                question: `At a "B" class double line MACL station, while performing shunting upto the First stop signal i rear i.e Upto the Home signal, Block back is ______`,
+                options: ['Necessary', 'Not necessary', 'Depends on layout', 'None of the above'],
+                correct: 0,
+                explanation: `Necessary.`,
+            },
+            {
+                question: `The distance of derailing switch from the point is about ______ feet.`,
+                options: ['10', '15', '20', '25'],
+                correct: 1,
+                explanation: `15.`,
+            },
+            {
+                question: `Under "Cargo Aggregator Transportation Product" scheme, how many maximum wagons can be loaded with more than two commodities in Block rake?`,
+                options: ['More than 10 wagons', 'More than 15 wagons', 'More than 20 wagons', 'More than 25 wagons'],
+                correct: 3,
+                explanation: `More than 20 wagons.`,
+            },
+            {
+                question: `Permissible free time for use of ground for dealing with container train for type II goods shed is ______ hours.`,
+                options: ['14', '15', '16', '17'],
+                correct: 1,
+                explanation: `15.`,
+            },
+            {
+                question: `Installation of a device in the locomotive to direct position and speed using GAGAN mean ______`,
+                options: ['GPS Aided Geo Augmented Navigation', 'GPS Arrangement Geo Augmented Navigation', 'Global Aided GPS Aided Navigation', 'Geo Aided GPS Augmented Navigation'],
+                correct: 0,
+                explanation: `GPS Aided Geo Augmented Navigation.`,
+            },
+            {
+                question: `Every consignment of explosives tendered for despatch shall be accompanied by a pass (in duplicate) issued by the consignor in ______ as required under the Explosives Rules 1983.`,
+                options: ['Form 10', 'Form 12', 'Both Form 15', 'Form 16'],
+                correct: 3,
+                explanation: `Form 16.`,
+            },
+            {
+                question: `How long should the Loco pilot wait after stopping the train in the rear of the Automatic stop signal during the night?`,
+                options: ['1 minute', '2 minutes', '3 minutes', '4 minutes'],
+                correct: 1,
+                explanation: `2 minutes.`,
+            },
+            {
+                question: `Where two detonators are placed for protection of a train stopped in Automatic block signalling section?`,
+                options: ['90 m or at such distance as has been fixed by special instructions', '120 m or at such distance as has been fixed by special instructions', '150 m or at such distance as has been fixed by special instructions', '180 m or at such distance as has been fixed by special instructions'],
+                correct: 3,
+                explanation: `180 m or at such distance as has been fixed by special instructions.`,
+            },
+            {
+                question: `What is adequate distance beyond first stop signal for granting line clear in case of two aspect lower quadrant signalling?`,
+                options: ['120 m', '180 m', '300 m', '400 m'],
+                correct: 3,
+                explanation: `400 m.`,
+            },
+            {
+                question: `How many detonators should be placed on the broad gauge line at a distance of 1200 meters from the obstruction.`,
+                options: ['2', '3', '4', '5'],
+                correct: 1,
+                explanation: `3.`,
+            },
+            
+            {
+                question: `What is the distance of derailing switch from the point?`,
+                options: ['10 m', '15 m', '20 m', '25 m'],
+                correct: 1,
+                explanation: `15 m.`,
+            },
+            {
+                question: `How many detonators should be placed on the broad gauge line at a distance of 1200 meters from the obstruction.`,
+                options: ['1', '2', '3', '4'],
+                correct: 1,
+                explanation: `2.`,
             },
         ]
     }
