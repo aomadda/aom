@@ -2,14 +2,15 @@
 
 import { aomFinanceEstablishmentRulesTest31 } from '@/assets/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test31'
 import AomExamTest from '@/components/aom-tests/AomExamTest'
-import { toAomExamQuestions } from '@/lib/aom-exam'
+import { AomExamQuestion, toAomExamQuestions } from '@/lib/aom-exam'
 
 const QUIZ_ID = 'aom-finance-establishment-rules-test-31'
 const SOURCE_ID = 'aom-finance-establishment-rules-test31'
 
 export default function AOMFinanceEstablishmentRulesTest31Page() {
-  const paper = aomFinanceEstablishmentRulesTest31.test[SOURCE_ID]
-  const questions = toAomExamQuestions(paper ? [paper] : [])
+  const questions = toAomExamQuestions(
+    aomFinanceEstablishmentRulesTest31.test[SOURCE_ID] ?? [] as unknown as AomExamQuestion[],
+  )
 
   return (
     <AomExamTest

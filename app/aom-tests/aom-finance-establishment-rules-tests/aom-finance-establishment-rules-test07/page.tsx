@@ -8,8 +8,9 @@ const QUIZ_ID = 'aom-finance-establishment-rules-test-07'
 const SOURCE_ID = 'aom-finance-establishment-rules-test07'
 
 export default function AOMFinanceEstablishmentRulesTest07Page() {
-  const paper = aomFinanceEstablishmentRulesTest07.test[SOURCE_ID]
-  const questions = toAomExamQuestions(paper ? [paper] : [])
+  const questions = toAomExamQuestions(
+    aomFinanceEstablishmentRulesTest07.test[SOURCE_ID]?.questions ?? [],
+  )
 
   return (
     <AomExamTest

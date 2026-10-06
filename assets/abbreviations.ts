@@ -1513,6 +1513,12 @@ type AbbreviationItem = {
       },
     ],
     H: [
+      {
+        acronym: "HABD",
+        fullForm: "Hot Axle Box Detectors",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { acronym: "HCW", fullForm: "High Capacity Wagons",
         explanation: "Will be added later",
         reference: "--"
