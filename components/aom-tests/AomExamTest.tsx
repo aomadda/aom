@@ -510,9 +510,9 @@ export default function AomExamTest({
           <p className="mb-6 text-gray-600">No questions found.</p>
           <Link
             href={backHref}
-            className="inline-flex rounded-full bg-linear-to-r from-violet-600 to-purple-600 px-6 py-2.5 font-medium text-white"
+            className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-violet-600 to-purple-600 px-6 py-2.5 text-center font-medium text-white"
           >
-            {backLabel}
+            <span className="w-full text-center">{backLabel}</span>
           </Link>
         </div>
       </div>
@@ -650,9 +650,9 @@ export default function AomExamTest({
             <div className="flex flex-col gap-3 border-t border-slate-100 px-6 py-5 sm:flex-row sm:px-10">
               <Link
                 href={backHref}
-                className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                className="inline-flex w-full min-w-0 flex-1 items-center justify-center rounded-full border border-slate-300 px-6 py-2.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50"
               >
-                {backLabel}
+                <span className="w-full text-center">{backLabel}</span>
               </Link>
               {completed ? (
                 <button
@@ -728,9 +728,9 @@ export default function AomExamTest({
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link
                 href={backHref}
-                className="inline-flex flex-1 items-center justify-center rounded-full bg-linear-to-r from-violet-600 to-purple-600 px-6 py-2.5 text-sm font-semibold text-white"
+                className="inline-flex w-full min-w-0 flex-1 items-center justify-center rounded-full bg-linear-to-r from-violet-600 to-purple-600 px-6 py-2.5 text-center text-sm font-semibold text-white"
               >
-                {backLabel}
+                <span className="w-full text-center">{backLabel}</span>
               </Link>
               <button
                 type="button"
