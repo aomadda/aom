@@ -374,7 +374,6 @@ export const aomFinanceEstablishmentRulesTest06 = {
                         'After fifth CP',
                         'After sixth CP',
                         'After seventh CP',
-                        ''
                     ],
                     correct: 2,
                     explanation: 'After sixth CP is the correct answer.',
