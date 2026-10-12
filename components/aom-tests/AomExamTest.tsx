@@ -102,6 +102,105 @@ function getSectionForIndex(sections: AomExamPaperSection[], index: number) {
   )
 }
 
+function collapseQuestionText(value: string) {
+  return value.replace(/\s+/g, ' ').trim()
+}
+
+function splitStatementQuestion(raw: string) {
+  const match = raw.match(
+    /^([\s\S]*?)(?:^|\s)\([Aa]\)\s+([\s\S]*?)(?:^|\s)\([Bb]\)\s+([\s\S]*)$/,
+  )
+  if (!match) return null
+
+  const lead = collapseQuestionText(match[1])
+  const statementA = collapseQuestionText(match[2])
+  let statementB = match[3]
+  let tail = ''
+  const tailMatch = statementB.match(/^([\s\S]*?[.])\s+(Provided\b[\s\S]*)$/i)
+  if (tailMatch) {
+    statementB = tailMatch[1]
+    tail = collapseQuestionText(tailMatch[2])
+  }
+  statementB = collapseQuestionText(statementB)
+  if (!statementA || !statementB) return null
+
+  return {
+    lead,
+    statements: [
+      { label: 'A', text: statementA },
+      { label: 'B', text: statementB },
+    ],
+    tail,
+  }
+}
+
+function StatementCards({
+  parts,
+}: {
+  parts: NonNullable<ReturnType<typeof splitStatementQuestion>>
+}) {
+  return (
+    <>
+      <ul className="space-y-2.5">
+        {parts.statements.map((statement) => (
+          <li
+            key={statement.label}
+            className="flex items-start gap-3 rounded-xl border border-indigo-100 bg-indigo-50/70 px-3 py-3"
+          >
+            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-xs font-bold text-white">
+              {statement.label}
+            </span>
+            <p className="min-w-0 text-sm leading-relaxed text-slate-800 sm:text-base">{statement.text}</p>
+          </li>
+        ))}
+      </ul>
+      {parts.tail ? (
+        <p className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
+          {parts.tail}
+        </p>
+      ) : null}
+    </>
+  )
+}
+
+function ExamQuestionPrompt({ number, question }: { number: number; question: string }) {
+  const parts = splitStatementQuestion(question)
+  if (!parts) {
+    return (
+      <h2 className="mb-5 text-base leading-relaxed font-semibold text-slate-900 sm:text-lg">
+        {number}. {question}
+      </h2>
+    )
+  }
+
+  return (
+    <div className="mb-5">
+      <h2 className="text-base leading-relaxed font-semibold text-slate-900 sm:text-lg">
+        {number}.{parts.lead ? ` ${parts.lead}` : null}
+      </h2>
+      <div className="mt-4">
+        <StatementCards parts={parts} />
+      </div>
+    </div>
+  )
+}
+
+function AnswerQuestionBody({ question }: { question: string }) {
+  const parts = splitStatementQuestion(question)
+  if (!parts) {
+    return <p className="mb-4 text-sm leading-relaxed text-slate-300 sm:text-base">{question}</p>
+  }
+
+  return (
+    <div className="mb-4">
+      {parts.lead ? (
+        <p className="mb-4 text-sm leading-relaxed text-slate-200 sm:text-base">{parts.lead}</p>
+      ) : null}
+      <StatementCards parts={parts} />
+    </div>
+  )
+}
+
 function StatusSwatch({ status }: { status: AomQuestionStatus }) {
   return (
     <span
@@ -521,48 +620,46 @@ export default function AomExamTest({
 
   if (phase === 'instructions') {
     return (
-      <div className="min-h-screen bg-linear-to-br from-violet-50 via-purple-50 to-fuchsia-50 px-4 py-8 sm:py-12">
+      <div className="min-h-screen bg-[#eef2f8] px-4 py-8 sm:py-12">
         <div className="mx-auto max-w-4xl">
-          <div className="overflow-hidden rounded-3xl border border-white/60 bg-white/95 shadow-2xl shadow-violet-950/10">
-            <div className="relative overflow-hidden bg-linear-to-r from-violet-700 via-purple-700 to-fuchsia-700 px-6 py-8 text-white sm:px-10">
-              <div className="pointer-events-none absolute -left-10 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-              <div className="pointer-events-none absolute -right-8 bottom-0 h-36 w-36 rounded-full bg-fuchsia-300/20 blur-3xl" />
-              <p className="relative text-xs font-semibold tracking-[0.2em] text-violet-100 uppercase">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <div className="bg-indigo-600 px-6 py-8 text-center text-white sm:px-10">
+              <p className="text-xs font-semibold tracking-[0.2em] text-indigo-100 uppercase">
                 AOM Tests
               </p>
-              <h1 className="relative mt-2 text-2xl font-bold sm:text-3xl">{title}</h1>
-              <p className="relative mt-2 max-w-2xl text-sm text-violet-100 sm:text-base">
+              <h1 className="mt-2 text-2xl font-bold sm:text-3xl">{title}</h1>
+              <p className="mx-auto mt-2 max-w-2xl text-sm text-indigo-100 sm:text-base">
                 Read the instructions carefully before you start. The timer begins only after you
                 begin the exam.
               </p>
             </div>
 
             <div className="grid gap-4 px-6 py-6 sm:grid-cols-3 sm:px-10">
-              <div className="rounded-2xl border border-violet-100 bg-violet-50 p-4">
-                <p className="text-xs font-semibold tracking-wide text-violet-600 uppercase">
+              <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4 text-center">
+                <p className="text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                   Questions
                 </p>
-                <p className="mt-1 text-2xl font-bold text-violet-900">{questions.length}</p>
+                <p className="mt-1 text-2xl font-bold text-slate-900">{questions.length}</p>
                 {hasPaperNav ? (
-                  <p className="text-xs text-violet-700">
+                  <p className="text-xs text-indigo-700">
                     {paperSections.length} {sectionNounPlural} in one test
                   </p>
                 ) : null}
               </div>
-              <div className="rounded-2xl border border-purple-100 bg-purple-50 p-4">
-                <p className="text-xs font-semibold tracking-wide text-purple-600 uppercase">
+              <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4 text-center">
+                <p className="text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                   Duration
                 </p>
-                <p className="mt-1 text-2xl font-bold text-purple-900">{durationMinutes} min</p>
-                <p className="text-xs text-purple-700">
+                <p className="mt-1 text-2xl font-bold text-slate-900">{durationMinutes} min</p>
+                <p className="text-xs text-indigo-700">
                   {AOM_EXAM_SECONDS_PER_QUESTION / 60} minute per question
                 </p>
               </div>
-              <div className="rounded-2xl border border-rose-100 bg-rose-50 p-4">
+              <div className="rounded-2xl border border-rose-100 bg-rose-50 p-4 text-center">
                 <p className="text-xs font-semibold tracking-wide text-rose-600 uppercase">
                   Marking
                 </p>
-                <p className="mt-1 text-2xl font-bold text-rose-900">
+                <p className="mt-1 text-2xl font-bold text-slate-900">
                   +{AOM_EXAM_POSITIVE_MARK} / −{AOM_EXAM_NEGATIVE_MARK}
                 </p>
                 <p className="text-xs text-rose-700">Unanswered questions carry 0 marks</p>
@@ -570,8 +667,8 @@ export default function AomExamTest({
             </div>
 
             <div className="space-y-3 px-6 pb-6 sm:px-10">
-              <h2 className="text-lg font-bold text-slate-800">Exam instructions</h2>
-              <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-slate-600">
+              <h2 className="text-lg font-bold text-slate-900">Exam instructions</h2>
+              <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-slate-700 marker:font-semibold marker:text-indigo-600">
                 <li>The total time is based on the number of questions in this paper.</li>
                 {hasPaperNav ? (
                   <li>
@@ -600,7 +697,7 @@ export default function AomExamTest({
             </div>
 
             {hasPaperNav ? (
-              <div className="mx-6 mb-6 rounded-2xl border border-violet-100 bg-violet-50/70 p-4 sm:mx-10">
+              <div className="mx-6 mb-6 rounded-2xl border border-indigo-100 bg-indigo-50 p-4 sm:mx-10">
                 <h3 className="mb-3 text-sm font-bold text-slate-800">{sectionsHeading}</h3>
                 <ul className="space-y-2 text-sm text-slate-700">
                   {paperSections.map((section, index) => (
@@ -608,7 +705,7 @@ export default function AomExamTest({
                       <span>
                         {index + 1}. {section.title}
                       </span>
-                      <span className="shrink-0 text-xs font-semibold text-violet-700">
+                      <span className="shrink-0 text-xs font-semibold text-indigo-700">
                         {section.count} questions
                       </span>
                     </li>
@@ -636,21 +733,21 @@ export default function AomExamTest({
             ) : null}
 
             {!completed ? (
-              <label className="mx-6 mb-6 flex items-start gap-3 rounded-2xl border border-violet-100 bg-violet-50/70 px-4 py-3 text-sm text-slate-700 sm:mx-10">
+              <label className="mx-6 mb-6 flex items-start gap-3 rounded-2xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm text-slate-700 sm:mx-10">
                 <input
                   type="checkbox"
                   checked={acceptedRules}
                   onChange={(event) => setAcceptedRules(event.target.checked)}
-                  className="mt-0.5 h-4 w-4 rounded border-violet-300 text-violet-600"
+                  className="mt-0.5 h-4 w-4 rounded border-indigo-300 text-indigo-600"
                 />
                 I have read and understood the instructions, marking scheme, and timer rules.
               </label>
             ) : null}
 
-            <div className="flex flex-col gap-3 border-t border-slate-100 px-6 py-5 sm:flex-row sm:px-10">
+            <div className="flex flex-col gap-3 border-t border-slate-200 px-6 py-5 sm:flex-row sm:px-10">
               <Link
                 href={backHref}
-                className="inline-flex w-full min-w-0 flex-1 items-center justify-center rounded-full border border-slate-300 px-6 py-2.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                className="inline-flex w-full min-w-0 flex-1 items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-center text-sm font-semibold text-slate-700"
               >
                 <span className="w-full text-center">{backLabel}</span>
               </Link>
@@ -658,7 +755,7 @@ export default function AomExamTest({
                 <button
                   type="button"
                   onClick={openStoredResults}
-                  className="inline-flex flex-1 items-center justify-center rounded-full bg-linear-to-r from-violet-600 to-purple-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg hover:from-violet-700 hover:to-purple-700"
+                  className="inline-flex flex-1 items-center justify-center rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700"
                 >
                   View result
                 </button>
@@ -667,7 +764,7 @@ export default function AomExamTest({
                   type="button"
                   disabled={!acceptedRules}
                   onClick={() => startExam(hasResume)}
-                  className="inline-flex flex-1 items-center justify-center rounded-full bg-linear-to-r from-violet-600 to-purple-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg hover:from-violet-700 hover:to-purple-700 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="inline-flex flex-1 items-center justify-center rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {hasResume ? 'Resume exam' : 'Start exam'}
                 </button>
@@ -784,9 +881,7 @@ export default function AomExamTest({
                               {skipped ? 'Unanswered' : isCorrect ? 'Correct' : 'Wrong (−0.33)'}
                             </span>
                           </div>
-                          <p className="mb-4 text-sm leading-relaxed text-slate-300 sm:text-base">
-                            {question.question}
-                          </p>
+                          <AnswerQuestionBody question={question.question} />
                           <div className="space-y-2.5">
                             {question.options.map((option, optionIndex) => {
                               const isCorrectOption = optionIndex === question.correct
@@ -867,27 +962,27 @@ export default function AomExamTest({
   }
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-violet-50 via-purple-50 to-fuchsia-50 px-3 py-4 sm:px-4 sm:py-6">
+    <div className="min-h-screen bg-[#eef2f8] px-3 py-4 sm:px-4 sm:py-6">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-4 flex flex-col gap-3 rounded-2xl bg-white px-4 py-3 shadow-lg sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="mb-4 flex flex-col gap-3 rounded-2xl bg-indigo-600 px-4 py-4 text-white shadow-md sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div>
-            <p className="text-xs font-semibold tracking-wide text-violet-600 uppercase">
+            <p className="text-xs font-semibold tracking-wide text-indigo-100 uppercase">
               AOM Tests
             </p>
-            <h1 className="text-lg font-bold text-slate-800 sm:text-xl">{title}</h1>
+            <h1 className="text-lg font-bold sm:text-xl">{title}</h1>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+            <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white">
               Q {localQuestion + 1} / {activeSection.count}
             </span>
             {hasPaperNav ? (
-              <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
+              <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-indigo-50">
                 Total {currentQuestion + 1} / {questions.length}
               </span>
             ) : null}
             <span
               className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-sm font-bold ${
-                timerUrgent ? 'bg-red-100 text-red-700' : 'bg-violet-100 text-violet-800'
+                timerUrgent ? 'bg-rose-500 text-white' : 'bg-white text-indigo-700'
               }`}
               aria-live="polite"
             >
@@ -918,22 +1013,22 @@ export default function AomExamTest({
                   aria-current={isActive ? 'page' : undefined}
                   className={
                     compactSectionNav
-                      ? `rounded-xl border-2 px-3 py-2 text-left shadow-sm transition ${
+                      ? `rounded-xl border px-3 py-2 text-left shadow-sm transition ${
                           isActive
-                            ? 'border-violet-600 bg-violet-600 text-white shadow-md'
-                            : 'border-white bg-white text-slate-800 hover:border-violet-300'
+                            ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
+                            : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300'
                         }`
-                      : `rounded-2xl border-2 px-4 py-3 text-left shadow-sm transition ${
+                      : `rounded-2xl border px-4 py-3 text-left shadow-sm transition ${
                           isActive
-                            ? 'border-violet-600 bg-violet-600 text-white shadow-md'
-                            : 'border-white bg-white text-slate-800 hover:border-violet-300'
+                            ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
+                            : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300'
                         }`
                   }
                 >
                   <p className={`text-sm font-bold ${isActive ? 'text-white' : 'text-slate-800'}`}>
                     {section.title}
                   </p>
-                  <p className={`mt-0.5 text-xs ${isActive ? 'text-violet-100' : 'text-slate-500'}`}>
+                  <p className={`mt-0.5 text-xs ${isActive ? 'text-indigo-100' : 'text-slate-500'}`}>
                     {answered}/{section.count} answered
                   </p>
                 </button>
@@ -943,15 +1038,13 @@ export default function AomExamTest({
         ) : null}
 
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px]">
-          <div className="rounded-2xl bg-white p-4 shadow-lg sm:p-6">
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
             {hasPaperNav ? (
-              <p className="mb-2 text-xs font-semibold tracking-wide text-violet-600 uppercase">
+              <p className="mb-2 text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                 {activeSection.title}
               </p>
             ) : null}
-            <h2 className="mb-5 text-base leading-relaxed font-semibold text-slate-800 sm:text-lg">
-              {localQuestion + 1}. {question.question}
-            </h2>
+            <ExamQuestionPrompt number={localQuestion + 1} question={question.question} />
             <div className="space-y-2.5">
               {question.options.map((option, index) => {
                 const isSelected = selected === index
@@ -961,15 +1054,15 @@ export default function AomExamTest({
                       type="button"
                       onClick={() => selectAnswer(index)}
                       aria-pressed={isSelected}
-                      className={`flex min-w-0 flex-1 items-center gap-3 rounded-xl border-2 px-3 py-3 text-left transition ${
+                      className={`flex min-w-0 flex-1 items-center gap-3 rounded-xl border px-3 py-3 text-left transition ${
                         isSelected
-                          ? 'border-violet-500 bg-violet-50 text-violet-900 shadow-sm'
-                          : 'border-slate-200 hover:border-violet-300 hover:bg-violet-50/60'
+                          ? 'border-indigo-500 bg-indigo-50 text-indigo-950 shadow-sm'
+                          : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300 hover:bg-indigo-50/50'
                       }`}
                     >
                       <span
                         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                          isSelected ? 'bg-violet-600 text-white' : 'bg-slate-100 text-slate-600'
+                          isSelected ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600'
                         }`}
                       >
                         {String.fromCharCode(65 + index)}
@@ -981,7 +1074,7 @@ export default function AomExamTest({
                         type="button"
                         onClick={clearResponse}
                         aria-label="Clear selected answer"
-                        className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-red-200 bg-red-50 text-red-600 transition hover:bg-red-100"
+                        className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-rose-200 bg-rose-50 text-rose-600 transition hover:bg-rose-100"
                       >
                         <Trash2 className="h-4 w-4" />
                       </button>
@@ -997,7 +1090,7 @@ export default function AomExamTest({
                   type="button"
                   onClick={() => currentQuestion > 0 && goToQuestion(currentQuestion - 1)}
                   disabled={currentQuestion === 0}
-                  className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 disabled:opacity-40"
+                  className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 disabled:opacity-40"
                 >
                   Previous
                 </button>
@@ -1006,8 +1099,8 @@ export default function AomExamTest({
                   onClick={toggleReview}
                   className={`rounded-lg px-4 py-2 text-sm font-semibold ${
                     markedForReview[currentQuestion]
-                      ? 'bg-violet-600 text-white'
-                      : 'bg-violet-100 text-violet-800'
+                      ? 'bg-indigo-600 text-white'
+                      : 'border border-indigo-200 bg-indigo-50 text-indigo-700'
                   }`}
                 >
                   Review
@@ -1017,7 +1110,7 @@ export default function AomExamTest({
                 <button
                   type="button"
                   onClick={() => setShowSubmitConfirm(true)}
-                  className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
+                  className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
                 >
                   Submit test
                 </button>
@@ -1025,7 +1118,7 @@ export default function AomExamTest({
                 <button
                   type="button"
                   onClick={saveAndNext}
-                  className="rounded-lg bg-linear-to-r from-violet-600 to-purple-600 px-4 py-2 text-sm font-semibold text-white"
+                  className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
                 >
                   Save & next
                 </button>
@@ -1034,7 +1127,7 @@ export default function AomExamTest({
           </div>
 
           <aside className="space-y-4">
-            <div className="rounded-2xl bg-white p-4 shadow-lg sm:p-5">
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
               <h3 className="text-sm font-bold text-slate-800">Question palette</h3>
               {hasPaperNav ? (
                 <p className="mb-3 mt-1 text-xs text-slate-500">{activeSection.title}</p>
@@ -1055,7 +1148,7 @@ export default function AomExamTest({
                       type="button"
                       onClick={() => goToQuestion(index)}
                       className={`relative flex h-11 items-center justify-center rounded-lg text-sm font-bold ${STATUS_STYLES[status]} ${
-                        currentQuestion === index ? 'ring-2 ring-offset-2 ring-slate-800' : ''
+                        currentQuestion === index ? 'ring-2 ring-indigo-600 ring-offset-2 ring-offset-white' : ''
                       }`}
                       aria-label={`Question ${localIndex + 1}, ${status}`}
                     >
@@ -1071,7 +1164,7 @@ export default function AomExamTest({
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-lg sm:p-5">
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
               <h3 className="mb-3 text-sm font-bold text-slate-800">Status legend</h3>
               <div className="space-y-2.5">
                 {LEGEND.map((item) => (
@@ -1096,17 +1189,17 @@ export default function AomExamTest({
       </div>
 
       {showSubmitConfirm ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 px-4">
-          <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl">
-            <div className="mb-3 flex items-center gap-2 text-amber-700">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 px-4">
+          <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
+            <div className="mb-3 flex items-center gap-2 text-amber-600">
               <AlertTriangle className="h-5 w-5" />
-              <h2 className="text-lg font-bold text-slate-800">Submit test?</h2>
+              <h2 className="text-lg font-bold text-slate-900">Submit test?</h2>
             </div>
             <p className="mb-4 text-sm text-slate-600">
               You cannot change answers after submitting. Negative marks of {AOM_EXAM_NEGATIVE_MARK}{' '}
               will be applied for each wrong answer.
             </p>
-            <div className="mb-5 grid grid-cols-2 gap-2 text-sm">
+            <div className="mb-5 grid grid-cols-2 gap-2 text-sm text-slate-700">
               <p>Answered: {counts.answered}</p>
               <p>Not answered: {counts.notAnswered + counts.notVisited}</p>
               <p>Marked for review: {counts.review}</p>
@@ -1116,14 +1209,14 @@ export default function AomExamTest({
               <button
                 type="button"
                 onClick={() => setShowSubmitConfirm(false)}
-                className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700"
+                className="flex-1 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700"
               >
                 Continue exam
               </button>
               <button
                 type="button"
                 onClick={() => finishExam(userAnswers)}
-                className="flex-1 rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white"
+                className="flex-1 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
               >
                 Submit
               </button>

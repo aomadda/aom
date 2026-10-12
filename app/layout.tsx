@@ -14,9 +14,36 @@ const poppins = Poppins({
   weight: ["600", "700"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aomadda.com";
+const description =
+  "AOM Adda is an online preparation platform, designed for candidates studying for the Assistant Operations Manager (AOM) and related departmental or promotional examinations.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "AOM Adda",
-  description: "AOM Adda is an online preparation platform, designed for candidates studying for the Assistant Operations Manager (AOM) and related departmental or promotional examinations.",
+  description,
+  openGraph: {
+    title: "AOM Adda",
+    description,
+    url: siteUrl,
+    siteName: "AOM Adda",
+    type: "website",
+    images: [
+      {
+        url: "/profile.jpeg",
+        width: 736,
+        height: 736,
+        alt: "AOM Aspirant profile",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AOM Adda",
+    description,
+    images: ["/profile.jpeg"],
+  },
   icons: {
     icon: [{ url: "/favicon.png?v=2", type: "image/png" }],
     shortcut: [{ url: "/favicon.png?v=2", type: "image/png" }],
