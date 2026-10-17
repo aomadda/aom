@@ -1,5 +1,7 @@
 'use client'
 
+import QuizAttemptFooter from '@/components/quizzes/QuizAttemptFooter'
+
 import Link from 'next/link'
 import { useParams, usePathname } from 'next/navigation'
 
@@ -93,26 +95,7 @@ export default function GeneralAwarenessTopicQuizzesPage() {
                       Practice {topic.examTitle} {label} questions in exam mode
                     </p>
 
-                    <div className="mt-auto border-t border-gray-200 pt-4">
-                      <div
-                        className={`inline-flex items-center bg-linear-to-r ${topic.color} bg-clip-text text-sm font-semibold text-transparent`}
-                      >
-                        Open test
-                        <svg
-                          className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </div>
-                    </div>
+                    <QuizAttemptFooter href={href} colorClass={topic.color} />
                   </div>
                 </div>
               </Link>

@@ -1,5 +1,7 @@
 'use client'
 
+import QuizAttemptFooter from '@/components/quizzes/QuizAttemptFooter'
+
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -70,26 +72,7 @@ const GeneralSubsidiaryRulesQuizzesPage = () => {
                       {chapter.description}
                     </p>
 
-                    <div className="mt-auto border-t border-gray-200 pt-4">
-                      <div
-                        className={`inline-flex items-center bg-linear-to-r ${chapter.color} bg-clip-text text-sm font-semibold text-transparent`}
-                      >
-                        Open test
-                        <svg
-                          className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          >
-                            <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                      </div>
-                    </div>
+                    <QuizAttemptFooter href={href} colorClass={chapter.color} />
                   </div>
                 </div>
               </Link>

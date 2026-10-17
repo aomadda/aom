@@ -1679,6 +1679,11 @@ type AbbreviationItem = {
         explanation: "Kavach",
         reference: "--"
       },
+      
+      { acronym: "IRBMS", fullForm: "Indian Railways Bridge Management System",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { acronym: "IRCA", fullForm: "Indian Railway Conference Association",
         explanation: "Will be added later",
         reference: "--"

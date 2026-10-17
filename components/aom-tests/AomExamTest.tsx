@@ -6,10 +6,12 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   AlertTriangle,
   Check,
+  ChevronRight,
   Clock,
   Trash2,
 } from 'lucide-react'
 
+import { getNextQuiz } from '@/lib/next-quiz'
 import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
 import {
   bindQuizSessionFlush,
@@ -427,7 +429,45 @@ export default function AomExamTest({
     if (restoredRef.current) return
     restoredRef.current = true
 
+    const params = new URLSearchParams(window.location.search)
+    const reattempt = params.get('reattempt') === '1'
+    if (reattempt) {
+      try {
+        window.localStorage.removeItem(scopedQuizStorageKey(resultsKey))
+      } catch {
+        // ignore storage failures
+      }
+      clearSession()
+      params.delete('reattempt')
+      const nextSearch = params.toString()
+      window.history.replaceState(null, '', `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ''}`)
+    }
+    const viewResult = !reattempt && params.get('view') === 'result'
+
     ;(async () => {
+      if (reattempt) {
+        setCompleted(false)
+        setHasResume(false)
+        setPhase('instructions')
+        return
+      }
+
+      if (viewResult) {
+        try {
+          const raw = window.localStorage.getItem(scopedQuizStorageKey(resultsKey))
+          const parsed = raw ? (JSON.parse(raw) as StoredResult) : null
+          if (parsed?.answers?.length === questions.length) {
+            setUserAnswers(answerArray(questions.length, parsed.answers))
+            setCompleted(true)
+            finishedRef.current = true
+            setPhase('results')
+            return
+          }
+        } catch {
+          // fall through to the normal restore path
+        }
+      }
+
       let alreadyDone = false
       try {
         const response = await fetch('/api/progress')
@@ -455,14 +495,27 @@ export default function AomExamTest({
       const liveSession = candidates.find((row) => row.endsAt > Date.now())
       const expiredSession = liveSession ? null : candidates[0]
 
-      if (alreadyDone) {
-        if (!liveSession) clearSession()
-        setPhase('instructions')
-        return
+      let hasStoredResult = false
+      try {
+        const raw = window.localStorage.getItem(scopedQuizStorageKey(resultsKey))
+        const parsed = raw ? (JSON.parse(raw) as StoredResult) : null
+        hasStoredResult = Boolean(parsed?.answers?.length === questions.length)
+      } catch {
+        hasStoredResult = false
+      }
+      if (hasStoredResult) {
+        alreadyDone = true
+        setCompleted(true)
       }
 
       if (liveSession && applySession(liveSession)) {
         setPhase('exam')
+        return
+      }
+
+      if (alreadyDone) {
+        clearSession()
+        setPhase('instructions')
         return
       }
 
@@ -475,7 +528,27 @@ export default function AomExamTest({
 
       setPhase('instructions')
     })()
-  }, [applySession, categoryId, clearSession, finishExam, questions.length, quizId, sessionKey])
+  }, [applySession, categoryId, clearSession, finishExam, questions.length, quizId, resultsKey, sessionKey])
+
+  const reattemptExam = useCallback(() => {
+    try {
+      window.localStorage.removeItem(scopedQuizStorageKey(resultsKey))
+    } catch {
+      // ignore storage failures
+    }
+    clearSession()
+    finishedRef.current = false
+    setCompleted(false)
+    setHasResume(false)
+    setAcceptedRules(false)
+    setShowSubmitConfirm(false)
+    setCurrentQuestion(0)
+    setUserAnswers(answerArray(questions.length))
+    setVisited(boolArray(questions.length))
+    setMarkedForReview(boolArray(questions.length))
+    setTimeLeft(durationSeconds)
+    setPhase('instructions')
+  }, [clearSession, durationSeconds, questions.length, resultsKey])
 
   const openStoredResults = useCallback(() => {
     try {
@@ -752,13 +825,22 @@ export default function AomExamTest({
                 <span className="w-full text-center">{backLabel}</span>
               </Link>
               {completed ? (
-                <button
-                  type="button"
-                  onClick={openStoredResults}
-                  className="inline-flex flex-1 items-center justify-center rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700"
-                >
-                  View result
-                </button>
+                <>
+                  <button
+                    type="button"
+                    onClick={openStoredResults}
+                    className="inline-flex flex-1 items-center justify-center rounded-full bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700"
+                  >
+                    View Result
+                  </button>
+                  <button
+                    type="button"
+                    onClick={reattemptExam}
+                    className="inline-flex flex-1 items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+                  >
+                    Re-attempt
+                  </button>
+                </>
               ) : (
                 <button
                   type="button"
@@ -778,6 +860,7 @@ export default function AomExamTest({
 
   if (phase === 'results') {
     const result = scoreExam(questions, userAnswers)
+    const nextQuiz = getNextQuiz(categoryId, quizId)
     return (
       <div className="min-h-screen bg-slate-950 px-4 py-8 sm:py-12">
         <div className="mx-auto max-w-6xl">
@@ -835,6 +918,13 @@ export default function AomExamTest({
                 className="inline-flex flex-1 items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white"
               >
                 View dashboard
+              </button>
+              <button
+                type="button"
+                onClick={reattemptExam}
+                className="inline-flex flex-1 items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white"
+              >
+                Re-attempt
               </button>
             </div>
           </div>
@@ -944,6 +1034,22 @@ export default function AomExamTest({
                 </ol>
               </div>
             ))}
+            {nextQuiz ? (
+              <div className="flex justify-end border-t border-white/10 px-5 py-5 sm:px-8">
+                <Link
+                  href={nextQuiz.href}
+                  className="inline-flex max-w-full items-center gap-2 rounded-full bg-linear-to-r from-violet-600 to-fuchsia-600 px-5 py-2.5 text-sm font-semibold text-white"
+                >
+                  <span className="min-w-0 text-right">
+                    <span className="block text-[11px] font-medium tracking-wide text-violet-100 uppercase">
+                      Next
+                    </span>
+                    <span className="block">{nextQuiz.title}</span>
+                  </span>
+                  <ChevronRight className="h-4 w-4 shrink-0" />
+                </Link>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

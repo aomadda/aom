@@ -8,6 +8,12 @@ import { ArrowRight, Search, X } from 'lucide-react'
 import { searchTopics } from '@/lib/search-topics'
 import { filterTopics } from '@/lib/topic-search'
 
+export const GLOBAL_SEARCH_OPEN_EVENT = 'aom:open-search'
+
+export function requestOpenGlobalSearch() {
+  window.dispatchEvent(new Event(GLOBAL_SEARCH_OPEN_EVENT))
+}
+
 const GlobalSearch = () => {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
@@ -32,7 +38,17 @@ const GlobalSearch = () => {
     setActiveIndex(0)
   }
 
-  const results = useMemo(() => filterTopics(query), [query])
+  const results = useMemo(() => {
+    const trimmed = query.trim()
+    if (!trimmed) {
+      return [...searchTopics].sort(
+        (a, b) =>
+          a.title.localeCompare(b.title, 'en', { sensitivity: 'base' }) ||
+          a.href.localeCompare(b.href),
+      )
+    }
+    return filterTopics(trimmed)
+  }, [query])
 
   const close = useCallback(() => {
     setOpen(false)
@@ -50,6 +66,12 @@ const GlobalSearch = () => {
     const id = window.setTimeout(() => inputRef.current?.focus(), 30)
     return () => window.clearTimeout(id)
   }, [open])
+
+  useEffect(() => {
+    const onOpen = () => openSearch()
+    window.addEventListener(GLOBAL_SEARCH_OPEN_EVENT, onOpen)
+    return () => window.removeEventListener(GLOBAL_SEARCH_OPEN_EVENT, onOpen)
+  }, [openSearch])
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -110,15 +132,6 @@ const GlobalSearch = () => {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={openSearch}
-        aria-label="Search topics"
-        className="fixed bottom-5 right-5 z-60 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-linear-to-br from-violet-600 to-blue-600 text-white shadow-xl shadow-violet-900/30 ring-1 ring-white/20 transition hover:scale-105 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-300 focus-visible:ring-offset-2 sm:bottom-6 sm:right-6"
-      >
-        <Search className="h-5 w-5 lg:h-6 lg:w-6" strokeWidth={2.25} />
-      </button>
-
       {open ? (
         <div className="fixed inset-0 z-70 flex items-start justify-center px-3 pt-[12vh] sm:px-4">
           <button
@@ -162,12 +175,8 @@ const GlobalSearch = () => {
               )}
             </div>
 
-            <div ref={listRef} className="max-h-[min(60vh,28rem)] overflow-y-auto px-2 py-0 sm:px-3">
-              {!query.trim() ? (
-                <p className="px-1 py-0 text-center text-sm text-slate-500">
-                  
-                </p>
-              ) : results.length === 0 ? (
+            <div ref={listRef} className="max-h-[min(60vh,28rem)] overflow-y-auto px-2 py-2 sm:px-3">
+              {results.length === 0 ? (
                 <p className="px-1 py-3 text-center text-sm text-slate-500">
                   No topics found for &ldquo;{query.trim()}&rdquo;.
                 </p>

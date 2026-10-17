@@ -3,7 +3,9 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Search } from 'lucide-react'
 import AuthNav, { type AuthUser } from '@/components/AuthNav'
+import { requestOpenGlobalSearch } from '@/components/GlobalSearch'
 
 type TopicNavLink = { href: string; label: string; icon: string }
 
@@ -777,8 +779,19 @@ const Navbar = ({ user = null }: NavbarProps) => {
             </div>
           </div>
 
-          {/* Right — username + admin */}
+          {/* Right — search, username + admin */}
           <div className="ml-auto flex shrink-0 items-center gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setIsMobileMenuOpen(false)
+                requestOpenGlobalSearch()
+              }}
+              aria-label="Search topics"
+              className="inline-flex h-10 w-10 items-center justify-center text-white"
+            >
+              <Search className="h-5 w-5" strokeWidth={2.25} />
+            </button>
             <div className="hidden items-center gap-2.5 lg:flex">
               <AuthNav user={user} variant="desktop" />
               {user?.role === 'admin' ? (

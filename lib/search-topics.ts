@@ -22,12 +22,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness abbreviations Abbreviations",
   },
   {
-    href: "/topics/professional-subject/accident-inquiries",
-    title: "Accident Inquiries",
+    href: "/topics/operating-material/absolute-block-system",
+    title: "Absolute Block System",
     category: "Study Topics",
-    parent: "Topics › Professional Subject",
+    parent: "Topics › Operating Material",
     keywords:
-      "topics professional subject accident inquiries Accident Inquiries",
+      "topics operating material absolute block system Absolute Block System essentials G.R. 8.01 line clear class B station TALQ MAS",
   },
   {
     href: "/quizzes/professional-subject/accident-inquiries",
@@ -37,18 +37,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject accident inquiries Accident Inquiries",
   },
   {
+    href: "/topics/professional-subject/accident-inquiries",
+    title: "Accident Inquiries",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject accident inquiries Accident Inquiries",
+  },
+  {
     href: "/manuals/accident-manual",
     title: "Accident Manual",
     category: "Manuals",
     parent: "Manuals",
     keywords: "manuals accident manual Accident Manual",
-  },
-  {
-    href: "/topics/accident-manual",
-    title: "Accident Manual",
-    category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics accident manual Accident Manual classification duties reporting safety",
   },
   {
     href: "/quizzes/accident-manual",
@@ -57,7 +58,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes",
     keywords: "quizzes accident manual Accident Manual chapters appendix exam",
   },
-  
+  {
+    href: "/topics/accident-manual",
+    title: "Accident Manual",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics accident manual Accident Manual classification duties reporting safety",
+  },
   {
     href: "/quizzes/accident-manual/am-appendix-v",
     title: "Accident Manual Appendix V",
@@ -136,6 +143,71 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject accidents classification Accidents Classification",
   },
   {
+    href: "/quizzes/financial-rules/accounts",
+    title: "Accounts",
+    category: "Quizzes",
+    parent: "Quizzes › Financial Rules",
+    keywords: "quizzes financial rules accounts Accounts",
+  },
+  {
+    href: "/acts",
+    title: "Acts & Rules",
+    category: "Acts & Rules",
+    parent: "Acts & Rules",
+    keywords: "acts Acts & Rules",
+  },
+  {
+    href: "/topics/operating-material/adequate-distance",
+    title: "Adequate Distance",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material adequate distance Adequate Distance block overlap signal overlap G.R. 1.02(2) G.R. 8.01 3.40",
+  },
+  {
+    href: "/topics/operating-material/advanced-starter",
+    title: "Advanced Starter",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material advanced starter Advanced Starter LSS ATP MAS IB",
+  },
+  {
+    href: "/general-awareness/world-information/africa-countries",
+    title: "African Countries",
+    category: "General Awareness",
+
+    parent: "General Awareness › World Information",
+    keywords: "general awareness world information africa countries African Countries",
+  },
+  {
+    href: "/general-awareness/states-information/andaman-nicobar",
+    title: "Andaman Nicobar",
+    category: "General Awareness",
+    parent: "General Awareness › States Information",
+    keywords: "general awareness states information andaman nicobar Andaman Nicobar",
+  },
+  {
+    href: "/general-awareness/states-information/andhra-pradesh",
+    title: "Andhra Pradesh",
+    category: "General Awareness",
+    parent: "General Awareness › States Information",
+    keywords: "general awareness states information andhra pradesh Andhra Pradesh",
+  },
+  {
+    href: "/quizzes/establishment-rules/annual-performance-appraisal-report",
+    title: "Annual Performance Appraisal Report",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules apar annual performance appraisal report Annual Performance Appraisal Report",
+  },
+  {
+    href: "/topics/establishment-rules/apar",
+    title: "Annual Performance Appraisal Report",
+    category: "Study Topics",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules apar annual performance appraisal report Annual Performance Appraisal Report MACP benchmark",
+  },
+  {
     href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
     title: "AOM 30% LDCE 2022",
     category: "AOM Tests",
@@ -190,6 +262,414 @@ export const searchTopics: SearchTopic[] = [
     parent: "AOM Tests › AOM Previous Years Papers",
     keywords:
       "aom tests aom 70% ldce 2024 AOM 70% LDCE 2024 previous paper exam practice previous years operating wagons",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test01",
+    title: "AOM Finance & Establishment Rules Test 01",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 01 AOM Finance & Establishment Rules Test 01 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test02",
+    title: "AOM Finance & Establishment Rules Test 02",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 02 AOM Finance & Establishment Rules Test 02 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test03",
+    title: "AOM Finance & Establishment Rules Test 03",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 03 AOM Finance & Establishment Rules Test 03 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test04",
+    title: "AOM Finance & Establishment Rules Test 04",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 04 AOM Finance & Establishment Rules Test 04 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test05",
+    title: "AOM Finance & Establishment Rules Test 05",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 05 AOM Finance & Establishment Rules Test 05 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test06",
+    title: "AOM Finance & Establishment Rules Test 06",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 06 AOM Finance & Establishment Rules Test 06 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test07",
+    title: "AOM Finance & Establishment Rules Test 07",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 07 AOM Finance & Establishment Rules Test 07 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test08",
+    title: "AOM Finance & Establishment Rules Test 08",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 08 AOM Finance & Establishment Rules Test 08 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test09",
+    title: "AOM Finance & Establishment Rules Test 09",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 09 AOM Finance & Establishment Rules Test 09 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test10",
+    title: "AOM Finance & Establishment Rules Test 10",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 10 AOM Finance & Establishment Rules Test 10 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test11",
+    title: "AOM Finance & Establishment Rules Test 11",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 11 AOM Finance & Establishment Rules Test 11 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test12",
+    title: "AOM Finance & Establishment Rules Test 12",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 12 AOM Finance & Establishment Rules Test 12 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test13",
+    title: "AOM Finance & Establishment Rules Test 13",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 13 AOM Finance & Establishment Rules Test 13 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test14",
+    title: "AOM Finance & Establishment Rules Test 14",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 14 AOM Finance & Establishment Rules Test 14 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test15",
+    title: "AOM Finance & Establishment Rules Test 15",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 15 AOM Finance & Establishment Rules Test 15 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test16",
+    title: "AOM Finance & Establishment Rules Test 16",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 16 AOM Finance & Establishment Rules Test 16 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test17",
+    title: "AOM Finance & Establishment Rules Test 17",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 17 AOM Finance & Establishment Rules Test 17 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test18",
+    title: "AOM Finance & Establishment Rules Test 18",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 18 AOM Finance & Establishment Rules Test 18 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test19",
+    title: "AOM Finance & Establishment Rules Test 19",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 19 AOM Finance & Establishment Rules Test 19 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test20",
+    title: "AOM Finance & Establishment Rules Test 20",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 20 AOM Finance & Establishment Rules Test 20 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test21",
+    title: "AOM Finance & Establishment Rules Test 21",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 21 AOM Finance & Establishment Rules Test 21 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test22",
+    title: "AOM Finance & Establishment Rules Test 22",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 22 AOM Finance & Establishment Rules Test 22 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test23",
+    title: "AOM Finance & Establishment Rules Test 23",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 23 AOM Finance & Establishment Rules Test 23 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test24",
+    title: "AOM Finance & Establishment Rules Test 24",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 24 AOM Finance & Establishment Rules Test 24 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test25",
+    title: "AOM Finance & Establishment Rules Test 25",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 25 AOM Finance & Establishment Rules Test 25 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test26",
+    title: "AOM Finance & Establishment Rules Test 26",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 26 AOM Finance & Establishment Rules Test 26 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test27",
+    title: "AOM Finance & Establishment Rules Test 27",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 27 AOM Finance & Establishment Rules Test 27 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test28",
+    title: "AOM Finance & Establishment Rules Test 28",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 28 AOM Finance & Establishment Rules Test 28 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test29",
+    title: "AOM Finance & Establishment Rules Test 29",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 29 AOM Finance & Establishment Rules Test 29 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test30",
+    title: "AOM Finance & Establishment Rules Test 30",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 30 AOM Finance & Establishment Rules Test 30 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test31",
+    title: "AOM Finance & Establishment Rules Test 31",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 31 AOM Finance & Establishment Rules Test 31 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test32",
+    title: "AOM Finance & Establishment Rules Test 32",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 32 AOM Finance & Establishment Rules Test 32 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test33",
+    title: "AOM Finance & Establishment Rules Test 33",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 33 AOM Finance & Establishment Rules Test 33 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test34",
+    title: "AOM Finance & Establishment Rules Test 34",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 34 AOM Finance & Establishment Rules Test 34 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test35",
+    title: "AOM Finance & Establishment Rules Test 35",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 35 AOM Finance & Establishment Rules Test 35 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test36",
+    title: "AOM Finance & Establishment Rules Test 36",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 36 AOM Finance & Establishment Rules Test 36 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test37",
+    title: "AOM Finance & Establishment Rules Test 37",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 37 AOM Finance & Establishment Rules Test 37 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test38",
+    title: "AOM Finance & Establishment Rules Test 38",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 38 AOM Finance & Establishment Rules Test 38 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test39",
+    title: "AOM Finance & Establishment Rules Test 39",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 39 AOM Finance & Establishment Rules Test 39 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test40",
+    title: "AOM Finance & Establishment Rules Test 40",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 40 AOM Finance & Establishment Rules Test 40 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test41",
+    title: "AOM Finance & Establishment Rules Test 41",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 41 AOM Finance & Establishment Rules Test 41 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test42",
+    title: "AOM Finance & Establishment Rules Test 42",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 42 AOM Finance & Establishment Rules Test 42 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test43",
+    title: "AOM Finance & Establishment Rules Test 43",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 43 AOM Finance & Establishment Rules Test 43 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test44",
+    title: "AOM Finance & Establishment Rules Test 44",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 44 AOM Finance & Establishment Rules Test 44 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test45",
+    title: "AOM Finance & Establishment Rules Test 45",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 45 AOM Finance & Establishment Rules Test 45 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test46",
+    title: "AOM Finance & Establishment Rules Test 46",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 46 AOM Finance & Establishment Rules Test 46 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test47",
+    title: "AOM Finance & Establishment Rules Test 47",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 47 AOM Finance & Establishment Rules Test 47 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test48",
+    title: "AOM Finance & Establishment Rules Test 48",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 48 AOM Finance & Establishment Rules Test 48 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test49",
+    title: "AOM Finance & Establishment Rules Test 49",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 49 AOM Finance & Establishment Rules Test 49 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test50",
+    title: "AOM Finance & Establishment Rules Test 50",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests test 50 AOM Finance & Establishment Rules Test 50 paper mock",
+  },
+  {
+    href: "/aom-tests/aom-finance-establishment-rules-tests",
+    title: "AOM Finance & Establishment Rules Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
+    keywords:
+      "aom tests aom finance establishment rules tests AOM Finance & Establishment Rules Tests accounts tenders budget",
   },
   {
     href: "/aom-tests/aom-gk-rajabhasha-tests/aom-gk-rajabhasha-test01",
@@ -590,6 +1070,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "AOM Tests › AOM GK & Rajabhasha Tests",
     keywords:
       "aom tests gk rajabhasha test 50 AOM GK Rajabhasha Test 50 paper mock Hindi",
+  },
+  {
+    href: "/aom-tests/aom-gk-rajabhasha-tests",
+    title: "AOM GK & Rajabhasha Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests",
+    keywords: "aom tests gk rajabhasha GK Rajabhasha general knowledge official language Hindi",
   },
   {
     href: "/aom-tests/aom-model-tests",
@@ -1005,7 +1492,14 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "aom tests professional subject test 50 AOM Professional Subject Test 50 paper mock operating G&SR signalling goods train average speed BG 2024-25",
   },
-
+  {
+    href: "/aom-tests/aom-professional-subject-tests",
+    title: "AOM Professional Subject Tests",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Professional Subject Tests",
+    keywords:
+      "aom tests aom professional subject tests AOM Professional Subject Tests operating G&SR manuals signalling",
+  },
   {
     href: "/topics/aom-special",
     title: "AOM Special",
@@ -1020,80 +1514,6 @@ export const searchTopics: SearchTopic[] = [
     category: "AOM Tests",
     parent: "AOM Tests",
     keywords: "aom tests AOM Tests exam mock test departmental promotional",
-  },
-
-  {
-    href: "/quizzes/financial-rules/accounts",
-    title: "Accounts",
-    category: "Quizzes",
-    parent: "Quizzes › Financial Rules",
-    keywords: "quizzes financial rules accounts Accounts",
-  },
-  {
-    href: "/acts",
-    title: "Acts & Rules",
-    category: "Acts & Rules",
-    parent: "Acts & Rules",
-    keywords: "acts Acts & Rules",
-  },
-  {
-    href: "/topics/operating-material/absolute-block-system",
-    title: "Absolute Block System",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material absolute block system Absolute Block System essentials G.R. 8.01 line clear class B station TALQ MAS",
-  },
-  {
-    href: "/topics/operating-material/adequate-distance",
-    title: "Adequate Distance",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material adequate distance Adequate Distance block overlap signal overlap G.R. 1.02(2) G.R. 8.01 3.40",
-  },
-  {
-    href: "/topics/operating-material/advanced-starter",
-    title: "Advanced Starter",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material advanced starter Advanced Starter LSS ATP MAS IB",
-  },
-  {
-    href: "/general-awareness/world-information/africa-countries",
-    title: "African Countries",
-    category: "General Awareness",
-
-    parent: "General Awareness › World Information",
-    keywords: "general awareness world information africa countries African Countries",
-  },
-  {
-    href: "/general-awareness/states-information/andaman-nicobar",
-    title: "Andaman Nicobar",
-    category: "General Awareness",
-    parent: "General Awareness › States Information",
-    keywords: "general awareness states information andaman nicobar Andaman Nicobar",
-  },
-  {
-    href: "/general-awareness/states-information/andhra-pradesh",
-    title: "Andhra Pradesh",
-    category: "General Awareness",
-    parent: "General Awareness › States Information",
-    keywords: "general awareness states information andhra pradesh Andhra Pradesh",
-  },
-  {
-    href: "/quizzes/establishment-rules/annual-performance-appraisal-report",
-    title: "Annual Performance Appraisal Report",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules apar annual performance appraisal report Annual Performance Appraisal Report",
-  },
-  {
-    href: "/topics/establishment-rules/apar",
-    title: "Annual Performance Appraisal Report",
-    category: "Study Topics",
-    parent: "Topics › Establishment Rules",
-    keywords:
-      "topics establishment rules apar annual performance appraisal report Annual Performance Appraisal Report MACP benchmark",
   },
   {
     href: "/general-awareness/important-days/april",
@@ -1215,7 +1635,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "General Awareness",
     keywords: "general awareness awards Awards",
   },
-
   {
     href: "/general-awareness/sports/badminton",
     title: "Badminton",
@@ -1243,6 +1662,29 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness",
     keywords: "general awareness beauty pageant Beauty Pageant",
+  },
+  {
+    href: "/topics/operating-material/bell-codes",
+    title: "Bell Codes",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material bell codes Bell Codes 14.05 block signalling train communication strokes beats",
+  },
+  {
+    href: "/topics/operating-material/bell-signals",
+    title: "Bell Signals",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material bell signals Bell Signals loco pilot motorman guard codes acknowledgement",
+  },
+  {
+    href: "/quizzes/professional-subject/bell-whistle-codes",
+    title: "Bell Whistle Codes",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject bell whistle codes Bell Whistle Codes",
   },
   {
     href: "/general-awareness/states-information/bihar",
@@ -1315,29 +1757,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness biosphere reserves Biosphere Reserves",
   },
   {
-    href: "/topics/operating-material/bell-codes",
-    title: "Bell Codes",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material bell codes Bell Codes 14.05 block signalling train communication strokes beats",
-  },
-  {
-    href: "/topics/operating-material/bell-signals",
-    title: "Bell Signals",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material bell signals Bell Signals loco pilot motorman guard codes acknowledgement",
-  },
-  {
-    href: "/quizzes/professional-subject/bell-whistle-codes",
-    title: "Bell Whistle Codes",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject bell whistle codes Bell Whistle Codes",
-  },
-  {
     href: "/topics/operating-material/block-forward",
     title: "Block Forward",
     category: "Study Topics",
@@ -1359,7 +1778,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords: "topics operating material block overlap Block Overlap FSS MAS BSLB SLB adequate distance",
   },
-
   {
     href: "/topics/operating-material/block-section",
     title: "Block Section",
@@ -1391,6 +1809,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "manuals block working manual Block Working Manual",
   },
   {
+    href: "/quizzes/block-working-manual",
+    title: "Block Working Manual",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords: "quizzes block working manual Block Working Manual chapters exam",
+  },
+  {
     href: "/topics/block-working-manual",
     title: "Block Working Manual",
     category: "Study Topics",
@@ -1398,15 +1823,6 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics block working manual Block Working Manual block instruments PLCT private numbers station diary TSR",
   },
-
-  {
-    href: "/quizzes/block-working-manual",
-    title: "Block Working Manual",
-    category: "Quizzes",
-    parent: "Quizzes",
-    keywords: "quizzes block working manual Block Working Manual chapters exam",
-  },
-  
   {
     href: "/quizzes/block-working-manual/chapter-1",
     title: "Block Working Manual Chapter 1",
@@ -1428,8 +1844,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "General Awareness",
     keywords: "general awareness books authors Books Authors",
   },
-
-
   {
     href: "/quizzes/general-awareness/botany",
     title: "Botany",
@@ -1452,12 +1866,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes general awareness botany quiz 2 Botany Quiz 2 exam",
   },
   {
-    href: "/topics/operating-material/brake-power-certificate",
-    title: "Brake Power Certificate",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material brake power certificate Brake Power Certificate BPC freight CC rake premium end-to-end TXR",
+    href: "/general-awareness/sports/boxing",
+    title: "Boxing",
+    category: "General Awareness",
+    parent: "General Awareness › Sports",
+    keywords: "general awareness sports boxing Boxing",
   },
   {
     href: "/quizzes/professional-subject/brake-power-certificate",
@@ -1467,6 +1880,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject brake power certificate Brake Power Certificate",
   },
   {
+    href: "/topics/operating-material/brake-power-certificate",
+    title: "Brake Power Certificate",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material brake power certificate Brake Power Certificate BPC freight CC rake premium end-to-end TXR",
+  },
+  {
     href: "/topics/operating-material/brake-van",
     title: "Brake Van",
     category: "Study Topics",
@@ -1474,11 +1895,26 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material brake van Brake Van G.R. 4.19.6 S.R. 4.19.4.1 BV equipment OTL SLR",
   },
   {
-    href: "/general-awareness/sports/boxing",
-    title: "Boxing",
-    category: "General Awareness",
-    parent: "General Awareness › Sports",
-    keywords: "general awareness sports boxing Boxing",
+    href: "/topics/operating-material/calling-on-signal",
+    title: "Calling On Signal",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material calling on signal Calling On Signal G.R. 3.13 COGGN Podanur VDU",
+  },
+  {
+    href: "/topics/operating-material/catch-slip-siding",
+    title: "Catch / Slip Siding",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material catch slip siding Catch Slip Siding G.R. S.R. 3.50",
+  },
+  {
+    href: "/topics/operating-material/caution-order",
+    title: "Caution Order",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material caution order Caution Order T.409 T/A.409 notice station speed restriction preservation",
   },
   {
     href: "/topics/establishment-rules/cat",
@@ -1488,11 +1924,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics establishment rules cat CAT Central Administrative Tribunal (CAT)",
   },
   {
-    href: "/quizzes/establishment-rules/compassionate-grounds-appointment",
-    title: "Compassionate Grounds Appointment (CGA)",
+    href: "/quizzes/establishment-rules/central-pay-commission",
+    title: "Central Pay Commission (CPC)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules cga Compassionate Grounds Appointment (CGA)",
+    keywords: "quizzes establishment rules cpc CPC Central Pay Commission (CPC)",
+  },
+  {
+    href: "/quizzes/establishment-rules/centralised-public-grievance-redress-monitoring-system",
+    title: "Centralised Public Grievance Redress & Monitoring System (CPGRAMS)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules centralised public grievance redress & monitoring system CPGRAMS CPGRAMS Centralised Public Grievance Redress & Monitoring System (CPGRAMS)",
   },
   {
     href: "/general-awareness/states-information/chandigarh",
@@ -1579,28 +2022,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information chhattisgarh Chhattisgarh",
   },
   {
-    href: "/topics/operating-material/calling-on-signal",
-    title: "Calling On Signal",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material calling on signal Calling On Signal G.R. 3.13 COGGN Podanur VDU",
-  },
-  {
-    href: "/topics/operating-material/catch-slip-siding",
-    title: "Catch / Slip Siding",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material catch slip siding Catch Slip Siding G.R. S.R. 3.50",
-  },
-  {
-    href: "/topics/operating-material/caution-order",
-    title: "Caution Order",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material caution order Caution Order T.409 T/A.409 notice station speed restriction preservation",
-  },
-  {
     href: "/general-awareness/awards/cinema-awards",
     title: "Cinema Awards",
     category: "General Awareness",
@@ -1615,25 +2036,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "circulars Circulars Railway Board Circulars",
   },
   {
-    href: "/topics/information-technology-apps/cms",
-    title: "Crew Management System (CMS)",
+    href: "/topics/operating-material/coacting-signal",
+    title: "Co-acting Signal",
     category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps cms CMS Crew Management System (CMS)",
-  },
-  {
-    href: "/topics/information-technology-apps/coa",
-    title: "Controle Office Application (COA)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps coa COA Controle Office Application (COA)",
-  },
-  {
-    href: "/topics/working-time-table/coaches-data",
-    title: "Coaches Data",
-    category: "Study Topics",
-    parent: "Topics › Working Time Table",
-    keywords: "topics working time table coaches data Coaches Data",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material co-acting signal Co-acting Signal G.R. 3.15 duplicating",
   },
   {
     href: "/quizzes/professional-subject/coaches-data",
@@ -1643,11 +2050,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject coaches data Coaches Data",
   },
   {
-    href: "/topics/operating-material/coacting-signal",
-    title: "Co-acting Signal",
+    href: "/topics/working-time-table/coaches-data",
+    title: "Coaches Data",
     category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material co-acting signal Co-acting Signal G.R. 3.15 duplicating",
+    parent: "Topics › Working Time Table",
+    keywords: "topics working time table coaches data Coaches Data",
   },
   {
     href: "/topics/information-technology-apps/cois",
@@ -1678,104 +2085,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes commercial department chapter 2 Commercial Department Chapter 2 exam",
   },
   {
-    href: "/quizzes/disaster-management",
-    title: "Disaster Management Act 2005",
-    category: "Quizzes",
-    parent: "Quizzes",
-    keywords: "quizzes disaster management Disaster Management Act 2005 NDMA DM Act chapters exam",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-1",
-    title: "Disaster Management Chapter 1",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 1 Disaster Management Chapter 1 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-2",
-    title: "Disaster Management Chapter 2",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 2 Disaster Management Chapter 2 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-3",
-    title: "Disaster Management Chapter 3",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 3 Disaster Management Chapter 3 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-4",
-    title: "Disaster Management Chapter 4",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 4 Disaster Management Chapter 4 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-5",
-    title: "Disaster Management Chapter 5",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 5 Disaster Management Chapter 5 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-6",
-    title: "Disaster Management Chapter 6",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 6 Disaster Management Chapter 6 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-7",
-    title: "Disaster Management Chapter 7",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 7 Disaster Management Chapter 7 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-8",
-    title: "Disaster Management Chapter 8",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 8 Disaster Management Chapter 8 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-9",
-    title: "Disaster Management Chapter 9",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 9 Disaster Management Chapter 9 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-10",
-    title: "Disaster Management Chapter 10",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 10 Disaster Management Chapter 10 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-11",
-    title: "Disaster Management Chapter 11",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 11 Disaster Management Chapter 11 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-12",
-    title: "Disaster Management Chapter 12",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 12 Disaster Management Chapter 12 exam NDMA",
-  },
-  {
-    href: "/quizzes/disaster-management/chapter-13",
-    title: "Disaster Management Chapter 13",
-    category: "Quizzes",
-    parent: "Quizzes › Disaster Management",
-    keywords: "quizzes disaster management chapter 13 Disaster Management Chapter 13 exam NDMA",
-  },
-  {
     href: "/general-awareness/committees",
     title: "Committees",
     category: "General Awareness",
@@ -1790,11 +2099,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports commonwealth games Commonwealth Games",
   },
   {
-    href: "/quizzes/establishment-rules/railway-services-conduct-rules-1966",
-    title: "Railway Services Conduct Rules 1966",
+    href: "/quizzes/establishment-rules/compassionate-grounds-appointment",
+    title: "Compassionate Grounds Appointment (CGA)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules conduct rules Railway Services Conduct Rules 1966",
+    keywords: "quizzes establishment rules cga Compassionate Grounds Appointment (CGA)",
   },
   {
     href: "/topics/railway-planning-schemes/container-rail-terminals",
@@ -1804,18 +2113,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics railway planning schemes container rail terminals Container Rail Terminals CRT",
   },
   {
-    href: "/quizzes/establishment-rules/central-pay-commission",
-    title: "Central Pay Commission (CPC)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules cpc CPC Central Pay Commission (CPC)",
+    href: "/topics/information-technology-apps/coa",
+    title: "Controle Office Application (COA)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps coa COA Controle Office Application (COA)",
   },
   {
-    href: "/quizzes/establishment-rules/centralised-public-grievance-redress-monitoring-system",
-    title: "Centralised Public Grievance Redress & Monitoring System (CPGRAMS)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules centralised public grievance redress & monitoring system CPGRAMS CPGRAMS Centralised Public Grievance Redress & Monitoring System (CPGRAMS)",
+    href: "/topics/information-technology-apps/cms",
+    title: "Crew Management System (CMS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps cms CMS Crew Management System (CMS)",
   },
   {
     href: "/general-awareness/sports/cricket",
@@ -1937,11 +2246,102 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts disaster management act 2005 Disaster Management Act 2005",
   },
   {
-    href: "/quizzes/establishment-rules/railway-servants-discipline-appeal-rules-1968",
-    title: "Railway Servants Discipline Appeal Rules 1968",
+    href: "/quizzes/disaster-management",
+    title: "Disaster Management Act 2005",
     category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules discipline appeal rules Railway Servants Discipline Appeal Rules 1968",
+    parent: "Quizzes",
+    keywords: "quizzes disaster management Disaster Management Act 2005 NDMA DM Act chapters exam",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-1",
+    title: "Disaster Management Chapter 1",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 1 Disaster Management Chapter 1 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-10",
+    title: "Disaster Management Chapter 10",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 10 Disaster Management Chapter 10 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-11",
+    title: "Disaster Management Chapter 11",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 11 Disaster Management Chapter 11 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-12",
+    title: "Disaster Management Chapter 12",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 12 Disaster Management Chapter 12 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-13",
+    title: "Disaster Management Chapter 13",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 13 Disaster Management Chapter 13 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-2",
+    title: "Disaster Management Chapter 2",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 2 Disaster Management Chapter 2 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-3",
+    title: "Disaster Management Chapter 3",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 3 Disaster Management Chapter 3 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-4",
+    title: "Disaster Management Chapter 4",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 4 Disaster Management Chapter 4 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-5",
+    title: "Disaster Management Chapter 5",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 5 Disaster Management Chapter 5 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-6",
+    title: "Disaster Management Chapter 6",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 6 Disaster Management Chapter 6 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-7",
+    title: "Disaster Management Chapter 7",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 7 Disaster Management Chapter 7 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-8",
+    title: "Disaster Management Chapter 8",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 8 Disaster Management Chapter 8 exam NDMA",
+  },
+  {
+    href: "/quizzes/disaster-management/chapter-9",
+    title: "Disaster Management Chapter 9",
+    category: "Quizzes",
+    parent: "Quizzes › Disaster Management",
+    keywords: "quizzes disaster management chapter 9 Disaster Management Chapter 9 exam NDMA",
   },
   {
     href: "/topics/operating-material/disconnection-reconnection",
@@ -1951,19 +2351,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material disconnection reconnection Disconnection and Reconnection SR 3.51.6 APP XIII T.351",
   },
   {
+    href: "/quizzes/professional-subject/distance-wise",
+    title: "Distance Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject distance wise Distance Wise",
+  },
+  {
     href: "/topics/aom-special/distance-wise",
     title: "Distance Wise",
     category: "Study Topics",
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special distance wise Distance Wise Distances clearance ODC detonators signal overlap gradients AOM exam",
-  },
-  {
-    href: "/quizzes/professional-subject/distance-wise",
-    title: "Distance Wise",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject distance wise Distance Wise",
   },
   {
     href: "/topics/operating-material/distant-signal",
@@ -1988,6 +2388,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps e drishti e-Drishti",
   },
   {
+    href: "/topics/information-technology-apps/ewss",
+    title: "E-Working Software Solution (EWSS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps ewss EWSS E-Working Software Solution (EWSS)",
+  },
+  {
     href: "/general-awareness/elephant-reserves",
     title: "Elephant Reserves",
     category: "General Awareness",
@@ -2002,11 +2409,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material emergency crank handle Emergency Crank Handle S.R. 3.38.7 App XI-6 HKT",
   },
   {
-    href: "/acts/employees-compensation-act-2010",
-    title: "Employees' Compensation Act 1923",
-    category: "Acts & Rules",
-    parent: "Acts",
-    keywords: "acts employees compensation act 1923 Employees' Compensation Act 1923",
+    href: "/topics/information-technology-apps/ess",
+    title: "Employee Self Service (ESS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps ess ESS Employee Self Service (ESS)",
   },
   {
     href: "/quizzes/establishment-rules/employees-compensation-act-1923",
@@ -2014,6 +2421,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
     keywords: "quizzes establishment rules employees compensation act 1923 Employees Compensation Act",
+  },
+  {
+    href: "/acts/employees-compensation-act-2010",
+    title: "Employees' Compensation Act 1923",
+    category: "Acts & Rules",
+    parent: "Acts",
+    keywords: "acts employees compensation act 1923 Employees' Compensation Act 1923",
   },
   {
     href: "/topics/railway-planning-schemes/engine-on-load",
@@ -2046,21 +2460,6 @@ export const searchTopics: SearchTopic[] = [
       "topics establishment rules engineering time allowance ETA Engineering Time Allowance PCE PCOM GM CTR PSR 130 kmph Board letter 2023",
   },
   {
-    href: "/topics/operating-material/Exchange-of-all-right-signals",
-    title: "Exchange of All Right Signals",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material exchange of all right signals Exchange of All Right Signals G.R. 4.42 green flag walkie-talkie Vande Bharat",
-  },
-  {
-    href: "/topics/information-technology-apps/ess",
-    title: "Employee Self Service (ESS)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps ess ESS Employee Self Service (ESS)",
-  },
-  {
     href: "/quizzes/establishment-rules",
     title: "Establishment Rules",
     category: "Quizzes",
@@ -2083,18 +2482,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness world information europe countries European Countries",
   },
   {
-    href: "/topics/information-technology-apps/ewss",
-    title: "E-Working Software Solution (EWSS)",
+    href: "/topics/operating-material/Exchange-of-all-right-signals",
+    title: "Exchange of All Right Signals",
     category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps ewss EWSS E-Working Software Solution (EWSS)",
-  },
-  {
-    href: "/acts/factories-act-1948",
-    title: "Factories Act 1948",
-    category: "Acts & Rules",
-    parent: "Acts",
-    keywords: "acts factories act 1948 Factories Act 1948",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material exchange of all right signals Exchange of All Right Signals G.R. 4.42 green flag walkie-talkie Vande Bharat",
   },
   {
     href: "/topics/operating-material/facing-trailing-points",
@@ -2104,12 +2497,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material facing trailing points Facing and Trailing Points G.R. 1.02(20)",
   },
   {
-    href: "/topics/operating-material/Fire-on-train",
-    title: "Fire on Train",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material fire on train Fire on Passenger Coach in Mid-Section G.R. S.R. 6.10 CBC extinguisher",
+    href: "/acts/factories-act-1948",
+    title: "Factories Act 1948",
+    category: "Acts & Rules",
+    parent: "Acts",
+    keywords: "acts factories act 1948 Factories Act 1948",
   },
   {
     href: "/general-awareness/important-days/february",
@@ -2118,421 +2510,12 @@ export const searchTopics: SearchTopic[] = [
     parent: "General Awareness › Important Days",
     keywords: "general awareness important days february February",
   },
-
   {
     href: "/quizzes/financial-rules/finance",
     title: "Finance",
     category: "Quizzes",
     parent: "Quizzes › Financial Rules",
     keywords: "quizzes financial rules finance Finance",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests",
-    title: "AOM Finance & Establishment Rules Tests",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests AOM Finance & Establishment Rules Tests accounts tenders budget",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test01",
-    title: "AOM Finance & Establishment Rules Test 01",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 01 AOM Finance & Establishment Rules Test 01 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test02",
-    title: "AOM Finance & Establishment Rules Test 02",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 02 AOM Finance & Establishment Rules Test 02 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test03",
-    title: "AOM Finance & Establishment Rules Test 03",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 03 AOM Finance & Establishment Rules Test 03 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test04",
-    title: "AOM Finance & Establishment Rules Test 04",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 04 AOM Finance & Establishment Rules Test 04 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test05",
-    title: "AOM Finance & Establishment Rules Test 05",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 05 AOM Finance & Establishment Rules Test 05 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test06",
-    title: "AOM Finance & Establishment Rules Test 06",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 06 AOM Finance & Establishment Rules Test 06 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test07",
-    title: "AOM Finance & Establishment Rules Test 07",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 07 AOM Finance & Establishment Rules Test 07 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test08",
-    title: "AOM Finance & Establishment Rules Test 08",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 08 AOM Finance & Establishment Rules Test 08 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test09",
-    title: "AOM Finance & Establishment Rules Test 09",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 09 AOM Finance & Establishment Rules Test 09 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test10",
-    title: "AOM Finance & Establishment Rules Test 10",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 10 AOM Finance & Establishment Rules Test 10 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test11",
-    title: "AOM Finance & Establishment Rules Test 11",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 11 AOM Finance & Establishment Rules Test 11 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test12",
-    title: "AOM Finance & Establishment Rules Test 12",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 12 AOM Finance & Establishment Rules Test 12 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test13",
-    title: "AOM Finance & Establishment Rules Test 13",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 13 AOM Finance & Establishment Rules Test 13 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test14",
-    title: "AOM Finance & Establishment Rules Test 14",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 14 AOM Finance & Establishment Rules Test 14 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test15",
-    title: "AOM Finance & Establishment Rules Test 15",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 15 AOM Finance & Establishment Rules Test 15 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test16",
-    title: "AOM Finance & Establishment Rules Test 16",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 16 AOM Finance & Establishment Rules Test 16 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test17",
-    title: "AOM Finance & Establishment Rules Test 17",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 17 AOM Finance & Establishment Rules Test 17 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test18",
-    title: "AOM Finance & Establishment Rules Test 18",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 18 AOM Finance & Establishment Rules Test 18 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test19",
-    title: "AOM Finance & Establishment Rules Test 19",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 19 AOM Finance & Establishment Rules Test 19 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test20",
-    title: "AOM Finance & Establishment Rules Test 20",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 20 AOM Finance & Establishment Rules Test 20 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test21",
-    title: "AOM Finance & Establishment Rules Test 21",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 21 AOM Finance & Establishment Rules Test 21 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test22",
-    title: "AOM Finance & Establishment Rules Test 22",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 22 AOM Finance & Establishment Rules Test 22 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test23",
-    title: "AOM Finance & Establishment Rules Test 23",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 23 AOM Finance & Establishment Rules Test 23 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test24",
-    title: "AOM Finance & Establishment Rules Test 24",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 24 AOM Finance & Establishment Rules Test 24 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test25",
-    title: "AOM Finance & Establishment Rules Test 25",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 25 AOM Finance & Establishment Rules Test 25 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test26",
-    title: "AOM Finance & Establishment Rules Test 26",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 26 AOM Finance & Establishment Rules Test 26 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test27",
-    title: "AOM Finance & Establishment Rules Test 27",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 27 AOM Finance & Establishment Rules Test 27 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test28",
-    title: "AOM Finance & Establishment Rules Test 28",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 28 AOM Finance & Establishment Rules Test 28 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test29",
-    title: "AOM Finance & Establishment Rules Test 29",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 29 AOM Finance & Establishment Rules Test 29 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test30",
-    title: "AOM Finance & Establishment Rules Test 30",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 30 AOM Finance & Establishment Rules Test 30 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test31",
-    title: "AOM Finance & Establishment Rules Test 31",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 31 AOM Finance & Establishment Rules Test 31 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test32",
-    title: "AOM Finance & Establishment Rules Test 32",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 32 AOM Finance & Establishment Rules Test 32 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test33",
-    title: "AOM Finance & Establishment Rules Test 33",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 33 AOM Finance & Establishment Rules Test 33 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test34",
-    title: "AOM Finance & Establishment Rules Test 34",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 34 AOM Finance & Establishment Rules Test 34 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test35",
-    title: "AOM Finance & Establishment Rules Test 35",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 35 AOM Finance & Establishment Rules Test 35 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test36",
-    title: "AOM Finance & Establishment Rules Test 36",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 36 AOM Finance & Establishment Rules Test 36 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test37",
-    title: "AOM Finance & Establishment Rules Test 37",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 37 AOM Finance & Establishment Rules Test 37 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test38",
-    title: "AOM Finance & Establishment Rules Test 38",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 38 AOM Finance & Establishment Rules Test 38 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test39",
-    title: "AOM Finance & Establishment Rules Test 39",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 39 AOM Finance & Establishment Rules Test 39 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test40",
-    title: "AOM Finance & Establishment Rules Test 40",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 40 AOM Finance & Establishment Rules Test 40 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test41",
-    title: "AOM Finance & Establishment Rules Test 41",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 41 AOM Finance & Establishment Rules Test 41 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test42",
-    title: "AOM Finance & Establishment Rules Test 42",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 42 AOM Finance & Establishment Rules Test 42 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test43",
-    title: "AOM Finance & Establishment Rules Test 43",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 43 AOM Finance & Establishment Rules Test 43 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test44",
-    title: "AOM Finance & Establishment Rules Test 44",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 44 AOM Finance & Establishment Rules Test 44 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test45",
-    title: "AOM Finance & Establishment Rules Test 45",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 45 AOM Finance & Establishment Rules Test 45 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test46",
-    title: "AOM Finance & Establishment Rules Test 46",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 46 AOM Finance & Establishment Rules Test 46 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test47",
-    title: "AOM Finance & Establishment Rules Test 47",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 47 AOM Finance & Establishment Rules Test 47 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test48",
-    title: "AOM Finance & Establishment Rules Test 48",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 48 AOM Finance & Establishment Rules Test 48 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test49",
-    title: "AOM Finance & Establishment Rules Test 49",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 49 AOM Finance & Establishment Rules Test 49 paper mock",
-  },
-  {
-    href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test50",
-    title: "AOM Finance & Establishment Rules Test 50",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Finance & Establishment Rules Tests",
-    keywords:
-      "aom tests aom finance establishment rules tests test 50 AOM Finance & Establishment Rules Test 50 paper mock",
   },
   {
     href: "/quizzes/financial-rules",
@@ -2547,6 +2530,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics",
     keywords: "topics financial rules Financial Rules",
+  },
+  {
+    href: "/topics/operating-material/Fire-on-train",
+    title: "Fire on Train",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material fire on train Fire on Passenger Coach in Mid-Section G.R. S.R. 6.10 CBC extinguisher",
   },
   {
     href: "/topics/operating-material/fixed-signal",
@@ -2570,14 +2561,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material flat tyre Flat Tyre TXR USFD SR 30 kmph",
   },
   {
-    href: "/topics/information-technology-apps/fois",
-    title: "Freight Operations Information System (FOIS)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps fois FOIS Freight Operations Information System (FOIS)",
-  },
-
-  {
     href: "/general-awareness/sports/football",
     title: "Football",
     category: "General Awareness",
@@ -2592,11 +2575,41 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material fouling mark Fouling Mark G.R. 1.02(22)",
   },
   {
+    href: "/topics/information-technology-apps/fois",
+    title: "Freight Operations Information System (FOIS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps fois FOIS Freight Operations Information System (FOIS)",
+  },
+  {
+    href: "/topics/aom-special/general-subsidiary-rules-appendix",
+    title: "G&SR Appendix",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special g&sr appendix G&SR Appendix general subsidiary rules appendices caution orders marshalling shunting AOM exam",
+  },
+  {
+    href: "/topics/aom-special/general-subsidiary-rules-chapters",
+    title: "G&SR Chapters",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special g&sr chapters G&SR Chapters general subsidiary rules signals block working accidents AOM exam",
+  },
+  {
     href: "/topics/operating-material/gate-signal",
     title: "Gate Signal",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material gate signal Gate Signal G.R. S.R. 3.34 3.73 LC G marker",
+  },
+  {
+    href: "/quizzes/professional-subject/gati-shakti-cargo-terminal",
+    title: "Gati Shakti Cargo Terminal",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject gati shakti cargo terminal Gati Shakti Cargo Terminal",
   },
   {
     href: "/topics/professional-subject/gati-shakti-cargo-terminal",
@@ -2607,63 +2620,11 @@ export const searchTopics: SearchTopic[] = [
       "topics professional subject gati shakti cargo terminal Gati Shakti Cargo Terminal",
   },
   {
-    href: "/quizzes/professional-subject/gati-shakti-cargo-terminal",
-    title: "Gati Shakti Cargo Terminal",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject gati shakti cargo terminal Gati Shakti Cargo Terminal",
-  },
-  {
     href: "/topics/railway-planning-schemes/gati-shakti-terminals",
     title: "Gati Shakti Terminals",
     category: "Study Topics",
     parent: "Topics › Railway Planning Schemes",
     keywords: "topics railway planning schemes gati shakti terminals Gati Shakti Terminals",
-  },
-  {
-    href: "/aom-tests/aom-gk-rajabhasha-tests",
-    title: "AOM GK & Rajabhasha Tests",
-    category: "AOM Tests",
-    parent: "AOM Tests",
-    keywords: "aom tests gk rajabhasha GK Rajabhasha general knowledge official language Hindi",
-  },
-  {
-    href: "/topics/operating-material/glp-check",
-    title: "GLP Check",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material glp check GLP Check Guard Loco Pilot BPC revalidation PME TXR proforma",
-  },
-
-  {
-    href: "/general-awareness",
-    title: "General Awareness",
-    category: "General Awareness",
-    parent: "General Awareness",
-    keywords: "general awareness General Awareness",
-  },
-  {
-    href: "/quizzes/general-awareness",
-    title: "General Awareness",
-    category: "Quizzes",
-    parent: "Quizzes",
-    keywords: "quizzes general awareness General Awareness",
-  },
-  {
-    href: "/topics/general-rules",
-    title: "General Rules (GR)",
-    category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics general rules General Rules GR",
-  },
-  {
-    href: "/topics/aom-special/general-rules-all",
-    title: "General Rules All",
-    category: "Study Topics",
-    parent: "Topics › AOM Special",
-    keywords:
-      "topics aom special general rules all General Rules All G&SR chapters GR AOM exam",
   },
   {
     href: "/manuals/general-subsidiary-rules",
@@ -2685,6 +2646,55 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › General & Subsidiary Rules",
     keywords: "quizzes general subsidiary rules chapter 1 General & Subsidiary Rules Chapter 1 G&SR GSR exam",
+  },
+  {
+    href: "/quizzes/general-subsidiary-rules/chapter-10",
+    title: "General & Subsidiary Rules Chapter 10",
+    category: "Quizzes",
+    parent: "Quizzes › General & Subsidiary Rules",
+    keywords: "quizzes general subsidiary rules chapter 10 General & Subsidiary Rules Chapter 10 G&SR GSR exam",
+  },
+  {
+    href: "/quizzes/general-subsidiary-rules/chapter-11",
+    title: "General & Subsidiary Rules Chapter 11",
+    category: "Quizzes",
+    parent: "Quizzes › General & Subsidiary Rules",
+    keywords: "quizzes general subsidiary rules chapter 11 General & Subsidiary Rules Chapter 11 G&SR GSR exam",
+  },
+  {
+    href: "/quizzes/general-subsidiary-rules/chapter-12",
+    title: "General & Subsidiary Rules Chapter 12",
+    category: "Quizzes",
+    parent: "Quizzes › General & Subsidiary Rules",
+    keywords: "quizzes general subsidiary rules chapter 12 General & Subsidiary Rules Chapter 12 G&SR GSR exam",
+  },
+  {
+    href: "/quizzes/general-subsidiary-rules/chapter-13",
+    title: "General & Subsidiary Rules Chapter 13",
+    category: "Quizzes",
+    parent: "Quizzes › General & Subsidiary Rules",
+    keywords: "quizzes general subsidiary rules chapter 13 General & Subsidiary Rules Chapter 13 G&SR GSR exam",
+  },
+  {
+    href: "/quizzes/general-subsidiary-rules/chapter-14",
+    title: "General & Subsidiary Rules Chapter 14",
+    category: "Quizzes",
+    parent: "Quizzes › General & Subsidiary Rules",
+    keywords: "quizzes general subsidiary rules chapter 14 General & Subsidiary Rules Chapter 14 G&SR GSR exam",
+  },
+  {
+    href: "/quizzes/general-subsidiary-rules/chapter-15",
+    title: "General & Subsidiary Rules Chapter 15",
+    category: "Quizzes",
+    parent: "Quizzes › General & Subsidiary Rules",
+    keywords: "quizzes general subsidiary rules chapter 15 General & Subsidiary Rules Chapter 15 G&SR GSR exam",
+  },
+  {
+    href: "/quizzes/general-subsidiary-rules/chapter-16",
+    title: "General & Subsidiary Rules Chapter 16",
+    category: "Quizzes",
+    parent: "Quizzes › General & Subsidiary Rules",
+    keywords: "quizzes general subsidiary rules chapter 16 General & Subsidiary Rules Chapter 16 G&SR GSR exam",
   },
   {
     href: "/quizzes/general-subsidiary-rules/chapter-2",
@@ -2743,70 +2753,33 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes general subsidiary rules chapter 9 General & Subsidiary Rules Chapter 9 G&SR GSR exam",
   },
   {
-    href: "/quizzes/general-subsidiary-rules/chapter-10",
-    title: "General & Subsidiary Rules Chapter 10",
-    category: "Quizzes",
-    parent: "Quizzes › General & Subsidiary Rules",
-    keywords: "quizzes general subsidiary rules chapter 10 General & Subsidiary Rules Chapter 10 G&SR GSR exam",
+    href: "/general-awareness",
+    title: "General Awareness",
+    category: "General Awareness",
+    parent: "General Awareness",
+    keywords: "general awareness General Awareness",
   },
   {
-    href: "/quizzes/general-subsidiary-rules/chapter-11",
-    title: "General & Subsidiary Rules Chapter 11",
+    href: "/quizzes/general-awareness",
+    title: "General Awareness",
     category: "Quizzes",
-    parent: "Quizzes › General & Subsidiary Rules",
-    keywords: "quizzes general subsidiary rules chapter 11 General & Subsidiary Rules Chapter 11 G&SR GSR exam",
+    parent: "Quizzes",
+    keywords: "quizzes general awareness General Awareness",
   },
   {
-    href: "/quizzes/general-subsidiary-rules/chapter-12",
-    title: "General & Subsidiary Rules Chapter 12",
-    category: "Quizzes",
-    parent: "Quizzes › General & Subsidiary Rules",
-    keywords: "quizzes general subsidiary rules chapter 12 General & Subsidiary Rules Chapter 12 G&SR GSR exam",
+    href: "/topics/general-rules",
+    title: "General Rules (GR)",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics general rules General Rules GR",
   },
   {
-    href: "/quizzes/general-subsidiary-rules/chapter-13",
-    title: "General & Subsidiary Rules Chapter 13",
-    category: "Quizzes",
-    parent: "Quizzes › General & Subsidiary Rules",
-    keywords: "quizzes general subsidiary rules chapter 13 General & Subsidiary Rules Chapter 13 G&SR GSR exam",
-  },
-  {
-    href: "/quizzes/general-subsidiary-rules/chapter-14",
-    title: "General & Subsidiary Rules Chapter 14",
-    category: "Quizzes",
-    parent: "Quizzes › General & Subsidiary Rules",
-    keywords: "quizzes general subsidiary rules chapter 14 General & Subsidiary Rules Chapter 14 G&SR GSR exam",
-  },
-  {
-    href: "/quizzes/general-subsidiary-rules/chapter-15",
-    title: "General & Subsidiary Rules Chapter 15",
-    category: "Quizzes",
-    parent: "Quizzes › General & Subsidiary Rules",
-    keywords: "quizzes general subsidiary rules chapter 15 General & Subsidiary Rules Chapter 15 G&SR GSR exam",
-  },
-  {
-    href: "/quizzes/general-subsidiary-rules/chapter-16",
-    title: "General & Subsidiary Rules Chapter 16",
-    category: "Quizzes",
-    parent: "Quizzes › General & Subsidiary Rules",
-    keywords: "quizzes general subsidiary rules chapter 16 General & Subsidiary Rules Chapter 16 G&SR GSR exam",
-  },
-  
-  {
-    href: "/topics/aom-special/general-subsidiary-rules-appendix",
-    title: "G&SR Appendix",
+    href: "/topics/aom-special/general-rules-all",
+    title: "General Rules All",
     category: "Study Topics",
     parent: "Topics › AOM Special",
     keywords:
-      "topics aom special g&sr appendix G&SR Appendix general subsidiary rules appendices caution orders marshalling shunting AOM exam",
-  },
-  {
-    href: "/topics/aom-special/general-subsidiary-rules-chapters",
-    title: "G&SR Chapters",
-    category: "Study Topics",
-    parent: "Topics › AOM Special",
-    keywords:
-      "topics aom special g&sr chapters G&SR Chapters general subsidiary rules signals block working accidents AOM exam",
+      "topics aom special general rules all General Rules All G&SR chapters GR AOM exam",
   },
   {
     href: "/general-awareness/geographical-indication",
@@ -2850,7 +2823,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › General Awareness › Geography",
     keywords: "quizzes general awareness geography quiz 3 Geography Quiz 3 exam",
   },
-
+  {
+    href: "/topics/operating-material/glp-check",
+    title: "GLP Check",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material glp check GLP Check Guard Loco Pilot BPC revalidation PME TXR proforma",
+  },
   {
     href: "/general-awareness/states-information/goa",
     title: "Goa",
@@ -3028,28 +3008,6 @@ export const searchTopics: SearchTopic[] = [
       "topics establishment rules hrms HRMS Human Resource Management System (HRMS) human resource management system AIMS CRIS IPAS",
   },
   {
-    href: "/topics/operating-material/intermediate-block-signal",
-    title: "Intermediate Block Signal (IBS)",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material ibs IBS Intermediate Block Signal (IBS) G.R. S.R. 3.75 14.13 14.14 axle counter",
-  },
-  {
-    href: "/topics/information-technology-apps/icms",
-    title: "Integrated Coaching Management System (ICMS)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps icms ICMS Integrated Coaching Management System (ICMS)",
-  },
-  {
-    href: "/topics/operating-material/integrated-block",
-    title: "Integrated Block",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material integrated block Integrated Block caution order 150 mts 15/8 kmph units",
-  },
-  {
     href: "/general-awareness/important-days",
     title: "Important Days",
     category: "General Awareness",
@@ -3106,27 +3064,46 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject indian railway act 1989 Indian Railway Act 1989",
   },
   {
+    href: "/topics/railway-acts",
+    title: "Indian Railway Acts 1989",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics railway acts Railway Acts Indian Railway Acts 1989 Indian Railway Act 1989",
+  },
+  {
+    href: "/quizzes/establishment-rules/indian-railway-establishment-code",
+    title: "Indian Railway Establishment Code (IREC)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules indian railway establishment code IREC Indian Railway Establishment Code (IREC)",
+  },
+  {
+    href: "/topics/establishment-rules/irec",
+    title: "Indian Railway Establishment Code (IREC)",
+    category: "Study Topics",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules irec IREC Indian Railway Establishment Code (IREC)",
+  },
+  {
+    href: "/quizzes/establishment-rules/indian-railway-establishment-manual",
+    title: "Indian Railway Establishment Manual (IREM)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules indian railway establishment manual IREM Indian Railway Establishment Manual (IREM)",
+  },
+  {
+    href: "/topics/establishment-rules/irem",
+    title: "Indian Railway Establishment Manual (IREM)",
+    category: "Study Topics",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules irem IREM Indian Railway Establishment Manual (IREM)",
+  },
+  {
     href: "/topics/indian-railways",
     title: "Indian Railways (IR)",
     category: "Study Topics",
     parent: "Topics",
     keywords: "topics indian railways Indian Railways (IR) organization structure zones statistics",
-  },
-  {
-    href: "/topics/indian-railways/railway-organization",
-    title: "Railway Organization",
-    category: "Study Topics",
-    parent: "Topics › Indian Railways",
-    keywords:
-      "topics indian railways railway organization Railway Organization structure zones divisions hierarchy",
-  },
-  {
-    href: "/topics/indian-railways/railway-statistics",
-    title: "Railway Statistics",
-    category: "Study Topics",
-    parent: "Topics › Indian Railways",
-    keywords:
-      "topics indian railways railway statistics Railway Statistics facts figures network traffic",
   },
   {
     href: "/acts/indian-railways-act-1989",
@@ -3141,20 +3118,6 @@ export const searchTopics: SearchTopic[] = [
     category: "Manuals",
     parent: "Manuals",
     keywords: "manuals indian railways operating manual Indian Railways Operating Manual",
-  },
-  {
-    href: "/quizzes/establishment-rules/indian-railway-establishment-code",
-    title: "Indian Railway Establishment Code (IREC)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules indian railway establishment code IREC Indian Railway Establishment Code (IREC)",
-  },
-  {
-    href: "/quizzes/establishment-rules/indian-railway-establishment-manual",
-    title: "Indian Railway Establishment Manual (IREM)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules indian railway establishment manual IREM Indian Railway Establishment Manual (IREM)",
   },
   {
     href: "/acts/industrial-disputes-act-1947",
@@ -3178,11 +3141,33 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps Information Technology Applications (IT Apps)",
   },
   {
+    href: "/topics/operating-material/integrated-block",
+    title: "Integrated Block",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material integrated block Integrated Block caution order 150 mts 15/8 kmph units",
+  },
+  {
+    href: "/topics/information-technology-apps/icms",
+    title: "Integrated Coaching Management System (ICMS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps icms ICMS Integrated Coaching Management System (ICMS)",
+  },
+  {
     href: "/topics/operating-material/interlocking",
     title: "Interlocking",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material interlocking Interlocking G.R. 1.02(29)",
+  },
+  {
+    href: "/topics/operating-material/intermediate-block-signal",
+    title: "Intermediate Block Signal (IBS)",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material ibs IBS Intermediate Block Signal (IBS) G.R. S.R. 3.75 14.13 14.14 axle counter",
   },
   {
     href: "/general-awareness/international-airports",
@@ -3191,7 +3176,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "General Awareness",
     keywords: "general awareness international airports International Airports",
   },
-
   {
     href: "/general-awareness/international-organization",
     title: "International Organization",
@@ -3213,21 +3197,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material isolator Isolator Switches Section Siding S.R. 17.03.5.3 OHE TPC competency",
-  },
-  {
-    href: "/topics/establishment-rules/irec",
-    title: "Indian Railway Establishment Code (IREC)",
-    category: "Study Topics",
-    parent: "Topics › Establishment Rules",
-    keywords: "topics establishment rules irec IREC Indian Railway Establishment Code (IREC)",
-  },
-
-  {
-    href: "/topics/establishment-rules/irem",
-    title: "Indian Railway Establishment Manual (IREM)",
-    category: "Study Topics",
-    parent: "Topics › Establishment Rules",
-    keywords: "topics establishment rules irem IREM Indian Railway Establishment Manual (IREM)",
   },
   {
     href: "/general-awareness/states-information/jammu-kashmir",
@@ -3293,18 +3262,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes kavach Kavach",
   },
   {
-    href: "/quizzes/professional-subject/kavach/kavach",
-    title: "Kavach Quiz",
-    category: "Quizzes",
-    parent: "Quizzes › Kavach",
-    keywords: "quizzes kavach quiz Kavach Quiz exam TCAS ATP collision avoidance",
-  },
-  {
     href: "/topics/operating-material/kavach",
     title: "Kavach",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material kavach Kavach IR-ATP Indian Railway Automatic Train Protection System AS 20",
+  },
+  {
+    href: "/quizzes/professional-subject/kavach/kavach",
+    title: "Kavach Quiz",
+    category: "Quizzes",
+    parent: "Quizzes › Kavach",
+    keywords: "quizzes kavach quiz Kavach Quiz exam TCAS ATP collision avoidance",
   },
   {
     href: "/general-awareness/states-information/kerala",
@@ -3313,7 +3282,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "General Awareness › States Information",
     keywords: "general awareness states information kerala Kerala",
   },
-
   {
     href: "/general-awareness/states-information/lakshadweep",
     title: "Lakshadweep",
@@ -3322,25 +3290,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information lakshadweep Lakshadweep",
   },
   {
-    href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949",
-    title: "Railway Servants Leave Rules 1949",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules leave rules Railway Servants Leave Rules 1949",
-  },
-  {
     href: "/topics/establishment-rules/leave-travel-concession",
     title: "Leave Travel Concession (LTC)",
     category: "Study Topics",
     parent: "Topics › Establishment Rules",
     keywords: "topics establishment rules leave travel concession Leave Travel Concession (LTC)",
-  },
-  {
-    href: "/quizzes/establishment-rules/linke-holfmann-busch",
-    title: "Linke-Hofmann-Busch (LHB)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules lhb LHB Linke-Hofmann-Busch (LHB)",
   },
   {
     href: "/topics/operating-material/level-crossing-gates",
@@ -3351,6 +3305,14 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material level crossing gates Level Crossing Gates APPENDIX-II TVU gateman interlocked non-interlocked APNG",
   },
   {
+    href: "/topics/railway-planning-schemes/lwis-scheme",
+    title: "Liberalized Wagon Investment Scheme (LWIS)",
+    category: "Study Topics",
+    parent: "Topics › Railway Planning Schemes",
+    keywords:
+      "topics railway planning schemes lwis scheme LWIS Scheme Liberalized Wagon Investment Scheme Leberalised",
+  },
+  {
     href: "/topics/operating-material/line-block",
     title: "Line Block",
     category: "Study Topics",
@@ -3358,13 +3320,26 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material line block Line Block circular notice field telephone VHF PWI SCOR Category-I Category-II Category-III",
   },
-
   {
     href: "/topics/operating-material/line-clear",
     title: "Line Clear",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material line clear Line Clear G.R. 1.02(36)",
+  },
+  {
+    href: "/quizzes/establishment-rules/linke-holfmann-busch",
+    title: "Linke-Hofmann-Busch (LHB)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules lhb LHB Linke-Hofmann-Busch (LHB)",
+  },
+  {
+    href: "/general-awareness/awards/literature-awards",
+    title: "Literature Awards",
+    category: "General Awareness",
+    parent: "General Awareness › Awards",
+    keywords: "general awareness awards literature awards Literature Awards",
   },
   {
     href: "/topics/operating-material/loco-pilot-entered-without-atp",
@@ -3396,77 +3371,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material lurch Lurch S.R. 6.07 unsafe track conditions running trains flasher",
-  },
-  {
-    href: "/topics/operating-material/marker-boards",
-    title: "Marker Boards",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material marker boards Marker Boards A marker AG C G IB P S identification signals",
-  },
-  {
-    href: "/topics/operating-material/marshalling",
-    title: "Marshalling",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material marshalling Marshalling APPENDIX VIII explosives petroleum dead engines SLR saloons",
-  },
-  {
-    href: "/quizzes/professional-subject/marshalling",
-    title: "Marshalling",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject marshalling Marshalling",
-  },
-  {
-    href: "/topics/operating-material/material-train",
-    title: "Material Train",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material material train Material Train S.R. 4.62 T/462 T/A.462 engineering BPC",
-  },
-
-  {
-    href: "/topics/operating-material/motor-trolley",
-    title: "Motor Trolley",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material motor trolley Motor Trolley G.R. S.R. 15.18 15.25 T/A.1525 T/1525 lorry push trolley",
-  },
-  {
-    href: "/general-awareness/awards/literature-awards",
-    title: "Literature Awards",
-    category: "General Awareness",
-    parent: "General Awareness › Awards",
-    keywords: "general awareness awards literature awards Literature Awards",
-  },
-
-  {
-    href: "/topics/railway-planning-schemes/lwis-scheme",
-    title: "Liberalized Wagon Investment Scheme (LWIS)",
-    category: "Study Topics",
-    parent: "Topics › Railway Planning Schemes",
-    keywords:
-      "topics railway planning schemes lwis scheme LWIS Scheme Liberalized Wagon Investment Scheme Leberalised",
-  },
-  {
-    href: "/quizzes/establishment-rules/modified-assured-career-progression",
-    title: "Modified Assured Career Progression (MACP)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules modified assured career progression MACP MACPS Modified Assured Career Progression (MACP)",
-  },
-  {
-    href: "/topics/establishment-rules/macp",
-    title: "Modified Assured Career Progression (MACP)",
-    category: "Study Topics",
-    parent: "Topics › Establishment Rules",
-    keywords:
-      "topics establishment rules macp MACP Modified Assured Career Progression (MACP) modified assured career progression FUG pay matrix",
   },
   {
     href: "/general-awareness/states-information/madhya-pradesh",
@@ -3526,11 +3430,42 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness important days march March",
   },
   {
+    href: "/topics/operating-material/marker-boards",
+    title: "Marker Boards",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material marker boards Marker Boards A marker AG C G IB P S identification signals",
+  },
+  {
+    href: "/quizzes/professional-subject/marshalling",
+    title: "Marshalling",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject marshalling Marshalling",
+  },
+  {
+    href: "/topics/operating-material/marshalling",
+    title: "Marshalling",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material marshalling Marshalling APPENDIX VIII explosives petroleum dead engines SLR saloons",
+  },
+  {
     href: "/topics/master-circulars",
     title: "Master Circulars",
     category: "Study Topics",
     parent: "Topics",
     keywords: "topics master circulars Master Circulars",
+  },
+  {
+    href: "/topics/operating-material/material-train",
+    title: "Material Train",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material material train Material Train S.R. 4.62 T/462 T/A.462 engineering BPC",
   },
   {
     href: "/general-awareness/important-days/may",
@@ -3575,6 +3510,29 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information mizoram Mizoram",
   },
   {
+    href: "/quizzes/establishment-rules/modified-assured-career-progression",
+    title: "Modified Assured Career Progression (MACP)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules modified assured career progression MACP MACPS Modified Assured Career Progression (MACP)",
+  },
+  {
+    href: "/topics/establishment-rules/macp",
+    title: "Modified Assured Career Progression (MACP)",
+    category: "Study Topics",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules macp MACP Modified Assured Career Progression (MACP) modified assured career progression FUG pay matrix",
+  },
+  {
+    href: "/topics/operating-material/motor-trolley",
+    title: "Motor Trolley",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material motor trolley Motor Trolley G.R. S.R. 15.18 15.25 T/A.1525 T/1525 lorry push trolley",
+  },
+  {
     href: "/topics/operating-material/multiple-aspect-signalling",
     title: "Multiple Aspect Signalling (MAS)",
     category: "Study Topics",
@@ -3588,7 +3546,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "General Awareness › States Information",
     keywords: "general awareness states information nagaland Nagaland",
   },
-
   {
     href: "/topics/railway-planning-schemes/national-logistics-policy",
     title: "National Logistics Policy (NLP)",
@@ -3611,11 +3568,46 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics establishment rules national pension scheme National Pension Scheme (NPS)",
   },
   {
+    href: "/quizzes/establishment-rules/national-pension-system",
+    title: "National Pension System (NPS)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules nps NPS National Pension System (NPS)",
+  },
+  {
+    href: "/quizzes/professional-subject/national-rail-plan",
+    title: "National Rail Plan (NRP)",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords: "quizzes national rail plan National Rail Plan (NRP) Vision 2024 HDN HUN capacity",
+  },
+  {
     href: "/topics/railway-planning-schemes/national-rail-plan",
     title: "National Rail Plan (NRP)",
     category: "Study Topics",
     parent: "Topics › Railway Planning Schemes",
     keywords: "topics railway planning schemes national rail plan National Rail Plan (NRP)",
+  },
+  {
+    href: "/quizzes/professional-subject/national-rail-plan/chapter-1",
+    title: "National Rail Plan Chapter 1",
+    category: "Quizzes",
+    parent: "Quizzes › National Rail Plan",
+    keywords: "quizzes national rail plan chapter 1 National Rail Plan Chapter 1 NRP exam Vision 2024",
+  },
+  {
+    href: "/quizzes/professional-subject/national-rail-plan/chapter-2",
+    title: "National Rail Plan Chapter 2",
+    category: "Quizzes",
+    parent: "Quizzes › National Rail Plan",
+    keywords: "quizzes national rail plan chapter 2 National Rail Plan Chapter 2 NRP exam HDN capacity",
+  },
+  {
+    href: "/topics/information-technology-apps/ntes",
+    title: "National Train Enquiry System (NTES)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps ntes NTES National Train Enquiry System (NTES)",
   },
   {
     href: "/topics/operating-material/non-interlocked-working",
@@ -3624,21 +3616,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material non-interlocked working Non-Interlocked Working NI Working RRI panel cable meggering Sr.DOM",
-  },
-  {
-    href: "/topics/aom-special/numbers-wise",
-    title: "Numbers Wise",
-    category: "Study Topics",
-    parent: "Topics › AOM Special",
-    keywords:
-      "topics aom special numbers wise Numbers Wise Numbers wagon limits dead engines AOM exam",
-  },
-  {
-    href: "/quizzes/professional-subject/numbers-wise",
-    title: "Numbers Wise",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject numbers wise Numbers Wise",
   },
   {
     href: "/general-awareness/world-information/north-american-countries",
@@ -3655,18 +3632,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness important days november November",
   },
   {
-    href: "/quizzes/establishment-rules/national-pension-system",
-    title: "National Pension System (NPS)",
+    href: "/quizzes/professional-subject/numbers-wise",
+    title: "Numbers Wise",
     category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules nps NPS National Pension System (NPS)",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject numbers wise Numbers Wise",
   },
   {
-    href: "/topics/information-technology-apps/ntes",
-    title: "National Train Enquiry System (NTES)",
+    href: "/topics/aom-special/numbers-wise",
+    title: "Numbers Wise",
     category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps ntes NTES National Train Enquiry System (NTES)",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special numbers wise Numbers Wise Numbers wagon limits dead engines AOM exam",
   },
   {
     href: "/topics/operating-material/obstruction",
@@ -3682,7 +3660,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "General Awareness › Important Days",
     keywords: "general awareness important days october October",
   },
-
   {
     href: "/general-awareness/states-information/odisha",
     title: "Odisha",
@@ -3698,11 +3675,26 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts official language act 1963 Official Language Act 1963",
   },
   {
+    href: "/quizzes/establishment-rules/old-pension-system",
+    title: "Old Pension System (OPS)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules ops OPS Old Pension System (OPS)",
+  },
+  {
     href: "/general-awareness/sports/olympic-games",
     title: "Olympic Games",
     category: "General Awareness",
     parent: "General Awareness › Sports",
     keywords: "general awareness sports olympic games Olympic Games",
+  },
+  {
+    href: "/topics/operating-material/operating-authorities",
+    title: "Operating Authorities",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material operating authorities Operating Authorities forms T.369 T.409 T.602 T.912 PLCT caution order",
   },
   {
     href: "/quizzes/operating-department",
@@ -3767,14 +3759,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Operating Department",
     keywords: "quizzes operating department chapter 8 Operating Department Chapter 8 exam",
   },
-  
-  {
-    href: "/topics/operating-manual",
-    title: "Operating Manual",
-    category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics operating manual Operating Manual station working train operations",
-  },
   {
     href: "/quizzes/operating-manual",
     title: "Operating Manual",
@@ -3783,67 +3767,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes operating manual Operating Manual",
   },
   {
+    href: "/topics/operating-manual",
+    title: "Operating Manual",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics operating manual Operating Manual station working train operations",
+  },
+  {
     href: "/quizzes/operating-manual/chapter-1",
     title: "Operating Manual Chapter 1",
     category: "Quizzes",
     parent: "Quizzes › Operating Manual",
     keywords: "quizzes operating manual chapter 1 Operating Manual Chapter 1 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-2",
-    title: "Operating Manual Chapter 2",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 2 Operating Manual Chapter 2 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-3",
-    title: "Operating Manual Chapter 3",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 3 Operating Manual Chapter 3 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-4",
-    title: "Operating Manual Chapter 4",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 4 Operating Manual Chapter 4 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-5",
-    title: "Operating Manual Chapter 5",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 5 Operating Manual Chapter 5 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-6",
-    title: "Operating Manual Chapter 6",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 6 Operating Manual Chapter 6 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-7",
-    title: "Operating Manual Chapter 7",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 7 Operating Manual Chapter 7 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-8",
-    title: "Operating Manual Chapter 8",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 8 Operating Manual Chapter 8 exam",
-  },
-  {
-    href: "/quizzes/operating-manual/chapter-9",
-    title: "Operating Manual Chapter 9",
-    category: "Quizzes",
-    parent: "Quizzes › Operating Manual",
-    keywords: "quizzes operating manual chapter 9 Operating Manual Chapter 9 exam",
   },
   {
     href: "/quizzes/operating-manual/chapter-10",
@@ -3916,6 +3851,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes operating manual chapter 19 Operating Manual Chapter 19 exam",
   },
   {
+    href: "/quizzes/operating-manual/chapter-2",
+    title: "Operating Manual Chapter 2",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 2 Operating Manual Chapter 2 exam",
+  },
+  {
     href: "/quizzes/operating-manual/chapter-20",
     title: "Operating Manual Chapter 20",
     category: "Quizzes",
@@ -3958,6 +3900,55 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes operating manual chapter 25 Operating Manual Chapter 25 exam",
   },
   {
+    href: "/quizzes/operating-manual/chapter-3",
+    title: "Operating Manual Chapter 3",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 3 Operating Manual Chapter 3 exam",
+  },
+  {
+    href: "/quizzes/operating-manual/chapter-4",
+    title: "Operating Manual Chapter 4",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 4 Operating Manual Chapter 4 exam",
+  },
+  {
+    href: "/quizzes/operating-manual/chapter-5",
+    title: "Operating Manual Chapter 5",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 5 Operating Manual Chapter 5 exam",
+  },
+  {
+    href: "/quizzes/operating-manual/chapter-6",
+    title: "Operating Manual Chapter 6",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 6 Operating Manual Chapter 6 exam",
+  },
+  {
+    href: "/quizzes/operating-manual/chapter-7",
+    title: "Operating Manual Chapter 7",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 7 Operating Manual Chapter 7 exam",
+  },
+  {
+    href: "/quizzes/operating-manual/chapter-8",
+    title: "Operating Manual Chapter 8",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 8 Operating Manual Chapter 8 exam",
+  },
+  {
+    href: "/quizzes/operating-manual/chapter-9",
+    title: "Operating Manual Chapter 9",
+    category: "Quizzes",
+    parent: "Quizzes › Operating Manual",
+    keywords: "quizzes operating manual chapter 9 Operating Manual Chapter 9 exam",
+  },
+  {
     href: "/topics/operating-material",
     title: "Operating Material",
     category: "Study Topics",
@@ -3980,22 +3971,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject operating statistics Operating Statistics",
   },
   {
-    href: "/topics/operating-material/operating-authorities",
-    title: "Operating Authorities",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material operating authorities Operating Authorities forms T.369 T.409 T.602 T.912 PLCT caution order",
-  },
-  {
-    href: "/quizzes/establishment-rules/old-pension-system",
-    title: "Old Pension System (OPS)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules ops OPS Old Pension System (OPS)",
-  },
-
-  {
     href: "/general-awareness/awards/other-awards",
     title: "Other Awards",
     category: "General Awareness",
@@ -4017,19 +3992,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material outer signal Outer Signal FSS TAS class B T/369",
   },
   {
+    href: "/quizzes/professional-subject/over-dimensional-consignment",
+    title: "Over Dimensional Consignment",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject over dimensional consignment Over Dimensional Consignment",
+  },
+  {
     href: "/topics/professional-subject/over-dimensional-consignment",
     title: "Over Dimensional Consignment",
     category: "Study Topics",
     parent: "Topics › Professional Subject",
     keywords:
       "topics professional subject over dimensional consignment Over Dimensional Consignment ODC",
-  },
-  {
-    href: "/quizzes/professional-subject/over-dimensional-consignment",
-    title: "Over Dimensional Consignment",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject over dimensional consignment Over Dimensional Consignment",
   },
   {
     href: "/topics/operating-material/panel-interlocking",
@@ -4040,11 +4015,33 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material panel interlocking Panel Interlocking APPENDIX XXI Siemens Podanur VDU SSI RRI calling-on",
   },
   {
-    href: "/quizzes/establishment-rules/railway-servants-pass-rules-1986",
-    title: "Railway Servants Pass Rules 1986",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules pass rules Railway Servants Pass Rules 1986",
+    href: "/topics/block-working-manual/plct-working",
+    title: "Paper Line Clear Ticket (PLCT) Working",
+    category: "Study Topics",
+    parent: "Topics › Block Working Manual",
+    keywords:
+      "topics block working manual plct working PLCT Working BWM Annexure Paper Line Clear Ticket (PLCT) T/A 1425 T/B 1425 TSR",
+  },
+  {
+    href: "/topics/establishment-rules/prem",
+    title: "Participation of Railway Employees in Management (PREM)",
+    category: "Study Topics",
+    parent: "Topics › Establishment Rules",
+    keywords: "topics establishment rules prem PREM Participation of Railway Employees in Management (PREM)",
+  },
+  {
+    href: "/topics/information-technology-apps/pms",
+    title: "Passenger Management System (PMS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps pms PMS Passenger Management System (PMS)",
+  },
+  {
+    href: "/topics/information-technology-apps/prs-application",
+    title: "Passenger Reservation System (PRS) Application",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps prs application PRS Application Passenger Reservation System (PRS) Application",
   },
   {
     href: "/topics/operating-material/patrolling-of-lines",
@@ -4054,7 +4051,6 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material patrolling of lines Patrolling of Lines Appendix IV G.R. 15.05 monsoon patrol beat book",
   },
-  
   {
     href: "/general-awareness/awards/peace-service-awards",
     title: "Peace Service Awards",
@@ -4063,19 +4059,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness awards peace service awards Peace Service Awards",
   },
   {
+    href: "/quizzes/professional-subject/percentage-wise",
+    title: "Percentage Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject percentage wise Percentage Wise",
+  },
+  {
     href: "/topics/aom-special/percentage-wise",
     title: "Percentage Wise",
     category: "Study Topics",
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special percentage wise Percentage Wise Percentages brake power AOM exam",
-  },
-  {
-    href: "/quizzes/professional-subject/percentage-wise",
-    title: "Percentage Wise",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject percentage wise Percentage Wise",
   },
   {
     href: "/quizzes/establishment-rules/permanent-negotiating-machinery",
@@ -4170,56 +4166,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics financial rules plan heads Plan Heads",
   },
   {
-    href: "/topics/information-technology-apps/pms",
-    title: "Passenger Management System (PMS)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps pms PMS Passenger Management System (PMS)",
-  },
-  {
-    href: "/topics/block-working-manual/plct-working",
-    title: "Paper Line Clear Ticket (PLCT) Working",
-    category: "Study Topics",
-    parent: "Topics › Block Working Manual",
-    keywords:
-      "topics block working manual plct working PLCT Working BWM Annexure Paper Line Clear Ticket (PLCT) T/A 1425 T/B 1425 TSR",
-  },
-  {
     href: "/topics/operating-material/point-trap-indicator",
     title: "Point Trap Indicator",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material point trap indicator Point Trap Indicator S.R. 3.50.2 3.51.3.1",
   },
-
   {
     href: "/topics/operating-material/points",
     title: "Points Affecting the Movement",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material points affecting the movement Points Affecting the Movement G.R. 3.38 VDU line block power block",
-  },
-  {
-    href: "/topics/operating-material/power-block",
-    title: "Power Block",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material power block Power Block S.R. 17.04 OHE TPC SCOR Permit to Work collars E/Tr.D",
-  },
-  {
-    href: "/quizzes/professional-subject/preferential-traffic-order",
-    title: "Preferential Traffic Order",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject preferential traffic order Preferential Traffic Order",
-  },
-  {
-    href: "/quizzes/professional-subject/premium-special-trains",
-    title: "Premium Special Trains",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject premium special trains Premium Special Trains",
   },
   {
     href: "/quizzes/general-awareness/polity",
@@ -4234,6 +4192,34 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › General Awareness › Polity",
     keywords: "quizzes general awareness polity quiz 1 Polity Quiz 1 exam",
+  },
+  {
+    href: "/quizzes/general-awareness/polity/quiz-10",
+    title: "Polity Quiz 10",
+    category: "Quizzes",
+    parent: "Quizzes › General Awareness › Polity",
+    keywords: "quizzes general awareness polity quiz 10 Polity Quiz 10 exam",
+  },
+  {
+    href: "/quizzes/general-awareness/polity/quiz-11",
+    title: "Polity Quiz 11",
+    category: "Quizzes",
+    parent: "Quizzes › General Awareness › Polity",
+    keywords: "quizzes general awareness polity quiz 11 Polity Quiz 11 exam",
+  },
+  {
+    href: "/quizzes/general-awareness/polity/quiz-12",
+    title: "Polity Quiz 12",
+    category: "Quizzes",
+    parent: "Quizzes › General Awareness › Polity",
+    keywords: "quizzes general awareness polity quiz 12 Polity Quiz 12 exam",
+  },
+  {
+    href: "/quizzes/general-awareness/polity/quiz-13",
+    title: "Polity Quiz 13",
+    category: "Quizzes",
+    parent: "Quizzes › General Awareness › Polity",
+    keywords: "quizzes general awareness polity quiz 13 Polity Quiz 13 exam",
   },
   {
     href: "/quizzes/general-awareness/polity/quiz-2",
@@ -4292,39 +4278,26 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes general awareness polity quiz 9 Polity Quiz 9 exam",
   },
   {
-    href: "/quizzes/general-awareness/polity/quiz-10",
-    title: "Polity Quiz 10",
-    category: "Quizzes",
-    parent: "Quizzes › General Awareness › Polity",
-    keywords: "quizzes general awareness polity quiz 10 Polity Quiz 10 exam",
-  },
-  {
-    href: "/quizzes/general-awareness/polity/quiz-11",
-    title: "Polity Quiz 11",
-    category: "Quizzes",
-    parent: "Quizzes › General Awareness › Polity",
-    keywords: "quizzes general awareness polity quiz 11 Polity Quiz 11 exam",
-  },
-  {
-    href: "/quizzes/general-awareness/polity/quiz-12",
-    title: "Polity Quiz 12",
-    category: "Quizzes",
-    parent: "Quizzes › General Awareness › Polity",
-    keywords: "quizzes general awareness polity quiz 12 Polity Quiz 12 exam",
-  },
-  {
-    href: "/quizzes/general-awareness/polity/quiz-13",
-    title: "Polity Quiz 13",
-    category: "Quizzes",
-    parent: "Quizzes › General Awareness › Polity",
-    keywords: "quizzes general awareness polity quiz 13 Polity Quiz 13 exam",
-  },
-  {
-    href: "/topics/establishment-rules/prem",
-    title: "Participation of Railway Employees in Management (PREM)",
+    href: "/topics/operating-material/power-block",
+    title: "Power Block",
     category: "Study Topics",
-    parent: "Topics › Establishment Rules",
-    keywords: "topics establishment rules prem PREM Participation of Railway Employees in Management (PREM)",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material power block Power Block S.R. 17.04 OHE TPC SCOR Permit to Work collars E/Tr.D",
+  },
+  {
+    href: "/quizzes/professional-subject/preferential-traffic-order",
+    title: "Preferential Traffic Order",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject preferential traffic order Preferential Traffic Order",
+  },
+  {
+    href: "/quizzes/professional-subject/premium-special-trains",
+    title: "Premium Special Trains",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject premium special trains Premium Special Trains",
   },
   {
     href: "/topics/financial-rules/primary-units",
@@ -4350,21 +4323,13 @@ export const searchTopics: SearchTopic[] = [
       "topics block working manual private numbers Private Numbers BWM PN book TSR TI line clear",
   },
   {
-    href: "/aom-tests/aom-professional-subject-tests",
-    title: "AOM Professional Subject Tests",
-    category: "AOM Tests",
-    parent: "AOM Tests › AOM Professional Subject Tests",
+    href: "/quizzes/professional-subject",
+    title: "Professional Subject",
+    category: "Quizzes",
+    parent: "Quizzes",
     keywords:
-      "aom tests aom professional subject tests AOM Professional Subject Tests operating G&SR manuals signalling",
+      "quizzes professional subject Professional Subject accident inquiries traffic terminals ODC wagons",
   },
-  {
-    href: "/topics/information-technology-apps/prs-application",
-    title: "Passenger Reservation System (PRS) Application",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps prs application PRS Application Passenger Reservation System (PRS) Application",
-  },
-
   {
     href: "/topics/professional-subject",
     title: "Professional Subject",
@@ -4372,14 +4337,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics",
     keywords:
       "topics professional subject Professional Subject preferential traffic order freight terminal wagon speeds ODC",
-  },
-  {
-    href: "/quizzes/professional-subject",
-    title: "Professional Subject",
-    category: "Quizzes",
-    parent: "Quizzes",
-    keywords:
-      "quizzes professional subject Professional Subject accident inquiries traffic terminals ODC wagons",
   },
   {
     href: "/topics/operating-material/protection-of-train",
@@ -4411,14 +4368,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information punjab Punjab",
   },
   {
-    href: "/topics/establishment-rules/quarters",
-    title: "Railway Quarters",
-    category: "Study Topics",
-    parent: "Topics › Establishment Rules",
-    keywords:
-      "topics establishment rules quarters Quarters accommodation eligibility retention licence fee",
-  },
-  {
     href: "/quizzes",
     title: "Quizzes",
     category: "Quizzes",
@@ -4426,18 +4375,28 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes Quizzes",
   },
   {
-    href: "/topics/railway-acts",
-    title: "Indian Railway Acts 1989",
+    href: "/topics/operating-material/rail-dolly",
+    title: "Rail Dolly",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics railway acts Railway Acts Indian Railway Acts 1989 Indian Railway Act 1989",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material rail dolly Rail Dolly S.R. 15.27.8 keyman PWI sleeper block protection",
   },
   {
-    href: "/topics/financial-rules/railway-budget",
-    title: "Railway Budget",
+    href: "/topics/operating-material/rail-fracture",
+    title: "Rail Fracture",
     category: "Study Topics",
-    parent: "Topics › Financial Rules",
-    keywords: "topics financial rules railway budget Railway Budget",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material rail fracture Rail Fracture S.R. 6.01 caution order Kavach SOS SMOCIP",
+  },
+  {
+    href: "/topics/operating-material/rail-road-vehicle",
+    title: "Rail-cum-Road Vehicle (RRV)",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material rail road vehicle Rail Road Vehicle RRV Rail-cum-Road Vehicle (RRV) S.R. 15.27.9 ON OFF tracking",
   },
   {
     href: "/quizzes/establishment-rules/railway-allowances",
@@ -4447,32 +4406,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules railway allowances HRA NDA CEA",
   },
   {
-    href: "/quizzes/establishment-rules/railway-online-services",
-    title: "Railway Online Services",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules railway online services e-Office KMS digital signature",
-  },
-  {
-    href: "/quizzes/establishment-rules/railway-quarters",
-    title: "Railway Quarters",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules railway quarters retention transfer MSOP",
-  },
-  {
-    href: "/quizzes/establishment-rules/railway-recruitment-posting-promotion",
-    title: "Railway Recruitment Posting Promotion",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules railway recruitment posting promotion CCAA selection reservation",
-  },
-  {
-    href: "/quizzes/establishment-rules/railway-services-pension-rules-1993",
-    title: "Railway Services Pension Rules 1993",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules railway services pension rules 1993 family pension disability",
+    href: "/topics/financial-rules/railway-budget",
+    title: "Railway Budget",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords: "topics financial rules railway budget Railway Budget",
   },
   {
     href: "/quizzes/railway-current-affairs-2026",
@@ -4603,46 +4541,56 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes railway gk chapter 7 Railway GK Chapter 7 exam",
   },
   {
-    href: "/quizzes/railway-statistics",
-    title: "Railway Statistics",
+    href: "/quizzes/establishment-rules/railway-online-services",
+    title: "Railway Online Services",
     category: "Quizzes",
-    parent: "Quizzes",
-    keywords: "quizzes railway statistics Railway Statistics operating ratio wagon turn round punctuality",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway online services e-Office KMS digital signature",
   },
   {
-    href: "/quizzes/railway-statistics/chapter-1",
-    title: "Railway Statistics Chapter 1",
-    category: "Quizzes",
-    parent: "Quizzes › Railway Statistics",
-    keywords: "quizzes railway statistics chapter 1 Railway Statistics Chapter 1 exam operating ratio",
+    href: "/topics/indian-railways/railway-organization",
+    title: "Railway Organization",
+    category: "Study Topics",
+    parent: "Topics › Indian Railways",
+    keywords:
+      "topics indian railways railway organization Railway Organization structure zones divisions hierarchy",
   },
   {
-    href: "/quizzes/railway-statistics/chapter-2",
-    title: "Railway Statistics Chapter 2",
-    category: "Quizzes",
-    parent: "Quizzes › Railway Statistics",
-    keywords: "quizzes railway statistics chapter 2 Railway Statistics Chapter 2 exam punctuality",
+    href: "/topics/railway-planning-schemes",
+    title: "Railway Planning Schemes",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords:
+      "topics railway planning schemes Railway Planning Schemes CRT EOL Gati Shakti LWIS MGR Mission 3000 MT NLP NRP",
   },
   {
-    href: "/quizzes/professional-subject/national-rail-plan",
-    title: "National Rail Plan (NRP)",
+    href: "/quizzes/establishment-rules/railway-quarters",
+    title: "Railway Quarters",
     category: "Quizzes",
-    parent: "Quizzes",
-    keywords: "quizzes national rail plan National Rail Plan (NRP) Vision 2024 HDN HUN capacity",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway quarters retention transfer MSOP",
   },
   {
-    href: "/quizzes/professional-subject/national-rail-plan/chapter-1",
-    title: "National Rail Plan Chapter 1",
-    category: "Quizzes",
-    parent: "Quizzes › National Rail Plan",
-    keywords: "quizzes national rail plan chapter 1 National Rail Plan Chapter 1 NRP exam Vision 2024",
+    href: "/topics/establishment-rules/quarters",
+    title: "Railway Quarters",
+    category: "Study Topics",
+    parent: "Topics › Establishment Rules",
+    keywords:
+      "topics establishment rules quarters Quarters accommodation eligibility retention licence fee",
   },
   {
-    href: "/quizzes/professional-subject/national-rail-plan/chapter-2",
-    title: "National Rail Plan Chapter 2",
+    href: "/quizzes/establishment-rules/railway-recruitment-posting-promotion",
+    title: "Railway Recruitment Posting Promotion",
     category: "Quizzes",
-    parent: "Quizzes › National Rail Plan",
-    keywords: "quizzes national rail plan chapter 2 National Rail Plan Chapter 2 NRP exam HDN capacity",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway recruitment posting promotion CCAA selection reservation",
+  },
+  {
+    href: "/topics/schemes",
+    title: "Railway Schemes",
+    category: "Study Topics",
+    parent: "Topics",
+    keywords: "topics schemes Railway Schemes",
   },
   {
     href: "/acts/railway-servants-da-rules-1968",
@@ -4650,6 +4598,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Acts & Rules",
     parent: "Acts",
     keywords: "acts railway servants da rules 1968 Railway Servants Discipline & Appeal Rules 1968",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-servants-discipline-appeal-rules-1968",
+    title: "Railway Servants Discipline Appeal Rules 1968",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules discipline appeal rules Railway Servants Discipline Appeal Rules 1968",
   },
   {
     href: "/topics/aom-special/railway-servants-discipline-appeal-rules-1968-all-rules",
@@ -4667,6 +4622,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts railway servants leave rules 1949 Railway Servants Leave Rules 1949",
   },
   {
+    href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949",
+    title: "Railway Servants Leave Rules 1949",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules leave rules Railway Servants Leave Rules 1949",
+  },
+  {
     href: "/topics/aom-special/railway-servants-leave-rules-1949-all-rules",
     title: "Railway Servants Leave Rules 1949 All Rules",
     category: "Study Topics",
@@ -4682,11 +4644,25 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts railway servants pass rules 1986 Railway Servants Pass Rules 1986",
   },
   {
+    href: "/quizzes/establishment-rules/railway-servants-pass-rules-1986",
+    title: "Railway Servants Pass Rules 1986",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules pass rules Railway Servants Pass Rules 1986",
+  },
+  {
     href: "/acts/railway-servants-rest-rules-2005",
     title: "Railway Servants Rest Rules 2005",
     category: "Acts & Rules",
     parent: "Acts",
     keywords: "acts railway servants rest rules 2005 Railway Servants Rest Rules 2005",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-servants-rest-rules-2005",
+    title: "Railway Servants Rest Rules 2005",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules rest rules Railway Servants Rest Rules 2005",
   },
   {
     href: "/topics/aom-special/railway-servants-rest-rules-2005-all-rules",
@@ -4704,12 +4680,55 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts railway services conduct rules 1966 Railway Services Conduct Rules 1966",
   },
   {
+    href: "/quizzes/establishment-rules/railway-services-conduct-rules-1966",
+    title: "Railway Services Conduct Rules 1966",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules conduct rules Railway Services Conduct Rules 1966",
+  },
+  {
     href: "/topics/aom-special/railway-services-conduct-rules-1966-all-rules",
     title: "Railway Services Conduct Rules 1966 All Rules",
     category: "Study Topics",
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special railway services conduct rules 1966 all rules Railway Services Conduct Rules 1966 gifts politics AOM exam",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-services-pension-rules-1993",
+    title: "Railway Services Pension Rules 1993",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules railway services pension rules 1993 family pension disability",
+  },
+  {
+    href: "/quizzes/railway-statistics",
+    title: "Railway Statistics",
+    category: "Quizzes",
+    parent: "Quizzes",
+    keywords: "quizzes railway statistics Railway Statistics operating ratio wagon turn round punctuality",
+  },
+  {
+    href: "/topics/indian-railways/railway-statistics",
+    title: "Railway Statistics",
+    category: "Study Topics",
+    parent: "Topics › Indian Railways",
+    keywords:
+      "topics indian railways railway statistics Railway Statistics facts figures network traffic",
+  },
+  {
+    href: "/quizzes/railway-statistics/chapter-1",
+    title: "Railway Statistics Chapter 1",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Statistics",
+    keywords: "quizzes railway statistics chapter 1 Railway Statistics Chapter 1 exam operating ratio",
+  },
+  {
+    href: "/quizzes/railway-statistics/chapter-2",
+    title: "Railway Statistics Chapter 2",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Statistics",
+    keywords: "quizzes railway statistics chapter 2 Railway Statistics Chapter 2 exam punctuality",
   },
   {
     href: "/topics/aom-special/indian-railway-act-1989-all-acts",
@@ -4762,6 +4781,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information rajasthan Rajasthan",
   },
   {
+    href: "/topics/information-technology-apps/rms",
+    title: "Rake Management System (RMS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps rms RMS Rake Management System (RMS)",
+  },
+  {
     href: "/general-awareness/ramsar-sites",
     title: "Ramsar Sites",
     category: "General Awareness",
@@ -4769,28 +4795,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness ramsar sites Ramsar Sites",
   },
   {
-    href: "/topics/operating-material/rail-dolly",
-    title: "Rail Dolly",
+    href: "/topics/information-technology-apps/rtis",
+    title: "Real Time Train Information System (RTIS)",
     category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material rail dolly Rail Dolly S.R. 15.27.8 keyman PWI sleeper block protection",
-  },
-  {
-    href: "/topics/operating-material/rail-fracture",
-    title: "Rail Fracture",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material rail fracture Rail Fracture S.R. 6.01 caution order Kavach SOS SMOCIP",
-  },
-  {
-    href: "/topics/operating-material/rail-road-vehicle",
-    title: "Rail-cum-Road Vehicle (RRV)",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material rail road vehicle Rail Road Vehicle RRV Rail-cum-Road Vehicle (RRV) S.R. 15.27.9 ON OFF tracking",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps rtis RTIS Real Time Train Information System (RTIS)",
   },
   {
     href: "/topics/operating-material/reception-signals",
@@ -4829,13 +4838,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material repeating signal Repeating Signal G.R. 3.16 R marker",
   },
   {
-    href: "/quizzes/establishment-rules/railway-servants-rest-rules-2005",
-    title: "Railway Servants Rest Rules 2005",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules rest rules Railway Servants Rest Rules 2005",
-  },
-  {
     href: "/acts/right-to-information-act-2005",
     title: "Right to Information Act 2005 (RTI Act 2005)",
     category: "Acts & Rules",
@@ -4843,11 +4845,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "acts right to information act 2005 Right to Information Act 2005 (RTI Act 2005)",
   },
   {
-    href: "/topics/information-technology-apps/rms",
-    title: "Rake Management System (RMS)",
+    href: "/quizzes/establishment-rules/right-to-information-act-2005",
+    title: "Right to Information Act 2005 (RTI Act 2005)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules rti act 2005 RTI Act 2005 Right to Information Act 2005 (RTI Act 2005)",
+  },
+  {
+    href: "/topics/operating-material/routing-signal",
+    title: "Routing Signal",
     category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps rms RMS Rake Management System (RMS)",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material routing signal Routing Signal G.R. 3.09 route indicators SEM Electric Repeater",
   },
   {
     href: "/topics/information-technology-apps/rshc",
@@ -4864,27 +4873,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps rsms RSMS RPF Security Management System (RSMS)",
   },
   {
-    href: "/quizzes/establishment-rules/right-to-information-act-2005",
-    title: "Right to Information Act 2005 (RTI Act 2005)",
-    category: "Quizzes",
-    parent: "Quizzes › Establishment Rules",
-    keywords: "quizzes establishment rules rti act 2005 RTI Act 2005 Right to Information Act 2005 (RTI Act 2005)",
-  },
-  {
-    href: "/topics/information-technology-apps/rtis",
-    title: "Real Time Train Information System (RTIS)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps rtis RTIS Real Time Train Information System (RTIS)",
-  },
-  {
-    href: "/topics/operating-material/routing-signal",
-    title: "Routing Signal",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material routing signal Routing Signal G.R. 3.09 route indicators SEM Electric Repeater",
-  },
-  {
     href: "/topics/operating-material/running-line",
     title: "Running Line",
     category: "Study Topics",
@@ -4899,35 +4887,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material running train Running Train G.R. 1.02(48)",
   },
   {
-    href: "/topics/information-technology-apps/satsang",
-    title: "Software Aided Train Scheduling And Network Governance (SATSANG)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps satsang SATSANG Software Aided Train Scheduling And Network Governance (SATSANG)",
-  },
-
-
-  {
     href: "/general-awareness/schemes",
     title: "Schemes",
     category: "General Awareness",
     parent: "General Awareness",
     keywords: "general awareness schemes Schemes",
-  },
-  {
-    href: "/topics/railway-planning-schemes",
-    title: "Railway Planning Schemes",
-    category: "Study Topics",
-    parent: "Topics",
-    keywords:
-      "topics railway planning schemes Railway Planning Schemes CRT EOL Gati Shakti LWIS MGR Mission 3000 MT NLP NRP",
-  },
-  {
-    href: "/topics/schemes",
-    title: "Railway Schemes",
-    category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics schemes Railway Schemes",
   },
   {
     href: "/general-awareness/awards/science-technology-awards",
@@ -4959,6 +4923,14 @@ export const searchTopics: SearchTopic[] = [
       "topics establishment rules service rules Service Rules conduct conditions classification",
   },
   {
+    href: "/topics/operating-material/shadow-block",
+    title: "Shadow Block",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material shadow block Shadow Block caution order 150 mts both ends authorities",
+  },
+  {
     href: "/general-awareness/sports/shooting",
     title: "Shooting",
     category: "General Awareness",
@@ -4971,14 +4943,6 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material shunt signal Shunt Signal G.R. 3.14 SPI position light T/369",
-  },
-  {
-    href: "/topics/operating-material/shadow-block",
-    title: "Shadow Block",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material shadow block Shadow Block caution order 150 mts both ends authorities",
   },
   {
     href: "/topics/operating-material/shunting",
@@ -5009,27 +4973,25 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material signals Signals fixed hand detonating flare warning",
   },
   {
-    href: "/topics/operating-material/stabling",
-    title: "Stabling",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material stabling Stabling running lines G.R. S.R. 5.19 5.23 securing vehicles formation",
-  },
-  {
     href: "/general-awareness/states-information/sikkim",
     title: "Sikkim",
     category: "General Awareness",
     parent: "General Awareness › States Information",
     keywords: "general awareness states information sikkim Sikkim",
   },
-
-
   {
     href: "/general-awareness/sports/snooker",
     title: "Snooker",
     category: "General Awareness",
     parent: "General Awareness › Sports",
     keywords: "general awareness sports snooker Snooker",
+  },
+  {
+    href: "/topics/information-technology-apps/satsang",
+    title: "Software Aided Train Scheduling And Network Governance (SATSANG)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps satsang SATSANG Software Aided Train Scheduling And Network Governance (SATSANG)",
   },
   {
     href: "/general-awareness/world-information/south-american-countries",
@@ -5039,19 +5001,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness world information south american countries South American Countries",
   },
   {
+    href: "/quizzes/professional-subject/speed-restrictions",
+    title: "Speed Restrictions",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject speed restrictions Speed Restrictions",
+  },
+  {
     href: "/topics/aom-special/speed-restrictions",
     title: "Speed Restrictions",
     category: "Study Topics",
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special speed restrictions Speed Restrictions TSR PSR caution AOM exam",
-  },
-  {
-    href: "/quizzes/professional-subject/speed-restrictions",
-    title: "Speed Restrictions",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject speed restrictions Speed Restrictions",
   },
   {
     href: "/topics/professional-subject/speeds-of-wagons",
@@ -5082,6 +5044,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports squash Squash",
   },
   {
+    href: "/topics/operating-material/stabling",
+    title: "Stabling",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material stabling Stabling running lines G.R. S.R. 5.19 5.23 securing vehicles formation",
+  },
+  {
     href: "/quizzes/establishment-rules/staff-benefit-fund",
     title: "Staff Benefit Fund (SBF)",
     category: "Quizzes",
@@ -5103,6 +5072,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special standard forms Standard Forms disciplinary proceedings SF D&A AOM exam",
+  },
+  {
+    href: "/topics/operating-material/starter-signal",
+    title: "Starter Signal",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material starter signal Starter Signal LSS Common Intermediate Routing",
   },
   {
     href: "/general-awareness/states-information",
@@ -5148,16 +5124,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Professional Subject",
     keywords: "quizzes professional subject station working rules Station Working Rules",
   },
-
-  {
-    href: "/topics/operating-material/station-working-rules",
-    title: "Station Working Rules (SWR)",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material station working rules Station Working Rules (SWR) G.R. 5.06 Appendix XIV chapters appendices",
-  },
-
   {
     href: "/manuals/station-working-rules",
     title: "Station Working Rules (SWR)",
@@ -5166,27 +5132,12 @@ export const searchTopics: SearchTopic[] = [
     keywords: "manuals station working rules Station Working Rules (SWR)",
   },
   {
-    href: "/topics/aom-special/station-working-rules-appendix",
-    title: "SWR Appendix",
-    category: "Study Topics",
-    parent: "Topics › AOM Special",
-    keywords:
-      "topics aom special swr appendix SWR Appendix station working rules appendices AOM exam",
-  },
-  {
-    href: "/topics/aom-special/station-working-rules-chapters",
-    title: "SWR Chapters",
-    category: "Study Topics",
-    parent: "Topics › AOM Special",
-    keywords:
-      "topics aom special swr chapters SWR Chapters station working rules AOM exam",
-  },
-  {
-    href: "/topics/operating-material/starter-signal",
-    title: "Starter Signal",
+    href: "/topics/operating-material/station-working-rules",
+    title: "Station Working Rules (SWR)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material starter signal Starter Signal LSS Common Intermediate Routing",
+    keywords:
+      "topics operating material station working rules Station Working Rules (SWR) G.R. 5.06 Appendix XIV chapters appendices",
   },
   {
     href: "/topics/operating-material/stop-signals",
@@ -5195,8 +5146,6 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords: "topics operating material stop signals Stop Signals Reception Despatch Other",
   },
-
-
   {
     href: "/topics",
     title: "Study Topics",
@@ -5219,6 +5168,22 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness summits Summits",
   },
   {
+    href: "/topics/aom-special/station-working-rules-appendix",
+    title: "SWR Appendix",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special swr appendix SWR Appendix station working rules appendices AOM exam",
+  },
+  {
+    href: "/topics/aom-special/station-working-rules-chapters",
+    title: "SWR Chapters",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special swr chapters SWR Chapters station working rules AOM exam",
+  },
+  {
     href: "/syllabus",
     title: "Syllabus",
     category: "Syllabus",
@@ -5233,12 +5198,92 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material system of working System of Working G.R. 1.02(56)",
   },
   {
+    href: "/general-awareness/sports/table-tennis",
+    title: "Table Tennis",
+    category: "General Awareness",
+    parent: "General Awareness › Sports",
+
+    keywords: "general awareness sports table tennis Table Tennis",
+  },
+  {
+    href: "/general-awareness/states-information/tamil-nadu",
+    title: "Tamil Nadu",
+    category: "General Awareness",
+    parent: "General Awareness › States Information",
+    keywords: "general awareness states information tamil nadu Tamil Nadu",
+  },
+  {
+    href: "/general-awareness/states-information/telangana",
+    title: "Telangana",
+    category: "General Awareness",
+    parent: "General Awareness › States Information",
+    keywords: "general awareness states information telangana Telangana",
+  },
+  {
     href: "/topics/operating-material/temporary-single-line",
     title: "Temporary Single Line (TSL)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material temporary single line Temporary Single Line (TSL) S.R. 6.02.1 T/D 602 obstructed double line",
+  },
+  {
+    href: "/quizzes/financial-rules/tenders",
+    title: "Tenders",
+    category: "Quizzes",
+    parent: "Quizzes › Financial Rules",
+    keywords: "quizzes financial rules tenders Tenders",
+  },
+  {
+    href: "/general-awareness/sports/tennis",
+    title: "Tennis",
+    category: "General Awareness",
+    parent: "General Awareness › Sports",
+    keywords: "general awareness sports tennis Tennis",
+  },
+  {
+    href: "/topics/information-technology-apps/tms",
+    title: "Terminal Management System (TMS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps tms TMS Terminal Management System (TMS)",
+  },
+  {
+    href: "/general-awareness/tiger-reserves",
+    title: "Tiger Reserves",
+    category: "General Awareness",
+    parent: "General Awareness",
+    keywords: "general awareness tiger reserves Tiger Reserves",
+  },
+  {
+    href: "/quizzes/professional-subject/timings-wise",
+    title: "Timings Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject timings wise Timings Wise",
+  },
+  {
+    href: "/topics/aom-special/timings-wise",
+    title: "Timings Wise",
+    category: "Study Topics",
+    parent: "Topics › AOM Special",
+    keywords:
+      "topics aom special timings wise Timings Wise Timings time limits AOM exam",
+  },
+  {
+    href: "/topics/operating-material/total-interruption-of-communication",
+    title: "Total Interruption of Communication (TIC)",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material total interruption of communication Total Interruption of Communication (TIC) S.R. 6.02.4 6.02.3 T/B 602 T/C.602 single double line",
+  },
+  {
+    href: "/topics/information-technology-apps/tdms",
+    title: "Track Distribution Management System (TDMS)",
+    category: "Study Topics",
+    parent: "Topics › Information Technology Apps",
+    keywords: "topics information technology apps tdms TDMS Track Distribution Management System (TDMS)",
   },
   {
     href: "/topics/operating-manual/track-machines",
@@ -5257,84 +5302,11 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material track tamping machine Track Tamping Machine (TTM) S.R. 4.65 T/465 T/A465 JSC",
   },
   {
-    href: "/topics/operating-material/total-interruption-of-communication",
-    title: "Total Interruption of Communication (TIC)",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material total interruption of communication Total Interruption of Communication (TIC) S.R. 6.02.4 6.02.3 T/B 602 T/C.602 single double line",
-  },
-  {
-    href: "/general-awareness/sports/table-tennis",
-    title: "Table Tennis",
-    category: "General Awareness",
-    parent: "General Awareness › Sports",
-
-    keywords: "general awareness sports table tennis Table Tennis",
-  },
-  {
-    href: "/general-awareness/states-information/tamil-nadu",
-    title: "Tamil Nadu",
-    category: "General Awareness",
-    parent: "General Awareness › States Information",
-    keywords: "general awareness states information tamil nadu Tamil Nadu",
-  },
-  {
-    href: "/topics/information-technology-apps/tdms",
-    title: "Track Distribution Management System (TDMS)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps tdms TDMS Track Distribution Management System (TDMS)",
-  },
-  {
-    href: "/general-awareness/states-information/telangana",
-    title: "Telangana",
-    category: "General Awareness",
-    parent: "General Awareness › States Information",
-    keywords: "general awareness states information telangana Telangana",
-  },
-  {
-    href: "/quizzes/financial-rules/tenders",
-    title: "Tenders",
-    category: "Quizzes",
-    parent: "Quizzes › Financial Rules",
-    keywords: "quizzes financial rules tenders Tenders",
-  },
-  {
-    href: "/general-awareness/sports/tennis",
-    title: "Tennis",
-    category: "General Awareness",
-    parent: "General Awareness › Sports",
-    keywords: "general awareness sports tennis Tennis",
-  },
-  {
-    href: "/general-awareness/tiger-reserves",
-    title: "Tiger Reserves",
-    category: "General Awareness",
-    parent: "General Awareness",
-    keywords: "general awareness tiger reserves Tiger Reserves",
-  },
-  {
-    href: "/topics/information-technology-apps/tms",
-    title: "Terminal Management System (TMS)",
-    category: "Study Topics",
-    parent: "Topics › Information Technology Apps",
-    keywords: "topics information technology apps tms TMS Terminal Management System (TMS)",
-  },
-  {
-    href: "/topics/aom-special/timings-wise",
-    title: "Timings Wise",
-    category: "Study Topics",
-    parent: "Topics › AOM Special",
-    keywords:
-      "topics aom special timings wise Timings Wise Timings time limits AOM exam",
-  },
-  {
-    href: "/quizzes/professional-subject/timings-wise",
-    title: "Timings Wise",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject timings wise Timings Wise",
+    href: "/acts/trade-union-act-1926",
+    title: "Trade Union Act 1926",
+    category: "Acts & Rules",
+    parent: "Acts",
+    keywords: "acts trade union act 1926 Trade Union Act 1926",
   },
   {
     href: "/quizzes/establishment-rules/trade-union-act-1926",
@@ -5342,13 +5314,6 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
     keywords: "quizzes establishment rules trade union act 1926 recognition zonal membership",
-  },
-  {
-    href: "/acts/trade-union-act-1926",
-    title: "Trade Union Act 1926",
-    category: "Acts & Rules",
-    parent: "Acts",
-    keywords: "acts trade union act 1926 Trade Union Act 1926",
   },
   {
     href: "/topics/operating-material/train",
@@ -5396,7 +5361,6 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics operating material trains unusually delayed Trains Unusually Delayed G.R. 6.04 ART MRT SCOR",
   },
-
   {
     href: "/topics/establishment-rules/transfers",
     title: "Transfers",
@@ -5405,7 +5369,6 @@ export const searchTopics: SearchTopic[] = [
     keywords:
       "topics establishment rules transfers Transfers joining time mutual periodical request permanent temporary",
   },
-
   {
     href: "/general-awareness/states-information/tripura",
     title: "Tripura",
@@ -5421,18 +5384,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness unesco world heritage sites Unesco World Heritage Sites",
   },
   {
-    href: "/general-awareness/united-nations-organization",
-    title: "United Nations Organization (UNO)",
-    category: "General Awareness",
-    parent: "General Awareness",
-    keywords: "general awareness united nations organization United Nations Organization (UNO)",
-  },
-  {
     href: "/quizzes/establishment-rules/unified-pension-system",
     title: "Unified Pension System (UPS)",
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules",
     keywords: "quizzes establishment rules ups UPS Unified Pension System (UPS)",
+  },
+  {
+    href: "/general-awareness/united-nations-organization",
+    title: "United Nations Organization (UNO)",
+    category: "General Awareness",
+    parent: "General Awareness",
+    keywords: "general awareness united nations organization United Nations Organization (UNO)",
   },
   {
     href: "/topics/information-technology-apps/uts-application",
@@ -5477,13 +5440,6 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject wagon turn round Wagon Turn Round",
   },
   {
-    href: "/topics/working-time-table/wagons-data",
-    title: "Wagons Data",
-    category: "Study Topics",
-    parent: "Topics › Working Time Table",
-    keywords: "topics working time table wagons data Wagons Data",
-  },
-  {
     href: "/quizzes/professional-subject/wagons-data",
     title: "Wagons Data",
     category: "Quizzes",
@@ -5491,27 +5447,18 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject wagons data Wagons Data",
   },
   {
+    href: "/topics/working-time-table/wagons-data",
+    title: "Wagons Data",
+    category: "Study Topics",
+    parent: "Topics › Working Time Table",
+    keywords: "topics working time table wagons data Wagons Data",
+  },
+  {
     href: "/topics/operating-material/warner-signal",
     title: "Warner Signal",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material warner signal Warner Signal GR 3.06 semaphore fish-tailed",
-  },
-  {
-    href: "/topics/operating-material/whistle-codes",
-    title: "Whistle Codes",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material whistle codes Whistle Codes engine loco pilot guard SR special rules",
-  },
-  {
-    href: "/topics/operating-material/without-tail-lamp",
-    title: "Without Tail Lamp",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords:
-      "topics operating material without tail lamp Without Tail Lamp S.R. 4.17 tail board last vehicle indicator incomplete train",
   },
   {
     href: "/general-awareness/sports/weightlifting",
@@ -5528,6 +5475,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information west bengal West Bengal",
   },
   {
+    href: "/topics/operating-material/whistle-codes",
+    title: "Whistle Codes",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material whistle codes Whistle Codes engine loco pilot guard SR special rules",
+  },
+  {
     href: "/general-awareness/who-is-who",
     title: "Who Is Who",
     category: "General Awareness",
@@ -5542,6 +5497,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness wildlife sanctuaries Wildlife Sanctuaries",
   },
   {
+    href: "/topics/operating-material/without-tail-lamp",
+    title: "Without Tail Lamp",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material without tail lamp Without Tail Lamp S.R. 4.17 tail board last vehicle indicator incomplete train",
+  },
+  {
     href: "/topics/operating-material/working-of-siding",
     title: "Working of Siding",
     category: "Study Topics",
@@ -5550,19 +5513,18 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material working of siding Working of Siding APPENDIX XXVII Pilot Movement Register One Pilot Multiple Pilot push back",
   },
   {
-    href: "/topics/operating-material/working-time-table",
-    title: "Working Time Table (WTT)",
-    category: "Study Topics",
-    parent: "Topics › Operating Material",
-    keywords: "topics operating material working time table Working Time Table (WTT) G.R. 4.07 PCOM",
-  },
-
-  {
     href: "/manuals/working-time-table",
     title: "Working Time Table (WTT)",
     category: "Manuals",
     parent: "Manuals",
     keywords: "manuals working time table Working Time Table (WTT)",
+  },
+  {
+    href: "/topics/operating-material/working-time-table",
+    title: "Working Time Table (WTT)",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material working time table Working Time Table (WTT) G.R. 4.07 PCOM",
   },
   {
     href: "/topics/working-time-table",
@@ -5593,19 +5555,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports wrestling Wrestling",
   },
   {
+    href: "/quizzes/professional-subject/years-wise",
+    title: "Years Wise",
+    category: "Quizzes",
+    parent: "Quizzes › Professional Subject",
+    keywords: "quizzes professional subject years wise Years Wise",
+  },
+  {
     href: "/topics/aom-special/years-wise",
     title: "Years Wise",
     category: "Study Topics",
     parent: "Topics › AOM Special",
     keywords:
       "topics aom special years wise Years Wise Years time periods AOM exam",
-  },
-  {
-    href: "/quizzes/professional-subject/years-wise",
-    title: "Years Wise",
-    category: "Quizzes",
-    parent: "Quizzes › Professional Subject",
-    keywords: "quizzes professional subject years wise Years Wise",
   },
   {
     href: "/quizzes/general-awareness/zoology",

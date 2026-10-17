@@ -3,10 +3,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import QuizAttemptFooter from '@/components/quizzes/QuizAttemptFooter'
 
 const papers = [
   {
     href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022',
+    categoryId: 'aom-30%-ldce-2022',
+    quizId: 'aom-30%-ldce-2022',
     title: 'AOM 30% LDCE 2022',
     year: '2022',
     icon: '📝',
@@ -16,6 +19,8 @@ const papers = [
   },
   {
     href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023',
+    categoryId: 'aom-30%-ldce-2023',
+    quizId: 'aom-30%-ldce-2023',
     title: 'AOM 30% LDCE 2023',
     year: '2023',
     icon: '📘',
@@ -25,6 +30,8 @@ const papers = [
   },
   {
     href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2024',
+    categoryId: 'aom-70%-ldce-2024',
+    quizId: 'aom-70%-ldce-2024',
     title: 'AOM 70% LDCE 2024',
     year: '2024',
     icon: '📗',
@@ -34,6 +41,8 @@ const papers = [
   },
   {
     href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026',
+    categoryId: 'aom-30%-ldce-2026',
+    quizId: 'aom-30%-ldce-2026',
     title: 'AOM 30% LDCE 2026',
     year: '2026',
     icon: '📑',
@@ -110,26 +119,7 @@ const AOMPreviousYearsPapersPage = () => {
                       {paper.description}
                     </p>
 
-                    <div className="mt-auto border-t border-gray-200 pt-4">
-                      <div
-                        className={`inline-flex items-center bg-linear-to-r ${paper.color} bg-clip-text text-sm font-semibold text-transparent`}
-                      >
-                        Open test
-                        <svg
-                          className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </div>
-                    </div>
+                    <QuizAttemptFooter href={paper.href} colorClass={paper.color} />
                   </div>
                 </div>
               </Link>
