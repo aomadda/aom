@@ -217,15 +217,15 @@ const Home = async () => {
               ) : null} 
               </div>
 
-            {/* Profile — small circle top-center on mobile; full picture right on large screens */}
+            {/* Logo — rounded circle, top-center on mobile and right on large screens */}
             <div className="order-1 flex w-full justify-center lg:order-2 lg:w-auto lg:shrink-0 lg:justify-end">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/profile.jpeg"
-                alt="AOM Aspirant profile"
-                width={520}
-                height={520}
-                className="size-20 rounded-full border-4 border-white/40 object-cover object-top shadow-2xl sm:size-24 lg:size-105 lg:rounded-3xl lg:border lg:border-white/30 lg:bg-[#f5f0e8] lg:object-contain xl:size-120"
+                src="/logo.jpeg"
+                alt="AOM Adda logo"
+                width={1254}
+                height={1254}
+                className="size-20 rounded-full border-4 border-white/40 object-cover shadow-2xl sm:size-24 lg:size-105 lg:border lg:border-white/30 xl:size-120"
               />
             </div>
           </div>

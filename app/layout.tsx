@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/profile.jpeg",
-        width: 736,
-        height: 736,
-        alt: "AOM Aspirant profile",
+        url: "/logo.jpeg",
+        width: 1254,
+        height: 1254,
+        alt: "AOM Adda logo",
         type: "image/jpeg",
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AOM Adda",
     description,
-    images: ["/profile.jpeg"],
+    images: ["/logo.jpeg"],
   },
   icons: {
     icon: [{ url: "/favicon.png?v=2", type: "image/png" }],

@@ -100,11 +100,11 @@ export default function RegisterPage() {
           <div className="mb-4 flex justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/profile.jpeg"
-              alt="AOM Aspirant profile"
-              width={96}
-              height={96}
-              className="size-20 rounded-full border-4 border-purple-200 object-cover object-top shadow-xl sm:size-24"
+              src="/logo.jpeg"
+              alt="AOM Adda logo"
+              width={1254}
+              height={1254}
+              className="size-20 rounded-full border-4 border-purple-200 object-cover shadow-xl sm:size-24"
             />
           </div>
           <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl">Create Account</h1>

@@ -97,15 +97,15 @@ function LoginForm() {
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 px-4 py-10 sm:py-14">
       <div className="mx-auto max-w-lg">
-        {/* Profile — small devices only, top center rounded circle */}
+        {/* Logo — small devices only, top center rounded circle */}
         <div className="mb-6 flex justify-center lg:hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/profile.jpeg"
-            alt="AOM Aspirant profile"
-            width={96}
-            height={96}
-            className="size-20 rounded-full border-4 border-purple-200 object-cover object-top shadow-xl sm:size-24"
+            src="/logo.jpeg"
+            alt="AOM Adda logo"
+            width={1254}
+            height={1254}
+            className="size-20 rounded-full border-4 border-purple-200 object-cover shadow-xl sm:size-24"
           />
         </div>
 

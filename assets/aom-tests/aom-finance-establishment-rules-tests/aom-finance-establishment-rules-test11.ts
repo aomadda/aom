@@ -208,19 +208,9 @@ export const aomFinanceEstablishmentRulesTest11 = {
                     "None of the above"
                 ],
                 correct: 1,
-                explanation: "The suspension order shall continue t remain in force until it is modified or revoked by the authority competent to do so",
+                explanation: `The suspension order shall continue t remain in force until it is modified or revoked by the authority competent to do so.`,
             },
-            {
-                question: ``,
-                options: [
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                correct: 0,
-                explanation: "",
-            },
+            
         ]
     },
 }

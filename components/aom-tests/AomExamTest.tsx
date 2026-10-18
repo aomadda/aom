@@ -11,6 +11,7 @@ import {
   Trash2,
 } from 'lucide-react'
 
+import { formatExplanation, splitExplanationSentences } from '@/lib/format-explanation'
 import { getNextQuiz } from '@/lib/next-quiz'
 import { scopedQuizStorageKey } from '@/lib/quiz-browser-storage'
 import {
@@ -138,26 +139,38 @@ function splitStatementQuestion(raw: string) {
 
 function StatementCards({
   parts,
+  tone,
 }: {
   parts: NonNullable<ReturnType<typeof splitStatementQuestion>>
+  tone: 'exam' | 'answer'
 }) {
+  const onAnswer = tone === 'answer'
   return (
     <>
-      <ul className="space-y-2.5">
+      <ul className="space-y-3">
         {parts.statements.map((statement) => (
-          <li
-            key={statement.label}
-            className="flex items-start gap-3 rounded-xl border border-indigo-100 bg-indigo-50/70 px-3 py-3"
-          >
-            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-xs font-bold text-white">
+          <li key={statement.label} className="flex items-start gap-3">
+            <span
+              className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white ${
+                onAnswer ? 'bg-white/10' : 'bg-indigo-600'
+              }`}
+            >
               {statement.label}
             </span>
-            <p className="min-w-0 text-sm leading-relaxed text-slate-800 sm:text-base">{statement.text}</p>
+            <p
+              className={`min-w-0 text-sm leading-relaxed sm:text-base ${
+                onAnswer ? 'text-slate-200' : 'text-slate-800'
+              }`}
+            >
+              {statement.text}
+            </p>
           </li>
         ))}
       </ul>
       {parts.tail ? (
-        <p className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
+        <p
+          className={`mt-3 text-sm leading-relaxed ${onAnswer ? 'text-slate-300' : 'text-slate-700'}`}
+        >
           {parts.tail}
         </p>
       ) : null}
@@ -181,7 +194,7 @@ function ExamQuestionPrompt({ number, question }: { number: number; question: st
         {number}.{parts.lead ? ` ${parts.lead}` : null}
       </h2>
       <div className="mt-4">
-        <StatementCards parts={parts} />
+        <StatementCards parts={parts} tone="exam" />
       </div>
     </div>
   )
@@ -198,9 +211,68 @@ function AnswerQuestionBody({ question }: { question: string }) {
       {parts.lead ? (
         <p className="mb-4 text-sm leading-relaxed text-slate-200 sm:text-base">{parts.lead}</p>
       ) : null}
-      <StatementCards parts={parts} />
+      <StatementCards parts={parts} tone="answer" />
     </div>
   )
+}
+
+function ExplanationSentences({ text, className }: { text: string; className: string }) {
+  const sentences = splitExplanationSentences(text)
+  if (sentences.length < 2) {
+    return <p className={className}>{text}</p>
+  }
+
+  return (
+    <div className="space-y-2">
+      {sentences.map((sentence, index) => (
+        <p key={index} className={`border-l-2 border-sky-400/70 pl-3 ${className}`}>
+          {sentence}
+        </p>
+      ))}
+    </div>
+  )
+}
+
+function ExplanationBody({ text }: { text: string }) {
+  const formatted = formatExplanation(text)
+
+  if (formatted.kind === 'list') {
+    return (
+      <div className="mt-2">
+        {formatted.lead ? (
+          <ExplanationSentences text={formatted.lead} className="text-sm leading-relaxed text-sky-100" />
+        ) : null}
+        <ul className={`space-y-2 ${formatted.lead ? 'mt-3' : ''}`}>
+          {formatted.items.map((item, index) => (
+            <li
+              key={`${item.label}-${index}`}
+              className="flex items-start gap-3 rounded-xl border border-sky-400/30 bg-slate-950/35 px-3 py-2.5"
+            >
+              <span className="mt-0.5 flex h-7 min-w-7 shrink-0 items-center justify-center rounded-lg bg-sky-500 px-1.5 text-xs font-bold text-white">
+                {item.label}
+              </span>
+              <div className="min-w-0">
+                <ExplanationSentences
+                  text={item.text}
+                  className="text-sm leading-relaxed text-sky-50"
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  if (formatted.kind === 'sentences') {
+    return (
+      <div className="mt-2">
+        <ExplanationSentences text={text} className="text-sm leading-relaxed text-sky-100" />
+      </div>
+    )
+  }
+
+  return <p className="mt-1 text-sm leading-relaxed text-sky-100">{formatted.text}</p>
 }
 
 function StatusSwatch({ status }: { status: AomQuestionStatus }) {
@@ -1025,7 +1097,7 @@ export default function AomExamTest({
                               <p className="text-[11px] font-semibold tracking-wide text-sky-300 uppercase">
                                 Explanation
                               </p>
-                              <p className="mt-1 text-sm text-sky-100">{question.explanation}</p>
+                              <ExplanationBody text={question.explanation} />
                             </div>
                           ) : null}
                         </li>
