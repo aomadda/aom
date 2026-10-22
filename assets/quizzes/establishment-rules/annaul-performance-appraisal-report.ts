@@ -159,6 +159,50 @@ export const annualPerformanceAppraisalReport = {
     correct: 0,
     explanation: "2015 is the correct answer.",
   },
+  {
+    question: `How many officers are there in the screening committee for grant of MACP?`,
+    options: [
+        "2",
+        "3",
+        "4",
+        "5",
+    ],
+    correct: 1,
+    explanation: "3",
+},
+{
+  question: `Under which rule, the cadre seniority is determined according to the merger of the de-categorized employees in to the other cadre?`,
+  options: [
+      "IREM Volume-I, Para 313",
+      "IREM Volume-I, Para 314",
+      "IREM Volume-I, Para 315",
+      "IREM Volume-I, Para 316",
+  ],
+  correct: 0,
+  explanation: "IREM Volume-I, Para 313",
+},
+{
+  question: `The running staff working as ________ are exempted to submit self appraisal while filling the Annual Performance Appraisal Report (APAR)?`,
+  options: [
+      "Sr.ALP",
+      "LP (Shunter)",
+      "LP (Goods)",
+      "LP (Passenger)"
+  ],
+  correct: 2,
+  explanation: "LP (Goods)",
+},
+{
+  question: `Master Circular on Confidential Report on Non-gazetted Railway servant is ________`,
+  options: [
+      "25",
+      "26",
+      "27",
+      "28"
+  ],
+  correct: 3,
+  explanation: "28",
+},
   
   
 ],

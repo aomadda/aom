@@ -322,5 +322,137 @@ export const nationalPensionSystem = {
     correct: 1,
     explanation: "12 is the correct answer.",
   },
+  {
+    question: `What is the maximum percentage in asset class E in Auto choice (Life Cycle Fund) LC 50 at the age of 55 years and above for Central Government Employees under NPS?`,
+    options: [
+        "10%",
+        "15%",
+        "20%",
+        "25%",
+    ],
+    correct: 0,
+    explanation: "10%",
+},
+{
+  question: `Which Pension Fund can be chosen by the Central Government employees under NPS Tier II account?`,
+  options: [
+      "SBI Pension Funds Pvt. Ltd.",
+      "LIC Pension Funds Pvt. Ltd.",
+      "UTI Pension Funds Pvt. Ltd.",
+      "Employee can choose any Pension Fund Manager"
+  ],
+  correct: 3,
+  explanation: "Employee can choose any Pension Fund Manager",
+},
+{
+  question: `Which Pension Fund can be chosen by the Central Government employees under NPS Tier I account?`,
+  options: [
+      "SBI Pension Funds Pvt. Ltd.",
+      "LIC Pension Funds Pvt. Ltd.",
+      "UTI Pension Funds Pvt. Ltd.",
+      "Employee can choose any Pension Fund Manager"
+  ],
+  correct: 3,
+  explanation: "Employee can choose any Pension Fund Manager",
+},
+{
+  question: `Who is the custodian under NPS at present?`,
+  options: [
+      "Axis Bank",
+      "Deutsche Bank AG",
+      "PFRDA",
+      "NSDL"
+  ],
+  correct: 1,
+  explanation: "Deutsche Bank AG",
+},
+{
+  question: `Which bank is appointed as Trustee Bank under NPS at present?`,
+  options: [
+      "Axis Bank",
+      "SBI",
+      "UTI",
+      "Indian Bank"
+  ],
+  correct: 0,
+  explanation: "Axis Bank",
+},
+{
+  question: `NSDL eGov is known as ________`,
+  options: [
+      "CAMS",
+      "CSDL",
+      "Protean",
+      "PFRDA"
+  ],
+  correct: 2,
+  explanation: "Protean",
+},
+{
+  question: `The maximum percentage of corpus to be withdrawn as lumpsum if the employee closes the NPS account before 60 years is ________`,
+  options: [
+      "20%",
+      "30%",
+      "40%",
+      "50%"
+  ],
+  correct: 0,
+  explanation: "",
+},
+{
+  question: `The minimum percentage of corpus to be invested in the annuity scheme if the employee closes the NPS account before 60 years is ________`,
+  options: [
+      "60%",
+      "70%",
+      "80%",
+      "90%"
+  ],
+  correct: 2,
+  explanation: "80%",
+},
+{
+  question: `Who monitors the activities of the custodian under NPS?`,
+  options: [
+      "Protean",
+      "PFRDA",
+      "SEBI",
+      "NPS Trustee"
+  ],
+  correct: 3,
+  explanation: "NPS Trustee",
+},
+{
+  question: `What is the period of appoinment of the Custodian under NPS?`,
+  options: [
+      "5 years",
+      "10 years",
+      "15 years",
+      "20 years"
+  ],
+  correct: 0,
+  explanation: "5 years",
+},
+{
+  question: `Who appoints the Custodian under NPS?`,
+  options: [
+      "PFRDA",
+      "SEBI",
+      "NPS Trustee",
+      "Custodian"
+  ],
+  correct: 0,
+  explanation: "PFRDA",
+},
+{
+  question: `What is the maximum percentage of investment in Equity in the default scheme of NPS Tier I account for Central Government Employees?`,
+  options: [
+      "15%",
+      "20%",
+      "25%",
+      "30%",
+  ],
+  correct: 0,
+  explanation: "15%",
+},
 ],
 }

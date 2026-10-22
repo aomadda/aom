@@ -14,7 +14,7 @@ Official Gazette.`,
             },
             {
                 id: 2,
-                title: 'Definitions –– In these rules, unless the context otherwise requires',
+                title: 'Definitions',
                 rule: 'GR 1.02',
                 description: `(1) “Act” means the Railways Act, 1989 (24 of 1989);
 (2) “adequate distance” means the distance sufficient to ensure safety;

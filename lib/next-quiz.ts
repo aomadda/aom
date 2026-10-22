@@ -14,6 +14,8 @@ import { OPERATING_MANUAL_QUIZ_CHAPTERS } from '@/lib/operating-manual-quiz-chap
 import { RAILWAY_CURRENT_AFFAIRS_2026_QUIZ_MONTHS } from '@/lib/railway-current-affairs-2026-quiz-months'
 import { RAILWAY_GK_QUIZ_CHAPTERS } from '@/lib/railway-gk-quiz-chapters'
 import { RAILWAY_STATISTICS_QUIZ_CHAPTERS } from '@/lib/railway-statistics-quiz-chapters'
+import { LEAVE_RULES_1949_QUIZZES } from '@/lib/leave-rules-1949-quizzes'
+import { PASS_RULES_1986_QUIZZES } from '@/lib/pass-rules-1986-quizzes'
 import { RAJABHASHA_QUIZ_CHAPTERS } from '@/lib/rajabhasha-quiz-chapters'
 
 export type NextQuiz = {
@@ -67,8 +69,6 @@ const FINANCIAL_RULES: QuizLink[] = [
 
 const ESTABLISHMENT_RULES: QuizLink[] = [
   ['railway-servants-discipline-appeal-rules-1968', 'Railway  Servants (Discipline & Appeal) Rules 1968'],
-  ['railway-servants-pass-rules-1986', 'Railway Servants (Pass) Rules 1986'],
-  ['railway-servants-leave-rules-1949', 'Railway Servants (Leave) Rules 1949'],
   ['railway-servants-rest-rules-2005', 'Railway Servants (Rest) Rules 2005'],
   ['railway-services-conduct-rules-1966', 'Railway Servants (Conduct) Rules 1966'],
   ['compassionate-grounds-appointment', 'Compassionate Grounds Appointment (CGA)'],
@@ -202,6 +202,18 @@ const QUIZ_SERIES: QuizLink[][] = [
   ),
   FINANCIAL_RULES,
   ESTABLISHMENT_RULES,
+  LEAVE_RULES_1949_QUIZZES.map((quiz) => ({
+    href: `/quizzes/establishment-rules/railway-servants-leave-rules-1949/${quiz.slug}`,
+    title: quiz.title,
+    categoryId: 'railway-servants-leave-rules-1949',
+    quizId: quiz.slug,
+  })),
+  PASS_RULES_1986_QUIZZES.map((quiz) => ({
+    href: `/quizzes/establishment-rules/railway-servants-pass-rules-1986/${quiz.slug}`,
+    title: quiz.title,
+    categoryId: 'railway-servants-pass-rules-1986',
+    quizId: quiz.slug,
+  })),
   professionalSubjectQuizzes(),
   numberedTests(
     'aom-finance-establishment-rules-tests',

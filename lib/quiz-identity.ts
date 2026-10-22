@@ -55,6 +55,20 @@ export function quizIdentityFromHref(href: string): QuizIdentity | null {
     return { categoryId: parts[1], quizId: parts[2] }
   }
 
+  if (parts[1] === 'establishment-rules' && parts[2] === 'railway-servants-leave-rules-1949') {
+    if (parts.length === 4) {
+      return { categoryId: 'railway-servants-leave-rules-1949', quizId: parts[3] }
+    }
+    return null
+  }
+
+  if (parts[1] === 'establishment-rules' && parts[2] === 'railway-servants-pass-rules-1986') {
+    if (parts.length === 4) {
+      return { categoryId: 'railway-servants-pass-rules-1986', quizId: parts[3] }
+    }
+    return null
+  }
+
   if (
     parts.length === 3 &&
     (parts[1] === 'establishment-rules' || parts[1] === 'financial-rules')

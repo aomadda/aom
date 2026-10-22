@@ -1,22 +1,91 @@
 'use client'
 
-import { railwayServantsPassRules1986 } from '@/assets/quizzes/establishment-rules/railway-servants-pass-rules-1986'
-import AomExamTest from '@/components/aom-tests/AomExamTest'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-const QUIZ_ID = 'railway-servants-pass-rules-1986'
-const CATEGORY_ID = 'railway-servants-pass-rules-1986'
+import QuizAttemptFooter from '@/components/quizzes/QuizAttemptFooter'
+import { PASS_RULES_1986_QUIZZES } from '@/lib/pass-rules-1986-quizzes'
 
-export default function EstablishmentRulesQuizPage() {
-  const questions = railwayServantsPassRules1986['railway-servants-pass-rules-1986'] ?? []
+export default function RailwayServantsPassRules1986Page() {
+  const pathname = usePathname()
 
   return (
-    <AomExamTest
-      title="Railway Servants (Pass) Rules 1986"
-      categoryId={CATEGORY_ID}
-      quizId={QUIZ_ID}
-      questions={questions}
-      backHref="/quizzes/establishment-rules"
-      backLabel="Back to Establishment Rules"
-    />
+    <div className="min-h-screen bg-linear-to-br from-emerald-50 via-teal-50 to-green-50 py-8 sm:py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 text-center sm:mb-12">
+          <h1 className="mb-4 bg-linear-to-r from-emerald-600 via-teal-600 to-green-600 bg-clip-text text-3xl font-bold text-transparent sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
+            Railway Servants (Pass) Rules 1986
+          </h1>
+
+          <div className="mx-auto max-w-3xl rounded-xl border border-white/20 bg-white/80 p-4 shadow-lg backdrop-blur-sm sm:rounded-2xl sm:p-6">
+            <p className="mb-3 text-sm text-gray-600 sm:mb-4 sm:text-base md:text-lg">
+              Practice Railway Servants (Pass) Rules 1986 questions topic-wise in exam mode
+            </p>
+            <p className="text-xs text-gray-500 sm:text-sm">
+              Choose a pass topic below and attempt it with timer, palette, and answer key
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8">
+          {PASS_RULES_1986_QUIZZES.map((quiz) => {
+            const href = `/quizzes/establishment-rules/railway-servants-pass-rules-1986/${quiz.slug}`
+            const isActive = pathname === href
+            return (
+              <Link key={quiz.slug} href={href} className="group">
+                <div
+                  className={`flex h-full flex-col overflow-hidden rounded-xl border border-white/20 bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl sm:rounded-2xl ${
+                    isActive ? 'ring-2 ring-emerald-500 ring-offset-2' : ''
+                  }`}
+                >
+                  <div className={`relative overflow-hidden bg-linear-to-r ${quiz.color} p-4 sm:p-6`}>
+                    <div className="absolute inset-0 bg-black/5" />
+                    <div className="relative z-10 flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="mb-2 text-3xl sm:text-4xl">{quiz.icon}</div>
+                        <h3 className="mb-1 line-clamp-2 text-lg font-bold text-white sm:text-xl">
+                          {quiz.title}
+                        </h3>
+                      </div>
+                      <div className="ml-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <svg
+                          className="h-6 w-6 text-white/80"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-4 sm:p-6">
+                    <p className="mb-4 flex-1 line-clamp-3 text-sm text-gray-600 sm:text-base">
+                      {quiz.description}
+                    </p>
+                    <QuizAttemptFooter href={href} colorClass={quiz.color} />
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="inline-block rounded-xl border border-white/20 bg-white/60 p-6 shadow-lg backdrop-blur-sm">
+            <p className="text-sm text-gray-600">
+              <span className="font-semibold text-emerald-600">{PASS_RULES_1986_QUIZZES.length}</span>{' '}
+              Pass Rules quizzes available
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }

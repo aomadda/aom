@@ -15,7 +15,7 @@ const topicsLinks: NavBox[] = [
   { href: '/definitions', label: 'Definitions', icon: '📖' },
   { href: '/topics/establishment-rules', label: 'Establishment rules', icon: '📜' },
   { href: '/topics/financial-rules', label: 'Financial rules', icon: '💰' },
-  { href: '/topics/general-rules', label: 'General rules', icon: '📘' },
+  { href: '/topics/general-and-subisidiary-rules', label: 'General & Subsidiary Rules', icon: '📗' },
   { href: '/topics/indian-railways', label: 'Indian Railways', icon: '🇮🇳' },
   { href: '/topics/information-technology-apps', label: 'Information technology apps', icon: '💻' },
   { href: '/topics/master-circulars', label: 'Master circulars', icon: '📜' },

@@ -74,6 +74,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/topics/general-rules",
+        destination: "/topics/general-and-subisidiary-rules",
+        permanent: true,
+      },
+      {
         source: "/topics/chief-controller",
         destination: "/topics/aom-special",
         permanent: true,
