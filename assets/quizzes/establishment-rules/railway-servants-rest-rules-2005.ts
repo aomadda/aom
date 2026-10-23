@@ -561,6 +561,27 @@ Point 12: OBC
 Point 13: UR
 Point 14: ST`,
           },
+          {
+            question:
+            `As per HOER (Hours of Employment Regulations) rules, the period of rest between the end of one rostered duty and the beginning of next rostered duty is _______`,
+          options: ["Long on", "Long off", "Short on", "Short off"],
+          correct: 3,
+          explanation: "Short off",
+          },
+          {
+            question:
+            `Who among these is authorized to decide the final HOER classification of Engineering Gatemen at level crossing gates?`,
+          options: ["DRM", "GM", "CPO", "PCPO"],
+          correct: 3,
+          explanation: "PCPO",
+          },
+          {
+            question:
+            ``,
+          options: ["", "", "", ""],
+          correct: 0,
+          explanation: ``,
+          },
           
           
         ],

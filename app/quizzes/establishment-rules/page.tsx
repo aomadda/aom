@@ -8,6 +8,15 @@ import { usePathname } from 'next/navigation'
 
 const rules = [
   {
+    href: '/quizzes/establishment-rules/code-on-wages-2019',
+    title: 'Code on Wages 2019',
+    year: '2019',
+    icon: '💵',
+    color: 'from-amber-500 to-yellow-600',
+    hoverColor: 'from-amber-600 to-yellow-700',
+    description: 'Code on Wages 2019 - minimum wages, floor wage, equal remuneration, and payment of wages',
+  },
+  {
     href: '/quizzes/establishment-rules/railway-servants-discipline-appeal-rules-1968',
     title: 'Railway  Servants (Discipline & Appeal) Rules 1968',
     year: '1968',

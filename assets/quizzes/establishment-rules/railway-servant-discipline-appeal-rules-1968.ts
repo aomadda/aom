@@ -660,7 +660,94 @@ export const railwayServantDisciplineAppealRules1968 = {
             correct: 0,
             explanation: "Rule 14 is the correct answer.",
           },
+          {
+            question:
+              `(A) An employee who is dismissed from service, shall be treated as ineligible for all future employment under the Government.
+              (B) A written warning ad censure are both minor penalties under DA Rules 1968.`,
+            options: ["Only A is correct", "Only B is correct", "Both A and B are correct", "Both A and B are incorrect"],
+            correct: 0,
+            explanation: "Only A is correct",
+          },
+          {
+            question:
+              `After the conclusion of a disciplinary inquiry, no penalty can be imposed on he charged employee before _______`,
+            options: ["Issuing notice of imposition of penalty", "The cross-examination of witnesses", "The inspection of official records", "Issuing of speaking orders"],
+            correct: 3,
+            explanation: "Issuing of speaking orders is the correct answer.",
+          },
+          {
+            question:
+            `In a chargesheet issued under DA Rules 1968, the list of witness (if any) is to be mentioned in the _______`,
+          options: ["Annexure-I", "Annexure-II", "Annexure-III", "Annexure-IV"],
+          correct: 3,
+          explanation: "Annexure-IV",
+          },
+          {
+            question:
+            `Where the Appointing Authority is not available, who should be treated as the Appointing Authority?`,
+          options: ["Controlling Officer", "CPO", "DRM", "GM"],
+          correct: 3,
+          explanation: "GM",
+          },
+          {
+            question:
+            `Who will take decision whether the charges have been established before passing the final orders?`,
+          options: ["Disciplinary Authority", "Inquiry Officer", "Presenting Officer", "None of the above"],
+          correct: 0,
+          explanation: "Disciplinary Authority",
+          },
+          {
+            question:
+            `Who is the custodian of listed documents in a Departmental Enquiry?`,
+          options: ["Disciplinary Authority", "Inquiry Officer", "Presenting Officer", "None of the above"],
+          correct: 2,
+          explanation: "Presenting Officer",
+          },
+          {
+            question:
+            `What is the maximum period of suspension that can be extended at a time after review of the competent authority?`,
+          options: ["90 days", "120 days", "150 days", "180 days"],
+          correct: 3,
+          explanation: "180 days",
+          },
+          {
+            question:
+            `Who can allow personal hearing in major penalty cases?`,
+          options: ["Appellate Authority", "Disciplinary Authority", "Presenting Officer", "Appointing Authority"],
+          correct: 0,
+          explanation: "Appellate Authority",
+          },
+          {
+            question:
+            `When the employee raised bias against the Inquiry Officer, the papers should be put up to _______`,
+          options: ["Appellate Authority", "Disciplinary Authority", "Reviewing Authority", "Revisionary Authority"],
+          correct: 3,
+          explanation: "Revisionary Authority",
+          },
+          {
+            question:
+            `Period of suspension, unless reviewed, shall not be valid beyond _______`,
+          options: ["30 days", "60 days", "90 days", "120 days"],
+          correct: 2,
+          explanation: "90 days",
+          },
+          {
+            question:
+            `In which of the following cases of penalty will a Railway servant not to be called for appearing in a selection/suitability test?`,
+          options: ["Withhodling of increments", "Reduction to a lower state in a pay-scale", "Reduction to a lower time scale", "Recovery of loss"],
+          correct: 2,
+          explanation: "Reduction to a lower time scale",
+          },
+          {
+            question:
+            ``,
+          options: ["", "", "", ""],
+          correct: 0,
+          explanation: ``,
+          },
           
+          
+
           
         ],
 }

@@ -104,6 +104,14 @@ export const LEAVE_RULES_1949_QUIZZES = [
     color: 'from-blue-500 to-indigo-600',
     description: 'Practice Study Leave questions from Railway Servants (Leave) Rules 1949',
   },
+  {
+    slug: 'work-related-illness-injury-leave',
+    title: 'Work Related Illness Injury Leave',
+    icon: '🩺',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice Work Related Illness and Injury Leave questions from Railway Servants (Leave) Rules 1949',
+  },
 ] as const
 
 export type LeaveRules1949Quiz = (typeof LEAVE_RULES_1949_QUIZZES)[number]

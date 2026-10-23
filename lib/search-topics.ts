@@ -2078,6 +2078,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps cois COIS Coaching Operations Informations System (COIS)",
   },
   {
+    href: "/quizzes/establishment-rules/code-on-wages-2019",
+    title: "Code on Wages 2019",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords: "quizzes establishment rules code on wages 2019 Code on Wages 2019 minimum wages floor wage",
+  },
+  {
     href: "/quizzes/commercial-department",
     title: "Commercial Department",
     category: "Quizzes",
@@ -2890,11 +2897,19 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports golf Golf",
   },
   {
-    href: "/topics/government-e-market",
+    href: "/topics/financial-rules/government-e-market",
     title: "Government E Market (GeM)",
     category: "Study Topics",
-    parent: "Topics",
-    keywords: "topics government e market Government E Market (GeM)",
+    parent: "Topics › Financial Rules",
+    keywords: "topics financial rules government e market Government E Market (GeM)",
+  },
+  {
+    href: "/quizzes/financial-rules/government-e-marketplace",
+    title: "Government e-Marketplace",
+    category: "Quizzes",
+    parent: "Quizzes › Financial Rules",
+    keywords:
+      "quizzes financial rules government e marketplace GeM Government e-Marketplace GFR 149 procurement",
   },
   {
     href: "/topics/establishment-rules/govt-pension",
@@ -8154,6 +8169,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material without tail lamp Without Tail Lamp S.R. 4.17 tail board last vehicle indicator incomplete train",
+  },
+  {
+    href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/work-related-illness-injury-leave",
+    title: "Work Related Illness Injury Leave",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules › Railway Servants (Leave) Rules 1949",
+    keywords:
+      "quizzes establishment rules railway servants leave rules 1949 work related illness injury leave WRIIL Work Related Illness Injury Leave",
   },
   {
     href: "/topics/operating-material/working-of-siding",

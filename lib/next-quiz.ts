@@ -59,6 +59,7 @@ function numberedTests(folder: string, slugPrefix: string, titlePrefix: string, 
 const FINANCIAL_RULES: QuizLink[] = [
   ['accounts', 'Accounts'],
   ['finance', 'Finance'],
+  ['government-e-marketplace', 'Government e-Marketplace'],
   ['tenders', 'Tenders'],
 ].map(([slug, title]) => ({
   href: `/quizzes/financial-rules/${slug}`,
@@ -68,6 +69,7 @@ const FINANCIAL_RULES: QuizLink[] = [
 }))
 
 const ESTABLISHMENT_RULES: QuizLink[] = [
+  ['code-on-wages-2019', 'Code on Wages 2019'],
   ['railway-servants-discipline-appeal-rules-1968', 'Railway  Servants (Discipline & Appeal) Rules 1968'],
   ['railway-servants-rest-rules-2005', 'Railway Servants (Rest) Rules 2005'],
   ['railway-services-conduct-rules-1966', 'Railway Servants (Conduct) Rules 1966'],

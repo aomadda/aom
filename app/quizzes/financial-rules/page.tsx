@@ -31,6 +31,14 @@ const rules = [
     hoverColor: 'from-teal-600 to-cyan-700',
     description: 'Rules and procedures for tendering processes, bid security, and contract management in railway operations'
   },
+  {
+    href: '/quizzes/financial-rules/government-e-marketplace',
+    title: 'Government e-Marketplace',
+    icon: '🛒',
+    color: 'from-sky-500 to-blue-600',
+    hoverColor: 'from-sky-600 to-blue-700',
+    description: 'GeM portal, procurement of goods and services, GFR 149, and Government e-Marketplace rules'
+  },
 ]
 
 const FinancialRules = () => {

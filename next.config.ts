@@ -79,6 +79,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/topics/government-e-market",
+        destination: "/topics/financial-rules/government-e-market",
+        permanent: true,
+      },
+      {
         source: "/topics/chief-controller",
         destination: "/topics/aom-special",
         permanent: true,
