@@ -7,6 +7,13 @@ export const LEAVE_RULES_1949_QUIZZES = [
     description: 'Practice Casual Leave questions from Railway Servants (Leave) Rules 1949',
   },
   {
+    slug: 'child-adoption-leave',
+    title: 'Child Adoption Leave',
+    icon: '🍼',
+    color: 'from-rose-400 to-pink-500',
+    description: 'Practice Child Adoption Leave questions from Railway Servants (Leave) Rules 1949',
+  },
+  {
     slug: 'child-care-leave',
     title: 'Child Care Leave',
     icon: '👶',

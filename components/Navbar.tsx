@@ -143,16 +143,6 @@ const Navbar = ({ user = null }: NavbarProps) => {
     { href: '/quizzes/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
     { href: '/quizzes/commercial-department', label: 'Commercial Department', icon: '💼' },
     { href: '/quizzes/establishment-rules', label: 'Establishment Rules', icon: '📜' },
-    {
-      href: '/quizzes/establishment-rules/railway-servants-leave-rules-1949',
-      label: 'Railway Servants (Leave) Rules 1949',
-      icon: '🏖️',
-    },
-    {
-      href: '/quizzes/establishment-rules/railway-servants-pass-rules-1986',
-      label: 'Railway Servants (Pass) Rules 1986',
-      icon: '🎫',
-    },
     { href: '/quizzes/financial-rules', label: 'Financial Rules', icon: '💰' },
     { href: '/quizzes/general-awareness', label: 'General Awareness', icon: '🌐' },
     { href: '/quizzes/general-subsidiary-rules', label: 'General Subsidiary Rules', icon: '📋' },

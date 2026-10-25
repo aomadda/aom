@@ -76,5 +76,35 @@ export const maternityLeave = {
         correct: 0,
         explanation: "Yes is the correct answer.",
       },
+      {
+        question: `What is the maximum period of Commuted Leave that can be granted in continuation of Maternity Leave without medical certificate?`,
+        options: ["15 days", "30 days", "45 days", "60 days"],
+        correct: 3,
+        explanation: "60 days.",
+      },
+      {
+        question: `What is the maximum period of "Leave of any kind leave" including commuted leave and leave not due that can be granted in continuation of Maternity Leave without medical certificate?`,
+        options: ["6 months", "1 year", "2 years", "3 years"],
+        correct: 2,
+        explanation: "2 years.",
+      },
+      {
+        question: `Which of the following article of Indian Constitution directs the state provision for securing just and humane conditions of work and for maternity relief?`,
+        options: ["Article 40", "Article 41", "Article 42", "Article 43"],
+        correct: 2,
+        explanation: "Article 42.",
+      },
+      {
+        question: `As per the Code on Social Security 2020, what is the maximum period of maternity benefit for a woman who already has two surviving children?`,
+        options: ["8 weeks", "12 weeks", "16 weeks", "20 weeks"],
+        correct: 1,
+        explanation: "12 weeks.",
+      },
+      {
+        question: `Special Maternity Leave is granted to a Railway employee in case of death of a child soon after birth or in case the child is still born. How many days of Special Maternity Leave are granted?`,
+        options: ["15 days", "30 days", "45 days", "60 days"],
+        correct: 3,
+        explanation: "60 days.",
+      },
 ],
 }

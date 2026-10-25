@@ -2022,6 +2022,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports chess Chess",
   },
   {
+    href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/child-adoption-leave",
+    title: "Child Adoption Leave",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules › Railway Servants (Leave) Rules 1949",
+    keywords:
+      "quizzes establishment rules railway servants leave rules 1949 child adoption leave Child Adoption Leave",
+  },
+  {
     href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/child-care-leave",
     title: "Child Care Leave",
     category: "Quizzes",

@@ -654,6 +654,15 @@ export default function AomExamTest({
   }, [finishExam, phase, timeLeft])
 
   useEffect(() => {
+    if (!showSubmitConfirm) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setShowSubmitConfirm(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [showSubmitConfirm])
+
+  useEffect(() => {
     if (phase !== 'exam') return
     saveSession()
   }, [phase, currentQuestion, userAnswers, visited, markedForReview, saveSession])
@@ -1288,8 +1297,9 @@ export default function AomExamTest({
                 <button
                   type="button"
                   onClick={() => setShowSubmitConfirm(true)}
-                  className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+                  className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-600/25 transition hover:from-emerald-700 hover:to-teal-700"
                 >
+                  <Check className="h-4 w-4" />
                   Submit test
                 </button>
               ) : (
@@ -1367,37 +1377,89 @@ export default function AomExamTest({
       </div>
 
       {showSubmitConfirm ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 px-4">
-          <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl">
-            <div className="mb-3 flex items-center gap-2 text-amber-600">
-              <AlertTriangle className="h-5 w-5" />
-              <h2 className="text-lg font-bold text-slate-900">Submit test?</h2>
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/55 px-4 py-6 backdrop-blur-sm sm:items-center"
+          onClick={() => setShowSubmitConfirm(false)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="submit-test-title"
+            className="w-full max-w-lg overflow-hidden rounded-3xl border border-white/70 bg-white shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="bg-linear-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-6 py-6 text-white">
+              <p className="text-[11px] font-semibold tracking-[0.18em] text-indigo-100 uppercase">
+                Final step
+              </p>
+              <div className="mt-2 flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15">
+                  <AlertTriangle className="h-5 w-5" />
+                </span>
+                <div>
+                  <h2 id="submit-test-title" className="text-xl font-bold">
+                    Submit test?
+                  </h2>
+                  <p className="text-sm text-indigo-100">{title}</p>
+                </div>
+              </div>
             </div>
-            <p className="mb-4 text-sm text-slate-600">
-              You cannot change answers after submitting. Negative marks of {AOM_EXAM_NEGATIVE_MARK}{' '}
-              will be applied for each wrong answer.
-            </p>
-            <div className="mb-5 grid grid-cols-2 gap-2 text-sm text-slate-700">
-              <p>Answered: {counts.answered}</p>
-              <p>Not answered: {counts.notAnswered + counts.notVisited}</p>
-              <p>Marked for review: {counts.review}</p>
-              <p>Time left: {formatExamTimer(timeLeft)}</p>
-            </div>
-            <div className="flex gap-3">
-              <button
-                type="button"
-                onClick={() => setShowSubmitConfirm(false)}
-                className="flex-1 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700"
-              >
-                Continue exam
-              </button>
-              <button
-                type="button"
-                onClick={() => finishExam(userAnswers)}
-                className="flex-1 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
-              >
-                Submit
-              </button>
+
+            <div className="space-y-4 px-6 py-5">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3">
+                  <p className="text-[11px] font-semibold tracking-wide text-emerald-700 uppercase">
+                    Answered
+                  </p>
+                  <p className="mt-1 text-2xl font-bold text-slate-900">{counts.answered}</p>
+                </div>
+                <div className="rounded-2xl border border-amber-100 bg-amber-50 px-4 py-3">
+                  <p className="text-[11px] font-semibold tracking-wide text-amber-700 uppercase">
+                    Not answered
+                  </p>
+                  <p className="mt-1 text-2xl font-bold text-slate-900">
+                    {counts.notAnswered + counts.notVisited}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-indigo-100 bg-indigo-50 px-4 py-3">
+                  <p className="text-[11px] font-semibold tracking-wide text-indigo-700 uppercase">
+                    Marked for review
+                  </p>
+                  <p className="mt-1 text-2xl font-bold text-slate-900">{counts.review}</p>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                  <p className="text-[11px] font-semibold tracking-wide text-slate-500 uppercase">
+                    Time left
+                  </p>
+                  <p className="mt-1 inline-flex items-center gap-1.5 font-mono text-2xl font-bold text-slate-900">
+                    <Clock className="h-4 w-4 text-indigo-600" />
+                    {formatExamTimer(timeLeft)}
+                  </p>
+                </div>
+              </div>
+
+              <p className="rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3 text-sm leading-relaxed text-rose-800">
+                Answers cannot be changed after submit. Each wrong answer gets a negative mark of{' '}
+                <strong>{AOM_EXAM_NEGATIVE_MARK}</strong>. Unanswered questions carry 0 marks.
+              </p>
+
+              <div className="flex flex-col-reverse gap-3 sm:flex-row">
+                <button
+                  type="button"
+                  onClick={() => setShowSubmitConfirm(false)}
+                  className="flex-1 rounded-full border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                >
+                  Continue exam
+                </button>
+                <button
+                  type="button"
+                  onClick={() => finishExam(userAnswers)}
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-600/20 transition hover:from-emerald-700 hover:to-teal-700"
+                >
+                  <Check className="h-4 w-4" />
+                  Submit test
+                </button>
+              </div>
             </div>
           </div>
         </div>
