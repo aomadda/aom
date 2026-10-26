@@ -1297,9 +1297,8 @@ export default function AomExamTest({
                 <button
                   type="button"
                   onClick={() => setShowSubmitConfirm(true)}
-                  className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-600/25 transition hover:from-emerald-700 hover:to-teal-700"
+                  className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
                 >
-                  <Check className="h-4 w-4" />
                   Submit test
                 </button>
               ) : (
@@ -1454,9 +1453,8 @@ export default function AomExamTest({
                 <button
                   type="button"
                   onClick={() => finishExam(userAnswers)}
-                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-600/20 transition hover:from-emerald-700 hover:to-teal-700"
+                  className="flex-1 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-600/20 transition hover:from-emerald-700 hover:to-teal-700"
                 >
-                  <Check className="h-4 w-4" />
                   Submit test
                 </button>
               </div>

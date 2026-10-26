@@ -253,5 +253,42 @@ question:
             correct: 1,
             explanation: "In Railway Servant Conduct Rules 1966, Rule number 3 are General Rules. It covers the fundamental duties of a railway servant.",
           },
+          {
+            question: `Railway servant is required to report to Government any movable proerty transanction, if value of of this transaction exceeds _______`,
+            options: ["Two months basic salary", "Three months basic salary", "Four months basic salary", "Five months basic salary"],
+            correct: 0,
+            explanation: `Two months basic salary.`,
+          },
+          {
+            question: `For Group C employees, an intimation is to be given under Rule 18(4) to the prescribed authority in the proforma laid down if the cumulative transactions i.e sale, purchase or buy in shares, securities etc., exceeds _______ during the calendar year`,
+            options: ["Four months basic salary", "Five months basic salary", "Six months basic salary", "Seven months basic salary"],
+            correct: 2,
+            explanation: `Six months basic salary.`,
+          },
+          {
+            question: `Participation in illegal strikes by employees is tantamount to a break in service and it can be condoned by the _______`,
+            options: ["CRS", "GM", "Railway Board", "President"],
+            correct: 3,
+            explanation: `President.`,
+          },
+          {
+            question: `A gazetted officer cannot remain the office bearer of the Railway employee's Union. In which rule of the Railway Servant Conduct Rules 1966, this is mentioned?`,
+            options: ["Rule 5", "Rule 6", "Rule 7", "Rule 8"],
+            correct: 1,
+            explanation: `Rule 6.`,
+          },
+          {
+            question: `In case, a Railway servant, in the performance of his official duties, act in a discourteours manner, in his official dealings with the public or otherwise adopt dilatory tactics or willfully cause delays in disposal of the work assigned to him/her, then he/she vilates which rule of the Railway Servant Conduct Rules 1966?`,
+            options: ["Rule 3(A)", "Rule 3(B)", "Rule 3(C)", "Rule 3(D)"],
+            correct: 0,
+            explanation: `Rule 3(A).`,
+          },
+          {
+            question: `Which rule of the Railway Servant Conduct Rules 1966, is related to preservation of cultural heritage?`,
+            options: ["Rule 3(B)(i)", "Rule 3(B)(ii)", "Rule 3(B)(iii)", "Rule 3(B)(iv)"],
+            correct: 0,
+            explanation: `Rule 3(B)(i).`,
+          },
+          
         ],
 }

@@ -42,6 +42,13 @@ export const LEAVE_RULES_1949_QUIZZES = [
     description: 'Practice Joining Time questions from Railway Servants (Leave) Rules 1949',
   },
   {
+    slug: 'leave-encashment',
+    title: 'Leave Encashment',
+    icon: '💸',
+    color: 'from-green-500 to-emerald-600',
+    description: 'Practice Leave Encashment questions from Railway Servants (Leave) Rules 1949',
+  },
+  {
     slug: 'leave-average-pay',
     title: 'Leave on Average Pay',
     icon: '💰',

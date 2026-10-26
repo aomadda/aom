@@ -5779,6 +5779,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information lakshadweep Lakshadweep",
   },
   {
+    href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/leave-encashment",
+    title: "Leave Encashment",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules › Railway Servants (Leave) Rules 1949",
+    keywords:
+      "quizzes establishment rules railway servants leave rules 1949 leave encashment Leave Encashment LAP LHAP",
+  },
+  {
     href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/leave-not-due",
     title: "Leave Not Due",
     category: "Quizzes",
