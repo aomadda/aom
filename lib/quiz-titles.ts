@@ -154,6 +154,7 @@ const QUIZ_TITLES: Record<string, string> = {
   'railway-servants-pass-rules-1986:widow-pass': 'Widow Pass',
   'railway-servants-pass-rules-1986:year-ending-pass-pto': 'Year Ending Pass / PTO',
   'code-on-wages-2019': 'Code on Wages 2019',
+  'temporary-railway-servant': 'Temporary Railway Servant',
   'rest-rules': 'Railway Servants (Rest) Rules 2005',
   'railway-servants-rest-rules-2005': 'Railway Servants (Rest) Rules 2005',
   'railway-services-conduct-rules-1966': 'Railway Servants (Conduct) Rules 1966',

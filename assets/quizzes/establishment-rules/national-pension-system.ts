@@ -454,5 +454,17 @@ export const nationalPensionSystem = {
   correct: 0,
   explanation: "15%",
 },
+{
+  question: `To become eligible for availing non refundable partial withdrawal from own contribution, as NPS subscriber must complete atleast _______ months`,
+  options: ["24 months", "36 months", "48 months", "60 months"],
+  correct: 1,
+  explanation: "36 months",
+},
+{
+  question: `ARPAN means _______`,
+  options: ["Advanced Railway Pension Access Network", "Advanced Railway Pension Access Number", "Advanced Railway Public Announcement Network", "Automatic Railway Protection Analog Network"],
+  correct: 0,
+  explanation: "Advanced Railway Pension Access Network",
+},
 ],
 }

@@ -7887,6 +7887,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information telangana Telangana",
   },
   {
+    href: "/quizzes/establishment-rules/temporary-railway-servant",
+    title: "Temporary Railway Servant",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords:
+      "quizzes establishment rules temporary railway servant Temporary Railway Servant Rule 1501 notice period apprentice probation",
+  },
+  {
     href: "/topics/operating-material/temporary-single-line",
     title: "Temporary Single Line (TSL)",
     category: "Study Topics",

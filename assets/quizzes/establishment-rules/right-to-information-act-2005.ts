@@ -150,7 +150,7 @@ export const rightToInformationAct2005 = {
   },
   {
     question:
-      "A second appeal against the decision of the First Appellate Authority must be filed within how many days?",
+      "A second appeal against the decision shall lie within ______ days from the date on which the decision should have been made or was actually received, with the Central Information Commission or the State Information Commission, as the case may be, as the first appellate authority.",
     options: ["30 days", "45 days", "60 days", "90 days"],
     correct: 3,
     explanation: "The specific provision, Section 19(3) of the RTI Act, 2005, states that a second appeal lies to the Information Commission within ninety days from the date on which the decision should have been made or was actually received",
@@ -203,6 +203,72 @@ export const rightToInformationAct2005 = {
     options: ["Section 20", "Section 21", "Section 22", "Section 23"],
     correct: 0,
     explanation: "Section 20 of the Right to Information Act 2005 provides the Information Commission with the power to impose penalties on a Public Information Officer (PIO) for delay in providing information. The penalty is imposed for each day the application is delayed or information is not furnished, up to a maximum of 25,000 rupees.",
+  },
+  {
+    question: `What is the fee to be remitted by an Indian citizen to file for an appeal aginst an information received under the Right to Information Act 2005?`,
+    options: ["10 rupees", "20 rupees", "30 rupees", "Free of cost for Indian citizens"],
+    correct: 3,
+    explanation: "Free of cost for Indian citizens.",
+  },
+  {
+    question: `According to which section of the Right to Information Act 2005, every public authority shall maintain all its records duly catalogued and indexed in a manner and the from which facilities the right to information under this Act and enusre that all records that are appropriate to be computerised are, within a reasonable time and subject to availability of resources, computerised and connected through a network all over the country on different systems so that access to such records is facilitated?`,
+    options: ["Section 4", "Section 5", "Section 6", "Section 7"],
+    correct: 0,
+    explanation: "Section 4.",
+  },
+  {
+    question: `Section 20 of the Right to Information Act 2005 deals with _______`,
+    options: ["Appeal", "Peanlties", "Protection of action taken in good faith", "Powers and functions of the Information Commission"],
+    correct: 1,
+    explanation: "Section 20 of the Right to Information Act 2005 deals with penalties.",
+  },
+  {
+    question: `Which section of the Right to Information Act 2005 deals with the appeal`,
+    options: ["Section 19", "Section 20", "Section 21", "Section 22"],
+    correct: 0,
+    explanation: "Section 19 of the Right to Information Act 2005 deals with the appeal.",
+  },
+  {
+    question: `Under which section of the Right to Information Act 2005, it is the obligation of the Public Authorities to publish a directory of its officers and employees?`,
+    options: ["Section 4", "Section 5", "Section 6", "Section 7"],
+    correct: 0,
+    explanation: "Section 4.",
+  },
+  {
+    question: `Chapter-II of the Right to Information Act 2005 deals with _______`,
+    options: ["Right to information and obligations public authorities", "The Central Information Commission", "The State Information Commission", "The Public Information Officer"],
+    correct: 0,
+    explanation: "Right to information and obligations public authorities.",
+  },
+  {
+    question: `Chapter-IV of the Right to Information Act 2005 deals with _______`,
+    options: ["Right to information and obligations public authorities", "The Central Information Commission", "The State Information Commission", "The Public Information Officer"],
+    correct: 2,
+    explanation: "The State Information Commission.",
+  },
+  {
+    question: `Chapter-III of the Right to Information Act 2005 deals with _______`,
+    options: ["Right to information and obligations public authorities", "The Central Information Commission", "The State Information Commission", "The Public Information Officer"],
+    correct: 1,
+    explanation: "The Central Information Commission.",
+  },
+  {
+    question: `The total number of sections in the Right to Information Act 2005 is _______`,
+    options: ["30", "31", "32", "33"],
+    correct: 1,
+    explanation: "31.",
+  },
+  {
+    question: `According to the Right to Information Act 2005, the Chief Information Commissioner and Information Commissioners shall be appointed by the President on the recommendation of a select committee. Who among the following is NOT a member of the select committee?`,
+    options: ["A Union Cabinet Minister nominated by the Prime Minister", "The Prime Minister, who shall be the Chairman of the select committee", "The Leader of the Opposition in Rajya Sabha", "The Speaker of the Lok Sabha"],
+    correct: 2,
+    explanation: "The Leader of the Opposition in Rajya Sabha is not a member of the select committee.",
+  },
+  {
+    question: `According to the Right to Information Act 2005, "Third Party" means _______`,
+    options: ["A government office other than a citizen making a request for information", "A legal cell other than the citizen making a request for information", "A voluntary organization making request for information", "A person other than a citizen making a request for information and includes a public authority"],
+    correct: 3,
+    explanation: "A person other than a citizen making a request for information and includes a public authority.",
   },
 ],
 }

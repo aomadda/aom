@@ -136,6 +136,72 @@ export const railwayRecruitmentPostingPromotionQuizzes = {
                 correct: 0,
                 explanation: "Based on Railway Board RBE No. 161/2019, an employee can be protected in case of own request transfer to a lower post provided he has completed minimum service of 1 year.",
               },
+              {
+                question: `When Group B officers are promoted to Group A Junior scale, how is their weightage for DITS calculated?`,
+                options: ["Higher of year of service by initial pay, or half of continuous Group B service (upto 5 years)", "Total years of service in Group B divided by three", "Lower of year of service by initial pay or total Group B service", "It is always a flat rate of three years"],
+                correct: 0,
+                explanation: "Higher of year of service by initial pay, or half of continuous Group B service (upto 5 years)",
+              },
+              {
+                question: `What is the maximum weightage in seniority tha can be granted to Temporary Assistanst Officers (unclassified) upon permanent appointment to Group A Junior scale?`,
+                options: ["3 years", "4 years", "5 years", "6 years"],
+                correct: 2,
+                explanation: "5 years",
+              },
+              {
+                question: `For UPSC competitive examination batches from 1986 onwards, what two factors are combined to determine inter-se seniority?`,
+                options: ["UPSC rank and the date of joining the railway", "Competitive examination marks and marks obtained during probationary training", "Length of the service and age", "Interview marks and training attedance records"],
+                correct: 1,
+                explanation: "Competitive examination marks and marks obtained during probationary training (Rule 330)",
+              },
+              {
+                question: `In the case of Gazetted Officers, what does the abbreviation "DITS" stand for in the context of determining seniority?`,
+                options: ["Date of Initial Training Start", "Date of Increment on Time Scale", "Divisionally Integrated Service Totals", "Departmental Integrated Technical Staff"],
+                correct: 1,
+                explanation: "Date of Increment on Time Scale",
+              },
+              {
+                question: `How is the inter-se seniority of redeveloped surplus staff determined when they are simultaneously selected for a new unit?`,
+                options: ["By the order in which they report for duty at the new unit", "By the merit assigned during the redeployment interview", "It remains the same as it was in their previous unit", "By their date of birth"],
+                correct: 2,
+                explanation: "It remains the same as it was in their previous unit",
+              },
+              {
+                question: `For medically decategorized staff absorbed in alternative posts, how is their seniority in the grade typically fixed?`,
+                options: ["By the total number of years left until their retirement", "They are placed at the bottom of the new cadre", "Based on the date of their medical unfitness certificate", "Based on the length of service rendered in the equivalent or corresponding cadre"],
+                correct: 3,
+                explanation: "Based on the length of service rendered in the equivalent or corresponding cadre",
+              },
+              {
+                question: `Where is a railway servant placed in the seniority list if they are transferred to another railway at their own request?`,
+                options: ["According to their original date of appointment", "Below all existing confirmed, temporary, and officiating servants in the relevant grade", "Directly below the last confirmed employee in that grade", "Based on merit assessment by the new railway administration"],
+                correct: 1,
+                explanation: "Below all existing confirmed, temporary, and officiating servants in the relevant grade (Rule 312)",
+              },
+              {
+                question: `Under Rule 310, what is the seniority status of a railway servant transferred on a "mutual exchange" basis?`,
+                options: ["They retain their original seniority from their parent unit", "They take the seniority of the person they exchanged with, regardless of their own promotion date", "They are automatically placed at the bottom of the seniority list in the new unit", "They take the lower of their own promotion-based seniority or the seniority of the employee they exchanged with"],
+                correct: 3,
+                explanation: "They take the lower of their own promotion-based seniority or the seniority of the employee they exchanged with",
+              },
+              {
+                question: `According to IREM, if a candidate is sent for initial training at a Training School, how is their seniority in the relevant grade determined?`,
+                options: ["By the order of merit in the examination held at the end of the training", "By their rank in the initial RRB panel", "By the date they joine the Training School", "By the date they were first issued an appointment letter"],
+                correct: 0,
+                explanation: "By the order of merit in the examination held at the end of the training",
+              },
+              {
+                question: `In categories partially filled by direct recruitment and partially by promotion, how is seniority determined when a promotee and a direct recruit enter a grade on the exact same date?`,
+                options: ["The candidate with the higher pay is placed senior", "The direct recruit is placed senior to the promotee", "The candidate with the earlier date of birth is placed senior", "They are placed in alternate positions, with the promotee being placed senior"],
+                correct: 3,
+                explanation: "They are placed in alternate positions, with the promotee being placed senior",
+              },
+              {
+                question: ``,
+                options: ["", "", "", ""],
+                correct: 0,
+                explanation: "",
+              },
         ]
     }
 }

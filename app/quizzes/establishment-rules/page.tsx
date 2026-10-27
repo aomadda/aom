@@ -260,6 +260,15 @@ const rules = [
     description: 'Human Resource Management System - leave allocation, loan authority, and employee management for railway staff'
   },
   {
+    href: '/quizzes/establishment-rules/temporary-railway-servant',
+    title: 'Temporary Railway Servant',
+    year: 'Rule 1501',
+    icon: '👷',
+    color: 'from-sky-500 to-blue-600',
+    hoverColor: 'from-sky-600 to-blue-700',
+    description: 'Temporary railway servant definition, notice period, termination, probation, and apprentice rules'
+  },
+  {
     href: '/quizzes/establishment-rules/miscelaneous',
     title: 'Miscellaneous',
     year: 'Misc',
