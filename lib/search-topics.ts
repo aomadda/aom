@@ -2825,6 +2825,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes general awareness General Awareness",
   },
   {
+    href: "/quizzes/establishment-rules/general-departmental-competitive-exam",
+    title: "General Departmental Competitive Exam",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords:
+      "quizzes establishment rules general departmental competitive exam General Departmental Competitive Exam GDCE age limit reservation",
+  },
+  {
     href: "/topics/aom-special/general-rules-all",
     title: "General Rules All",
     category: "Study Topics",
@@ -6080,6 +6088,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information nagaland Nagaland",
   },
   {
+    href: "/quizzes/establishment-rules/national-and-restricted-holiday",
+    title: "National and Restricted Holiday",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords:
+      "quizzes establishment rules national and restricted holiday National and Restricted Holiday NH RH compensatory off",
+  },
+  {
     href: "/topics/railway-planning-schemes/national-logistics-policy",
     title: "National Logistics Policy (NLP)",
     category: "Study Topics",
@@ -7530,6 +7546,14 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness",
     keywords: "general awareness science technology defence Science Technology Defence",
+  },
+  {
+    href: "/quizzes/establishment-rules/scouts-and-guides-activities",
+    title: "Scouts and Guides Activities",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords:
+      "quizzes establishment rules scouts and guides activities Scouts and Guides Activities special casual leave TA DA training camps",
   },
   {
     href: "/general-awareness/important-days/september",

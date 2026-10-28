@@ -260,6 +260,33 @@ const rules = [
     description: 'Human Resource Management System - leave allocation, loan authority, and employee management for railway staff'
   },
   {
+    href: '/quizzes/establishment-rules/scouts-and-guides-activities',
+    title: 'Scouts and Guides Activities',
+    year: 'Scouts',
+    icon: '🏕️',
+    color: 'from-emerald-500 to-green-600',
+    hoverColor: 'from-emerald-600 to-green-700',
+    description: 'Scouts and Guides special casual leave, TA/DA, training camps, and railway scout activity rules'
+  },
+  {
+    href: '/quizzes/establishment-rules/national-and-restricted-holiday',
+    title: 'National and Restricted Holiday',
+    year: 'NH / RH',
+    icon: '🎌',
+    color: 'from-rose-500 to-red-600',
+    hoverColor: 'from-rose-600 to-red-700',
+    description: 'National holidays, restricted holidays, compensatory off, and holiday rules for railway staff'
+  },
+  {
+    href: '/quizzes/establishment-rules/general-departmental-competitive-exam',
+    title: 'General Departmental Competitive Exam',
+    year: 'GDCE',
+    icon: '📝',
+    color: 'from-violet-500 to-purple-600',
+    hoverColor: 'from-violet-600 to-purple-700',
+    description: 'GDCE quota, age limits, reservation, eligibility, and departmental competitive examination rules'
+  },
+  {
     href: '/quizzes/establishment-rules/temporary-railway-servant',
     title: 'Temporary Railway Servant',
     year: 'Rule 1501',

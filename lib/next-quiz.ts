@@ -95,6 +95,9 @@ const ESTABLISHMENT_RULES: QuizLink[] = [
   ['right-to-information-act-2005', 'Right to Information Act 2005'],
   ['linke-holfmann-busch', 'Linke Hofmann Busch (LHB)'],
   ['human-resource-management-system', 'Human Resource Management System (HRMS)'],
+  ['scouts-and-guides-activities', 'Scouts and Guides Activities'],
+  ['national-and-restricted-holiday', 'National and Restricted Holiday'],
+  ['general-departmental-competitive-exam', 'General Departmental Competitive Exam'],
   ['temporary-railway-servant', 'Temporary Railway Servant'],
   ['miscelaneous', 'Miscellaneous'],
 ]

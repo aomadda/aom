@@ -116,6 +116,48 @@ export const temporaryRailwayServantQuizzes = {
                 correct: 2,
                 explanation: "20 days",
               },
+              {
+                question:`Due to the ban on recruitment, no fresh face of substitutes should be engaged without the prior personal approval of the _______ and the service register should be scrutinized annually by a Senior Gazetted Officer`,
+                options: ["GM", "PCPO", "DRM", "Railway Board"],
+                correct: 0,
+                explanation: "GM",
+              },
+              {
+                question:`If a substitute is retrenched and does not accpet a subsequent offer, they lose the benefit of their previous spell of employment, and their name is struck off if not booked in ________ complete calendar years`,
+                options: ["2", "3", "4", "5"],
+                correct: 0,
+                explanation: "2",
+              },
+              {
+                question:`Substitute teachers get temporary status after ________ continuous service, whereas other substitutes get it after ________ continuous service`,
+                options: ["3 months, 4 months", "3 months, 5 months", "4 months, 5 months", "4 months, 6 months"],
+                correct: 0,
+                explanation: "3 months, 4 months",
+              },
+              {
+                question:`When called for screening, the number of substitutes to be called is the number assessed for available vacancies plus _______ percent, and they are issued passes and treated as on duty.`,
+                options: ["10", "15", "20", "25"],
+                correct: 3,
+                explanation: "25",
+              },
+              {
+                question:`Substitutes engaged for Group C and Group D posts should generally be drawn from a panel and engaged upto the age of _______ years only, and their engagement as teachers should not be extended beyond _______ months.`,
+                options: ["28 years, 6 months", "30 years, 6 months", "31 years, 3 months", "32 years, 9 months"],
+                correct: 0,
+                explanation: "28 years, 6 months",
+              },
+              {
+                question:`A Screening Committee for substitutes must consists of at least _______ members, one whom should be belonging to the SC/ST category`,
+                options: ["2", "3", "4", "5"],
+                correct: 0,
+                explanation: "2",
+              },
+              {
+                question:`For absorption in the Electrical/Mechanical and S&T Departments, substitutes must have the minimum educational qualification of _______ or they must be course completed Act Apprentice.`,
+                options: ["ITI", "Diploma", "B.Tech", "Matriculation"],
+                correct: 0,
+                explanation: "ITI",
+              },
               
         ]
     }

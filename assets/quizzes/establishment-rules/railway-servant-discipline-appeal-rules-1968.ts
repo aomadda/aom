@@ -740,10 +740,28 @@ export const railwayServantDisciplineAppealRules1968 = {
           },
           {
             question:
-            ``,
-          options: ["", "", "", ""],
+            `In case of departmental proceedings, what is the "bare minimum" timeframe within which a chargesheet should ideally be served to a suspended employee?`,
+          options: ["3 months", "4 months", "5 months", "6 months"],
           correct: 0,
-          explanation: ``,
+          explanation: `3 months.`,
+          },
+          {
+            question:`What is the duty of a Government servant if they are arrested for any reason? `,
+            options: ["To prompt intimate the fact of their arrest to their official superiors", "To resign from service immediately", "To keep the matter confidential to avoid public scandal", "To wait until a court verdict is reached before informing the department"],
+            correct: 0,
+            explanation: "To prompt intimate the fact of their arrest to their official superiors.",
+          },
+          {
+            question:`What is the primary guiding factor for a disciplinary authority when deciding to place a railway servant under suspension? `,
+            options: ["The employee's years of service", "The availability of a replacement worker", "The employee's previous performance reviews", "Public interest"],
+            correct: 3,
+            explanation: "Public interest.",
+          },
+          {
+            question:`Under what circumstances may a railway servant be placed under suspension according to Rule 5(1)? `,
+            options: ["When the employee is unable to qualify the mandatory course", "When a disciplinary proceeding is contemplated or pending", "When the employee requests a leave of absence", "Whenever the employee is late for duty for three consecutive days"],
+            correct: 1,
+            explanation: "When a disciplinary proceeding is contemplated or pending.",
           },
           
           

@@ -49,6 +49,36 @@ export const joiningTime = {
         correct: 3,
         explanation: "Railway Board is the correct answer.",
       },
+      {
+        question:`Select the INCORRECT statement regarding Joining time: `,
+        options: ["Joining time is granted to a Railway servants transferred in public interest", "Joining time is fully admissible for temporary transfers", "Joining time is not admissible to Railway servants transferred at their own request", "For temporary transfer, only actual transit time as admissible in case of journey on tour will be allowed"],
+        correct: 1,
+        explanation: "Joining time is fully admissible for temporary transfers",
+      },
+      {
+        question:`The power to break into joining time without pay is exercised by _______`,
+        options: ["DRM", "GM", "Head of the Department", "Railway Board"],
+        correct: 2,
+        explanation: "Head of the Department(Break is converted without pay. Maximum break is 30 days. Minimum 3 years continuous service is required.)",
+      },
+      {
+        question:`When holidays ________ the joining time, there is no need for extending. When holidays _______ the joining time, the normal period is extended.`,
+        options: ["Precede, Follow", "Follow, Precede", "Overlap, Follow", "Overlap, Precede"],
+        correct: 0,
+        explanation: "Precede, Follow",
+      },
+      {
+        question:`Joining time can be combined with vacation and regular leave except _______ leave, and unutilized joining time upto a maximum of _______ days can be credited to LAP account.`,
+        options: ["Casual, 15", "Sick, 15", "Earned, 30", "Earned, 15"],
+        correct: 0,
+        explanation: "Casual, 15",
+      },
+      {
+        question:`If transfer orders are modified, a fresh spell of joining time is calculated from the place of receipt of ________ orders, while already availed joining time is ________.`,
+        options: ["Revised, Allowed", "Old, Forfeited", "Original, Allowed", "Original, Forfeited"],
+        correct: 0,
+        explanation: "Revised, Allowed",
+      },
       
 ],
 }

@@ -466,5 +466,35 @@ export const nationalPensionSystem = {
   correct: 0,
   explanation: "Advanced Railway Pension Access Network",
 },
+{
+  question:`The pension of an absorbed employee under combined service option shall be calculated at _______ percent of emoluments or average emoluments, whichever is more beneficial to him.`,
+  options: ["40%", "50%", "60%", "70%"],
+  correct: 1,
+  explanation: "50%",
+},
+{
+  question:`A temporary railway servant who retires on superannuation or is declared permanently incapacitated requires not less than _______ years of continuous service to be eligible for superannuation pension.`,
+  options: ["10 years", "15 years", "20 years", "25 years"],
+  correct: 0,
+  explanation: "10 years",
+},
+{
+  question:`Notice period for standard voluntary retirement is _______ months, and the minimum qualifying service required for standard voluntary retirement is _______ years.`,
+  options: ["3 months, 20 years", "4 months, 25 years", "5 months, 20 years", "6 months, 20 years"],
+  correct: 0,
+  explanation: "3 months, 20 years",
+},
+{
+  question:`Service gratuity is payable at the rate of ________ month's emoluments for each completed 6 monthly period of service for employees with less than 10 years of qualifying service.`,
+  options: ["half", "one", "one-fourth", "one-third"],
+  correct: 0,
+  explanation: "half",
+},
+{
+  question:``,
+  options: ["", "", "", ""],
+  correct: 3,
+  explanation: "",
+},
 ],
 }

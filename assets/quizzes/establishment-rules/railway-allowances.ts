@@ -57,6 +57,12 @@ export const railwayAllowancesQuizzes = {
                 correct: 0,
                 explanation: "2 years is the correct answer.",
               },
+              {
+                question:`The subsistence allowance for a suspended railway servant is equal to the leave salary they would have drawn if on: `,
+                options: ["Full pay leave", "Half average pay or half pay", "Commuted leave", "EOL without pay"],
+                correct: 1,
+                explanation: "Half average pay or half pay.",
+              },
         ]
     }
 }
