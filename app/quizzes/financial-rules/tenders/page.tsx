@@ -1,13 +1,13 @@
 'use client'
 
-import { financialRulesQuizzes } from '@/assets/quizzes/financial-rules'
+import { tenders } from '@/assets/quizzes/financial-rules/tenders'
 import AomExamTest from '@/components/aom-tests/AomExamTest'
 
 const QUIZ_ID = 'tenders'
 const CATEGORY_ID = 'tenders'
 
 export default function FinancialRulesQuizPage() {
-  const questions = financialRulesQuizzes.quizzes['tenders'] ?? []
+  const questions = tenders.tenders ?? []
 
   return (
     <AomExamTest

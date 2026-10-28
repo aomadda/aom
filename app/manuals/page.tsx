@@ -5,13 +5,11 @@ import Link from 'next/link'
 import {
   BookOpen,
   ChevronRight,
-  FileText,
   Library,
   Sparkles,
   Train,
   ShieldAlert,
   Clock,
-  Map,
   Layers,
 } from 'lucide-react'
 
@@ -50,17 +48,6 @@ const manuals = [
     iconBg: 'bg-slate-500/20',
   },
   {
-    href: '/manuals/general-subsidiary-rules',
-    title: 'General Subsidiary Rules',
-    subtitle: 'GSR — supplementary rules',
-    description:
-      'General Subsidiary Rules with chapters and appendix: signalling, working, and operational detail.',
-    icon: FileText,
-    gradient: 'from-emerald-600 to-teal-700',
-    ring: 'ring-emerald-500/30',
-    iconBg: 'bg-emerald-500/20',
-  },
-  {
     href: '/manuals/accident-manual',
     title: 'Accident Manual',
     subtitle: 'Response & investigation',
@@ -70,17 +57,6 @@ const manuals = [
     gradient: 'from-red-600 to-orange-700',
     ring: 'ring-red-500/30',
     iconBg: 'bg-red-500/20',
-  },
-  {
-    href: '/manuals/station-working-rules',
-    title: 'Station Working Rules',
-    subtitle: 'SWR — station-specific',
-    description:
-      'Station working rule topics: layouts, signalling, line clear, shunting, and abnormal working.',
-    icon: Map,
-    gradient: 'from-amber-600 to-yellow-700',
-    ring: 'ring-amber-500/30',
-    iconBg: 'bg-amber-500/20',
   },
   {
     href: '/manuals/working-time-table',

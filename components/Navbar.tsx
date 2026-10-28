@@ -15,14 +15,12 @@ const topicsLinksRaw: TopicNavLink[] = [
   { href: '/topics/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
   { href: '/topics/establishment-rules', label: 'Establishment rules', icon: '📜' },
   { href: '/topics/financial-rules', label: 'Financial rules', icon: '💰' },
-  { href: '/topics/general-and-subisidiary-rules', label: 'General & Subsidiary Rules', icon: '📗' },
   { href: '/topics/indian-railways', label: 'Indian Railways', icon: '🇮🇳' },
   { href: '/topics/information-technology-apps', label: 'Information technology apps', icon: '💻' },
   { href: '/topics/master-circulars', label: 'Master circulars', icon: '📜' },
   { href: '/topics/operating-manual', label: 'Operating Manual', icon: '📘' },
   { href: '/topics/operating-material', label: 'Operating material', icon: '📂' },
   { href: '/topics/professional-subject', label: 'Professional Subject', icon: '🚂' },
-  { href: '/topics/railway-acts', label: 'Railway acts', icon: '⚖️' },
   { href: '/topics/railway-planning-schemes', label: 'Railway planning schemes', icon: '🗺️' },
   { href: '/topics/working-time-table', label: 'Working Time Table', icon: '⏰' },
 ]
@@ -115,6 +113,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
     { href: '/acts/disaster-management-act-2005', label: 'Disaster Management Act, 2005' },
     { href: '/acts/employees-compensation-act-2010', label: 'Employees Compensation Act, 2010' },
     { href: '/acts/factories-act-1948', label: 'Factories Act, 1948' },
+    { href: '/acts/general-and-subsidiary-rules', label: 'General & Subsidiary Rules' },
     { href: '/acts/industrial-disputes-act-1947', label: 'Industrial Disputes Act, 1947' },
     { href: '/acts/industrial-relations-code-2010', label: 'Industrial Relations Code, 2010' },
     { href: '/acts/indian-railways-act-1989', label: 'Indian Railway Acts, 1989' },
@@ -125,6 +124,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
     { href: '/acts/railway-servants-rest-rules-2005', label: 'Railway Servants (Rest) Rules, 2005' },
     { href: '/acts/railway-services-conduct-rules-1966', label: 'Railway Services (Conduct) Rules, 1966' },
     { href: '/acts/right-to-information-act-2005', label: 'Right to Information Act, 2005' },
+    { href: '/acts/station-working-rules', label: 'Station Working Rules' },
     { href: '/acts/trade-union-act-1926', label: 'Trade Union Act, 1926' },
     { href: '/acts/workmen-compensation-act-1923', label: 'Workmen Compensation Act, 1923' },
   ]
@@ -132,9 +132,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
   const manualsLinks = [
     { href: '/manuals/accident-manual', label: 'Accident Manual', icon: '⚠️' },
     { href: '/manuals/block-working-manual', label: 'Block Working Manual', icon: '🔧' },
-    { href: '/manuals/general-subsidiary-rules', label: 'General Subsidiary Rules', icon: '📋' },
     { href: '/manuals/indian-railways-operating-manual', label: 'Indian Railways Operating Manual', icon: '🚂' },
-    { href: '/manuals/station-working-rules', label: 'Station Working Rules', icon: '🚉' },
     { href: '/manuals/working-time-table', label: 'Working Time Table', icon: '⏰' },
   ]
 

@@ -15,6 +15,7 @@ import { RAILWAY_CURRENT_AFFAIRS_2026_QUIZ_MONTHS } from '@/lib/railway-current-
 import { RAILWAY_GK_QUIZ_CHAPTERS } from '@/lib/railway-gk-quiz-chapters'
 import { RAILWAY_STATISTICS_QUIZ_CHAPTERS } from '@/lib/railway-statistics-quiz-chapters'
 import { LEAVE_RULES_1949_QUIZZES } from '@/lib/leave-rules-1949-quizzes'
+import { LABOUR_LAWS_QUIZZES } from '@/lib/labour-laws-quizzes'
 import { PASS_RULES_1986_QUIZZES } from '@/lib/pass-rules-1986-quizzes'
 import { RAJABHASHA_QUIZ_CHAPTERS } from '@/lib/rajabhasha-quiz-chapters'
 
@@ -58,8 +59,12 @@ function numberedTests(folder: string, slugPrefix: string, titlePrefix: string, 
 
 const FINANCIAL_RULES: QuizLink[] = [
   ['accounts', 'Accounts'],
+  ['budget', 'Budget'],
+  ['contracts', 'Contracts'],
+  ['demands', 'Demands'],
   ['finance', 'Finance'],
   ['government-e-marketplace', 'Government e-Marketplace'],
+  ['plan-head', 'Plan Heads'],
   ['tenders', 'Tenders'],
 ].map(([slug, title]) => ({
   href: `/quizzes/financial-rules/${slug}`,
@@ -69,18 +74,13 @@ const FINANCIAL_RULES: QuizLink[] = [
 }))
 
 const ESTABLISHMENT_RULES: QuizLink[] = [
-  ['code-on-wages-2019', 'Code on Wages 2019'],
   ['railway-servants-discipline-appeal-rules-1968', 'Railway  Servants (Discipline & Appeal) Rules 1968'],
   ['railway-servants-rest-rules-2005', 'Railway Servants (Rest) Rules 2005'],
   ['railway-services-conduct-rules-1966', 'Railway Servants (Conduct) Rules 1966'],
   ['compassionate-grounds-appointment', 'Compassionate Grounds Appointment (CGA)'],
   ['annual-performance-appraisal-report', 'Annual Performance Appraisal Report (APAR)'],
-  ['national-pension-system', 'National Pension System (NPS)'],
-  ['unified-pension-system', 'Unified Pension System (UPS)'],
-  ['old-pension-system', 'Old Pension Scheme (OPS)'],
   ['central-pay-commission', 'Central Pay Commission (CPC)'],
   ['centralised-public-grievance-redress-monitoring-system', 'Centralised Public Grievance Redress Monitoring System'],
-  ['employees-compensation-act-1923', 'Employees Compensation Act 1923'],
   ['indian-railway-establishment-code', 'Indian Railway Establishment Code'],
   ['indian-railway-establishment-manual', 'Indian Railway Establishment Manual'],
   ['modified-assured-career-progression', 'Modified Assured Career Progression'],
@@ -91,8 +91,6 @@ const ESTABLISHMENT_RULES: QuizLink[] = [
   ['railway-recruitment-posting-promotion', 'Railway Recruitment Posting Promotion'],
   ['railway-services-pension-rules-1993', 'Railway Services Pension Rules 1993'],
   ['staff-benefit-fund', 'Staff Benefit Fund'],
-  ['trade-union-act-1926', 'Trade Union Act 1926'],
-  ['right-to-information-act-2005', 'Right to Information Act 2005'],
   ['linke-holfmann-busch', 'Linke Hofmann Busch (LHB)'],
   ['human-resource-management-system', 'Human Resource Management System (HRMS)'],
   ['scouts-and-guides-activities', 'Scouts and Guides Activities'],
@@ -208,6 +206,12 @@ const QUIZ_SERIES: QuizLink[][] = [
   ),
   FINANCIAL_RULES,
   ESTABLISHMENT_RULES,
+  LABOUR_LAWS_QUIZZES.map((quiz) => ({
+    href: `/quizzes/establishment-rules/labour-laws-acts-rules-codes/${quiz.slug}`,
+    title: quiz.title,
+    categoryId: quiz.slug,
+    quizId: quiz.slug,
+  })),
   LEAVE_RULES_1949_QUIZZES.map((quiz) => ({
     href: `/quizzes/establishment-rules/railway-servants-leave-rules-1949/${quiz.slug}`,
     title: quiz.title,

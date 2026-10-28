@@ -62,6 +62,14 @@ const Acts = () => {
       description: 'Comprehensive code governing industrial relations and labor laws'
     },
     {
+      href: '/acts/general-and-subsidiary-rules',
+      title: 'General & Subsidiary Rules',
+      icon: '📗',
+      color: 'from-emerald-500 to-teal-600',
+      hoverColor: 'from-emerald-600 to-teal-700',
+      description: 'General Rules for Indian Railways with Subsidiary Rules and special instructions'
+    },
+    {
       href: '/acts/factories-act-1948',
       title: 'Factories Act, 1948',
       year: '1948',
@@ -114,6 +122,14 @@ const Acts = () => {
       color: 'from-violet-500 to-violet-600',
       hoverColor: 'from-violet-600 to-violet-700',
       description: 'Rules of conduct for railway service employees'
+    },
+    {
+      href: '/acts/station-working-rules',
+      title: 'Station Working Rules',
+      icon: '🚉',
+      color: 'from-amber-500 to-yellow-600',
+      hoverColor: 'from-amber-600 to-yellow-700',
+      description: 'Station working rule topics, appendices, layouts, signalling, line clear, and abnormal working'
     },
     {
       href: '/acts/right-to-information-act-2005',

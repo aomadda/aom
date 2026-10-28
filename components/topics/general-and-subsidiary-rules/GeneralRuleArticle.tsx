@@ -16,7 +16,7 @@ function RuleLink({
   const isNext = direction === 'next'
   return (
     <Link
-      href={`/topics/general-and-subisidiary-rules/${item.slug}`}
+      href={`/acts/general-and-subsidiary-rules/${item.slug}`}
       className={`group flex min-w-0 flex-1 flex-col rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-emerald-300/40 hover:bg-white/10 ${
         isNext ? 'items-end text-right' : ''
       }`}
@@ -47,7 +47,7 @@ export default function GeneralRuleArticle({ rule }: { rule: GeneralRulePage }) 
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 py-8 sm:py-12">
         <Link
-          href="/topics/general-and-subisidiary-rules"
+          href="/acts/general-and-subsidiary-rules"
           className="inline-flex items-center text-sm font-medium text-emerald-200 transition hover:text-white"
         >
           <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

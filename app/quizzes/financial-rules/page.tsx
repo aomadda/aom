@@ -16,6 +16,30 @@ const rules = [
     description: 'Comprehensive rules and regulations governing railway accounts, financial records, and accounting procedures'
   },
   {
+    href: '/quizzes/financial-rules/budget',
+    title: 'Budget',
+    icon: '📒',
+    color: 'from-indigo-500 to-violet-600',
+    hoverColor: 'from-indigo-600 to-violet-700',
+    description: 'Railway budget, demands for grants, and budget rules'
+  },
+  {
+    href: '/quizzes/financial-rules/contracts',
+    title: 'Contracts',
+    icon: '📄',
+    color: 'from-violet-500 to-purple-600',
+    hoverColor: 'from-violet-600 to-purple-700',
+    description: 'Railway contract rules, agreement terms, and contract management'
+  },
+  {
+    href: '/quizzes/financial-rules/demands',
+    title: 'Demands',
+    icon: '🗂️',
+    color: 'from-orange-500 to-amber-600',
+    hoverColor: 'from-orange-600 to-amber-700',
+    description: 'Demands for grants, railway budget demands, and demand rules'
+  },
+  {
     href: '/quizzes/financial-rules/finance',
     title: 'Finance',
     icon: '📊',
@@ -38,6 +62,14 @@ const rules = [
     color: 'from-sky-500 to-blue-600',
     hoverColor: 'from-sky-600 to-blue-700',
     description: 'GeM portal, procurement of goods and services, GFR 149, and Government e-Marketplace rules'
+  },
+  {
+    href: '/quizzes/financial-rules/plan-head',
+    title: 'Plan Heads',
+    icon: '🏗️',
+    color: 'from-cyan-500 to-blue-600',
+    hoverColor: 'from-cyan-600 to-blue-700',
+    description: 'Plan heads, capital works allocation, and railway plan head rules'
   },
 ]
 

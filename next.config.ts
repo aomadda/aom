@@ -74,8 +74,23 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/manuals/station-working-rules",
+        destination: "/acts/station-working-rules",
+        permanent: true,
+      },
+      {
         source: "/topics/general-rules",
-        destination: "/topics/general-and-subisidiary-rules",
+        destination: "/acts/general-and-subsidiary-rules",
+        permanent: true,
+      },
+      {
+        source: "/topics/general-and-subisidiary-rules",
+        destination: "/acts/general-and-subsidiary-rules",
+        permanent: true,
+      },
+      {
+        source: "/topics/general-and-subisidiary-rules/:slug",
+        destination: "/acts/general-and-subsidiary-rules/:slug",
         permanent: true,
       },
       {

@@ -69,6 +69,13 @@ export function quizIdentityFromHref(href: string): QuizIdentity | null {
     return null
   }
 
+  if (parts[1] === 'establishment-rules' && parts[2] === 'labour-laws-acts-rules-codes') {
+    if (parts.length === 4) {
+      return { categoryId: parts[3], quizId: parts[3] }
+    }
+    return null
+  }
+
   if (
     parts.length === 3 &&
     (parts[1] === 'establishment-rules' || parts[1] === 'financial-rules')

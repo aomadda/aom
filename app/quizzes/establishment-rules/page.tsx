@@ -8,15 +8,6 @@ import { usePathname } from 'next/navigation'
 
 const rules = [
   {
-    href: '/quizzes/establishment-rules/code-on-wages-2019',
-    title: 'Code on Wages 2019',
-    year: '2019',
-    icon: '💵',
-    color: 'from-amber-500 to-yellow-600',
-    hoverColor: 'from-amber-600 to-yellow-700',
-    description: 'Code on Wages 2019 - minimum wages, floor wage, equal remuneration, and payment of wages',
-  },
-  {
     href: '/quizzes/establishment-rules/railway-servants-discipline-appeal-rules-1968',
     title: 'Railway  Servants (Discipline & Appeal) Rules 1968',
     year: '1968',
@@ -80,33 +71,6 @@ const rules = [
     description: 'Annual Performance Appraisal Report rules for staff assessment, promotion benchmarks, and MACP'
   },
   {
-    href: '/quizzes/establishment-rules/national-pension-system',
-    title: 'National Pension System (NPS)',
-    year: 'NPS',
-    icon: '🪙',
-    color: 'from-slate-500 to-slate-600',
-    hoverColor: 'from-slate-600 to-slate-700',
-    description: 'National Pension System rules for railway employees - Tier-I, Tier-II, contributions, and withdrawal'
-  },
-  {
-    href: '/quizzes/establishment-rules/unified-pension-system',
-    title: 'Unified Pension System (UPS)',
-    year: 'UPS',
-    icon: '🏛️',
-    color: 'from-rose-500 to-rose-600',
-    hoverColor: 'from-rose-600 to-rose-700',
-    description: 'Unified Pension System rules - assured pension, contributions, corpus, gratuity, and family pension'
-  },
-  {
-    href: '/quizzes/establishment-rules/old-pension-system',
-    title: 'Old Pension Scheme (OPS)',
-    year: 'OPS',
-    icon: '📜',
-    color: 'from-violet-500 to-violet-600',
-    hoverColor: 'from-violet-600 to-violet-700',
-    description: 'Old Pension Scheme for employees appointed before 2004 - pension, GPF, gratuity, and family pension'
-  },
-  {
     href: '/quizzes/establishment-rules/central-pay-commission',
     title: 'Central Pay Commission (CPC)',
     year: 'CPC',
@@ -123,15 +87,6 @@ const rules = [
     color: 'from-fuchsia-500 to-pink-600',
     hoverColor: 'from-fuchsia-600 to-pink-700',
     description: 'Centralised Public Grievance Redress Monitoring System - CPGRAM complaint timelines and redressal'
-  },
-  {
-    href: '/quizzes/establishment-rules/employees-compensation-act-1923',
-    title: 'Employees Compensation Act 1923',
-    year: '1923',
-    icon: '🩹',
-    color: 'from-red-500 to-rose-600',
-    hoverColor: 'from-red-600 to-rose-700',
-    description: 'Employees Compensation Act 1923 - compensation for death, disability, and injury claims'
   },
   {
     href: '/quizzes/establishment-rules/indian-railway-establishment-code',
@@ -224,24 +179,6 @@ const rules = [
     description: 'Staff Benefit Fund - spectacles reimbursement, per-capita grant, and annual grant'
   },
   {
-    href: '/quizzes/establishment-rules/trade-union-act-1926',
-    title: 'Trade Union Act 1926',
-    year: '1926',
-    icon: '🤝',
-    color: 'from-emerald-500 to-teal-600',
-    hoverColor: 'from-emerald-600 to-teal-700',
-    description: 'Trade Union Act 1926 - recognition period, zonal votes, and membership age'
-  },
-  {
-    href: '/quizzes/establishment-rules/right-to-information-act-2005',
-    title: 'Right to Information Act 2005',
-    year: '2005',
-    icon: '📄',
-    color: 'from-sky-500 to-sky-600',
-    hoverColor: 'from-sky-600 to-sky-700',
-    description: 'Right to Information Act 2005 - transparency, information requests, PIO, appellate authority, and timelines'
-  },
-  {
     href: '/quizzes/establishment-rules/linke-holfmann-busch',
     title: 'Linke Hofmann Busch (LHB)',
     year: 'LHB',
@@ -258,6 +195,15 @@ const rules = [
     color: 'from-cyan-500 to-cyan-600',
     hoverColor: 'from-cyan-600 to-cyan-700',
     description: 'Human Resource Management System - leave allocation, loan authority, and employee management for railway staff'
+  },
+  {
+    href: '/quizzes/establishment-rules/labour-laws-acts-rules-codes',
+    title: 'Labour Laws, Acts, Rules and Codes',
+    year: 'Labour',
+    icon: '🏭',
+    color: 'from-rose-500 to-orange-600',
+    hoverColor: 'from-rose-600 to-orange-700',
+    description: 'Labour laws, wage codes, social security, pension, gratuity, compensation, and related acts'
   },
   {
     href: '/quizzes/establishment-rules/scouts-and-guides-activities',
