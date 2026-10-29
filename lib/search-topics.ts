@@ -171,6 +171,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material advanced starter Advanced Starter LSS ATP MAS IB",
   },
   {
+    href: "/topics/operating-material/advanced-starter-defective",
+    title: "Advanced Starter Defective",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material advanced starter defective Advanced Starter Defective AS PLCT T/A 1425 T/C 1425 T/D 1425",
+  },
+  {
     href: "/general-awareness/world-information/africa-countries",
     title: "African Countries",
     category: "General Awareness",
@@ -2065,6 +2073,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "circulars Circulars Railway Board Circulars",
   },
   {
+    href: "/topics/operating-material/closing-of-block-section-after-pushing-back-of-the-train",
+    title: "Closing of Block Section After Pushing Back of the Train",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material closing of block section after pushing back of the train Closing of Block Section After Pushing Back of the Train Daido Podanur UFSBI push back",
+  },
+  {
     href: "/topics/operating-material/coacting-signal",
     title: "Co-acting Signal",
     category: "Study Topics",
@@ -2156,6 +2172,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Establishment Rules › Railway Servants (Pass) Rules 1986",
     keywords:
       "quizzes establishment rules railway servants pass rules 1986 complimentary card pass Complimentary Card Pass",
+  },
+  {
+    href: "/topics/operating-material/conditions-for-closing-of-block-section",
+    title: "Conditions for Closing of Block Section",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material conditions for closing of block section Conditions for Closing of Block Section G.R. 14.10 BPAC tail lamp",
   },
   {
     href: "/topics/railway-planning-schemes/container-rail-terminals",
@@ -11160,6 +11184,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material vehicle guidance Vehicle Guidance (VG) S.R. 4.25.3 TNC handbook",
+  },
+  {
+    href: "/topics/block-working-manual/vehicles-running-away-into-the-block-section",
+    title: "Vehicles Running Away Into the Block Section",
+    category: "Study Topics",
+    parent: "Topics › Block Working Manual",
+    keywords:
+      "topics block working manual vehicles running away into the block section Vehicles Running Away Into the Block Section BWM A-5.9 B-5.10 C-5.11 C-5.12",
   },
   {
     href: "/topics/operating-material/visibility-test-object",

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import {
+  AlertTriangle,
   BookMarked,
   ChevronRight,
   CircuitBoard,
@@ -65,6 +66,18 @@ const blockWorkingManualTopics = [
     iconClassName: 'text-indigo-200',
     borderClassName: 'border-indigo-500/25 hover:border-indigo-400/45',
     ringClassName: 'ring-indigo-500/10',
+  },
+  {
+    href: '/topics/block-working-manual/vehicles-running-away-into-the-block-section',
+    title: 'Vehicles Running Away Into the Block Section',
+    subtitle: 'BWM Part A-5.9, B-5.10, C-5.11/12',
+    description:
+      'Protection when vehicles escape into the block section — bell codes, relief engine, and clearance.',
+    icon: AlertTriangle,
+    accent: 'from-rose-500/20 via-orange-500/10 to-transparent',
+    iconClassName: 'text-rose-200',
+    borderClassName: 'border-rose-500/25 hover:border-rose-400/45',
+    ringClassName: 'ring-rose-500/10',
   },
 ]
 

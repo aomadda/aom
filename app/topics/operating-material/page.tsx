@@ -19,6 +19,11 @@ const topics = [
     icon: ChevronsRight,
   },
   {
+    href: '/topics/operating-material/advanced-starter-defective',
+    title: 'Advanced Starter Defective',
+    icon: LightbulbOff,
+  },
+  {
     href: '/topics/operating-material/authorised-officer',
     title: 'Authorised Officer',
     icon: BadgeCheck,
@@ -94,9 +99,19 @@ const topics = [
     icon: TriangleAlert,
   },
   {
+    href: '/topics/operating-material/closing-of-block-section-after-pushing-back-of-the-train',
+    title: 'Closing of Block Section After Pushing Back of the Train',
+    icon: Unplug,
+  },
+  {
     href: '/topics/operating-material/coacting-signal',
     title: 'Co-acting Signal',
     icon: Copy,
+  },
+  {
+    href: '/topics/operating-material/conditions-for-closing-of-block-section',
+    title: 'Conditions for Closing of Block Section',
+    icon: CircleCheck,
   },
   {
     href: '/topics/operating-material/defective-signals',
