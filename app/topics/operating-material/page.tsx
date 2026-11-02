@@ -114,6 +114,11 @@ const topics = [
     icon: CircleCheck,
   },
   {
+    href: '/topics/operating-material/conditions-for-taking-off-home-signal',
+    title: 'Conditions for Taking Off Home Signal',
+    icon: Signal,
+  },
+  {
     href: '/topics/operating-material/defective-signals',
     title: 'Defective Signals',
     icon: Siren,
@@ -122,6 +127,16 @@ const topics = [
     href: '/topics/operating-material/defective-vehicles',
     title: 'Defective Vehicles',
     icon: PackageX,
+  },
+  {
+    href: '/topics/operating-material/departure-of-a-train-from-non-signalled-line',
+    title: 'Departure of a Train from Non-Signalled Line',
+    icon: LogOut,
+  },
+  {
+    href: '/topics/operating-material/departure-signal-got-stuck-up-in-OFF-position-at-an-advance-station',
+    title: 'Departure Signal Got Stuck Up in OFF Position',
+    icon: LightbulbOff,
   },
   {
     href: '/topics/operating-material/despatch-signals',
@@ -219,6 +234,11 @@ const topics = [
     icon: Spline,
   },
   {
+    href: '/topics/operating-material/intermediate-block-signal-defective',
+    title: 'IB Signal Defective',
+    icon: Spline,
+  },
+  {
     href: '/topics/operating-material/integrated-block',
     title: 'Integrated Block',
     icon: Combine,
@@ -309,6 +329,11 @@ const topics = [
     icon: AlertTriangle,
   },
   {
+    href: '/topics/operating-material/obtain-line-clear-through-control-phone-and-VHF-set',
+    title: 'Obtain Line Clear Through Control Phone and VHF Set',
+    icon: PhoneCall,
+  },
+  {
     href: '/topics/operating-material/operating-authorities',
     title: 'Operating Authorities',
     icon: ClipboardList,
@@ -374,6 +399,11 @@ const topics = [
     icon: CarFront,
   },
   {
+    href: '/topics/operating-material/reception-signal-home-signal-is-defective',
+    title: 'Reception Signal (Home) Defective',
+    icon: House,
+  },
+  {
     href: '/topics/operating-material/reception-signals',
     title: 'Reception Signals',
     icon: LogIn,
@@ -404,6 +434,11 @@ const topics = [
     icon: Route,
   },
   {
+    href: '/topics/operating-material/running-of-a-train-without-brake-van',
+    title: 'Running of a Train Without Brake Van',
+    icon: Package,
+  },
+  {
     href: '/topics/operating-material/running-train',
     title: 'Running Train',
     icon: CirclePlay,
@@ -429,6 +464,11 @@ const topics = [
     icon: PanelTop,
   },
   {
+    href: '/topics/operating-material/signal-got-stuck-up-n-OFF-position-in-station-limits',
+    title: 'Signal Got Stuck Up in OFF Position in Station Limits',
+    icon: SignalMedium,
+  },
+  {
     href: '/topics/operating-material/signal-overlap',
     title: 'Signal Overlap',
     icon: BetweenHorizontalEnd,
@@ -437,6 +477,11 @@ const topics = [
     href: '/topics/operating-material/signals',
     title: 'Signals',
     icon: Signal,
+  },
+  {
+    href: '/topics/operating-material/signals-to-warn-incoming-train-of-danger-ahead',
+    title: 'Signals to Warn Incoming Train of Danger Ahead',
+    icon: Siren,
   },
   {
     href: '/topics/operating-material/stabling',
@@ -510,6 +555,11 @@ const topics = [
     icon: Unplug,
   },
   {
+    href: '/topics/operating-material/train-held-up-at-home-signal',
+    title: 'Train Held Up at Home Signal',
+    icon: OctagonX,
+  },
+  {
     href: '/topics/operating-material/train-manager',
     title: 'Train Manager',
     icon: HardHat,
@@ -566,8 +616,8 @@ const OperatingMaterialPage = () => {
     <section className="relative min-h-screen overflow-x-hidden bg-linear-to-b from-slate-950 via-slate-900 to-amber-950/70 px-4 py-12 sm:px-6 lg:px-8">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_45%_at_50%_-15%,rgba(251,191,36,0.14),transparent)]" />
       <div className="relative mx-auto max-w-5xl">
-        <div className="rounded-2xl border border-amber-500/30 bg-slate-900/70 px-8 py-6 text-center shadow-xl shadow-black/20 ring-1 ring-amber-500/15 backdrop-blur-sm sm:px-12 sm:py-8">
-          <h1 className="bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl">
+        <div className="rounded-xl border border-amber-500/30 bg-slate-900/70 px-8 py-6 text-center shadow-xl shadow-black/20 ring-1 ring-amber-500/15 backdrop-blur-sm sm:px-12 sm:py-8">
+          <h1 className="bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl uppercase">
             Operating Material
           </h1>
         </div>
@@ -579,21 +629,21 @@ const OperatingMaterialPage = () => {
               <Link
                 key={topic.href}
                 href={topic.href}
-                className="group relative overflow-hidden rounded-3xl border border-amber-500/25 bg-slate-900/65 p-6 shadow-xl shadow-black/20 ring-1 ring-amber-500/10 backdrop-blur-sm transition duration-200 hover:-translate-y-1 hover:border-amber-400/45 hover:bg-slate-900/80"
+                className="group relative overflow-hidden rounded-lg border border-amber-500/25 bg-slate-900/65 p-6 shadow-xl shadow-black/20 ring-1 ring-amber-500/10 backdrop-blur-sm transition duration-200 hover:-translate-y-1 hover:border-amber-400/45 hover:bg-slate-900/80"
               >
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-amber-500/20 via-orange-500/10 to-transparent" />
                 <div className="relative flex h-full flex-col">
                   <div className="flex items-start justify-between gap-4">
-                    <div className="rounded-2xl border border-white/10 bg-white/5 p-3 shadow-lg shadow-black/10">
-                      <Icon className="h-7 w-7 text-amber-200" strokeWidth={2.2} />
+                    <div className="rounded-full border border-white/10 bg-white/5 p-3 shadow-lg shadow-black/10">
+                      <Icon className="lg:h-7 lg:w-7 h-5 w-5 text-amber-200" strokeWidth={2.2} />
                     </div>
-                    <span className="text-xl leading-none text-slate-400 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-amber-100">
+                    <span className="lg:text-xl text-base leading-none text-slate-400 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-amber-100">
                       →
                     </span>
                   </div>
 
                   <div className="mt-6">
-                    <h2 className="text-2xl font-bold tracking-tight text-white">{topic.title}</h2>
+                    <h2 className="lg:text-2xl text-lg font-semibold tracking-tight text-white">{topic.title}</h2>
                   </div>
 
                   <div className="mt-6 flex items-center gap-2 text-sm font-medium text-amber-100/90">

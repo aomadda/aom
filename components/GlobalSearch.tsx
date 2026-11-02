@@ -2,9 +2,11 @@
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { ArrowRight, Search, X } from 'lucide-react'
 
+import { abbreviationSearchTopics } from '@/lib/abbreviation-topics'
+import { definitionSearchTopics } from '@/lib/definition-topics'
 import { searchTopics } from '@/lib/search-topics'
 import { filterTopics } from '@/lib/topic-search'
 
@@ -16,6 +18,7 @@ export function requestOpenGlobalSearch() {
 
 const GlobalSearch = () => {
   const pathname = usePathname()
+  const router = useRouter()
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
   const [activeIndex, setActiveIndex] = useState(0)
@@ -191,7 +194,11 @@ const GlobalSearch = () => {
                           href={topic.href}
                           data-index={index}
                           onMouseEnter={() => setActiveIndex(index)}
-                          onClick={close}
+                          onClick={(event) => {
+                            event.preventDefault()
+                            router.push(topic.href)
+                            close()
+                          }}
                           className={`flex items-center gap-3 rounded-xl px-3 py-3 transition ${
                             isActive
                               ? 'bg-violet-50 text-violet-900 ring-1 ring-violet-200'
@@ -199,14 +206,26 @@ const GlobalSearch = () => {
                           }`}
                         >
                           <div className="min-w-0 flex-1">
-                            <div className="truncate text-sm font-semibold sm:text-base">
-                              {topic.title}
+                            <div className="flex min-w-0 items-center gap-2">
+                              <div className="truncate text-sm font-semibold sm:text-base">
+                                {topic.title}
+                              </div>
+                              {topic.category === 'Abbreviations' ? (
+                                <span className="shrink-0 text-xs font-medium text-violet-600">
+                                  Abbreviations
+                                </span>
+                              ) : null}
                             </div>
                             <div className="mt-0.5 truncate text-xs text-slate-500 sm:text-sm">
-                              {topic.category}
-                              {topic.parent && topic.parent !== topic.category
-                                ? ` · ${topic.parent}`
-                                : ''}
+                              {topic.category === 'Definitions'
+                                ? 'Definitions'
+                                : topic.category === 'Abbreviations'
+                                  ? topic.parent
+                                  : `${topic.category}${
+                                      topic.parent && topic.parent !== topic.category
+                                        ? ` · ${topic.parent}`
+                                        : ''
+                                    }`}
                             </div>
                           </div>
                           <ArrowRight
@@ -222,9 +241,11 @@ const GlobalSearch = () => {
 
             <div className="flex items-center justify-between border-t border-slate-200 bg-slate-50 px-4 py-2.5 text-[11px] text-slate-500 sm:px-5">
               <span>
-                {results.length > 0
+                {query.trim()
                   ? `${results.length} result${results.length === 1 ? '' : 's'}`
-                  : `Total topics: (${searchTopics.length})`}
+                  : `${
+                      searchTopics.length + abbreviationSearchTopics.length + definitionSearchTopics.length
+                    } results`}
               </span>
               <span className="hidden sm:inline">↑↓ navigate · Enter open · Esc close</span>
             </div>

@@ -1,3 +1,5 @@
+import { abbreviationSearchTopics } from '@/lib/abbreviation-topics'
+import { definitionSearchTopics } from '@/lib/definition-topics'
 import { searchTopics, type SearchTopic } from '@/lib/search-topics'
 
 function normalize(value: string) {
@@ -49,6 +51,16 @@ function scoreTopic(topic: SearchTopic, query: string, tokens: string[], railway
     score += 40
   }
 
+  if (topic.category === 'Abbreviations') {
+    if (title === query) score += 220
+    if (parent === query) score += 180
+    else if (parent.includes(query)) score += 40
+  }
+
+  if (topic.category === 'Definitions' && title === query) {
+    score += 220
+  }
+
   return score
 }
 
@@ -59,7 +71,7 @@ export function filterTopics(rawQuery: string, limit = 40): SearchTopic[] {
   const tokens = query.split(' ').filter(Boolean)
   const railwayQuery = RAILWAY_QUERY.test(rawQuery) || tokens.some((token) => token === 'railway' || token === 'railways' || token === 'aom')
 
-  return searchTopics
+  return [...searchTopics, ...abbreviationSearchTopics, ...definitionSearchTopics]
     .map((topic) => ({ topic, score: scoreTopic(topic, query, tokens, railwayQuery) }))
     .filter((item) => item.score >= 0)
     .sort((a, b) => b.score - a.score || a.topic.title.localeCompare(b.topic.title))

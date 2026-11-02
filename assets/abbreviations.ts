@@ -2,8 +2,8 @@
 type AbbreviationItem = {
     acronym: string;
     fullForm: string;
-    explanation?: string;
-    reference?: string;
+    explanation: string;
+    reference: string;
   };
   
   export const abbreviations: Record<string, AbbreviationItem[]> = {
@@ -33,22 +33,22 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
-      { acronym: "ACPCNF", fullForm: "Alarm Chain Pulled But Culprit Not Found" },
-      { acronym: "ADCR", fullForm: "Analog to Digital Converter Relay" },
+      { acronym: "ACPCNF", fullForm: "Alarm Chain Pulled But Culprit Not Found", explanation: "Will be added later", reference: "--" },
+      { acronym: "ADCR", fullForm: "Analog to Digital Converter Relay", explanation: "Will be added later", reference: "--" },
       {
         acronym: "ACRS",
         fullForm: "Additional Commissioner of Railway Safety",
         explanation: "A senior authority assisting the Commissioner of Railway Safety in ensuring railway safety supervision.",
         reference: "--"
       },
-      { acronym: "ACS", fullForm: "Advance Correction Slips" },
+      { acronym: "ACS", fullForm: "Advance Correction Slips", explanation: "Will be added later", reference: "--" },
       { 
         acronym: "ADGM", 
         fullForm: "Additional Deputy General Manager",
         explanation: "Will be added later",
         reference: "--"
       },
-      { acronym: "ADMO", fullForm: "Assistant Divisional Medical Officer" },
+      { acronym: "ADMO", fullForm: "Assistant Divisional Medical Officer", explanation: "Will be added later", reference: "--" },
       {
         acronym: "ADRM",
         fullForm: "Additional Divisional Railway Manager",
@@ -3995,7 +3995,8 @@ type AbbreviationItem = {
       {
         "acronym": "ZRUCC",
         "fullForm": "Zonal Railway Users Consultative Committee",
-        "explanation": "Represents public interests to railway zonal authorities."
+        "explanation": "Represents public interests to railway zonal authorities.",
+        "reference": "--"
       },
     ],
   };

@@ -10,8 +10,8 @@ export const searchTopics: SearchTopic[] = [
   {
     href: "/abbreviations",
     title: "Abbreviations",
-    category: "Reference",
-    parent: "Reference",
+    category: "Indian Railways",
+    parent: "Indian Railways",
     keywords: "abbreviations Abbreviations",
   },
   {
@@ -2182,6 +2182,14 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material conditions for closing of block section Conditions for Closing of Block Section G.R. 14.10 BPAC tail lamp",
   },
   {
+    href: "/topics/operating-material/conditions-for-taking-off-home-signal",
+    title: "Conditions for Taking Off Home Signal",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material conditions for taking off home signal Conditions for Taking Off Home Signal G.R. S.R. 3.40 adequate distance MAS sand hump SWR",
+  },
+  {
     href: "/topics/railway-planning-schemes/container-rail-terminals",
     title: "Container Rail Terminals",
     category: "Study Topics",
@@ -2313,6 +2321,22 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Financial Rules",
     keywords: "quizzes financial rules demands Demands grants railway budget",
+  },
+  {
+    href: "/topics/operating-material/departure-of-a-train-from-non-signalled-line",
+    title: "Departure of a Train from Non-Signalled Line",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material departure of a train from non-signalled line Departure of a Train from Non-Signalled Line G.R. 5.11 5.12 T/511 T.512 ATP",
+  },
+  {
+    href: "/topics/operating-material/departure-signal-got-stuck-up-in-OFF-position-at-an-advance-station",
+    title: "Departure Signal Got Stuck Up in OFF Position",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material departure signal got stuck up in OFF position at an advance station SR 3.70.3 caution order indirect reception",
   },
   {
     href: "/topics/operating-material/despatch-signals",
@@ -5552,6 +5576,14 @@ export const searchTopics: SearchTopic[] = [
       "topics establishment rules hrms HRMS Human Resource Management System (HRMS) human resource management system AIMS CRIS IPAS",
   },
   {
+    href: "/topics/operating-material/intermediate-block-signal-defective",
+    title: "IB Signal Defective",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material ib signal defective IB Signal Defective S.R. 3.75 14.13 14.14 axle counter K1 K2 K3 K4 PLCT",
+  },
+  {
     href: "/general-awareness/important-days",
     title: "Important Days",
     category: "General Awareness",
@@ -6263,6 +6295,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material obstruction Obstruction G.R. 1.02(43)",
+  },
+  {
+    href: "/topics/operating-material/obtain-line-clear-through-control-phone-and-VHF-set",
+    title: "Obtain Line Clear Through Control Phone and VHF Set",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material obtain line clear through control phone and VHF set BWM PLCT T/A 1425 T/B 1425 T/C 1425 T/D 1425 channel",
   },
   {
     href: "/quizzes/establishment-rules/labour-laws-acts-rules-codes/occupational-safey-health-and-working-conditions-code-2020",
@@ -7513,6 +7553,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps rtis RTIS Real Time Train Information System (RTIS)",
   },
   {
+    href: "/topics/operating-material/reception-signal-home-signal-is-defective",
+    title: "Reception Signal (Home) Defective",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material reception signal home signal is defective Reception Signal (Home) Defective G.R. S.R. 3.69 T/369 PHS calling on",
+  },
+  {
     href: "/topics/operating-material/reception-signals",
     title: "Reception Signals",
     category: "Study Topics",
@@ -8128,6 +8176,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material running line Running Line G.R. 1.02(47)",
+  },
+  {
+    href: "/topics/operating-material/running-of-a-train-without-brake-van",
+    title: "Running of a Train Without Brake Van",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material running of a train without brake van Running of a Train Without Brake Van S.R. 4.23 tail lamp guard",
   },
   {
     href: "/topics/operating-material/running-train",
@@ -10660,6 +10716,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material shunting limit board SLB BSLB G.R. 3.32 Shunting Limit Board (SLB)",
   },
   {
+    href: "/topics/operating-material/signal-got-stuck-up-n-OFF-position-in-station-limits",
+    title: "Signal Got Stuck Up in OFF Position in Station Limits",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material signal got stuck up in OFF position in station limits SR 3.69.9 approach stop signal S&T",
+  },
+  {
     href: "/topics/operating-material/signal-overlap",
     title: "Signal Overlap (SOL)",
     category: "Study Topics",
@@ -10672,6 +10736,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material signals Signals fixed hand detonating flare warning",
+  },
+  {
+    href: "/topics/operating-material/signals-to-warn-incoming-train-of-danger-ahead",
+    title: "Signals to Warn Incoming Train of Danger Ahead",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material signals to warn incoming train of danger ahead Signals to Warn Incoming Train of Danger Ahead G.R. 3.65 3.66 3.67 red flag",
   },
   {
     href: "/general-awareness/states-information/sikkim",
@@ -11081,6 +11153,14 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material train engine disabled Train Engine Disabled S.R. 6.05 relief engine block section",
+  },
+  {
+    href: "/topics/operating-material/train-held-up-at-home-signal",
+    title: "Train Held Up at Home Signal",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords:
+      "topics operating material train held up at home signal Train Held Up at Home Signal G.R. 4.44 FSS guard whistle GR 6.03",
   },
   {
     href: "/topics/operating-material/train-manager",

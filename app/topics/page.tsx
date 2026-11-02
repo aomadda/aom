@@ -16,6 +16,7 @@ import {
   MapPinned,
   PiggyBank,
   ScrollText,
+  Signal,
   Sparkles,
   TrendingUp,
   Users,
@@ -96,6 +97,17 @@ const topicSections: { heading: string; blurb: string; items: TopicCard[] }[] = 
         gradient: 'from-sky-600 to-blue-800',
         ring: 'ring-sky-500/30',
         iconBg: 'bg-sky-500/20',
+      },
+      {
+        href: '/topics/operating-material/conditions-for-taking-off-home-signal',
+        title: 'Conditions for Taking Off Home Signal',
+        subtitle: 'G.R./S.R. 3.40',
+        description:
+          'When the home signal may be taken off — adequate distance on single and double line, CRS approval, sand hump, SWR, and a stopping train.',
+        icon: Signal,
+        gradient: 'from-amber-600 to-orange-800',
+        ring: 'ring-amber-500/30',
+        iconBg: 'bg-amber-500/20',
       },
       {
         href: '/topics/accident-manual',

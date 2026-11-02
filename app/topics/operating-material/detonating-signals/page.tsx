@@ -25,16 +25,7 @@ const fogSignalPoints = [
   'All particulars of usage of detonators etc. to be recorded by ―ON Duty‖ SM.',
 ]
 
-const departureStuckOff = [
-  'SM shall attempt to put it back ―ON‖ by operating a panel and immediately report to S&T staff.',
-  'If unable to do so, inform rear SM, SCOR.',
-  'Make an entry in S&T failure register.',
-  'Light of the signal shall be extinguished by pasting paper on the glass or putting across mark.',
-  'A competent railway servant shall be deputed to exhibit Stop hand signals at the foot of the stuck ―OFF‖ signal till it is brought back to ―ON‖.',
-  'SM shall try to receive the train on other line as far as possible.',
-  'In case it is not possible, then SM of advance station shall advise rear SM to intimate LP the fact through issuing caution order.',
-  'Train at advance station shall be admitted by indirect reception after conveying message to LP.',
-]
+
 
 const DetonatingSignalsPage = () => {
   return (
@@ -104,32 +95,7 @@ const DetonatingSignalsPage = () => {
           </ul>
         </article>
 
-        <article
-          className="mt-8 overflow-hidden rounded-3xl border border-slate-500/30 bg-slate-900/50 shadow-[0_24px_80px_-12px_rgba(0,0,0,0.55)] ring-1 ring-white/6 backdrop-blur-xl"
-          style={{ animation: 'fade-up 0.55s ease-out 0.35s both' }}
-        >
-          <header className="relative border-b border-amber-500/15 bg-linear-to-br from-slate-900/90 via-slate-900/70 to-amber-950/30 px-5 py-6 sm:px-8 sm:py-7">
-            <div className="absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-amber-400/40 to-transparent" />
-            <h2 className="text-center text-xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 sm:text-2xl leading-snug">
-              SR 3.70.3 Where Departure Signal Got Stuck Up in “OFF” Position at an Advance Station
-            </h2>
-          </header>
-
-          <ul className="space-y-3 px-5 py-7 sm:px-8 sm:py-9">
-            {departureStuckOff.map((text, index) => (
-              <li
-                key={index}
-                className="flex gap-3 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
-                style={{ animation: `fade-up 0.55s ease-out ${0.4 + 0.04 * (index + 1)}s both` }}
-              >
-                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 text-sm font-bold text-amber-100 ring-1 ring-amber-400/35">
-                  ✓
-                </span>
-                <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
-              </li>
-            ))}
-          </ul>
-        </article>
+       
 
         <div className="mt-10 flex justify-center">
           <Link
