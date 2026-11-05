@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { CircuitBoard } from 'lucide-react'
@@ -46,16 +47,14 @@ function SubList({ items }: { items: SubPoint[] }) {
       {items.map((sub) => (
         <li key={`${sub.label}-${sub.text.slice(0, 40)}`}>
           <div className="flex gap-2.5">
-            <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">{sub.label}</span>
+            <ListMark>{sub.label}</ListMark>
             <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{sub.text}</p>
           </div>
           {sub.nested ? (
             <ul className="mt-2 space-y-2 border-l-2 border-amber-500/15 pl-4">
               {sub.nested.map((n) => (
                 <li key={`${n.label}-${n.text.slice(0, 40)}`} className="flex gap-2.5">
-                  <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200/90">
-                    {n.label}
-                  </span>
+                  <ListMark>{n.label}</ListMark>
                   <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{n.text}</p>
                 </li>
               ))}
@@ -145,9 +144,9 @@ const prolongedFailure: Point[] = [
   {
     text: 'SM shall prepare Authority T/B.912 in three copies which includes:',
     sub: [
-      { label: 'a)', text: 'ATP without line clear' },
-      { label: 'b)', text: "Authorities to pass departure signals at ‗ON‘ position" },
-      { label: 'c)', text: 'Caution order' },
+      { label: 'a', text: 'ATP without line clear' },
+      { label: 'b', text: "Authorities to pass departure signals at ‗ON‘ position" },
+      { label: 'c', text: 'Caution order' },
     ],
   },
   { text: 'SM shall use only printed form.' },
@@ -157,20 +156,20 @@ const prolongedFailure: Point[] = [
   {
     text: 'Duties of LP at approaching station:',
     sub: [
-      { label: 'a)', text: 'Stop at FSS' },
-      { label: 'b)', text: 'Give a long whistle' },
+      { label: 'a', text: 'Stop at FSS' },
+      { label: 'b', text: 'Give a long whistle' },
     ],
   },
   {
     text: 'Duties of SM at approaching station:',
     sub: [
-      { label: 'a)', text: 'Shall fulfill the conditions of taking off reception signal.' },
+      { label: 'a', text: 'Shall fulfill the conditions of taking off reception signal.' },
       {
-        label: 'b)',
+        label: 'b',
         text: 'If reception signal is defective, then take off calling on signal; if it also defective, then',
       },
       {
-        label: 'c)',
+        label: 'c',
         text: 'Depute competent railway servant in uniform with T.369(3b) and advise to exhibit PHS at FSS',
       },
     ],
@@ -178,8 +177,8 @@ const prolongedFailure: Point[] = [
   {
     text: 'Duties of LP on arrival at a station:',
     sub: [
-      { label: 'a)', text: 'Shall hand over T/B 912 to on-duty SM.' },
-      { label: 'b)', text: 'SM shall preserve them safely.' },
+      { label: 'a', text: 'Shall hand over T/B 912 to on-duty SM.' },
+      { label: 'b', text: 'SM shall preserve them safely.' },
     ],
   },
   {
@@ -195,9 +194,9 @@ const prolongedFailure: Point[] = [
   {
     text: 'Role of TI:',
     sub: [
-      { label: 'a)', text: 'Shall scrutinize the records' },
-      { label: 'b)', text: 'Submit a report to Sr.DOM/DOM (incharge)' },
-      { label: 'c)', text: 'Within seven days.' },
+      { label: 'a', text: 'Shall scrutinize the records' },
+      { label: 'b', text: 'Submit a report to Sr.DOM/DOM (incharge)' },
+      { label: 'c', text: 'Within seven days.' },
     ],
   },
 ]
@@ -238,13 +237,13 @@ const tslObstructed: Point[] = [
   {
     text: 'SM proposing TSL working shall issue a message to SM of other end containing following information under exchange of PNs:',
     sub: [
-      { label: '(a)', text: 'Cause of introduction of single line working' },
-      { label: '(b)', text: 'Place of obstruction' },
-      { label: '(c)', text: 'The line by which single line working is proposed' },
-      { label: '(d)', text: 'The source of information that the said line is clear' },
-      { label: '(e)', text: 'Restriction of speed, if any, on the line' },
+      { label: 'a', text: 'Cause of introduction of single line working' },
+      { label: 'b', text: 'Place of obstruction' },
+      { label: 'c', text: 'The line by which single line working is proposed' },
+      { label: 'd', text: 'The source of information that the said line is clear' },
+      { label: 'e', text: 'Restriction of speed, if any, on the line' },
       {
-        label: '(f)',
+        label: 'f',
         text: 'The number and timings of the last train which arrived/left the station nominated',
       },
     ],
@@ -511,7 +510,7 @@ const AutomaticBlockSystemPage = () => {
             <ul className="mt-3 space-y-3 border-l-2 border-amber-500/25 pl-4">
               <li>
                 <div className="flex gap-2.5">
-                  <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                  <ListMark></ListMark>
                   <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                     Only in case of LSS is defective and remaining signals of mid section are
                     operative:
@@ -519,13 +518,13 @@ const AutomaticBlockSystemPage = () => {
                 </div>
                 <ul className="mt-2 space-y-2 border-l-2 border-amber-500/15 pl-4">
                   <li className="flex gap-2.5">
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200/90"></span>
+                    <ListMark></ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                       On-duty SM shall issue T.369(3b) to pass LSS at ―ON‖.
                     </p>
                   </li>
                   <li className="flex gap-2.5">
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200/90"></span>
+                    <ListMark></ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                       Duly observing SR 10 Kmph up to next Automatic stop signal.
                     </p>
@@ -533,7 +532,7 @@ const AutomaticBlockSystemPage = () => {
                 </ul>
               </li>
               <li className="flex gap-2.5">
-                <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                <ListMark></ListMark>
                 <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                   Automatic block working may be restored after the LSS or direction of traffic is
                   rectified.
@@ -549,13 +548,13 @@ const AutomaticBlockSystemPage = () => {
           </p>
           <ul className="space-y-2 border-l-2 border-amber-500/25 pl-4">
             <li className="flex gap-2.5">
-              <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+              <ListMark></ListMark>
               <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                 On-duty SM shall issue T.369(3b) to LP.
               </p>
             </li>
             <li className="flex gap-2.5">
-              <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+              <ListMark></ListMark>
               <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                 LP shall proceed with SR 10 KMPH up to next Automatic stop signal.
               </p>
@@ -600,8 +599,8 @@ const AutomaticBlockSystemPage = () => {
                     key={row.no}
                     className="border-b border-slate-700/50 bg-slate-900/40 odd:bg-slate-950/40"
                   >
-                    <td className="align-top px-3 py-3 font-bold text-amber-200 sm:px-4">
-                      {row.no}
+                    <td className="align-top px-3 py-3 sm:px-4">
+                      <ListMark>{row.no}</ListMark>
                     </td>
                     <td className="align-top px-3 py-3 leading-[1.7] text-slate-300 sm:px-4">
                       {row.absolute}

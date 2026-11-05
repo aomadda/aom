@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { GitBranch } from 'lucide-react'
@@ -26,10 +27,10 @@ const commonFeatures = [
 ]
 
 const pushBackCircumstances =
-  'a. At sidings where engine reversal facilities are not provided. b. At sidings authorized by Sr. DOM, with specific instructions for Loco Pilots and Shunting Staff in the Station Working Rules. c. Under exceptional circumstances authorized by Sr. DOM.'
+  'a At sidings where engine reversal facilities are not provided. b At sidings authorized by Sr. DOM, with specific instructions for Loco Pilots and Shunting Staff in the Station Working Rules. c Under exceptional circumstances authorized by Sr. DOM.'
 
 const pushBackPrecautions =
-  'i. The station yard is isolated from the siding line for Pilots from sidings. ii. If the station yard is not isolated from the siding line, the take-off line shall be kept free before permitting the Pilot from the siding. iii. The line on which trains will be pushed shall have a Buffer Stop / Sand Hump / Derail switch at the trailing end and the line shall be set on to the Buffer Stop/Sand Hump till Pilot comes to a stand on the line. iv. In case the trailing end is isolated with Derail switch, it shall be kept open till Pilot comes to a stand on the line. v. The maximum speed while pushing shall not exceed 15 KMPH.'
+  'i The station yard is isolated from the siding line for Pilots from sidings. ii If the station yard is not isolated from the siding line, the take-off line shall be kept free before permitting the Pilot from the siding. iii The line on which trains will be pushed shall have a Buffer Stop / Sand Hump / Derail switch at the trailing end and the line shall be set on to the Buffer Stop/Sand Hump till Pilot comes to a stand on the line. iv In case the trailing end is isolated with Derail switch, it shall be kept open till Pilot comes to a stand on the line. v The maximum speed while pushing shall not exceed 15 KMPH.'
 
 const onePilot = [
   'SM to ensure clearance before despatch of the pilot by seeing the pilot movement register.',
@@ -83,7 +84,7 @@ function DotList({ items }: { items: string[] }) {
           key={text}
           className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5"
         >
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -161,11 +162,11 @@ const WorkingOfSidingPage = () => {
               </p>
             </SectionCard>
 
-            <SectionCard title="I. ONE PILOT SYSTEM">
+            <SectionCard title="I ONE PILOT SYSTEM">
               <NumberedList items={onePilot} />
             </SectionCard>
 
-            <SectionCard title="II. MULTIPLE PILOT SYSTEM">
+            <SectionCard title="II MULTIPLE PILOT SYSTEM">
               <NumberedList items={multiplePilot} />
             </SectionCard>
           </div>

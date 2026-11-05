@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { LifeBuoy } from 'lucide-react'
@@ -21,12 +22,12 @@ const points: Point[] = [
     text: 'The authority contains:',
     sub: [
       {
-        label: 'i.',
+        label: 'i',
         text: 'Authority to proceed without Line Clear to proceed up to the point of obstruction and return back or go to the next station.',
       },
-      { label: 'ii.', text: 'Authority to pass signals at ‗ON‘.' },
+      { label: 'ii', text: 'Authority to pass signals at ‗ON‘.' },
       {
-        label: 'iii.',
+        label: 'iii',
         text: 'Caution Order to observe 15 Kmph when view ahead is clear during day and 10 Kmph during night and view ahead is not clear and Walking Speed preceded by one/two men on Double/Single line carrying Stop Hand signal and Detonators for ready use.',
       },
     ],
@@ -66,11 +67,11 @@ const points: Point[] = [
     text: 'Before introduction of normal working, SMs to ensure:',
     sub: [
       {
-        label: 'i.',
+        label: 'i',
         text: 'Block section is free under exchange of Private Number.',
       },
       {
-        label: 'ii.',
+        label: 'ii',
         text: '‗Track Fit‘ certificate to be obtained from Engineering Official in case of accident.',
       },
     ],
@@ -129,9 +130,7 @@ const ReliefEnginePage = () => {
                     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
                       {item.sub.map((sub) => (
                         <li key={`${sub.label}-${sub.text.slice(0, 24)}`} className="flex gap-2.5">
-                          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                            {sub.label}
-                          </span>
+                          <ListMark>{sub.label}</ListMark>
                           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                             {sub.text}
                           </p>

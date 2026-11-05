@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Signal } from 'lucide-react'
@@ -74,7 +75,7 @@ const FixedSignalPage = () => {
           <div className="space-y-5 px-5 py-7 sm:px-8 sm:py-9">
             <div className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
               <p className="flex gap-3 text-[15px] leading-relaxed text-slate-300 sm:text-base">
-                <span className="shrink-0 font-bold text-amber-200">i.</span>
+                <ListMark>i</ListMark>
                 <span>Permissive Signals = Warner, Distant signals</span>
               </p>
             </div>
@@ -82,7 +83,7 @@ const FixedSignalPage = () => {
             <section className="space-y-3">
               <div className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
                 <p className="flex gap-3 text-[15px] leading-relaxed text-slate-300 sm:text-base">
-                  <span className="shrink-0 font-bold text-amber-200">ii.</span>
+                  <ListMark>ii</ListMark>
                   <span>Stop Signals = Reception, Despatch, Other Signals</span>
                 </p>
               </div>
@@ -103,7 +104,7 @@ const FixedSignalPage = () => {
 
             <div className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
               <p className="flex gap-3 text-[15px] leading-relaxed text-slate-300 sm:text-base">
-                <span className="shrink-0 font-bold text-amber-200">iii.</span>
+                <ListMark>iii</ListMark>
                 <span>Subsidiary Signals = Calling On, Shunt, Co-acting, Repeating signals</span>
               </p>
             </div>
@@ -129,8 +130,8 @@ const FixedSignalPage = () => {
 
             <ul className="grid gap-3 sm:grid-cols-2">
               {[
-                { label: 'i)', text: 'A home signal' },
-                { label: 'ii)', text: 'A starter signal' },
+                { label: 'i', text: 'A home signal' },
+                { label: 'ii', text: 'A starter signal' },
               ].map((item, index) => (
                 <li
                   key={item.label}

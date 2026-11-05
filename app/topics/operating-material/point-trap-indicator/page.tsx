@@ -6,25 +6,25 @@ import { Signpost } from 'lucide-react'
 
 const comparisonRows = [
   {
-    sno: '1.',
+    sno: '1',
     point:
       'It indicates the position in which the points are set.',
     trap: 'It indicates the position of derailing switch.',
   },
   {
-    sno: '2.',
+    sno: '2',
     point:
       'It is provided where there are no departure signals or where single arm Home is provided on MAS.',
     trap: 'It is provided at derailing switch where there is no signal protection.',
   },
   {
-    sno: '3.',
+    sno: '3',
     point:
       'Point indicator shall show a white target by day or a white light by night in both directions when points are set for the straight line.',
     trap: 'Trap indicator shall show red target by day and red light by night in both directions when the derailing switch is open.',
   },
   {
-    sno: '4.',
+    sno: '4',
     point:
       'Point indicator shall show no target by day or a green light by night in both directions when points are set for the turnout.',
     trap: 'Trap indicator shall show a knife edge of the disc by day and green light by night in both directions when the derailing switch is closed.',

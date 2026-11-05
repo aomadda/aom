@@ -127,9 +127,9 @@ const Authorities = () => {
 
     { question: 'On Single line, Double line and Multi line sections, when block instrument is interrupted or suspended, every train shall be stopped, run through trains being stopped out of course and the Station Master shall issue to the Loco Pilot of train', answer: 'T/C 1425 OR T/D.1425', form: 'T.1425' },
     
-    { question: 'Trolley/Lorry notice is given by P W I in form No.', answer: 'T. 1518', form: 'T.1518' },
+    { question: 'Trolley/Lorry notice is given by P W I in form No.', answer: 'T 1518', form: 'T.1518' },
     
-    { question: 'When motor trolley is following a full length train or engine or another motor trolley, authority given as A T P is', answer: 'T. 1525', form: 'T.1525' },
+    { question: 'When motor trolley is following a full length train or engine or another motor trolley, authority given as A T P is', answer: 'T 1525', form: 'T.1525' },
     { question: 'In token less section, ATP for the movement of independent motor trolley is', answer: 'T/A 1525', form: 'T.1525' },
     
     { question: 'Authority given to the Tower Wagon to go into the section work and return to the same station during power block is', answer: 'T.1708', form: 'T.1708' },
@@ -175,7 +175,7 @@ const Authorities = () => {
     if (form === 'Other') {
       return 'bg-linear-to-r from-purple-600 to-purple-700'
     }
-    const formNum = parseInt(form.replace('T.', '').replace('T/', '').replace('T/A', '').replace('T/B', '').replace('T/C', '').replace('T/D', '').replace('T/E', '').replace('T/F', '').replace('T/G', '').replace('T/H', '').replace('T/I.', '').replace('T/J.', '').replace('T/ ', '').split('.')[0].split(' ')[0])
+    const formNum = parseInt(form.replace('T', '').replace('T/', '').replace('T/A', '').replace('T/B', '').replace('T/C', '').replace('T/D', '').replace('T/E', '').replace('T/F', '').replace('T/G', '').replace('T/H', '').replace('T/I.', '').replace('T/J.', '').replace('T/ ', '').split('.')[0].split(' ')[0])
     if (isNaN(formNum)) {
       return 'bg-linear-to-r from-purple-600 to-purple-700'
     }

@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Handshake } from 'lucide-react'
@@ -36,11 +37,11 @@ const rules: Rule[] = [
       'While working trains like Vande Bharat, where red and green lights have been provided at top corner on both the ends for exchange of all right signals, LP and Guard shall exchange all right signals to the station staff by switching ‗ON‘ such light of their respective units. They shall also convey the signals to each other through telecommunication provided in the train or on walkie-talkie.',
     items: [
       {
-        label: 'a)',
+        label: 'a',
         text: "If the signal exchange light is defective, they shall acknowledge all 'All Right' signals by exhibiting the proceed hand signal.",
       },
       {
-        label: 'b)',
+        label: 'b',
         text: 'Signal exchange light does not relieve the Loco Pilot, Assistant Loco Pilot, or Train Manager from observing the hand signal exchange given by station staff, train passing staff, or running staff of adjacent trains.',
       },
     ],
@@ -49,14 +50,14 @@ const rules: Rule[] = [
     type: 'list',
     intro: 'All right signals shall be exchanged:',
     items: [
-      { label: 'i.', text: 'When a train starts after stopping at a station.' },
-      { label: 'ii.', text: 'When a train starts after stopping between stations.' },
-      { label: 'iii.', text: 'When a train runs through a station.' },
-      { label: 'iv.', text: 'While passing through ghat sections.' },
-      { label: 'v.', text: 'While approaching important girder bridges.' },
-      { label: 'vi.', text: 'When last vehicle has cleared the Caution Order spot.' },
-      { label: 'vii.', text: 'After clearance of the loop line crossover points at a station.' },
-      { label: 'viii.', text: 'When any train passing on the adjacent line(s).' },
+      { label: 'i', text: 'When a train starts after stopping at a station.' },
+      { label: 'ii', text: 'When a train starts after stopping between stations.' },
+      { label: 'iii', text: 'When a train runs through a station.' },
+      { label: 'iv', text: 'While passing through ghat sections.' },
+      { label: 'v', text: 'While approaching important girder bridges.' },
+      { label: 'vi', text: 'When last vehicle has cleared the Caution Order spot.' },
+      { label: 'vii', text: 'After clearance of the loop line crossover points at a station.' },
+      { label: 'viii', text: 'When any train passing on the adjacent line(s).' },
     ],
   },
 ]
@@ -107,7 +108,7 @@ const ExchangeOfAllRightSignalsPage = () => {
                           className="rounded-xl border border-slate-600/35 bg-slate-950/35 p-3.5 ring-1 ring-white/3 sm:p-4"
                         >
                           <div className="flex gap-2.5">
-                            <span className="shrink-0 text-sm font-bold text-amber-200">{item.label}</span>
+                            <ListMark>{item.label}</ListMark>
                             <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
                           </div>
                         </li>

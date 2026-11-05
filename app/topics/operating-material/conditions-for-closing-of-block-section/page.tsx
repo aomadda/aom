@@ -1,3 +1,4 @@
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 
 const ConditionsForClosingOfBlockSectionPage = () => {
@@ -47,7 +48,7 @@ const ConditionsForClosingOfBlockSectionPage = () => {
                       'When train is running without BV or guard, Private Number received from Pointsman who shall be deputed to ensure complete arrival of the train in case of train running without Guard.',
                     ].map((sub) => (
                       <li key={sub} className="flex gap-2.5">
-                        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                        <ListMark></ListMark>
                         <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                           {sub}
                         </p>

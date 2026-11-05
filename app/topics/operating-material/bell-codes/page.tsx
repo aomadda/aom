@@ -29,8 +29,8 @@ const BellCodes = () => {
     {
       number: 4,
       indication: [
-        '(A) Train out of block section',
-        '(B) Obstruction removed'
+        'A Train out of block section',
+        'B Obstruction removed'
       ],
       code: '0000',
       signalled: 'Four',
@@ -39,8 +39,8 @@ const BellCodes = () => {
     {
       number: 5,
       indication: [
-        '(A) Cancel last signal',
-        '(B) Signal given in error'
+        'A Cancel last signal',
+        'B Signal given in error'
       ],
       code: '00000',
       signalled: 'Five',
@@ -49,12 +49,12 @@ const BellCodes = () => {
     {
       number: 6,
       indication: [
-        '(A) Obstruction danger signal (general)',
-        '(B) Stop and examine train',
-        '(C) Train passed without tail lamp or tail board',
-        '(D) Train divided',
-        '(E) Vehicles running away in wrong direction on double line or into the block section on single line',
-        '(F) Vehicles running away in right direction on double line'
+        'A Obstruction danger signal (general)',
+        'B Stop and examine train',
+        'C Train passed without tail lamp or tail board',
+        'D Train divided',
+        'E Vehicles running away in wrong direction on double line or into the block section on single line',
+        'F Vehicles running away in right direction on double line'
       ],
       code: [
         '000000',
@@ -243,10 +243,10 @@ const BellCodes = () => {
             <h3 className="text-xl font-bold text-yellow-300 mb-4">Note:</h3>
             <div className="space-y-4 text-gray-200">
               <p className="leading-relaxed">
-                (1) &apos;0&apos; indicates a stroke or a beat and &apos;–&apos; indicates a pause
+                1 &apos;0&apos; indicates a stroke or a beat and &apos;–&apos; indicates a pause
               </p>
               <p className="leading-relaxed">
-                (2) Exchange of bell codes under reference numbers 3 and 4 are not required in a section provided with block proving axle counters or track circuit having complete track circuiting of station yard excluding non-running lines on either end.
+                2 Exchange of bell codes under reference numbers 3 and 4 are not required in a section provided with block proving axle counters or track circuit having complete track circuiting of station yard excluding non-running lines on either end.
               </p>
             </div>
           </div>

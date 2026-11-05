@@ -14,9 +14,9 @@ const combinedIntro =
   'Under approved special instructions, a colour light Distant signal may be combined with the last Stop signal of a station in rear or with an Intermediate Block signal or with a Stop signal protecting a level crossing. When a colour Distant signal is combined:'
 
 const combinedItems = [
-  { roman: '(i)', text: 'with the last Stop signal of a station in rear, or' },
-  { roman: '(ii)', text: 'with an Intermediate Block signal, or' },
-  { roman: '(iii)', text: 'with a Stop signal protecting a level crossing,' },
+  { roman: 'i', text: 'with the last Stop signal of a station in rear, or' },
+  { roman: 'ii', text: 'with an Intermediate Block signal, or' },
+  { roman: 'iii', text: 'with a Stop signal protecting a level crossing,' },
 ]
 
 const combinedNote =

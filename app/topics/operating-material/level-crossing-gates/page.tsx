@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { BrickWall } from 'lucide-react'
@@ -13,11 +14,11 @@ const classification = [
 ]
 
 const tvuClasses = [
-  { label: 'i.', text: 'Special class – TVUs more than 50,000' },
-  { label: 'ii.', text: '„A‟ class – 50,000 – 30,000' },
-  { label: 'iii.', text: '„B‟ class – 30,000 – 20,000' },
-  { label: 'iv.', text: '„C‟ class – other than ‗A‘, ‗B‘ and special' },
-  { label: 'v.', text: '„D‟ class – Cattle crossings' },
+  { label: 'i', text: 'Special class – TVUs more than 50,000' },
+  { label: 'ii', text: '„A‟ class – 50,000 – 30,000' },
+  { label: 'iii', text: '„B‟ class – 30,000 – 20,000' },
+  { label: 'iv', text: '„C‟ class – other than ‗A‘, ‗B‘ and special' },
+  { label: 'v', text: '„D‟ class – Cattle crossings' },
 ]
 
 const classificationRest = [
@@ -156,7 +157,7 @@ function ArrowList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -169,7 +170,7 @@ function CheckList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -185,7 +186,7 @@ function DotList({ items }: { items: string[] }) {
           key={text}
           className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5"
         >
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -271,9 +272,7 @@ const LevelCrossingGatesPage = () => {
                 <ul className="space-y-2 border-l-2 border-amber-500/25 pl-4">
                   {tvuClasses.map((item) => (
                     <li key={item.label} className="flex gap-2.5">
-                      <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                        {item.label}
-                      </span>
+                      <ListMark>{item.label}</ListMark>
                       <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                         {item.text}
                       </p>
@@ -294,7 +293,7 @@ const LevelCrossingGatesPage = () => {
                 <ul className="space-y-2 border-l-2 border-amber-500/25 pl-4">
                   {annexures.map((text) => (
                     <li key={text} className="flex gap-2.5">
-                      <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                      <ListMark></ListMark>
                       <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
                     </li>
                   ))}
@@ -414,7 +413,7 @@ const LevelCrossingGatesPage = () => {
 
             <SectionCard title="In Case of Telephonic Communication Failure">
               <p className="mb-3 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
-                e) When telephonic communication fails or there is no response from the Gateman
+                e When telephonic communication fails or there is no response from the Gateman
                 despite 2 or 3 attempts, the following procedure should be adopted:
               </p>
               <CheckList items={interlockedTeleFail} />

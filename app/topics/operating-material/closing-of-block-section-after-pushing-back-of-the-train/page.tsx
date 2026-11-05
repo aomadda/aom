@@ -66,15 +66,15 @@ const ClosingOfBlockSectionAfterPushingBackOfTheTrainPage = () => {
 
             {[
               {
-                title: 'i) Daido Tokenless Handle Type Block Instrument',
+                title: 'i Daido Tokenless Handle Type Block Instrument',
                 items: pushBackDaido,
               },
               {
-                title: 'ii) Podanur/Kyosan Push Button Block Instrument',
+                title: 'ii Podanur/Kyosan Push Button Block Instrument',
                 items: pushBackPodanur,
               },
               {
-                title: 'iii) UFSBI & SSBPAC(D) Single Line',
+                title: 'iii UFSBI & SSBPAC(D) Single Line',
                 items: pushBackUfsbi,
               },
             ].map((section) => (

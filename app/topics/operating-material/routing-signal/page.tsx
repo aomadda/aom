@@ -130,7 +130,7 @@ const RoutingSignalPage = () => {
           </ul>
         </SectionCard>
 
-        <SectionCard title="a) Stencil Type Route Indicators">
+        <SectionCard title="a Stencil Type Route Indicators">
           <ul className="space-y-3">
             {stencilPoints.map((text) => (
               <CheckPoint key={text} text={text} />
@@ -138,7 +138,7 @@ const RoutingSignalPage = () => {
           </ul>
         </SectionCard>
 
-        <SectionCard title="b) Multi-Lamp Type Route Indicator">
+        <SectionCard title="b Multi-Lamp Type Route Indicator">
           <ul className="space-y-3">
             {multiLampPoints.map((text) => (
               <BulletPoint key={text} text={text} />
@@ -146,7 +146,7 @@ const RoutingSignalPage = () => {
           </ul>
         </SectionCard>
 
-        <SectionCard title="c) Junction Type Route Indicator">
+        <SectionCard title="c Junction Type Route Indicator">
           <ul className="space-y-3">
             {junctionPoints.map((text) => (
               <BulletPoint key={text} text={text} />

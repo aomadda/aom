@@ -31,18 +31,18 @@ const rules = [
 ]
 
 const chapters = [
-  { label: 'I.', text: 'Station working diagram' },
-  { label: 'II.', text: 'Description of station' },
-  { label: 'III.', text: 'System and means of working' },
-  { label: 'IV.', text: 'System of signalling and interlocking' },
-  { label: 'V.', text: 'Telecommunications' },
-  { label: 'VI.', text: 'System of train working' },
-  { label: 'VII.', text: 'Blocking of lines' },
-  { label: 'VIII.', text: 'Shunting (various precautions and authorities)' },
-  { label: 'IX.', text: 'Abnormal conditions' },
-  { label: 'X.', text: 'Visibility test object' },
-  { label: 'XI.', text: 'Essential equipment at stations' },
-  { label: 'XII.', text: 'Fog signalmen nominated to be called in case of fog' },
+  { label: 'I', text: 'Station working diagram' },
+  { label: 'II', text: 'Description of station' },
+  { label: 'III', text: 'System and means of working' },
+  { label: 'IV', text: 'System of signalling and interlocking' },
+  { label: 'V', text: 'Telecommunications' },
+  { label: 'VI', text: 'System of train working' },
+  { label: 'VII', text: 'Blocking of lines' },
+  { label: 'VIII', text: 'Shunting (various precautions and authorities)' },
+  { label: 'IX', text: 'Abnormal conditions' },
+  { label: 'X', text: 'Visibility test object' },
+  { label: 'XI', text: 'Essential equipment at stations' },
+  { label: 'XII', text: 'Fog signalmen nominated to be called in case of fog' },
 ]
 
 const appendices = [

@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Truck } from 'lucide-react'
@@ -34,10 +35,10 @@ const points: Point[] = [
   {
     text: 'Run under Block Protection in following cases if it is permitted and SM shall place Lorry online cap on the plunger of the Block Instrument:',
     sub: [
-      { label: 'i.', text: 'In some specified sections' },
-      { label: 'ii.', text: 'During thick foggy weather' },
-      { label: 'iii.', text: 'During night' },
-      { label: 'iv.', text: 'When loaded with heavy materials like rails, etc.' },
+      { label: 'i', text: 'In some specified sections' },
+      { label: 'ii', text: 'During thick foggy weather' },
+      { label: 'iii', text: 'During night' },
+      { label: 'iv', text: 'When loaded with heavy materials like rails, etc.' },
     ],
   },
   {
@@ -123,9 +124,7 @@ const LorryPage = () => {
                   <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
                     {item.sub.map((sub) => (
                       <li key={`${sub.label}-${sub.text}`} className="flex gap-2.5">
-                        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                          {sub.label}
-                        </span>
+                        <ListMark>{sub.label}</ListMark>
                         <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                           {sub.text}
                         </p>

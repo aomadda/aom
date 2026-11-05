@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { FileBadge } from 'lucide-react'
@@ -15,7 +16,7 @@ function BulletList({ items, delay = 0 }: { items: Bullet[]; delay?: number }) {
           className="flex gap-3 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
           style={{ animation: `fade-up 0.55s ease-out ${delay + 0.03 * (index + 1)}s both` }}
         >
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">{item.mark}</span>
+          <ListMark>{item.mark}</ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
         </li>
       ))}

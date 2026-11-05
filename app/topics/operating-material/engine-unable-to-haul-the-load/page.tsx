@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Weight } from 'lucide-react'
@@ -16,26 +17,26 @@ type Section = {
 
 const sections: Section[] = [
   {
-    label: 'a)',
+    label: 'a',
     title: 'Ask for Relief/Assisting Engine (S.R. 6.05.4)',
     roman: [
       {
-        label: 'I.',
+        label: 'I',
         text: 'When engine is disabled, ask for relief engine telephonically.',
       },
       {
-        label: 'II.',
+        label: 'II',
         text: 'Once relief engine is asked, if the engine is rectified subsequently, he should not move unless he gets permission from SM.',
       },
     ],
   },
   {
-    label: 'b)',
+    label: 'b',
     title: 'Push Back',
     body: 'The train shall be pushed back after obtaining permission from SM in rear with 25/8 Kmph/Walking Speed. Guard shall show continuously Proceed Hand Signal (PHS). (S.R. 4.12)',
   },
   {
-    label: 'c)',
+    label: 'c',
     title: 'Divided Train Working (G.R./S.R. 6.09)',
     points: [
       'If it is not possible to get the relief engine or push back the train to the station in rear as per SR 4.12, the crew can decide to divide the train duly observing the following instructions:',
@@ -86,7 +87,7 @@ const EngineUnableToHaulTheLoadPage = () => {
           <div className="space-y-5 px-5 py-8 sm:px-10 sm:py-10">
             <p className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 text-[15px] leading-[1.75] text-slate-300 ring-1 ring-white/4 sm:p-5 sm:text-base">
               Train shall be protected as per G.R. 6.03.-Clear the block section by one of the
-              three alternatives: a) Ask for relief engine b) Push back c) Divided train working
+              three alternatives: a Ask for relief engine b Push back c Divided train working
             </p>
 
             {sections.map((section, sIndex) => (
@@ -110,9 +111,7 @@ const EngineUnableToHaulTheLoadPage = () => {
                   <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
                     {section.roman.map((item) => (
                       <li key={item.label} className="flex gap-2.5">
-                        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                          {item.label}
-                        </span>
+                        <ListMark>{item.label}</ListMark>
                         <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                           {item.text}
                         </p>

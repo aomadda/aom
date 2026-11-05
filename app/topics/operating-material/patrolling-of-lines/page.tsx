@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Route } from 'lucide-react'
@@ -75,10 +76,10 @@ const securityPatrolling = [
 ]
 
 const types = [
-  { label: '1.', text: 'Ordinary Patrolling: Every 4 hours' },
-  { label: '2.', text: 'Intensive Patrolling: Every 2 hours' },
+  { label: '1', text: 'Ordinary Patrolling: Every 4 hours' },
+  { label: '2', text: 'Intensive Patrolling: Every 2 hours' },
   {
-    label: '3.',
+    label: '3',
     text: 'Special Patrolling: Patrol special will be sent ½ hour before the scheduled departure of Passenger/VIP special trains.',
   },
 ]
@@ -118,7 +119,7 @@ function DotList({ items }: { items: string[] }) {
           key={text}
           className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5"
         >
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -199,18 +200,18 @@ const PatrollingOfLinesPage = () => {
               <NumberedList items={occasions} />
             </SectionCard>
 
-            <SectionCard title="I. Sudden Storm or Hurricane">
+            <SectionCard title="I Sudden Storm or Hurricane">
               <DotList items={suddenStorm} />
             </SectionCard>
 
-            <SectionCard title="II. Monsoon Patrolling">
+            <SectionCard title="II Monsoon Patrolling">
               <ul className="space-y-3">
                 {monsoonPoints.map((item) => (
                   <li
                     key={item.label}
                     className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5"
                   >
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                    <ListMark></ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                       <span className="font-semibold text-amber-100/90">{item.label} </span>
                       {item.text}
@@ -219,7 +220,7 @@ const PatrollingOfLinesPage = () => {
                 ))}
                 <li className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
                   <div className="flex gap-2.5">
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                    <ListMark></ListMark>
                     <p className="text-[15px] leading-[1.75] font-semibold text-amber-100/90 sm:text-base">
                       Procedure:
                     </p>
@@ -227,7 +228,7 @@ const PatrollingOfLinesPage = () => {
                   <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
                     {monsoonProcedure.map((text) => (
                       <li key={text} className="flex gap-2.5">
-                        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">o</span>
+                        <ListMark>o</ListMark>
                         <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                           {text}
                         </p>
@@ -240,7 +241,7 @@ const PatrollingOfLinesPage = () => {
                     key={item.label}
                     className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5"
                   >
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                    <ListMark></ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                       <span className="font-semibold text-amber-100/90">{item.label} </span>
                       {item.text}
@@ -250,7 +251,7 @@ const PatrollingOfLinesPage = () => {
               </ul>
             </SectionCard>
 
-            <SectionCard title="III. Watch at Vulnerable Points">
+            <SectionCard title="III Watch at Vulnerable Points">
               <DotList
                 items={[
                   'Special watch is kept at locations known to be vulnerable, especially during the monsoon.',
@@ -258,7 +259,7 @@ const PatrollingOfLinesPage = () => {
               />
             </SectionCard>
 
-            <SectionCard title="IV. Security Patrolling During Civil Disorders">
+            <SectionCard title="IV Security Patrolling During Civil Disorders">
               <DotList items={securityPatrolling} />
             </SectionCard>
 

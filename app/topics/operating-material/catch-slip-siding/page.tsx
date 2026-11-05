@@ -6,27 +6,27 @@ import { CornerDownRight } from 'lucide-react'
 
 const comparisonRows = [
   {
-    sno: '1.',
+    sno: '1',
     slip: 'Protects the block section.',
     catch: 'It protects station section/station.',
   },
   {
-    sno: '2.',
+    sno: '2',
     slip: 'It is provided where falling gradient towards block section is steeper than 1 in 100.',
     catch: 'It is provided where falling gradient towards station (section) is steeper than 1 in 80.',
   },
   {
-    sno: '3.',
+    sno: '3',
     slip: 'It prevents vehicles at station escaping onto the main line.',
     catch: 'It catches vehicles from adjacent station or block section.',
   },
   {
-    sno: '4.',
+    sno: '4',
     slip: 'It is a short siding.',
     catch: 'It is a lengthy siding.',
   },
   {
-    sno: '5.',
+    sno: '5',
     slip: 'Outermost point of the station will be a trailing point if provided.',
     catch: 'Outermost point of the station will be a facing point if provided.',
   },

@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Hammer } from 'lucide-react'
@@ -91,31 +92,31 @@ const workingRules: Rule[] = [
 
 const pushBackRules: NestedItem[] = [
   {
-    label: 'a)',
+    label: 'a',
     text: 'The official in-charge shall travel in the leading machine exhibiting hand signals to the following machine,',
   },
   {
-    label: 'b)',
+    label: 'b',
     text: 'The speed while pushing back shall not exceed 25 KMPH,',
   },
   {
-    label: 'c)',
+    label: 'c',
     text: 'The official in-charge of leading machine shall be responsible to ensure all L/C gates are closed against road traffic before passing,',
   },
   {
-    label: 'd)',
+    label: 'd',
     text: 'On wrong line reception the In-charge shall stop the machine at LSS of the same line. Machines may be received by taking off shunt signal if any and T/510 shall also be issued after ensuring that all points are correctly set and facing points are locked. Depute CRS in uniform to pilot the machine into the station.',
   },
   {
-    label: 'e)',
+    label: 'e',
     text: "On right line and on single line machines to stop at FSS and first machine may be received by taking off signals and subsequent machines either by taking ‗off‘ calling on signal or by issuing T/509.",
   },
   {
-    label: 'f)',
+    label: 'f',
     text: 'On arrival at the station the In-charge shall sign in the TSR in token of complete arrival of the unit/units,',
   },
   {
-    label: 'g)',
+    label: 'g',
     text: 'Only after this the SM shall clear the block section.',
   },
 ]
@@ -145,7 +146,7 @@ function RuleList({ rules, startDelay = 0 }: { rules: Rule[]; startDelay?: numbe
                     className="rounded-xl border border-slate-600/35 bg-slate-950/35 p-3.5 ring-1 ring-white/3 sm:p-4"
                   >
                     <div className="flex gap-2.5">
-                      <span className="shrink-0 text-sm font-bold text-amber-200">{item.label}</span>
+                      <ListMark>{item.label}</ListMark>
                       <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
                     </div>
                   </li>
@@ -208,7 +209,7 @@ const TrackTampingMachinePage = () => {
                         className="rounded-xl border border-slate-600/35 bg-slate-950/35 p-3.5 ring-1 ring-white/3 sm:p-4"
                       >
                         <div className="flex gap-2.5">
-                          <span className="shrink-0 text-sm font-bold text-amber-200">{item.label}</span>
+                          <ListMark>{item.label}</ListMark>
                           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
                         </div>
                       </li>

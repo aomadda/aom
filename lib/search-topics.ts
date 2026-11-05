@@ -1608,6 +1608,20 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material authorised officer Authorised Officer authorized officer PCOM G.R. 1.02",
   },
   {
+    href: "/topics/operating-material/authorities-issued-to-loco-pilot-and-guard-in-absolute-block-system",
+    title: "Authorities Issued to Loco Pilot and Guard in Absolute Block System",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material authorities issued to loco pilot and guard in absolute block system Authorities Issued to Loco Pilot and Guard in Absolute Block System VII. Authoritiesissued to Loco Pilot and Guard in Absolute Block system absolute block T/806 shunt key private number single line double line",
+  },
+  {
+    href: "/topics/operating-material/authorities-issued-to-loco-pilot-and-guard-in-automatic-block-system",
+    title: "Authorities Issued to Loco Pilot and Guard in Automatic Block System",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material authorities issued to loco pilot and guard in automatic block system Authorities Issued to Loco Pilot and Guard in Automatic Block System IX Authoritiesissued to Loco Pilot and Guard in Automatic Block system automatic block T/806 semi-automatic shunt key private number",
+  },
+  {
     href: "/quizzes/professional-subject/authority-forms",
     title: "Authority Forms",
     category: "Quizzes",
@@ -1787,6 +1801,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material block overlap Block Overlap FSS MAS BSLB SLB adequate distance",
   },
   {
+    href: "/topics/operating-material/block-proving-by-axle-counters",
+    title: "Block Proving by Axle Counters",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material block proving by axle counters Block Proving by Axle Counters Block Proving by Axle Counters (BPAC) BPAC axle counter last vehicle block proving single line double line",
+  },
+  {
     href: "/topics/operating-material/block-section",
     title: "Block Section",
     category: "Study Topics",
@@ -1915,6 +1936,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material calling on signal Calling On Signal G.R. 3.13 COGGN Podanur VDU",
+  },
+  {
+    href: "/topics/operating-material/cancel-last-signal",
+    title: "Cancel Last Signal",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material cancel last signal Cancel Last Signal Cancel Last Signal cancel last signal",
   },
   {
     href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/casual-leave",
@@ -2073,6 +2101,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "circulars Circulars Railway Board Circulars",
   },
   {
+    href: "/topics/operating-material/classification-of-stations",
+    title: "Classification of Stations",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material classification of stations Classification of Stations Classification of Stations (G.R./S.R. 1.03) G.R. S.R. 1.03 class A B C D block non-block special class",
+  },
+  {
     href: "/topics/operating-material/closing-of-block-section-after-pushing-back-of-the-train",
     title: "Closing of Block Section After Pushing Back of the Train",
     category: "Study Topics",
@@ -2202,6 +2237,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Financial Rules",
     keywords: "quizzes financial rules contracts Contracts railway contract agreement",
+  },
+  {
+    href: "/topics/operating-material/control-and-responsibility-for-shunting",
+    title: "Control and Responsibility for Shunting",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material control and responsibility for shunting Control and Responsibility for Shunting Control and Responsibility for Shunting shunting control responsibility station master guard",
   },
   {
     href: "/topics/information-technology-apps/coa",
@@ -2638,6 +2680,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Acts & Rules",
     parent: "Acts",
     keywords: "acts factories act 1948 Factories Act 1948",
+  },
+  {
+    href: "/topics/operating-material/failure-of-main-power-supply",
+    title: "Failure of Main Power Supply",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material failure of main power supply Failure of Main Power Supply FAILURE OF MAIN POWER SUPPLY generator acknowledgement button main power panel",
   },
   {
     href: "/general-awareness/important-days/february",
@@ -5428,6 +5477,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes professional subject gradients wise Gradients Wise",
   },
   {
+    href: "/topics/operating-material/guidelines-to-station-master-after-going-to-station",
+    title: "Guidelines to Station Master After Going to Station",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material guidelines to station master after going to station Guidelines to Station Master After Going to Station GUIDELINES TO STATION MASTER (SM) AFTER GOING TO STATION station master SM duty guidelines",
+  },
+  {
     href: "/general-awareness/states-information/gujarat",
     title: "Gujarat",
     category: "General Awareness",
@@ -6160,6 +6216,13 @@ export const searchTopics: SearchTopic[] = [
       "topics establishment rules macp MACP Modified Assured Career Progression (MACP) modified assured career progression FUG pay matrix",
   },
   {
+    href: "/topics/operating-material/motor-operated-points",
+    title: "Motor Operated Points",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material motor operated points Motor Operated Points Motor Operated Points (S.R. 3.38.7, App XI-6) S.R. 3.38.7 motor points crank handle",
+  },
+  {
     href: "/topics/operating-material/motor-trolley",
     title: "Motor Trolley",
     category: "Study Topics",
@@ -6681,6 +6744,13 @@ export const searchTopics: SearchTopic[] = [
       "topics professional subject over dimensional consignment Over Dimensional Consignment ODC",
   },
   {
+    href: "/topics/operating-material/panel-become-blank",
+    title: "Panel Becomes Blank",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material panel become blank Panel Becomes Blank Panel Becomes Blank panel blank power failure crank handle T.369(3b) generator",
+  },
+  {
     href: "/topics/operating-material/panel-interlocking",
     title: "Panel Interlocking",
     category: "Study Topics",
@@ -6885,6 +6955,20 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes financial rules plan heads Plan Heads capital works",
   },
   {
+    href: "/topics/operating-material/podanur-panel",
+    title: "Podanur Panel",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material podanur panel Podanur Panel PODANUR WORKSHOP PANEL Podanur workshop panel knobs calling-on COGGN veeder counter",
+  },
+  {
+    href: "/topics/operating-material/point-indication-flashing-when-point-is-operated",
+    title: "Point Indication Flashing When Point is Operated",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material point indication flashing when point is operated Point Indication Flashing When Point is Operated Point Indication Flashing When Point is Operated point flashing crank handle ESM SI",
+  },
+  {
     href: "/topics/operating-material/point-trap-indicator",
     title: "Point Trap Indicator",
     category: "Study Topics",
@@ -6892,11 +6976,11 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material point trap indicator Point Trap Indicator S.R. 3.50.2 3.51.3.1",
   },
   {
-    href: "/topics/operating-material/points",
+    href: "/topics/operating-material/points-affecting-the-movement",
     title: "Points Affecting the Movement",
     category: "Study Topics",
     parent: "Topics › Operating Material",
-    keywords: "topics operating material points affecting the movement Points Affecting the Movement G.R. 3.38 VDU line block power block",
+    keywords: "topics operating material points affecting the movement Points Affecting the Movement Points Affecting the Movement (G.R. 3.38) G.R. 3.38 points movement VDU line block power block",
   },
   {
     href: "/quizzes/general-awareness/polity",
@@ -7021,6 +7105,20 @@ export const searchTopics: SearchTopic[] = [
       "topics operating material power block Power Block S.R. 17.04 OHE TPC SCOR Permit to Work collars E/Tr.D",
   },
   {
+    href: "/topics/operating-material/precautions-before-detaching-engine-within-station-limits",
+    title: "Precautions Before Detaching Engine Within Station Limits",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material precautions before detaching engine within station limits Precautions Before Detaching Engine Within Station Limits Precautions Before Detaching Engine Within Station Limits (S.R. 4.57.1) S.R. 4.57.1 hand brake gradient brake-van",
+  },
+  {
+    href: "/topics/operating-material/precautions-to-be-observed-during-stabling-and-securing-of-vehicles",
+    title: "Precautions to be Observed During Stabling and Securing of Vehicles",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material precautions to be observed during stabling and securing of vehicles Precautions to be Observed During Stabling and Securing of Vehicles Precautions to be Observed During Stabling and Securing of Vehicles/Formation (G.R./S.R. 5.19, 5.23) G.R. S.R. 5.19 5.23 stabling securing chains wedges",
+  },
+  {
     href: "/quizzes/professional-subject/preferential-traffic-order",
     title: "Preferential Traffic Order",
     category: "Quizzes",
@@ -7072,6 +7170,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Establishment Rules › Railway Servants (Pass) Rules 1986",
     keywords:
       "quizzes establishment rules railway servants pass rules 1986 privilege ticket order previlege ticket order PTO Privilege Ticket Order",
+  },
+  {
+    href: "/topics/operating-material/procedure-for-obstructing-block-section-for-shunting",
+    title: "Procedure for Obstructing Block Section for Shunting",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material procedure for obstructing block section for shunting Procedure for Obstructing Block Section for Shunting Procedure for Obstructing Block Section for Shunting (In Both Systems of Working). block section shunting block back block forward LSS",
   },
   {
     href: "/quizzes/professional-subject",
@@ -7553,6 +7658,20 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics information technology apps rtis RTIS Real Time Train Information System (RTIS)",
   },
   {
+    href: "/topics/operating-material/reception-of-a-train-on-a-non-signalled-line",
+    title: "Reception of a Train on a Non-Signalled Line",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material reception of a train on a non signalled line Reception of a Train on a Non-Signalled Line Reception of a Train on a Non-Signalled Line non-signalled line reception",
+  },
+  {
+    href: "/topics/operating-material/reception-of-a-train-on-an-obstructed-line",
+    title: "Reception of a Train on an Obstructed Line",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material reception of a train on an obstructed line Reception of a Train on an Obstructed Line Reception of a Train on an Obstructed Line (G.R. 5.09) G.R. 5.09 obstructed line reception",
+  },
+  {
     href: "/topics/operating-material/reception-signal-home-signal-is-defective",
     title: "Reception Signal (Home) Defective",
     category: "Study Topics",
@@ -7582,6 +7701,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material relay room Relay Room APP XIII locking double key EKT",
   },
   {
+    href: "/topics/operating-material/releasing-of-crank-handle",
+    title: "Releasing of Crank Handle",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material releasing of crank handle Releasing of Crank Handle Instructions to Release Crank Handle crank handle YK HKT EKT central panel end panel T.369(3b)",
+  },
+  {
     href: "/topics/operating-material/relief-engine",
     title: "Relief Engine",
     category: "Study Topics",
@@ -7595,6 +7721,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material repeating signal Repeating Signal G.R. 3.16 R marker",
+  },
+  {
+    href: "/topics/operating-material/responsibility-and-functions-of-station-staff-in-working-of-trains",
+    title: "Responsibility and Functions of Station Staff in Working of Trains",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material responsibility and functions of station staff in working of trains Responsibility and Functions of Station Staff in Working of Trains Responsibility and Functions of Station Staff in Working of Trains station staff responsibility working of trains",
   },
   {
     href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/restricted-holiday",
@@ -7616,6 +7749,20 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules › Labour Laws, Acts, Rules and Codes",
     keywords: "quizzes establishment rules rti act 2005 RTI Act 2005 Right to Information Act 2005 (RTI Act 2005)",
+  },
+  {
+    href: "/topics/operating-material/route-cancellation",
+    title: "Route Cancellation",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material route cancellation Route Cancellation Route Cancellation Siemens Podanur VDU route cancellation EUUYN EGGN",
+  },
+  {
+    href: "/topics/operating-material/route-relay-interlocking",
+    title: "Route Relay Interlocking",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material route relay interlocking Route Relay Interlocking Route Relay Interlocking (RRI) RRI entrance-exit N-X Siemens sub-route",
   },
   {
     href: "/topics/operating-material/routing-signal",
@@ -8184,6 +8331,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material running of a train without brake van Running of a Train Without Brake Van S.R. 4.23 tail lamp guard",
+  },
+  {
+    href: "/topics/operating-material/running-of-a-train-without-guard",
+    title: "Running of a Train Without Guard",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material running of a train without guard Running of a Train Without Guard Running of Trains Without Guard for not carrying passengers(S.R. 4.25.4) S.R. 4.25.4 without guard brake van SLR",
   },
   {
     href: "/topics/operating-material/running-train",
@@ -10709,11 +10863,32 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material shunting Shunting G.R. 1.02(49)",
   },
   {
+    href: "/topics/operating-material/shunting-during-reception-of-trains",
+    title: "Shunting During Reception of Trains",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material shunting during reception of trains Shunting During Reception of Trains VI. Shunting During Reception of Trains (G.R/S.R. 5.16) G.R. S.R. 5.16 shunting reception",
+  },
+  {
     href: "/topics/operating-material/shunting-limit-board",
     title: "Shunting Limit Board (SLB)",
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material shunting limit board SLB BSLB G.R. 3.32 Shunting Limit Board (SLB)",
+  },
+  {
+    href: "/topics/operating-material/shunting-permitted-indicator",
+    title: "Shunting Permitted Indicator",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material shunting permitted indicator Shunting Permitted Indicator Shunting Permitted Indicator (S.R. 3.14.3) S.R. 3.14.3 SPI shunting permitted indicator",
+  },
+  {
+    href: "/topics/operating-material/siemens-panel",
+    title: "Siemens Panel",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material siemens panel Siemens Panel SIEMENS PANEL Siemens panel calling-on GN UN point indication red",
   },
   {
     href: "/topics/operating-material/signal-got-stuck-up-n-OFF-position-in-station-limits",
@@ -10765,6 +10940,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
     keywords: "topics information technology apps satsang SATSANG Software Aided Train Scheduling And Network Governance (SATSANG)",
+  },
+  {
+    href: "/topics/operating-material/solid-state-interlocking",
+    title: "Solid State Interlocking",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material solid state interlocking Solid State Interlocking Solid State Interlocking (SSI) SSI solid state interlocking hot standby data logger",
   },
   {
     href: "/general-awareness/world-information/south-american-countries",
@@ -10882,6 +11064,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material starter signal Starter Signal LSS Common Intermediate Routing",
   },
   {
+    href: "/topics/operating-material/starting-of-trains",
+    title: "Starting of Trains",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material starting of trains Starting of Trains Starting of Trains (G.R./S.R. 4.35) G.R. S.R. 4.35 starting of trains",
+  },
+  {
     href: "/general-awareness/states-information",
     title: "States Information",
     category: "General Awareness",
@@ -10919,6 +11108,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material station master Station Master G.R. 1.02(53)",
   },
   {
+    href: "/topics/operating-material/station-section",
+    title: "Station Section",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material station section Station Section Station Section (G.R. 1.02(54)) G.R. 1.02(54) station section",
+  },
+  {
     href: "/quizzes/professional-subject/station-working-rules",
     title: "Station Working Rules",
     category: "Quizzes",
@@ -10939,6 +11135,13 @@ export const searchTopics: SearchTopic[] = [
     parent: "Topics › Operating Material",
     keywords:
       "topics operating material station working rules Station Working Rules (SWR) G.R. 5.06 Appendix XIV chapters appendices",
+  },
+  {
+    href: "/topics/operating-material/stop-and-examine-signal",
+    title: "Stop and Examine Signal",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material stop and examine signal Stop and Examine Signal STOP AND EXAMINE SIGNAL (BWM Part A-5.6, B-5.7, C-5.8) BWM stop and examine six pause one tail lamp",
   },
   {
     href: "/topics/operating-material/stop-signals",
@@ -11022,6 +11225,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports table tennis Table Tennis",
   },
   {
+    href: "/topics/operating-material/taking-off-signals-for-more-than-one-train-at-a-time",
+    title: "Taking Off Signals for More Than One Train at a Time",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material taking off signals for more than one train at a time Taking Off Signals for More Than One Train at a Time Taking Off Signals for More Than One Train at a Time (G.R./S.R. 3.47) G.R. S.R. 3.47 more than one train",
+  },
+  {
     href: "/general-awareness/states-information/tamil-nadu",
     title: "Tamil Nadu",
     category: "General Awareness",
@@ -11071,6 +11281,13 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Information Technology Apps",
     keywords: "topics information technology apps tms TMS Terminal Management System (TMS)",
+  },
+  {
+    href: "/topics/operating-material/testing-of-reception-signals",
+    title: "Testing of Reception Signals",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material testing of reception signals Testing of Reception Signals Testing of Reception Signals (S.R. 3.36.3.1.1) S.R. 3.36.3.1.1 reception signals testing",
   },
   {
     href: "/general-awareness/tiger-reserves",
@@ -11259,6 +11476,13 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information uttarakhand Uttarakhand",
   },
   {
+    href: "/topics/operating-material/vdu-panel",
+    title: "VDU Panel",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material vdu panel VDU Panel VDU PANEL VDU calling-on testing crank handle veeder counter",
+  },
+  {
     href: "/topics/operating-material/vehicle-guidance",
     title: "Vehicle Guidance (VG)",
     category: "Study Topics",
@@ -11321,6 +11545,20 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness › States Information",
     keywords: "general awareness states information west bengal West Bengal",
+  },
+  {
+    href: "/topics/operating-material/when-train-runs-through-a-station",
+    title: "When Train Runs Through a Station",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material when train runs through a station When Train Runs Through a Station When train runs through a station: all right signal run through station",
+  },
+  {
+    href: "/topics/operating-material/when-train-starts-after-stopping-at-station",
+    title: "When Train Starts After Stopping at Station",
+    category: "Study Topics",
+    parent: "Topics › Operating Material",
+    keywords: "topics operating material when train starts after stopping at station When Train Starts After Stopping at Station When train starts after stopping at station: train starts after stopping station",
   },
   {
     href: "/topics/operating-material/whistle-codes",

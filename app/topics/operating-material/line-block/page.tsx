@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Hammer } from 'lucide-react'
@@ -51,26 +52,26 @@ const fieldTelephone = [
 ]
 
 const vhfPoints = [
-  { label: 'a)', text: 'Nominated engineering official only to obtain block.' },
+  { label: 'a', text: 'Nominated engineering official only to obtain block.' },
   {
-    label: 'b)',
+    label: 'b',
     text: 'After the nominated train has passed, PWI shall protect the line (obstruction) and call SM on VHF & give a Private Number (PN).',
   },
-  { label: 'c)', text: 'SM shall advise SCOR & SM at other end.' },
+  { label: 'c', text: 'SM shall advise SCOR & SM at other end.' },
   {
-    label: 'd)',
+    label: 'd',
     text: 'Once permission is obtained from SCOR, SM shall advise PWI with a PN.',
   },
   {
-    label: 'e)',
+    label: 'e',
     text: 'After completion of work and track made safe, remove protection and convey a PN to his representative who is at station with a PWI-signed written memo.',
   },
   {
-    label: 'f)',
+    label: 'f',
     text: 'Representative shall enter PN and time in the memo and hand over to SM.',
   },
   {
-    label: 'g)',
+    label: 'g',
     text: 'SM will advise SCOR and SM of the other end and cancel the line block.',
   },
 ]
@@ -154,7 +155,7 @@ const LineBlockPage = () => {
                   key={item.text}
                   className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
                 >
-                  <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                  <ListMark></ListMark>
                   <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
                 </li>
               ))}
@@ -177,7 +178,7 @@ const LineBlockPage = () => {
                 key={item.label}
                 className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
               >
-                <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">{item.label}</span>
+                <ListMark>{item.label}</ListMark>
                 <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
               </li>
             ))}
@@ -191,7 +192,7 @@ const LineBlockPage = () => {
                 key={text}
                 className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
               >
-                <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                <ListMark></ListMark>
                 <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
               </li>
             ))}
@@ -200,7 +201,7 @@ const LineBlockPage = () => {
 
         <SectionCard title="Various Authorities Issued During the Block" delay={0.24}>
           <div className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
-            <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+            <ListMark></ListMark>
             <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
               Only one material train is permitted. Any numbers of TTM / Tower wagons are permitted.
             </p>

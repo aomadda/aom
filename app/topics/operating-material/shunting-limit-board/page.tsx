@@ -6,27 +6,27 @@ import { PanelTop } from 'lucide-react'
 
 const comparisonRows = [
   {
-    sno: '1.',
+    sno: '1',
     slb: 'It is provided on single line ‗B‘ class station.',
     bslb: 'It is provided on double line ‗B‘ class station.',
   },
   {
-    sno: '2.',
+    sno: '2',
     slb: 'It is provided both in TAS and MAS.',
     bslb: 'It is provided on MAS only.',
   },
   {
-    sno: '3.',
+    sno: '3',
     slb: 'SLB is provided where advanced starter is not provided.',
     bslb: 'It shall be provided where outermost points are trailing or where there are no points.',
   },
   {
-    sno: '4.',
+    sno: '4',
     slb: 'It shall be placed at a distance of 180 m in advance of the FSS.',
     bslb: 'It shall be placed at a distance of 180 m in advance of the FSS.',
   },
   {
-    sno: '5.',
+    sno: '5',
     slb: 'This board bears the words ‗Shunting Limit‘.',
     bslb: 'This board bears the words ‗Block Section Limit‘.',
   },

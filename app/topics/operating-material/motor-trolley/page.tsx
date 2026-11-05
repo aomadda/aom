@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Bike } from 'lucide-react'
@@ -33,9 +34,9 @@ const definitions: Point[] = [
   {
     text: 'Maximum number of men to be carried:',
     sub: [
-      { label: 'i.', text: 'Push trolley – ten on BG' },
-      { label: 'ii.', text: 'Cycle trolley or moped trolley shall not exceed five.' },
-      { label: 'iii.', text: 'Motor trolley – ten on BG.' },
+      { label: 'i', text: 'Push trolley – ten on BG' },
+      { label: 'ii', text: 'Cycle trolley or moped trolley shall not exceed five.' },
+      { label: 'iii', text: 'Motor trolley – ten on BG.' },
     ],
   },
 ]
@@ -114,9 +115,7 @@ function NumberedList({ items }: { items: Point[] }) {
             <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
               {item.sub.map((sub) => (
                 <li key={`${sub.label}-${sub.text}`} className="flex gap-2.5">
-                  <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                    {sub.label}
-                  </span>
+                  <ListMark>{sub.label}</ListMark>
                   <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                     {sub.text}
                   </p>

@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Layers } from 'lucide-react'
@@ -23,31 +24,31 @@ const essentialsOne: SubPoint[] = [
 
 const adequateDistance: SubPoint[] = [
   {
-    label: 'a.',
+    label: 'a',
     text: '400 meters in case of TALQ signaling or TACLS, and',
   },
   {
-    label: 'b.',
+    label: 'b',
     text: '180 meters in case of MAS or Modified Lower Quadrant Signaling.',
   },
 ]
 
 const doubleLineClear: SubPoint[] = [
-  { label: 'a)', text: 'The whole of the last preceding train has arrived complete;' },
+  { label: 'a', text: 'The whole of the last preceding train has arrived complete;' },
   {
-    label: 'b)',
+    label: 'b',
     text: "All necessary signals have been put back to ‗on‘ behind the said train; and",
   },
   {
-    label: 'c)',
+    label: 'c',
     text: 'The line is clear –',
     nested: [
       {
-        label: '(i)',
+        label: 'i',
         text: 'At stations equipped with two-aspect signalling – up to the Home signal, or',
       },
       {
-        label: '(ii)',
+        label: 'ii',
         text: 'At stations equipped with multiple-aspect signalling or modified lower quadrant signalling – up to the outermost facing points or the Block Section Limit Board (if any).',
       },
     ],
@@ -55,21 +56,21 @@ const doubleLineClear: SubPoint[] = [
 ]
 
 const singleLineClear: SubPoint[] = [
-  { label: 'a)', text: 'The whole of the last preceding train has arrived complete;' },
+  { label: 'a', text: 'The whole of the last preceding train has arrived complete;' },
   {
-    label: 'b)',
-    text: "All necessary signals have been put back to ‗on‘ behind the said train; and",
+    label: 'b',
+    text: "All necessary signals have been put back to ON behind the said train; and",
   },
   {
-    label: 'c)',
+    label: 'c',
     text: 'The line is clear –',
     nested: [
       {
-        label: '(i)',
+        label: 'i',
         text: 'At stations equipped with two-aspect signalling – up to the Shunting Limit Board or Advanced Starter (if any) at that end of the station nearest to the expected train, or up to the Home signal if there is no Shunting Limit Board or Advanced Starter, or up to the outermost facing points if there is no Shunting Limit Board or Advanced Starter or Home signal;',
       },
       {
-        label: '(ii)',
+        label: 'ii',
         text: 'At stations equipped with multiple-aspect signalling or modified lower quadrant signalling – up to the Shunting Limit Board or Advanced Starter (if any) at the end of the station nearest to the expected train, or up to the outermost facing points if there is no Shunting Limit Board or Advanced Starter.',
       },
     ],
@@ -82,16 +83,14 @@ function SubList({ items }: { items: SubPoint[] }) {
       {items.map((item) => (
         <li key={`${item.label}-${item.text.slice(0, 40)}`}>
           <div className="flex gap-2.5">
-            <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">{item.label}</span>
+            <ListMark>{item.label}</ListMark>
             <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
           </div>
           {item.nested ? (
             <ul className="mt-2 space-y-2 border-l-2 border-amber-500/15 pl-4">
               {item.nested.map((n) => (
                 <li key={`${n.label}-${n.text.slice(0, 40)}`} className="flex gap-2.5">
-                  <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200/90">
-                    {n.label}
-                  </span>
+                  <ListMark>{n.label}</ListMark>
                   <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{n.text}</p>
                 </li>
               ))}
@@ -129,7 +128,7 @@ const AbsoluteBlockSystemPage = () => {
           <div className="space-y-4 px-5 py-8 sm:px-10 sm:py-10">
             <div className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
               <div className="flex gap-3">
-                <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
+                <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
                   1
                 </span>
                 <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
@@ -177,10 +176,10 @@ const AbsoluteBlockSystemPage = () => {
             <div className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
               <div className="flex gap-3">
                 <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
-                  (1)
+                  1
                 </span>
                 <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
-                  At a class „B‟ station on double line, the line shall not be considered clear and
+                  At a class B station on double line, the line shall not be considered clear and
                   line clear shall not be given, unless:
                 </p>
               </div>
@@ -192,10 +191,10 @@ const AbsoluteBlockSystemPage = () => {
             <div className="rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
               <div className="flex gap-3">
                 <span className="mt-0.5 inline-flex h-7 min-w-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-amber-400/25 to-orange-600/25 px-1.5 text-xs font-bold text-amber-100 ring-1 ring-amber-400/35">
-                  (2)
+                  2
                 </span>
                 <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
-                  At a class „B‟ station on single line, the line shall not be considered clear and
+                  At a class B station on single line, the line shall not be considered clear and
                   line clear shall not be given, unless:
                 </p>
               </div>

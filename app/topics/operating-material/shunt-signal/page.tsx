@@ -31,17 +31,7 @@ const positionLightPoints = [
   'The arrow mark on the top of the box indicates the line to which it refers.',
 ]
 
-const spiPoints = [
-  'It is an appliance that works in conjunction with the stop signal and is provided to control shunting movements.',
-  'It shall be placed on a post by itself only.',
-  'It can permit shunt movements in both directions.',
-  'It is provided in the non-interlocked area of the yard where the interlocked area is isolated.',
-  'Normally, it can be operated by a ground lever or through panel.',
-  'It shall not show any light when shunting is not permitted.',
-  'When shunting is permitted, it shows a yellow cross light in both directions during day and night.',
-  'When shunting permitted indicator becomes defective, authority to pass defective indicator is T.369(3b) plus proceed hand signals (PHS).',
-  'Detailed instructions regarding the working of SPI are available in SWR.',
-]
+
 
 const BulletList = ({ items }: { items: string[] }) => (
   <ul className="space-y-3">
@@ -116,9 +106,7 @@ const ShuntSignalPage = () => {
           <BulletList items={positionLightPoints} />
         </SectionCard>
 
-        <SectionCard title="Shunting Permitted Indicator (S.R. 3.14.3)">
-          <BulletList items={spiPoints} />
-        </SectionCard>
+        
 
         <div className="mt-10 flex justify-center">
           <Link

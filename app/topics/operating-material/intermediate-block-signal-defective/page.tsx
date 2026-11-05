@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import { Spline } from 'lucide-react'
 import { OperatingTopicPage } from '@/components/topics/operating-material/OperatingTopicPage'
@@ -27,7 +28,7 @@ function NumberedBlock({ items }: { items: (string | NumPoint)[] }) {
               <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
                 {sub.map((s) => (
                   <li key={s} className="flex gap-2.5">
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                    <ListMark></ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{s}</p>
                   </li>
                 ))}
@@ -238,13 +239,13 @@ const IntermediateBlockSignalDefectivePage = () => {
               </h3>
 
               <div className="space-y-3">
-                <h4 className="text-base font-semibold text-amber-200">I. Analog Axle Counters</h4>
+                <h4 className="text-base font-semibold text-amber-200">I Analog Axle Counters</h4>
                 <NumberedBlock items={analogAxle} />
               </div>
 
               <div className="space-y-3">
                 <h4 className="text-base font-semibold text-amber-200">
-                  II. Resetting Digital Axle Counter
+                  II Resetting Digital Axle Counter
                 </h4>
                 <ul className="space-y-2">
                   {digitalAxleBullets.map((text) => (
@@ -252,7 +253,7 @@ const IntermediateBlockSignalDefectivePage = () => {
                       key={text}
                       className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5"
                     >
-                      <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                      <ListMark></ListMark>
                       <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
                     </li>
                   ))}
@@ -294,7 +295,7 @@ const IntermediateBlockSignalDefectivePage = () => {
                     key={text}
                     className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
                   >
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                    <ListMark></ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
                   </li>
                 ))}

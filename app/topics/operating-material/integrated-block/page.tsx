@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Combine } from 'lucide-react'
@@ -41,7 +42,7 @@ const IntegratedBlockPage = () => {
                 style={{ animation: `fade-up 0.55s ease-out ${0.06 * (index + 1)}s both` }}
               >
                 <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-amber-400/30 to-transparent opacity-70" />
-                <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                <ListMark></ListMark>
                 <p className="pt-0.5 text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                   {text}
                 </p>

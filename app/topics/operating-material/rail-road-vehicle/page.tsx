@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { CarFront } from 'lucide-react'
@@ -77,7 +78,7 @@ const RailRoadVehiclePage = () => {
 
           <div className="px-5 py-7 sm:px-8 sm:py-9">
             <div className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5">
-              <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+              <ListMark></ListMark>
               <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                 Maximum speed shall be 80 Kmph on road and 60 Kmph on rail in forward direction and
                 10 Kmph in reverse direction.

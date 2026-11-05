@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Zap } from 'lucide-react'
@@ -115,9 +116,7 @@ const PowerBlockPage = () => {
                     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
                       {item.sub.map((sub) => (
                         <li key={sub} className="flex gap-2.5">
-                          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                            
-                          </span>
+                          <ListMark></ListMark>
                           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                             {sub}
                           </p>
@@ -148,7 +147,7 @@ const PowerBlockPage = () => {
                 key={text}
                 className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 transition-colors hover:border-amber-500/30 hover:bg-slate-900/60 sm:p-5"
               >
-                <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                <ListMark></ListMark>
                 <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
               </li>
             ))}

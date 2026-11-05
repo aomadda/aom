@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Container } from 'lucide-react'
@@ -33,9 +34,9 @@ const rules: Rule[] = [
     type: 'nested',
     intro: 'DRM shall give permission subject to following conditions:',
     items: [
-      { label: 'a.', text: 'Work spot shall be sufficiently lighted.' },
-      { label: 'b.', text: 'Second class accommodation to labour.' },
-      { label: 'c.', text: 'Guard shall ensure no labour is traveling on material train.' },
+      { label: 'a', text: 'Work spot shall be sufficiently lighted.' },
+      { label: 'b', text: 'Second class accommodation to labour.' },
+      { label: 'c', text: 'Guard shall ensure no labour is traveling on material train.' },
     ],
   },
   {
@@ -156,7 +157,7 @@ const MaterialTrainPage = () => {
                           className="rounded-xl border border-slate-600/35 bg-slate-950/35 p-3.5 ring-1 ring-white/3 sm:p-4"
                         >
                           <div className="flex gap-2.5">
-                            <span className="shrink-0 text-sm font-bold text-amber-200">{item.label}</span>
+                            <ListMark>{item.label}</ListMark>
                             <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{item.text}</p>
                           </div>
                         </li>

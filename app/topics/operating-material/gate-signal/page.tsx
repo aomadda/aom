@@ -20,7 +20,7 @@ const passingAtOnSubPoints = [
   'If the gateman is available and not showing proceed hand signal, Loco Pilot shall wait until hand signaled by the gateman.',
   'If gateman is not available, Loco Pilot can pass the gate on hand signals of crew of the train, who will do so after ensuring the gate is closed and locked.',
   'After passing the gate cautiously, stop and after re-opening the gate by train crew, start the train.',
-  'f) If gateman is not found, stop the train out of course at next station and report the matter to Station Master (SM).',
+  'f If gateman is not found, stop the train out of course at next station and report the matter to Station Master (SM).',
 ]
 
 const CheckPoint = ({ text }: { text: string }) => (

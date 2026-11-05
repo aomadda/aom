@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { PhoneOff } from 'lucide-react'
@@ -12,12 +13,12 @@ type Point = {
 }
 
 const singleMeans: SubPoint[] = [
-  { label: 'i.', text: 'Block instrument, Track circuits or Axle counters' },
-  { label: 'ii.', text: 'Telephone attached to the Block instrument' },
-  { label: 'iii.', text: 'Station to Station Fixed Telephone' },
-  { label: 'iv.', text: 'Fixed Telephone such as Railway Auto Phone or BSNL phone' },
-  { label: 'v.', text: 'Control Telephone' },
-  { label: 'vi.', text: 'VHF Set' },
+  { label: 'i', text: 'Block instrument, Track circuits or Axle counters' },
+  { label: 'ii', text: 'Telephone attached to the Block instrument' },
+  { label: 'iii', text: 'Station to Station Fixed Telephone' },
+  { label: 'iv', text: 'Fixed Telephone such as Railway Auto Phone or BSNL phone' },
+  { label: 'v', text: 'Control Telephone' },
+  { label: 'vi', text: 'VHF Set' },
 ]
 
 const singlePoints: Point[] = [
@@ -25,17 +26,17 @@ const singlePoints: Point[] = [
   {
     text: 'The SM who has trains to dispatch shall open communication with the SM of Block station at the other end by sending any one of the following vehicles in the order of preference:',
     sub: [
-      { label: 'a)', text: 'Light engine' },
-      { label: 'b)', text: 'Train engine, after it is detached from the train' },
+      { label: 'a', text: 'Light engine' },
+      { label: 'b', text: 'Train engine, after it is detached from the train' },
       {
-        label: 'c)',
+        label: 'c',
         text: 'Motor trolley/Tower car - accompanied by guard or by off-duty ASM',
       },
       {
-        label: 'd)',
+        label: 'd',
         text: 'Trolley/cycle trolley accompanied by a guard or by off-duty ASM',
       },
-      { label: 'e)', text: 'Diesel car/EMU/DMU after detraining the passengers.' },
+      { label: 'e', text: 'Diesel car/EMU/DMU after detraining the passengers.' },
     ],
   },
   {
@@ -47,15 +48,15 @@ const singlePoints: Point[] = [
   {
     text: 'This authority contains:',
     sub: [
-      { label: 'a)', text: 'Authority to enter into Block section without Line Clear' },
-      { label: 'b)', text: "Authority to pass departure signals at 'ON'" },
-      { label: 'c)', text: 'Caution order (15/10)' },
+      { label: 'a', text: 'Authority to enter into Block section without Line Clear' },
+      { label: 'b', text: "Authority to pass departure signals at 'ON'" },
+      { label: 'c', text: 'Caution order (15/10)' },
       {
-        label: 'd)',
+        label: 'd',
         text: 'Line clear enquiry message – asking line clear for waiting trains',
       },
       {
-        label: 'e)',
+        label: 'e',
         text: 'Conditional line clear message – line clear for light engine/vehicle with or without train to come back',
       },
     ],
@@ -135,12 +136,12 @@ const singlePoints: Point[] = [
 ]
 
 const doubleMeans: SubPoint[] = [
-  { label: 'a)', text: 'Block instrument, Track circuits or Axle counters' },
-  { label: 'b)', text: 'Telephone attached to the Block instrument' },
-  { label: 'c)', text: 'Station to Station Fixed Telephone' },
-  { label: 'd)', text: 'Fixed Telephone such as Railway Auto Phone or BSNL phone' },
-  { label: 'e)', text: 'Control Telephone' },
-  { label: 'f)', text: 'VHF Set' },
+  { label: 'a', text: 'Block instrument, Track circuits or Axle counters' },
+  { label: 'b', text: 'Telephone attached to the Block instrument' },
+  { label: 'c', text: 'Station to Station Fixed Telephone' },
+  { label: 'd', text: 'Fixed Telephone such as Railway Auto Phone or BSNL phone' },
+  { label: 'e', text: 'Control Telephone' },
+  { label: 'f', text: 'VHF Set' },
 ]
 
 const doublePoints: Point[] = [
@@ -150,15 +151,15 @@ const doublePoints: Point[] = [
   {
     text: 'This authority (T/C.602) contains:',
     sub: [
-      { label: 'a)', text: 'Authority to enter block section without Line Clear.' },
-      { label: 'b)', text: 'Authority to pass departure signal at ON.' },
+      { label: 'a', text: 'Authority to enter block section without Line Clear.' },
+      { label: 'b', text: 'Authority to pass departure signal at ON.' },
       {
-        label: 'c)',
+        label: 'c',
         text: 'Caution order – to observe SR of 25 Kmph when view is clear, 10 Kmph when view is not clear.',
       },
-      { label: 'd)', text: 'Except LSS, all signals can be taken off.' },
+      { label: 'd', text: 'Except LSS, all signals can be taken off.' },
       {
-        label: 'e)',
+        label: 'e',
         text: 'When view is not clear, trains shall be piloted by Assistant Loco Pilot.',
       },
     ],
@@ -199,7 +200,7 @@ function SubList({ items }: { items: SubPoint[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
       {items.map((sub) => (
         <li key={`${sub.label}-${sub.text}`} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">{sub.label}</span>
+          <ListMark>{sub.label}</ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{sub.text}</p>
         </li>
       ))}

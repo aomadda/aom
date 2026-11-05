@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Ticket } from 'lucide-react'
@@ -16,15 +17,15 @@ const points: Point[] = [
     text: 'The authority is in form No. T/J.602 which contains the following precautions:',
     sub: [
       {
-        label: 'a.',
+        label: 'a',
         text: 'Speed - 15 Kmph when view is clear and 8 Kmph when view is not clear.',
       },
-      { label: 'b.', text: 'Ascertain the condition of the train over the adjacent line.' },
+      { label: 'b', text: 'Ascertain the condition of the train over the adjacent line.' },
       {
-        label: 'c.',
+        label: 'c',
         text: 'To look out for possible obstruction and take action accordingly.',
       },
-      { label: 'd.', text: 'Report at next station.' },
+      { label: 'd', text: 'Report at next station.' },
     ],
   },
   {
@@ -81,9 +82,7 @@ const BlockTicketPage = () => {
                   <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
                     {item.sub.map((sub) => (
                       <li key={sub.label} className="flex gap-2.5">
-                        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                          {sub.label}
-                        </span>
+                        <ListMark>{sub.label}</ListMark>
                         <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                           {sub.text}
                         </p>

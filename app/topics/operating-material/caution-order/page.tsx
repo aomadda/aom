@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { TriangleAlert } from 'lucide-react'
@@ -42,19 +43,19 @@ const notifying = [
 
 const acknowledgement = [
   {
-    label: 'i.',
+    label: 'i',
     text: 'If notice station is in the same control section, SM shall call SM of notice station and advise message under exchange of Private Number with initials.',
   },
   {
-    label: 'ii.',
+    label: 'ii',
     text: 'If notice station is in a different control section/division, SM shall inform PN and initial to SCOR who shall in turn inform SM of the notice station and obtain his initial and PN, then communicate to SM.',
   },
   {
-    label: 'iii.',
+    label: 'iii',
     text: 'Where auto phones are provided, these messages are exchanged by SM duly advising SCOR.',
   },
   {
-    label: 'iv.',
+    label: 'iv',
     text: 'Then SCOR will give message to SM to issue Caution Order to the No. and description of trains between the notice station and concerned block station.',
   },
 ]
@@ -75,23 +76,23 @@ const preparation = [
 
 const issueAtNotice = [
   {
-    label: 'I.',
+    label: 'I',
     text: 'On receipt of the imposition/modification of SR, the SM shall issue to each and every train passing over the affected block section.',
   },
   {
-    label: 'II.',
+    label: 'II',
     text: "When SM receives no restriction of speed to be imposed up to next notice station, shall issue ‗NIL‘ Caution Order (T/A.409) to all trains.",
   },
   {
-    label: 'III.',
+    label: 'III',
     text: "The LP shall not start a train from notice station without a divisional Caution Order (T.409) or ‗NIL‘ Caution Order (T/A.409).",
   },
   {
-    label: 'IV.',
+    label: 'IV',
     text: 'It shall be issued to LP, ALP, and guard of all trains personally or through a railway servant.',
   },
   {
-    label: 'V.',
+    label: 'V',
     text: 'The signatures of LP & guard obtained on record foil of the Caution Order.',
   },
 ]
@@ -122,7 +123,7 @@ function ArrowList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -135,7 +136,7 @@ function CheckList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -151,7 +152,7 @@ function DotList({ items }: { items: string[] }) {
           key={text}
           className="flex gap-2.5 rounded-2xl border border-slate-600/40 bg-slate-900/40 p-4 ring-1 ring-white/4 sm:p-5"
         >
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -227,7 +228,7 @@ const CautionOrderPage = () => {
                 {notifying.map((item) => (
                   <li key={item.text}>
                     <div className="flex gap-2.5">
-                      <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+                      <ListMark></ListMark>
                       <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                         {item.text}
                       </p>
@@ -246,9 +247,7 @@ const CautionOrderPage = () => {
               <ul className="space-y-3">
                 {acknowledgement.map((item) => (
                   <li key={item.label} className="flex gap-2.5">
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                      {item.label}
-                    </span>
+                    <ListMark>{item.label}</ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                       {item.text}
                     </p>
@@ -269,9 +268,7 @@ const CautionOrderPage = () => {
               <ul className="space-y-3">
                 {issueAtNotice.map((item) => (
                   <li key={item.label} className="flex gap-2.5">
-                    <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                      {item.label}
-                    </span>
+                    <ListMark>{item.label}</ListMark>
                     <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                       {item.text}
                     </p>

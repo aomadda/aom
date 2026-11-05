@@ -135,7 +135,7 @@ const ProtectionOfTrainPage = () => {
             </div>
 
             <h1 className="text-center text-xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-100 via-orange-100 to-yellow-100 sm:text-2xl md:text-3xl leading-snug">
-              GR 6.03 Protection (Is it Required for SM Material?)
+              Protection (GR 6.03)
             </h1>
             <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-linear-to-r from-amber-400 to-orange-500" />
           </header>

@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Bomb } from 'lucide-react'
@@ -62,7 +63,7 @@ function ArrowList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}

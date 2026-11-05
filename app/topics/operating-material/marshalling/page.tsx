@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Combine } from 'lucide-react'
@@ -40,7 +41,7 @@ function ArrowList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -53,7 +54,7 @@ function CheckList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+          <ListMark></ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -66,7 +67,7 @@ function CircleList({ items }: { items: string[] }) {
     <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4">
       {items.map((text) => (
         <li key={text} className="flex gap-2.5">
-          <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">o</span>
+          <ListMark>o</ListMark>
           <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">{text}</p>
         </li>
       ))}
@@ -99,7 +100,7 @@ function SubBlock({
   return (
     <div className="rounded-2xl border border-slate-600/40 bg-slate-900/50 p-4 ring-1 ring-white/4 sm:p-5">
       <div className="flex gap-2.5">
-        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200"></span>
+        <ListMark></ListMark>
         <p className="text-[15px] font-semibold leading-[1.75] text-amber-100/90 sm:text-base">
           {title}
         </p>
@@ -141,7 +142,7 @@ const MarshallingPage = () => {
               </p>
             </SectionCard>
 
-            <SectionCard title="I. Wagons Containing Explosives">
+            <SectionCard title="I Wagons Containing Explosives">
               <div className="space-y-3">
                 <SubBlock title="Maximum Number:">
                   <ArrowList
@@ -166,7 +167,7 @@ const MarshallingPage = () => {
               </div>
             </SectionCard>
 
-            <SectionCard title="II. Wagons Containing Petroleum and Other Inflammable Liquids">
+            <SectionCard title="II Wagons Containing Petroleum and Other Inflammable Liquids">
               <div className="space-y-3">
                 <SubBlock title="Number:">
                   <CheckList items={['No limit on the number of such wagons.']} />
@@ -199,7 +200,7 @@ const MarshallingPage = () => {
               </div>
             </SectionCard>
 
-            <SectionCard title="III. Dead Engines">
+            <SectionCard title="III Dead Engines">
               <div className="space-y-3">
                 <SubBlock title="Passenger Trains:">
                   <CheckList
@@ -235,7 +236,7 @@ const MarshallingPage = () => {
               </div>
             </SectionCard>
 
-            <SectionCard title="IV. Marshalling of SLRs (Seating-cum-Luggage Rakes)">
+            <SectionCard title="IV Marshalling of SLRs (Seating-cum-Luggage Rakes)">
               <div className="space-y-3">
                 <SubBlock title="Mail/Express Trains:">
                   <CheckList
@@ -276,7 +277,7 @@ const MarshallingPage = () => {
               </div>
             </SectionCard>
 
-            <SectionCard title="V. Marshalling of Four Wheelers">
+            <SectionCard title="V Marshalling of Four Wheelers">
               <div className="space-y-3">
                 <SubBlock title="Single Four Wheelers:">
                   <CircleList
@@ -298,7 +299,7 @@ const MarshallingPage = () => {
               </div>
             </SectionCard>
 
-            <SectionCard title="VI. Railway Officers' Saloons">
+            <SectionCard title="VI Railway Officers' Saloons">
               <div className="space-y-3">
                 <SubBlock title="Restrictions:">
                   <CircleList

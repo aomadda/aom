@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { GitMerge } from 'lucide-react'
@@ -39,13 +40,13 @@ const points: Point[] = [
   {
     text: 'SM proposing TSL working shall issue a message to SM of other end containing following information under exchange of PNs:',
     sub: [
-      { label: 'a)', text: 'Cause of introduction of single line working;' },
-      { label: '(b)', text: 'Place of obstruction;' },
-      { label: '(c)', text: 'The line by which single line working is proposed;' },
-      { label: '(d)', text: 'The source of information that the said line is clear;' },
-      { label: '(e)', text: 'Restriction of speed, if any, on the line;' },
+      { label: 'a', text: 'Cause of introduction of single line working;' },
+      { label: 'b', text: 'Place of obstruction;' },
+      { label: 'c', text: 'The line by which single line working is proposed;' },
+      { label: 'd', text: 'The source of information that the said line is clear;' },
+      { label: 'e', text: 'Restriction of speed, if any, on the line;' },
       {
-        label: '(f)',
+        label: 'f',
         text: 'The number and timings of the last train which arrived/left the station nominated.',
       },
     ],
@@ -153,9 +154,7 @@ const TemporarySingleLinePage = () => {
                   <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
                     {item.sub.map((sub) => (
                       <li key={`${sub.label}-${sub.text}`} className="flex gap-2.5">
-                        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                          {sub.label}
-                        </span>
+                        <ListMark>{sub.label}</ListMark>
                         <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                           {sub.text}
                         </p>

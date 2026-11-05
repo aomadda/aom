@@ -214,7 +214,7 @@ const BellSignals = () => {
               S.R.4.51. Bell Signals between Loco Pilot and Guard
             </p>
             <p className="leading-relaxed">
-              (1) The following Bell Signal Codes shall be given by the Loco Pilot/Motorman and to be acknowledged by the Guard working EMU/DMU trains.
+              1 The following Bell Signal Codes shall be given by the Loco Pilot/Motorman and to be acknowledged by the Guard working EMU/DMU trains.
             </p>
           </div>
         </div>
@@ -376,10 +376,10 @@ const BellSignals = () => {
             <h3 className="text-xl font-bold text-yellow-300 mb-4">Note:</h3>
             <div className="space-y-4 text-gray-200">
               <p className="leading-relaxed">
-                (1) &apos;0&apos; denotes for bell signal and &apos;----&apos; denotes for pause.
+                1 &apos;0&apos; denotes for bell signal and &apos;----&apos; denotes for pause.
               </p>
               <p className="leading-relaxed">
-                (2) When there is any doubt on the bell signal codes received, LP/Motorman and Guard may establish personal communication.
+                2 When there is any doubt on the bell signal codes received, LP/Motorman and Guard may establish personal communication.
               </p>
             </div>
           </div>

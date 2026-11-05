@@ -1,5 +1,6 @@
 'use client'
 
+import { ListMark } from '@/components/topics/operating-material/ListMark'
 import React from 'react'
 import Link from 'next/link'
 import { Split } from 'lucide-react'
@@ -12,14 +13,14 @@ const points: Point[] = [
   {
     text: 'If a Loco Pilot realises, while on run, that there is rail fracture, shall:',
     sub: [
-      { label: 'a)', text: 'Stop the train and protect the train.' },
-      { label: 'b)', text: 'Examine the track.' },
+      { label: 'a', text: 'Stop the train and protect the train.' },
+      { label: 'b', text: 'Examine the track.' },
       {
-        label: 'c)',
+        label: 'c',
         text: 'If considers safe, proceed further and give a written memo at advance station SM and obtain acknowledgement.',
       },
       {
-        label: 'd)',
+        label: 'd',
         text: 'If unsafe, inform SCOR and SMs and wait till Engg official certify fit.',
       },
     ],
@@ -87,9 +88,7 @@ const RailFracturePage = () => {
                   <ul className="mt-3 space-y-2 border-l-2 border-amber-500/25 pl-4 sm:ml-12">
                     {item.sub.map((sub) => (
                       <li key={sub.label} className="flex gap-2.5">
-                        <span className="mt-0.5 shrink-0 text-sm font-bold text-amber-200">
-                          {sub.label}
-                        </span>
+                        <ListMark>{sub.label}</ListMark>
                         <p className="text-[15px] leading-[1.75] text-slate-300 sm:text-base">
                           {sub.text}
                         </p>
