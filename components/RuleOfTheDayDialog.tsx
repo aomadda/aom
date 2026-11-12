@@ -93,7 +93,7 @@ export default function RuleOfTheDayDialog({
             className="rounded-xl border border-white/10 bg-slate-950/55 px-3 py-3 text-center shadow-inner shadow-black/20 sm:px-4 sm:py-4 mb-2"
           >
             <p className="mb-1 text-xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-amber-200 via-orange-200 to-yellow-100">
-              GR {rule.rule}
+               {rule.rule}
             </p>
             <p className="text-xs leading-relaxed text-slate-100 sm:text-sm">
               {rule.title} 

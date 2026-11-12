@@ -157,16 +157,94 @@ export const aomFinanceEstablishmentRulesTest41 = {
                 explanation: "Both revenue and capital grants are available for that financial year only",
             },
             {
-                question: ``,
+                question: `A Railway servant has submitted a petition to the President of India. Under which of the following circumstances, the petition can be withheld by the prescribed authority?`,
                 options: [
-                    "",
-                    "",
-                    "",
-                    ""
+                    "The petition is a represenation against an order communicated to the petitioner more than 6 months before the submission of the petition, and no satisfactory explanation of the delay is given",
+                    "The petition is a represenation against the non-exercise in favour of the petitioner of descetion vested in the prescribed authority",
+                    "The petition is a represenation against a decision which is declared to be final by any law or statutory rule",
+                    "All of the above"
+                ],
+                correct: 3,
+                explanation: "All of the above",
+            },
+            {
+                question: `As an exception to Para 201 of Indian Railway Financial Code (IRFC), Volume I, in which of the following cases, no Financial Jstification need be given except that the expenditure incurred should be economcial as possible?`,
+                options: [
+                    "When the expenditure incurred is on a statutory obligation",
+                    "When the expenditure is unavoidable on considerations of safety",
+                    "When the expenditure is incurred on Passenger amenity works",
+                    "All of the above"
+                ],
+                correct: 3,
+                explanation: "All of the above",
+            },
+            {
+                question: `Which among the following is coming under Sundry Revenue?`,
+                options: [
+                    "Land lease, land monetization/property development",
+                    "Advertisement fees & non-fare revenue activities",
+                    "Interest and maintenance charges on account of assisted sidings, saloons, postal vehicles etc.",
+                    "All of the above"
+                ],
+                correct: 3,
+                explanation: "All of the above",
+            },
+            {
+                question: `Which Rule of Railway servants (Discipline and Appeal) Rules 1968, deals with the period of limitation for appeals?`,
+                options: [
+                    "Rule 19",
+                    "Rule 20",
+                    "Rule 21",
+                    "Rule 22"
+                ],
+                correct: 1,
+                explanation: "Rule 20",
+            },
+            {
+                question: `The service rendered as Substitute by Teachers shall be counted for pensionary benefits from the date of completion of ________ of continuous service as Substitute, followed by absorption in a regular Group C post or Group D (erstwhile) post, without any break?`,
+                options: [
+                    "2 months",
+                    "3 months",
+                    "4 months",
+                    "5 months"
+                ],
+                correct: 1,
+                explanation: "3 months",
+            },
+            {
+                question: `If a Railway servant is selected for discharge owing to the abolition of is permanent post, unless he is appointed to another post, he is entitled to which of the following pension?`,
+                options: [
+                    "Compensation Pension",
+                    "Invalid Pension",
+                    "Retirement Pension",
+                    "None of the above"
                 ],
                 correct: 0,
-                explanation: "",
+                explanation: "Compensation Pension",
             },
+            {
+                question: `If a Railway servant dies while in service, death Gratuity shall be paid to his family members. If the qualifying service is 20 years or more, which of the following emoluments is payable?`,
+                options: [
+                    "15 times of monthly emoluments",
+                    "20 times of monthly emoluments",
+                    "25 times of monthly emoluments",
+                    "Half of emoluments for every completed 6 monthly period of qualifying service, subject to maximum 33 times of monthly emoluments provided that the maximum prescribed amount is not exceeded"
+                ],
+                correct: 3,
+                explanation: "Half of emoluments for every completed 6 monthly period of qualifying service, subject to maximum 33 times of monthly emoluments provided that the maximum prescribed amount is not exceeded",
+            },
+            {
+                question: `Which of the following correctly explains the Compulsory Retirement Pension?`,
+                options: [
+                    "The authority competent to impose the punishment of compulsory retirement against a Railway servant may sanction the compulsory retirement pension of the servant",
+                    "Not less than two-thirds and not more than fully compensation pension or gratuity or both which whould have been admissible to him if he had retired on compensation pension",
+                    "Whenever, the President passes an order in the case of Railway servant awarding a pension less than the full compensation pension admissible under these rules , the Union Public Service Commission shall be consulted before such order is passed",
+                    "All of the above"
+                ],
+                correct: 3,
+                explanation: "All of the above",
+            },
+            
         ]
     },
 }
