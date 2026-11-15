@@ -15,7 +15,7 @@ const papers = [
     icon: '📝',
     color: 'from-rose-500 to-red-600',
     description:
-      'Practice the AOM 30% LDCE 2022 paper with questions covering operating, establishment and related topics',
+      'Practice the AOM 30% LDCE 2022 paper: Professional Subject, GK & Rajabhasha, and Establishment & Financial Rules',
   },
   {
     href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023',
@@ -26,7 +26,40 @@ const papers = [
     icon: '📘',
     color: 'from-pink-500 to-fuchsia-600',
     description:
-      'Practice the AOM 30% LDCE 2023 paper with questions covering operating, statistics and accident-related topics',
+      'Practice the AOM 30% LDCE 2023 paper: Professional Subject, GK & Rajabhasha, and Establishment & Financial Rules',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2023',
+    categoryId: 'aom-70%-ldce-2023',
+    quizId: 'aom-70%-ldce-2023',
+    title: 'AOM 70% LDCE 2023',
+    year: '2023',
+    icon: '📕',
+    color: 'from-violet-500 to-purple-600',
+    description:
+      'Practice the AOM 70% LDCE 2023 paper with questions covering operating, wagon supply and related topics',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2023-supplementary',
+    categoryId: 'aom-70%-ldce-2023-supplementary',
+    quizId: 'aom-70%-ldce-2023-supplementary',
+    title: 'AOM 70% LDCE 2023 Supplementary',
+    year: '2023',
+    icon: '📓',
+    color: 'from-cyan-500 to-blue-600',
+    description:
+      'Practice the AOM 70% LDCE 2023 supplementary paper with questions covering operating, wagon supply and related topics',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2024',
+    categoryId: 'aom-30%-ldce-2024',
+    quizId: 'aom-30%-ldce-2024',
+    title: 'AOM 30% LDCE 2024',
+    year: '2024',
+    icon: '📙',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice the AOM 30% LDCE 2024 paper: Professional Subject, GK & Rajabhasha, and Establishment & Financial Rules',
   },
   {
     href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2024',
@@ -38,6 +71,39 @@ const papers = [
     color: 'from-sky-500 to-indigo-600',
     description:
       'Practice the AOM 70% LDCE 2024 paper with questions covering operating, wagon supply and related topics',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-first-batch',
+    categoryId: 'aom-70%-ldce-2025-first-batch',
+    quizId: 'aom-70%-ldce-2025-first-batch',
+    title: 'AOM 70% LDCE 2025 First Batch',
+    year: '2025',
+    icon: '📔',
+    color: 'from-lime-500 to-green-600',
+    description:
+      'Practice the AOM 70% LDCE 2025 first batch paper with questions covering operating, wagon supply and related topics',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-second-batch',
+    categoryId: 'aom-70%-ldce-2025-second-batch',
+    quizId: 'aom-70%-ldce-2025-second-batch',
+    title: 'AOM 70% LDCE 2025 Second Batch',
+    year: '2025',
+    icon: '📒',
+    color: 'from-amber-500 to-yellow-600',
+    description:
+      'Practice the AOM 70% LDCE 2025 second batch paper with questions covering operating, wagon supply and related topics',
+  },
+  {
+    href: '/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-supplementary',
+    categoryId: 'aom-70%-ldce-2025-supplementary',
+    quizId: 'aom-70%-ldce-2025-supplementary',
+    title: 'AOM 70% LDCE 2025 Supplementary',
+    year: '2025',
+    icon: '📚',
+    color: 'from-fuchsia-500 to-pink-600',
+    description:
+      'Practice the AOM 70% LDCE 2025 supplementary paper with questions covering operating, wagon supply and related topics',
   },
   {
     href: '/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026',

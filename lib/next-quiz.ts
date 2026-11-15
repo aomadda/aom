@@ -171,7 +171,13 @@ function professionalSubjectQuizzes(): QuizLink[] {
 const PREVIOUS_PAPERS: QuizLink[] = [
   ['aom-30-percent-ldce-2022', 'aom-30%-ldce-2022', 'AOM 30% LDCE 2022'],
   ['aom-30-percent-ldce-2023', 'aom-30%-ldce-2023', 'AOM 30% LDCE 2023'],
+  ['aom-70-percent-ldce-2023', 'aom-70%-ldce-2023', 'AOM 70% LDCE 2023'],
+  ['aom-70-percent-ldce-2023-supplementary', 'aom-70%-ldce-2023-supplementary', 'AOM 70% LDCE 2023 Supplementary'],
+  ['aom-30-percent-ldce-2024', 'aom-30%-ldce-2024', 'AOM 30% LDCE 2024'],
   ['aom-70-percent-ldce-2024', 'aom-70%-ldce-2024', 'AOM 70% LDCE 2024'],
+  ['aom-70-percent-ldce-2025-first-batch', 'aom-70%-ldce-2025-first-batch', 'AOM 70% LDCE 2025 First Batch'],
+  ['aom-70-percent-ldce-2025-second-batch', 'aom-70%-ldce-2025-second-batch', 'AOM 70% LDCE 2025 Second Batch'],
+  ['aom-70-percent-ldce-2025-supplementary', 'aom-70%-ldce-2025-supplementary', 'AOM 70% LDCE 2025 Supplementary'],
   ['aom-30-percent-ldce-2026', 'aom-30%-ldce-2026', 'AOM 30% LDCE 2026'],
 ].map(([slug, quizId, title]) => ({
   href: `/aom-tests/aom-previous-years-papers/${slug}`,

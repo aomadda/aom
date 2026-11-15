@@ -289,6 +289,12 @@ question:
             correct: 0,
             explanation: `Rule 3(B)(i).`,
           },
+          {
+            question: `A serving Railway servant, who is not a recognised Railway Trade Union official, already has three pending cases as a Defence Helper. Under the ordinary case-limit provision, can his nomination for a fourth case be accepted?`,
+            options: ["Yes, without restriction", "No, because he already has three pending cases", "Yes, if all cases concern the same division", "Yes, if he does not charge fees"],
+            correct: 1,
+            explanation: `No, because he already has three pending cases.`,
+          },
           
         ],
 }

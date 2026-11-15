@@ -1,6 +1,6 @@
 export const aom30Ldce2023 = {
-    quizzes: {
-        'aom-30-ldce-2023': [
+    tests: {
+        'professional-subject': [
             {
                 question: 'Which of the following is a primary unit as per railway statistics?',
                 options: ['Tonne-kms', 'Kilometer', 'Wagn Km per wagon day track', 'None of the above'],
@@ -61,7 +61,6 @@ export const aom30Ldce2023 = {
                 correct: 3,
                 explanation: 'Block Working Manual is not kept in Accident Relief Train.',
             },
-            
                 {
                   question: 'How much loss of Railway property will be considered as a serious accident?',
                   options: ['More than Rs. 25 lakhs', 'More than Rs. 20 crores', 'More than Rs. 2 crores', 'None of the above'],
@@ -197,7 +196,6 @@ export const aom30Ldce2023 = {
                   correct: 0,
                   explanation: '6% Maintenance & 5% Traffic is the correct answer.',
                 },
-                
                     {
                       question: 'What is the minimum Axle Load route prevailing in Indian Railways?',
                       options: ['20 tonne', '22 tonne', '22.4 tonne', '22.9 tonne'],
@@ -328,8 +326,6 @@ export const aom30Ldce2023 = {
                       correct: 0,
                       explanation: 'SM in advance is the correct answer.',
                     },
-                  
-                    
                         {
                           question: 'Who permits Inter Railway movement of A class ODC?',
                           options: ['CRS', 'PCOM of the same zone', 'Sr. DOM', 'PCOM of the same zone and PCOM of the Railway concerned'],
@@ -450,8 +446,6 @@ export const aom30Ldce2023 = {
                           correct: 0,
                           explanation: '5 minutes is the correct answer.',
                         },
-                      
-                        
                             {
                               question: 'Sand Hump is an extended portion of rail in sand with increasing gradient of ________',
                               options: ['1 in 60', '1 in 80', '1 in 100', 'None of the above'],
@@ -541,9 +535,9 @@ export const aom30Ldce2023 = {
                               options: ['Priority "A"', 'Priority "B"', 'Priority "C"', 'Priority "D"'],
                               correct: 0,
                               explanation: 'Priority "A" is the correct answer.',
-                            },
-
-
+                            }
+        ],
+        'gk-rajabhasha': [
 {
   question: 'Which Tennis player has been on the top of the ATP rakings for maximum period?',
   options: ['Novak Djokovic', 'Roger Federer', 'Rafael Nadal', 'None of the above'],
@@ -802,7 +796,6 @@ export const aom30Ldce2023 = {
   correct: 2,
   explanation: 'Chairman and CEO, Railway Board is the correct answer.',
 },
-
 {
                               question: 'Who is the Chairman of Central Hindi Committee?',
                               options: ['Home Minister', 'Prime Minister', 'Railway Minister', 'None of the above'],
@@ -815,7 +808,6 @@ export const aom30Ldce2023 = {
                               correct: 0,
                               explanation: 'To write technical books in Hindi on Railway subjects is the correct answer.',
                             },
-                            
                                 {
                                   question: 'How many members of Rajya Sabha are there in Committee of Parliament on Official Language?',
                                   options: ['7', '10', '15', 'None of the above'],
@@ -852,14 +844,12 @@ export const aom30Ldce2023 = {
                                   correct: 0,
                                   explanation: 'Regional, Hindi, English is the correct answer.',
                                 },
-                                
                                   {
                                     question: 'Who does the translation of statutory rules, regulations and orders as per the constitution of India?',
                                     options: ['Home Ministry', 'Ministry of Law', 'Ministry of Railways', 'None of the above'],
                                     correct: 1,
                                     explanation: 'Ministry of Law is the correct answer.',
                                   },
-                                
                                 {
                                   question: 'For whom is the Rajabhasha Individual Cash Award Scheme prescribed?',
                                   options: ['For employees', 'For officers', 'For officers up to Junior Administrative Grade and non-gazetted categories', 'For Senior Administrative Grade Officers'],
@@ -877,7 +867,9 @@ export const aom30Ldce2023 = {
                                   options: ['6000/- and citation', '8000/- and citation', '10000/- and citation', 'None of the above'],
                                   correct: 0,
                                   explanation: '10000/- and citation is the correct answer.',
-                                },
+                                }
+        ],
+        'establishment-finance-rules': [
                                 {
                                   question: 'What is the full form of PRAN? How many digits does a PRAN number have?',
                                   options: ['Permanent Retirement Account Number, 12', 'Provident Retirement Account Number, 12', 'Permanent Railway Account Number, 14', 'Permanent Railwaymen\'s Account Number, 12'],
@@ -956,8 +948,6 @@ export const aom30Ldce2023 = {
                                   correct: 0,
                                   explanation: '45 days is the correct answer.',
                                 },
-                              
-                                
                                     {
                                       question: 'Which part of THE RAILWAY SERVANTS (DISCIPLINE & APPEAL) RULES, 1968 gives details of major and minor penalties?',
                                       options: ['Part I', 'Part II', 'Part III', 'Part IV'],
@@ -1099,8 +1089,7 @@ export const aom30Ldce2023 = {
                                       ],
                                       correct: 0,
                                       explanation: 'The cash taken by station in the balance sheet is accounted by cash office in the following month is the correct answer.',
-                                    },
-                                  
+                                    }
         ],
     },
 };

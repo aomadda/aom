@@ -1,6 +1,6 @@
 export const aom30PercentLdce2022 = {
     tests: {
-        'aom-30%-ldce-2022': [
+        'professional-subject': [
             {
               question: "Which of the following is not COA function?",
               options: [
@@ -100,7 +100,6 @@ export const aom30PercentLdce2022 = {
               correct: 2,
               explanation: "ICMS is the correct answer.",
             },
-            
                 {
                   question: "Position of asset failure can be analyzed through?",
                   options: [
@@ -936,7 +935,9 @@ export const aom30PercentLdce2022 = {
                     ],
                     correct: 0,
                     explanation: "All Trains is the correct answer.",
-                  },
+                  }
+        ],
+        'gk-rajabhasha': [
                   {
                     question: "When any House of Parliament (Lok Sabha or Rajya Sabha) is adjourned without naming a day for reassembly it is known as?",
                     options: [
@@ -1541,7 +1542,9 @@ export const aom30PercentLdce2022 = {
                     ],
                     correct: 0,
                     explanation: "The Parliament of Britain is the correct answer.",
-                  },
+                  }
+        ],
+        'establishment-finance-rules': [
                   {
                     question: "Reappropriation of funds from one itemised work to another itemised work is within the powers of?",
                     options: [
@@ -1926,7 +1929,7 @@ export const aom30PercentLdce2022 = {
                     ],
                     correct: 0,
                     explanation: "Staff Benefit Fund is the correct answer.",
-                  },
-          ],
-      },
+                  }
+        ],
+    },
 };

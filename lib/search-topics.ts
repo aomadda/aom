@@ -221,7 +221,31 @@ export const searchTopics: SearchTopic[] = [
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers",
     keywords:
-      "aom tests aom 30% ldce 2022 AOM 30% LDCE 2022 previous paper exam practice previous years",
+      "aom tests aom 30% ldce 2022 AOM 30% LDCE 2022 previous papers professional subject GK Rajabhasha Establishment Financial Rules",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
+    title: "AOM 30% LDCE 2022 — Establishment & Financial Rules",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2022",
+    keywords:
+      "aom tests aom 30% ldce 2022 establishment finance financial rules AOM 30% LDCE 2022 Establishment",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
+    title: "AOM 30% LDCE 2022 — GK & Rajabhasha",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2022",
+    keywords:
+      "aom tests aom 30% ldce 2022 gk rajabhasha general knowledge AOM 30% LDCE 2022 GK Rajabhasha",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2022",
+    title: "AOM 30% LDCE 2022 — Professional Subject",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2022",
+    keywords:
+      "aom tests aom 30% ldce 2022 professional subject operating G&SR AOM 30% LDCE 2022 Professional Subject",
   },
   {
     href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023",
@@ -229,7 +253,63 @@ export const searchTopics: SearchTopic[] = [
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers",
     keywords:
-      "aom tests aom 30% ldce 2023 AOM 30% LDCE 2023 previous paper exam practice previous years operating statistics",
+      "aom tests aom 30% ldce 2023 AOM 30% LDCE 2023 previous papers professional subject GK Rajabhasha Establishment Financial Rules",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023",
+    title: "AOM 30% LDCE 2023 — Establishment & Financial Rules",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2023",
+    keywords:
+      "aom tests aom 30% ldce 2023 establishment finance financial rules AOM 30% LDCE 2023 Establishment",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023",
+    title: "AOM 30% LDCE 2023 — GK & Rajabhasha",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2023",
+    keywords:
+      "aom tests aom 30% ldce 2023 gk rajabhasha general knowledge AOM 30% LDCE 2023 GK Rajabhasha",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2023",
+    title: "AOM 30% LDCE 2023 — Professional Subject",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2023",
+    keywords:
+      "aom tests aom 30% ldce 2023 professional subject operating G&SR AOM 30% LDCE 2023 Professional Subject",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2024",
+    title: "AOM 30% LDCE 2024",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
+    keywords:
+      "aom tests aom 30% ldce 2024 AOM 30% LDCE 2024 previous papers professional subject GK Rajabhasha Establishment Financial Rules",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2024",
+    title: "AOM 30% LDCE 2024 — Establishment & Financial Rules",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2024",
+    keywords:
+      "aom tests aom 30% ldce 2024 establishment finance financial rules AOM 30% LDCE 2024 Establishment",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2024",
+    title: "AOM 30% LDCE 2024 — GK & Rajabhasha",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2024",
+    keywords:
+      "aom tests aom 30% ldce 2024 gk rajabhasha general knowledge AOM 30% LDCE 2024 GK Rajabhasha",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2024",
+    title: "AOM 30% LDCE 2024 — Professional Subject",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers › AOM 30% LDCE 2024",
+    keywords:
+      "aom tests aom 30% ldce 2024 professional subject operating G&SR AOM 30% LDCE 2024 Professional Subject",
   },
   {
     href: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
@@ -264,12 +344,52 @@ export const searchTopics: SearchTopic[] = [
       "aom tests aom 30% ldce 2026 professional subject operating G&SR AOM 30% LDCE 2026 Professional Subject",
   },
   {
+    href: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2023",
+    title: "AOM 70% LDCE 2023",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
+    keywords:
+      "aom tests aom 70% ldce 2023 AOM 70% LDCE 2023 previous paper exam practice previous years operating wagons",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2023-supplementary",
+    title: "AOM 70% LDCE 2023 Supplementary",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
+    keywords:
+      "aom tests aom 70% ldce 2023 supplementary AOM 70% LDCE 2023 Supplementary previous paper exam practice previous years operating wagons",
+  },
+  {
     href: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2024",
     title: "AOM 70% LDCE 2024",
     category: "AOM Tests",
     parent: "AOM Tests › AOM Previous Years Papers",
     keywords:
       "aom tests aom 70% ldce 2024 AOM 70% LDCE 2024 previous paper exam practice previous years operating wagons",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-first-batch",
+    title: "AOM 70% LDCE 2025 First Batch",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
+    keywords:
+      "aom tests aom 70% ldce 2025 first batch AOM 70% LDCE 2025 First Batch previous paper exam practice previous years operating wagons",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-second-batch",
+    title: "AOM 70% LDCE 2025 Second Batch",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
+    keywords:
+      "aom tests aom 70% ldce 2025 second batch AOM 70% LDCE 2025 Second Batch previous paper exam practice previous years operating wagons",
+  },
+  {
+    href: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-supplementary",
+    title: "AOM 70% LDCE 2025 Supplementary",
+    category: "AOM Tests",
+    parent: "AOM Tests › AOM Previous Years Papers",
+    keywords:
+      "aom tests aom 70% ldce 2025 supplementary AOM 70% LDCE 2025 Supplementary previous paper exam practice previous years operating wagons",
   },
   {
     href: "/aom-tests/aom-finance-establishment-rules-tests/aom-finance-establishment-rules-test01",

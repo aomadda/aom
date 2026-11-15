@@ -254,13 +254,43 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2024",
+        destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2024",
+        permanent: true,
+      },
+      {
         source: "/aom-tests/aom-previous-years-papers/aom-30%25-ldce-2026",
         destination: "/aom-tests/aom-previous-years-papers/aom-30-percent-ldce-2026",
         permanent: true,
       },
       {
+        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2023",
+        destination: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2023",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2023-supplementary",
+        destination: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2023-supplementary",
+        permanent: true,
+      },
+      {
         source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2024",
         destination: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2024",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2025-first-batch",
+        destination: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-first-batch",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2025-second-batch",
+        destination: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-second-batch",
+        permanent: true,
+      },
+      {
+        source: "/aom-tests/aom-previous-years-papers/aom-70%25-ldce-2025-supplementary",
+        destination: "/aom-tests/aom-previous-years-papers/aom-70-percent-ldce-2025-supplementary",
         permanent: true,
       },
       {

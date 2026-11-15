@@ -1,18 +1,270 @@
 export const aom70Ldce2023Supplementary = {
     quizzes: {
         'aom-70-ldce-2023-supplementary': [
-            {
-                question: ``,
-                options: [
-                    "",
-                    "",
-                    "",
-                    "",
-                ],
-                correct: 0,
-                explanation: "",
-            },
-            
+          {
+            question: `What is the full form of FNR?`,
+            options: [
+                "Freight Name Record",
+                "Freight Number Record",
+                "Freight Number Request",
+                "Freight Not Recorded",
+            ],
+            correct: 1,
+            explanation: "Freight Number Record",
+        },
+        {
+            question: `Within how many days after the date of accident, DAR action must be taken?`,
+            options: [
+                "D + 30",
+                "D + 60",
+                "D + 90",
+                "D + 90",
+            ],
+            correct: 3,
+            explanation: "D + 90",
+        },
+        {
+            question: `Preferential Traffic Order (Schedule) pertains to ________`,
+            options: [
+                "Freight Traffic",
+                "Passenger Traffic",
+                "Mail Traffic",
+                "Parcel Traffic",
+            ],
+            correct: 0,
+            explanation: "Freight Traffic",
+        },
+        {
+            question: `Premium Examination pattern pertains to ________`,
+            options: [
+                "Freight Traffic",
+                "Passenger Traffic",
+                "Parcel Traffic",
+                "All of the above",
+            ],
+            correct: 3,
+            explanation: "All of the above ",
+        },
+        {
+            question: `Power Plan indicates the number of locos required for ________`,
+            options: [
+                "Coaching service",
+                "Freight service",
+                "Parcel express trains",
+                "Departmental activities",
+            ],
+            correct: 1,
+            explanation: "Freight service",
+        },
+        {
+            question: `The running staff should not normally be kept away from Headquarters for more than ________`,
+            options: [
+                "48 hours",
+                "60 hours",
+                "72 hours",
+                "96 hours",
+            ],
+            correct: 2,
+            explanation: "72 hours",
+        },
+        {
+            question: `If the alcohol level of 1 to 40 mg/100 ml of blood is found during signing OFF, concern staff shall be issued with ________`,
+            options: [
+                "Major penalty",
+                "Minor penalty",
+                "Kept under suspension",
+                "Reversion from safety critical post",
+            ],
+            correct: 1,
+            explanation: "Minor penalty",
+        },
+        {
+            question: `Each Guard and Loco pilot shall have ________ pair spectacles while on duty which he is required to wear under medical advice?`,
+            options: [
+                "1 pair",
+                "2 pairs",
+                "3 pairs",
+                "4 pairs",
+            ],
+            correct: 1,
+            explanation: "2 pairs",
+        },
+        {
+            question: `Loco pilot involved in SPAD cases should be sent for refresher course for ________`,
+            options: [
+                "10 working days",
+                "12 working days",
+                "14 working days",
+                "21 working days",
+            ],
+            correct: 3,
+            explanation: "21 working days",
+        },
+        {
+            question: `Periodical Medical Examination (PME) is done at the termination of every period of ________ till the attainment of 45 years of age?`,
+            options: [
+                "2 years",
+                "3 years",
+                "4 years",
+                "5 years",
+            ],
+            correct: 2,
+            explanation: "4 years",
+        },
+        {
+            question: `What is the permissible Axle load (in tonnes) for the purpose of fixing CC+8 routes?`,
+            options: [
+                "22.9",
+                "22.4",
+                "25",
+                "22",
+            ],
+            correct: 0,
+            explanation: "22.9",
+        },
+        {
+            question: `What does the "T" stand for the Scott Formula?`,
+            options: [
+                "Factor of efficiency",
+                "Block operation time",
+                "Running time of the slowest train on the ruling section of the line",
+                "None of the above",
+            ],
+            correct: 2,
+            explanation: "Running time of the slowest train on the ruling section of the line",
+        },
+        {
+            question: `The competency certificate of Gateman shall be valid for how many years?`,
+            options: [
+                "2 years",
+                "3 years",
+                "4 years",
+                "5 years",
+            ],
+            correct: 1,
+            explanation: "3 years",
+        },
+        {
+            question: `Block Section Limit Board is placed at a distance not less than _______ meters in advance of Home signal.`,
+            options: [
+                "120",
+                "400",
+                "180",
+                "300",
+            ],
+            correct: 2,
+            explanation: "180",
+        },
+        {
+            question: `The Visibility Test Object (VTO) may be seen from a distance of not less than _______ meters?`,
+            options: [
+                "120",
+                "180",
+                "270",
+                "300",
+            ],
+            correct: 1,
+            explanation: "180",
+        },
+        {
+            question: `Which module deals with management of crew & guards?`,
+            options: [
+                "TMS",
+                "CMS",
+                "RMS",
+                "YMS",
+            ],
+            correct: 1,
+            explanation: "CMS",
+        },
+        {
+            question: `A calling-on signal used for following purpose.`,
+            options: [
+                "For reception and despatch of trains when main signal above is defective",
+                "For shunting purpose",
+                "To receive a train on obstructed line",
+                "All of the above",
+            ],
+            correct: 3,
+            explanation: "All of the above",
+        },
+        {
+            question: `Military traffic, when sponsored by MILRAIL and approved by Railway Board comes under ________`,
+            options: [
+                "Priority - A",
+                "Priority - B",
+                "Priority - C",
+                "Priority - D",
+            ],
+            correct: 0,
+            explanation: "Priority - A",
+        },
+        {
+            question: `When a shunt signal is placed below a stop signal, shunt signal shall show _________ light in the "ON" position?`,
+            options: [
+                "White",
+                "Yellow",
+                "Red",
+                "No light",
+            ],
+            correct: 3,
+            explanation: "No light",
+        },
+        {
+            question: `Which of the following is NOT a component of Marshalling Yard?`,
+            options: [
+                "Exchange yard",
+                "Reception yard",
+                "Sorting yard",
+                "Dispatch yard",
+            ],
+            correct: 0,
+            explanation: "Exchange yard",
+        },
+        {
+            question: `At a "B" class double line MACL station, rear block section terminates at ________`,
+            options: [
+                "Outermost facing point",
+                "BSLB",
+                "Either outermost facing point or BSLB",
+                "None of the above",
+            ],
+            correct: 2,
+            explanation: "Either outermost facing point or BSLB",
+        },
+        {
+            question: `What is the full form of SATSaNG?`,
+            options: [
+                "Singular Automatic Train Scheduling",
+                "Software Aided Train Scheduling and Network Governance",
+                "Simplified Automatic Aided Train Scheduling",
+                "None of the above",
+            ],
+            correct: 1,
+            explanation: "Software Aided Train Scheduling and Network Governance",
+        },
+        {
+            question: `When a train is kept standing at the foot of First stop signal of a station, after what time Guard shall proceed to protect the train in rear?`,
+            options: [
+                "25 minutes",
+                "15 minutes",
+                "10 minutes",
+                "5 minutes",
+            ],
+            correct: 1,
+            explanation: "15 minutes",
+        },
+        {
+            question: ``,
+            options: [
+                "",
+                "",
+                "",
+                "",
+            ],
+            correct: 0,
+            explanation: "",
+        },
                           
         ],
     },
