@@ -1071,14 +1071,7 @@ export default function AomExamTest({
             onClick={openAnswerKeyPage}
             className="relative flex w-full items-center justify-center rounded-3xl border border-violet-400/30 bg-linear-to-r from-violet-950 via-slate-950 to-fuchsia-950 px-12 py-5 text-center shadow-xl transition hover:border-violet-300/60"
           >
-            <span>
-              <span className="block text-lg font-bold text-white sm:text-xl">
-                Answer key & explanation
-              </span>
-              <span className="mt-1 block text-sm text-violet-200">
-                Open every question with its options and explanation
-              </span>
-            </span>
+            <span className="text-lg font-bold text-white sm:text-xl">View Solution</span>
             <ChevronRight className="absolute right-6 h-5 w-5 shrink-0 text-violet-100" />
           </button>
         </div>
