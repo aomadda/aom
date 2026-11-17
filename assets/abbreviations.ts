@@ -257,7 +257,10 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
-      
+      { acronym: "BFT", fullForm: "Brake Feel Test",
+        explanation: "When to conduct: Immediately after starting from the location where the crew took over",
+        reference: "--"
+      },
       
       { acronym: "BIC", fullForm: "Bogie Isolation Cock",
         explanation: "Will be added later",
@@ -304,6 +307,10 @@ type AbbreviationItem = {
       },
       { acronym: "BPT", fullForm: "Blank Paper Ticket",
         explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "BPT", fullForm: "Brake Power Test",
+        explanation: "When to conduct: In the first block section or at the first available opportunity",
         reference: "--"
       },
       

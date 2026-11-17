@@ -2022,6 +2022,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness sports boxing Boxing",
   },
   {
+    href: "/topics/professional-subject/brake-feel-test-and-brake-power-test",
+    title: "Brake Feel Test and Brake Power Test",
+    category: "Study Topics",
+    parent: "Topics › Professional Subject",
+    keywords:
+      "topics professional subject brake feel test and brake power test Brake Feel Test and Brake Power Test BP AFI A-9 ACTM coaching goods ALP",
+  },
+  {
     href: "/quizzes/professional-subject/brake-power-certificate",
     title: "Brake Power Certificate",
     category: "Quizzes",
@@ -2113,6 +2121,14 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness › States Information",
     keywords: "general awareness states information chandigarh Chandigarh",
+  },
+  {
+    href: "/topics/financial-rules/charged-expenditure",
+    title: "Charged Expenditure",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules charged expenditure Charged Expenditure voted CFI consolidated fund of india finance code article 112 article 113 CAG",
   },
   {
     href: "/general-awareness/chemistry",
@@ -2441,6 +2457,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Professional Subject",
     keywords: "quizzes professional subject dedicated freight corridors Dedicated Freight Corridors",
+  },
+  {
+    href: "/topics/financial-rules/depreciation-reserve-fund",
+    title: "Depreciation Reserve Fund",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules depreciation reserve fund Depreciation Reserve Fund DRF RCC demand 14 demand 16 major head 8115 SMH 12",
   },
   {
     href: "/topics/operating-material/defective-signals",
@@ -2816,6 +2840,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness important days february February",
   },
   {
+    href: "/topics/financial-rules/field-book",
+    title: "Field Book / Level Books",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules field book level books Field Book / Level Books 1317 E SSE AEN measurement books",
+  },
+  {
     href: "/quizzes/financial-rules/finance",
     title: "Finance",
     category: "Quizzes",
@@ -3158,6 +3190,14 @@ export const searchTopics: SearchTopic[] = [
     category: "General Awareness",
     parent: "General Awareness › Sports",
     keywords: "general awareness sports golf Golf",
+  },
+  {
+    href: "/topics/financial-rules/government-accounts",
+    title: "Government Accounts",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules government accounts Government Accounts consolidated fund contingency fund public account article 266 267",
   },
   {
     href: "/topics/financial-rules/government-e-market",
@@ -5646,6 +5686,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes general awareness history History",
   },
   {
+    href: "/topics/financial-rules/history-book",
+    title: "History Book",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules history book History Book road vehicles chasis mileage commissioning decommissioning",
+  },
+  {
     href: "/quizzes/general-awareness/history/quiz-1",
     title: "History Quiz 1",
     category: "Quizzes",
@@ -5915,6 +5963,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "topics operating material ibs IBS Intermediate Block Signal (IBS) G.R. S.R. 3.75 14.13 14.14 axle counter",
   },
   {
+    href: "/topics/financial-rules/internal-check",
+    title: "Internal Check Vs Internal Audit",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules internal check vs internal audit Internal Check Vs Internal Audit day to day transactions fraud system compliance",
+  },
+  {
     href: "/general-awareness/international-airports",
     title: "International Airports",
     category: "General Awareness",
@@ -6144,6 +6200,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Professional Subject",
     keywords: "quizzes professional subject locos data Locos Data",
+  },
+  {
+    href: "/topics/financial-rules/log-book",
+    title: "Log Book",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules log book Log Book vehicle maintenance warranty odometer four-wheeler",
   },
   {
     href: "/topics/operating-material/lorry",
@@ -7771,6 +7835,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness ramsar sites Ramsar Sites",
   },
   {
+    href: "/topics/financial-rules/rashtriya-rail-sanraksha-kosh",
+    title: "Rashtriya Rail Sanraksha Kosh",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules rashtriya rail sanraksha kosh Rashtriya Rail Sanraksha Kosh RRSK Kakodkar railway safety track renewals ROB RUB",
+  },
+  {
     href: "/topics/information-technology-apps/rtis",
     title: "Real Time Train Information System (RTIS)",
     category: "Study Topics",
@@ -7855,6 +7927,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Establishment Rules › Railway Servants (Leave) Rules 1949",
     keywords: "quizzes establishment rules railway servants leave rules 1949 restricted holiday Restricted Holiday",
+  },
+  {
+    href: "/topics/financial-rules/revenue-expenditure",
+    title: "Revenue Expenditure",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules revenue expenditure Revenue Expenditure deferred revenue capital asset matching principle advertisement balance sheet",
   },
   {
     href: "/acts/right-to-information-act-2005",
@@ -11554,6 +11634,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "general awareness states information tripura Tripura",
   },
   {
+    href: "/topics/financial-rules/two-packet-tender-system",
+    title: "Two Packet Tender System",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules two packet tender system Two Packet Tender System GCC clause 7 A technical commercial financial offer SAG HAG",
+  },
+  {
     href: "/general-awareness/unesco-world-heritage-sites",
     title: "Unesco World Heritage Sites",
     category: "General Awareness",
@@ -11760,6 +11848,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Acts & Rules",
     parent: "Acts",
     keywords: "acts workmen compensation act 1923 Workmen Compensation Act 1923",
+  },
+  {
+    href: "/topics/financial-rules/works-programme",
+    title: "Works Programme",
+    category: "Study Topics",
+    parent: "Topics › Financial Rules",
+    keywords:
+      "topics financial rules works programme Works Programme PWP FWP advance planning ROR plan heads",
   },
   {
     href: "/general-awareness/world-information",

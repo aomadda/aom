@@ -4,6 +4,7 @@ import {
   Boxes,
   Briefcase,
   ChevronRight,
+  Disc,
   Gauge,
   Ruler,
   TriangleAlert,
@@ -23,6 +24,17 @@ const professionalSubjectTopics = [
     iconClassName: 'text-rose-200',
     borderClassName: 'border-rose-500/25 hover:border-rose-400/45',
     ringClassName: 'ring-rose-500/10',
+  },
+  {
+    href: '/topics/professional-subject/brake-feel-test-and-brake-power-test',
+    title: 'Brake Feel Test and Brake Power Test',
+    subtitle: 'Brake tests',
+    description: 'Brake feel test and brake power test study notes for the AOM professional subject.',
+    icon: Disc,
+    accent: 'from-red-500/20 via-orange-500/10 to-transparent',
+    iconClassName: 'text-red-200',
+    borderClassName: 'border-red-500/25 hover:border-red-400/45',
+    ringClassName: 'ring-red-500/10',
   },
   {
     href: '/topics/professional-subject/double-stack-dwarf-container',
@@ -127,7 +139,7 @@ const ProfessionalSubjectPage = () => {
             Professional Subject
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            AOM professional subject notes — accident inquiries, containers, terminals, coaches, ODC, staff categorization, and wagon speeds.
+            AOM professional subject notes — accident inquiries, brake feel and brake power tests, containers, terminals, coaches, ODC, staff categorization, and wagon speeds.
           </p>
         </div>
 

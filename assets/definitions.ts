@@ -831,6 +831,12 @@ any other accident, which in the opinion of the Chief Commissioner of Railway Sa
       definition: "Wagon Turn Round is the time interval between two successive loadings. Calculated from the time a wagon is placed for the loading until it again becomes available for reloading. This represents the total time a wagon spends in one complete operational cycle.",
       reference: "--"
     },
+    {
+      number: 127,
+      term: "Internal Check",
+      definition: "The check exercised by railway accounts office on financial transactions is called Internal Check.",
+      reference: "--"
+    }
     
     
     
