@@ -1,7 +1,7 @@
 export type AomExamQuestion = {
   question: string
   options: string[]
-  correct: number
+  correct: number | null
   explanation?: string
 }
 
@@ -79,6 +79,10 @@ export function scoreExam(questions: AomExamQuestion[], answers: (number | null)
 
   questions.forEach((question, index) => {
     const answer = answers[index]
+    if (typeof question.correct !== 'number') {
+      unanswered += 1
+      return
+    }
     if (answer === null || answer === undefined) {
       unanswered += 1
       return

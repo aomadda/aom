@@ -16,18 +16,21 @@ export default function Aom30PercentLdce2026Page() {
       title: 'Professional Subject',
       startIndex: 0,
       count: professional.length,
+      attemptLimit: 80,
     },
     {
       id: 'gk-rajabhasha',
       title: 'GK & Rajabhasha',
       startIndex: professional.length,
       count: gkRajabhasha.length,
+      attemptLimit: 40,
     },
     {
       id: 'establishment-finance-rules',
       title: 'Establishment & Financial Rules',
       startIndex: professional.length + gkRajabhasha.length,
       count: establishment.length,
+      attemptLimit: 30,
     },
   ].filter((section) => section.count > 0)
 

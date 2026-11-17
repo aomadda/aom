@@ -51,6 +51,7 @@ export type AomExamPaperSection = {
   title: string
   startIndex: number
   count: number
+  attemptLimit?: number
 }
 
 type AomExamTestProps = {
@@ -103,6 +104,24 @@ function getSectionForIndex(sections: AomExamPaperSection[], index: number) {
       (section) => index >= section.startIndex && index < section.startIndex + section.count,
     ) ?? sections[0]
   )
+}
+
+function countSectionAnswers(section: AomExamPaperSection, answers: (number | null)[]) {
+  let answered = 0
+  for (let offset = 0; offset < section.count; offset += 1) {
+    if (answers[section.startIndex + offset] != null) answered += 1
+  }
+  return answered
+}
+
+function isAttemptBlocked(
+  section: AomExamPaperSection,
+  questionIndex: number,
+  answers: (number | null)[],
+) {
+  if (section.attemptLimit == null) return false
+  if (answers[questionIndex] != null) return false
+  return countSectionAnswers(section, answers) >= section.attemptLimit
 }
 
 function collapseQuestionText(value: string) {
@@ -308,7 +327,7 @@ export default function AomExamTest({
   const currentQuestionRef = useRef(0)
   const restoredRef = useRef(false)
 
-  const [phase, setPhase] = useState<'loading' | 'instructions' | 'exam' | 'results'>('loading')
+  const [phase, setPhase] = useState<'loading' | 'instructions' | 'exam' | 'results' | 'answer-key'>('loading')
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [userAnswers, setUserAnswers] = useState<(number | null)[]>(() =>
     new Array(questions.length).fill(null),
@@ -317,13 +336,19 @@ export default function AomExamTest({
   const [markedForReview, setMarkedForReview] = useState<boolean[]>(() =>
     boolArray(questions.length),
   )
-  const [timeLeft, setTimeLeft] = useState(() => getExamDurationSeconds(questions.length || 1))
+  const attemptableCount =
+    sections &&
+    sections.length > 0 &&
+    sections.every((section) => typeof section.attemptLimit === 'number')
+      ? sections.reduce((sum, section) => sum + (section.attemptLimit ?? 0), 0)
+      : questions.length
+  const [timeLeft, setTimeLeft] = useState(() => getExamDurationSeconds(attemptableCount || 1))
   const [acceptedRules, setAcceptedRules] = useState(false)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
   const [completed, setCompleted] = useState(false)
   const [hasResume, setHasResume] = useState(false)
 
-  const durationSeconds = getExamDurationSeconds(questions.length || 1)
+  const durationSeconds = getExamDurationSeconds(attemptableCount || 1)
   const durationMinutes = Math.ceil(durationSeconds / 60)
   const paperSections = useMemo<AomExamPaperSection[]>(() => {
     if (sections && sections.length > 0) return sections
@@ -515,8 +540,25 @@ export default function AomExamTest({
       window.history.replaceState(null, '', `${window.location.pathname}${nextSearch ? `?${nextSearch}` : ''}`)
     }
     const viewResult = !reattempt && params.get('view') === 'result'
+    const viewAnswerKey = !reattempt && params.get('view') === 'answer-key'
 
     ;(async () => {
+      if (viewAnswerKey) {
+        try {
+          const raw = window.localStorage.getItem(scopedQuizStorageKey(resultsKey))
+          const parsed = raw ? (JSON.parse(raw) as StoredResult) : null
+          if (parsed?.answers?.length === questions.length) {
+            setUserAnswers(answerArray(questions.length, parsed.answers))
+          }
+        } catch {
+          // show the key even if stored answers cannot be read
+        }
+        setCompleted(true)
+        finishedRef.current = true
+        setPhase('answer-key')
+        return
+      }
+
       if (reattempt) {
         setCompleted(false)
         setHasResume(false)
@@ -636,6 +678,16 @@ export default function AomExamTest({
     setPhase('results')
   }, [questions.length, resultsKey])
 
+  const openAnswerKeyPage = useCallback(() => {
+    const params = new URLSearchParams(window.location.search)
+    params.delete('reattempt')
+    params.set('view', 'answer-key')
+    router.push(`${window.location.pathname}?${params.toString()}`)
+    finishedRef.current = true
+    setPhase('answer-key')
+    window.scrollTo({ top: 0 })
+  }, [router])
+
   useEffect(() => {
     if (phase !== 'exam') return
     const tick = () => {
@@ -693,6 +745,8 @@ export default function AomExamTest({
 
   const selectAnswer = (optionIndex: number) => {
     setUserAnswers((prev) => {
+      const section = getSectionForIndex(paperSections, currentQuestion)
+      if (section && isAttemptBlocked(section, currentQuestion, prev)) return prev
       const next = [...prev]
       next[currentQuestion] = optionIndex
       return next
@@ -793,7 +847,7 @@ export default function AomExamTest({
                 <p className="text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                   Questions
                 </p>
-                <p className="mt-1 text-2xl font-bold text-slate-900">{questions.length}</p>
+                <p className="mt-1 text-2xl font-bold text-slate-900">{attemptableCount}</p>
                 {hasPaperNav ? (
                   <p className="text-xs text-indigo-700">
                     {paperSections.length} {sectionNounPlural} in one test
@@ -855,13 +909,16 @@ export default function AomExamTest({
                 <h3 className="mb-3 text-sm font-bold text-slate-800">{sectionsHeading}</h3>
                 <ul className="space-y-2 text-sm text-slate-700">
                   {paperSections.map((section, index) => (
-                    <li key={section.id} className="flex items-center justify-between gap-3">
-                      <span>
+                    <li key={section.id}>
+                      <p>
                         {index + 1}. {section.title}
-                      </span>
-                      <span className="shrink-0 text-xs font-semibold text-indigo-700">
+                      </p>
+                      <p className="text-xs font-semibold text-indigo-700">
                         {section.count} questions
-                      </span>
+                        {section.attemptLimit != null
+                          ? ` (Attempt any ${section.attemptLimit} questions)`
+                          : ''}
+                      </p>
                     </li>
                   ))}
                 </ul>
@@ -941,7 +998,6 @@ export default function AomExamTest({
 
   if (phase === 'results') {
     const result = scoreExam(questions, userAnswers)
-    const nextQuiz = getNextQuiz(categoryId, quizId)
     return (
       <div className="min-h-screen bg-slate-950 px-4 py-8 sm:py-12">
         <div className="mx-auto max-w-6xl">
@@ -1010,7 +1066,47 @@ export default function AomExamTest({
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-3xl border border-violet-500/20 bg-slate-950 shadow-xl">
+          <button
+            type="button"
+            onClick={openAnswerKeyPage}
+            className="relative flex w-full items-center justify-center rounded-3xl border border-violet-400/30 bg-linear-to-r from-violet-950 via-slate-950 to-fuchsia-950 px-12 py-5 text-center shadow-xl transition hover:border-violet-300/60"
+          >
+            <span>
+              <span className="block text-lg font-bold text-white sm:text-xl">
+                Answer key & explanation
+              </span>
+              <span className="mt-1 block text-sm text-violet-200">
+                Open every question with its options and explanation
+              </span>
+            </span>
+            <ChevronRight className="absolute right-6 h-5 w-5 shrink-0 text-violet-100" />
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  if (phase === 'answer-key') {
+    const nextQuiz = getNextQuiz(categoryId, quizId)
+    return (
+      <div className="min-h-screen bg-slate-950 px-4 py-8 sm:py-12">
+        <div className="mx-auto max-w-6xl">
+          <button
+            type="button"
+            onClick={() => {
+              const params = new URLSearchParams(window.location.search)
+              params.set('view', 'result')
+              router.push(`${window.location.pathname}?${params.toString()}`)
+              openStoredResults()
+            }}
+            className="mb-4 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white"
+          >
+            Back to result
+          </button>
+          <div
+            id="aom-answer-key"
+            className="overflow-hidden rounded-3xl border border-violet-500/20 bg-slate-950 shadow-xl"
+          >
             <div className="bg-linear-to-r from-slate-950 via-violet-950 to-fuchsia-950 px-6 py-7 text-center text-white">
               <h2 className="text-2xl font-bold">Answer key & explanation</h2>
             </div>
@@ -1029,8 +1125,9 @@ export default function AomExamTest({
                     .map((question, localIndex) => {
                       const index = section.startIndex + localIndex
                       const userAnswer = userAnswers[index]
+                      const hasKey = typeof question.correct === 'number'
                       const skipped = userAnswer === null || question.options[userAnswer] == null
-                      const isCorrect = userAnswer === question.correct
+                      const isCorrect = hasKey && userAnswer === question.correct
                       return (
                         <li
                           key={`${index}-${question.question.slice(0, 24)}`}
@@ -1042,48 +1139,64 @@ export default function AomExamTest({
                             </h3>
                             <span
                               className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                                skipped
-                                  ? 'bg-amber-500/15 text-amber-200'
-                                  : isCorrect
-                                    ? 'bg-emerald-500/15 text-emerald-200'
-                                    : 'bg-red-500/15 text-red-200'
+                                !hasKey
+                                  ? 'bg-slate-500/15 text-slate-200'
+                                  : skipped
+                                    ? 'bg-amber-500/15 text-amber-200'
+                                    : isCorrect
+                                      ? 'bg-emerald-500/15 text-emerald-200'
+                                      : 'bg-red-500/15 text-red-200'
                               }`}
                             >
-                              {skipped ? 'Unanswered' : isCorrect ? 'Correct' : 'Wrong (−0.33)'}
+                              {!hasKey
+                                ? 'Not scored'
+                                : skipped
+                                  ? 'Unanswered (0)'
+                                  : isCorrect
+                                    ? 'Correct (+1)'
+                                    : 'Wrong (−0.33)'}
                             </span>
                           </div>
                           <AnswerQuestionBody question={question.question} />
                           <div className="space-y-2.5">
                             {question.options.map((option, optionIndex) => {
-                              const isCorrectOption = optionIndex === question.correct
+                              const isCorrectOption = hasKey && optionIndex === question.correct
                               const isUserOption = userAnswer === optionIndex
                               const rightLabel =
                                 isCorrectOption && isCorrect
                                   ? 'Correct'
-                                  : isUserOption && !isCorrect
+                                  : isUserOption && hasKey && !isCorrect
                                     ? 'Your answer'
                                     : null
                               return (
                                 <div
                                   key={`${index}-${optionIndex}-${option}`}
                                   className={`flex items-center gap-3 rounded-xl border-2 px-3 py-3 ${
-                                    isCorrectOption
-                                      ? 'border-emerald-500/40 bg-emerald-500/10'
-                                      : 'border-rose-500/25 bg-rose-500/10'
+                                    !hasKey
+                                      ? 'border-white/15 bg-white/5'
+                                      : isCorrectOption
+                                        ? 'border-emerald-500/40 bg-emerald-500/10'
+                                        : 'border-rose-500/25 bg-rose-500/10'
                                   }`}
                                 >
                                   <span
                                     className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                                      isCorrectOption
-                                        ? 'bg-emerald-600 text-white'
-                                        : 'bg-rose-500 text-white'
+                                      !hasKey
+                                        ? 'bg-slate-600 text-white'
+                                        : isCorrectOption
+                                          ? 'bg-emerald-600 text-white'
+                                          : 'bg-rose-500 text-white'
                                     }`}
                                   >
                                     {String.fromCharCode(65 + optionIndex)}
                                   </span>
                                   <span
                                     className={`min-w-0 text-sm font-medium sm:text-base ${
-                                      isCorrectOption ? 'text-emerald-100' : 'text-rose-100'
+                                      !hasKey
+                                        ? 'text-slate-100'
+                                        : isCorrectOption
+                                          ? 'text-emerald-100'
+                                          : 'text-rose-100'
                                     }`}
                                   >
                                     {option}
@@ -1148,6 +1261,8 @@ export default function AomExamTest({
     return null
   }
 
+  const attemptBlocked = isAttemptBlocked(activeSection, currentQuestion, userAnswers)
+
   return (
     <div className="min-h-screen bg-[#eef2f8] px-3 py-4 sm:px-4 sm:py-6">
       <div className="mx-auto max-w-7xl">
@@ -1189,9 +1304,9 @@ export default function AomExamTest({
           >
             {paperSections.map((section) => {
               const isActive = section.id === activeSection.id
-              const answered = questions
-                .slice(section.startIndex, section.startIndex + section.count)
-                .filter((_, index) => userAnswers[section.startIndex + index] !== null).length
+              const answered = countSectionAnswers(section, userAnswers)
+              const attemptCap = section.attemptLimit
+              const limitReached = attemptCap != null && answered >= attemptCap
               return (
                 <button
                   key={section.id}
@@ -1216,7 +1331,9 @@ export default function AomExamTest({
                     {section.title}
                   </p>
                   <p className={`mt-0.5 text-xs ${isActive ? 'text-indigo-100' : 'text-slate-500'}`}>
-                    {answered}/{section.count} answered
+                    {attemptCap != null
+                      ? `${answered}/${attemptCap} attempted${limitReached ? ' · limit reached' : ''}`
+                      : `${answered}/${section.count} answered`}
                   </p>
                 </button>
               )
@@ -1232,6 +1349,13 @@ export default function AomExamTest({
               </p>
             ) : null}
             <ExamQuestionPrompt number={localQuestion + 1} question={question.question} />
+            {attemptBlocked ? (
+              <p className="mb-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
+                Attempt limit reached. You can attempt only {activeSection.attemptLimit} questions
+                in {activeSection.title}. Clear one answer in this paper to attempt another
+                question.
+              </p>
+            ) : null}
             <div className="space-y-2.5">
               {question.options.map((option, index) => {
                 const isSelected = selected === index
@@ -1240,11 +1364,12 @@ export default function AomExamTest({
                     <button
                       type="button"
                       onClick={() => selectAnswer(index)}
+                      disabled={attemptBlocked}
                       aria-pressed={isSelected}
-                      className={`flex min-w-0 flex-1 items-center gap-3 rounded-xl border px-3 py-3 text-left transition ${
+                      className={`flex min-w-0 flex-1 items-center gap-3 rounded-xl border px-3 py-3 text-left transition disabled:cursor-not-allowed disabled:opacity-50 ${
                         isSelected
                           ? 'border-indigo-500 bg-indigo-50 text-indigo-950 shadow-sm'
-                          : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300 hover:bg-indigo-50/50'
+                          : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300 hover:bg-indigo-50/50 disabled:hover:border-slate-200 disabled:hover:bg-white'
                       }`}
                     >
                       <span
@@ -1329,15 +1454,20 @@ export default function AomExamTest({
                     userAnswers[index] !== null,
                     markedForReview[index],
                   )
+                  const locked = isAttemptBlocked(activeSection, index, userAnswers)
                   return (
                     <button
                       key={index}
                       type="button"
                       onClick={() => goToQuestion(index)}
+                      title={locked ? 'Attempt limit reached' : undefined}
+                      aria-disabled={locked || undefined}
                       className={`relative flex h-11 items-center justify-center rounded-lg text-sm font-bold ${STATUS_STYLES[status]} ${
+                        locked ? 'cursor-not-allowed opacity-40' : ''
+                      } ${
                         currentQuestion === index ? 'ring-2 ring-indigo-600 ring-offset-2 ring-offset-white' : ''
                       }`}
-                      aria-label={`Question ${localIndex + 1}, ${status}`}
+                      aria-label={`Question ${localIndex + 1}, ${locked ? 'attempt limit reached' : status}`}
                     >
                       {localIndex + 1}
                       {status === 'answered-review' ? (
