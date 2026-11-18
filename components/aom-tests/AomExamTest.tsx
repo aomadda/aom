@@ -1069,7 +1069,7 @@ export default function AomExamTest({
           <button
             type="button"
             onClick={openAnswerKeyPage}
-            className="relative flex w-full items-center justify-center rounded-3xl border border-violet-400/30 bg-linear-to-r from-violet-950 via-slate-950 to-fuchsia-950 px-12 py-5 text-center shadow-xl transition hover:border-violet-300/60"
+            className="relative flex w-full items-center justify-center rounded-lg border border-violet-400/30 bg-linear-to-r from-violet-950 via-slate-950 to-fuchsia-950 px-12 py-5 text-center shadow-xl transition hover:border-violet-300/60"
           >
             <span className="text-lg font-bold text-white sm:text-xl uppercase">View Solutions</span>
             <ChevronRight className="absolute right-6 h-5 w-5 shrink-0 text-violet-100" />
@@ -1225,7 +1225,7 @@ export default function AomExamTest({
               <div className="flex justify-end border-t border-white/10 px-5 py-5 sm:px-8">
                 <Link
                   href={nextQuiz.href}
-                  className="inline-flex max-w-full items-center gap-2 rounded-full bg-linear-to-r from-violet-600 to-fuchsia-600 px-5 py-2.5 text-sm font-semibold text-white"
+                  className="inline-flex max-w-full items-center gap-2 rounded-lg bg-linear-to-r from-violet-600 to-fuchsia-600 px-5 py-2.5 text-sm font-semibold text-white"
                 >
                   <span className="min-w-0 text-right">
                     <span className="block text-[11px] font-medium tracking-wide text-violet-100 uppercase">
