@@ -21,7 +21,7 @@ export const storesMaterials = {
             "UDM",
             "None of the above"
         ],
-        correct: 2.,
+        correct: 2,
         explanation: `UDM (User Depot Module).
         IREPS = The website used by all departments for issuing of tenders for goods/services/works.
         iMMS = Module used by stores department for carrying out various activities.
@@ -59,17 +59,6 @@ export const storesMaterials = {
         ],
         correct: 0,
         explanation: "More than Rs. 50 lakh",
-    },
-    {
-        question: ``,
-        options: [
-            "",
-            "",
-            "",
-            ""
-        ],
-        correct: 0,
-        explanation: "",
     },
   
 ],

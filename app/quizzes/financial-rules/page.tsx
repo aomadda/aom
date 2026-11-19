@@ -71,6 +71,14 @@ const rules = [
     hoverColor: 'from-cyan-600 to-blue-700',
     description: 'Plan heads, capital works allocation, and railway plan head rules'
   },
+  {
+    href: '/quizzes/financial-rules/stores-materials',
+    title: 'Stores & Materials',
+    icon: '📦',
+    color: 'from-rose-500 to-orange-600',
+    hoverColor: 'from-rose-600 to-orange-700',
+    description: 'Procurement of stock and non-stock items, scrap sales, warehousing, UDM, iMMS, IREPS, and tender limits'
+  },
 ]
 
 const FinancialRules = () => {

@@ -7446,6 +7446,14 @@ export const searchTopics: SearchTopic[] = [
     keywords: "quizzes establishment rules railway allowances HRA NDA CEA",
   },
   {
+    href: "/quizzes/establishment-rules/railway-board-establishment",
+    title: "Railway Board Establishment (RBE)",
+    category: "Quizzes",
+    parent: "Quizzes › Establishment Rules",
+    keywords:
+      "quizzes establishment rules railway board establishment RBE 2026 pointsmen pension computer advance station master NPS UPS CGA accommodation training family pension COTRAINS IREM",
+  },
+  {
     href: "/topics/financial-rules/railway-budget",
     title: "Railway Budget",
     category: "Study Topics",
@@ -11349,6 +11357,14 @@ export const searchTopics: SearchTopic[] = [
     category: "Study Topics",
     parent: "Topics › Operating Material",
     keywords: "topics operating material stop signals Stop Signals Reception Despatch Other",
+  },
+  {
+    href: "/quizzes/financial-rules/stores-materials",
+    title: "Stores & Materials",
+    category: "Quizzes",
+    parent: "Quizzes › Financial Rules",
+    keywords:
+      "quizzes financial rules stores materials Stores & Materials procurement scrap warehousing UDM iMMS IREPS DMTR limited tender open tender",
   },
   {
     href: "/quizzes/establishment-rules/railway-servants-leave-rules-1949/study-leave",

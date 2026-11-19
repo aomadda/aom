@@ -242,6 +242,15 @@ const rules = [
     description: 'Temporary railway servant definition, notice period, termination, probation, and apprentice rules'
   },
   {
+    href: '/quizzes/establishment-rules/railway-board-establishment',
+    title: 'Railway Board Establishment (RBE)',
+    year: 'RBE',
+    icon: '📜',
+    color: 'from-indigo-500 to-violet-600',
+    hoverColor: 'from-indigo-600 to-violet-700',
+    description: 'RBE 2026 circulars on pointsmen cadre, pension, computer advance, station master designation, NPS to UPS, CGA, accommodation, and training'
+  },
+  {
     href: '/quizzes/establishment-rules/miscelaneous',
     title: 'Miscellaneous',
     year: 'Misc',
