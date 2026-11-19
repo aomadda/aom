@@ -138,16 +138,82 @@ export const aomFinanceEstablishmentRulesTest46 = {
                 explanation: "Disapproval Policy Cut",
             },
             {
-                question: ``,
+                question: `Railway Convention Committee (RCC) constituted once in every ______ years`,
                 options: [
-                    "",
-                    "",
-                    "",
-                    ""
+                    "2 years",
+                    "3 years",
+                    "4 years",
+                    "5 years"
+                ],
+                correct: 3,
+                explanation: "5 years",
+            },
+            {
+                question: `The statements which are presented to the Parliament (through PAC) comparing the amount of actual expenditure with the Budget Grants are called as ______`,
+                options: [
+                    "Annual Account Current",
+                    "Appropriation Accounts",
+                    "Appropriation Bills",
+                    "Capital & Revenue Accounts"
+                ],
+                correct: 1,
+                explanation: "Appropriation Accounts",
+            },
+            {
+                question: `Annexure "A" of the Appropriation Accounts is statement of _______`,
+                options: [
+                    "Unsanctioned expenditures",
+                    "Under charges detected by Audit & Railways",
+                    "Important misclassifications of expenditure",
+                    "Credits & Recoveries"
                 ],
                 correct: 0,
-                explanation: "",
+                explanation: "Unsanctioned expenditures",
             },
-        ]
-    },
-}
+            {
+                question: `Annexure "I" of the Appropriation Accounts is statement of _______`,
+                options: [
+                    "Unsanctioned expenditures",
+                    "Irregular Reapproraitions",
+                    "Important misclassifications",
+                    "Defects in Budgeting"
+                ],
+                correct: 1,
+                explanation: "Irregular Reapproraitions",
+            },
+            {
+                question: `Annexure "J" of the Appropriation Accounts is statement of _______`,
+                options: [
+                    "Unsanctioned expenditures",
+                    "Irregular Reapproraitions",
+                    "Important misclassifications",
+                    "Defects in Budgeting"
+                ],
+                correct: 2,
+                explanation: "Important misclassifications",
+            },
+            {
+                question: `After independence, the first RCC was constituted in ______, since then, each Lok Sabha has been having a RCC`,
+                options: [
+                    "1947",
+                    "1948",
+                    "1949",
+                    "1950"
+                ],
+                correct: 2,
+                explanation: "1949",
+            },
+            {
+                question: `Which of the following pairs (Committee & Tenure) is INCORRECT?`,
+                options: [
+                    "PAC = 1 year",
+                    "Government Assurances = 1 year",
+                    "Estimates Committee = 5 years",
+                    "RCC = 5 years",
+                    
+                ],
+                correct: 2,
+                explanation: "Estimates Committee = 5 years (Correct answer is 1 year)",
+            },
+            {
+                que

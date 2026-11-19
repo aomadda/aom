@@ -6,6 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   AlertTriangle,
   Check,
+  ChevronDown,
   ChevronRight,
   Clock,
   Trash2,
@@ -304,6 +305,96 @@ function StatusSwatch({ status }: { status: AomQuestionStatus }) {
   )
 }
 
+function ExamToolsPanel({
+  hasPaperNav,
+  activeSection,
+  currentQuestion,
+  userAnswers,
+  visited,
+  markedForReview,
+  counts,
+  onOpenQuestion,
+}: {
+  hasPaperNav: boolean
+  activeSection: AomExamPaperSection
+  currentQuestion: number
+  userAnswers: (number | null)[]
+  visited: boolean[]
+  markedForReview: boolean[]
+  counts: {
+    answered: number
+    notAnswered: number
+    notVisited: number
+    review: number
+  }
+  onOpenQuestion: (index: number) => void
+}) {
+  return (
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+        <h3 className="text-sm font-bold text-slate-800">Question palette</h3>
+        {hasPaperNav ? (
+          <p className="mb-3 mt-1 text-xs text-slate-500">{activeSection.title}</p>
+        ) : (
+          <div className="mb-3" />
+        )}
+        <div className="grid grid-cols-5 gap-2 sm:grid-cols-6 lg:grid-cols-5">
+          {Array.from({ length: activeSection.count }, (_, localIndex) => {
+            const index = activeSection.startIndex + localIndex
+            const status = getQuestionStatus(
+              visited[index],
+              userAnswers[index] !== null,
+              markedForReview[index],
+            )
+            const locked = isAttemptBlocked(activeSection, index, userAnswers)
+            return (
+              <button
+                key={index}
+                type="button"
+                onClick={() => onOpenQuestion(index)}
+                title={locked ? 'Attempt limit reached' : undefined}
+                aria-disabled={locked || undefined}
+                className={`relative flex h-11 items-center justify-center rounded-lg text-sm font-bold ${STATUS_STYLES[status]} ${
+                  locked ? 'cursor-not-allowed opacity-40' : ''
+                } ${
+                  currentQuestion === index ? 'ring-2 ring-indigo-600 ring-offset-2 ring-offset-white' : ''
+                }`}
+                aria-label={`Question ${localIndex + 1}, ${locked ? 'attempt limit reached' : status}`}
+              >
+                {localIndex + 1}
+                {status === 'answered-review' ? (
+                  <span className="absolute -right-1 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md ring-2 ring-white">
+                    <Check className="h-4 w-4 stroke-3" />
+                  </span>
+                ) : null}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+        <h3 className="mb-3 text-sm font-bold text-slate-800">Status legend</h3>
+        <div className="space-y-2.5">
+          {LEGEND.map((item) => (
+            <div key={item.status} className="flex items-start gap-3 text-xs text-slate-700 sm:text-sm">
+              <StatusSwatch status={item.status} />
+              <p>{item.label}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-600">
+          <p>Answered: {counts.answered}</p>
+          <p>Not answered: {counts.notAnswered}</p>
+          <p>Not visited: {counts.notVisited}</p>
+          <p>Marked for review: {counts.review}</p>
+        </div>
+        {hasPaperNav ? <p className="mt-3 text-xs text-slate-500">Counts are for the full test.</p> : null}
+      </div>
+    </div>
+  )
+}
+
 export default function AomExamTest({
   title,
   categoryId,
@@ -345,6 +436,8 @@ export default function AomExamTest({
   const [timeLeft, setTimeLeft] = useState(() => getExamDurationSeconds(attemptableCount || 1))
   const [acceptedRules, setAcceptedRules] = useState(false)
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false)
+  const [sectionMenuOpen, setSectionMenuOpen] = useState(false)
+  const [examToolsOpen, setExamToolsOpen] = useState(false)
   const [completed, setCompleted] = useState(false)
   const [hasResume, setHasResume] = useState(false)
 
@@ -1259,79 +1352,187 @@ export default function AomExamTest({
   return (
     <div className="min-h-screen bg-[#eef2f8] px-3 py-4 sm:px-4 sm:py-6">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-4 flex flex-col gap-3 rounded-2xl bg-indigo-600 px-4 py-4 text-white shadow-md sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <div>
-            <p className="text-xs font-semibold tracking-wide text-indigo-100 uppercase">
-              AOM Tests
-            </p>
-            <h1 className="text-lg font-bold sm:text-xl">{title}</h1>
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white">
-              Q {localQuestion + 1} / {activeSection.count}
-            </span>
-            {hasPaperNav ? (
-              <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-indigo-50">
-                Total {currentQuestion + 1} / {questions.length}
+        <div className="mb-4 rounded-2xl bg-indigo-600 px-4 py-4 text-white shadow-md sm:px-6">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-xs font-semibold tracking-wide text-indigo-100 uppercase">
+                AOM Tests
+              </p>
+              <h1 className="text-lg font-bold sm:text-xl">{title}</h1>
+            </div>
+            <div className="hidden flex-wrap items-center gap-2 lg:flex">
+              <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white">
+                Q {localQuestion + 1} / {activeSection.count}
               </span>
-            ) : null}
-            <span
-              className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-sm font-bold ${
-                timerUrgent ? 'bg-rose-500 text-white' : 'bg-white text-indigo-700'
-              }`}
-              aria-live="polite"
+              {hasPaperNav ? (
+                <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-indigo-50">
+                  Total {currentQuestion + 1} / {questions.length}
+                </span>
+              ) : null}
+              <span
+                className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-sm font-bold ${
+                  timerUrgent ? 'bg-rose-500 text-white' : 'bg-white text-indigo-700'
+                }`}
+                aria-live="polite"
+              >
+                <Clock className="h-4 w-4" />
+                {formatExamTimer(timeLeft)}
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-3 space-y-3 lg:hidden">
+            <button
+              type="button"
+              onClick={() => setExamToolsOpen((open) => !open)}
+              aria-expanded={examToolsOpen}
+              className="flex w-full items-center justify-between rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-left text-sm font-semibold text-white"
             >
-              <Clock className="h-4 w-4" />
-              {formatExamTimer(timeLeft)}
-            </span>
+              <span>{examToolsOpen ? 'Hide question palette' : 'Show question palette'}</span>
+              <ChevronDown className={`h-4 w-4 shrink-0 transition ${examToolsOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {examToolsOpen ? (
+              <ExamToolsPanel
+                hasPaperNav={hasPaperNav}
+                activeSection={activeSection}
+                currentQuestion={currentQuestion}
+                userAnswers={userAnswers}
+                visited={visited}
+                markedForReview={markedForReview}
+                counts={counts}
+                onOpenQuestion={(index) => {
+                  setExamToolsOpen(false)
+                  goToQuestion(index)
+                }}
+              />
+            ) : null}
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex min-w-0 flex-wrap items-center gap-2">
+                <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white">
+                  Q {localQuestion + 1} / {activeSection.count}
+                </span>
+                {hasPaperNav ? (
+                  <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-indigo-50">
+                    Total {currentQuestion + 1} / {questions.length}
+                  </span>
+                ) : null}
+              </div>
+              <span
+                className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 font-mono text-sm font-bold ${
+                  timerUrgent ? 'bg-rose-500 text-white' : 'bg-white text-indigo-700'
+                }`}
+                aria-live="polite"
+              >
+                <Clock className="h-4 w-4" />
+                {formatExamTimer(timeLeft)}
+              </span>
+            </div>
           </div>
         </div>
 
         {hasPaperNav ? (
-          <div
-            className={
-              compactSectionNav
-                ? 'mb-4 flex flex-wrap gap-2'
-                : 'mb-4 grid grid-cols-1 gap-2 sm:grid-cols-3'
-            }
-          >
-            {paperSections.map((section) => {
-              const isActive = section.id === activeSection.id
-              const answered = countSectionAnswers(section, userAnswers)
-              const attemptCap = section.attemptLimit
-              const limitReached = attemptCap != null && answered >= attemptCap
-              return (
-                <button
-                  key={section.id}
-                  type="button"
-                  onClick={() => goToSection(section)}
-                  aria-current={isActive ? 'page' : undefined}
-                  className={
-                    compactSectionNav
-                      ? `rounded-xl border px-3 py-2 text-left shadow-sm transition ${
-                          isActive
-                            ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
-                            : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300'
-                        }`
-                      : `rounded-2xl border px-4 py-3 text-left shadow-sm transition ${
-                          isActive
-                            ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
-                            : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300'
-                        }`
-                  }
+          <>
+            <div className="relative mb-4 lg:hidden">
+              <button
+                type="button"
+                onClick={() => setSectionMenuOpen((open) => !open)}
+                aria-expanded={sectionMenuOpen}
+                aria-haspopup="listbox"
+                className="flex w-full items-center justify-between gap-3 rounded-2xl border border-indigo-600 bg-indigo-600 px-4 py-3 text-left text-white shadow-md"
+              >
+                <span>
+                  <span className="block text-sm font-bold">{activeSection.title}</span>
+                  <span className="mt-0.5 block text-xs text-indigo-100">
+                    {activeSection.attemptLimit != null
+                      ? `${countSectionAnswers(activeSection, userAnswers)}/${activeSection.attemptLimit} attempted`
+                      : `${countSectionAnswers(activeSection, userAnswers)}/${activeSection.count} answered`}
+                  </span>
+                </span>
+                <ChevronDown
+                  className={`h-5 w-5 shrink-0 transition ${sectionMenuOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {sectionMenuOpen ? (
+                <div
+                  role="listbox"
+                  className="absolute z-30 mt-2 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl"
                 >
-                  <p className={`text-sm font-bold ${isActive ? 'text-white' : 'text-slate-800'}`}>
-                    {section.title}
-                  </p>
-                  <p className={`mt-0.5 text-xs ${isActive ? 'text-indigo-100' : 'text-slate-500'}`}>
-                    {attemptCap != null
-                      ? `${answered}/${attemptCap} attempted${limitReached ? ' · limit reached' : ''}`
-                      : `${answered}/${section.count} answered`}
-                  </p>
-                </button>
-              )
-            })}
-          </div>
+                  {paperSections.map((section) => {
+                    const isActive = section.id === activeSection.id
+                    const answered = countSectionAnswers(section, userAnswers)
+                    const attemptCap = section.attemptLimit
+                    const limitReached = attemptCap != null && answered >= attemptCap
+                    return (
+                      <button
+                        key={section.id}
+                        type="button"
+                        role="option"
+                        aria-selected={isActive}
+                        onClick={() => {
+                          goToSection(section)
+                          setSectionMenuOpen(false)
+                        }}
+                        className={`flex w-full flex-col px-4 py-3 text-left ${
+                          isActive ? 'bg-indigo-50 text-indigo-950' : 'text-slate-800 hover:bg-slate-50'
+                        }`}
+                      >
+                        <span className="text-sm font-bold">{section.title}</span>
+                        <span className={`mt-0.5 text-xs ${isActive ? 'text-indigo-600' : 'text-slate-500'}`}>
+                          {attemptCap != null
+                            ? `${answered}/${attemptCap} attempted${limitReached ? ' · limit reached' : ''}`
+                            : `${answered}/${section.count} answered`}
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+              ) : null}
+            </div>
+            <div
+              className={
+                compactSectionNav
+                  ? 'mb-4 hidden flex-wrap gap-2 lg:flex'
+                  : 'mb-4 hidden gap-2 lg:grid lg:grid-cols-3'
+              }
+            >
+              {paperSections.map((section) => {
+                const isActive = section.id === activeSection.id
+                const answered = countSectionAnswers(section, userAnswers)
+                const attemptCap = section.attemptLimit
+                const limitReached = attemptCap != null && answered >= attemptCap
+                return (
+                  <button
+                    key={section.id}
+                    type="button"
+                    onClick={() => goToSection(section)}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={
+                      compactSectionNav
+                        ? `rounded-xl border px-3 py-2 text-left shadow-sm transition ${
+                            isActive
+                              ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
+                              : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300'
+                          }`
+                        : `rounded-2xl border px-4 py-3 text-left shadow-sm transition ${
+                            isActive
+                              ? 'border-indigo-600 bg-indigo-600 text-white shadow-md'
+                              : 'border-slate-200 bg-white text-slate-800 hover:border-indigo-300'
+                          }`
+                    }
+                  >
+                    <p className={`text-sm font-bold ${isActive ? 'text-white' : 'text-slate-800'}`}>
+                      {section.title}
+                    </p>
+                    <p className={`mt-0.5 text-xs ${isActive ? 'text-indigo-100' : 'text-slate-500'}`}>
+                      {attemptCap != null
+                        ? `${answered}/${attemptCap} attempted${limitReached ? ' · limit reached' : ''}`
+                        : `${answered}/${section.count} answered`}
+                    </p>
+                  </button>
+                )
+              })}
+            </div>
+          </>
         ) : null}
 
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px]">
@@ -1431,69 +1632,17 @@ export default function AomExamTest({
             </div>
           </div>
 
-          <aside className="space-y-4">
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-              <h3 className="text-sm font-bold text-slate-800">Question palette</h3>
-              {hasPaperNav ? (
-                <p className="mb-3 mt-1 text-xs text-slate-500">{activeSection.title}</p>
-              ) : (
-                <div className="mb-3" />
-              )}
-              <div className="grid grid-cols-5 gap-2 sm:grid-cols-6 lg:grid-cols-5">
-                {Array.from({ length: activeSection.count }, (_, localIndex) => {
-                  const index = activeSection.startIndex + localIndex
-                  const status = getQuestionStatus(
-                    visited[index],
-                    userAnswers[index] !== null,
-                    markedForReview[index],
-                  )
-                  const locked = isAttemptBlocked(activeSection, index, userAnswers)
-                  return (
-                    <button
-                      key={index}
-                      type="button"
-                      onClick={() => goToQuestion(index)}
-                      title={locked ? 'Attempt limit reached' : undefined}
-                      aria-disabled={locked || undefined}
-                      className={`relative flex h-11 items-center justify-center rounded-lg text-sm font-bold ${STATUS_STYLES[status]} ${
-                        locked ? 'cursor-not-allowed opacity-40' : ''
-                      } ${
-                        currentQuestion === index ? 'ring-2 ring-indigo-600 ring-offset-2 ring-offset-white' : ''
-                      }`}
-                      aria-label={`Question ${localIndex + 1}, ${locked ? 'attempt limit reached' : status}`}
-                    >
-                      {localIndex + 1}
-                      {status === 'answered-review' ? (
-                        <span className="absolute -right-1 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-white shadow-md ring-2 ring-white">
-                          <Check className="h-4 w-4 stroke-3" />
-                        </span>
-                      ) : null}
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-              <h3 className="mb-3 text-sm font-bold text-slate-800">Status legend</h3>
-              <div className="space-y-2.5">
-                {LEGEND.map((item) => (
-                  <div key={item.status} className="flex items-start gap-3 text-xs text-slate-700 sm:text-sm">
-                    <StatusSwatch status={item.status} />
-                    <p>{item.label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-600">
-                <p>Answered: {counts.answered}</p>
-                <p>Not answered: {counts.notAnswered}</p>
-                <p>Not visited: {counts.notVisited}</p>
-                <p>Marked for review: {counts.review}</p>
-              </div>
-              {hasPaperNav ? (
-                <p className="mt-3 text-xs text-slate-500">Counts are for the full test.</p>
-              ) : null}
-            </div>
+          <aside className="hidden lg:block">
+            <ExamToolsPanel
+              hasPaperNav={hasPaperNav}
+              activeSection={activeSection}
+              currentQuestion={currentQuestion}
+              userAnswers={userAnswers}
+              visited={visited}
+              markedForReview={markedForReview}
+              counts={counts}
+              onOpenQuestion={goToQuestion}
+            />
           </aside>
         </div>
       </div>
