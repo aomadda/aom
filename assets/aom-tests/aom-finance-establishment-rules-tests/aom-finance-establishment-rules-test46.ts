@@ -215,5 +215,6 @@ export const aomFinanceEstablishmentRulesTest46 = {
                 correct: 2,
                 explanation: "Estimates Committee = 5 years (Correct answer is 1 year)",
             },
-            {
-                que
+        ]
+    },
+}
