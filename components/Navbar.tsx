@@ -245,7 +245,7 @@ const Navbar = ({ user = null }: NavbarProps) => {
             className="group shrink-0 rounded-xl px-1 py-1 transition-all duration-300 hover:bg-white/10"
           >
             <span className="whitespace-nowrap text-lg font-bold tracking-tight text-white drop-shadow-sm sm:text-xl lg:text-2xl">
-              AOM Adda
+              AOM ADDA
             </span>
           </Link>
 

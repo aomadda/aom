@@ -30,7 +30,7 @@ const Footer = () => {
           href="/"
           className="text-base font-bold tracking-tight text-white drop-shadow-sm transition hover:text-amber-200"
         >
-          AOM Adda
+          AOM ADDA
         </Link>
 
         <nav
