@@ -1194,7 +1194,7 @@ export default function AomExamTest({
             className="overflow-hidden rounded-3xl border border-violet-500/20 bg-slate-950 shadow-xl"
           >
             <div className="bg-linear-to-r from-slate-950 via-violet-950 to-fuchsia-950 px-6 py-7 text-center text-white">
-              <h2 className="text-2xl font-bold">Answer key & explanation</h2>
+              <h2 className="text-2xl font-bold">Explanation</h2>
             </div>
             {paperSections.map((section) => (
               <div key={section.id}>
@@ -1352,7 +1352,7 @@ export default function AomExamTest({
   return (
     <div className="min-h-screen bg-[#eef2f8] px-3 py-4 sm:px-4 sm:py-6">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-4 rounded-2xl bg-indigo-600 px-4 py-4 text-white shadow-md sm:px-6">
+        <div className="mb-4 rounded-xl bg-indigo-600 px-4 py-4 text-white shadow-md sm:px-6">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-xs font-semibold tracking-wide text-indigo-100 uppercase">
@@ -1386,7 +1386,7 @@ export default function AomExamTest({
               type="button"
               onClick={() => setExamToolsOpen((open) => !open)}
               aria-expanded={examToolsOpen}
-              className="flex w-full items-center justify-between rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-left text-sm font-semibold text-white"
+              className="flex w-full items-center justify-between rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-left text-sm font-semibold text-white"
             >
               <span>{examToolsOpen ? 'Hide question palette' : 'Show question palette'}</span>
               <ChevronDown className={`h-4 w-4 shrink-0 transition ${examToolsOpen ? 'rotate-180' : ''}`} />
@@ -1455,7 +1455,7 @@ export default function AomExamTest({
               {sectionMenuOpen ? (
                 <div
                   role="listbox"
-                  className="absolute z-30 mt-2 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl"
+                  className="absolute z-30 mt-2 w-full overflow-hidden rounded-lg border border-slate-200 bg-white shadow-xl"
                 >
                   {paperSections.map((section) => {
                     const isActive = section.id === activeSection.id
@@ -1580,7 +1580,7 @@ export default function AomExamTest({
                         type="button"
                         onClick={clearResponse}
                         aria-label="Clear selected answer"
-                        className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-rose-200 bg-rose-50 text-rose-600 transition hover:bg-rose-100"
+                        className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-rose-200 bg-rose-50 text-rose-600 transition hover:bg-rose-100"
                       >
                         <Trash2 className="h-4 w-4" />
                       </button>
@@ -1626,7 +1626,7 @@ export default function AomExamTest({
                   onClick={saveAndNext}
                   className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
                 >
-                  Save & next
+                  Next
                 </button>
               )}
             </div>

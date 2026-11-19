@@ -25,15 +25,26 @@ export const railwayBoardEstablishment = {
     explanation: "Railway services (pension) Rules 2026",
 },
 {
-    question: ``,
+    question: `RBE 43/2026 is related to which of the following?`,
     options: [
-        "",
-        "",
-        "",
-        ""
+        "Interest rate on computer advance",
+        "House building advance",
+        "Festival advance",
+        "Vehicle advance"
     ],
     correct: 0,
-    explanation: "",
+    explanation: "Interest rate on computer advance",
+},
+{
+    question: `RBE 32/2026 introduced which important change?`,
+    options: [
+        "Revision of Designation of station master's cadre",
+        "Revision of pay level",
+        "Promotion policy",
+        "Recruitment rules"
+    ],
+    correct: 0,
+    explanation: "Revision of Designation of station master's cadre",
 },
   
 ],
