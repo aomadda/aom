@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
-  AlertTriangle,
   Check,
   ChevronDown,
   ChevronRight,
@@ -331,7 +330,7 @@ function ExamToolsPanel({
 }) {
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+      <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
         <h3 className="text-sm font-bold text-slate-800">Question palette</h3>
         {hasPaperNav ? (
           <p className="mb-3 mt-1 text-xs text-slate-500">{activeSection.title}</p>
@@ -373,7 +372,7 @@ function ExamToolsPanel({
         </div>
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+      <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
         <h3 className="mb-3 text-sm font-bold text-slate-800">Status legend</h3>
         <div className="space-y-2.5">
           {LEGEND.map((item) => (
@@ -923,7 +922,7 @@ export default function AomExamTest({
     return (
       <div className="min-h-screen bg-[#eef2f8] px-4 py-8 sm:py-12">
         <div className="mx-auto max-w-4xl">
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
             <div className="bg-indigo-600 px-6 py-8 text-center text-white sm:px-10">
               <p className="text-xs font-semibold tracking-[0.2em] text-indigo-100 uppercase">
                 AOM Tests
@@ -936,7 +935,7 @@ export default function AomExamTest({
             </div>
 
             <div className="grid gap-4 px-6 py-6 sm:grid-cols-3 sm:px-10">
-              <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4 text-center">
+              <div className="rounded-lg border border-indigo-100 bg-indigo-50 p-4 text-center">
                 <p className="text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                   Questions
                 </p>
@@ -947,7 +946,7 @@ export default function AomExamTest({
                   </p>
                 ) : null}
               </div>
-              <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4 text-center">
+              <div className="rounded-lg border border-indigo-100 bg-indigo-50 p-4 text-center">
                 <p className="text-xs font-semibold tracking-wide text-indigo-600 uppercase">
                   Duration
                 </p>
@@ -956,7 +955,7 @@ export default function AomExamTest({
                   {AOM_EXAM_SECONDS_PER_QUESTION / 60} minute per question
                 </p>
               </div>
-              <div className="rounded-2xl border border-rose-100 bg-rose-50 p-4 text-center">
+              <div className="rounded-lg border border-rose-100 bg-rose-50 p-4 text-center">
                 <p className="text-xs font-semibold tracking-wide text-rose-600 uppercase">
                   Marking
                 </p>
@@ -998,27 +997,52 @@ export default function AomExamTest({
             </div>
 
             {hasPaperNav ? (
-              <div className="mx-6 mb-6 rounded-2xl border border-indigo-100 bg-indigo-50 p-4 sm:mx-10">
-                <h3 className="mb-3 text-sm font-bold text-slate-800">{sectionsHeading}</h3>
-                <ul className="space-y-2 text-sm text-slate-700">
-                  {paperSections.map((section, index) => (
-                    <li key={section.id}>
-                      <p>
-                        {index + 1}. {section.title}
-                      </p>
-                      <p className="text-xs font-semibold text-indigo-700">
-                        {section.count} questions
-                        {section.attemptLimit != null
-                          ? ` (Attempt any ${section.attemptLimit} questions)`
-                          : ''}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
+              <div className="mx-6 mb-6 overflow-hidden rounded-2xl border border-indigo-100 bg-white shadow-sm sm:mx-10">
+                <div className="bg-linear-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-5 py-4">
+                  <h3 className="text-sm font-bold tracking-wide text-white uppercase">
+                    {sectionsHeading}
+                  </h3>
+                </div>
+                <div className="grid gap-3 p-4 sm:grid-cols-3 sm:p-5">
+                  {paperSections.map((section, index) => {
+                    const accents = [
+                      'from-indigo-500 to-indigo-600',
+                      'from-violet-500 to-violet-600',
+                      'from-fuchsia-500 to-fuchsia-600',
+                    ]
+                    const accent = accents[index % accents.length]
+                    return (
+                      <div
+                        key={section.id}
+                        className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"
+                      >
+                        <div className={`bg-linear-to-r ${accent} px-4 py-3 text-white`}>
+                          <div className="flex items-center gap-3">
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-sm font-bold">
+                              {index + 1}
+                            </span>
+                            <p className="text-sm font-bold leading-snug">{section.title}</p>
+                          </div>
+                        </div>
+                        <div className="px-4 py-4">
+                          <p className="text-3xl font-bold text-slate-900">{section.count}</p>
+                          <p className="text-xs font-semibold tracking-wide text-slate-500 uppercase">
+                            questions
+                          </p>
+                          {section.attemptLimit != null ? (
+                            <p className="mt-3 inline-flex rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700">
+                              Attempt any {section.attemptLimit} questions
+                            </p>
+                          ) : null}
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
             ) : null}
 
-            <div className="mx-6 mb-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:mx-10 sm:p-5">
+            <div className="mx-6 mb-6 rounded-xl border border-slate-200 bg-slate-50 p-4 sm:mx-10 sm:p-5">
               <h3 className="mb-3 text-sm font-bold text-slate-800">Question palette</h3>
               <div className="space-y-2.5">
                 {LEGEND.map((item) => (
@@ -1031,13 +1055,13 @@ export default function AomExamTest({
             </div>
 
             {completed ? (
-              <div className="mx-6 mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800 sm:mx-10">
+              <div className="mx-6 mb-6 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800 sm:mx-10">
                 You have already submitted this test. You can view your result and explanations.
               </div>
             ) : null}
 
             {!completed ? (
-              <label className="mx-6 mb-6 flex items-start gap-3 rounded-2xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm text-slate-700 sm:mx-10">
+              <label className="mx-6 mb-6 flex items-start gap-3 rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm text-slate-700 sm:mx-10">
                 <input
                   type="checkbox"
                   checked={acceptedRules}
@@ -1091,10 +1115,11 @@ export default function AomExamTest({
 
   if (phase === 'results') {
     const result = scoreExam(questions, userAnswers)
+    const nextQuiz = getNextQuiz(categoryId, quizId)
     return (
       <div className="min-h-screen bg-slate-950 px-4 py-8 sm:py-12">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-6 rounded-3xl border border-violet-500/20 bg-slate-950 p-6 shadow-xl sm:p-8">
+          <div className="mb-6 rounded-xl border border-violet-500/20 bg-slate-950 p-6 shadow-xl sm:p-8">
             <div className="text-center">
               <p className="text-xs font-semibold tracking-[0.2em] text-violet-300 uppercase">
                 Result
@@ -1112,19 +1137,19 @@ export default function AomExamTest({
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center">
+              <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-4 text-center">
                 <div className="text-2xl font-bold text-emerald-200">{result.correct}</div>
                 <div className="text-xs font-medium text-emerald-300">Correct</div>
               </div>
-              <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-center">
+              <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-4 text-center">
                 <div className="text-2xl font-bold text-red-200">{result.wrong}</div>
                 <div className="text-xs font-medium text-red-300">Wrong</div>
               </div>
-              <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4 text-center">
+              <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-4 text-center">
                 <div className="text-2xl font-bold text-amber-200">{result.unanswered}</div>
                 <div className="text-xs font-medium text-amber-300">Unanswered</div>
               </div>
-              <div className="rounded-2xl border border-violet-500/30 bg-violet-500/10 p-4 text-center">
+              <div className="rounded-lg border border-violet-500/30 bg-violet-500/10 p-4 text-center">
                 <div className="text-2xl font-bold text-violet-200">{result.percentage}%</div>
                 <div className="text-xs font-medium text-violet-300">Score</div>
               </div>
@@ -1156,6 +1181,20 @@ export default function AomExamTest({
               >
                 Re-attempt
               </button>
+              {nextQuiz ? (
+                <Link
+                  href={nextQuiz.href}
+                  className="relative inline-flex min-w-0 flex-1 items-center justify-center rounded-lg bg-linear-to-r from-violet-600 to-fuchsia-600 px-10 py-2.5 text-sm font-semibold text-white"
+                >
+                  <span className="min-w-0 text-center">
+                    <span className="block text-[11px] font-medium tracking-wide text-violet-100 uppercase">
+                      {nextQuiz.href.startsWith('/aom-tests') ? 'Next test' : 'Next quiz'}
+                    </span>
+                    <span className="block truncate">{nextQuiz.title}</span>
+                  </span>
+                  <ChevronRight className="absolute right-4 h-4 w-4 shrink-0" />
+                </Link>
+              ) : null}
             </div>
           </div>
 
@@ -1355,10 +1394,8 @@ export default function AomExamTest({
         <div className="mb-4 rounded-xl bg-indigo-600 px-4 py-4 text-white shadow-md sm:px-6">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-xs font-semibold tracking-wide text-indigo-100 uppercase">
-                AOM Tests
-              </p>
-              <h1 className="text-lg font-bold sm:text-xl">{title}</h1>
+              
+              <h1 className="text-lg font-bold sm:text-xl text-center">{title}</h1>
             </div>
             <div className="hidden flex-wrap items-center gap-2 lg:flex">
               <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white">
@@ -1438,7 +1475,7 @@ export default function AomExamTest({
                 onClick={() => setSectionMenuOpen((open) => !open)}
                 aria-expanded={sectionMenuOpen}
                 aria-haspopup="listbox"
-                className="flex w-full items-center justify-between gap-3 rounded-2xl border border-indigo-600 bg-indigo-600 px-4 py-3 text-left text-white shadow-md"
+                className="flex w-full items-center justify-between gap-3 rounded-lg border border-indigo-600 bg-indigo-600 px-4 py-3 text-left text-white shadow-md"
               >
                 <span>
                   <span className="block text-sm font-bold">{activeSection.title}</span>
@@ -1656,35 +1693,31 @@ export default function AomExamTest({
             role="dialog"
             aria-modal="true"
             aria-labelledby="submit-test-title"
-            className="w-full max-w-lg overflow-hidden rounded-3xl border border-white/70 bg-white shadow-2xl"
+            className="w-full max-w-lg overflow-hidden rounded-2xl border border-white/70 bg-white shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="bg-linear-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-6 py-6 text-white">
-              <p className="text-[11px] font-semibold tracking-[0.18em] text-indigo-100 uppercase">
-                Final step
-              </p>
-              <div className="mt-2 flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15">
-                  <AlertTriangle className="h-5 w-5" />
-                </span>
-                <div>
-                  <h2 id="submit-test-title" className="text-xl font-bold">
-                    Submit test?
+            <div className="bg-linear-to-r from-indigo-600 via-violet-600 to-fuchsia-600 px-6 py-3 text-white">
+              
+              <div className="flex items-center gap-3 justify-center">
+                
+                <div className="text-center space-y-2">
+                  <h2 id="submit-test-title" className="text-xl font-bold text-center">
+                    Submit test ?
                   </h2>
-                  <p className="text-sm text-indigo-100">{title}</p>
+                  <p className="text-sm text-indigo-100 text-center">{title}</p>
                 </div>
               </div>
             </div>
 
             <div className="space-y-4 px-6 py-5">
               <div className="grid grid-cols-2 gap-3">
-                <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3">
+                <div className="rounded-lg border border-emerald-100 bg-emerald-50 px-4 py-3">
                   <p className="text-[11px] font-semibold tracking-wide text-emerald-700 uppercase">
                     Answered
                   </p>
                   <p className="mt-1 text-2xl font-bold text-slate-900">{counts.answered}</p>
                 </div>
-                <div className="rounded-2xl border border-amber-100 bg-amber-50 px-4 py-3">
+                <div className="rounded-lg border border-amber-100 bg-amber-50 px-4 py-3">
                   <p className="text-[11px] font-semibold tracking-wide text-amber-700 uppercase">
                     Not answered
                   </p>
@@ -1692,24 +1725,23 @@ export default function AomExamTest({
                     {counts.notAnswered + counts.notVisited}
                   </p>
                 </div>
-                <div className="rounded-2xl border border-indigo-100 bg-indigo-50 px-4 py-3">
+                <div className="rounded-lg border border-indigo-100 bg-indigo-50 px-4 py-3">
                   <p className="text-[11px] font-semibold tracking-wide text-indigo-700 uppercase">
                     Marked for review
                   </p>
                   <p className="mt-1 text-2xl font-bold text-slate-900">{counts.review}</p>
                 </div>
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                <div className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3">
                   <p className="text-[11px] font-semibold tracking-wide text-slate-500 uppercase">
                     Time left
                   </p>
                   <p className="mt-1 inline-flex items-center gap-1.5 font-mono text-2xl font-bold text-slate-900">
-                    <Clock className="h-4 w-4 text-indigo-600" />
                     {formatExamTimer(timeLeft)}
                   </p>
                 </div>
               </div>
 
-              <p className="rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3 text-sm leading-relaxed text-rose-800">
+              <p className="rounded-lg border border-rose-100 bg-rose-50 px-4 py-3 text-sm leading-relaxed text-rose-800">
                 Answers cannot be changed after submit. Each wrong answer gets a negative mark of{' '}
                 <strong>{AOM_EXAM_NEGATIVE_MARK}</strong>. Unanswered questions carry 0 marks.
               </p>

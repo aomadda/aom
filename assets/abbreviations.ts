@@ -872,6 +872,10 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      { acronym: "DARPG", fullForm: "Department of Administrative Reforms and Public Grievances",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       {
         acronym: "DCF",
         fullForm: "Discounted Cash Flow",
@@ -1468,6 +1472,10 @@ type AbbreviationItem = {
         acronym: "G&SR",
         fullForm: "General & Subsidiary Rules",
         explanation: "The core rule book governing train operation and safety across Indian Railways.",
+        reference: "--"
+      },
+      { acronym: "GRO", fullForm: "Grievance Redressal Officer",
+        explanation: "Grievance Redressal Officer is the person responsible for handling and resolving grievances received through CPGRAMS.",
         reference: "--"
       },
       { acronym: "GRP", fullForm: "Government Railway Police",
