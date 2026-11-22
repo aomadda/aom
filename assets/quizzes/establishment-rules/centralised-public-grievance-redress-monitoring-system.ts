@@ -251,16 +251,82 @@ export const centralisedPublicGrievanceRedressMonitoringSystem = {
   explanation: "Appeal is a separate escalation mechanism",
 },
 {
-  question: ``,
+  question: `For what purposes are AI-powered analytical tool used under 2024 guidelines?`,
   options: [
-      "",
-      "",
-      "",
-      ""
+      "Feedback analysis",
+      "Root cause analysis",
+      "Grievance monitoring and analysis",
+      "All of the above"
   ],
-  correct: 0,
-  explanation: "",
+  correct: 3,
+  explanation: "All of the above",
 },
+{
+    question: `What is the major purpose of Root Cause Analysis in CPGRAMS?`,
+    options: [
+        "Only closing grievances",
+        "Identifying the root cause for systematic improvements",
+        "Transferring employees to other departments",
+        "None of the above"
+    ],
+    correct: 1,
+    explanation: "Identifying the root cause for systematic improvements",
+  },
+  {
+    question: `How many Eighth Schedule languages are currently supported by the voice-based grievance facility?`,
+    options: [
+        "18",
+        "20",
+        "21",
+        "22"
+    ],
+    correct: 3,
+    explanation: "22",
+  },
+  {
+    question: `The CPGRAMS mobile application is also integrated which platform?`,
+    options: [
+        "UMANG",
+        "UTS Only",
+        "RESS Only",
+        "NTES Only"
+    ],
+    correct: 0,
+    explanation: "UMANG",
+  },
+  {
+    question: `"Samadhan Didi" is a current feature related to-`,
+    options: [
+        "AI-enabled virtual assistance",
+        "Railway ticket reservation",
+        "Railway salary system",
+        "Pension calculation"
+    ],
+    correct: 0,
+    explanation: "AI-enabled virtual assistance",
+  },
+  {
+    question: `What designation is currently listed for the Nodal Public Grievance Officer of Railways (Railway Board)?`,
+    options: [
+        "Executive Director PG",
+        "General Manager",
+        "DRM",
+        "Chief Personnel Officer"
+    ],
+    correct: 0,
+    explanation: "Executive Director PG",
+  },
+  {
+    question: ``,
+    options: [
+        "",
+        "",
+        "",
+        ""
+    ],
+    correct: 0,
+    explanation: "",
+  },
         ]
     }
 }
