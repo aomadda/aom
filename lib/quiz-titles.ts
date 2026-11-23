@@ -240,6 +240,8 @@ const QUIZ_TITLES: Record<string, string> = {
   'railway-current-affairs-2026:june-2026': 'Railway Current Affairs — June 2026',
   'railway-current-affairs-2026:july-2026': 'Railway Current Affairs — July 2026',
   'railway-current-affairs-2026:august-2026': 'Railway Current Affairs — August 2026',
+  'railway-current-affairs-2026:september-2026': 'Railway Current Affairs — September 2026',
+  'railway-current-affairs-2026:october-2026': 'Railway Current Affairs — October 2026',
   'railway-statistics': 'Railway Statistics',
   'railway-statistics:chapter-1': 'Railway Statistics Chapter 1',
   'railway-statistics:chapter-2': 'Railway Statistics Chapter 2',

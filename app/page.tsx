@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { getSession } from '@/lib/auth/session'
 import HomeRuleOfTheDay from '@/components/HomeRuleOfTheDay'
+import HomeSwipeDeck from '@/components/home/HomeSwipeDeck'
 
 type NavBox = { href: string; label: string; icon?: string }
 
@@ -235,62 +236,15 @@ const Home = async () => {
 
      
 
-      {/* Explore sections — full-bleed gradients like the hero */}
-      <div>
+      <div className="mx-auto max-w-3xl space-y-6 px-4 py-8 sm:px-6 sm:py-12">
         {exploreSections.map((section) => (
-          <section
+          <HomeSwipeDeck
             key={section.href}
-            className={`relative overflow-hidden bg-linear-to-br ${section.panel}`}
-          >
-            <div className="absolute inset-0 bg-black/15" aria-hidden />
-            <div className="absolute inset-0 overflow-hidden" aria-hidden>
-              <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-              <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-black/15 blur-3xl" />
-              <div className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-3xl" />
-            </div>
-
-            <div className="relative z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-              <div className="mb-5 flex items-center justify-between gap-3 sm:mb-6">
-                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                  {section.title}
-                </h2>
-                <Link
-                  href={section.href}
-                  className="shrink-0 rounded-full border border-white/35 bg-white/15 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/25"
-                >
-                  View all 
-                </Link>
-              </div>
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-                {section.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="group flex min-h-20 items-center gap-3 rounded-lg border border-white/25 bg-white/15 px-3.5 py-3.5 text-left shadow-sm backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:bg-white/25 hover:shadow-lg sm:min-h-24 sm:gap-3.5 sm:px-4 sm:py-4"
-                  >
-                    {item.icon ? (
-                      <span
-                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-base lg:h-12 lg:w-12 lg:text-2xl"
-                        aria-hidden
-                      >
-                        {item.icon}
-                      </span>
-                    ) : (
-                      <span
-                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white lg:h-12 lg:w-12 lg:text-2xl"
-                        aria-hidden
-                      >
-                        {item.label.charAt(0)}
-                      </span>
-                    )}
-                    <span className="line-clamp-2 text-sm font-semibold leading-snug text-white sm:text-base">
-                      {item.label}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
+            title={section.title}
+            href={section.href}
+            panel={section.panel}
+            items={section.items}
+          />
         ))}
       </div>
 

@@ -1424,7 +1424,7 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
-      { acronym: "GeM", fullForm: "Government e - Market",
+      { acronym: "GeM", fullForm: "Government e - Marketplace",
         explanation: "Will be added later",
         reference: "--"
       },

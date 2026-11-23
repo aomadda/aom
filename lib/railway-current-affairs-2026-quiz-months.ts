@@ -79,6 +79,26 @@ export const RAILWAY_CURRENT_AFFAIRS_2026_QUIZ_MONTHS = [
     description:
       'Practice August 2026 railway current affairs — KAVACH 4.0, CTO All India licence, and freight performance',
   },
+  {
+    slug: 'september-2026',
+    quizId: 'september-2026',
+    title: 'Railway Current Affairs — September 2026',
+    shortTitle: 'September 2026',
+    icon: '🍂',
+    color: 'from-teal-500 to-cyan-600',
+    description:
+      'Practice September 2026 railway current affairs — freight loading, CCEA multitracking, KAVACH 4.0, and the LNG train',
+  },
+  {
+    slug: 'october-2026',
+    quizId: 'october-2026',
+    title: 'Railway Current Affairs — October 2026',
+    shortTitle: 'October 2026',
+    icon: '🪔',
+    color: 'from-emerald-500 to-teal-600',
+    description:
+      'Practice October 2026 railway current affairs — PLB, NTPC vacancies, Rail Jan Samvaad, and Amrit Bharat stations',
+  },
 ] as const
 
 export type RailwayCurrentAffairs2026QuizMonth =

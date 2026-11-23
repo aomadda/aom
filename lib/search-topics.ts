@@ -3201,10 +3201,10 @@ export const searchTopics: SearchTopic[] = [
   },
   {
     href: "/topics/financial-rules/government-e-market",
-    title: "Government E Market (GeM)",
+    title: "Government e-Marketplace (GeM)",
     category: "Study Topics",
     parent: "Topics › Financial Rules",
-    keywords: "topics financial rules government e market Government E Market (GeM)",
+    keywords: "topics financial rules government e-market Government e-Marketplace (GeM)",
   },
   {
     href: "/quizzes/financial-rules/government-e-marketplace",
@@ -3212,7 +3212,7 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes › Financial Rules",
     keywords:
-      "quizzes financial rules government e marketplace GeM Government e-Marketplace GFR 149 procurement",
+      "quizzes financial rules government e-Marketplace GeM Government e-Marketplace GFR 149 procurement",
   },
   {
     href: "/topics/establishment-rules/govt-pension",
@@ -7466,7 +7466,7 @@ export const searchTopics: SearchTopic[] = [
     category: "Quizzes",
     parent: "Quizzes",
     keywords:
-      "quizzes railway current affairs 2026 Railway Current Affairs 2026 Vande Bharat KAVACH TAG exam March April May June July August",
+      "quizzes railway current affairs 2026 Railway Current Affairs 2026 Vande Bharat KAVACH TAG exam March April May June July August September October",
   },
   {
     href: "/quizzes/railway-current-affairs-2026/april-2026",
@@ -7531,6 +7531,22 @@ export const searchTopics: SearchTopic[] = [
     parent: "Quizzes › Railway Current Affairs 2026",
     keywords:
       "quizzes railway current affairs may 2026 CCEA multitracking Kazipet Vijayawada Sarkhej Dholera exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/october-2026",
+    title: "Railway Current Affairs October 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs october 2026 PLB NTPC CEN Rail Jan Samvaad Amrit Bharat Station Master exam",
+  },
+  {
+    href: "/quizzes/railway-current-affairs-2026/september-2026",
+    title: "Railway Current Affairs September 2026",
+    category: "Quizzes",
+    parent: "Quizzes › Railway Current Affairs 2026",
+    keywords:
+      "quizzes railway current affairs september 2026 freight KAVACH multitracking LNG Sabarmati exam",
   },
   {
     href: "/quizzes/railway-gk",
