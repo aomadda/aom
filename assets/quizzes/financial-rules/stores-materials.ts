@@ -292,16 +292,272 @@ export const storesMaterials = {
     explanation: "200 crore",
     },
     {
-        question: ``,
+        question: `Limited/Bulletin tender is applicable for items valuing ________`,
         options: [
-            "",
-            "",
-            "",
-            ""
+            "Below 10 lakhs",
+            "Above 50 lakhs",
+            "Up to 50 lakhs",
+            "Up to 100 lakhs"
+        ],
+        correct: 2,
+        explanation: "Up to 50 lakhs",
+    },
+    {
+        question: `Items will be kept in the custody of the Stores Department which are frequently and regularly required and whose unit cost justifies incurring inventory carrying cost is known as _______`,
+        options: [
+            "Stock items",
+            "Non-stock items",
+            "Custody Stores",
+            "Ordinary Stores"
         ],
         correct: 0,
-        explanation: "",
+        explanation: "Stock items",
     },
-  
+    {
+        question: `Single tender can be issued ________`,
+        options: [
+            "Only after committee approval",
+            "Only for imported items",
+            "With PAC or extreme urgency",
+            "None of the above"
+        ],
+        correct: 2,
+        explanation: "With PAC or extreme urgency",
+    },
+    {
+        question: `Local purchase by field units in urgency is permitted up to _______`,
+        options: [
+            "50,000/-",
+            "75,000/-",
+            "1,00,000/-",
+            "1,50,000/-"
+        ],
+        correct: 2,
+        explanation: "1,00,000/-",
+    },
+    {
+        question: `Direct acceptance power of tenders for JAG level is limited upto _______`,
+        options: [
+            "10 lakhs",
+            "30 lakhs",
+            "50 lakhs",
+            "100 lakhs"
+        ],
+        correct: 2,
+        explanation: "50 lakhs",
+    },
+    {
+    question: `Delegation limit for Assistant Material Manager (AMM) is _______`,
+    options: [
+        "5 lakhs",
+        "10 lakhs",
+        "15 lakhs",
+        "20 lakhs",
+    ],
+    correct: 0,
+    explanation: "5 lakhs",
+    },
+    {
+        question: `Delegation limit for Senior Material Manager (SMM) is _______`,
+        options: [
+            "5 lakhs",
+            "10 lakhs",
+            "15 lakhs",
+            "20 lakhs",
+        ],
+        correct: 1,
+        explanation: "10 lakhs",
+    },
+    {
+    question: `Above 50 lakhs rupees, tenders are accepted by _______`,
+    options: [
+        "AMM",
+        "SMM",
+        "Deopt Officer",
+        "On recommendation of Tender Committee"
+    ],
+    correct: 3,
+    explanation: "On recommendation of Tender Committee",
+    },
+    {
+        question: `Safety/Passenger necessity for Non-stock items require vetting above _______`,
+        options: [
+            "5 lakhs",
+            "10 lakhs",
+            "15 lakhs",
+            "20 lakhs"
+        ],
+        correct: 1,
+        explanation: "10 lakhs",
+    },
+    {
+    question: `Non-stock items vetting for non-safety items require above _______`,
+    options: [
+        "2.5 lakhs",
+        "3 lakhs",
+        "4 lakhs",
+        "5 lakhs"
+    ],
+    correct: 0,
+    explanation: "2.5 lakhs",
+    },
+    {
+        question: `Vetting of purchase orders for safety items is required above _______`,
+        options: [
+            "5 lakhs",
+            "10 lakhs",
+            "15 lakhs",
+            "20 lakhs"
+        ],
+        correct: 2,
+        explanation: "15 lakhs",
+    },
+    {
+        question: `Vetting of purchase orders for non-safety items is required above _______`,
+        options: [
+            "5 lakhs",
+            "8 lakhs",
+            "10 lakhs",
+            "12 lakhs"
+        ],
+        correct: 1,
+        explanation: "8 lakhs",
+    },
+    {
+    question: `Limit of Local purchase power against single quotation is _______`,
+    options: [
+        "25,000/- per item",
+        "50,000/- per item",
+        "75,000/- per item",
+        "1,00,000/- per item"
+    ],
+    correct: 1,
+    explanation: "50,000/- per item",
+    },
+    {
+    question: `Dead surplus stores are items not issued for _______`,
+    options: [
+        "12 months",
+        "18 months",
+        "24 months and unlikely for 2 more years",
+        "36 months"
+    ],
+    correct: 2,
+    explanation: "24 months and unlikely for 2 more years",
+    },
+    {
+    question: `A PL (Price List) number has ________ digits`,
+    options: [
+        "8 digits",
+        "10 digits",
+        "12 digits",
+        "14 digits",
+    ],
+    correct: 0,
+    explanation: "8 digits",
+    },
+    {
+        question: `The check digit in PL (Price List) number is calculated by _______`,
+        options: [
+            "Mod weighted average",
+            "Binary sum",
+            "Modulus 11",
+            "Modulus 10"
+        ],
+        correct: 2,
+        explanation: "Modulus 11 (The last digit is generated mathematically using Modulus 11 check)",
+    },
+    {
+    question: `The UL (Unified List) number has ________ digits`,
+    options: [
+        "8 digits",
+        "10 digits",
+        "12 digits",
+        "14 digits"
+    ],
+    correct: 3,
+    explanation: "14 digits",
+    },
+    {
+    question: `Three types of inventory analysis used in Indian Railways are _______`,
+    options: [
+        "A1, A2, A3",
+        "LIFO, FIFO, TOR",
+        "ABC, VED, FSN",
+        "None of the above"
+    ],
+    correct: 2,
+    explanation: `ABC, VED, FSN.
+    1. ABC = Value based analysis.
+    2. VED = Criticality analysis.
+    3. FSN = Movement based analysis.`,
+    },
+    {
+    question: `In ABC analysis, "A" category items represent _______`,
+    options: [
+        "50% of the total issue value",
+        "60% of the total issue value",
+        "70% of the total issue value",
+        "80% of the total issue value",
+    ],
+    correct: 2,
+    explanation: "70% of the total issue value",
+    },
+    {
+        question: `Formula for Turnover Ratio (TOR) is _______`,
+        options: [
+            "(Closing balance / Issues) * 100",
+            "(Receipts / Balance) * 100",
+            "(Issues / Receipts) * 100",
+            "None of the above"
+        ],
+        correct: 0,
+        explanation: `"(Closing balance / Issues) * 100".
+        Lower TOR indicates faster consumption and better inventory utilization.`,
+    },
+    {
+        question: `Ward stock verification is carried out by _______`,
+        options: [
+            "AMM",
+            "SMM",
+            "Deopt Officer",
+            "Accounts stock verifier"
+        ],
+        correct: 3,
+        explanation: "Accounts stock verifier",
+    },
+    {
+        question: `EMD rate for tenders valued above 25 lakh rupees and upto 50 crore rupees is _______`,
+        options: [
+            "2% of estimated value",
+            "3% of estimated value",
+            "4% of estimated value",
+            "5% of estimated value"
+        ],
+        correct: 0,
+        explanation: "2% of estimated value",
+    },
+    {
+        question: `Maximum EMD amount is ________`,
+        options: [
+            "20 lakh rupees",
+            "30 lakh rupees",
+            "40 lakh rupees",
+            "50 lakh rupees"
+        ],
+        correct: 0,
+        explanation: "20 lakh rupees",
+    },
+    {
+        question: `Security Deposit (SD) rate for contract value above 25 lakh rupees and upto 50 crore rupees is _______`,
+        options: [
+            "2% of estimated value",
+            "3% of estimated value",
+            "4% of estimated value",
+            "5% of estimated value"
+        ],
+        correct: 3,
+        explanation: "5% of estimated value. (SD guarantees supplier performance and is refunded afer successful completion of contract)",
+    },
 ],
 }

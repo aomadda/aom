@@ -56,41 +56,41 @@ export default function HomeSwipeDeck({
             onClick={() => go(index - 1)}
             disabled={index === 0}
             aria-label={`Previous ${title}`}
-            className="absolute top-1/2 left-0 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/20 text-white backdrop-blur-sm transition hover:bg-white/30 disabled:cursor-not-allowed disabled:opacity-35"
+            className="absolute top-1/2 left-0 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/20 text-white backdrop-blur-sm transition hover:bg-white/30 disabled:cursor-not-allowed disabled:opacity-35 lg:flex"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             type="button"
             onClick={() => go(index + 1)}
             disabled={index === last}
             aria-label={`Next ${title}`}
-            className="absolute top-1/2 right-0 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/20 text-white backdrop-blur-sm transition hover:bg-white/30 disabled:cursor-not-allowed disabled:opacity-35"
+            className="absolute top-1/2 right-0 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/20 text-white backdrop-blur-sm transition hover:bg-white/30 disabled:cursor-not-allowed disabled:opacity-35 lg:flex"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-6 w-6" />
           </button>
 
           <div
             ref={scroller}
             onScroll={syncIndex}
-            className="mx-12 flex snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] lg:mx-16 [&::-webkit-scrollbar]:hidden"
           >
             {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex min-h-44 w-full shrink-0 snap-center flex-col items-center justify-center gap-3 rounded-2xl border border-white/30 bg-white/15 px-6 py-6 text-center shadow-lg backdrop-blur-sm transition hover:bg-white/25 sm:min-h-52"
+                className="flex min-h-64 w-full shrink-0 snap-center flex-col items-center justify-center gap-4 rounded-2xl border border-white/30 bg-white/15 px-6 py-8 text-center shadow-lg backdrop-blur-sm transition hover:bg-white/25 sm:min-h-72 lg:min-h-80"
               >
                 {item.icon ? (
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-3xl" aria-hidden>
+                  <span className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20 text-4xl sm:h-24 sm:w-24 sm:text-5xl" aria-hidden>
                     {item.icon}
                   </span>
                 ) : (
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 text-2xl font-bold text-white" aria-hidden>
+                  <span className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20 text-3xl font-bold text-white sm:h-24 sm:w-24 sm:text-4xl" aria-hidden>
                     {item.label.charAt(0)}
                   </span>
                 )}
-                <span className="line-clamp-3 text-lg font-bold leading-snug text-white sm:text-xl">
+                <span className="line-clamp-3 text-xl font-bold leading-snug text-white sm:text-2xl lg:text-3xl">
                   {item.label}
                 </span>
               </Link>

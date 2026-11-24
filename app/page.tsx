@@ -195,7 +195,7 @@ const Home = async () => {
             {/* Content — left on large screens */}
             <div className="order-2 w-full max-w-2xl text-center lg:order-1 lg:flex-1 lg:text-left">
               <h1 className="mb-6 text-4xl font-bold tracking-tight animate-fade-in sm:text-5xl md:text-6xl lg:text-7xl">
-                AOM Adda
+                AOM ADDA
               </h1>
 
               <p className="mx-auto mb-10 max-w-4xl text-lg leading-relaxed text-blue-100 sm:text-xl md:text-2xl lg:mx-0">
@@ -236,7 +236,7 @@ const Home = async () => {
 
      
 
-      <div className="mx-auto max-w-3xl space-y-6 px-4 py-8 sm:px-6 sm:py-12">
+      <div className="mx-auto max-w-7xl space-y-6 px-4 py-8 sm:px-6 sm:py-12">
         {exploreSections.map((section) => (
           <HomeSwipeDeck
             key={section.href}
