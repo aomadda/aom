@@ -169,6 +169,10 @@ type AbbreviationItem = {
         explanation: "A dedicated railway van equipped with medical staff and supplies used during accidents",
         reference: "--"
       },
+      { acronym: "ARP", fullForm: "Advanced Reservation Period",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { acronym: "ARPAN", fullForm: "Advanced Railway Pension Access Network",
         explanation: "Will be added later",
         reference: "--"
@@ -226,6 +230,10 @@ type AbbreviationItem = {
     ],
     B: [
       { acronym: "BAL", fullForm: "Brake Applied Loop",
+        explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "BAFS", fullForm: "Best Among Failed Scheme",
         explanation: "Will be added later",
         reference: "--"
       },
@@ -864,6 +872,10 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      { acronym: "DACP", fullForm: "Dynamic Assured Career Progression",
+        explanation: "Dynamic Assured Career Progression is applicable to eligible Railway medical officers/doctors under the prescribed conditions. Railway orders specifically refer to appoinments under DACP.",
+        reference: "--"
+      },
       { acronym: "DAO", fullForm: "Divisional Accounts Officer",
         explanation: "Will be added later",
         reference: "--"
@@ -961,6 +973,10 @@ type AbbreviationItem = {
         reference: "--"
       },
       { acronym: "DLBI", fullForm: "Double Line Block Instrument",
+        explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "DLC", fullForm: "Divisional Life Certificate",
         explanation: "Will be added later",
         reference: "--"
       },
@@ -1171,6 +1187,10 @@ type AbbreviationItem = {
         reference: "--"
       },
       { acronym: "EFT", fullForm: "Emergency Field Telephone",
+        explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "EGLSC", fullForm: "Ex Gratia Lump Sum Compensation",
         explanation: "Will be added later",
         reference: "--"
       },
@@ -1678,6 +1698,10 @@ type AbbreviationItem = {
         reference: "--"
       },
       { acronym: "IPMD", fullForm: "Infrastructure Projects Monitoring Device",
+        explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "IPR", fullForm: "Immovable Property Return",
         explanation: "Will be added later",
         reference: "--"
       },
@@ -2257,11 +2281,19 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      { acronym: "NBR", fullForm: "Next Below Rule",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { acronym: "NCDRC", fullForm: "National Consumer Dispute Redressal Commission",
         explanation: "Will be added later",
         reference: "--"
       },
       { acronym: "NCRTC", fullForm: "National Capital Region Transport Corporation",
+        explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "NCSRPF", fullForm: "Non Contributory State Railway Provident Fund",
         explanation: "Will be added later",
         reference: "--"
       },
@@ -2274,6 +2306,10 @@ type AbbreviationItem = {
         reference: "--"
       },
       { acronym: "NFIR", fullForm: "National Federation of Indian Railwaymen",
+        explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "NFSAG", fullForm: "Non Functional Senior Administrative Grade",
         explanation: "Will be added later",
         reference: "--"
       },
@@ -3102,6 +3138,10 @@ type AbbreviationItem = {
         explanation: "Will be added later",
         reference: "--"
       },
+      { acronym: "SANKALP", fullForm: "Skill Acquisition and Knowledge Awareness for Livelihood Promotion",
+        explanation: "Will be added later",
+        reference: "--"
+      },
       { acronym: "SASS", fullForm: "Semi Automatic Stop Signal",
         explanation: "Will be added later",
         reference: "--"
@@ -3749,6 +3789,10 @@ type AbbreviationItem = {
         reference: "--"
       },
       { acronym: "ULIP", fullForm: "Unified Logistics Interface Platform",
+        explanation: "Will be added later",
+        reference: "--"
+      },
+      { acronym: "UMANG", fullForm: "Unified Mobile Application for New-age Governance",
         explanation: "Will be added later",
         reference: "--"
       },
