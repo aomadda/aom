@@ -105,8 +105,6 @@ export default function RuleOfTheDayDialog({
           <div className="relative px-3.5 pt-3 pb-4 sm:px-5">
             <Link
               href={rule.href}
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={onClose}
               className="inline-flex w-full items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-orange-400 to-rose-400 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-md transition hover:brightness-105"
             >

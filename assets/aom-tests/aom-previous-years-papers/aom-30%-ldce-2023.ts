@@ -34,7 +34,7 @@ export const aom30Ldce2023 = {
             {
                 question: 'How many systems are there for Freight train examination?',
                 options: ['2', '3', '4', 'None of the above'],
-                correct: 2,
+                correct: 1,
                 explanation: '3 systems are there for Freight train examination.',
             },
             {
@@ -64,7 +64,7 @@ export const aom30Ldce2023 = {
                 {
                   question: 'How much loss of Railway property will be considered as a serious accident?',
                   options: ['More than Rs. 25 lakhs', 'More than Rs. 20 crores', 'More than Rs. 2 crores', 'None of the above'],
-                  correct: 0,
+                  correct: 2,
                   explanation: 'More than Rs. 2 crores is the correct answer.',
                 },
                 {
@@ -76,43 +76,43 @@ export const aom30Ldce2023 = {
                 {
                   question: 'The Section Controller can call at the same time __________.',
                   options: ['One station only', 'Two stations only', 'All stations', 'None of the above'],
-                  correct: 0,
-                  explanation: 'Two stations only is the correct answer.',
+                  correct: 2,
+                  explanation: 'All stations is the correct answer.',
                 },
                 {
                   question: 'When the control is interrupted and no communication with the controller is possible, who will be responsible for the working and regulating of trains?',
                   options: ['Chief Controller', 'Station Masters', 'Traffic Inspector', 'Loco Pilots'],
-                  correct: 0,
+                  correct: 1,
                   explanation: 'Station Masters is the correct answer.',
                 },
                 {
                   question: 'Which register is not maintained by Section Controllers?',
                   options: ['Train Ordering Book', 'Load Register', 'Interchange Register', 'Engine Book'],
                   correct: 0,
-                  explanation: 'Engine Book is the correct answer.',
+                  explanation: 'Train Ordering Book is the correct answer.',
                 },
                 {
                   question: 'In case of a goods train accident, arrangement of road transport and labour for unloading the wagons involved in the accident is the duty of __________.',
                   options: ['Chief Controller/Dy. Chief Controller (Stock)', 'C & W Control', 'Commercial Control', 'Engineering Control'],
-                  correct: 0,
+                  correct: 2,
                   explanation: 'Commercial Control is the correct answer.',
                 },
                 {
                   question: 'Freight train ordering message is called __________.',
                   options: ['Control order', 'Train notice', 'CC Message', 'None of the above'],
                   correct: 0,
-                  explanation: 'CC Message is the correct answer.',
+                  explanation: 'Control order is the correct answer.',
                 },
                 {
                   question: 'Power plan indicates the number of Locos required for __________.',
                   options: ['Coaching service', 'Freight service', 'Parcel express service', 'None of the above'],
-                  correct: 0,
+                  correct: 1,
                   explanation: 'Freight service is the correct answer.',
                 },
                 {
                   question: 'Loco outage can be prepared __________.',
                   options: ['Service-wise', 'Shed-wise', 'Traction-wise', 'All the above'],
-                  correct: 0,
+                  correct: 3,
                   explanation: 'All the above is the correct answer.',
                 },
                 {
@@ -123,7 +123,7 @@ export const aom30Ldce2023 = {
                     'Freight train ordering can be rescheduled/put back',
                     'All the above'
                   ],
-                  correct: 0,
+                  correct: 2,
                   explanation: 'Freight train ordering can be rescheduled/put back is the correct answer.',
                 },
                 {
@@ -146,14 +146,14 @@ export const aom30Ldce2023 = {
                     'Officers of Operating & Engineering Department',
                     'None of the above'
                   ],
-                  correct: 0,
-                  explanation: 'Officers of Operating & Signal Department is the correct answer.',
+                  correct: 2,
+                  explanation: 'Officers of Operating & Engineering Department is the correct answer.',
                 },
                 {
                   question: 'The period for which Muster Roll should be preserved from the date of its completion?',
                   options: ['1 year', '2 years', '3 years', 'Permanent record'],
-                  correct: 0,
-                  explanation: '3 years is the correct answer.',
+                  correct: 3,
+                  explanation: 'Permanent record is the correct answer.',
                 },
                 {
                   question: 'A substitute of Shunting Limit Board (SLB) is __________.',
@@ -164,25 +164,25 @@ export const aom30Ldce2023 = {
                 {
                   question: 'When a shunt signal is placed below a stop signal, it shall show __________ light in the "ON" position.',
                   options: ['White', 'Yellow', 'Red', 'No light'],
-                  correct: 0,
+                  correct: 3,
                   explanation: 'No light is the correct answer.',
                 },
                 {
                   question: 'A Loco Pilot/Assistant Loco Pilot should record in the register __________ days in advance that he is lapsing road learning in a section.',
-                  options: ['7 days', '13 days', '15 days', 'None of the above'],
-                  correct: 0,
-                  explanation: '13 days is the correct answer.',
+                  options: ['7 days', '10 days', '15 days', 'None of the above'],
+                  correct: 2,
+                  explanation: '15 days is the correct answer.',
                 },
                 {
                   question: 'Continuous night duty for Running Staff should be limited to __________ nights with last night duty towards Headquarters.',
                   options: ['3 nights', '4 nights', '5 nights', 'None of the above'],
-                  correct: 0,
+                  correct: 1,
                   explanation: '4 nights is the correct answer.',
                 },
                 {
                   question: 'The out station rest, in case of 8 hours or more duty from Sign ON to Sign OFF in the previous trip, should be __________ hours.',
                   options: ['4 hours', '6 hours', '8 hours', 'None of the above'],
-                  correct: 0,
+                  correct: 2,
                   explanation: '8 hours is the correct answer.',
                 },
                 {
@@ -212,7 +212,7 @@ export const aom30Ldce2023 = {
                       question: 'In case of emergency, CC+6 loaded wagons can be permitted on exceeded CC+6 routes. Permission can be given by __________.',
                       options: ['PCE', 'PCOM', 'CRS', 'None of the above'],
                       correct: 0,
-                      explanation: 'PCOM is the correct answer.',
+                      explanation: 'PCE is the correct answer.',
                     },
                     {
                       question: 'Which of the following statements are not correct about mini rake?',
@@ -222,19 +222,19 @@ export const aom30Ldce2023 = {
                         'Mini rakes are permitted only in covered wagons',
                         'Free time for loading / unloading of mini rake will be 5 hours'
                       ],
-                      correct: 0,
+                      correct: 2,
                       explanation: 'Mini rakes are permitted only in covered wagons is the correct answer.',
                     },
                     {
                       question: 'Explosives are divided into how many classes?',
                       options: ['3', '5', '7', 'None of the above'],
-                      correct: 0,
+                      correct: 2,
                       explanation: '7 is the correct answer.',
                     },
                     {
                       question: 'Free time for unloading of BTPN type of wagon under Engine on Load Scheme is given as __________.',
                       options: ['5 hours', '6 hours', '9 hours', 'None of the above'],
-                      correct: 0,
+                      correct: 1,
                       explanation: '6 hours is the correct answer.',
                     },
                     {
@@ -246,31 +246,31 @@ export const aom30Ldce2023 = {
                     {
                       question: 'The powers to grant traffic blocks upto __________ hours have been given to DRM.',
                       options: ['3', '4', 'Full powers', 'None of the above'],
-                      correct: 0,
+                      correct: 1,
                       explanation: '4 hours is the correct answer.',
                     },
                     {
                       question: 'General Manager can sanction NI upto __________ days subject to certain conditions.',
                       options: ['1', '2', '3', 'None of the above'],
-                      correct: 0,
+                      correct: 2,
                       explanation: '3 days is the correct answer.',
                     },
                     {
                       question: 'ETA @ __________ minute per 100 kms shall be provided in sections having speed of 130 kmph and above.',
                       options: ['4', '6', '8', 'None of the above'],
-                      correct: 0,
+                      correct: 1,
                       explanation: '6 minutes per 100 kms is the correct answer.',
                     },
                     {
                       question: 'Which of the following is not a luxury tourist train?',
                       options: ['Royal Rajasthan on Wheels', 'Maharaja Express', 'Panj Takht', 'None of the above'],
-                      correct: 0,
+                      correct: 2,
                       explanation: 'Panj Takht is the correct answer.',
                     },
                     {
                       question: 'In case of train running with LHB coaches with deflated air spring in secondary stage suspension, train is permitted to run at __________ kmph speed.',
                       options: ['50', '60', '90', 'None of the above'],
-                      correct: 0,
+                      correct: 1,
                       explanation: '60 kmph is the correct answer.',
                     },
                     {
@@ -317,43 +317,43 @@ export const aom30Ldce2023 = {
                     {
                       question: 'What is the gross clearance of "B" class ODC?',
                       options: ['Less than 6 inches', '6 inches or more but less than 9 inches', '9 inches or more', 'None of the above'],
-                      correct: 0,
+                      correct: 1,
                       explanation: '6 inches or more but less than 9 inches is the correct answer.',
                     },
                     {
                       question: 'The modified Semi-Automatic stop signal is controlled by __________.',
                       options: ['SM in rear', 'SM in advance', 'Either A or B', 'None of the above'],
-                      correct: 0,
+                      correct: 1,
                       explanation: 'SM in advance is the correct answer.',
                     },
                         {
                           question: 'Who permits Inter Railway movement of A class ODC?',
                           options: ['CRS', 'PCOM of the same zone', 'Sr. DOM', 'PCOM of the same zone and PCOM of the Railway concerned'],
                           correct: 0,
-                          explanation: 'PCOM of the same zone and PCOM of the Railway concerned is the correct answer.',
+                          explanation: 'CRS is the correct answer.',
                         },
                         {
                           question: 'What is the maximum speed of A class ODC in BG?',
                           options: ['40 kmph', 'Sectional speed', '60 kmph', 'None of the above'],
-                          correct: 0,
+                          correct: 1,
                           explanation: 'Sectional speed is the correct answer.',
                         },
                         {
                           question: 'The mid-section modified semi-automatic stop signal is interlocked with ________',
                           options: ['LSS of station in rear', 'FSS of station in advance', 'Both A & B', 'Either A or B'],
-                          correct: 0,
+                          correct: 2,
                           explanation: 'Both A & B is the correct answer.',
                         },
                         {
                           question: 'Preferential Traffic Order (PTO) is issued under which section of Railway Act 1989?',
                           options: ['Section 70', 'Section 71', 'Section 72', 'None of the above'],
-                          correct: 0,
+                          correct: 1,
                           explanation: 'Section 71 is the correct answer.',
                         },
                         {
                           question: 'Free time for unloading of BCN type of wagon under Engine on Load scheme is given as ________',
                           options: ['4 hours', '5 hours', '6 hours', 'None of the above'],
-                          correct: 0,
+                          correct: 2,
                           explanation: '6 hours is the correct answer.',
                         },
                         {
@@ -365,37 +365,37 @@ export const aom30Ldce2023 = {
                         {
                           question: 'Full form of CADAT is ________',
                           options: ['Computer Aided Drivers Awareness Test', 'Comprehensive Awareness of Drivers Ability Test', 'Computer Aided Drivers Aptitude Test', 'None of the above'],
-                          correct: 0,
+                          correct: 2,
                           explanation: 'Computer Aided Drivers Aptitude Test is the correct answer.',
                         },
                         {
                           question: 'Full form of RFID is ________',
                           options: ['Rail Frequency Identity Device', 'Radio Forwarding Indentification Device', 'Rail Forwarding Intact Device', 'Radio Frequency Identification'],
-                          correct: 0,
+                          correct: 3,
                           explanation: 'Radio Frequency Identification is the correct answer.',
                         },
                         {
                           question: 'Train Collision Avoidance System (TCAS) is an indigenously developed Automatic Protection System meant to provide protection to trains against ________',
                           options: ['Signal Passing At Danger (SPAD)', 'Over speeding', 'Collisions', 'All the above'],
-                          correct: 0,
+                          correct: 3,
                           explanation: 'All the above is the correct answer.',
                         },
                         {
                           question: 'The maximum speed of a train in a double line section shall be restricted to ________ kmph during fog, in automatic area.',
                           options: ['10', '15', '30', 'None of the above'],
-                          correct: 0,
+                          correct: 2,
                           explanation: '30 kmph is the correct answer.',
                         },
                         {
                           question: 'Every Loco pilot and ALP shall "Sing ON" ________ minutes in advance for examining and taking over the Multiple Unit Electric Engine in the shed.',
                           options: ['30', '45', '60', 'None of the above'],
-                          correct: 0,
+                          correct: 1,
                           explanation: '45 minutes is the correct answer.',
                         },
                         {
                           question: 'Record foil of the Caution order shall be preserved for period of how many months?',
                           options: ['4', '6', '12', 'Permanently'],
-                          correct: 0,
+                          correct: 1,
                           explanation: '6 months is the correct answer.',
                         },
                         {
@@ -407,19 +407,19 @@ export const aom30Ldce2023 = {
                         {
                           question: 'Section will be considered saturated when line capacity exceeds ________',
                           options: ['100% of charted capacity', '90% of charted capacity', '80% of charted capacity', 'None of the above'],
-                          correct: 0,
+                          correct: 1,
                           explanation: '90% of charted capacity is the correct answer.',
                         },
                         {
                           question: 'W/L board is provided on the approach of all level crossing at a distance of ________ meters.',
                           options: ['400', '600', '800', 'None of the above'],
-                          correct: 0,
+                          correct: 1,
                           explanation: '600 meters is the correct answer.',
                         },
                         {
                           question: 'When running through between block stations and when running with the engine leading, the speed of a material train shall not exceed ________',
                           options: ['25 kmph', '40 kmph', 'Speed prescribed for goods train of similar stock', 'None of the above'],
-                          correct: 0,
+                          correct: 2,
                           explanation: 'Speed prescribed for goods train of similar stock is the correct answer.',
                         },
                         {
@@ -455,25 +455,25 @@ export const aom30Ldce2023 = {
                             {
                               question: 'TVU of special class LC gate shall be ________',
                               options: ['Greater than 40000', 'Greater than 45000', 'Greater than 50000', 'None of the above'],
-                              correct: 0,
+                              correct: 2,
                               explanation: 'Greater than 50000 is the correct answer.',
                             },
                             {
                               question: 'The distance of derailing switch from the points is about ________ feet.',
                               options: ['10', '15', '20', 'None of the above'],
-                              correct: 0,
+                              correct: 1,
                               explanation: '15 feet is the correct answer.',
                             },
                             {
                               question: 'The Certificate Competency for operation of Block Instrument shall be valid for a period of ________ years.',
                               options: ['2', '3', '4', 'None of the above'],
-                              correct: 0,
+                              correct: 1,
                               explanation: '3 years is the correct answer.',
                             },
                             {
                               question: 'Brake power percentage of an ordinary "End to End" Air Brake rake other than premium rake at en-route station should be ________',
                               options: ['75%', '85%', '95%', 'None of the above'],
-                              correct: 0,
+                              correct: 2,
                               explanation: '95% is the correct answer.',
                             },
                             {
@@ -485,26 +485,26 @@ export const aom30Ldce2023 = {
                             {
                               question: 'A Railway servant is debarred of taking any Alcoholic drink/Sedative/Narcotic/Stimulant drug or preparation within how many hours before the commencement of his duty or when on duty ________',
                               options: ['6 hours', '8 hours', '12 hours', 'None of the above'],
-                              correct: 0,
+                              correct: 1,
                               explanation: '8 hours is the correct answer.',
                             },
                             {
                               question: 'At a "B" Class double line MACL station, rear block section terminates at ________',
                               options: ['Outermost facing point', 'BSLB', 'Either A or B', 'None of the above'],
-                              correct: 0,
+                              correct: 2,
                               explanation: 'BSLB is the correct answer.',
                             },
                             {
                               question: 'At a "B" class double line MACL station, while performing shunting up to the First stop signal in rear i.e. up to the Home signal, Block Back is ________',
                               options: ['Necessary', 'Not Necessary', 'Depends on layout', 'None of the above'],
-                              correct: 0,
+                              correct: 1,
                               explanation: 'Not Necessary is the correct answer.',
                             },
                             {
                               question: 'If outside station limits, distance between two trains is ________ meter or more, such occurrence may not be treated as averted collision.',
                               options: ['250', '400', '500', '600'],
-                              correct: 0,
-                              explanation: '500 meters is the correct answer.',
+                              correct: 1,
+                              explanation: '400 meters is the correct answer.',
                             },
                             {
                               question: '"Smell of burning grease" is the symptom of ________',
@@ -521,7 +521,7 @@ export const aom30Ldce2023 = {
                             {
                               question: 'Which among the following is not a means of isolation?',
                               options: ['Sand Hump', 'Derailing swich', 'Skid', 'Snag dead end'],
-                              correct: 0,
+                              correct: 2,
                               explanation: 'Skid is the correct answer.',
                             },
                             {
@@ -811,19 +811,19 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'How many members of Rajya Sabha are there in Committee of Parliament on Official Language?',
                                   options: ['7', '10', '15', 'None of the above'],
-                                  correct: 0,
+                                  correct: 1,
                                   explanation: '10 is the correct answer.',
                                 },
                                 {
                                   question: 'How many sections are there in the Official Language Act, 1963?',
                                   options: ['8', '9', '10', 'None of the above'],
-                                  correct: 0,
+                                  correct: 1,
                                   explanation: '9 is the correct answer.',
                                 },
                                 {
                                   question: 'In which language is there a provision to give the documents related to disciplinary proceedings to the employee?',
                                   options: ['Regional language', 'Hindi', 'Hindi or English - in which the employee wants', 'None of the above'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: 'Hindi or English - in which the employee wants is the correct answer.',
                                 },
                                 {
@@ -835,13 +835,13 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'What is the introductory course for central government employees?',
                                   options: ['Praveen', 'Prabodh', 'Pragya', 'None of the above'],
-                                  correct: 0,
+                                  correct: 1,
                                   explanation: 'Prabodh is the correct answer.',
                                 },
                                 {
                                   question: 'In which language order are the announcements to be made at Railway stations?',
                                   options: ['Local, Hindi, English', 'Regional, English, Hindi', 'Regional, Hindi, English', 'None of the above'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: 'Regional, Hindi, English is the correct answer.',
                                 },
                                   {
@@ -853,7 +853,7 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'For whom is the Rajabhasha Individual Cash Award Scheme prescribed?',
                                   options: ['For employees', 'For officers', 'For officers up to Junior Administrative Grade and non-gazetted categories', 'For Senior Administrative Grade Officers'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: 'For officers up to Junior Administrative Grade and non-gazetted categories is the correct answer.',
                                 },
                                 {
@@ -865,7 +865,7 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'What is the amount of the first prize under the Rail Travelogue Award Scheme?',
                                   options: ['6000/- and citation', '8000/- and citation', '10000/- and citation', 'None of the above'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: '10000/- and citation is the correct answer.',
                                 }
         ],
@@ -879,25 +879,25 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'What is upper limit of Child Care Leave for Railway employees?',
                                   options: ['90 days', '365 days', '730 days', 'None of the above'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: '730 days is the correct answer.',
                                 },
                                 {
                                   question: 'Which Authority is empowered to order for cut in Pension of Retired Railway Servant under DAR proceedings?',
                                   options: ['DRM', 'GM', 'President of India', 'None of the above'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: 'President of India is the correct answer.',
                                 },
                                 {
                                   question: 'Who can allow for personal hearing in major penalty cases?',
                                   options: ['Appellate Authority', 'Appointing Authority', 'Disciplinary Authority', 'None of the above'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: 'Disciplinary Authority is the correct answer.',
                                 },
                                 {
                                   question: 'What is the maximum period of suspension that can be extended at a time after review of the Competent Authority?',
                                   options: ['120 days', '150 days', '180 days', 'None of the above'],
-                                  correct: 0,
+                                  correct: 2,
                                   explanation: '180 days is the correct answer.',
                                 },
                                 {
@@ -909,7 +909,7 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'What is the penalty per day to be imposed against a Central Public Information Officer for giving misleading information?',
                                   options: ['100/- per day', '250/- per day', '500/- per day', 'None of the above'],
-                                  correct: 0,
+                                  correct: 1,
                                   explanation: '250/- per day is the correct answer.',
                                 },
                                 {
@@ -921,7 +921,7 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'In case of availing Child Care Leave, the age of dependent disabled children should be up to ________',
                                   options: ['18 years', '22 years', '25 years', 'No limit'],
-                                  correct: 0,
+                                  correct: 3,
                                   explanation: 'No limit is the correct answer.',
                                 },
                                 {
@@ -939,19 +939,19 @@ export const aom30Ldce2023 = {
                                 {
                                   question: 'Railway Services (Conduct) Rules were passed in ________',
                                   options: ['1961', '1966', '1987', '1989'],
-                                  correct: 0,
+                                  correct: 1,
                                   explanation: '1966 is the correct answer.',
                                 },
                                 {
                                   question: 'The period of maternity leave on account of miscarriage/abortion should be restricted to ________ days during the entire service.',
                                   options: ['30', '45', '180', 'None of the above'],
-                                  correct: 0,
+                                  correct: 1,
                                   explanation: '45 days is the correct answer.',
                                 },
                                     {
                                       question: 'Which part of THE RAILWAY SERVANTS (DISCIPLINE & APPEAL) RULES, 1968 gives details of major and minor penalties?',
                                       options: ['Part I', 'Part II', 'Part III', 'Part IV'],
-                                      correct: 0,
+                                      correct: 2,
                                       explanation: 'Part III is the correct answer.',
                                     },
                                     {
@@ -963,8 +963,8 @@ export const aom30Ldce2023 = {
                                     {
                                       question: 'Recognized Trade Union official can be allowed to act as defence counsel in DAR cases in ________ numbers of cases.',
                                       options: ['2', '3', '4', 'Any'],
-                                      correct: 0,
-                                      explanation: '4 is the correct answer.',
+                                      correct: 3,
+                                      explanation: 'Any is the correct answer.',
                                     },
                                     {
                                       question: 'What is a Budget?',
@@ -987,7 +987,7 @@ export const aom30Ldce2023 = {
                                     {
                                       question: 'The expenditure of the Railways is now covered in demand for grants number ________',
                                       options: ['81', '83', '85', 'None of the above'],
-                                      correct: 0,
+                                      correct: 2,
                                       explanation: '85 is the correct answer.',
                                     },
                                     {
@@ -999,19 +999,19 @@ export const aom30Ldce2023 = {
                                     {
                                       question: 'The gross budgetary support towards capital expenditure of Indian Railways for the year 2023-24 is?',
                                       options: ['Less than 1 lakh crore', 'Between 1 and 2 lakh crores', 'More than 2 lakh crores', 'None of the above'],
-                                      correct: 0,
+                                      correct: 2,
                                       explanation: 'More than 2 lakh crores is the correct answer.',
                                     },
                                     {
                                       question: 'The Plan Head under which works for customer amenities are included?',
                                       options: ['51', '52', '53', 'None of the above'],
-                                      correct: 0,
+                                      correct: 2,
                                       explanation: '53 is the correct answer.',
                                     },
                                     {
                                       question: 'The powers of the General Manager for sanctioning works under Plan Head 16 up to ________',
                                       options: ['Rs. 2.5 crores', 'Rs. 5 crores', 'Rs. 50 crores', 'None of the above'],
-                                      correct: 0,
+                                      correct: 2,
                                       explanation: 'Rs. 50 crores is the correct answer.',
                                     },
                                     {
@@ -1028,31 +1028,31 @@ export const aom30Ldce2023 = {
                                     {
                                       question: 'Which is not an example of EBR Funding in Indian Railways?',
                                       options: ['Leased assets from IRFC', 'LIC loan', 'RRSK Funds', 'None of the above'],
-                                      correct: 0,
+                                      correct: 2,
                                       explanation: 'RRSK Funds is the correct answer.',
                                     },
                                     {
                                       question: 'What is NOT a source of funding for Indian Railways to finance its capital expenditure projects?',
                                       options: ['Extra budgetary resources', 'Gross budgetary support', 'Internal resources of Indian Railways', 'None of the above'],
-                                      correct: 0,
+                                      correct: 3,
                                       explanation: 'None of the above is the correct answer.',
                                     },
                                     {
                                       question: 'Re-appropriation of funds from one Plan Head to another Plan Head is within the powers of ________',
                                       options: ['DRM', 'PHOD', 'GM', 'Railway Board'],
-                                      correct: 0,
+                                      correct: 3,
                                       explanation: 'Railway Board is the correct answer.',
                                     },
                                     {
                                       question: 'Percentage of working expenses to gross earnings is known ________',
                                       options: ['Inventory Turn Over Ratio', 'Operating Ratio', 'Liquidity Ratio', 'None of the above'],
-                                      correct: 0,
+                                      correct: 1,
                                       explanation: 'Operating Ratio is the correct answer.',
                                     },
                                     {
                                       question: 'Abstract "Y" in Earning classification is ________',
                                       options: ['Passenger Earning', 'Goods Earning', 'Sundry Earning', 'Other coaching earning'],
-                                      correct: 0,
+                                      correct: 2,
                                       explanation: 'Sundry Earning is the correct answer.',
                                     },
                                     {
@@ -1070,13 +1070,13 @@ export const aom30Ldce2023 = {
                                     {
                                       question: 'Variation beyond 150% of the contract value requires the sanction of ________',
                                       options: ['Railway Board', 'GM', 'PHOD', 'Tender Accepting Authority'],
-                                      correct: 0,
+                                      correct: 3,
                                       explanation: 'Tender Accepting Authority is the correct answer.',
                                     },
                                     {
                                       question: 'Primary Unit of allocation denotes ________',
                                       options: ['Nature of expenditure', 'Object of expenditure', 'Authority who has incurred the expenditure', 'None of the above'],
-                                      correct: 0,
+                                      correct: 1,
                                       explanation: 'Object of expenditure is the correct answer.',
                                     },
                                     {
