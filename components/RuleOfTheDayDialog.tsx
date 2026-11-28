@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
+import Link from 'next/link'
 import { X } from 'lucide-react'
 import type { RuleOfTheDayItem } from '@/assets/rule-of-the-day'
 
@@ -16,8 +17,7 @@ export default function RuleOfTheDayDialog({
   rule,
   open,
   onClose,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  showPageLink = false,
+  showPageLink = true,
 }: RuleOfTheDayDialogProps) {
   const [mounted, setMounted] = useState(false)
 
@@ -60,7 +60,7 @@ export default function RuleOfTheDayDialog({
       >
         <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-amber-300 via-orange-400 to-rose-400" />
 
-        <div className="relative px-3.5 pb-3.5 pt-3 sm:px-5 sm:pb-5 sm:pt-4">
+        <div className="relative px-3.5 pt-3 sm:px-5 sm:pt-4">
           <div className="mb-2.5 flex items-center justify-between gap-2">
             <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/35 bg-amber-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-100 sm:text-xs">
               Rule of the Day
@@ -96,12 +96,24 @@ export default function RuleOfTheDayDialog({
                {rule.rule}
             </p>
             <p className="text-xs leading-relaxed text-slate-100 sm:text-sm">
-              {rule.title} 
+              {rule.title}
             </p>
           </div>
-
-          
         </div>
+
+        {showPageLink && rule.href ? (
+          <div className="relative px-3.5 pt-3 pb-4 sm:px-5">
+            <Link
+              href={rule.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onClose}
+              className="inline-flex w-full items-center justify-center rounded-full bg-linear-to-r from-amber-300 via-orange-400 to-rose-400 px-5 py-2.5 text-sm font-bold text-slate-950 shadow-md transition hover:brightness-105"
+            >
+              Open Rule
+            </Link>
+          </div>
+        ) : null}
       </div>
     </div>,
     document.body,

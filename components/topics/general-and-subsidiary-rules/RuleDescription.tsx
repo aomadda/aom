@@ -10,7 +10,7 @@ type DescriptionPart = {
 const ROMAN_RE = /^(i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii|xiii|xiv|xv)$/i
 
 function classifyMarker(marker: string): DescriptionKind {
-  if (/^\d+$/.test(marker)) return 'number'
+  if (/^\d+(?:\.\d+)*$/.test(marker)) return 'number'
   if (ROMAN_RE.test(marker)) return 'roman'
   if (/^[a-z]$/i.test(marker)) return 'letter'
   return 'plain'
@@ -22,6 +22,10 @@ function computeDepth(
   previous: DescriptionPart[],
 ): number {
   if (kind === 'number') {
+    if (marker.includes('.')) {
+      const parent = [...previous].reverse().find((part) => part.kind === 'number')
+      return (parent?.depth ?? 0) + 1
+    }
     const n = Number(marker)
     const lastNumber = [...previous].reverse().find((part) => part.kind === 'number')
     if (lastNumber) {
@@ -58,13 +62,86 @@ function cleanClauseText(text: string) {
   return text.replace(/\n+/g, ' ').replace(/\s+/g, ' ').trim()
 }
 
+function bareMarker(line: string) {
+  const trimmed = line.trim()
+  const wrapped = trimmed.match(/^\(([0-9]+(?:\.[0-9]+)?|[a-z]+)\)\.?$/i)
+  if (wrapped) return wrapped[1]
+  const dotted = trimmed.match(/^(\d+(?:\.\d+)*)\.$/)
+  if (dotted) return dotted[1]
+  if (/^\d+$/.test(trimmed)) return trimmed
+  if (ROMAN_RE.test(trimmed) && trimmed.toLowerCase() !== 'i' && trimmed.toLowerCase() !== 'v' && trimmed.toLowerCase() !== 'x') {
+    return trimmed
+  }
+  if (/^[a-z]$/i.test(trimmed)) return trimmed
+  if (ROMAN_RE.test(trimmed)) return trimmed
+  return null
+}
+
+function liftBareMarkers(description: string) {
+  const lines = description.replace(/\r\n/g, '\n').split('\n')
+  const chunks: string[] = []
+  let index = 0
+
+  while (index < lines.length) {
+    const marker = bareMarker(lines[index])
+    if (marker) {
+      const body: string[] = []
+      index += 1
+      while (index < lines.length && bareMarker(lines[index]) === null) {
+        body.push(lines[index])
+        index += 1
+      }
+      const text = body.join(' ').replace(/\s+/g, ' ').trim()
+      chunks.push(text ? `(${marker}) ${text}` : `(${marker})`)
+      continue
+    }
+
+    const body = [lines[index]]
+    index += 1
+    while (index < lines.length && bareMarker(lines[index]) === null && lines[index].trim() !== '') {
+      body.push(lines[index])
+      index += 1
+    }
+    const text = body.join(' ').replace(/\s+/g, ' ').trim()
+    if (text) chunks.push(text)
+    while (index < lines.length && lines[index].trim() === '') index += 1
+  }
+
+  return chunks.join('\n')
+}
+
+function splitSentences(text: string) {
+  const cleaned = text.replace(/\s+/g, ' ').trim()
+  if (!/[.:]/.test(cleaned)) return [cleaned]
+  const masked = cleaned.replace(
+    /\b(?:i\.\s*e|e\.\s*g|viz|etc|no|sr|jr|fig|para|km|vs|dr|mr|rs)\./gi,
+    (match) => match.replaceAll('.', '\u0000'),
+  )
+  const pieces = masked
+    .split(/(?<=[.:])\s+(?=[A-Z0-9(“"])/)
+    .map((piece) => piece.replaceAll('\u0000', '.').trim())
+    .filter(Boolean)
+
+  const merged: string[] = []
+  for (const piece of pieces) {
+    const previous = merged[merged.length - 1]
+    if (previous && previous.endsWith(':') && previous.length < 48) {
+      merged[merged.length - 1] = `${previous} ${piece}`
+    } else {
+      merged.push(piece)
+    }
+  }
+
+  return merged.length > 1 ? merged : [cleaned]
+}
+
 function parseDescription(description: string): DescriptionPart[] {
-  const normalized = description.replace(/\r\n/g, '\n').trim()
+  const normalized = liftBareMarkers(description).trim()
   if (!normalized) return []
 
   const parts = normalized
     .split(
-      /(?=(?:^|\n)\s*(?:\(\d+\)|\((?:i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii|xiii|xiv|xv)\)|\([a-z]\)|[a-z]\.)|(?<=[–—])\s*\([a-z]\))/i,
+      /(?=(?:^|\n)\s*(?:\(\d+(?:\.\d+)?\)|\((?:i|ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii|xiii|xiv|xv)\)|\([a-z]\)|\d+(?:\.\d+)*\.|[a-z]\.)|(?<=[–—])\s*\([a-z]\))/i,
     )
     .map((part) => part.trim())
     .filter(Boolean)
@@ -72,7 +149,8 @@ function parseDescription(description: string): DescriptionPart[] {
   const result: DescriptionPart[] = []
 
   for (const part of parts) {
-    const explicit = part.match(/^\(([0-9]+|[a-z]+)\)\s*([\s\S]*)$/i)
+    const explicit = part.match(/^\(([0-9]+(?:\.[0-9]+)?|[a-z]+)\)\s*([\s\S]*)$/i)
+    const dottedNumber = part.match(/^(\d+(?:\.\d+)*)\.\s*([\s\S]*)$/)
     const dotted = part.match(/^([a-z])\.\s*([\s\S]*)$/i)
 
     let marker = ''
@@ -81,6 +159,9 @@ function parseDescription(description: string): DescriptionPart[] {
     if (explicit) {
       marker = explicit[1]
       text = explicit[2]
+    } else if (dottedNumber) {
+      marker = dottedNumber[1]
+      text = dottedNumber[2]
     } else if (dotted) {
       marker = dotted[1]
       text = dotted[2]
@@ -104,6 +185,62 @@ function parseDescription(description: string): DescriptionPart[] {
   }
 
   return result
+}
+
+function stepTone(kind: DescriptionKind | 'plain') {
+  if (kind === 'letter') {
+    return {
+      row: 'border-violet-300/25 bg-violet-950/50',
+      num: 'bg-violet-500/25 text-violet-50 ring-violet-300/40',
+      text: 'text-violet-50',
+    }
+  }
+  if (kind === 'roman') {
+    return {
+      row: 'border-amber-300/25 bg-amber-950/45',
+      num: 'bg-amber-500/25 text-amber-50 ring-amber-300/40',
+      text: 'text-amber-50',
+    }
+  }
+  if (kind === 'number') {
+    return {
+      row: 'border-cyan-300/25 bg-slate-950/50',
+      num: 'bg-cyan-500/25 text-cyan-50 ring-cyan-300/40',
+      text: 'text-cyan-50',
+    }
+  }
+  return {
+    row: 'border-emerald-400/30 bg-emerald-950/30',
+    num: 'bg-emerald-500/20 text-emerald-50 ring-emerald-400/45',
+    text: 'text-emerald-50',
+  }
+}
+
+function SentenceSteps({
+  steps,
+  kind,
+}: {
+  steps: string[]
+  kind: DescriptionKind | 'plain'
+}) {
+  const tone = stepTone(kind)
+  return (
+    <ol className={`min-w-0 flex-1 space-y-2 ${kind === 'plain' ? 'space-y-2.5' : ''}`}>
+      {steps.map((step, stepIndex) => (
+        <li
+          key={stepIndex}
+          className={`flex items-start gap-2.5 rounded-xl border px-3 py-2.5 shadow-sm shadow-black/20 ${tone.row}`}
+        >
+          <span
+            className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-bold ring-1 ${tone.num}`}
+          >
+            {stepIndex + 1}
+          </span>
+          <p className={`min-w-0 flex-1 text-sm leading-relaxed ${tone.text}`}>{step}</p>
+        </li>
+      ))}
+    </ol>
+  )
 }
 
 function markerStyles(kind: DescriptionKind) {
@@ -144,6 +281,11 @@ export default function DescriptionBlock({ description }: { description: string 
     <div className="mt-2 space-y-2.5">
       {parts.map((part, index) => {
         if (part.kind === 'plain') {
+          const steps = splitSentences(part.text)
+          if (steps.length > 1) {
+            return <SentenceSteps key={`plain-${index}`} steps={steps} kind="plain" />
+          }
+
           return (
             <p key={`plain-${index}`} className="text-sm leading-relaxed text-gray-300">
               {part.text}
@@ -154,6 +296,7 @@ export default function DescriptionBlock({ description }: { description: string 
         const styles = markerStyles(part.kind)
         const indent = Math.min(part.depth, 3) * 14
         const isNestedList = part.kind === 'letter' || part.kind === 'roman' || part.depth > 0
+        const sentences = splitSentences(part.text)
 
         return (
           <div
@@ -181,9 +324,13 @@ export default function DescriptionBlock({ description }: { description: string 
                 >
                   {part.marker}
                 </span>
-                <p className="min-w-0 flex-1 pt-1 text-sm leading-relaxed text-blue-50/95">
-                  {part.text}
-                </p>
+                {sentences.length > 1 ? (
+                  <SentenceSteps steps={sentences} kind={part.kind} />
+                ) : (
+                  <p className="min-w-0 flex-1 pt-1 text-sm leading-relaxed text-blue-50/95">
+                    {part.text}
+                  </p>
+                )}
               </div>
             </div>
           </div>

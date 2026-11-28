@@ -88,9 +88,22 @@ export default function GeneralRuleArticle({ rule }: { rule: GeneralRulePage }) 
           </div>
         </article>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          {previous ? <RuleLink item={previous} direction="previous" /> : <div className="hidden flex-1 sm:block" />}
-          {next ? <RuleLink item={next} direction="next" /> : <div className="hidden flex-1 sm:block" />}
+        <div className="mt-6 flex flex-col gap-3">
+          {next ? <RuleLink item={next} direction="next" /> : null}
+          {previous ? (
+            <Link
+              href={`/acts/general-and-subsidiary-rules/${previous.slug}`}
+              className="inline-flex w-full items-center justify-between gap-3 rounded-full bg-linear-to-r from-emerald-400 to-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 shadow-md transition hover:brightness-105"
+            >
+              <span className="inline-flex items-center gap-2">
+                <span aria-hidden="true">←</span>
+                Previous rule
+              </span>
+              <span className="min-w-0 truncate text-right font-semibold">
+                {previous.rule}
+              </span>
+            </Link>
+          ) : null}
         </div>
       </div>
     </div>

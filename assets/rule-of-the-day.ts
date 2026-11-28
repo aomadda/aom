@@ -1,9 +1,16 @@
-export type RuleOfTheDayItem = {
+import { generalRuleDescription, generalRuleHref } from '@/lib/match-general-rule'
+
+export type RuleOfTheDayEntry = {
   id: number
   date: string
   chapter: string
   rule: string
   title: string
+}
+
+export type RuleOfTheDayItem = RuleOfTheDayEntry & {
+  description: string
+  href: string
 }
 
 /** Format as DD-MM-YYYY to match ruleOfTheDay dates. */
@@ -14,10 +21,19 @@ export function formatRuleOfTheDayDate(date: Date = new Date()) {
   return `${dd}-${mm}-${yyyy}`
 }
 
+export function withRuleDescription(entry: RuleOfTheDayEntry): RuleOfTheDayItem {
+  return {
+    ...entry,
+    description: generalRuleDescription(entry.rule, entry.title),
+    href: generalRuleHref(entry.rule, entry.title),
+  }
+}
+
 /** Today's rule from the calendar list (falls back to first entry). */
 export function getTodayRuleOfTheDay(date: Date = new Date()): RuleOfTheDayItem {
   const key = formatRuleOfTheDayDate(date)
-  return ruleOfTheDay.find((item) => item.date === key) ?? ruleOfTheDay[0]
+  const entry = ruleOfTheDay.find((item) => item.date === key) ?? ruleOfTheDay[0]
+  return withRuleDescription(entry)
 }
 
 /** One G&SR rule per day from 01-01-2026 to 31-12-2026.
@@ -25,7 +41,7 @@ export function getTodayRuleOfTheDay(date: Date = new Date()): RuleOfTheDayItem 
  * Each of the 21 Subsidiary Rules follows its parent General Rule
  * (SR 3.38.7 after GR 3.38, SR 3.36.6 after GR 3.36, and so on).
  */
-export const ruleOfTheDay: RuleOfTheDayItem[] = [
+export const ruleOfTheDay: RuleOfTheDayEntry[] = [
   {
     "id": 1,
     "date": "01-01-2026",
@@ -496,6 +512,13 @@ export const ruleOfTheDay: RuleOfTheDayItem[] = [
     "title": "Points"
   },
   {
+    "id": 160,
+    "date": "09-06-2026",
+    "chapter": "CHAPTER IV - WORKING OF TRAINS GENERALLY",
+    "rule": "SR 3.51.6",
+    "title": "Disconnection and Reconnection"
+  },
+  {
     "id": 68,
     "date": "09-03-2026",
     "chapter": "Chapter III - SIGNALS",
@@ -920,7 +943,7 @@ export const ruleOfTheDay: RuleOfTheDayItem[] = [
     "date": "08-05-2026",
     "chapter": "CHAPTER IV - WORKING OF TRAINS GENERALLY",
     "rule": "SR 4.24.4",
-    "title": "Attaching of Damaged Vehicle/Engine"
+    "title": "Damaged vehicle or damaged engine working"
   },
   {
     "id": 129,
@@ -1139,13 +1162,7 @@ export const ruleOfTheDay: RuleOfTheDayItem[] = [
     "rule": "GR 4.51",
     "title": "Bell signals between Loco Pilot and Guard"
   },
-  {
-    "id": 160,
-    "date": "09-06-2026",
-    "chapter": "CHAPTER IV - WORKING OF TRAINS GENERALLY",
-    "rule": "SR 4.51.6",
-    "title": "Disconnection and Reconnection"
-  },
+  
   {
     "id": 161,
     "date": "10-06-2026",
@@ -1475,13 +1492,7 @@ export const ruleOfTheDay: RuleOfTheDayItem[] = [
     "rule": "GR 6.05",
     "title": "Sending advice of accident or breakdown"
   },
-  {
-    "id": 208,
-    "date": "27-07-2026",
-    "chapter": "CHAPTER VI - ACCIDENTS AND UNUSUAL OCCURRENCES",
-    "rule": "SR 6.05.4",
-    "title": "Ask for Relief/Assisting Engine"
-  },
+  
   {
     "id": 209,
     "date": "28-07-2026",
@@ -1530,6 +1541,13 @@ export const ruleOfTheDay: RuleOfTheDayItem[] = [
     "chapter": "CHAPTER VI - ACCIDENTS AND UNUSUAL OCCURRENCES",
     "rule": "GR 6.10",
     "title": "Fire"
+  },
+  {
+    "id": 208,
+    "date": "27-07-2026",
+    "chapter": "CHAPTER VI - ACCIDENTS AND UNUSUAL OCCURRENCES",
+    "rule": "SR 6.10.7",
+    "title": "Fire in a goods vehicle",
   },
   {
     "id": 216,
